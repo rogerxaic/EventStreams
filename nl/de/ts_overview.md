@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-30"
+lastupdated: "2018-09-10"
 
 ---
 
@@ -20,13 +20,16 @@ lastupdated: "2018-05-30"
 Wenn Sie eine Frage zu {{site.data.keyword.messagehub}} haben, sehen Sie im entsprechenden
 [Stack Overflow-Kanal ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/questions/tagged/message-hub){: new_window} nach, um herauszufinden, ob diese Frage bereits beantwortet wurde.
 Falls nicht, posten Sie Ihre Frage. Sie wird entweder von einem Mitglied des {{site.data.keyword.messagehub}}-Entwicklungsteams oder der jeweiligen Community beantwortet.
+
+Wenn ein Problem bei {{site.data.keyword.messagehub}} auftritt, überprüfen Sie zuerst die Seite 'Status' in [{{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/status){:new_window}. Wenn Sie dann Unterstützung vom
+{{site.data.keyword.messagehub}}-Team anfordern möchten, stellen Sie sicher, dass Sie alle erforderlichen Informationen sammeln. Details hierzu finden Sie in [Problem an das {{site.data.keyword.messagehub}}-Team melden - Plan "Standard"](/docs/services/EventStreams/eventstreams109.html) oder [Problem an das {{site.data.keyword.messagehub}}-Team melden - Plan "Enterprise"](/docs/services/EventStreams/eventstreams125.html).
 {:shortdesc}
 
 ## Nützliche Links
 {: #troubleshooting_links notoc}
 
 *  [{{site.data.keyword.Bluemix_short}} - Kostenlose Testversion ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
-*  [Kafka-Java-Beispiel für {{site.data.keyword.messagehub}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/message-hub-samples/tree/master/kafka-java-console-sample){: new_window}
+*  [Kafka-Java-Beispiel für {{site.data.keyword.messagehub}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
 *  [Webanwendungen mit {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} erstellen und Ihre App mit Cloud Foundry bereitstellen![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ng.bluemix.net/docs/starters/install_cli.html){: new_window}
 *  [Apache Kafka-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/documentation.html){: new_window}
 *  [Apache Kafka 0.10.2.1-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/0102/javadoc/index.html){: new_window}
