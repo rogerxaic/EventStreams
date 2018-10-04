@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2018-07-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Iniciación a Message Hub 
-{: #messagehub}
+# Iniciación a {{site.data.keyword.messagehub}} 
+{: #getting_started}
 
 Para empezar a trabajar con {{site.data.keyword.messagehub}} y empezar a enviar y recibir mensajes, puede utilizar el ejemplo Java™. El ejemplo muestra cómo un productor envía mensajes a un consumidor mediante un tema. Se utiliza el mismo programa de ejemplo para consumir mensajes y producir mensajes.
 
-Para obtener más información sobre el funcionamiento de {{site.data.keyword.messagehub}}, consulte [Acerca de {{site.data.keyword.messagehub}}](/docs/services/MessageHub/messagehub010.html).
+Para obtener más información sobre el funcionamiento de {{site.data.keyword.messagehub}}, consulte [Acerca de {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} se llamaba anteriormente Message Hub.
 
-Para acceder a otros ejemplos de {{site.data.keyword.messagehub}}, incluidos los ejemplos para Node.js y Python, consulte [Ejemplos de {{site.data.keyword.messagehub}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/message-hub-samples){:new_window}.
+Para acceder a otros ejemplos de {{site.data.keyword.messagehub}}, incluidos los ejemplos para Node.js y Python, consulte [Ejemplos de {{site.data.keyword.messagehub}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples){:new_window}.
 
 <!-- 11/01/18 - Karen - removing diagram as requested by James
 ![Java sample overview diagram](getting_started_sample.gif "Overview diagram of Java sample showing the flow of messages.")
@@ -28,47 +28,50 @@ Para acceder a otros ejemplos de {{site.data.keyword.messagehub}}, incluidos los
 Siga estos pasos:
 {: #getting_started_steps}
  
-1. Cree una instancia de servicio {{site.data.keyword.messagehub}}:
+1. Cree una instancia de servicio de {{site.data.keyword.messagehub}}:
 
-  a. Inicie sesión en {{site.data.keyword.Bluemix_notm}} utilizando la interfaz de usuario web. 
+  a. Inicie sesión en la consola de {{site.data.keyword.Bluemix_notm}}. 
   
-  b. Pulse **CATÁLOGO**.
+  b. Pulse **Catálogo**.
   
-  c. En la sección **Servicios de aplicación**, seleccione **Plan Estándar de {{site.data.keyword.messagehub}}**. Se abrirá la página de instancia de servicio de {{site.data.keyword.messagehub}}.
+  c. En la sección **Integración**, seleccione **Plan Estándar de {{site.data.keyword.messagehub}}**. Se abrirá la página de instancia de servicio de {{site.data.keyword.messagehub}}.
   
-  d. Deje el servicio desenlazado en el menú **Conectar a** y especifique nombres para el servicio y las credenciales correspondientes. Puede usar
-los valores predeterminados.
+  d. Escriba un nombre para el servicio. Puede utilizar el valor predeterminado.
   
   e. Pulse **Crear**.
 
-2. Si aún no los tiene, instale los requisitos previos siguientes:
+2. {: #create_credentials_step notoc} Cree algunas credenciales de {{site.data.keyword.messagehub}} completando estos pasos: [obtención de credenciales y conexión mediante la consola de IBM Cloud](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console).
+   <br/>
+   <br/>Necesitará los valores de *kafka_brokers_sasl*, *kafka_admin_url* y *api_key* para el [paso 7](/docs/services/EventStreams/index.html#start_consumer_step) de esta tarea.   
+
+3. Si aún no los tiene, instale los requisitos previos siguientes:
 
     * [git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/){:new_window}
 	* [Gradle ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://gradle.org/){:new_window}
     * Java 8 o superior
  
-3. Clone el repositorio git message-hub-samples ejecutando el siguiente mandato desde la línea de mandatos:
+4. Clone el repositorio git event-streams-samples ejecutando el siguiente mandato desde la línea de mandatos:
 
     <pre class="pre">
-    git clone https://github.com/ibm-messaging/message-hub-samples.git
+    git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
 	{: codeblock}
 
-4. Cambie el directorio a la consola de java ejecutando el siguiente mandato:
+5. Cambie el directorio a la consola de java ejecutando el siguiente mandato:
 
     <pre class="pre">
-    cd message-hub-samples/kafka-java-console-sample
+    cd event-streams-samples/kafka-java-console-sample
     </pre>
 	{: codeblock}
 
-5. Ejecute los siguientes mandatos de compilación:
+6. Ejecute los siguientes mandatos de compilación:
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
 	{: codeblock}
 
-6. Inicie el consumidor en la consola ejecutando el siguiente mandato:
+7. {: #start_consumer_step notoc} Inicie el consumidor en la consola ejecutando el siguiente mandato:
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
@@ -76,7 +79,8 @@ los valores predeterminados.
     
     El ejemplo utiliza un tema denominado `kafka-java-console-sample-topic`. Si el tema ya no existe, el ejemplo lo crea utilizando la API de administración de {{site.data.keyword.messagehub}}. Para enviar y recibir mensajes, el ejemplo utiliza la API Apache Kafka Java.
 
-    Para buscar valores para *kafka_brokers_sasl*, *kafka_admin_url* y *api_key*, vaya a la instancia de {{site.data.keyword.messagehub}} en {{site.data.keyword.Bluemix_notm}}, vaya al separador **Credenciales de servicio** y seleccione las **Credenciales** que desee utilizar.
+    Utilice los valores para *kafka_brokers_sasl*, *kafka_admin_url*
+    y *api_key* desde las credenciales que ha creado en el [paso 2](/docs/services/MessageHub/index.html#create_credentials_step).
 	
 	Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
 y <var class="keyword varname">api_key</var> con un signo de dos puntos.
@@ -90,13 +94,13 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos.
 
     Se recomienda utilizar todos los hosts Kafka listados en el campo **Credenciales** que ha seleccionado.
 
-7. Inicie el productor en la consola ejecutando el siguiente mandato:
+8. Inicie el productor en la consola ejecutando el siguiente mandato:
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   
-8. Ahora deberían aparecer en el consumidor los mensajes enviados por el productor. A continuación, se muestra una salida de ejemplo:
+9. Ahora deberían aparecer en el consumidor los mensajes enviados por el productor. A continuación, se muestra una salida de ejemplo:
 
     ```
     [2018-07-02 14:54:50,788] INFO Running in local mode. (com.messagehub.samples.MessageHubConsoleSample)
@@ -123,7 +127,7 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos.
     ```
 	{: codeblock}
 	
-9. El ejemplo se ejecuta indefinidamente hasta que lo detenga. Para detener el proceso, ejecute un mandato como el siguiente: <code>Control+C</code>
+10. El ejemplo se ejecuta indefinidamente hasta que lo detenga. Para detener el proceso, ejecute un mandato como el siguiente: <code>Control+C</code>
 
 <!-- 07/06/18 - Karen: removing until a newer version available
 To watch a video that walks
