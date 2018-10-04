@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-13"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -12,14 +12,14 @@ lastupdated: "2018-07-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 開始使用 Message Hub 
-{: #messagehub}
+# 開始使用 {{site.data.keyword.messagehub}} 
+{: #getting_started}
 
 若要開始使用 {{site.data.keyword.messagehub}} 和開始傳送及接收訊息，您可以使用 Java™ 範例。範例顯示生產者如何使用主題將訊息傳送到消費者。相同的範例程式用來使用訊息，以及產生訊息。
 
-若要進一步瞭解 {{site.data.keyword.messagehub}} 的運作方式，請參閱[關於 {{site.data.keyword.messagehub}}](/docs/services/MessageHub/messagehub010.html)。
+若要進一步瞭解 {{site.data.keyword.messagehub}} 的運作方式，請參閱[關於 {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html)。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
 
-若要存取其他 {{site.data.keyword.messagehub}} 範例（包括 Node.js 及 Python 範例），請參閱 [{{site.data.keyword.messagehub}} 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/message-hub-samples){:new_window}。
+若要存取其他 {{site.data.keyword.messagehub}} 範例（包括 Node.js 及 Python 範例），請參閱 [{{site.data.keyword.messagehub}} 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples){:new_window}。
 
 <!-- 11/01/18 - Karen - removing diagram as requested by James
 ![Java sample overview diagram](getting_started_sample.gif "Overview diagram of Java sample showing the flow of messages.")
@@ -30,44 +30,48 @@ lastupdated: "2018-07-13"
  
 1. 建立 {{site.data.keyword.messagehub}} 服務實例：
 
-  a. 使用 Web 使用者介面登入 {{site.data.keyword.Bluemix_notm}}。 
+  a. 登入 {{site.data.keyword.Bluemix_notm}} 主控台。 
   
   b. 按一下**型錄**。
   
-  c. 在**應用程式服務**區段中，選取 **{{site.data.keyword.messagehub}} 標準方案**。即會開啟 {{site.data.keyword.messagehub}} 服務實例頁面。
+  c. 在**整合**區段中，選取 **{{site.data.keyword.messagehub}} 標準方案**。即會開啟 {{site.data.keyword.messagehub}} 服務實例頁面。
   
-  d. 在**連接至**功能表中將服務維持為不連結狀態，然後輸入服務的名稱以及您的認證。您可以使用預設值。
+  d. 輸入服務的名稱。您可以使用預設值。
   
   e. 按一下**建立**。
 
-2. 如果您還沒有下列必要條件，請安裝它們：
+2. {: #create_credentials_step notoc} 完成下列步驟，以建立部分 {{site.data.keyword.messagehub}} 認證：[使用 IBM Cloud 主控台取得認證並連接](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console)。
+   <br/>
+   <br/>針對此作業的[步驟 7](/docs/services/EventStreams/index.html#start_consumer_step)，您將需要 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。   
+
+3. 如果您還沒有下列必要條件，請安裝它們：
 
     * [git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/){:new_window}
 	* [Gradle ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://gradle.org/){:new_window}
     * Java 8 或更高版本
  
-3. 從指令行執行下列指令，以複製 message-hub-samples git 儲存庫：
+4. 從指令行執行下列指令，以複製 event-streams-samples Git 儲存庫：
 
     <pre class="pre">
-    git clone https://github.com/ibm-messaging/message-hub-samples.git
+    git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
 	{: codeblock}
 
-4. 執行下列指令切換至 Java 主控台範例目錄：
+5. 執行下列指令切換至 Java 主控台範例目錄：
 
     <pre class="pre">
-    cd message-hub-samples/kafka-java-console-sample
+    cd event-streams-samples/kafka-java-console-sample
     </pre>
 	{: codeblock}
 
-5. 執行下列建置指令：
+6. 執行下列建置指令：
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
 	{: codeblock}
 
-6. 執行下列指令，在主控台上啟動消費者：
+7. {: #start_consumer_step notoc}執行下列指令，在主控台上啟動消費者：
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
@@ -75,7 +79,7 @@ lastupdated: "2018-07-13"
     
     此範例使用名為 `kafka-java-console-sample-topic` 的主題。如果主題尚不存在，範例會使用 {{site.data.keyword.messagehub}} 管理 API 建立它。為了傳送及接收訊息，範例會使用 Apache Kafka Java API。
 
-    若要找出 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 的值，請在 {{site.data.keyword.Bluemix_notm}} 中移至 {{site.data.keyword.messagehub}} 實例、**服務認證**標籤，然後選取您要使用的**認證**。
+    使用[步驟 2](/docs/services/MessageHub/index.html#create_credentials_step) 中所建立認證的 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。
 	
 	指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。
     
@@ -88,16 +92,16 @@ lastupdated: "2018-07-13"
 
     我們建議您使用所選取**認證**中列出的所有 Kafka 主機。
 
-7. 執行下列指令，在主控台上啟動生產者：
+8. 執行下列指令，在主控台上啟動生產者：
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   
-8. 您現在應該會看到生產者傳送的訊息出現在消費者。以下是部分範例輸出：
+9. 您現在應該會看到生產者傳送的訊息出現在消費者。以下是部分範例輸出：
 
     ```
-    [2018-07-02 14:54:50,788] INFO Running in local mode. (com.messagehub.samples.MessageHubConsoleSample)
+[2018-07-02 14:54:50,788] INFO Running in local mode. (com.messagehub.samples.MessageHubConsoleSample)
     [2018-07-02 14:54:50,789] INFO Kafka Endpoints: kafka-0.mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud:9093,kafka-1.mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud:9093,kafka-2.mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud:9093 (com.messagehub.samples.MessageHubConsoleSample)
     [2018-07-02 14:54:50,789] INFO Admin REST Endpoint: https://mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud (com.messagehub.samples.MessageHubConsoleSample)
     [2018-07-02 14:54:50,789] INFO Creating the topic kafka-java-console-sample-topic (com.messagehub.samples.MessageHubConsoleSample)
@@ -121,7 +125,7 @@ lastupdated: "2018-07-13"
     ```
 	{: codeblock}
 	
-9. 範例會無限制地執行，直到您停止它為止。若要停止處理程序，請執行如下的指令：<code>Ctrl+C</code>
+10. 範例會無限制地執行，直到您停止它為止。若要停止處理程序，請執行如下的指令：<code>Ctrl+C</code>
 
 <!-- 07/06/18 - Karen: removing until a newer version available
 To watch a video that walks
