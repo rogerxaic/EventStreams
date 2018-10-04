@@ -2,71 +2,71 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="messagehub" audience="service" href="/docs/MessageHub/index.html"}
-IBM Message Hub
+{: .toc subcollection="eventstreams" audience="service" arm="285" href="/docs/EventStreams/index.html"}
+IBM Event Streams
 
 	{: .navgroup id="learn"}
 	index.md
 	
 	{: .topicgroup}
-	Sobre o Message Hub
-		messagehub010.md
-		messagehub073.md
-	 	messagehub085.md
+	Sobre o Event Streams
+		eventstreams010.md
+		eventstreams073.md
+	 	eventstreams085.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	messagehub112.md
-	messagehub114.md
-	messagehub118.md
-	messagehub068.md
-	messagehub072.md
+	eventstreams112.md
+	eventstreams114.md
+	eventstreams118.md
+	eventstreams068.md
+	eventstreams072.md
+	at-events.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
-	messagehub127.md
-		
-	{: .topicgroup}
-	Administrando o hub de mensagens
-		messagehub037.md
-		messagehub128.md
-		messagehub116.md
-		messagehub124.md
+	eventstreams127.md
 	
 	{: .topicgroup}
-	Desenvolvendo aplicativos com o hub de mensagens
-		messagehub050.md
-			messagehub062.md
-			messagehub063.md
-			messagehub117.md
-			messagehub104.md
-		messagehub113.md
-		messagehub111.md
-		messagehub110.md
-		messagehub025.md
-			messagehub066.md
-			messagehub097.md
-		messagehub075.md
-			messagehub106.md
-			messagehub098.md
-			messagehub079.md
-			messagehub099.md
-			messagehub102.md
-			messagehub103.md
-			messagehub101.md
-			messagehub081.md
-			messagehub082.md
-			messagehub080.md
-			messagehub083.md
-		messagehub087.md
+	Administrando o Streams de Eventos
+		eventstreams037.md
+		eventstreams128.md
+		eventstreams116.md
+		eventstreams124.md
+	
+	{: .topicgroup}
+	Desenvolvendo apps com o Event Streams
+		eventstreams050.md
+			eventstreams062.md
+			eventstreams063.md
+			eventstreams104.md
+		eventstreams113.md
+		eventstreams111.md
+		eventstreams110.md
+		eventstreams025.md
+			eventstreams066.md
+			eventstreams097.md
+		eventstreams075.md
+			eventstreams106.md
+			eventstreams098.md
+			eventstreams079.md
+			eventstreams099.md
+			eventstreams102.md
+			eventstreams103.md
+			eventstreams101.md
+			eventstreams081.md
+			eventstreams082.md
+			eventstreams080.md
+			eventstreams083.md
+		eventstreams087.md
 
 	{: .topicgroup}
 	Integrando com outros serviços
-		messagehub088.md
-		messagehub105.md
-		messagehub115.md
-		messagehub089.md
-		messagehub119.md
+		eventstreams088.md
+		eventstreams105.md
+		eventstreams115.md
+		eventstreams089.md
+		eventstreams119.md
 
 	{: .topicgroup}
 	Tutoriais
@@ -74,21 +74,20 @@ IBM Message Hub
 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
-	messagehub108.md
+	eventstreams108.md
 	
 	{: .topicgroup}
 	Resolvendo Problemas
 		ts_overview.md
-		messagehub057.md
-		messagehub109.md
-		messagehub125.md
-		messagehub059.md
+		eventstreams057.md
+		eventstreams109.md
+		eventstreams125.md
 		
 	{: .topicgroup}
 	Links Relacionados
-	 	[Amostra do Kafka Java do Message Hub](https://github.com/ibm-messaging/message-hub-samples/tree/master/kafka-java-console-sample)
+	 	[ Amostra do Event Streams Java Kafka ](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
 	 	[Cliente do Apache Kafka 0.10.2.1](http://kafka.apache.org/0102/javadoc/index.html)
-		[IBM Message Hub no developerWorks](https://developer.ibm.com/messaging/message-hub/)
+		[ IBM Event Streams no developerWorks ](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 
 
