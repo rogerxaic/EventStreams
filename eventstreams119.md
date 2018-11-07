@@ -16,8 +16,6 @@ lastupdated: "2018-06-01"
 # Watson IoT Platform bridge
 {: #consuming_messages }
 
-** {{site.data.keyword.messagehub}} bridges are available as part of the Standard plan only.**
-<br/>
 
 {{site.data.keyword.iot_full}} provides a managed bridge that allows you to create a unidirectional link to {{site.data.keyword.messagehub_full}}.
 
