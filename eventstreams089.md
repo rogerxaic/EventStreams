@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,18 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Object Storage bridge 
+# Object Storage bridge (deprecated)
 {: #object_storage_bridge }
 
-** The {{site.data.keyword.objectstorageshort}} bridge is available as part of the Standard plan only.**
+** The {{site.data.keyword.objectstorageshort}} bridge is deprecated from August 1st 2018.**
 <br/>
+
+Because the underlying service that the {{site.data.keyword.objectstorageshort}} bridge connects to is deprecated, the {{site.data.keyword.objectstorageshort}} bridge is also deprecated from August 1st 2018. For more information, see [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. When the {{site.data.keyword.objectstorageshort}} service reaches its end of life and is decommissioned, all instances of the {{site.data.keyword.objectstorageshort}} bridge will also be decommissioned. For more information, see the deprecation announcement. 
+
+As an alternative, you can use the [Cloud Object Storage bridge](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
+{:deprecated}
 
 The {{site.data.keyword.objectstorageshort}} bridge allows you
 to archive data from the Kafka topics in {{site.data.keyword.messagehub}} to an instance of the {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){:new_window}. The bridge consumes
