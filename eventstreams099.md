@@ -49,9 +49,7 @@ Add the following reference to the dependency section of your <code>package.json
 And add the following require statement to your source
 file:
 
-<pre class="pre"><code>var mqlight = require(‘mqlight’);</code></pre>
-
-<pre class="pre"><code>var mqlight = require(&#96;mqlight&acute;);</code></pre>
+<pre class="pre"><code>var mqlight = require(&lsquo;mqlight&rsquo;);</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams103.md, moved because of doc app changes -->
@@ -71,9 +69,8 @@ gem 'mqlight', '~> 1.0'
 
 And add the following require statement to your source file:
 
-```
-require ‘mqlight’
-```
+
+<code>require &lsquo;mqlight&rsquo;</code>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams101.md, moved because of doc app changes -->
