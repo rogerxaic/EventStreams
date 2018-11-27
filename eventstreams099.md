@@ -69,8 +69,7 @@ gem 'mqlight', '~> 1.0'
 
 And add the following require statement to your source file:
 
-
-<code>require &lsquo;mqlight&rsquo;</code>
+<pre class="pre"><code>require &lsquo;mqlight&rsquo;</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams101.md, moved because of doc app changes -->
