@@ -50,6 +50,8 @@ And add the following require statement to your source
 file:
 
 <pre class="pre"><code>var mqlight = require(‘mqlight’);</code></pre>
+
+<pre class="pre"><code>var mqlight = require(&#96;mqlight&acute;);</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams103.md, moved because of doc app changes -->
