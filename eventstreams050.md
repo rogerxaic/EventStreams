@@ -43,7 +43,7 @@ Kafka clients exist in multiple languages and we provide instructions for some o
 		</tr>
 
 			<td>**Authentication requirements**</td>
-			<td>Client must support authentication using the SASL Plain mechanism</td>
+			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
 			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
 		</tr>
 
