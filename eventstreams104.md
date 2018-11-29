@@ -82,7 +82,7 @@ latest version. You can download a Kafka client from
 
 ### Migrating a Kafka client to 0.10.2.X or later versions
 
-From 0.10.2, you can configure SASL authentication directly in the client's properties instead of using a JAAS file. This simplicifcation allows you to run multiple clients in the same JVM using different sets of credentials, which is not possible with a JAAS file.
+From 0.10.2, you can configure SASL authentication directly in the client's properties instead of using a JAAS file. This simplification allows you to run multiple clients in the same JVM using different sets of credentials, which is not possible with a JAAS file.
 
 Complete the following steps:
 
