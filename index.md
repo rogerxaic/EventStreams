@@ -58,27 +58,23 @@ Complete the following steps:
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. Change directory to the java console sample by running the following command:
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. Run the following build commands:
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc} Start the consumer on your console by running the following command:
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
-    {: codeblock}
     
     The sample uses a topic named `kafka-java-console-sample-topic`. If the topic does
     not already exist, the sample creates it using the {{site.data.keyword.messagehub}} Administration API. To send and receive
@@ -94,7 +90,6 @@ Complete the following steps:
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     We recommend using all the Kafka hosts listed in the **Credentials** that you selected.
 
@@ -102,7 +97,6 @@ Complete the following steps:
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
- {: codeblock}
   
 9. You should now see the messages sent by the producer appearing in the consumer. The following
 is some sample output:
