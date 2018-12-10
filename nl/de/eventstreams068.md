@@ -49,7 +49,9 @@ müssen Sie einen Browser verwenden, der TLS 1.2 unterstützt.
 Nachrichtendaten werden für die Übertragung zwischen {{site.data.keyword.messagehub}} und Clients als Ergebnis von TLS verschlüsselt. {{site.data.keyword.messagehub}} speichert ruhende Nachrichtendaten
 und Nachrichtenprotokolle auf verschlüsselten Datenträgern.
 
-Abschnittsnamen und Consumergruppen werden für die Übertragung zwischen {{site.data.keyword.messagehub}} und Clients als Ergebnis von TLS verschlüsselt. {{site.data.keyword.messagehub}} verschlüsselt jedoch diese ruhenden Werte nicht. Daher wird empfohlen, keine vertraulichen Informationen in Topicnamen fzu verwenden.
+Abschnittsnamen und Consumergruppen werden für die Übertragung zwischen
+{{site.data.keyword.messagehub}} und Clients als Ergebnis von TLS verschlüsselt. {{site.data.keyword.messagehub}} verschlüsselt
+jedoch diese ruhenden Werte nicht. Daher wird empfohlen, keine vertraulichen Informationen in Topicnamen fzu verwenden.
 
 
 

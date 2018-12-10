@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-07-31"
 Verwendung von {{site.data.keyword.messagehub}} überwachen können.
 {:shortdesc}
 
-**Hinweis:** Metriken und Ereignisse sind nur im Rahmen des {{site.data.keyword.messagehub}}-Plans "Standard" in den Regionen "Vereinigte Staaten (Süden)", "Vereinigtes Königreich" und "Sydney" verfügbar. 
+**Hinweis:** Metriken sind nur im Rahmen des {{site.data.keyword.messagehub}}-Plans "Standard" an den Standorten Dallas (us-south), London (eu-gb) und Sydney (au-syd) verfügbar. 
 
 
 Sie können die folgenden Protokolldaten überwachen:

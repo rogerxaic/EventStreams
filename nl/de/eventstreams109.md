@@ -22,7 +22,7 @@ Wenn ein Problem mit {{site.data.keyword.messagehub}} auftritt, überprüfen Sie
 Wenn Sie Unterstützung vom {{site.data.keyword.messagehub}}-Team benötigen, sammeln Sie bitte die folgenden Informationen. Je mehr Informationen Sie zu Beginn angeben können, desto effizienter kann Sie das Team bei der Lösung des Problems unterstützen.
 {:shortdesc}
 
-1. In welcher {{site.data.keyword.Bluemix_notm}}-Region wird Ihre {{site.data.keyword.messagehub}}-Instanz bereitgestellt  (z. B. 'Vereinigte Staaten (Süden)' oder 'Vereintes Königreich')? 
+1. An welchem {{site.data.keyword.Bluemix_notm}}-Standort (in welcher Region) wird die {{site.data.keyword.messagehub}}-Instanz bereitgestellt? Beispiel: Dallas oder London. 
 2. In welcher Schnittstelle treten Probleme auf (Kafka, REST, AMQP oder Bridges)?
 3. Wann ist das Problem zum ersten Mal aufgetreten (Datum, genaue Uhrzeit und Zeitzone)? Wie lange war Ihre App zu diesem Zeitpunkt bereits aktiv?
 4. Tritt das Problem weiterhin auf? Können Sie das Problem erneut hervorrufen?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-25"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Merkmale der MQ Light-API
 {: #mqlight}
 
-** Die MQ Light-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
+** Die MQ Light-API ist nur als Bestandteil des Plans "Standard" verfügbar. **
 <br/>
 
 Die {{site.data.keyword.mql}}-API stellt eine höhere Abstraktionsebene für das Messaging bereit als Kafka.
@@ -32,8 +33,8 @@ den Kafka-Topics. In der {{site.data.keyword.mql}}-API wird ein einziges Kafka-T
 mit der Bezeichnung "MQLight" verwendet. Alle über die {{site.data.keyword.mql}}-API gesendeten
 und empfangenen Nachrichten durchlaufen dieses eine Kafka-Topic.
 
-Die {{site.data.keyword.mql}}-API ist nur in den folgenden
-{{site.data.keyword.Bluemix_notm}}-Regionen verfügbar: 'Vereinigte Staaten (Süden)', 'Vereintes Königreich' und 'Sydney'. Die MQ Light-API ist weder in der Region 'Deutschland' noch in
+{{site.data.keyword.mql}} ist nur in den folgenden {{site.data.keyword.Bluemix_notm}}-Regionen verfügbar:
+USA (Süden) (Dallas), Vereinigtes Königreich (Süden) (London) und Asien-Pazifik (Süden) (Sydney). Die MQ Light-API ist weder in der Region EU (Mitte) (Frankfurt) noch in
 {{site.data.keyword.Bluemix_notm}} Dedicated verfügbar.
 
 <!-- begin STAGING ONLY -->

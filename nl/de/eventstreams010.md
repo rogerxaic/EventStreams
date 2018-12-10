@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -20,10 +20,10 @@ lastupdated: "2018-06-28"
 
 Mit {{site.data.keyword.messagehub}} können Sie die folgenden Tasks ausführen:
 
-* Arbeit in Back-End-Verarbeitungsprozesse auslagern
-* Streaming-Daten mit Analysen verbinden, um aussagekräftige Erkenntnisse zu gewinnen
-* Ereignisdaten in mehreren Anwendungen veröffentlichen, um in Echtzeit reagieren zu können
-* Daten in einen anderen Service übertragen (z. B. in einen Langzeitspeicher)
+* Arbeit in Back-End-Verarbeitungsanwendungen auslagern.
+* Event Streams mit Streaminganalysen verbinden, um aussagekräftige Erkenntnisse zu gewinnen.
+* Ereignisdaten in mehreren Anwendungen veröffentlichen, um in Echtzeit reagieren zu können.
+* Daten in einen anderen Service übertragen. Zum Beispiel in Cloud Object Storage.
 
 Durch die Erstellung mit Apache Kafka werden in Message Hub alle Innovationen in der Community genutzt und es werden Kafka-Client-APIs, Kafka Streams, Kafka Connect und auch KSQL unterstützt.
 {:shortdesc}

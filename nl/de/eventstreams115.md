@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Cloud Object Storage-Bridge 
 {: #cloud_object_storage_bridge }
 
-** {{site.data.keyword.messagehub}}-Bridges sind nur als Bestandteil des Plans "Standard" verfügbar.**
+**Die Cloud Object Storage-Bridge ist nur als Bestandteil des Plans "Standard" verfügbar.**
 <br/>
 
 Die {{site.data.keyword.IBM}} Cloud Object Storage-Bridge bietet die Möglichkeit, Daten aus einem {{site.data.keyword.messagehub}}-Kafka-Topic zu lesen

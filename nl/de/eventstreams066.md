@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Vorgehensweise zum Verbinden und Authentifizieren
 {: #rest_connect}
 
-** Die Kafka-REST-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** Die Kafka-REST-API ist nur als Bestandteil des Plans "Standard" verfügbar. **
 <br/>
 
 Um eine Verbindung zu {{site.data.keyword.messagehub}} herzustellen, verwendet die Kafka-REST-API die Berechtigungsnachweise <code>api_key</code> und <code>kafka_rest_url</code>

@@ -15,7 +15,8 @@ lastupdated: "2018-08-30"
 # Kafka-REST-API verwenden
 {: #rest_how}
 
-** Die Kafka-REST-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** Die Kafka-REST-API ist nur als Bestandteil des Plans "Standard" verfügbar. **
 <br/>
 
 <!-- 21/06/18 - commenting out until content ready

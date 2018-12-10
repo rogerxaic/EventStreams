@@ -26,8 +26,7 @@ Wenn Sie einen Kafka-Client der Version 0.11 oder höher verwenden oder Kafka St
 <dt>cleanup.policy</dt>
 <dd>Zulässige Werte sind <code>delete</code> (Standardwert), <code>compact</code> oder <code>delete,compact</code>
 <p>**Anmerkung:**
-Wenn für die Bereinigungsrichtlinie (cleanup.policy) nur der Wert <code>compact</code> angegeben ist, wird automatisch der Wert <code>delete</code> hinzugefügt, aber die Löschfunktion auf Zeitbasis inaktiviert. Die Nachrichten in dem Topic werden bis 1 GB komprimiert. Die Löschfunktion wird
-erst beim Überschreiten dieses Werts aktiviert.</p>
+Wenn für die Bereinigungsrichtlinie (cleanup.policy) nur der Wert <code>compact</code> angegeben ist, wird automatisch der Wert <code>delete</code> hinzugefügt, aber die Löschfunktion auf Zeitbasis inaktiviert. Die Nachrichten in dem Topic werden bis 1 GB komprimiert. Die Löschfunktion wird erst beim Überschreiten dieses Werts aktiviert.</p>
 </dd>
 
 <dt>retention.ms</dt>

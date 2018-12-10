@@ -20,7 +20,7 @@ lastupdated: "2018-08-14"
 # {{site.data.keyword.cloudaccesstrailshort}}-Ereignisse (Plan "Enterprise")
 {: #at_events}
 
-Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie im Rahmen des Plans "Enterprise" verfolgen, wie Benutzer und Anwendungen mit dem {{site.data.keyword.messagehub}}-Service in {{site.data.keyword.Bluemix}} interagieren.
+Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie im Rahmen des Plans "Enterprise" verfolgen, wie Benutzer und Anwendungen mit dem {{site.data.keyword.messagehub}}-Service in {{site.data.keyword.Bluemix}} interagieren. 
 {: shortdesc}
 
 Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die eine Statusänderung eines Service in {{site.data.keyword.Bluemix_notm}} bewirken. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
@@ -47,7 +47,7 @@ Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutze
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse stehen in der {{site.data.keyword.cloudaccesstrailshort}}-**Kontodomäne** zur Verfügung, die in der {{site.data.keyword.Bluemix_notm}}-Region verfügbar ist, in der die Ereignisse generiert werden.
+{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse stehen in der {{site.data.keyword.cloudaccesstrailshort}}-**Kontodomäne** zur Verfügung, die an dem {{site.data.keyword.Bluemix_notm}}-Standort (Region) verfügbar ist, an dem die Ereignisse generiert werden.
 
 
 

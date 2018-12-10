@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -25,12 +25,12 @@ Den nachfolgenden Informationen können Sie entnehmen, wie Sie diese Details abr
 
 ## {{site.data.keyword.messagehub}}-Instanz bereitstellen
 
-Als Voraussetzung müssen Sie zuerst eine {{site.data.keyword.messagehub}}-Serviceinstanz für den Plan "Standard" oder den Plan "Enterprise" bereitstellen. Für die Bereitstellung einer {{site.data.keyword.messagehub}}-Instanz fallen möglicherweise Gebühren an. Rufen Sie anschließend die Verbindungsdetails für die {{site.data.keyword.messagehub}}-API ab, indem Sie die folgenden Tasks ausführen.
+Als Voraussetzung müssen Sie zuerst eine {{site.data.keyword.messagehub}}-Serviceinstanz für den Plan "Standard" oder den Plan "Enterprise" bereitstellen. Rufen Sie anschließend die Verbindungsdetails für die {{site.data.keyword.messagehub}}-API ab, indem Sie die folgenden Tasks ausführen.
 
 ## Plan "Standard" - Übersicht
 {: #connect_standard}
 
-Services, die unter Verwendung des Plans "Standard" bereitgestellt werden, sind Cloud Foundry-Services. Dies bedeutet, dass sie in einer Cloud Foundry-Organisation und einem Cloud Foundry-Bereich bereitgestellt und im Dashboard unter der Überschrift **Cloud Foundry-Services** gruppiert werden. Die verwendete Methode zum Verbinden einer Anwendung ist davon abhängig, ob die Anwendung innerhalb von Cloud Foundry oder extern bereitgestellt wird.
+Services, die unter Verwendung des Plans "Standard" bereitgestellt werden, sind Cloud Foundry-Services. Dies bedeutet, dass sie in einer Cloud Foundry-Organisation und einem Cloud Foundry-Bereich bereitgestellt und im Dashboard unter der Überschrift **Cloud Foundry-Services** gruppiert werden. Die zum Verbinden einer Anwendung verwendete Methode ist davon abhängig, ob die Anwendung innerhalb von Cloud Foundry bereitgestellt wird oder außerhalb von Cloud Foundry, z. B. im Kubernetes-Service.
 
 
 ## Cloud Foundry-Anwendungen beim Plan "Standard"
@@ -122,7 +122,6 @@ Für Anwendungen, die außerhalb von Cloud Foundry ausgeführt werden, werden di
 7. Klicken Sie auf diesen Berechtigungsnachweis mithilfe von **Berechtigungsnachweise anzeigen**, um die Details in JSON-Formatierung sichtbar zu machen.
 8. Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).
 
-
 ### Berechtigungsnachweise über die IBM Cloud-CLI abrufen 
 {: #connect_standard_external_cli }
 
@@ -154,12 +153,12 @@ Services, die unter Verwendung des Plans "Enterprise" bereitgestellt werden, wer
 
 Führen Sie die folgenden Schritte aus, um Ihre Anwendung zu binden und Serviceschlüssel für Ihren Service abzurufen. Ihre Anwendung oder Ihr Serviceschlüssel muss die Zugriffsrolle "Manager" aufweisen, damit sie bzw. er zum Erstellen von Topics berechtigt ist.
 
-Die zum Verbinden einer Anwendung verwendete Methode ist davon abhängig, ob die Anwendung innerhalb von Cloud Foundry oder extern bereitgestellt wird.
+Die zum Verbinden einer Anwendung verwendete Methode ist davon abhängig, ob die Anwendung innerhalb von Cloud Foundry bereitgestellt wird oder außerhalb von Cloud Foundry, z. B. im Kubernetes-Service.
 
 ## Cloud Foundry-Anwendungen beim Plan "Enterprise"
 {: #connect_enterprise_cf}
 
-Ihre Anwendung muss an die {{site.data.keyword.messagehub}}-Serviceinstanz gebunden werden. Zum Binden einer Cloud Foundry-Anwendung an einen externen Service mit One Cloud müssen Sie zunächst einen Cloud Foundry-Servicealias erstellen und anschließend beim Binden diesen Alias von Ihrer Cloud Foundry-Anwendung referenzieren.
+Ihre Anwendung muss an die {{site.data.keyword.messagehub}}-Serviceinstanz gebunden werden. Zum Binden einer Cloud Foundry-Anwendung an einen externen Service müssen Sie zunächst einen Cloud Foundry-Servicealias erstellen und anschließend beim Binden diesen Alias von Ihrer Cloud Foundry-Anwendung referenzieren.
 
 Nach dem Binden werden die Verbindungsdetails mithilfe der Umgebungsvariablen VCAP_SERVICES in JSON-Formatierung für die Anwendung verfügbar gemacht. Sie können eine Anwendung und einen Service entweder über die IBM Cloud-Konsole oder über die IBM Cloud-CLI binden.
 
@@ -174,7 +173,7 @@ Nach dem Binden werden die Verbindungsdetails mithilfe der Umgebungsvariablen VC
 6. Wählen Sie die Kachel für den zu bindenden {{site.data.keyword.messagehub}}-Service aus und klicken Sie auf **Verbindung herstellen**. 
 7. Wählen Sie in dem daraufhin angezeigten Fenster **Verbindung für IAM-fähigen Service** eine Zugriffsrolle unter **Zugriffsrolle für Verbindung** und eine Service-ID in der Liste **Service-ID für Verbindung** aus (Sie können auch die automatisch generierte ID akzeptieren). Klicken Sie auf **Verbinden**. 
 
-  Auf diese Weise wird ein Cloud Foundry-Servicealias für Ihren {{site.data.keyword.messagehub}}-Service erstellt und die Anwendung wird anschließend an diesen Alias gebunden.  
+  Auf diese Weise wird ein Cloud Foundry-Servicealias für Ihren {{site.data.keyword.messagehub}}-Service erstellt und die Anwendung wird anschließend an diesen Alias gebunden. 
 
   Führen Sie ein erneutes Staging Ihrer Anwendung durch, damit die Änderungen wirksam werden.<br/>
 8. Klicken Sie links auf die Registerkarte **Laufzeit** und wählen Sie die Registerkarte **Umgebungsvariablen** in der Mitte aus. Sie können nun die Informationen zu VCAP_SERVICES überprüfen. Ihre Anwendung kann auf diese nun als Umgebungsvariablen zugreifen. 
@@ -203,7 +202,7 @@ Da die App noch nicht an {{site.data.keyword.messagehub}} gebunden ist, kann die
 Alternativ können Sie Ihre Manifestdatei aktualisieren und die Anwendung erneut mit Push-Operation übertragen.</li>
 <li>Überprüfen Sie, ob die Umgebungsvariable VCAP_SERVICES in Ihrer Anwendungslaufzeit verfügbar ist:<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).
+<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html). 
 <p>Sie müssen möglicherweise ein erneutes Staging Ihrer Anwendung durchführen, damit die Änderungen wirksam werden.</p></li>
 </ol>
 

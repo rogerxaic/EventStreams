@@ -11,6 +11,7 @@ lastupdated: "2018-08-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:faq: data-hd-content-type='faq'}
 
 # Häufig gestellte Fragen
 {: #faqs}
@@ -21,6 +22,7 @@ Antworten auf häufig gestellte Fragen zum {{site.data.keyword.IBM}} {{site.data
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
 ## Wie können mit Kafka-APIs Topics erstellt und gelöscht werden?
 {: #topic_admin}
+{: faq}
 
 Wenn Sie einen Kafka-Client der Version 0.11 oder höher verwenden oder Kafka Streams Version 0.10.2.0 oder höher, können Sie APIs verwenden, um Topics zu erstellen oder zu löschen. Für die zulässigen Einstellungen beim Erstellen von Topics gelten bestimmte Einschränkungen. Gegenwärtig können Sie nur die folgenden Einstellungen ändern:
 
@@ -72,12 +74,14 @@ Nur für Plan "Enterprise". Auf einen beliebigen Wert zwischen 5 Minuten und 30 
 
 ## Welchen Zeitraum legt {{site.data.keyword.messagehub}} für das Protokollspeicherungsfenster für das Consumer-Offsets-Topic fest?
 {: #offsets }
+{: faq}
 {{site.data.keyword.messagehub}} speichert Consumer-Offsets für einen Zeitraum von 7 Tagen. Dies entspricht der Kafka-Konfiguration 'offsets.retention.minutes'. 
 
 Die Offset-Aufbewahrungsdauer gilt systemweit und kann nicht für eine einzelne Topicebene festgelegt werden. Für alle Consumergruppen werden nur gespeicherte Offsets für einen Zeitraum von 7 Tagen bereitgestellt, selbst wenn die Protokollspeicherungsdauer für das zugehörige Topic auf den Maximalwert von 30 Tagen erhöht wurde. 
 
 ## Wie ist das Verfügbarkeitsverhalten von {{site.data.keyword.messagehub}}?
 {: #availability}
+{: faq}
 
 Verwenden Sie diese Informationen beim Schreiben von {{site.data.keyword.messagehub}}-Apps, um das normale Verfügbarkeitsverhalten von {{site.data.keyword.messagehub}} und die damit verbundenen Anforderungen an das Ausführungsverhalten Ihrer Apps kennenzulernen.
 
@@ -95,11 +99,13 @@ Gestalten Sie Ihre Apps so, dass gelegentliche Neustarts der Bridges verarbeitet
 
 ## Was ist die maximale Nachrichtengröße von {{site.data.keyword.messagehub}}? 
 {: #max_message_size }
+{: faq}
 
 Die maximale Nachrichtengröße von {{site.data.keyword.messagehub}} ist 1 MB. Das ist der Kafka-Standardwert. 
 
 ## Was sind die Replikationseinstellungen für {{site.data.keyword.messagehub}}? 
 {: #replication }
+{: faq}
 
 {{site.data.keyword.messagehub}} ist für eine starke Verfügbarkeit und Dauerhaftigkeit konfiguriert.
 Die folgenden Konfigurationseinstellungen gelten für alle Topics und können nicht geändert werden:
@@ -108,6 +114,7 @@ Die folgenden Konfigurationseinstellungen gelten für alle Topics und können ni
 
 ## Wie funktioniert die {{site.data.keyword.messagehub}}-Abrechnung beim Plan "Standard"? 
 {: #billing }
+{: faq}
 
 {{site.data.keyword.messagehub}} tastet beim Plan "Standard" regelmäßig die Topicanzahl eines Benutzers ab und {{site.data.keyword.Bluemix_notm}} zeichnet jeden Tag den maximalen Tastwert auf. {{site.data.keyword.messagehub}} stellt die maximale Anzahl gleichzeitig angezeigter Partitionen sowie die Summe der täglich gesendeten und empfangenen Nachrichten in Rechnung.
 
@@ -118,6 +125,7 @@ Beispiel: Wenn Sie an einem Tag 1 Topic 10 Mal erstellen und löschen, wird maxi
 <!--12/04/18 - Karen: same info duplicated at messagehub057 -->
 ## Wie oft wird die Kafka-REST-API neu gestartet? 
 {: #REST_restart }
+{: faq}
 
 Die Kafka-REST-API wird einmal pro Tag für einen kurzen Zeitraum
 erneut  gestartet. 
@@ -134,15 +142,17 @@ REST-API den folgenden JSON-Code zurück:
 
 ## Worin bestehen die Unterschiede zwischen dem {{site.data.keyword.messagehub}}-Plan "Standard" und dem {{site.data.keyword.messagehub}}-Plan "Enterprise"?
 {: #plan_compare }
+{: faq}
 
 Weitere Informationen zu den beiden unterschiedlichen {{site.data.keyword.messagehub}}-Plänen finden Sie in [Plan auswählen](/docs/services/EventStreams/eventstreams085.html).
 
 ## Wie wird die Disaster-Recovery gehandhabt?
 {: #disaster_recovery }
+{: faq}
 
-Zum gegenwärtigen Zeitpunkt ist der Benutzer für die {{site.data.keyword.messagehub}}-Disaster-Recovery zuständig. {{site.data.keyword.messagehub}}-Daten können zwischen einer {{site.data.keyword.messagehub}}-Instanz in einer Region und einer anderen Instanz in einer anderen Region repliziert werden. Es ist jedoch Aufgabe des Benutzers, eine ferne {{site.data.keyword.messagehub}}-Instanz bereitzustellen und die Replikation zu verwalten.
+Zum gegenwärtigen Zeitpunkt ist der Benutzer für die {{site.data.keyword.messagehub}}-Disaster-Recovery zuständig. {{site.data.keyword.messagehub}}-Daten können zwischen einer {{site.data.keyword.messagehub}}-Instanz an einem Standort (in einer Region) und einer anderen Instanz an einem anderen Standort repliziert werden. Es ist jedoch Aufgabe des Benutzers, eine ferne {{site.data.keyword.messagehub}}-Instanz bereitzustellen und die Replikation zu verwalten.
 
-Darüber hinaus ist der Benutzer für die Erstellung von Sicherungskopien der Nachrichtennutzdaten verantwortlich. Diese Daten werden zwar auf mehrere Kafka-Broker innerhalb eines Clusters repliziert und damit vor den meisten Ausfällen geschützt, diese Replikation bietet jedoch keinen Schutz bei einem Ausfall, der die gesamte Region betrifft. 
+Darüber hinaus ist der Benutzer für die Erstellung von Sicherungskopien der Nachrichtennutzdaten verantwortlich. Diese Daten werden zwar auf mehrere Kafka-Broker innerhalb eines Clusters repliziert und damit vor den meisten Ausfällen geschützt, diese Replikation bietet jedoch keinen Schutz bei einem Ausfall, der den gesamten Standort betrifft. 
 
 Topicnamen werden durch {{site.data.keyword.messagehub}} gesichert.
 

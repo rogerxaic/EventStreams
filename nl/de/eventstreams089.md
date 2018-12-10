@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,20 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Object Storage-Bridge 
+# Object Storage-Bridge (nicht mehr verwendet)
 {: #object_storage_bridge }
 
-** {{site.data.keyword.messagehub}}-Bridges sind nur als Bestandteil des Plans "Standard" verfügbar.**
+**Die {{site.data.keyword.objectstorageshort}}-Bridge wird ab 01. August 2018 nicht mehr verwendet.**
 <br/>
+
+Da der zugrunde liegende Service, zu dem die {{site.data.keyword.objectstorageshort}}-Bridge eine Verbindung herstellt, nicht mehr verwendet wird, wird auch die {{site.data.keyword.objectstorageshort}}-Bridge ab 01. August 2018 nicht mehr verwendet. 
+
+Wenn der {{site.data.keyword.objectstorageshort}}-Service eingestellt wird, werden auch alle Instanzen der {{site.data.keyword.objectstorageshort}}-Bridge außer Betrieb gesetzt. Weitere Informationen finden Sie in der [Ankündigung zur Einstellung der Unterstützung: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+
+Als Alternative kann die [Cloud Object Storage-Bridge](/docs/services/EventStreams/eventstreams115.html){:new_window} verwendet werden.
+{:deprecated}
 
 Die {{site.data.keyword.objectstorageshort}}-Bridge ermöglicht das Archivieren von Daten
 aus den Kafka-Topics von {{site.data.keyword.messagehub}} in einer Instanz des {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}}-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ObjectStorage/index.html){:new_window}. Die Bridge verarbeitet

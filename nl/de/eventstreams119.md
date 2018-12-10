@@ -16,8 +16,6 @@ lastupdated: "2018-06-01"
 # Watson IoT Platform-Bridge
 {: #consuming_messages }
 
-** {{site.data.keyword.messagehub}}-Bridges sind nur als Bestandteil des Plans "Standard" verfügbar.**
-<br/>
 
 {{site.data.keyword.iot_full}} stellt eine verwaltete Bridge bereit, mit der Sie eine unidirektionale Verbindung zu {{site.data.keyword.messagehub_full}} herstellen können.
 
@@ -25,7 +23,7 @@ Wenn Sie {{site.data.keyword.messagehub}} mit {{site.data.keyword.iot_short_notm
 
 Es ist üblich, die {{site.data.keyword.iot_short_notm}}-Bridge, {{site.data.keyword.messagehub}} und die Cloud Object Storage-Bridge zu verwenden, um eine End-to-End-Pipeline zu erstellen, die Interaktionen in Echtzeit und im Stapel vereinfacht.
 
-Informationen zum Erstellen dieser Bridge finden Sie unter: [Verbinden und Konfigurieren eines Historian-Services mit {{site.data.keyword.messagehub}}  ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/IoT/message_hub.html){:new_window}.
+Informationen zum Erstellen dieser Bridge finden Sie unter: [Verbinden und Konfigurieren eines Historian-Services mit {{site.data.keyword.messagehub}}  ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/IoT/message_hub.html#messagehub_main){:new_window}.
 
 
 

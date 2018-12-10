@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle ist zusammengefasst, was von den beiden Plänen jeweils
 		</tr>
 	  		<tr>
 			<td>**Kafka-Version in Cluster**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -73,14 +73,17 @@ In der folgenden Tabelle ist zusammengefasst, was von den beiden Plänen jeweils
 			<td>Unbegrenzt bis zur Speichergrenze Ihres Plans </td>
 		</tr>
 		<tr>
-			<td>**Verfügbarkeit in Region**</td>
-			<td>Vereinigte Staaten (Süden)</br>
-			Großbritannien</br>
-			Sydney</br>
-			Deutschland (keine MQ Light-API)</td>
-			<td>Vereinigte Staaten (Süden)</br>
-			Vereinigte Staaten (Osten)<br/>
-			Deutschland<br/>
+			<td>**Verfügbarkeit an den Standorten (Regionen)**</td>
+			<td>Dallas (us-south)</br>
+			London (eu-gb)</br>
+			Sydney (au-syd))</br>
+			Frankfurt (eu-de) - keine {{site.data.keyword.mql}} API </td>
+			<td>Dallas (us-south)</br>
+			Washington (us-east))<br/>
+			London (eu-gb)<br/>
+			Frankfurt (eu-de)<br/>
+			Tokio (jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

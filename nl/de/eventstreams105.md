@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # MQ-Bridge
 {: #mq_bridge}
 
-** {{site.data.keyword.messagehub}}-Bridges sind nur als Bestandteil des Plans "Standard" verfügbar.**
+**Die MQ-Bridge ist nur als Bestandteil des Plans "Standard" verfügbar.**
 <br/>
 
 Die MQ-Bridge ermöglicht das Übertragen von Nachrichtendaten aus einer {{site.data.keyword.IBM_notm}}-MQ-Warteschlange
