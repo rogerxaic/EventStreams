@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Pont Cloud Object Storage 
 {: #cloud_object_storage_bridge }
 
-**Des ponts {{site.data.keyword.messagehub}} sont disponibles dans le cadre du plan Standard uniquement.**
+** Le pont Cloud Object Storage est uniquement disponible dans le cadre du plan Standard.**
 <br/>
 
 Le pont {{site.data.keyword.IBM}} Cloud Object Storage offre un moyen de lire des données à partir d'un sujet {{site.data.keyword.messagehub}} Kafka et de placer ces données dans [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.

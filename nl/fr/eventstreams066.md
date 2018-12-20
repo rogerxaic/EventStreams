@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Procédure de connexion et d'authentification
 {: #rest_connect}
 
-**L'API REST Kafka est disponible uniquement dans le cadre du plan Standard.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** L'API REST Kafka est uniquement disponible dans le cadre du plan Standard.**
 <br/>
 
 Pour se connecter à {{site.data.keyword.messagehub}}, l'API Kafka utilise les données d'identification <code>api_key</code> et <code>kafka_rest_url</code> provenant de la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).

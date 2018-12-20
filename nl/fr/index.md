@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -76,13 +76,13 @@ Procédez comme suit :
 
 7. {: #start_consumer_step notoc} Démarrez le consommateur sur votre console en exécutant la commande suivante :
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">url_admin_kafka</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
     {: codeblock}
     
     Cet exemple utilise un sujet nommé `kafka-java-console-sample-topic`. Si le sujet n'existe pas déjà, l'exemple le crée à l'aide de l'API d'administration {{site.data.keyword.messagehub}}. Pour envoyer et recevoir des messages, l'exemple utilise l'API Java Apache Kafka.
 
-    Utilisez les valeurs de *kafka_brokers_sasl*, *kafka_admin_url* et *api_key* des données d'identification créées à [l'étape 2](/docs/services/MessageHub/index.html#create_credentials_step).
+    Utilisez les valeurs de *kafka_brokers_sasl*, *kafka_admin_url* et *api_key* des données d'identification créées à [l'étape 2](/docs/services/EventStreams/index.html#create_credentials_step).
 	
 	Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule.
     
@@ -97,7 +97,7 @@ Procédez comme suit :
 
 8. Démarrez le producteur sur votre console en exécutant la commande suivante :
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   

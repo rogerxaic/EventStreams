@@ -12,6 +12,7 @@ lastupdated: "2018-05-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- 12/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Procédure de connexion et d'authentification
 {: #mql_connect}
 

@@ -20,7 +20,7 @@ lastupdated: "2018-08-14"
 # Evénements {{site.data.keyword.cloudaccesstrailshort}} (plan Enterprise)
 {: #at_events}
 
-Utilisez le service {{site.data.keyword.cloudaccesstrailfull}} pour contrôler comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.messagehub}} sur le plan Enterprise dans {{site.data.keyword.Bluemix}}.
+Utilisez le service {{site.data.keyword.cloudaccesstrailfull}} pour contrôler comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.messagehub}} sur le plan Enterprise dans {{site.data.keyword.Bluemix}}. 
 {: shortdesc}
 
 Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
@@ -36,8 +36,8 @@ Dans le plan Enterprise, {{site.data.keyword.messagehub}} génère automatiqueme
 
 | Action | Description |
 |:-------|:------------|
-| messagehub.topic.create | Un événement est créé lorsque vous créez un sujet |
-| messagehub.topic.delete | Un événement est créé lorsque vous supprimez un sujet |
+| messagehub.topic.create | Un événement est créé lorsque vous créez un sujet|
+| messagehub.topic.delete | Un événement est créé lorsque vous supprimez un sujet|
 {: caption="Tableau 1. Evénements de {{site.data.keyword.messagehub}}" caption-side="top"}
 
 ## Où peut-on afficher les événements ?
@@ -47,7 +47,7 @@ Dans le plan Enterprise, {{site.data.keyword.messagehub}} génère automatiqueme
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le **domaine de compte** {{site.data.keyword.cloudaccesstrailshort}} qui se trouve dans la région {{site.data.keyword.Bluemix_notm}} où les événements sont générés.
+Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le **domaine de compte** {{site.data.keyword.cloudaccesstrailshort}} de l'emplacement (la région) {{site.data.keyword.Bluemix_notm}} où les événements sont générés.
 
 
 

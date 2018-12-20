@@ -20,7 +20,8 @@ lastupdated: "2018-07-05"
 
 Pour découvrir le noeud final de l'API RESTful d'administration, votre application {{site.data.keyword.Bluemix_short}} peut utiliser la propriété `kafka_admin_url` dans la variable d'environnement VCAP_SERVICES de l'application.
 
-Vous pouvez télécharger la spécification complète de l'API depuis la page [admin-rest-api.yaml ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window}. Pour afficher le fichier swagger, utilisez les outils Swagger, par exemple [Swagger Editor ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://editor.swagger.io/#/){:new_window}.
+Vous pouvez télécharger la spécification complète de l'API depuis la page [admin-rest-api.yaml ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window}.
+Pour afficher le fichier swagger, utilisez les outils Swagger, par exemple [Swagger Editor ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://editor.swagger.io/#/){:new_window}.
 
 Le répertoire [{{site.data.keyword.messagehub}} admin-rest-api ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api){:new_window} contient également un ensemble utile d'exemples permettant d'appeler l'API d'administration RESTful.
 

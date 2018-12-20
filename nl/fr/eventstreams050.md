@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -28,7 +28,7 @@ Les clients Kafka existent en plusieurs langages et nous fournissons des instruc
         </tr>
 	  		<tr>
 			<td>**Version Kafka sur le cluster**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 	  		<tr>
@@ -43,7 +43,7 @@ Les clients Kafka existent en plusieurs langages et nous fournissons des instruc
 		</tr>
 
 			<td>**Exigences d'authentification**</td>
-			<td>Le client doit prendre en charge l'authentification à l'aide du mécanisme SASL Plain</td>
+			<td>Le client doit prendre en charge l'authentification à l'aide du mécanisme SASL Plain et utiliser l'extension SNI (Server Name Indication) au protocole TLSv1.2</td>
 			<td>Le client doit prendre en charge l'authentification à l'aide du mécanisme SASL Plain et utiliser l'extension SNI (Server Name Indication) au protocole TLSv1.2</td>
 		</tr>
 

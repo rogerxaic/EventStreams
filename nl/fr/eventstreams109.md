@@ -22,7 +22,7 @@ Si vous rencontrez un problème lié à {{site.data.keyword.messagehub}}, consul
 Si vous souhaitez obtenir de l'aide de la part de l'équipe {{site.data.keyword.messagehub}}, rassemblez toutes les informations suivantes. Plus vous fournirez d'informations à l'avance, plus l'équipe sera en mesure de résoudre le problème de manière efficace :
 {:shortdesc}
 
-1. Dans quelle région {{site.data.keyword.Bluemix_notm}} votre instance de {{site.data.keyword.messagehub}} est-elle mise à disposition ?  Par exemple, Sud des Etats-Unis ou Royaume-Uni. 
+1. Dans quel emplacement (région) {{site.data.keyword.Bluemix_notm}} votre instance de {{site.data.keyword.messagehub}} est-elle mise à disposition ? Par exemple, Dallas ou Londres. 
 2. Avec quelle interface rencontrez-vous des problèmes ? Avec Kafka, REST, AMQP ou les ponts ?
 3. Quand le problème s'est-il produit pour la première fois (date et heure précises, fuseau horaire) ? Depuis combien de temps votre application s'exécutait-elle ?
 4. Le problème se produit-il encore ? Pouvez-vous le répliquer ?

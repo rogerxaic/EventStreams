@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Pont MQ
 {: #mq_bridge}
 
-**Des ponts {{site.data.keyword.messagehub}} sont disponibles dans le cadre du plan Standard uniquement.**
+** Le pont MQ est uniquement disponible dans le cadre du plan Standard.**
 <br/>
 
 Le pont MQ vous permet de transférer des données de messages d'une file d'attente {{site.data.keyword.IBM_notm}} MQ vers un sujet Kafka {{site.data.keyword.messagehub}}. Le pont MQ vous permet d'effectuer efficacement des charges de travail de type cloud (par exemple, des analyses de données) sur des données de messages {{site.data.keyword.IBM_notm}} MQ générées au sein de votre entreprise.

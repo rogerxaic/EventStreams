@@ -11,6 +11,7 @@ lastupdated: "2018-08-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:faq: data-hd-content-type='faq'}
 
 # Foire aux questions (FAQ)
 {: #faqs}
@@ -21,6 +22,7 @@ Vous trouverez ici les réponses aux questions courantes concernant le service {
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
 ## Comment utiliser des API Kafka pour créer et supprimer des sujets ?
 {: #topic_admin}
+{: faq}
 
 Si vous utilisez la version 0.11 ou une version ultérieure du client Kafka, ou la version 0.10.2.0 ou une version ultérieure de Kafka Streams, vous pouvez employer des API pour créer et supprimer des sujets. Certaines restrictions s'appliquent aux paramètres autorisés lors de la création des sujets. Actuellement, vous ne pouvez modifier que les paramètres suivants :
 
@@ -70,12 +72,14 @@ Plan Enterprise uniquement. Toute valeur comprise entre 5 minutes et 30 jours.</
 
 ## Quelle est la durée que {{site.data.keyword.messagehub}} définit dans la fenêtre de conservation des journaux pour le sujet Décalages consommateur ?
 {: #offsets }
+{: faq}
 {{site.data.keyword.messagehub}} conserve les décalages consommateur pendant 7 jours. Cela correspond à la configuration Kafka offsets.retention.minutes. 
 
 La conservation des décalages s'effectue au niveau du système. Vous ne pouvez donc pas la définir au niveau d'un sujet spécifique. Les groupes de consommateurs n'obtiennent que 7 jours de décalages stockés, même en utilisant un sujet dont la durée de conservation a été augmentée jusqu'au maximum de 30 jours. 
 
 ## Quel est le comportement en disponibilité de {{site.data.keyword.messagehub}} ?
 {: #availability}
+{: faq}
 
 Si vous écrivez des applications {{site.data.keyword.messagehub}}, ces informations vous expliquent le comportement normal en disponibilité de {{site.data.keyword.messagehub}} et ce que vos applications sont censées traiter.
 
@@ -92,11 +96,13 @@ Ecrivez vos applications de telle sorte qu'elles gèrent la possibilité d'un re
 
 ## Quelle est la taille de message maximale de {{site.data.keyword.messagehub}} ? 
 {: #max_message_size }
+{: faq}
 
 La taille de message maximale de {{site.data.keyword.messagehub}} est 1 Mo, qui est la valeur par défaut Kafka. 
 
 ## Quels sont les paramètres de réplication de {{site.data.keyword.messagehub}} ? 
 {: #replication }
+{: faq}
 
 {{site.data.keyword.messagehub}} est configuré de manière à offrir une forte disponibilité et durabilité.
 Les paramètres de configuration suivants s'appliquent à tous les sujets et ne sont pas modifiables :
@@ -105,6 +111,7 @@ Les paramètres de configuration suivants s'appliquent à tous les sujets et ne 
 
 ## Comment fonctionne la facturation de {{site.data.keyword.messagehub}} sur le plan Standard ? 
 {: #billing }
+{: faq}
 
 Sur le plan Standard, {{site.data.keyword.messagehub}} prélève régulièrement un décompte de sujets des utilisateurs et {{site.data.keyword.Bluemix_notm}} enregistre la valeur de prélèvement maximale chaque jour. {{site.data.keyword.messagehub}} facture en fonction de cette valeur maximale de partitions concurrentes visualisées et du nombre total de messages envoyés et reçus quotidiennement.
 
@@ -115,6 +122,7 @@ Par exemple, si vous créez et supprimez 1 sujet 10 fois au cours d'une journée
 <!--12/04/18 - Karen: same info duplicated at messagehub057 -->
 ## Quelle est la fréquence de redémarrage de l'API REST Kafka ? 
 {: #REST_restart }
+{: faq}
 
 L'API REST Kafka redémarre une fois par jour pendant un court laps de
 temps. 
@@ -129,15 +137,17 @@ l'API REST renvoie le code JSON suivant :
 
 ## Quelles sont les différences entre le plan {{site.data.keyword.messagehub}} Standard et le plan {{site.data.keyword.messagehub}} Enterprise ?
 {: #plan_compare }
+{: faq}
 
 Pour en savoir plus sur les deux plans {{site.data.keyword.messagehub}}, voir [Choix d'un plan](/docs/services/EventStreams/eventstreams085.html).
 
 ## Comment doit-on traiter les reprises après incident ?
 {: #disaster_recovery }
+{: faq}
 
-Actuellement, l'utilisateur est responsable de traiter sa propre reprise après incident dans {{site.data.keyword.messagehub}}. Les données de {{site.data.keyword.messagehub}} peuvent être répliquées entre une instance de {{site.data.keyword.messagehub}} dans une région et une autre instance dans une région différente. Cependant, l'utilisateur est responsable de mettre à disposition une instance de {{site.data.keyword.messagehub}} à distance et de gérer la réplication.
+Actuellement, l'utilisateur est responsable de traiter sa propre reprise après incident dans {{site.data.keyword.messagehub}}. Les données de {{site.data.keyword.messagehub}} peuvent être répliquées entre une instance de {{site.data.keyword.messagehub}} dans un emplacement (région) et une autre instance dans un emplacement différent. Cependant, l'utilisateur est responsable de mettre à disposition une instance de {{site.data.keyword.messagehub}} à distance et de gérer la réplication.
 
-L'utilisateur est également responsable de la sauvegarde des données de la charge de message. Bien que ces données soient répliquées sur plusieurs courtiers Kafka au sein d'un cluster, qui protège contre la majorité des pannes, cette réplication ne couvre pas une panne au niveau de la région. 
+L'utilisateur est également responsable de la sauvegarde des données de la charge de message. Bien que ces données soient répliquées sur plusieurs courtiers Kafka au sein d'un cluster, ce qui évite la majorité des pannes, cette réplication ne couvre pas les pannes qui se produisent au niveau de l'emplacement. 
 
 Les noms de sujets sont sauvegardés par {{site.data.keyword.messagehub}}.
 

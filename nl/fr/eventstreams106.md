@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-25"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Présentation de l'API MQ Light et de ses particularités
 {: #mqlight}
 
-**L'API MQ Light est disponible uniquement dans le cadre du plan Standard.**
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
+** L'API MQ Light est uniquement disponible dans le cadre du plan Standard.**
 <br/>
 
 L'API {{site.data.keyword.mql}} offre un niveau plus élevé d'abstraction à la messagerie que Kafka.
@@ -28,7 +29,7 @@ Le choix d'un client Kafka ou de l'API {{site.data.keyword.mql}} dépend de la t
 
 Les sujets de l'API {{site.data.keyword.mql}} ne sont pas les mêmes que les sujets Kafka. L'API {{site.data.keyword.mql}} utilise un seul sujet Kafka nommé "MQLight" et tous les messages envoyés et reçus via l'API {{site.data.keyword.mql}} transitent par ce sujet Kafka.
 
-L'API {{site.data.keyword.mql}} est disponible uniquement dans les régions {{site.data.keyword.Bluemix_notm}} suivantes : Sud des Etats-Unis, Royaume-Uni et Sydney. Elle n'est pas disponible dans la région Allemagne, ni dans {{site.data.keyword.Bluemix_notm}} Dedicated.
+L'API {{site.data.keyword.mql}} est uniquement disponible dans les régions {{site.data.keyword.Bluemix_notm}} suivantes : Sud des Etats-Unis (Dallas), Sud du Royaume-Uni (Londres) et Asie-Pacifique sud (Sydney). L'API MQ Light n'est pas disponible dans la région Centre de l'UE (Francfort) ni dans {{site.data.keyword.Bluemix_notm}} Dedicated.
 
 <!-- begin STAGING ONLY -->
 Pour plus d'informations sur le choix entre les API, voir [Choix entre les trois API](/docs/services/EventStreams/eventstreams087.html).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -25,12 +25,12 @@ Lisez les informations suivantes pour savoir comment obtenir ces éléments. Les
 
 ## Mise à disposition d'une instance {{site.data.keyword.messagehub}}
 
-Vous devez préalablement mettre à disposition une instance de service {{site.data.keyword.messagehub}} pour le plan Standard ou le plan Enterprise. La mise à disposition d'une instance {{site.data.keyword.messagehub}} peut générer des frais. Ensuite, procurez-vous les détails de connexion d'API {{site.data.keyword.messagehub}} en effectuant les tâches suivantes.
+Vous devez préalablement mettre à disposition une instance de service {{site.data.keyword.messagehub}} pour le plan Standard ou le plan Enterprise. Ensuite, procurez-vous les détails de connexion d'API {{site.data.keyword.messagehub}} en effectuant les tâches suivantes.
 
 ## Présentation du plan Standard
 {: #connect_standard}
 
-Les services mis à disposition à l'aide du plan Standard sont des services Cloud Foundry. Cela signifie qu'ils sont déployés dans une organisation et un espace Cloud Foundry et qu'ils sont regroupés dans le tableau de bord sous l'en-tête **Services Cloud Foundry**. La méthode utilisée pour la connexion d'une application dépend de l'emplacement où l'application est déployée, à savoir dans Cloud Foundry ou à l'extérieur.
+Les services mis à disposition à l'aide du plan Standard sont des services Cloud Foundry. Cela signifie qu'ils sont déployés dans une organisation et un espace Cloud Foundry et qu'ils sont regroupés dans le tableau de bord sous l'en-tête **Services Cloud Foundry**. La méthode utilisée pour la connexion d'une application dépend de l'emplacement où l'application est déployée, c'est-à-dire dans Cloud Foundry ou en dehors de Cloud Foundry, par exemple dans le service Kubernetes.
 
 
 ## Applications Cloud Foundry sur le plan Standard
@@ -121,7 +121,6 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 7. Cliquez sur cette donnée d'identification en utilisant **Afficher les données d'identification** pour afficher ses détails au format JSON.
 8. Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
 
-
 ### Obtention des données d'identification à l'aide de l'interface de ligne de commande IBM Cloud 
 {: #connect_standard_external_cli }
 
@@ -141,8 +140,7 @@ ou utiliser une clé de service existante comme suit : <br/>
 <li>Obtenez les détails de la clé comme suit :</br>
 <code>ibmcloud service key-show <var class="keyword varname">nom_votre_service</var> <var class="keyword varname">nom_clé_service</var></code></br>
 Cette ligne de commande renvoie les détails de la clé de service au format JSON.</li>
-<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
-</li>
+<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).</li>
 </ol>
 
  
@@ -153,12 +151,12 @@ Les services mis à disposition à l'aide du plan Enterprise sont regroupés dan
 
 Procédez comme suit pour lier votre application et obtenir les clés de service de vos service. Pour être autorisée à créer des sujets, votre application oui votre clé de service doit avoir un rôle d'accès Responsable.
 
-La méthode utilisée pour la connexion d'une application dépend de l'emplacement où l'application est déployée, à savoir dans Cloud Foundry ou à l'extérieur.
+Pour connecter une application, la méthode utilisée dépend de l'endroit où l'application est déployée, c'est à dire dans Cloud Foundry ou en dehors de Cloud Foundry, par exemple dans le service Kubernetes.
 
 ## Applications Cloud Foundry sur le plan Enterprise
 {: #connect_enterprise_cf}
 
-Votre application doit être liée à l'instance de service {{site.data.keyword.messagehub}}. Pour lier une application Cloud Foundry à un service autre que Cloud Foundry avec One Cloud, commencez par créer un alias de service Cloud Foundry, puis référencez cet alias depuis votre application Cloud Foundry lors de la liaison.
+Votre application doit être liée à l'instance de service {{site.data.keyword.messagehub}}. Pour lier une application Cloud Foundry à un service autre que Cloud Foundry, commencez par créer un alias de service Cloud Foundry puis référencez cet alias depuis votre application Cloud Foundry lors de la liaison.
 
 Une fois l'application liée, les détails de connexion sont disponibles pour l'application, au format JSON, par le biais de la variable d'environnement VCAP_SERVICES. Vous pouvez lier une application et un service à l'aide de la console IBM Cloud ou de l'Interface de ligne de commande IBM Cloud.
 
@@ -173,7 +171,7 @@ Une fois l'application liée, les détails de connexion sont disponibles pour l'
 6. Sélectionnez la vignette du service {{site.data.keyword.messagehub}} avec lequel vous voulez établir une liaison, puis cliquez sur **Se connecter**. 
 7. Dans la fenêtre **Connecter un service activé pour IAM** qui s'affiche, sélectionnez un rôle d'accès sous **Rôle d'accès pour la connexion** et un ID de service dans la liste **ID de service pour la connexion** (vous pouvez accepter l'ID auto-généré). Cliquez sur **Connecter**. 
 
-  Cette action crée un alias de service Cloud Foundry pour votre service {{site.data.keyword.messagehub}}, puis lie votre application à cet alias.  
+  Cette action crée un alias de service Cloud Foundry pour votre service {{site.data.keyword.messagehub}}, puis lie votre application à cet alias. 
 
   Reconstituez votre application pour que les modifications prennent effet.<br/>
 8. Cliquez sur l'onglet **Contexte d'exécution** à gauche et sélectionnez l'onglet **Variables d'environnement** au centre. Vous pouvez maintenant vérifier vos informations VCAP_SERVICES. Votre application peut maintenant y accéder en tant que variables d'environnement. 
@@ -202,7 +200,7 @@ L'application n'étant pas encore liée à {{site.data.keyword.messagehub}}, ell
 Vous pouvez également mettre à jour votre fichier manifeste et envoyer de nouveau l'application par commande push.</li>
 <li>Vérifiez que la variable d'environnement VCAP_SERVICES est disponible dans le contexte d'exécution d'application comme suit :<br/>
 <code>ibmcloud app env <var class="keyword varname">nom_votre_application</var></code></li>
-<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
+<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html). 
 <p>Vous devrez peut-être reconstituer votre application pour que les modifications prennent effet.</p></li>
 </ol>
 
@@ -222,7 +220,6 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 5. Entrez les détails de votre nouvelle donnée d'identification, par exemple un nom et un rôle, puis cliquez sur **Ajouter**. Une nouvelle donnée d'identification s'affiche dans la liste des données d'identification.
 6. Cliquez sur cette donnée d'identification en utilisant **Afficher les données d'identification** pour afficher ses détails au format JSON.
 7. Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
-
    <br/><br/>Vérifiez que votre application analyse les détails.
 
 ### Obtention des données d'identification à l'aide de l'interface de ligne de commande IBM Cloud

@@ -15,7 +15,8 @@ lastupdated: "2018-08-30"
 # Utilisation de l'API REST Kafka
 {: #rest_how}
 
-**L'API REST Kafka est disponible uniquement dans le cadre du plan Standard.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** L'API REST Kafka est uniquement disponible dans le cadre du plan Standard.**
 <br/>
 
 <!-- 21/06/18 - commenting out until content ready

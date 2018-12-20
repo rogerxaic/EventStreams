@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-07-31"
 Dans le plan Standard, {{site.data.keyword.messagehub}} collecte automatiquement les mesures et les événements pour que vous puissiez contrôler votre utilisation de {{site.data.keyword.messagehub}}.
 {:shortdesc}
 
-**Remarque :** les mesures et les événements sont disponibles dans le cadre du plan Standard de {{site.data.keyword.messagehub}} dans le sud des Etats-Unis, au Royaume-Uni et à Sydney uniquement. 
+**Remarque :** les mesures et les événements sont uniquement disponibles dans le cadre du plan Standard de {{site.data.keyword.messagehub}} à Dallas (us-south), Londres (eu-gb) et Sydney (au-syd). 
 
 
 Vous pouvez surveiller les informations de journal suivantes :
