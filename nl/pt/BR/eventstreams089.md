@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,20 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Ponte do Object Storage 
+# Ponte do Object Storage (descontinuada)
 {: #object_storage_bridge }
 
-**As pontes do {{site.data.keyword.messagehub}} estão disponíveis como parte somente do plano Standard.**
+** A ponte do {{site.data.keyword.objectstorageshort}} foi descontinuada em 1º de agosto de 2018. **
 <br/>
+
+Como o serviço subjacente ao qual a ponte do {{site.data.keyword.objectstorageshort}} se conecta foi descontinuado, a ponte do {{site.data.keyword.objectstorageshort}} também foi descontinuada em 1º de agosto de 2018. 
+
+Quando o serviço {{site.data.keyword.objectstorageshort}} atingir seu término de vida e for desatribuído, todas as instâncias da ponte do {{site.data.keyword.objectstorageshort}} também serão desatribuídas. Para obter mais informações, consulte o [comunicado de descontinuação: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+
+Como alternativa, é possível usar a [ponte do Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}.
+{:deprecated}
 
 A ponte do {{site.data.keyword.objectstorageshort}} permite arquivar dados de tópicos Kafka no {{site.data.keyword.messagehub}} em uma instância do serviço do {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ObjectStorage/index.html){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos dados da mensagem como objetos para um contêiner no serviço do {{site.data.keyword.objectstorageshort}}.
 

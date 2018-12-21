@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -27,7 +27,7 @@ conclua as etapas apropriadas para a sua instância.
 
 ## Provisão de uma instância do  {{site.data.keyword.messagehub}}
 
-Como pré-requisito, deve-se primeiro provisionar uma instância do serviço {{site.data.keyword.messagehub}} para o plano Standard ou o plano Enterprise. O provisionamento de uma instância do {{site.data.keyword.messagehub}} pode incorrer em encargos. Em seguida, obtenha os detalhes da conexão da API do {{site.data.keyword.messagehub}} concluindo as tarefas a
+Como pré-requisito, deve-se primeiro provisionar uma instância do serviço {{site.data.keyword.messagehub}} para o plano Standard ou o plano Enterprise. Em seguida, obtenha os detalhes da conexão da API do {{site.data.keyword.messagehub}} concluindo as tarefas a
 seguir.
 
 ## Visão geral do plano Standard
@@ -35,8 +35,7 @@ seguir.
 
 Os serviços que são provisionados usando o Plano Standard são serviços do Cloud Foundry. Isso significa que eles são
 implementados em uma organização e espaço do Cloud Foundry e que são agrupados no painel sob o título ** Serviços do
-Cloud Foundry **. O método que você usa para conectar um aplicativo depende de onde o aplicativo está implementado, ou
-seja, no Cloud Foundry ou fora dele.
+Cloud Foundry **. O método usado para conectar um aplicativo depende de onde o aplicativo é implementado, ou seja, no Cloud Foundry ou fora dele, por exemplo, no serviço do Kubernetes.
 
 
 ## Aplicativos do Cloud Foundry no plano Standard
@@ -175,15 +174,12 @@ plano Enterprise é ativado para [IAM ![Ícone de link externo](../../icons/laun
 Conclua as etapas a seguir para ligar o seu aplicativo e obter as chaves de serviço para o seu serviço. Para ser autorizado a
 criar tópicos, o seu aplicativo ou chave de serviço deve ter uma função de acesso Gerenciador.
 
-Para conectar um aplicativo, o método usado depende de onde o aplicativo está implementado, ou seja, no Cloud Foundry
-ou fora dele.
+Para conectar um aplicativo, o método usado depende de onde o aplicativo é implementado, ou seja, no Cloud Foundry ou fora dele, por exemplo, no serviço do Kubernetes.
 
 ## Aplicativos do Cloud Foundry no plano Enterprise
 {: #connect_enterprise_cf}
 
-O seu aplicativo deve ser ligado à instância do serviço {{site.data.keyword.messagehub}}. Para ligar um
-aplicativo do Cloud Foundry a um serviço que não seja do Cloud Foundry com o One Cloud, crie primeiro um alias de serviço do Cloud
-Foundry e, em seguida, faça referência a esse alias por meio do seu aplicativo do Cloud Foundry ao ligar.
+O seu aplicativo deve ser ligado à instância do serviço {{site.data.keyword.messagehub}}. Para ligar um aplicativo do Cloud Foundry a um serviço que não seja do Cloud Foundry, crie um alias do serviço do Cloud Foundry primeiro e, em seguida, referencie esse alias por meio do aplicativo do Cloud Foundry ao realizar a ligação.
 
 Quando ligado, os detalhes da conexão são, então, disponibilizados para o aplicativo no formato JSON usando a variável de
 ambiente VCAP_SERVICES. É possível ligar um aplicativo e um serviço usando o console do IBM Cloud ou a CLI do IBM Cloud.
@@ -233,7 +229,7 @@ Como alternativa, é possível atualizar o seu arquivo manifest e enviar por pus
 <li>Verifique se a variável de ambiente VCAP_SERVICES está disponível no tempo de execução do seu aplicativo:<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
 <li>Passe essas credenciais para o seu aplicativo. Especifique <code>token</code> como o nome de usuário e <var class="keyword varname">api_key</var> como a sua senha. Separe
-<code>token</code> e <var class="keyword varname">api_key</var> com dois-pontos. Para obter mais informações, consulte [Configurando seu cliente](/docs/services/EventStreams/eventstreams063.html).
+<code>token</code> e <var class="keyword varname">api_key</var> com dois-pontos. Para obter mais informações, consulte [Configurando seu cliente](/docs/services/EventStreams/eventstreams063.html). 
 <p>Pode ser necessário remontar seu aplicativo para que as mudanças entrem em vigor.</p></li>
 </ol>
 

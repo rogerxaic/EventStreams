@@ -16,8 +16,6 @@ lastupdated: "2018-06-01"
 # Ponte do Watson IoT Platform
 {: #consuming_messages }
 
-**As pontes do {{site.data.keyword.messagehub}} estão disponíveis como parte somente do plano Standard.**
-<br/>
 
 O {{site.data.keyword.iot_full}} fornece uma ponte gerenciada que permite criar um link
 unidirecional para o {{site.data.keyword.messagehub_full}}.
@@ -35,7 +33,7 @@ pipeline de ponta a ponta, facilitando as interações em tempo real e de lote.
 Para obter informações sobre como criar esta ponte, consulte:
 [Conectando e configurando um serviço historiador usando
 o {{site.data.keyword.messagehub}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link
-externo")](/docs/services/IoT/message_hub.html){:new_window}.
+externo")](/docs/services/IoT/message_hub.html#messagehub_main){:new_window}.
 
 
 

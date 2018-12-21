@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,7 +20,7 @@ O {{site.data.keyword.messagehub}} no plano Standard coleta métricas e eventos 
 possível monitorar seu uso do {{site.data.keyword.messagehub}}.
 {:shortdesc}
 
-**Nota:** as métricas e os eventos estão disponíveis como parte do plano Standard do {{site.data.keyword.messagehub}} somente no sul dos EUA, no Reino Unido e em Sydney. 
+**Nota:** as métricas e os eventos estão disponíveis como parte do plano Standard do {{site.data.keyword.messagehub}} somente em Dallas (us-south), Londres (eu-gb) e Sydney (au-syd). 
 
 
 É possível monitorar as informações de log a seguir:

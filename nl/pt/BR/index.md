@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -44,7 +44,7 @@ do {{site.data.keyword.messagehub}} é aberta.
   
   e. Clique em **Criar**.
 
-2. {: #create_credentials_step notoc}Crie algumas credenciais do {{site.data.keyword.messagehub}} concluindo estas etapas: [Obter credenciais e conectar-se usando o console do IBM Cloud](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Crie algumas credenciais do {{site.data.keyword.messagehub}} concluindo estas etapas: [Obter credenciais e conectar-se usando o console do IBM Cloud](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console).
    <br/>
    <br/>Você precisará dos valores de *kafka_brokers_sasl*, *kafka_admin_url* e *api_key* para a [etapa 7](/docs/services/EventStreams/index.html#start_consumer_step) desta tarefa.   
 
@@ -79,7 +79,7 @@ do {{site.data.keyword.messagehub}} é aberta.
 
 7. {: #start_consumer_step notoc} Inicie o consumidor em seu console executando o comando a seguir:
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname"> kafka_brokers_sasl </var>  <var class="keyword varname"> kafka_admin_url </var>  token <var class="keyword varname"> :api_key </var>  -consumer</pre>
     {: codeblock}
     
@@ -87,7 +87,7 @@ do {{site.data.keyword.messagehub}} é aberta.
 ainda não existir, a amostra o criará usando a API de administração do {{site.data.keyword.messagehub}}. Para enviar e receber mensagens, a amostra usa a API do Apache Kafka Java.
 
     Use os valores de *kafka_brokers_sasl*, *kafka_admin_url*
-e *api_key* das credenciais criadas na [etapa 2](/docs/services/MessageHub/index.html#create_credentials_step).
+e *api_key* das credenciais criadas na [etapa 2](/docs/services/EventStreams/index.html#create_credentials_step).
 	
 	Especifique <code>token</code> como o nome de usuário e <var class="keyword varname">api_key</var> como a sua senha. Separe
 <code>token</code> e <var class="keyword varname">api_key</var> com dois-pontos.
@@ -105,7 +105,7 @@ selecionou.
 
 8. Inicie o produtor em seu console executando o comando a seguir:
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname"> kafka_brokers_sasl </var>  <var class="keyword varname"> kafka_admin_url </var>  token <var class="keyword varname"> :api_key </var>  -producer</pre>
  {: codeblock}
   

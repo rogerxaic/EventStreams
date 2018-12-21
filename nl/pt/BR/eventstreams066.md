@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Como conectar e autenticar
 {: #rest_connect}
 
-** A API de REST Kafka está disponível como parte somente do plano Standard.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** A API de REST do Kafka está disponível somente como parte do plano Standard.**
 <br/>
 
 Para conectar-se ao {{site.data.keyword.messagehub}}, a API de REST do Kafka usa as

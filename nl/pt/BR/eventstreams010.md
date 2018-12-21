@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -21,10 +21,10 @@ os seus serviços e os seus aplicativos. O {{site.data.keyword.messagehub}}  era
 
 É possível usar o {{site.data.keyword.messagehub}} para concluir as tarefas a seguir:
 
-* Transferir trabalho para processos do trabalhador de backend.
-* Conectar dados em fluxo à análise para realizar insights poderosos.
+* Transferir o trabalho para os aplicativos do trabalhador de back-end.
+* Conectar os fluxos do evento à análise de dados do fluxo para realizar insights poderosos.
 * Publicar dados do evento em múltiplos aplicativos para reagir em tempo real.
-* Transferir dados para outro serviço. Por exemplo, para armazenamento de longo prazo.
+* Transferir dados para outro serviço. Por exemplo, para o Cloud Object Storage.
 
 Por ser desenvolvido com o Apache Kafka, ele se beneficia diretamente de toda a inovação que ocorre na comunidade e suporta as
 APIs do cliente Kafka, o Kafka Streams, o Kafka Connect e também o KSQL.

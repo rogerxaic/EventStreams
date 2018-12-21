@@ -15,7 +15,8 @@ lastupdated: "2018-08-30"
 # Como usar a API de REST do Kafka
 {: #rest_how}
 
-** A API de REST Kafka está disponível como parte somente do plano Standard.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** A API de REST do Kafka está disponível somente como parte do plano Standard.**
 <br/>
 
 <!-- 21/06/18 - commenting out until content ready

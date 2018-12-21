@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Ponte do Cloud Object Storage 
 {: #cloud_object_storage_bridge }
 
-**As pontes do {{site.data.keyword.messagehub}} estão disponíveis como parte somente do plano Standard.**
+** A ponte do Cloud Object Storage está disponível somente como parte do plano Standard.**
 <br/>
 
 A ponte do {{site.data.keyword.IBM}} Cloud Object Storage fornece uma maneira de ler dados de um tópico do {{site.data.keyword.messagehub}} Kafka

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -52,7 +52,7 @@ A tabela a seguir resume o que é suportado pelos planos:
 		</tr>
 	  		<tr>
 			<td>**Versão do Kafka no cluster**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -76,14 +76,17 @@ A tabela a seguir resume o que é suportado pelos planos:
 			<td>Ilimitado até o limite de armazenamento de seu plano </td>
 		</tr>
 		<tr>
-			<td>**Disponibilidade de região**</td>
-			<td>Sul dos EUA</br>
-			Reino Unido</br>
-			Sydney</br>
-			Alemanha (sem API do MQ Light)</td>
-			<td>Sul dos EUA</br>
-			Leste dos EUA<br/>
-			Alemanha<br/>
+			<td>**Disponibilidade da localização (região)**</td>
+			<td>Dallas (us-sul)</br>
+			Londres (eu-gb)</br>
+			Sydney (au-syd)</br>
+			Frankfurt (eu-de): nenhuma API do {{site.data.keyword.mql}} </td>
+			<td>Dallas (us-sul)</br>
+			Washington (us-east)<br/>
+			Londres (eu-gb)<br/>
+			Frankfurt (eu-de)<br/>
+			Tóquio (jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

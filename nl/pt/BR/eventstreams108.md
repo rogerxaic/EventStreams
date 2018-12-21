@@ -11,6 +11,7 @@ lastupdated: "2018-08-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:faq: data-hd-content-type='faq'}
 
 # FAQs
 {: #faqs}
@@ -22,6 +23,7 @@ Respostas para perguntas comuns sobre o serviço do {{site.data.keyword.IBM}}
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
 ## Como uso as APIs Kafka para criar e excluir tópicos?
 {: #topic_admin}
+{: faq}
 
 Se estiver usando um cliente Kafka em 0.11 ou mais recente ou o Streams Kafka em 0.10.2.0 ou
 mais recente, será possível utilizar APIs para criar e excluir tópicos. Colocamos algumas restrições nas
@@ -70,6 +72,7 @@ valor como múltiplos de horas.
 
 ## Por quanto tempo o {{site.data.keyword.messagehub}} configura a janela de retenção de log para o tópico de compensações do consumidor?
 {: #offsets }
+{: faq}
 O {{site.data.keyword.messagehub}} retém as compensações do consumidor por sete dias. Isso corresponde
 à configuração offsets.retention.minutes do Kafka. 
 
@@ -79,6 +82,7 @@ o máximo de 30 dias.
 
 ## O que é comportamento de disponibilidade do {{site.data.keyword.messagehub}}?
 {: #availability}
+{: faq}
 
 Se você gravar aplicativos do {{site.data.keyword.messagehub}}, use estas informações para
 entender o que é um comportamento normal de disponibilidade do
@@ -100,11 +104,13 @@ Grave seus aplicativos para manipular a possibilidade de que pontes possam reini
 
 ## Qual é o tamanho máximo da mensagem do {{site.data.keyword.messagehub}}? 
 {: #max_message_size }
+{: faq}
 
 O tamanho máximo de mensagem do {{site.data.keyword.messagehub}} é 1 MB, que é o padrão do Kafka. 
 
 ## O que são as configurações de replicação do {{site.data.keyword.messagehub}}? 
 {: #replication }
+{: faq}
 
 O {{site.data.keyword.messagehub}} é configurado para fornecer disponibilidade e
 durabilidade fortes.
@@ -114,6 +120,7 @@ As seguintes definições de configuração se aplicam a todos os tópicos e nã
 
 ## Como o faturamento do {{site.data.keyword.messagehub}} funciona no plano Standard? 
 {: #billing }
+{: faq}
 
 {{site.data.keyword.messagehub}} no plano Standard regularmente executa amostragem da contagem de tópicos
 de um usuário e o {{site.data.keyword.Bluemix_notm}} registra o valor máximo de amostra todos os dias. O {{site.data.keyword.messagehub}} cobra pelo número máximo de partições simultâneas vistas e pela
@@ -130,6 +137,7 @@ mensagens faturáveis: <code><var class="keyword varname">message_size</var> &di
 <!--12/04/18 - Karen: same info duplicated at messagehub057 -->
 ## Com que frequência a API de REST do Kafka é reiniciada? 
 {: #REST_restart }
+{: faq}
 
 A API de REST do Kafka reinicia uma vez por dia por um curto período de tempo. 
 
@@ -144,15 +152,17 @@ do Kafka. Se este for o caso, a API de REST retornará o JSON a seguir:
 
 ## Quais são as diferenças entre os planos {{site.data.keyword.messagehub}} Standard e {{site.data.keyword.messagehub}} Enterprise?
 {: #plan_compare }
+{: faq}
 
 Para descobrir mais informações sobre os dois planos diferentes do {{site.data.keyword.messagehub}}, consulte [Escolhendo seu plano](/docs/services/EventStreams/eventstreams085.html).
 
 ## Como eu manipulo a recuperação de desastre?
 {: #disaster_recovery }
+{: faq}
 
-Atualmente, é responsabilidade do usuário gerenciar sua própria recuperação de desastre do {{site.data.keyword.messagehub}}. Os dados do {{site.data.keyword.messagehub}} podem ser replicados entre uma instância do {{site.data.keyword.messagehub}} em uma região e outra instância em uma região diferente. No entanto, o usuário é responsável por provisionar uma instância remota do {{site.data.keyword.messagehub}} e gerenciar a replicação.
+Atualmente, é responsabilidade do usuário gerenciar sua própria recuperação de desastre do {{site.data.keyword.messagehub}}. Os dados do {{site.data.keyword.messagehub}} podem ser replicados entre uma instância do {{site.data.keyword.messagehub}} em uma localização (região) e outra instância em uma localização diferente. No entanto, o usuário é responsável por provisionar uma instância remota do {{site.data.keyword.messagehub}} e gerenciar a replicação.
 
-O usuário também é responsável pelo backup dos dados de carga útil da mensagem. Embora esses dados sejam replicados em vários brokers do Kafka em um cluster, o que protege contra a maioria das falhas, essa replicação não cobre uma falha em toda a região. 
+O usuário também é responsável pelo backup dos dados de carga útil da mensagem. Embora esses dados sejam replicados por múltiplos brokers do Kafka dentro de um cluster, o que protege contra a maioria das falhas, essa replicação não cobre uma falha em toda a localização. 
 
 Os nomes de tópicos são submetidos a backup pelo  {{site.data.keyword.messagehub}}.
 

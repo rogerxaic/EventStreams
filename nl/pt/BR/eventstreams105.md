@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # ponte do MQ
 {: #mq_bridge}
 
-**As pontes do {{site.data.keyword.messagehub}} estão disponíveis como parte somente do plano Standard.**
+** A ponte do MQ está disponível somente como parte do plano Standard.**
 <br/>
 
 A ponte do MQ permite transferir dados da mensagem de uma fila do {{site.data.keyword.IBM_notm}} MQ

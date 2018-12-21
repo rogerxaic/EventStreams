@@ -24,8 +24,7 @@ verifique a página de status do [{{site.data.keyword.Bluemix_notm}}
 Se quiser ajuda da equipe do {{site.data.keyword.messagehub}}, reúna todas as informações a seguir. Quanto mais informações você puder fornecer diretamente, mais eficientemente a equipe poderá ajudar com o problema:
 {:shortdesc}
 
-1. Em qual região do {{site.data.keyword.Bluemix_notm}} sua instância do
-{{site.data.keyword.messagehub}} está sendo fornecida?  Por exemplo, sul dos EUA ou Reino Unido. 
+1. A sua instância do {{site.data.keyword.messagehub}} está provisionada em qual localização (região) do {{site.data.keyword.Bluemix_notm}}? Por exemplo, Dallas ou Londres. 
 2. Em qual interface você está encontrando problemas? Kafka, REST, AMQP ou pontes?
 3. Quando o primeiro problema ocorreu (especificamente hora, data e fuso horário)? Por quanto tempo
 seu aplicativo esteve em execução antes disso?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-25"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # O que é API do MQ Light e como ela é diferente?
 {: #mqlight}
 
-** A API do MQ Light está disponível como parte somente do plano Standard.**
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
+** A API do MQ Light está disponível somente como parte do plano Standard.**
 <br/>
 
 A API do {{site.data.keyword.mql}} fornece um nível mais alto de abstração para o sistema de mensagens comparado ao
@@ -30,7 +31,7 @@ para escalabilidade adicional. É possível compartilhar mensagens entre os cons
 consumidores, mas cada consumidor deve poder acompanhar a taxa de mensagens para as partições designadas a
 ele.
 * Com a API do {{site.data.keyword.mql}}, é possível usar um número muito maior de tópicos
-e os nomes de tópicos são hierárquicos (por exemplo: <code>'/sports/footbal'</code> e
+e os nomes de tópico são hierárquicos (por exemplo: <code>'/sports/footbal'</code> e
 <code>'/sports/tiddlywinks'</code>). 
 
 Os tópicos na API do {{site.data.keyword.mql}} não são os mesmos que os tópicos do Kafka. Em vez
@@ -38,9 +39,7 @@ disso, a API do {{site.data.keyword.mql}} usa um tópico do Kafka único chamado
 mensagens enviadas e recebidas usando a API do {{site.data.keyword.mql}} passam por esse tópico
 do Kafka.
 
-O {{site.data.keyword.mql}} está disponível somente nas seguintes
-regiões do {{site.data.keyword.Bluemix_notm}}: sul dos EUA, Reino Unido e Sydney. A API do MQ Light
-não está disponível na região da Alemanha ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
+O {{site.data.keyword.mql}} está disponível somente nas seguintes regiões do {{site.data.keyword.Bluemix_notm}}: Sul dos EUA (Dallas), Sul do Reino Unido (Londres) e Sul da Ásia-Pacífico (Sydney). A API do MQ Light não está disponível na região Central da União Europeia (Frankfurt) ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
 
 <!-- begin STAGING ONLY -->
 Para obter mais informações sobre como escolher entre as APIs, consulte [Escolhendo entre as três APIs](/docs/services/EventStreams/eventstreams087.html).

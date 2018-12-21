@@ -91,7 +91,7 @@ mais recente. É altamente recomendado mudar da 0.9.X para a versão mais recent
 ### Migrando um cliente Kafka para a 0.10.2.X ou versões mais recentes
 
 A partir da 0.10.2, é possível configurar a autenticação SASL diretamente nas propriedades do cliente em vez de usar um
-arquivo JAAS. Essa simplificação permite executar vários clientes na mesma JVM usando diferentes conjuntos de credenciais, o que
+arquivo JAAS. Essa simplificação permite executar múltiplos clientes na mesma JVM usando diferentes conjuntos de credenciais, o que
 não é possível com um arquivo JAAS.
 
 Execute as seguintes etapas:
