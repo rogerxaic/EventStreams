@@ -15,10 +15,10 @@ lastupdated: "2018-06-01"
 # MQ ブリッジ
 {: #mq_bridge}
 
-**{{site.data.keyword.messagehub}} ブリッジは、標準プランのみの一部として使用可能です。**
+**MQ ブリッジは、標準プランのみの一部として使用可能です。**
 <br/>
 
-MQ ブリッジを使用すると、{{site.data.keyword.IBM_notm}} MQ キューから {{site.data.keyword.messagehub}} Kafka トピックへメッセージ・データを転送できます。MQ ブリッジによって、企業内で生成された {{site.data.keyword.IBM_notm}} MQ メッセージ・データに対してクラウド・スタイルのワークロード (例えばデータ分析) を効率的に実行できるようになります。
+MQ ブリッジを使用すると、{{site.data.keyword.IBM_notm}} MQ キューから {{site.data.keyword.messagehub}} Kafka トピックへメッセージ・データを転送できます。 MQ ブリッジによって、企業内で生成された {{site.data.keyword.IBM_notm}} MQ メッセージ・データに対してクラウド・スタイルのワークロード (例えばデータ分析) を効率的に実行できるようになります。
  {:shortdesc}
 
 MQ ブリッジは、MQ クライアントとして {{site.data.keyword.IBM_notm}} MQ キュー・マネージャーに接続し、MQ キューから MQ メッセージ・データをコンシュームします。 ブリッジは、各 MQ メッセージを Kafka レコードに変換して、メッセージを {{site.data.keyword.messagehub}} Kafka トピックに送信します。
@@ -68,6 +68,6 @@ MQ ブリッジでは、Kafka トピック・パーティションへの {{site.
 ## メッセージ・サイズ制限
 {: #mq_message}
 
-大きすぎて {{site.data.keyword.messagehub}} Kafka レコードに収まらないメッセージを保管するように {{site.data.keyword.IBM_notm}} MQ を構成することができます。Kafka レコードの最大サイズは 1,000,000 バイトですが、MQ 相関 ID または MQ グループ ID に基づいて Kafka パーティション割り当てを実行するようにブリッジが構成されている場合は、この容量の一部が使用されます。 950 キロバイト以下のメッセージを MQ ブリッジを使用して送信することをお勧めします。
+大きすぎて {{site.data.keyword.messagehub}} Kafka レコードに収まらないメッセージを保管するように {{site.data.keyword.IBM_notm}} MQ を構成することができます。 Kafka レコードの最大サイズは 1,000,000 バイトですが、MQ 相関 ID または MQ グループ ID に基づいて Kafka パーティション割り当てを実行するようにブリッジが構成されている場合は、この容量の一部が使用されます。 950 キロバイト以下のメッセージを MQ ブリッジを使用して送信することをお勧めします。
 
 MQ ブリッジは、Kafka へ転送するには大きすぎるメッセージが検出された場合、そのメッセージを破棄し、Kibana ダッシュボードにログ項目を書き込みます。 ブリッジがメッセージを受信する元の MQ キューの MAXMSGL 属性を設定して、MQ ブリッジを使用して転送できないメッセージを MQ アプリケーションがキューに送信しないようにすることを検討してください。

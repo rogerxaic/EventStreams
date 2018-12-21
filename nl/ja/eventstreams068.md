@@ -45,7 +45,7 @@ lastupdated: "2018-08-02"
 
 メッセージ・データは、TLS の結果として、{{site.data.keyword.messagehub}} とクライアントの間での伝送のために暗号化されます。 {{site.data.keyword.messagehub}} は、保存メッセージ・データおよびメッセージ・ログを、暗号化されたディスクに保管します。
 
-トピック名およびコンシューマー・グループは、TLS の結果として、{{site.data.keyword.messagehub}} とクライアントの間での伝送のために暗号化されます。 ただし、{{site.data.keyword.messagehub}} は、保存されているこれらの値は暗号化しません。したがって、トピック名に機密情報を使用することはお勧めしません。
+トピック名およびコンシューマー・グループは、TLS の結果として、{{site.data.keyword.messagehub}} とクライアントの間での伝送のために暗号化されます。 ただし、{{site.data.keyword.messagehub}} は、保存されているこれらの値は暗号化しません。 したがって、トピック名に機密情報を使用することはお勧めしません。
 
 
 

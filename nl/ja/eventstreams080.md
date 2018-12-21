@@ -12,6 +12,7 @@ lastupdated: "2018-05-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- 14/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 既存 MQ Light アプリケーションへの接続方法
 {: #mql_exist_apps}
 

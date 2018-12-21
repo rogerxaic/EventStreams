@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-09-04"
 # {{site.data.keyword.messagehub}} への接続
 {: #connecting}
 
-{{site.data.keyword.messagehub}} に接続する方法は、標準プランとエンタープライズ・プランのどちらを使用するのかと、Cloud Foundry アプリケーションと他の外部クライアントのどちらから接続するのかによって異なります。{{site.data.keyword.messagehub}} のどの API に接続する場合でも、次の 2 つの情報を収集する必要があります。
+{{site.data.keyword.messagehub}} に接続する方法は、標準プランとエンタープライズ・プランのどちらを使用するのかと、Cloud Foundry アプリケーションと他の外部クライアントのどちらから接続するのかによって異なります。 {{site.data.keyword.messagehub}} のどの API に接続する場合でも、次の 2 つの情報を収集する必要があります。
 
 * API のエンドポイント URL
 * 認証のための資格情報
@@ -25,12 +25,12 @@ lastupdated: "2018-09-04"
 
 ## {{site.data.keyword.messagehub}} インスタンスのプロビジョン
 
-前提条件として、最初に、標準プランまたはエンタープライズ・プランのいずれかで {{site.data.keyword.messagehub}} サービス・インスタンスをプロビジョンする必要があります。{{site.data.keyword.messagehub}} インスタンスのプロビジョンには料金がかかる可能性があります。次に、以下のタスクを実行することによって、{{site.data.keyword.messagehub}} API 接続詳細を取得します。
+前提条件として、最初に、標準プランまたはエンタープライズ・プランのいずれかで {{site.data.keyword.messagehub}} サービス・インスタンスをプロビジョンする必要があります。 次に、以下のタスクを実行することによって、{{site.data.keyword.messagehub}} API 接続詳細を取得します。
 
 ## 標準プランの概要
 {: #connect_standard}
 
-標準プランを使用してプロビジョンされるサービスは、Cloud Foundry サービスです。 これは、それらのサービスが 1 つの Cloud Foundry 組織およびスペースにデプロイされ、ダッシュボードの**「Cloud Foundry サービス」**というヘッダーの下にグループ化されることを意味します。 アプリケーションを接続するために使用する方法は、アプリケーションがどこにデプロイされているのか、つまり、Cloud Foundry の内側か外側かによって異なります。
+標準プランを使用してプロビジョンされるサービスは、Cloud Foundry サービスです。 これは、それらのサービスが 1 つの Cloud Foundry 組織およびスペースにデプロイされ、ダッシュボードの**「Cloud Foundry サービス」**というヘッダーの下にグループ化されることを意味します。 アプリケーションを接続するために使用する方法は、アプリケーションがどこにデプロイされているのか、つまり、Cloud Foundry の内側か外側か (例えば、Kubernetes サービスの中か) によって異なります。
 
 
 ## 標準プランの Cloud Foundry アプリケーション
@@ -64,7 +64,7 @@ Cloud Foundry の内側で実行されているアプリの場合、アプリを
 
 {{site.data.keyword.messagehub}} への接続に使用する API に関係なく、環境変数の内容は同じです。 {{site.data.keyword.Bluemix_notm}} アプリケーションは、使用しているインターフェースに応じて、VCAP_SERVICES 環境変数から適切な資格情報を選択します。
  
-VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされます。5 個を超えるブローカーがある場合、Kafka クライアントを使用して、その他のブローカーの詳細を取得してください。 
+VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされます。 5 個を超えるブローカーがある場合、Kafka クライアントを使用して、その他のブローカーの詳細を取得してください。 
 
 
 ### IBM Cloud コンソールを使用した資格情報の取得および接続
@@ -76,7 +76,7 @@ VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされ
 4. **「接続」**をクリックします。
 5. **「接続の作成」**をクリックします。
 6. バインドする先の {{site.data.keyword.messagehub}} サービスのタイルを選択し、**「接続」**をクリックします。 変更を有効にするために、アプリケーションの再ステージが必要な場合があります。
-7. 左側の**「ランタイム」**タブをクリックし、中央の**「環境変数」**タブを選択します。これで、VCAP_SERVICES 情報を検証できるようになり、アプリケーションは環境変数としてこれにアクセスできます。 
+7. 左側の**「ランタイム」**タブをクリックし、中央の**「環境変数」**タブを選択します。 これで、VCAP_SERVICES 情報を検証できるようになり、アプリケーションは環境変数としてこれにアクセスできます。 
 
 
 ### IBM Cloud CLI を使用した資格情報の取得 
@@ -100,7 +100,7 @@ VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされ
 <li>以下を実行して、アプリケーション・ランタイムで VCAP_SERVICES 環境変数が使用可能であることを検証します。</br> 
  <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code> 
 </li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
 <p>変更を有効にするために、アプリケーションの再ステージが必要な場合があります。</p></li>
 </ol>
 
@@ -119,8 +119,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 5. **「新規資格情報」**をクリックします。
 6. 名前など、新規資格情報の詳細を入力し、**「追加」**をクリックします。 新規資格情報が資格情報リストに表示されます。
 7. **「資格情報の表示」**を使用してこの資格情報をクリックして、JSON 形式の詳細を表示します。
-8. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
-
+8. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
 
 ### IBM Cloud CLI を使用した資格情報の取得 
 {: #connect_standard_external_cli }
@@ -141,8 +140,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 <li>キーの詳細を取得します。</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>
 JSON 形式のサービス・キー詳細が返されます。</li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
-</li>
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。</li>
 </ol>
 
  
@@ -153,12 +151,12 @@ JSON 形式のサービス・キー詳細が返されます。</li>
 
 以下の手順を実行して、アプリケーションをバインドし、サービスのサービス・キーを取得します。 トピックを作成する許可を得るために、アプリケーションまたはサービス・キーには管理者アクセス役割がなければなりません。
 
-アプリケーションを接続するために使用される方法は、アプリケーションがどこにデプロイされているのか、つまり、Cloud Foundry の内側か外側かによって異なります。
+アプリケーションを接続するために使用する方法は、アプリケーションがどこにデプロイされているのか、つまり、Cloud Foundry の内側か外側か (例えば、Kubernetes サービスの中か) によって異なります。
 
 ## エンタープライズ・プランの Cloud Foundry アプリケーション
 {: #connect_enterprise_cf}
 
-アプリケーションは {{site.data.keyword.messagehub}} サービス・インスタンスにバインドされる必要があります。 Cloud Foundry アプリケーションを One Cloud の非 Cloud Foundry サービスにバインドするには、最初に Cloud Foundry サービス別名を作成し、次に、バインド時に Cloud Foundry アプリケーションからこの別名を参照します。
+アプリケーションは {{site.data.keyword.messagehub}} サービス・インスタンスにバインドされる必要があります。 Cloud Foundry アプリケーションを非 Cloud Foundry サービスにバインドするには、最初に Cloud Foundry サービス別名を作成し、次に、バインド時に Cloud Foundry アプリケーションからこの別名を参照します。
 
 バインドされると、JSON 形式の接続詳細が、VCAP_SERVICES 環境変数を使用してアプリケーションで使用可能になります。 IBM Cloud コンソールまたは IBM Cloud CLI のいずれかを使用して、アプリケーションとサービスをバインドできます。
 
@@ -171,12 +169,12 @@ JSON 形式のサービス・キー詳細が返されます。</li>
 4. **「接続」**をクリックします。
 5. **「接続の作成」**をクリックします。
 6. バインドする先の {{site.data.keyword.messagehub}} サービスのタイルを選択し、**「接続」**をクリックします。 
-7. 表示された**「IAM 対応サービスの接続」**ウィンドウで、**「接続のためのアクセス役割」**からアクセス役割を選択し、**「接続用のサービス ID」**リストからサービス ID を選択します (自動生成された ID を受け入れることができます)。**「接続」**をクリックします。 
+7. 表示された**「IAM 対応サービスの接続」**ウィンドウで、**「接続のためのアクセス役割」**からアクセス役割を選択し、**「接続用のサービス ID」**リストからサービス ID を選択します (自動生成された ID を受け入れることができます)。 **「接続」**をクリックします。 
 
   これによって、{{site.data.keyword.messagehub}} サービス用の Cloud Foundry サービス別名が作成され、アプリケーションがこの別名にバインドされます。 
 
   アプリケーションを再ステージして、変更を有効にします。<br/>
-8. 左側の**「ランタイム」**タブをクリックし、中央の**「環境変数」**タブを選択します。これで、VCAP_SERVICES 情報を検証できるようになります。 アプリケーションはこれらに環境変数としてアクセスできます。 
+8. 左側の**「ランタイム」**タブをクリックし、中央の**「環境変数」**タブを選択します。 これで、VCAP_SERVICES 情報を検証できるようになります。 アプリケーションはこれらに環境変数としてアクセスできます。 
  
 
 ### IBM Cloud CLI を使用したアプリケーションのバインド
@@ -202,7 +200,7 @@ JSON 形式のサービス・キー詳細が返されます。</li>
 あるいは、マニフェスト・ファイルを更新し、アプリケーションをもう一度プッシュすることもできます。</li>
 <li>アプリケーション・ランタイムで VCAP_SERVICES 環境変数が使用可能であることを検証します。<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。 
 <p>変更を有効にするために、アプリケーションの再ステージが必要な場合があります。</p></li>
 </ol>
 
@@ -221,8 +219,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 4. **「新規資格情報」**をクリックします。 
 5. 名前や役割など、新規資格情報の詳細を入力し、**「追加」**をクリックします。 新規資格情報が資格情報リストに表示されます。
 6. **「資格情報の表示」**を使用してこの資格情報をクリックして、JSON 形式の詳細を表示します。
-7. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
-
+7. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
    <br/><br/>アプリケーションが詳細を構文解析することを確認してください。
 
 ### IBM Cloud CLI を使用した資格情報の取得
@@ -235,14 +232,14 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 <code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>サービス・キーを表示します。<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
 <p>アプリケーションが詳細を構文解析することを確認してください。</p></li>
 </ol>
 
 ## 次に行うこと
 {: #after_connecting}
 
-これで、接続情報および資格情報を取得したので、{{site.data.keyword.messagehub}} クライアントを選択できます。選択はプランによって異なります。
+これで、接続情報および資格情報を取得したので、{{site.data.keyword.messagehub}} クライアントを選択できます。 選択はプランによって異なります。
 
 * 標準プランを使用している場合、選択するクライアントおよび接続方法について、[3 つの API からの選択](/docs/services/EventStreams/eventstreams087.html)を参照してください。
 * エンタープライズ・プランを使用している場合、[Kafka API の使用](/docs/services/EventStreams/eventstreams050.html)を参照してください。

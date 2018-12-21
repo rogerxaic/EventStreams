@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -28,7 +28,7 @@ Java クライアントを使用している場合、公開されている Kafka
         </tr>
 	  		<tr>
 			<td>**クラスターの Kafka バージョン**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 	  		<tr>
@@ -43,7 +43,7 @@ Java クライアントを使用している場合、公開されている Kafka
 		</tr>
 
 			<td>**認証要件**</td>
-			<td>クライアントは SASL Plain メカニズムを使用した認証をサポートする必要があります</td>
+			<td>クライアントは SASL Plain メカニズムを使用した認証をサポートする必要があり、TLSv1.2 プロトコルの Server Name Indication (SNI) 拡張機能を使用する必要があります。</td>
 			<td>クライアントは SASL Plain メカニズムを使用した認証をサポートする必要があり、TLSv1.2 プロトコルの Server Name Indication (SNI) 拡張機能を使用する必要があります。</td>
 		</tr>
 

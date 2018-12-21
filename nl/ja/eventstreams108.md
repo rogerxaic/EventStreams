@@ -11,15 +11,18 @@ lastupdated: "2018-08-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:faq: data-hd-content-type='faq'}
 
 # FAQ
 {: #faqs}
 
-{{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} サービスに関する一般的な質問と回答。{: shortdesc}
+{{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} サービスに関する一般的な質問と回答。
+{: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
 ## Kafka API を使用してトピックの作成と削除を行うにはどうしたらよいか?
 {: #topic_admin}
+{: faq}
 
 0.11 以降の Kafka クライアントまたは 0.10.2.0 以降の Kafka Streams を使用している場合、API を使用してトピックの作成と削除を行うことができます。 トピック作成時に許可される設定には、いくつかの制限があります。 現在のところ、変更できるのは以下の設定のみです。
 
@@ -68,12 +71,14 @@ lastupdated: "2018-08-08"
 
 ## {{site.data.keyword.messagehub}} がコンシューマー・オフセット・トピックのためにログ保存ウィンドウを設定する期間はどれだけの長さか?
 {: #offsets }
+{: faq}
 {{site.data.keyword.messagehub}} はコンシューマー・オフセットを 7 日間保存します。 これは Kafka 構成 offsets.retention.minutes に対応します。 
 
 オフセット保存はシステム全体が対象であるため、個々のトピック・レベルで設定することはできません。 すべてのコンシューマー・グループは、ログ保存を最大 30 日に増やしたトピックを使用する場合でも、保管されるオフセットは 7 日間のみです。 
 
 ## {{site.data.keyword.messagehub}} の可用性の性質は?
 {: #availability}
+{: faq}
 
 {{site.data.keyword.messagehub}} アプリケーションを作成する場合、以下の情報を使用して、{{site.data.keyword.messagehub}} の通常の可用性がどのような性質なのか、および、アプリケーションに要求される処理内容を理解してください。
 
@@ -90,11 +95,13 @@ lastupdated: "2018-08-08"
 
 ## {{site.data.keyword.messagehub}} の最大メッセージ・サイズはいくつですか? 
 {: #max_message_size }
+{: faq}
 
 {{site.data.keyword.messagehub}} の最大メッセージ・サイズは 1 MB であり、これは Kafka デフォルトです。 
 
 ## {{site.data.keyword.messagehub}} のレプリケーション設定はどのようになっていますか? 
 {: #replication }
+{: faq}
 
 {{site.data.keyword.messagehub}} は強力な可用性および耐久性を提供するように構成されています。
 以下の構成設定はすべてのトピックに適用され、変更することはできません。
@@ -103,6 +110,7 @@ lastupdated: "2018-08-08"
 
 ## 標準プランでの {{site.data.keyword.messagehub}} の請求の仕組みは? 
 {: #billing }
+{: faq}
 
 標準プランの {{site.data.keyword.messagehub}} はユーザーのトピック数を定期的にサンプリングし、{{site.data.keyword.Bluemix_notm}} は最大サンプル値を毎日記録します。 {{site.data.keyword.messagehub}} は、検出された並行パーティションの最大数および送受信メッセージの日次合計について請求を行います。
 
@@ -113,6 +121,7 @@ lastupdated: "2018-08-08"
 <!--12/04/18 - Karen: same info duplicated at messagehub057 -->
 ## Kafka REST API 再始動の頻度は? 
 {: #REST_restart }
+{: faq}
 
 Kafka REST API は、1 日 1 回、短時間の再始動期間があります。 
 
@@ -124,15 +133,17 @@ Kafka REST API は、1 日 1 回、短時間の再始動期間があります。
 
 ## {{site.data.keyword.messagehub}} 標準プランと {{site.data.keyword.messagehub}} エンタープライズ・プランの違いは何ですか?
 {: #plan_compare }
+{: faq}
 
 2 つの異なる {{site.data.keyword.messagehub}} プランについて詳しくは、[プランの選択](/docs/services/EventStreams/eventstreams085.html)を参照してください。
 
 ## 災害復旧は、どのようにすればよいですか?
 {: #disaster_recovery }
+{: faq}
 
-現在、{{site.data.keyword.messagehub}} の災害復旧の管理の責任はお客様にあります。{{site.data.keyword.messagehub}} データについては、ある地域の {{site.data.keyword.messagehub}} インスタンスと別の地域の別のインスタンスとの間でレプリカを生成できます。ただし、リモートの {{site.data.keyword.messagehub}} インスタンスのプロビジョンとレプリカ生成はお客様の責任です。
+現在、{{site.data.keyword.messagehub}} の災害復旧の管理の責任はお客様にあります。 {{site.data.keyword.messagehub}} データについては、あるロケーション (地域) の {{site.data.keyword.messagehub}} インスタンスと別のロケーションの別のインスタンスとの間でレプリカを生成できます。ただし、リモートの {{site.data.keyword.messagehub}} インスタンスのプロビジョンとレプリカ生成はお客様の責任です。
 
-また、メッセージ・ペイロード・データのバックアップもお客様の責任です。このデータはクラスター内の複数の Kafka ブローカー間でレプリカ生成されますが、大部分の障害を防ぐため、このレプリカ生成では、地域全体の障害をカバーしません。 
+また、メッセージ・ペイロード・データのバックアップもお客様の責任です。 このデータはクラスター内の複数の Kafka ブローカー間でレプリカ生成されますが、大部分の障害を防ぐため、このレプリカ生成では、ロケーション全体の障害をカバーしません。 
 
 トピック名は {{site.data.keyword.messagehub}} によってバックアップされます。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-07-31"
 標準プランの {{site.data.keyword.messagehub}} ではメトリックおよびイベントが自動的に収集されるため、{{site.data.keyword.messagehub}} の使用をモニターすることができます。
 {:shortdesc}
 
-**注:** メトリックおよびイベントは、米国南部、英国、およびシドニーでのみ、{{site.data.keyword.messagehub}} 標準プランの一部として使用可能です。 
+**注:** メトリックおよびイベントは、ダラス (us-south)、ロンドン (eu-gb)、およびシドニー (au-syd) でのみ、{{site.data.keyword.messagehub}} 標準プランの一部として使用可能です。 
 
 
 以下のログ情報をモニターできます。

@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Cloud Object Storage ブリッジ 
 {: #cloud_object_storage_bridge }
 
-**{{site.data.keyword.messagehub}} ブリッジは、標準プランのみの一部として使用可能です。**
+** Cloud Object Storage ブリッジは、標準プランのみの一部として使用可能です。**
 <br/>
 
 {{site.data.keyword.IBM}} Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} Kafka トピックからデータを読み取って [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage/about-cos.html){:new_window} にそのデータを入れる手段を提供します。

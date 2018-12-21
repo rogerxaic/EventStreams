@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-09-18"
 
 {{site.data.keyword.messagehub}} を開始し、メッセージの送受信を開始するには、Java™ サンプルを使用できます。 このサンプルは、プロデューサーがトピックを使用してメッセージをコンシューマーに送信する方法を示します。 同じサンプル・プログラムが、メッセージのコンシュームとメッセージのプロデュースに使用されます。
 
-{{site.data.keyword.messagehub}} がどのように機能するのかについて詳しくは、[{{site.data.keyword.messagehub}} について](/docs/services/EventStreams/eventstreams010.html)を参照してください。{{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
+{{site.data.keyword.messagehub}} がどのように機能するのかについて詳しくは、[{{site.data.keyword.messagehub}} について](/docs/services/EventStreams/eventstreams010.html)を参照してください。 {{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
 
 Node.js および Python のサンプルを含め、他の {{site.data.keyword.messagehub}} サンプルにアクセスするには、[{{site.data.keyword.messagehub}} サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples){:new_window} を参照してください。
 
@@ -34,13 +34,13 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
   
   b. **「カタログ」**をクリックします。
   
-  c. **「統合」**セクションで、**{{site.data.keyword.messagehub}}「標準プラン」**を選択します。{{site.data.keyword.messagehub}} サービス・インスタンス・ページが開きます。
+  c. **「統合」**セクションで、**{{site.data.keyword.messagehub}}「標準プラン」**を選択します。 {{site.data.keyword.messagehub}} サービス・インスタンス・ページが開きます。
   
-  d. サービスの名前を入力します。デフォルト値を使用することができます。
+  d. サービスの名前を入力します。 デフォルト値を使用することができます。
   
   e. **「作成」**をクリックします。
 
-2. {: #create_credentials_step notoc}[IBM Cloud コンソールを使用した資格情報の取得および接続](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console)のステップを実行して、{{site.data.keyword.messagehub}} の資格情報を作成します。
+2. {: #create_credentials_step notoc} [IBM Cloud コンソールを使用した資格情報の取得および接続](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console)のステップを実行して、{{site.data.keyword.messagehub}} の資格情報を作成します。
    <br/>
    <br/>このタスクの[ステップ 7](/docs/services/EventStreams/index.html#start_consumer_step) で、*kafka_brokers_sasl*、*kafka_admin_url*、および *api_key* の値が必要になります。   
 
@@ -71,15 +71,15 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
     </pre>
 	{: codeblock}
 
-7. {: #start_consumer_step notoc}次のコマンドを実行して、ご使用のコンソールでコンシューマーを開始します。
+7. {: #start_consumer_step notoc} 次のコマンドを実行して、ご使用のコンソールでコンシューマーを開始します。
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
     {: codeblock}
     
     このサンプルでは、`kafka-java-console-sample-topic` という名前のトピックが使用されます。 このトピックがまだ存在していない場合、このサンプルは {{site.data.keyword.messagehub}} 管理 API を使用して作成します。 このサンプルは、メッセージの送受信には Apache Kafka Java API を使用します。
 
-    [ステップ 2](/docs/services/MessageHub/index.html#create_credentials_step) で作成した資格情報の、*kafka_brokers_sasl*、*kafka_admin_url*、および *api_key* の値を使用します。
+    [ステップ 2](/docs/services/EventStreams/index.html#create_credentials_step) で作成した資格情報の、*kafka_brokers_sasl*、*kafka_admin_url*、および *api_key* の値を使用します。
 	
 	ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。
     
@@ -94,7 +94,7 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
 
 8. 次のコマンドを実行して、ご使用のコンソールでプロデューサーを開始します。
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   

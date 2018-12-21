@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,20 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Object Storage ブリッジ 
+# Object Storage ブリッジ (非推奨)
 {: #object_storage_bridge }
 
-**{{site.data.keyword.messagehub}} ブリッジは、標準プランのみの一部として使用可能です。**
+** {{site.data.keyword.objectstorageshort}} ブリッジは、2018 年 8 月 1 日より非推奨になりました。**
 <br/>
+
+{{site.data.keyword.objectstorageshort}} ブリッジが接続する基になるサービスが非推奨であるため、{{site.data.keyword.objectstorageshort}} ブリッジも 2018 年 8 月 1 日より非推奨になりました。 
+
+{{site.data.keyword.objectstorageshort}} サービスの有効期限が切れて使用廃止になると、{{site.data.keyword.objectstorageshort}} ブリッジのすべてのインスタンスもまた使用廃止になります。詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。 
+
+別の方法として、[Cloud Object Storage ブリッジ](/docs/services/EventStreams/eventstreams115.html){:new_window}を使用することもできます。
+{:deprecated}
 
 {{site.data.keyword.objectstorageshort}} ブリッジは、{{site.data.keyword.messagehub}} の Kafka トピックから {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ObjectStorage/index.html){:new_window} のインスタンスへデータを保存することを可能にします。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして {{site.data.keyword.objectstorageshort}} サービス内のコンテナーにアップロードします。
 

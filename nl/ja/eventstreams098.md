@@ -15,7 +15,8 @@ lastupdated: "2018-05-30"
 # MQ Light API を {{site.data.keyword.messagehub}} で使用するために必要なもの
 {: #mql_reqs}
 
-**MQ Light API は、標準プランのみの一部として使用可能です。**
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
+** MQ Light API は、標準プランのみの一部として使用可能です。**
 <br/>
 
 {{site.data.keyword.messagehub}} で {{site.data.keyword.mql}} API を使用するには、以下のものが必要です。 

@@ -17,7 +17,7 @@ lastupdated: "2018-09-11"
 
 {{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/status){:new_window} を確認してください。
 
-{{site.data.keyword.messagehub}} チームから支援を受けたい場合は、以下の情報をすべて収集してください。事前に提供できる情報が多ければ多いほど、チームは問題解決をより効率的に支援できます。
+{{site.data.keyword.messagehub}} チームから支援を受けたい場合は、以下の情報をすべて収集してください。 事前に提供できる情報が多ければ多いほど、チームは問題解決をより効率的に支援できます。
 {:shortdesc}
 
 1. 使用している {{site.data.keyword.messagehub}} サービスの CRN ID は?  このサービスをクリックした後で {{site.data.keyword.Bluemix_notm}} コンソール URL 全体を貼り付けるか、または、次の CLI コマンドの出力を貼り付けることによって、この ID を提供できます。<br/>

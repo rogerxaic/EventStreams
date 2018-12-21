@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2018-09-12"
 		</tr>
 	  		<tr>
 			<td>**クラスターの Kafka バージョン**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -73,14 +73,17 @@ lastupdated: "2018-09-12"
 			<td>プランのストレージ制限を上限として制限なし </td>
 		</tr>
 		<tr>
-			<td>**使用可能な地域**</td>
-			<td>米国南部</br>
-			英国</br>
-			シドニー</br>
-			ドイツ (MQ Light API なし)</td>
-			<td>米国南部</br>
-			米国東部<br/>
-			ドイツ<br/>
+			<td>**ロケーション (地域) アベイラビリティー**</td>
+			<td>ダラス (us-south)</br>
+			ロンドン (eu-gb)</br>
+			シドニー (au-syd))</br>
+			フランクフルト (eu-de) - {{site.data.keyword.mql}} API なし</td>
+			<td>ダラス (us-south)</br>
+			ワシントン (us-east))<br/>
+			ロンドン (eu-gb)<br/>
+			フランクフルト (eu-de)<br/>
+			東京 (jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

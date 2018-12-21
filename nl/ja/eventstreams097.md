@@ -15,7 +15,8 @@ lastupdated: "2018-08-30"
 # Kafka REST API の使用法
 {: #rest_how}
 
-**Kafka REST API は、標準プランのみの一部として使用可能です。**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** Kafka REST API は、標準プランのみの一部として使用可能です。**
 <br/>
 
 <!-- 21/06/18 - commenting out until content ready

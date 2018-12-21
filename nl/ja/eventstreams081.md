@@ -13,6 +13,7 @@ lastupdated: "2018-05-25"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
+<!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # MQ Light API と Kafka API または Kafka REST API との間でのメッセージ交換
 {: #mql_exchange}
 

@@ -20,8 +20,7 @@ lastupdated: "2018-09-10"
 {{site.data.keyword.messagehub}} について質問がある場合、専用の [Stack Overflow チャネル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/questions/tagged/message-hub){: new_window} を参照して、既にその質問の答えがあるかどうか確認してください。
 ない場合は、質問を投稿してください。{{site.data.keyword.messagehub}} 開発チームのメンバー、またはより幅広いコミュニティーのメンバーが質問に回答します。
 
-
-{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/status){:new_window} を確認してください。{{site.data.keyword.messagehub}} チームからの支援が必要な場合は、[{{site.data.keyword.messagehub}} チームへの問題の報告 - 標準プラン](/docs/services/EventStreams/eventstreams109.html)または[{{site.data.keyword.messagehub}} チームへの問題の報告 - エンタープライズ・プラン](/docs/services/EventStreams/eventstreams125.html)のいずれかに詳細が記述された、必要なすべての情報を収集してください。
+{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/status){:new_window} を確認してください。 {{site.data.keyword.messagehub}} チームからの支援が必要な場合は、[{{site.data.keyword.messagehub}} チームへの問題の報告 - 標準プラン](/docs/services/EventStreams/eventstreams109.html)または[{{site.data.keyword.messagehub}} チームへの問題の報告 - エンタープライズ・プラン](/docs/services/EventStreams/eventstreams125.html)のいずれかに詳細が記述された、必要なすべての情報を収集してください。
 {:shortdesc}
 
 ## 便利なリンク
