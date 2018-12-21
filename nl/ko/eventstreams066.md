@@ -15,6 +15,7 @@ lastupdated: "2018-05-25"
 # 연결 및 인증 방법
 {: #rest_connect}
 
+<!-- info moved to eventstreams025.md because of doc app changes -->
 ** Kafka REST API는 표준 플랜의 일부로만 사용 가능합니다.**
 <br/>
 

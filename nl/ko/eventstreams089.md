@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,20 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Object Storage 브릿지 
+# Object Storage 브릿지(더 이상 사용되지 않음)
 {: #object_storage_bridge }
 
-** {{site.data.keyword.messagehub}} 브릿지는 표준 플랜의 일부로만 사용 가능합니다.**
+** {{site.data.keyword.objectstorageshort}} 브릿지는 2018년 8월 1일부터 더 이상 사용되지 않습니다.**
 <br/>
+
+{{site.data.keyword.objectstorageshort}} 브릿지에서 연결하는 기본 서비스가 더 이상 사용되지 않으므로 {{site.data.keyword.objectstorageshort}} 브릿지도 2018년 8월 1일부터 더 이상 사용되지 않습니다. 
+
+{{site.data.keyword.objectstorageshort}} 서비스가 기한 끝에 도달하고 사용이 중지되면 {{site.data.keyword.objectstorageshort}} 브릿지의 모든 인스턴스도 사용이 중지됩니다. 자세한 정보는 [사용 중단 공지사항: {{site.data.keyword.objectstorageshort}} OpenStack Swift(PaaS) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}를 참조하십시오. 
+
+대안으로서 [Cloud Object Storage 브릿지](/docs/services/EventStreams/eventstreams115.html){:new_window}를 사용할 수 있습니다.
+{:deprecated}
 
 {{site.data.keyword.objectstorageshort}} 브릿지는
 {{site.data.keyword.messagehub}}의 Kafka 토픽에서 데이터를 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 서비스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ObjectStorage/index.html){:new_window}의 인스턴스에 아카이브합니다. 브릿지는
@@ -141,7 +149,8 @@ Kafka 메시지 오프셋으로 데이터를 파티셔닝하려면 다음 단계
 
 ISO 8601 날짜로 데이터를 파티셔닝하려면 다음 단계를 완료하십시오.
 
-1. `"json"`으로 설정된 `"inputFormat"` 특성을 사용하여 브릿지를 구성하십시오. `"json"` 이외의 `"inputFormat"` 특성은 사용할 수 없습니다.
+1. `"json"`으로 설정된 `"inputFormat"` 특성을 사용하여 브릿지를 구성하십시오. `"json"` 이외의 `"inputFormat"` 특성은
+사용할 수 없습니다.
 2. `"partitioning"` 배열에서 값 `"dateIso8601"` 및 `"propertyName"` 특성의 `"type"` 특성으로 오브젝트를 지정하십시오. 
 
 	예:
@@ -169,8 +178,9 @@ ISO 8601 날짜로 데이터를 파티셔닝하려면 다음 단계를 완료하
     </code></pre>
     {:codeblock}
 
-	ISO 8601 날짜로 파티셔닝하려면 Kafka 메시지에 올바른 JSON 형식이 있어야 합니다. 브릿지를 구성하기 위해 사용된 JSON에서
-	`"propertyName"`의 값이 각 Kafka 메시지의 ISO 8601 날짜 필드에 해당해야 합니다. 이 예제에서 `"timestamp"` 필드에는
+	ISO 8601 날짜로 파티셔닝하려면 Kafka 메시지에 올바른 JSON 형식이 있어야 합니다. 브릿지를
+	구성하기 위해 사용된 JSON에서 `"propertyName"`의 값이 각 Kafka 메시지의 ISO 8601
+	날짜 필드에 해당해야 합니다. 이 예제에서 `"timestamp"` 필드에는
 	올바른 ISO 8601 날짜 값이 포함되어야 합니다. 그러면 그 날짜에 따라서 메시지가 파티셔닝됩니다.
 	
 	이 예제처럼 구성된 브릿지는 다음과 같이 이름이 지정된 오브젝트를 생성합니다.

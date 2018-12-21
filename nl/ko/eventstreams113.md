@@ -24,7 +24,7 @@ Kafka Connect는 독립형 또는 분산 모드로 실행될 수 있습니다. �
 ## 독립형 작업자 구성
 {: #standalone_worker notoc}
 
-Kafka Connect 독립형 작업자를 시작할 때 제공하는 작업자 특성 파일에 부트스트랩 서버 및 SASL 인증 정보를 제공해야 합니다. 
+Kafka Connect 독립형 작업자를 시작할 때 제공하는 작업자 특성 파일에 부트스트랩 서버 및 SASL 인증 정보를 제공해야 합니다.
 
 독립형 작업자는 내부 토픽을 사용하지 않습니다. 대신, 오프셋 정보를 저장하기 위해 파일을 사용합니다.
 
@@ -91,7 +91,7 @@ Kafka Connect 분산 작업자를 시작할 때 제공하는 구성 파일에 �
 KAFKA_BROKERS_SASL, USER 및 PASSWORD를 {{site.data.keyword.Bluemix_notm}} 콘솔의
 {{site.data.keyword.messagehub}} **서비스 인증 정보**에 있는 값으로 대체하십시오.
 
-소스 커넥터를 사용하려는 경우에는 다음과 같이 제작자를 위한 SSL 및 SASL 구성도 지정해야 합니다. 
+소스 커넥터를 사용하려는 경우에는 다음과 같이 제작자를 위한 SSL 및 SASL 구성도 지정해야 합니다.
 
 <pre>
 <code>
@@ -140,7 +140,7 @@ KAFKA_BROKERS_SASL, USER 및 PASSWORD를 {{site.data.keyword.Bluemix_notm}} 콘�
 </pre>
 {:codeblock}
 
-Kafka Connect를 많이 사용하지 않는 경우에는 파티션 수를 줄이는 것을 고려하십시오. 
+Kafka Connect를 많이 사용하지 않는 경우에는 파티션 수를 줄이는 것을 고려하십시오.
 
 
 

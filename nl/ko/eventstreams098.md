@@ -15,6 +15,7 @@ lastupdated: "2018-05-30"
 # {{site.data.keyword.messagehub}}에서 MQ Light API를 사용하는 데 필요한 사항
 {: #mql_reqs}
 
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** MQ Light API는 표준 플랜의 일부로만 사용 가능합니다.**
 <br/>
 

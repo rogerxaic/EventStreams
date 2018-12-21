@@ -12,6 +12,7 @@ lastupdated: "2018-05-30"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 최대 한계
 {: #max_limits}
 

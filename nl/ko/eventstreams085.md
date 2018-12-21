@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2018-09-12"
 		</tr>
 	  		<tr>
 			<td>**클러스터의 Kafka 버전**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -73,14 +73,17 @@ lastupdated: "2018-09-12"
 			<td>플랜의 스토리지 한계까지 제한 없음 </td>
 		</tr>
 		<tr>
-			<td>**지역 가용성**</td>
-			<td>미국 남부</br>
-			영국</br>
-			시드니</br>
-			독일(MQ Light API 없음)</td>
-			<td>미국 남부</br>
-			미국 동부<br/>
-			독일<br/>
+			<td>**위치(지역) 가용성**</td>
+			<td>댈러스(us-south)</br>
+			런던(eu-gb)</br>
+			시드니(au-syd))</br>
+			프랑크푸르트(eu-de) - {{site.data.keyword.mql}} API가 없음 </td>
+			<td>댈러스(us-south)</br>
+			워싱턴(us-east))<br/>
+			런던(eu-gb)<br/>
+			프랑크푸르트(eu-de)<br/>
+			도쿄(jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

@@ -12,6 +12,7 @@ lastupdated: "2018-05-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # MQ Light API 샘플
 {: #mql_samples}
 
@@ -27,4 +28,4 @@ lastupdated: "2018-05-25"
 대화하도록 하는 방법을 보여줍니다. 또한, {{site.data.keyword.mql}} API를 사용하여
 확장 가능하고 느슨하게 결합된 분산 앱 빌드에 필요한 키 기능인 작업자 오프로드를 수행할 수 있습니다.
 
-[event-streams-samples GitHub 프로젝트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/mqlight){:new_window}에서 샘플 코드를 찾을 수 있습니다. 
+[event-streams-samples GitHub 프로젝트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/mqlight){:new_window}에서 샘플 코드를 찾을 수 있습니다.

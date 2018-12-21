@@ -22,8 +22,8 @@ lastupdated: "2018-09-11"
 {{site.data.keyword.messagehub}} 팀의 도움이 필요한 경우에는 다음 정보를 모두 수집하십시오. 미리 제공할 수 있는 정보가 많을수록 팀에서 문제점에 대해 더 효과적으로 도움을 줄 수 있습니다.
 {:shortdesc}
 
-1. 어느 {{site.data.keyword.Bluemix_notm}} 지역에서 사용자의 {{site.data.keyword.messagehub}} 인스턴스가 프로비저닝되었습니까?  예: 미국 남부 또는 영국. 
-2. 어떤 인터페이스로 문제를 보고 있습니까? Kafka, REST, AMQP 또는 브릿지 중 어느 것입니까? 
+1. 어느 {{site.data.keyword.Bluemix_notm}} 위치(지역)에서 사용자의 {{site.data.keyword.messagehub}} 인스턴스가 프로비저닝되었습니까?  예를 들면, 댈러스나 런던입니다.  
+2. 어떤 인터페이스로 문제를 보고 있습니까? Kafka, REST, AMQP 또는 브릿지 중 어느 것입니까?
 3. 문제점이 언제 처음 발생했습니까(구체적인 시간, 날짜 및 시간대)? 문제가 발생하기 전에 앱이 얼마나 오랫동안 실행 중이었습니까?
 4. 문제점이 계속 발생하고 있습니까? 문제점을 복제할 수 있습니까?
 5. 사용 중인 {{site.data.keyword.messagehub}} 서비스의 인스턴스 ID는 무엇입니까? 

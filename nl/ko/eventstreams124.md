@@ -51,7 +51,7 @@ Cloud IAM(Identity and Access Management) 정책이 제어될 리소스에 첨�
 
 ## 기본 보안 설정은 무엇입니까?
 
-기본적으로, {{site.data.keyword.messagehub}}가 프로비저닝되는 경우 프로비저닝한 사용자에게는 모든 인스턴스의 리소스에 대한 관리자 역할이 부여됩니다. 또한 동일한 계정에서 '모든' 서비스 또는 '모든' {{site.data.keyword.messagehub}} 서비스 인스턴스에 대한 관리자 역할을 보유한 사용자에게도 전체 액세스 권한이 있습니다.  
+기본적으로, {{site.data.keyword.messagehub}}가 프로비저닝되는 경우 프로비저닝한 사용자에게는 모든 인스턴스의 리소스에 대한 관리자 역할이 부여됩니다. 또한 동일한 계정에서 '모든' 서비스 또는 '모든' {{site.data.keyword.messagehub}} 서비스 인스턴스에 대한 관리자 역할을 보유한 사용자에게도 전체 액세스 권한이 있습니다. 
 
 그런 다음 추가 정책을 적용하여 다른 사용자에 대한 액세스를 확장할 수 있습니다. 전체로 {{site.data.keyword.messagehub}}에 적용하거나 또는 {{site.data.keyword.messagehub}} 내의 개별 리소스에 적용하도록 정책의 범위를 설정할 수 있습니다. 자세한 정보는 [일반 시나리오](#security_scenarios)를 참조하십시오.
 
@@ -92,7 +92,7 @@ IAM에 대한 자세한 정보는
 {: #connect_message_enterprise }
 
 Cloud Foundry 애플리케이션 바인드 방법 또는 외부 애플리케이션에 대한 보안 키 인증 정보 가져오기에 대한 정보는
-[{{site.data.keyword.messagehub}}에 연결](/docs/services/EventStreams/eventstreams127.html#connect_messagehub)을 참조하십시오. 
+[{{site.data.keyword.messagehub}}에 연결](/docs/services/EventStreams/eventstreams127.html#connect_messagehub)을 참조하십시오.
 
 <!-- 28/06/18 - Karen: draft info only
 

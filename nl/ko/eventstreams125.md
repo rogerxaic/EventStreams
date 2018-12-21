@@ -22,7 +22,7 @@ lastupdated: "2018-09-11"
 
 1. 사용 중인 {{site.data.keyword.messagehub}} 서비스의 CRN ID는 무엇입니까?  이 ID는 서비스를
    클릭한 후 전체 {{site.data.keyword.Bluemix_notm}} 콘솔 URL을 붙여넣거나,
-   다음 CLI 명령의 출력을 붙여넣어 제공할 수 있습니다. <br/>
+   다음 CLI 명령의 출력을 붙여넣어 제공할 수 있습니다.<br/>
    <pre class="pre">
    ibmcloud resource service-instance NAME
    </pre>

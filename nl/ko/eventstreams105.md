@@ -15,14 +15,14 @@ lastupdated: "2018-06-01"
 # MQ 브릿지
 {: #mq_bridge}
 
-** {{site.data.keyword.messagehub}} 브릿지는 표준 플랜의 일부로만 사용 가능합니다.**
+** MQ 브릿지는 표준 플랜의 일부로만 사용 가능합니다.**
 <br/>
 
 MQ 브릿지를 통해 {{site.data.keyword.IBM_notm}} MQ 큐에서 {{site.data.keyword.messagehub}} Kafka 토픽으로
 메시지 데이터를 전송할 수 있습니다. MQ 브릿지로 엔터프라이즈 내에서 생성된 {{site.data.keyword.IBM_notm}} MQ 메시지 데이터에 대한 클라우드 스타일 워크로드(예: 데이터 분석)를 효율적으로 수행할 수 있습니다.
  {:shortdesc}
 
-MQ 클라이언트로 MQ 브릿지를 {{site.data.keyword.IBM_notm}} MQ 큐 관리자에 연결하고 MQ 큐에서 MQ 메시지 데이터를 이용합니다. 브릿지는 각 MQ 메시지를 Kafka 레코드로 변환하고 해당 메시지를 {{site.data.keyword.messagehub}} Kafka 토픽에 전송합니다. 
+MQ 클라이언트로 MQ 브릿지를 {{site.data.keyword.IBM_notm}} MQ 큐 관리자에 연결하고 MQ 큐에서 MQ 메시지 데이터를 이용합니다. 브릿지는 각 MQ 메시지를 Kafka 레코드로 변환하고 해당 메시지를 {{site.data.keyword.messagehub}} Kafka 토픽에 전송합니다.
 
 ## {{site.data.keyword.IBM_notm}} MQ의 지원 버전
 {: #mq_support}

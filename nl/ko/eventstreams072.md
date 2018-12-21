@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-07-31"
 메트릭과 이벤트를 자동으로 수집합니다.
 {:shortdesc}
 
-**참고:** 메트릭 및 이벤트는 미국 남부, 영국 및 시드니에서만 {{site.data.keyword.messagehub}} 표준 플랜의 일부로서 사용 가능합니다.  
+**참고:** 메트릭과 이벤트는 댈러스(us-south), 런던(eu-gb) 및 시드니(au-syd)에서만 {{site.data.keyword.messagehub}} 표준 플랜의 일부로 사용 가능합니다. 
 
 
 다음 로그 정보를 모니터할 수 있습니다.

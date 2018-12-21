@@ -50,8 +50,32 @@ CURL의 경우 명령행에 다음 행을 추가하여
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 
+<br/>
+## 연결 및 인증 방법
+{: #rest_connect}
+
+<!-- info was in eventstreams066.md -->
 
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
+{{site.data.keyword.messagehub}}에 연결하기 위해 Kafka REST API는 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams/eventstreams127.html)에서 <code>api_key</code> 및 <code>kafka_rest_url</code>
+인증 정보를 사용합니다.
+
+{{site.data.keyword.messagehub}} Kafka REST API와 인증하려면 사용자 요청의 X-Auth-Token 헤더에 <code>api_key</code>를 지정해야 합니다.
+
+
+## API 사용 방법
+{: #rest_how}
+
+<!-- info was in eventstreams097.md -->
+
+{{site.data.keyword.messagehub}} Kafka REST API 샘플은
+Kafka REST API를 통해 {{site.data.keyword.messagehub}}에 연결하여
+메시지를 생성하고 이용하는 Node.js 애플리케이션입니다.
+
+샘플 코드는 [event-streams-samples GitHub 프로젝트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}에 있습니다.
+
+샘플을 빌드하고 실행하려면 해당 프로젝트에 대한 [README.md ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 파일의 지시사항을 따르십시오.
+
 

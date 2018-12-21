@@ -19,7 +19,7 @@ lastupdated: "2018-02-06"
 
 다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.messagehub}} KSQL 구성 파일을 작성하십시오. 
+1. {{site.data.keyword.messagehub}} KSQL 구성 파일을 작성하십시오.
 
     예:
     ```
