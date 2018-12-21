@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-28"
 # Using the Kafka API
 {: #kafka_using}
 
-If you're using the Java clients, you can use the publicly available Kafka clients at 0.10.x or later. 
+If you're using the Java clients, you can use the publicly available Kafka clients at 0.10.x or later. For more information, see [Choosing a Kafka client to use with {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams062.html#kafka_clients).
 
 Kafka clients exist in multiple languages and we provide instructions for some of those languages. You can use others but you'll need SASL PLAIN support to provide credentials. Additionally, if you're using the Enterprise plan, you'll also need to use the Server Name Indication (SNI) extension to the TLSv1.2 protocol.
 
@@ -50,6 +50,6 @@ Kafka clients exist in multiple languages and we provide instructions for some o
 </table>
 
 For information about the Producer and Consumer APIs, see 
-[Kafka Producer API 0.11.0.X ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} and 
-[Kafka Consumer API 0.11.0.X ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
+[Kafka Producer API 1.1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} and 
+[Kafka Consumer API 1.1 0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
 
