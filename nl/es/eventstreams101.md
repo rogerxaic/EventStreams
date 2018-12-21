@@ -12,6 +12,7 @@ lastupdated: "2018-05-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
+<!-- 14/11/18: info moved to eventstreams099.md, moved because of doc app changes -->
 # Uso del cliente MQ Light Python
 {: #mql_python}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -49,7 +49,7 @@ En la tabla siguiente se resumen las funciones a las que dan soporte los planes:
 		</tr>
 	  		<tr>
 			<td>**Versión de Kafka en el clúster**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -73,14 +73,17 @@ En la tabla siguiente se resumen las funciones a las que dan soporte los planes:
 			<td>Ilimitado hasta alcanzar el límite de almacenamiento del plan </td>
 		</tr>
 		<tr>
-			<td>**Disponibilidad de regiones</td>
-			<td>EE.UU. sur</br>
-			Reino Unido</br>
-			Sídney</br>
-			Alemania (no la API MQ Light)</td>
-			<td>EE.UU. sur</br>
-			EE.UU. este<br/>
-			Alemania<br/>
+			<td>**Disponibilidad de ubicación (región)**</td>
+			<td>Dallas (us-south)</br>
+			Londres (eu-gb)</br>
+			Sídney (au-syd))</br>
+			Frankfurt (eu-de) - no API de {{site.data.keyword.mql}} </td>
+			<td>Dallas (us-south)</br>
+			Washington (us-east))<br/>
+			Londres (eu-gb)<br/>
+			Frankfurt (eu-de)<br/>
+			Tokio (jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

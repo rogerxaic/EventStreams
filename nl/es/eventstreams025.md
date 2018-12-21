@@ -51,8 +51,37 @@ Para CURL, también puede adaptar los ejemplos de código detallados en [Conflue
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 
+<br/>
+## Cómo conectarse y autenticarse
+{: #rest_connect}
+
+<!-- info was in eventstreams066.md -->
 
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
+Para conectarse a {{site.data.keyword.messagehub}}, la API REST de Kafka utiliza las credenciales <code>api_key</code> y <code>kafka_rest_url</code> de la variable de entorno [VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+
+Para autenticarse con la API REST de Kafka {{site.data.keyword.messagehub}}, debe
+especificar <code>api_key</code> en el encabezado X-Auth-Token de sus solicitudes.
+
+
+## Cómo utilizar la API
+{: #rest_how}
+
+<!-- info was in eventstreams097.md -->
+
+La API REST de Kafka de
+ejemplo
+de
+{{site.data.keyword.messagehub}}
+es una aplicación Node.js que se conecta a
+{{site.data.keyword.messagehub}}
+a través de la API REST de Kafka para generar y consumir
+mensajes.
+
+El código de ejemplo está en el [proyecto github event-streams-samples ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
+
+Siga las instrucciones del archivo [README.md ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} del proyecto para crear y ejecutar el ejemplo.
+
 

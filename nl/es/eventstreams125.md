@@ -12,7 +12,7 @@ lastupdated: "2018-09-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Notificación de un problema al equipo de {{site.data.keyword.messagehub}} - plan Empresa
+# Notificación de un problema al equipo de {{site.data.keyword.messagehub}} - plan Estándar
 {: #report_problem}
 
 Si tiene problemas con {{site.data.keyword.messagehub}}, compruebe primero la página de estado de [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/status){:new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -20,13 +20,12 @@ lastupdated: "2018-06-28"
 
 Puede utilizar {{site.data.keyword.messagehub}} para completar las tareas siguientes:
 
-* Trabajo de descarga a procesos de trabajador back-end.
-* Conectar la corriente de datos a los análisis para obtener
-información muy valiosa.
+* Trabajo de descarga a aplicaciones de trabajador back-end.
+* Conectar la secuencia de sucesos a Streaming Analytics para obtener información muy valiosa.
 * Publicar datos de sucesos a múltiples aplicaciones para
 reaccionar
 en tiempo real.
-* Transferir datos a otro servicio. Por ejemplo, para el almacenamiento a largo plazo.
+* Transferir datos a otro servicio. Por ejemplo, a Cloud Object Storage.
 
 Al estar creado con Apache Kafka, se beneficia directamente de toda la innovación que se incorpora en la comunidad y da soporte a las API de cliente Kafka, Kafka Streams, Kafka Connect y también KSQL.
 {:shortdesc}

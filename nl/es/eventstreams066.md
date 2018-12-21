@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Cómo conectarse y autenticarse
 {: #rest_connect}
 
-**La API REST de Kafka solo está disponible como parte del plan Estándar.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** La API REST de Kafka solo está disponible como parte del plan Estándar.**
 <br/>
 
 Para conectarse a {{site.data.keyword.messagehub}}, la API REST de Kafka utiliza las credenciales <code>api_key</code> y <code>kafka_rest_url</code> de la variable de entorno [VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).

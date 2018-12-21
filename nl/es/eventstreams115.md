@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Puente de Cloud Object Storage 
 {: #cloud_object_storage_bridge }
 
-Los puentes de ** {{site.data.keyword.messagehub}} solo están disponibles como parte del plan Estándar.**
+** El puente de Cloud Object Storage solo está disponible como parte del plan Estándar.**
 <br/>
 
 El puente de {{site.data.keyword.IBM}} Cloud Object Storage proporciona una forma de leer datos de un tema Kafka de {{site.data.keyword.messagehub}}

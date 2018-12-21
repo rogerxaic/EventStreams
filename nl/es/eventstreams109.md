@@ -22,7 +22,7 @@ Si tiene problemas con {{site.data.keyword.messagehub}}, compruebe primero la p�
 Si desea ayuda del equipo de {{site.data.keyword.messagehub}}, recopile toda la información siguiente. Cuanta más información proporcione de antemano, más eficientemente podrá ayudar el equipo con el problema:
 {:shortdesc}
 
-1. ¿En qué región de {{site.data.keyword.Bluemix_notm}} se ha suministrado la instancia de {{site.data.keyword.messagehub}}?  Por ejemplo, en el sur de Estados Unidos o en el Reino Unido. 
+1. ¿En qué ubicación (región) de {{site.data.keyword.Bluemix_notm}} se ha suministrado la instancia de {{site.data.keyword.messagehub}}?  Por ejemplo, Dallas o Londres. 
 2. ¿Qué interfaz presenta problemas? ¿Kafka, REST, AMQP o puentes?
 3. ¿Cuándo se produjo el primer problema (específicamente hora, fecha y huso horario)? ¿Cuánto tiempo estuvo ejecutando la app antes del problema?
 4. ¿El problema sigue ocurriendo? ¿Lo puede replicar?

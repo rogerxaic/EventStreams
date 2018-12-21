@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,20 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Puente de Object Storage 
+# Puente de Object Storage (en desuso)
 {: #object_storage_bridge }
 
-Los puentes de ** {{site.data.keyword.messagehub}} solo están disponibles como parte del plan Estándar.**
+**El puente de {{site.data.keyword.objectstorageshort}} está en desuso desde el 1 de agosto de 2018.**
 <br/>
+
+Puesto que el servicio subyacente al que se conecta el puente de {{site.data.keyword.objectstorageshort}} está en desuso, el puente de {{site.data.keyword.objectstorageshort}} también ha quedado en desuso desde el 1 de agosto de 2018. 
+
+Cuando el servicio de {{site.data.keyword.objectstorageshort}} alcanza la finalización del ciclo de vida y está fuera de servicio, todas las instancias del puente de {{site.data.keyword.objectstorageshort}} también quedarán fuera de servicio. Para obtener más información, consulte el anuncio acerca del desuso: [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+
+Como alternativa, puede utilizar el [puente de Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
+{:deprecated}
 
 El puente de {{site.data.keyword.objectstorageshort}} permite archivar los datos de temas de Kafka de {{site.data.keyword.messagehub}} en una instancia del servicio de {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ObjectStorage/index.html){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos de datos a un contenedor del servicio de {{site.data.keyword.objectstorageshort}}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -25,12 +25,12 @@ Revise la siguiente información sobre cómo obtener esta información. Los paso
 
 ## Suministro de una instancia de {{site.data.keyword.messagehub}}
 
-Como requisito previo, en primer lugar debe suministrar una instancia de servicio de {{site.data.keyword.messagehub}} para el plan Estándar o Empresa. El suministro de una instancia de {{site.data.keyword.messagehub}} puede suponer un cargo. A continuación, obtenga los detalles de la conexión de API de {{site.data.keyword.messagehub}}; para ello debe llevar a cabo las siguientes tareas.
+Como requisito previo, en primer lugar debe suministrar una instancia de servicio de {{site.data.keyword.messagehub}} para el plan Estándar o Empresa. A continuación, obtenga los detalles de la conexión de API de {{site.data.keyword.messagehub}}; para ello debe llevar a cabo las siguientes tareas.
 
 ## Visión general del plan Estándar
 {: #connect_standard}
 
-Los servicios que se suministran mediante el plan Estándar son servicios de Cloud Foundry. Esto significa que se despliegan en una organización y espacio de Cloud Foundry, y se agrupan en el panel de control bajo la cabecera **Servicios de Cloud Foundry**. El método que utilice para conectar una aplicación dependerá de dónde se haya desplegado la aplicación, es decir, en Cloud Foundry o fuera del mismo.
+Los servicios que se suministran mediante el plan Estándar son servicios de Cloud Foundry. Esto significa que se despliegan en una organización y espacio de Cloud Foundry, y se agrupan en el panel de control bajo la cabecera **Servicios de Cloud Foundry**. El método que utilice para conectar una aplicación dependerá de dónde se haya desplegado, es decir, en Cloud Foundry o fuera del mismo; por ejemplo, en el servicio Kubernetes.
 
 
 ## Aplicaciones de Cloud Foundry en el plan Estándar
@@ -156,12 +156,12 @@ Los servicios suministrados mediante el plan Empresa se agrupan en el panel de c
 
 Siga los pasos siguientes para enlazar la aplicación y obtener claves de servicio para el servicio. Para tener autorización para crear temas, la aplicación o la clave de servicio deben tener un rol con acceso de gestor.
 
-Para conectar una aplicación, el método utilizado dependerá de dónde se haya desplegado la aplicación, es decir, en Cloud Foundry o fuera del mismo.
+Para conectar una aplicación, el método utilizado depende de dónde se haya desplegado, es decir, en Cloud Foundry o fuera del mismo; por ejemplo, en el servicio Kubernetes.
 
 ## Aplicaciones de Cloud Foundry en el plan Empresa
 {: #connect_enterprise_cf}
 
-La aplicación debe estar enlazada a la instancia de servicio de {{site.data.keyword.messagehub}}. Para enlazar una aplicación de Cloud Foundry a un servicio que no sea de Cloud Foundry con One Cloud, cree primero un alias de servicio de Cloud Foundry y, a continuación, haga referencia a este alias desde la aplicación Cloud Foundry cuando la enlace.
+La aplicación debe estar enlazada a la instancia de servicio de {{site.data.keyword.messagehub}}. Para enlazar una aplicación de Cloud Foundry a un servicio que no sea de Cloud Foundry, cree primero un alias de servicio de Cloud Foundry y, a continuación, haga referencia a este alias desde la aplicación Cloud Foundry cuando la enlace.
 
 Cuando esté enlazada, los detalles de la conexión pasan a estar disponibles para la aplicación en formato JSON en la variable de entorno VCAP_SERVICES. Puede enlazar una aplicación y un servicio mediante la consola de IBM Cloud o la CLI de IBM Cloud.
 
@@ -206,7 +206,7 @@ Como alternativa, puede actualizar el archivo de manifiesto y volver a enviar po
 <li>Verifique que la variable de entorno VCAP_SERVICES está disponible en el tiempo de ejecución de la aplicación:<br/>
 <code>ibmcloud app env <var class="keyword varname">nombre_app</var></code></li>
 <li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html).
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html). 
 <p>Es posible que tenga que volver a transferir la aplicación para que los cambios entren en vigor.</p></li>
 </ol>
 

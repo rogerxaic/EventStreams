@@ -20,7 +20,7 @@ lastupdated: "2018-08-14"
 # Sucesos de {{site.data.keyword.cloudaccesstrailshort}} (plan Empresa)
 {: #at_events}
 
-Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con el servicio {{site.data.keyword.messagehub}} en el plan Empresa en {{site.data.keyword.Bluemix}}.
+Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con el servicio {{site.data.keyword.messagehub}} en el plan Empresa en {{site.data.keyword.Bluemix}}. 
 {: shortdesc}
 
 El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
@@ -47,7 +47,7 @@ El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} están disponibles en el **dominio de cuenta** de {{site.data.keyword.cloudaccesstrailshort}} que está disponible en la región {{site.data.keyword.Bluemix_notm}} en la que se generan los sucesos.
+Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} están disponibles en el **dominio de cuenta** de {{site.data.keyword.cloudaccesstrailshort}} que está disponible en la ubicación (región) {{site.data.keyword.Bluemix_notm}} en la que se generan los sucesos.
 
 
 

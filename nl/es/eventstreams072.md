@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-07-31"
 pueda supervisar el uso de {{site.data.keyword.messagehub}}.
 {:shortdesc}
 
-**Nota:** Las métricas y los sucesos solo están disponibles como parte del plan Estándar de {{site.data.keyword.messagehub}} en EE.UU. sur, Reino Unido y Sídney. 
+**Nota:** Las métricas y los sucesos solo están disponibles como parte del plan Estándar de {{site.data.keyword.messagehub}} en Dallas (us-south), Londres (eu-gb) y Sídney (au-syd). 
 
 
 Puede supervisar la siguiente información de registro:
