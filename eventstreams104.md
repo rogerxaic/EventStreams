@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-12-21"
 
 ---
 
@@ -74,9 +74,14 @@ For an earlier Kafka client, you must use a JAAS configuration file to specify t
 
 
 If you're using the Java clients, you can use
-the publicly available Kafka clients at 0.10 or later. You are strongly encouraged to move from 0.9.X to the
+the publicly available Kafka clients at 0.10 or later. 
+
+You are strongly encouraged to move from 0.9.X to the
 latest version. You can download a Kafka client from 
-[https://kafka.apache.org/downloads ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://kafka.apache.org/downloads){:new_window} 
+[https://kafka.apache.org/downloads ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://kafka.apache.org/downloads){:new_window}.
+
+For information about the implications of using a 0.9.X client, see 
+[Backward compatability](/docs/services/EventStreams/eventstreams062.html#compatability).
 
 
 
