@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -73,13 +73,13 @@ lastupdated: "2018-09-18"
 
 7. {: #start_consumer_step notoc}运行以下命令，在控制台上启动使用者：
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
     {: codeblock}
     
     样本使用名为 `kafka-java-console-sample-topic` 的主题。如果该主题尚不存在，样本会使用 {{site.data.keyword.messagehub}} 管理 API 进行创建。为了发送和接收消息，该样本会使用 Apache Kafka Java API。
 
-    使用在[步骤 2](/docs/services/MessageHub/index.html#create_credentials_step) 中创建的凭证中的 *kafka_brokers_sasl*、*kafka_admin_url* 和 *api_key* 值。
+    使用在[步骤 2](/docs/services/EventStreams/index.html#create_credentials_step) 中创建的凭证中的 *kafka_brokers_sasl*、*kafka_admin_url* 和 *api_key* 值。
 	
 	指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。
     
@@ -94,7 +94,7 @@ lastupdated: "2018-09-18"
 
 8. 运行以下命令，在控制台上启动生产者：
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   

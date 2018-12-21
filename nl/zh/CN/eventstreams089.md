@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,12 +11,20 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Object Storage 网桥 
+# Object Storage 网桥（不推荐）
 {: #object_storage_bridge }
 
-** {{site.data.keyword.messagehub}} 网桥仅在标准套餐中提供。**
+**{{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起已弃用。**
 <br/>
+
+因为 {{site.data.keyword.objectstorageshort}} 网桥连接的底层服务已弃用，所以 {{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起也已弃用。 
+
+在 {{site.data.keyword.objectstorageshort}} 服务达到使用期限被废弃后，{{site.data.keyword.objectstorageshort}} 网桥的所有实例也将被废弃。有关更多信息，请参阅[弃用声明：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
+
+作为替代方法，您可以使用 [Cloud Object Storage 网桥](/docs/services/EventStreams/eventstreams115.html){:new_window}。
+{:deprecated}
 
 {{site.data.keyword.objectstorageshort}} 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ObjectStorage/index.html){:new_window} 的实例。网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 {{site.data.keyword.objectstorageshort}} 服务中的容器。
 

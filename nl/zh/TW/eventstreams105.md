@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # MQ 橋接器
 {: #mq_bridge}
 
-** {{site.data.keyword.messagehub}} 橋接器只提供於標準方案中。**
+**MQ 橋接器只提供於標準方案中。**
 <br/>
 
 MQ 橋接器容許您將訊息資料從 {{site.data.keyword.IBM_notm}} MQ 佇列傳送到 {{site.data.keyword.messagehub}} Kafka 主題。MQ 橋接器讓您能有效率地對您企業內產生的 {{site.data.keyword.IBM_notm}} MQ 訊息資料執行雲端式工作負載（例如，資料分析）。

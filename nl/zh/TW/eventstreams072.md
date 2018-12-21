@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-07-31"
 標準方案上的 {{site.data.keyword.messagehub}} 會自動收集度量值及事件，以便您可以監視 {{site.data.keyword.messagehub}} 的用量。
 {:shortdesc}
 
-**附註：**度量值及事件只適用於美國南部、英國及雪梨的 {{site.data.keyword.messagehub}} 標準方案。 
+**附註：**度量值及事件只適用於達拉斯 (us-south)、倫敦 (eu-gb) 及雪梨 (au-syd) 的 {{site.data.keyword.messagehub}} 標準方案。 
 
 
 您可以監視下列日誌資訊：

@@ -36,7 +36,7 @@ lastupdated: "2018-06-23"
 
 有许多针对生产者的配置设置。您可以控制生产者的各个方面，包括批处理、重试和消息确认。下面是最重要的方面：
 
-|名称|描述                                                         |有效值|Default|
+|名称|描述                                                         |有效值|缺省值|
 |----------|---------|----------|---------|
 |key.serializer|用于对键进行序列化的类。|用于实现序列化器接口的 Java 类，例如 org.apache.kafka.common.serialization.StringSerializer|无缺省值 - 必须指定值|
 |value.serializer|用于对值进行序列化的类。|用于实现序列化器接口的 Java 类，例如 org.apache.kafka.common.serialization.StringSerializer|无缺省值 - 必须指定值|

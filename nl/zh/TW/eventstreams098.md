@@ -15,6 +15,7 @@ lastupdated: "2018-05-30"
 # 使用 MQ Light API 搭配 {{site.data.keyword.messagehub}} 需要些什麼嗎？
 {: #mql_reqs}
 
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** MQ Light API 只提供於標準方案中。**
 <br/>
 

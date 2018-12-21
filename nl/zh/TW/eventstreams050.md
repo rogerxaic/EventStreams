@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -28,7 +28,7 @@ Kafka 用戶端有多種語言，我們提供了其中部分語言的指示。�
         </tr>
 	  		<tr>
 			<td>**叢集上的 Kafka 版本**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 	  		<tr>
@@ -43,7 +43,7 @@ Kafka 用戶端有多種語言，我們提供了其中部分語言的指示。�
 		</tr>
 
 			<td>**鑑別需求**</td>
-			<td>用戶端必須支援使用 SASL Plain 機制的鑑別</td>
+			<td>用戶端必須支援使用 SASL Plain 機制的鑑別，且使用 TLSv1.2 通訊協定的「伺服器名稱指示 (SNI)」延伸。</td>
 			<td>用戶端必須支援使用 SASL Plain 機制的鑑別，且使用 TLSv1.2 通訊協定的「伺服器名稱指示 (SNI)」延伸。</td>
 		</tr>
 

@@ -49,8 +49,29 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 
+<br/>
+## 如何连接和认证
+{: #rest_connect}
+
+<!-- info was in eventstreams066.md -->
 
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
+为了连接到 {{site.data.keyword.messagehub}}，Kafka REST API 使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams/eventstreams127.html)中的 <code>api_key</code> 和 <code>kafka_rest_url</code> 凭证。
+
+要向 {{site.data.keyword.messagehub}} Kafka REST API 进行认证，您必须在请求的 X-Auth-Token 头中指定 <code>api_key</code>。
+
+
+## 如何使用 API
+{: #rest_how}
+
+<!-- info was in eventstreams097.md -->
+
+{{site.data.keyword.messagehub}} Kafka REST API 样本是一个 Node.js 应用程序，它通过 Kafka REST API 连接到 {{site.data.keyword.messagehub}} 来生成和使用消息。
+
+样本代码位于 [event-streams-samples GitHub 项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 中。
+
+请遵循该项目 [README.md ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 文件中的指示信息来构建和运行样本。
+
 

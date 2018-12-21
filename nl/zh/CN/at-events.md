@@ -47,7 +47,7 @@ lastupdated: "2018-08-14"
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-{{site.data.keyword.cloudaccesstrailshort}} 事件可在事件生成所在 {{site.data.keyword.Bluemix_notm}} 区域中的 {{site.data.keyword.cloudaccesstrailshort}} **帐户域**中进行查看。
+在生成 {{site.data.keyword.cloudaccesstrailshort}} 事件的 {{site.data.keyword.Bluemix_notm}} 位置（区域）内的 {{site.data.keyword.cloudaccesstrailshort}} **帐户域**中提供了这些事件。
 
 
 

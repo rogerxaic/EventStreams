@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Cloud Object Storage 橋接器 
 {: #cloud_object_storage_bridge }
 
-** {{site.data.keyword.messagehub}} 橋接器只提供於標準方案中。**
+** Cloud Object Storage 橋接器只提供於標準方案中。**
 <br/>
 
 {{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window}。

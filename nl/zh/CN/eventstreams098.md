@@ -15,7 +15,8 @@ lastupdated: "2018-05-30"
 # 将 MQ Light API 与 {{site.data.keyword.messagehub}} 配合使用时需要满足哪些需求？
 {: #mql_reqs}
 
-**MQ Light API 仅在标准套餐中提供。**
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
+** MQ Light API 仅在标准套餐中提供。**
 <br/>
 
 要将 {{site.data.keyword.mql}} API 与 {{site.data.keyword.messagehub}} 配合使用，需要满足以下需求： 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -28,7 +28,7 @@ Kafka 客户机存在多种语言版本，我们提供了其中一些语言的�
         </tr>
 	  		<tr>
 			<td>**集群上的 Kafka 版本**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 	  		<tr>
@@ -43,7 +43,7 @@ Kafka 客户机存在多种语言版本，我们提供了其中一些语言的�
 		</tr>
 
 			<td>**认证需求**</td>
-			<td>客户机必须支持使用 SASL Plain 机制进行认证</td>
+			<td>客户机必须支持使用 SASL Plain 机制进行认证，还必须使用 TLSv1.2 协议的服务器名称指示 (SNI) 扩展</td>
 			<td>客户机必须支持使用 SASL Plain 机制进行认证，还必须使用 TLSv1.2 协议的服务器名称指示 (SNI) 扩展</td>
 		</tr>
 

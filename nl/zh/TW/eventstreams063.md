@@ -12,7 +12,7 @@ lastupdated: "2018-06-22"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 配置用戶端
+# 配置 Kafka API 用戶端
 {: #kafka_connect}
 
 

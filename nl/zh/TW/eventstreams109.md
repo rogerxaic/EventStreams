@@ -22,7 +22,7 @@ lastupdated: "2018-09-11"
 如果您需要 {{site.data.keyword.messagehub}} 團隊的協助，請收集下列所有資訊。您可以事先提供的資訊越多，團隊就越可更有效率地協助解決問題：
 {:shortdesc}
 
-1. 您的 {{site.data.keyword.messagehub}} 佈建在哪個 {{site.data.keyword.Bluemix_notm}} 地區？例如美國南部或英國。 
+1. 您的 {{site.data.keyword.messagehub}} 佈建在哪個 {{site.data.keyword.Bluemix_notm}} 位置（地區）？例如達拉斯或倫敦。 
 2. 您在哪個介面看到問題？Kafka、REST、AMQP 或橋接器？
 3. 何時第一次發生問題（明確的時間、日期和時區）？在這之前，應用程式執行多久了？
 4. 問題是否仍在發生？可以重現嗎？

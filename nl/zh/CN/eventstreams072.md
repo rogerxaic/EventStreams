@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-07-31"
 标准套餐中的 {{site.data.keyword.messagehub}} 会自动收集度量值和事件，以便您可以监视 {{site.data.keyword.messagehub}} 的使用情况。
 {:shortdesc}
 
-**注：**度量值和事件会作为 {{site.data.keyword.messagehub}} 标准套餐的一部分提供，但仅限美国南部、英国和悉尼区域。 
+**注：**只有位于达拉斯 (us-south)、伦敦 (eu-gb) 和悉尼 (au-syd) 的 {{site.data.keyword.messagehub}} 标准套餐才会提供度量值和事件。 
 
 
 您可以监视以下日志信息：

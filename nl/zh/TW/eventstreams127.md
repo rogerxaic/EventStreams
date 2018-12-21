@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -25,12 +25,12 @@ lastupdated: "2018-09-04"
 
 ## 佈建 {{site.data.keyword.messagehub}} 實例
 
-作為必要條件，您必須先針對標準方案或企業方案佈建 {{site.data.keyword.messagehub}} 服務實例。佈建 {{site.data.keyword.messagehub}} 實例可能會產生費用。接下來，請完成下列作業以取得 {{site.data.keyword.messagehub}} API 連線詳細資料。
+作為必要條件，您必須先針對標準方案或企業方案佈建 {{site.data.keyword.messagehub}} 服務實例。接下來，請完成下列作業以取得 {{site.data.keyword.messagehub}} API 連線詳細資料。
 
 ## 標準方案概觀
 {: #connect_standard}
 
-使用標準方案佈建的服務是 Cloud Foundry 服務。這表示它們被部署到 Cloud Foundry 組織及空間，且在儀表板中分組於標題 **Cloud Foundry 服務**下。您用來連接應用程式的方法取決於應用程式部署所在的位置，究竟是在 Cloud Foundry 內還是在它之外。
+使用標準方案佈建的服務是 Cloud Foundry 服務。這表示它們被部署到 Cloud Foundry 組織及空間，且在儀表板中分組於標題 **Cloud Foundry 服務**下。您用來連接應用程式的方法取決於應用程式部署所在的位置，究竟是在 Cloud Foundry 內還是部署在 Cloud Foundry 之外，例如在 Kubernetes 服務中。
 
 
 ## 標準方案的 Cloud Foundry 應用程式
@@ -151,12 +151,12 @@ VCAP_SERVICES 的範例如下：
 
 請完成下列步驟，以連結應用程式並取得服務的服務金鑰。若要獲得授權建立主題，您的應用程式或服務金鑰必須有管理員存取角色。
 
-若要連接應用程式，使用的方法取決於應用程式部署所在的位置，究竟是在 Cloud Foundry 內還是在它之外。
+若要連接應用程式，使用的方法取決於應用程式部署所在的位置，究竟是在 Cloud Foundry 內還是部署在 Cloud Foundry 之外，例如在 Kubernetes 服務中。
 
 ## 企業方案的 Cloud Foundry 應用程式
 {: #connect_enterprise_cf}
 
-您的應用程式必須連結至 {{site.data.keyword.messagehub}} 服務實例。若要以 One Cloud 將 Cloud Foundry 應用程式連結至非 Cloud Foundry 服務，請先建立 Cloud Foundry 服務別名，然後在連結時從您的 Cloud Foundry 應用程式參照此別名。
+您的應用程式必須連結至 {{site.data.keyword.messagehub}} 服務實例。若要將 Cloud Foundry 應用程式連結至非 Cloud Foundry 服務，請先建立 Cloud Foundry 服務別名，然後在連結時從您的 Cloud Foundry 應用程式參照此別名。
 
 連結之後，連線詳細資料便會以 JSON 格式，使用 VCAP_SERVICES 環境變數提供給應用程式。您可以使用 IBM Cloud 主控台或 IBM Cloud CLI 連結應用程式及服務。
 

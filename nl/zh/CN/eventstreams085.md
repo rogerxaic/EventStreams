@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2018-09-12"
 		</tr>
 	  		<tr>
 			<td>**集群上的 Kafka 版本**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -73,14 +73,17 @@ lastupdated: "2018-09-12"
 			<td>无限期保留，直到达到套餐存储限制</td>
 		</tr>
 		<tr>
-			<td>**区域可用性**</td>
-			<td>美国南部</br>
-			英国</br>
-			悉尼</br>
-			德国（无 MQ Light API）</td>
-			<td>美国南部</br>
-			美国东部<br/>
-			德国<br/>
+			<td>**位置（区域）可用性**</td>
+			<td>达拉斯 (us-south)</br>
+			伦敦 (eu-gb)</br>
+			悉尼 (au-syd))</br>
+			法兰克福 (eu-de) - 无 {{site.data.keyword.mql}} API </td>
+			<td>达拉斯 (us-south)</br>
+			华盛顿 (us-east))<br/>
+			伦敦 (eu-gb)<br/>
+			法兰克福 (eu-de)<br/>
+			东京 (jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

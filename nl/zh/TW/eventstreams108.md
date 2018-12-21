@@ -11,6 +11,7 @@ lastupdated: "2018-08-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:faq: data-hd-content-type='faq'}
 
 # 常見問題
 {: #faqs}
@@ -21,6 +22,7 @@ lastupdated: "2018-08-08"
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
 ## 如何使用 Kafka API 建立及刪除主題？
 {: #topic_admin}
+{: faq}
 
 如果您使用 Kafka 用戶端 0.11 或更新版本，或 Kafka Streams 0.10.2.0 或更新版本，可以使用 API 來建立及刪除主題。我們已對您建立主題時接受的設定做了一些限制。目前，您只能修改下列設定：
 
@@ -66,12 +68,14 @@ lastupdated: "2018-08-08"
 
 ## {{site.data.keyword.messagehub}} 為消費者偏移主題所設定的日誌保留時間範圍有多長？
 {: #offsets }
+{: faq}
 {{site.data.keyword.messagehub}} 會保留消費者偏移 7 天。這對應於 Kafka 配置 offsets.retention.minutes。 
 
 偏移保留屬於系統層面，因此您不能在個別主題層次設定。所有消費者群組只會得到 7 天的儲存偏移，即使是使用已增加到最長 30 天日誌保留的主題。 
 
 ## {{site.data.keyword.messagehub}} 的可用性行為為何？
 {: #availability}
+{: faq}
 
 如果您撰寫 {{site.data.keyword.messagehub}} 應用程式，請使用此資訊來瞭解正常的 {{site.data.keyword.messagehub}} 可用性行為為何，以及預期您的應用程式要處理的內容。
 
@@ -87,11 +91,13 @@ lastupdated: "2018-08-08"
 
 ## {{site.data.keyword.messagehub}} 的訊息大小上限為何？ 
 {: #max_message_size }
+{: faq}
 
 {{site.data.keyword.messagehub}} 的訊息大小上限是 1 MB，這是 Kafka 預設值。 
 
 ## {{site.data.keyword.messagehub}} 的抄寫設定為何？ 
 {: #replication }
+{: faq}
 
 {{site.data.keyword.messagehub}} 已配置為提供高度可用性及延續性。
 下列配置設定套用於所有主題，且無法變更：
@@ -100,6 +106,7 @@ lastupdated: "2018-08-08"
 
 ## {{site.data.keyword.messagehub}} 在標準方案的計費作業如何運作？ 
 {: #billing }
+{: faq}
 
 標準方案的 {{site.data.keyword.messagehub}} 會定期對使用者的主題計數進行取樣，而 {{site.data.keyword.Bluemix_notm}} 會記錄每一天的最大取樣值。{{site.data.keyword.messagehub}} 會針對所看到的最大並行分割區數目及每日傳送與接收的訊息數總和開立帳單。
 
@@ -111,6 +118,7 @@ lastupdated: "2018-08-08"
 <!--12/04/18 - Karen: same info duplicated at messagehub057 -->
 ## Kafka REST API 多久重新啟動一次？ 
 {: #REST_restart }
+{: faq}
 
 Kafka REST API 每天會重新啟動一次，需要一小段時間。 
 
@@ -122,15 +130,17 @@ Kafka REST API 每天會重新啟動一次，需要一小段時間。
 
 ## {{site.data.keyword.messagehub}} 標準與 {{site.data.keyword.messagehub}} 企業方案的差異為何？
 {: #plan_compare }
+{: faq}
 
 若要找出這兩個不同 {{site.data.keyword.messagehub}} 方案的相關資訊，請參閱[選擇方案](/docs/services/EventStreams/eventstreams085.html)。
 
 ## 如何處理災難回復？
 {: #disaster_recovery }
+{: faq}
 
-目前，使用者負責管理自己的 {{site.data.keyword.messagehub}} 災難回復。可以在某個地區的 {{site.data.keyword.messagehub}} 實例與不同地區的另一個實例之間抄寫 {{site.data.keyword.messagehub}} 資料。不過，使用者負責佈建遠端 {{site.data.keyword.messagehub}} 實例以及管理抄寫。
+目前，使用者負責管理自己的 {{site.data.keyword.messagehub}} 災難回復。可以在某個位置（地區）的 {{site.data.keyword.messagehub}} 實例與不同位置的另一個實例之間抄寫 {{site.data.keyword.messagehub}} 資料。不過，使用者負責佈建遠端 {{site.data.keyword.messagehub}} 實例以及管理抄寫。
 
-使用者也負責備份訊息有效負載資料。雖然此資料會抄寫至叢集內的多個 Kafka 分配管理系統，以防禦大部分的失敗，但是此抄寫無法保障整個地區的失敗。 
+使用者也負責備份訊息有效負載資料。雖然此資料會抄寫至叢集內的多個 Kafka 分配管理系統，以防禦大部分的失敗，但是此抄寫無法防禦整個位置的失敗。 
 
 {{site.data.keyword.messagehub}} 會備份主題名稱。
 

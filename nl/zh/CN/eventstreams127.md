@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -26,13 +26,13 @@ lastupdated: "2018-09-04"
 
 ## 供应 {{site.data.keyword.messagehub}} 实例
 
-作为使用服务的先决条件，无论是标准套餐还是企业套餐，都必须先供应 {{site.data.keyword.messagehub}} 服务实例。供应 {{site.data.keyword.messagehub}} 实例可能会产生费用。接下来，通过完成以下任务获取
+作为使用服务的先决条件，无论是标准套餐还是企业套餐，都必须先供应 {{site.data.keyword.messagehub}} 服务实例。接下来，通过完成以下任务获取
 {{site.data.keyword.messagehub}} API 连接详细信息。
 
 ## 标准套餐概述
 {: #connect_standard}
 
-使用标准套餐供应的服务为 Cloud Foundry 服务。这意味着它们可以部署到 Cloud Foundry 组织和空间，并分组到仪表板中标题 **Cloud Foundry 服务**下。您用于连接应用程序的方法取决于应用程序的部署位置，即在 Cloud Foundry 内部还是外部。
+使用标准套餐供应的服务为 Cloud Foundry 服务。这意味着它们可以部署到 Cloud Foundry 组织和空间，并分组到仪表板中 **Cloud Foundry 服务**标题下。连接应用程序所使用的方法取决于该应用程序的部署位置，即在 Cloud Foundry 内部还是外部，例如在 Kubernetes 服务中。
 
 
 ## 标准套餐中的 Cloud Foundry 应用程序
@@ -153,12 +153,12 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 
 完成以下步骤，以绑定您的应用程序并获取服务的服务密钥。要获得授权以创建主题，您的应用程序或服务密钥必须具有管理员访问角色。
 
-要连接应用程序，使用的方法取决于应用程序的部署位置，即在 Cloud Foundry 内部还是外部。
+要连接应用程序，使用的方法取决于该应用程序的部署位置，即在 Cloud Foundry 内部还是外部，例如在 Kubernetes 服务中。
 
 ## 企业套餐中的 Cloud Foundry 应用程序
 {: #connect_enterprise_cf}
 
-您的应用程序必须绑定到 {{site.data.keyword.messagehub}} 服务实例。要使用 One Cloud 将 Cloud Foundry 应用程序绑定到非 Cloud Foundry 服务，请首先创建 Cloud Foundry 服务别名，然后在绑定时从 Cloud Foundry 应用程序引用此别名。
+您的应用程序必须绑定到 {{site.data.keyword.messagehub}} 服务实例。要将 Cloud Foundry 应用程序绑定到非 Cloud Foundry 服务，请先创建 Cloud Foundry 服务别名，然后在绑定时从 Cloud Foundry 应用程序引用此别名。
 
 绑定后，连接详细信息将通过 VCAP_SERVICES 环境变量以 JSON 格式提供给应用程序。您可以使用 IBM Cloud 控制台或 IBM Cloud CLI 绑定应用程序和服务。
 

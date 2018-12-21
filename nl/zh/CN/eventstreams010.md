@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -20,10 +20,10 @@ lastupdated: "2018-06-28"
 
 可以使用 {{site.data.keyword.messagehub}} 来完成以下任务：
 
-* 将工作分流到后端工作程序进程。
-* 将流数据连接到分析以获得深刻的见解。
+* 将工作分流到后端工作程序应用程序。
+* 将事件流连接到 Streaming Analytics 以获得深刻的洞察。
 * 将事件数据发布到多个应用程序以实时作出反应。
-* 将数据传输到其他服务中。例如，传输到长期存储器。
+* 将数据传输到其他服务中。例如，传输到 Cloud Object Storage。
 
 使用 Apache Kafka 构建之后，它可以直接受益于社区内发生的所有创新，并支持 Kafka 客户机 API、Kafka Streams、Kafka Connect 以及 KSQL。
 {:shortdesc}

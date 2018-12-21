@@ -33,12 +33,12 @@ lastupdated: "2018-03-23"
 
 有许多针对使用者的配置设置，可以控制其行为的各个方面。下面是其中一些最重要的方面：
 
-|名称|描述                                                         |有效值|Default|
+|名称|描述                                                         |有效值|缺省值|
 |----------|---------|----------|---------|
 |key.deserializer|用于对键进行反序列化的类。|用于实现反序列化器接口的 Java 类，例如 org.apache.kafka.common.serialization.StringDeserializer|无缺省值 - 必须指定值|
 |value.deserializer|用于对值进行反序列化的类。|用于实现反序列化器接口的 Java 类，例如 org.apache.kafka.common.serialization.StringDeserializer|无缺省值 - 必须指定值|
 |group.id|使用者所属的使用者组的标识。|字符串|无缺省值|
-|auto.offset.reset|使用者没有初始偏移量或当前偏移量在集群中不再可用时的行为。|latest，earliest，none|latest|
+|auto.offset.reset|使用者没有初始偏移量或当前偏移量在集群中不再可用时的行为。| latest, earliest, none | latest |
 |enable.auto.commit|确定是否在后台自动落实使用者的偏移量。|true，false |true|
 |auto.commit.interval.ms|定期落实偏移量的间隔毫秒数。|0，...|5000（5 秒）|
 |max.poll.records|poll() 调用中返回的最大记录数|1，...|500|

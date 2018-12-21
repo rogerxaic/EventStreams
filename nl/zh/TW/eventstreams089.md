@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -11,21 +11,26 @@ lastupdated: "2018-06-01"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .deprecated}
 
-# Object Storage 橋接器 
+# Object Storage 橋接器（已淘汰）
 {: #object_storage_bridge }
 
-** {{site.data.keyword.messagehub}} 橋接器只提供於標準方案中。**
+**{{site.data.keyword.objectstorageshort}} 橋接器已從 2018 年 8 月 1 日淘汰。**
 <br/>
 
-{{site.data.keyword.objectstorageshort}} 橋接器容許您在 {{site.data.keyword.messagehub}} 中將
-Kafka 主題的資料保存到 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ObjectStorage/index.html){:new_window} 的實例。橋接器會從
-Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 {{site.data.keyword.objectstorageshort}} 服務中的容器。
+由於 {{site.data.keyword.objectstorageshort}} 橋接器連接的基礎服務已淘汰，{{site.data.keyword.objectstorageshort}} 橋接器也從 2018 年 8 月 1 日淘汰。 
+
+當 {{site.data.keyword.objectstorageshort}} 服務達到使用期限結束，並且解除任務時，{{site.data.keyword.objectstorageshort}} 橋接器的所有實例也將會解除任務。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
+
+或者，您可以使用 [Cloud Object Storage 橋接器](/docs/services/EventStreams/eventstreams115.html){:new_window}。
+{:deprecated}
+
+{{site.data.keyword.objectstorageshort}} 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ObjectStorage/index.html){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 {{site.data.keyword.objectstorageshort}} 服務中的容器。
 
 請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window}。
 
-藉由配置
-{{site.data.keyword.objectstorageshort}} 橋接器，您可以控制資料如何當作物件上傳到 {{site.data.keyword.objectstorageshort}}。例如，您可以配置的內容如下：
+藉由配置 {{site.data.keyword.objectstorageshort}} 橋接器，您可以控制資料如何當作物件上傳到 {{site.data.keyword.objectstorageshort}}。例如，您可以配置的內容如下：
 
 * 將物件寫入的容器名稱。
 * 物件上傳至 {{site.data.keyword.objectstorageshort}} 服務的頻率。

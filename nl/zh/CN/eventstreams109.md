@@ -22,7 +22,7 @@ lastupdated: "2018-09-11"
 如果希望获得 {{site.data.keyword.messagehub}} 团队的帮助，请收集以下所有信息。预先提供的信息越多，团队帮助您解决问题的效率就会越高：
 {:shortdesc}
 
-1. {{site.data.keyword.messagehub}} 实例是在哪个 {{site.data.keyword.Bluemix_notm}} 区域中供应的？例如，美国南部或英国。 
+1. {{site.data.keyword.messagehub}} 实例是在哪个 {{site.data.keyword.Bluemix_notm}} 位置（区域）供应的？例如，达拉斯或伦敦。 
 2. 使用哪个接口时遇到问题？Kafka、REST、AMQP，还是网桥？
 3. 第一次出现问题是什么时候（具体到时间、日期和时区）？在此之前，应用程序已经运行了多久？
 4. 问题仍会发生吗？能重现问题吗？

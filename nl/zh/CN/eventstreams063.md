@@ -12,7 +12,7 @@ lastupdated: "2018-06-22"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 配置客户机
+# 配置 Kafka API 客户机
 {: #kafka_connect}
 
 

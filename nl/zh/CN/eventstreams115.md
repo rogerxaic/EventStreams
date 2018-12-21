@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Cloud Object Storage 网桥 
 {: #cloud_object_storage_bridge }
 
-** {{site.data.keyword.messagehub}} 网桥仅在标准套餐中提供。**
+**Cloud Object Storage 网桥仅在标准套餐中提供。**
 <br/>
 
 使用 {{site.data.keyword.IBM}} Cloud Object Storage 网桥，可以从 {{site.data.keyword.messagehub}} Kafka 主题中读取数据，然后将数据放入到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage/about-cos.html){:new_window} 中。

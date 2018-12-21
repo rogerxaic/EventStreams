@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -73,13 +73,13 @@ lastupdated: "2018-09-18"
 
 7. {: #start_consumer_step notoc}執行下列指令，在主控台上啟動消費者：
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
     {: codeblock}
     
     此範例使用名為 `kafka-java-console-sample-topic` 的主題。如果主題尚不存在，範例會使用 {{site.data.keyword.messagehub}} 管理 API 建立它。為了傳送及接收訊息，範例會使用 Apache Kafka Java API。
 
-    使用[步驟 2](/docs/services/MessageHub/index.html#create_credentials_step) 中所建立認證的 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。
+    使用[步驟 2](/docs/services/EventStreams/index.html#create_credentials_step) 中所建立認證的 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。
 	
 	指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。
     
@@ -94,7 +94,7 @@ lastupdated: "2018-09-18"
 
 8. 執行下列指令，在主控台上啟動生產者：
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -49,7 +49,7 @@ lastupdated: "2018-09-12"
 		</tr>
 	  		<tr>
 			<td>**叢集上的 Kafka 版本**</td>
-			<td>Kafka 0.10.2</td>
+			<td>Kafka 1.1</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -73,14 +73,17 @@ lastupdated: "2018-09-12"
 			<td>無限制，直到方案的儲存空間限制為止</td>
 		</tr>
 		<tr>
-			<td>**地區可用性**</td>
-			<td>美國南部</br>
-			英國</br>
-			雪梨</br>
-			德國（無 MQ Light API）</td>
-			<td>美國南部</br>
-			美國東部<br/>
-			德國<br/>
+			<td>**位置（地區）可用性**</td>
+			<td>達拉斯 (us-south)</br>
+			倫敦 (eu-gb)</br>
+			雪梨 (au-syd))</br>
+			法蘭克福 (eu-de) - 無 {{site.data.keyword.mql}} API </td>
+			<td>達拉斯 (us-south)</br>
+			華盛頓 (us-east)<br/>
+			倫敦 (eu-gb)<br/>
+			法蘭克福 (eu-de)<br/>
+			東京 (jp-tok)<br/>
+
 			<br/>
 			</td>
 		</tr>

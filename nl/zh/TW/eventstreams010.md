@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -20,10 +20,10 @@ lastupdated: "2018-06-28"
 
 您可以使用 {{site.data.keyword.messagehub}} 來完成下列作業：
 
-* 將工作卸載至後端工作者處理程序。
-* 連接串流資料與分析，以實現強大的見解。
+* 將工作卸載至後端工作者節點應用程式。
+* 將事件串流連接至串流分析，以實現強大的見解。
 * 將事件資料提發佈多個應用程式，以便即時回應。
-* 將資料傳送到另一個服務。例如，傳送到長期儲存空間。
+* 將資料傳送到另一個服務。例如，Cloud Object Storage。
 
 藉由使用 Apache Kafka 建置，它能直接獲益於在社群中發生的所有創新，並支援 Kafka 用戶端 API、Kafka Streams、Kafka Connect 以及 KSQL。
 {:shortdesc}

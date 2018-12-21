@@ -15,7 +15,8 @@ lastupdated: "2018-08-30"
 # 如何使用 Kafka REST API
 {: #rest_how}
 
-**Kafka REST API 仅在标准套餐中提供。**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** Kafka REST API 仅在标准套餐中提供。**
 <br/>
 
 <!-- 21/06/18 - commenting out until content ready

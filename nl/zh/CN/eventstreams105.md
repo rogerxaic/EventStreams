@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # MQ 网桥
 {: #mq_bridge}
 
-** {{site.data.keyword.messagehub}} 网桥仅在标准套餐中提供。**
+**MQ 网桥仅在标准套餐中提供。**
 <br/>
 
 通过 MQ 网桥，您可以将消息数据从 {{site.data.keyword.IBM_notm}} MQ 队列传输到 {{site.data.keyword.messagehub}} Kafka 主题。MQ 网桥支持针对您企业中生成的 {{site.data.keyword.IBM_notm}} MQ 消息数据，高效地执行云样式工作负载（例如，数据分析）。
@@ -56,7 +56,7 @@ MQ 网桥对其传输的消息数据实施“至少一次”级别的可靠性�
 {: #mq_bridge_partition}
 
 MQ 网桥支持用于控制将 {{site.data.keyword.IBM_notm}} MQ 消息数据分配给 Kafka 主题分区的选项。特定分区内的消息排序取决于为消息数据排序所选的选项（请参阅[消息可靠性和排序](#mq_bridge_reliability)）。支持的值如下所示：
-<dl><dt>Default</dt>
+<dl><dt>缺省值</dt>
 <dd>将使用 Kafka 的缺省分区分配，这意味着 MQ 消息中的数据会平均分发到 Kafka 主题的各个分区上。</dd>
 <dt>CorrelationId</dt>
 <dd>具有相同相关标识的 MQ 消息会分配给同一 Kafka 分区。</dd>
