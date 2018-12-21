@@ -20,7 +20,7 @@ Puoi proteggere le tue risorse {{site.data.keyword.messagehub}} in modo dettagli
 ## Cosa posso proteggere?
 
 In {{site.data.keyword.messagehub}}, puoi proteggere l'accesso alle seguenti risorse:
-* Cluster (cluster): puoi controllare quali applicazioni e utenti possono connettersi al servizio 
+* Cluster (cluster): puoi controllare quali applicazioni e utenti possono connettersi al servizio
 * Argomenti (topic): puoi controllare la capacità di utenti e applicazioni di creare, eliminare, leggere, e scrivere in, un argomento 
 * Gruppi di consumatori (group): puoi controllare la capacità di un'applicazione di unirsi a un gruppo di consumatori 
 * Transazioni produttore (txnid): puoi controllare la capacità di utilizzare la funzionalità di produttore transazionale in Kafka (ossia, singole scritture atomiche su più partizioni)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-07-31"
 monitorare l'utilizzo che fai di {{site.data.keyword.messagehub}}.
 {:shortdesc}
 
-**Nota:** le metriche e gli eventi sono disponibili come parte del pano Standard di {{site.data.keyword.messagehub}} solo in Stati Uniti Sud, Regno Unito e Sydney. 
+**Nota:** le metriche e gli eventi sono disponibili come parte del piano Standard di {{site.data.keyword.messagehub}} solo in Dallas (us-south), Londra (eu-gb) e Sydney (au-syd). 
 
 
 Puoi monitorare le seguenti informazioni di log:

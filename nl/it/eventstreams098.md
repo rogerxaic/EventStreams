@@ -15,6 +15,7 @@ lastupdated: "2018-05-30"
 # Cosa è richiesto per utilizzare l'API MQ Light con {{site.data.keyword.messagehub}}?
 {: #mql_reqs}
 
+<!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** L'API MQ Light è disponibile solo come parte del piano Standard.**
 <br/>
 

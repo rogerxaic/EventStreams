@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Bridge Cloud Object Storage 
 {: #cloud_object_storage_bridge }
 
-I bridge ** {{site.data.keyword.messagehub}} sono disponibili solo come parte del piano Standard.**
+** Il bridge Cloud Object Storage è disponibile solo come parte del piano Standard.**
 <br/>
 
 Il bridge {{site.data.keyword.IBM}} Cloud Object Storage fornisce un modo per leggere i dati da un argomento Kafka {{site.data.keyword.messagehub}}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -25,12 +25,12 @@ Leggi le seguenti informazioni su come ottenere questi dettagli. I passi possono
 
 ## Esegui il provisioning di un'istanza {{site.data.keyword.messagehub}}
 
-Come prerequisito, devi prima eseguire il provisioning di un'istanza del servizio {{site.data.keyword.messagehub}} per il piano Standard o quello Enterprise. Il provisioning di un'istanza {{site.data.keyword.messagehub}} potrebbe comportare un addebito. Ottieni quindi i dettagli della connessione API {{site.data.keyword.messagehub}} completando le seguenti attività:
+Come prerequisito, devi prima eseguire il provisioning di un'istanza del servizio {{site.data.keyword.messagehub}} per il piano Standard o quello Enterprise. Ottieni quindi i dettagli della connessione API {{site.data.keyword.messagehub}} completando le seguenti attività:
 
 ## Panoramica del piano Standard
 {: #connect_standard}
 
-I servizi di cui viene eseguito il provisioning utilizzando il piano Standard sono servizi Cloud Foundry. Questo significa che vengono distribuiti in un'organizzazione e uno spazio Cloud Foundry e vengono raggruppati nel dashboard sotto l'intestazione **Servizi Cloud Foundry**. Il metodo da te utilizzato per connettere un'applicazione dipende da dove viene distribuita l'applicazione, ossia in Cloud Foundry o al suo esterno.
+I servizi di cui viene eseguito il provisioning utilizzando il piano Standard sono servizi Cloud Foundry. Questo significa che vengono distribuiti in un'organizzazione e uno spazio Cloud Foundry e vengono raggruppati nel dashboard sotto l'intestazione **Servizi Cloud Foundry**. Il metodo che utilizzi per collegare un'applicazione dipende da dove viene distribuita l'applicazione, ossia in Cloud Foundry o all'esterno di Cloud Foundry, ad esempio nel servizio Kubernetes.
 
 
 ## Applicazioni Cloud Foundry nel piano Standard
@@ -153,12 +153,12 @@ I servizi di cui è stato eseguito il provisioning utilizzando il piano Enterpri
 
 Completa la seguente procedura per eseguire il bind della tua applicazione e ottenere le chiavi di servizio per il tuo servizio. Per disporre dell'autorizzazione a creare gli argomenti, la tua applicazione o la chiave di servizio devono disporre di un ruolo di accesso di Gestore.
 
-Per connettere un'applicazione, il metodo utilizzato dipende da dove viene distribuita l'applicazione, ossia in Cloud Foundry o al suo esterno.
+Per collegare un'applicazione, il metodo utilizzato dipende da dove viene distribuita l'applicazione, ossia in Cloud Foundry o all'esterno di Cloud Foundry, ad esempio nel servizio Kubernetes.
 
 ## Applicazioni Cloud Foundry nel piano Enterprise
 {: #connect_enterprise_cf}
 
-È necessario che della tua applicazione sia stato eseguito il bind all'istanza del servizio {{site.data.keyword.messagehub}}. Per eseguire il bind di un'applicazione Cloud Foundry a un servizio non Cloud Foundry con One Cloud, crea prima un alias del servizio Cloud Foundry e fai quindi riferimento a questo alias dalla tua applicazione Cloud Foundry quando esegui il bind.
+È necessario che della tua applicazione sia stato eseguito il bind all'istanza del servizio {{site.data.keyword.messagehub}}. Per eseguire il bind di un'applicazione Cloud Foundry a un servizio non Cloud Foundry, crea prima un alias del servizio Cloud Foundry e fai quindi riferimento a questo alias dalla tua applicazione Cloud Foundry quando esegui il bind.
 
 Una volta eseguito il bind, i dettagli della connessione vengono resi disponibili alla tua applicazione in formato JSON utilizzando la variabile di ambiente VCAP_SERVICES. Puoi eseguire il bind di un'applicazione e di un servizio utilizzando la console IBM Cloud oppure la CLI IBM Cloud.
 
@@ -173,7 +173,7 @@ Una volta eseguito il bind, i dettagli della connessione vengono resi disponibil
 6. Seleziona il tile del servizio {{site.data.keyword.messagehub}} a cui vuoi eseguire il bind e fai clic su **Connetti**. 
 7. Nella finestra **Connect IAM-Enabled Service** che viene visualizzata, seleziona un ruolo di accesso da **Access Role for Connection** e un ID servizio dall'elenco **Service ID for Connection** (puoi accettare l'ID generato automaticamente). Fai clic su **Connect**. 
 
-  Questo crea un alias del servizio Cloud Foundry per il tuo servizio {{site.data.keyword.messagehub}} ed esegue quindi il bind della tua applicazione a questo alias.  
+  Questo crea un alias del servizio Cloud Foundry per il tuo servizio {{site.data.keyword.messagehub}} ed esegue quindi il bind della tua applicazione a questo alias. 
 
   Riprepara la tua applicazione per rendere effettive le modifiche.<br/>
 8. Fai clic sulla scheda **Runtime** a sinistra e seleziona la scheda **Variabili di ambiente** al centro. Puoi ora verificare le tue informazioni VCAP_SERVICES . Alla tua applicazione è ora possibile accedere come a variabili di ambiente. 
@@ -202,7 +202,7 @@ Poiché della tua applicazione non è stato ancora eseguito il bind a {{site.dat
 In alternativa, puoi aggiornare il tuo file manifest ed eseguire nuovamente il push dell'applicazione.</li>
 <li>Verifica che variabile di ambiente VCAP_SERVICES sia disponibile nel tuo runtime dell'applicazione:<br/>
 <code>ibmcloud app env <var class="keyword varname">tuo_nome_applicazione</var></code></li>
-<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html).
+<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html). 
 <p>Potresti dover ripreparare la tua applicazione per rendere effettive le modifiche.</p></li>
 </ol>
 

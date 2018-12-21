@@ -12,7 +12,7 @@ lastupdated: "2018-06-22"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Configurazione del tuo client
+# Configurazione del tuo client API Kafka
 {: #kafka_connect}
 
 

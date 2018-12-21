@@ -11,6 +11,7 @@ lastupdated: "2018-08-08"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:faq: data-hd-content-type='faq'}
 
 # Domande frequenti (FAQ)
 {: #faqs}
@@ -21,6 +22,7 @@ Risposte alle domande più frequenti sul servizio {{site.data.keyword.IBM}} {{si
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
 ## Come posso utilizzare le API Kafka per creare ed eliminare gli argomenti?
 {: #topic_admin}
+{: faq}
 
 Se utilizzi un client Kafka alla versione 0.11 o successiva, oppure Kafka Streams alla versione 0.10.2.0 o successiva, puoi utilizzare le API per creare ed eliminare gli argomenti. Abbiamo posto alcune restrizioni sulle impostazioni consentite quando crei gli argomenti. Attualmente, puoi modificare solo le seguenti impostazioni:
 
@@ -71,12 +73,14 @@ solo piano Enterprise. Imposta su qualsiasi valore compreso tra 5 minuti e 30 gi
 
 ## Per quanto tempo {{site.data.keyword.messagehub}} imposta la finestra di conservazione del log per l'argomento degli offset del consumatore?
 {: #offsets }
+{: faq}
 {{site.data.keyword.messagehub}} conserva gli offset del consumatore per 7 giorni. Questo corrisponde alla configurazione Kafka offsets.retention.minutes. 
 
 a conservazione di offset avviene a livello di sistema, pertanto non puoi impostarla a livello di un singolo argomento. Tutti i gruppi di consumatori ottengono solo 7 giorni di offset memorizzati anche se utilizzano un argomento con una conservazione del log che è stata aumentata fino al massimo di 30 giorni. 
 
 ## Che cos'è il comportamento di disponibilità di {{site.data.keyword.messagehub}}?
 {: #availability}
+{: faq}
 
 Se scrivi applicazioni {{site.data.keyword.messagehub}}, utilizza queste informazioni per comprendere quale sia il normale comportamento di disponibilità di {{site.data.keyword.messagehub}} e cosa deve essere gestito dalle tue applicazioni.
 
@@ -94,11 +98,13 @@ Scrivi le tue applicazioni per gestire la possibilità che i bridge possano riav
 
 ## Qual è la dimensione massima del messaggio di {{site.data.keyword.messagehub}}? 
 {: #max_message_size }
+{: faq}
 
 La dimensione massima del messaggio di {{site.data.keyword.messagehub}} è 1 MB, che è il valore predefinito di Kafka. 
 
 ## Quali sono le impostazioni della replica di {{site.data.keyword.messagehub}}? 
 {: #replication }
+{: faq}
 
 {{site.data.keyword.messagehub}} è configurato per fornire elevate disponibilità e durabilità.
 Le seguenti impostazioni di configurazione si applicano a tutti gli argomenti e non possono essere modificate:
@@ -107,6 +113,7 @@ Le seguenti impostazioni di configurazione si applicano a tutti gli argomenti e 
 
 ## Come funziona la fatturazione di {{site.data.keyword.messagehub}} nel piano Standard? 
 {: #billing }
+{: faq}
 
 {{site.data.keyword.messagehub}} nel piano Standard esegue regolarmente il campionamento del conteggio di argomenti di un utente e {{site.data.keyword.Bluemix_notm}} registra il valore di campione massimo ogni giorno. La fatturazione di {{site.data.keyword.messagehub}} riguarda il numero massimo di partizioni simultanee e la somma di messaggi inviati e ricevuti ogni giorno.
 
@@ -117,6 +124,7 @@ La fatturazione di {{site.data.keyword.messagehub}} riguarda ciascun messaggio o
 <!--12/04/18 - Karen: same info duplicated at messagehub057 -->
 ## Quanto spesso l'API REST Kafka si riavvia? 
 {: #REST_restart }
+{: faq}
 
 L'API REST Kafka si riavvia una volta al giorno per un breve periodo di
 tempo. 
@@ -133,15 +141,17 @@ l'API REST restituisce il seguente JSON:
 
 ## Quali sono le differenze tra i piani {{site.data.keyword.messagehub}} Standard e {{site.data.keyword.messagehub}} Enterprise?
 {: #plan_compare }
+{: faq}
 
 Per trovare ulteriori informazioni sui due diversi piani {{site.data.keyword.messagehub}}, consulta [Scelta del tuo piano](/docs/services/EventStreams/eventstreams085.html).
 
 ## Come gestisco il ripristino di emergenza?
 {: #disaster_recovery }
+{: faq}
 
-Al momento, è responsabilità dell'utente gestire i propri ripristini di emergenza {{site.data.keyword.messagehub}}. I dati {{site.data.keyword.messagehub}} possono essere replicati tra un'istanza {{site.data.keyword.messagehub}} in una regione e un'altra istanza in una regione diversa. Tuttavia, l'utente è responsabile del provisioning di un'istanza {{site.data.keyword.messagehub}} remota e della gestione della replica.
+Al momento, è responsabilità dell'utente gestire i propri ripristini di emergenza {{site.data.keyword.messagehub}}. I dati di {{site.data.keyword.messagehub}} possono essere replicati tra un'istanza {{site.data.keyword.messagehub}} in un'ubicazione (regione) e un'altra istanza in un'ubicazione diversa. Tuttavia, l'utente è responsabile del provisioning di un'istanza {{site.data.keyword.messagehub}} remota e della gestione della replica.
 
-L'utente è anche responsabile del backup dei dati del payload del messaggio. Anche se questi dati vengono replicati tra più broker Kafka all'interno di un cluster, che protegge contro la maggior parte degli errori, questa replica non copre un errore al livello della regione. 
+L'utente è anche responsabile del backup dei dati del payload del messaggio. Anche se questi dati vengono replicati tra più broker Kafka all'interno di un cluster, che protegge contro la maggior parte degli errori, questa replica non copre un errore al livello dell'ubicazione. 
 
 Viene eseguito il backup dei nomi argomento da {{site.data.keyword.messagehub}}.
 

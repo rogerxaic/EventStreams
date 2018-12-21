@@ -20,10 +20,10 @@ lastupdated: "2018-08-14"
 # Eventi {{site.data.keyword.cloudaccesstrailshort}} (piano Enterprise)
 {: #at_events}
 
-Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.messagehub}} nel piano Enterprise in {{site.data.keyword.Bluemix}}.
+Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.messagehub}} nel piano Enterprise in {{site.data.keyword.Bluemix}}. 
 {: shortdesc}
 
-Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√† avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√† avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
 
 <!-- You can create different sections to group events by area. -->
 
@@ -38,7 +38,7 @@ Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√
 |:-------|:------------|
 | messagehub.topic.create | Un evento viene creato quando crei un argomento|
 | messagehub.topic.delete | Un evento viene creato quando elimini un argomento|
-{: caption="Tabella 1. Eventi {{site.data.keyword.messagehub}} " caption-side="top"}
+{: caption="Tabella 1. Eventi {{site.data.keyword.messagehub}}" caption-side="top"}
 
 ## Dove visualizzare gli eventi
 {: #ui}
@@ -47,7 +47,7 @@ Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-Gli eventi {{site.data.keyword.cloudaccesstrailshort}} sono disponibili nel **dominio dell'account** {{site.data.keyword.cloudaccesstrailshort}} disponibile nella regione {{site.data.keyword.Bluemix_notm}} in cui vengono generati gli eventi. 
+Gli eventi {{site.data.keyword.cloudaccesstrailshort}} sono disponibili nel **dominio dell'account** {{site.data.keyword.cloudaccesstrailshort}} disponibile nell'ubicazione (regione) {{site.data.keyword.Bluemix_notm}} in cui vengono generati gli eventi. 
 
 
 

@@ -29,7 +29,7 @@ lastupdated: "2018-06-22"
 
 L'esempio di API Kafka Java&trade; consiste in un produttore e consumatore di esempio scritto in Java, che utilizza direttamente l'API Kafka. Puoi eseguire questo esempio in locale o in {{site.data.keyword.Bluemix_short}}.
 
-Il codice di esempio si trova nel [progetto GitHub event-streams-samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}.Anche se l'esempio utilizza l'API Kafka per inviare e ricevere messaggi, l'esempio utilizza l'API di amministrazione {{site.data.keyword.messagehub}} per creare l'argomento a cui invia i messaggi e da cui riceve i messaggi.
+Il codice di esempio si trova nel [progetto GitHub event-streams-samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Anche se l'esempio utilizza l'API Kafka per inviare e ricevere messaggi, l'esempio utilizza l'API di amministrazione {{site.data.keyword.messagehub}} per creare l'argomento a cui invia i messaggi e da cui riceve i messaggi.
 
 Per ulteriori informazioni sulla configurazione e sull'esecuzione dell'esempio, vedi il file [README.md ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}.
 
@@ -81,7 +81,7 @@ alla versione più recente. Puoi scaricare un client Kafka da
 
 ### Migrazione di un client Kafka a 0.10.2.X o versioni successive
 
-dalla 0.10.2, puoi configurare l'autenticazione SASL direttamente nelle proprietà del cliente invece di utilizzare un file JAAS. Questa semplificazione ti consente di eseguire più clienti nella stessa JVM utilizzando diverse serie di credenziali, cosa non possibile con un file JAAS.
+Dalla 0.10.2, puoi configurare l'autenticazione SASL direttamente nelle proprietà del client invece di utilizzare un file JAAS. Questa semplificazione ti consente di eseguire più client nella stessa JVM utilizzando diverse serie di credenziali, cosa non possibile con un file JAAS. 
 
 Completa la seguente procedura:
 

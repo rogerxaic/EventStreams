@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -21,10 +21,10 @@ lastupdated: "2018-06-28"
 Puoi utilizzare {{site.data.keyword.messagehub}} per completare
 le seguenti attività:
 
-* Scaricare il lavoro nei processi di lavoro di back-end.
-* Connettere i dati di flusso alle funzioni di analisi per realizzare delle potenti analisi approfondite.
+* Scaricare il lavoro nelle applicazioni di lavoro di back-end.
+* Connettere i flussi di eventi alle analisi del flusso per realizzare delle potenti analisi approfondite.
 * Pubblicare dati di evento in più applicazioni per delle reazioni in tempo reale.
-* Trasferire dati in un altro servizio. Ad esempio, nell'archiviazione di lungo termine.
+* Trasferire dati in un altro servizio. Ad esempio, a Cloud Object Storage.
 
 Essendo creato con Apache Kafka, si avvale direttamente di tutta l'innovazione che ha luogo nella community e supporta le API client Kafka, Kafka Streams, Kafka Connect e anche KSQL.
 {:shortdesc}

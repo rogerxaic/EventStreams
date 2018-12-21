@@ -22,7 +22,7 @@ Se riscontri un problema con {{site.data.keyword.messagehub}}, per prima cosa co
 Se vuoi aiuto da parte del team di {{site.data.keyword.messagehub}}, raccogli tutte le seguenti informazioni. Più informazioni puoi fornire in anticipo, e più efficientemente il team può aiutarti con il problema:
 {:shortdesc}
 
-1. In quale regione {{site.data.keyword.Bluemix_notm}} è stata fornita la tua istanza di {{site.data.keyword.messagehub}}?  Ad esempio, Stati Uniti Sud o Regno Unito. 
+1. In quale ubicazione (regione) {{site.data.keyword.Bluemix_notm}} è stato eseguito il provisioning della tua istanza di {{site.data.keyword.messagehub}}?  Ad esempio, Dallas o Londra. 
 2. In quale interfaccia riscontri i problemi? Kafka, REST, AMQP o bridge?
 3. Quando si è verificato il primo errore (nello specifico ora, data e fuso orario)? Per quanto tempo è rimasta in esecuzione l'applicazione prima dell'errore?
 4. Si sta verificando ancora l'errore? Puoi replicarlo?

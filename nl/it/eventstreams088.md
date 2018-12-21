@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -41,9 +41,7 @@ Potresti trovare i bridge particolarmente utili nei seguenti due scenari comuni:
 * Forniamo i seguenti tipi di bridge: 
   - [Bridge MQ](/docs/services/EventStreams/eventstreams105.html){:new_window}, che prende i dati dei messaggi da {{site.data.keyword.IBM}} MQ e li trasferisce in un argomento in {{site.data.keyword.messagehub}}. Abbiamo intenzione di supportare una gamma di bridge più ampia in futuro.
   - [Bridge Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}, che trasferisce i dati {{site.data.keyword.messagehub}} a un'istanza del servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. 
-    
-    Il servizio Cloud Object Storage è il servizio di archivio oggetti preferito in {{site.data.keyword.Bluemix_short}}. 
-  - [Bridge {{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams/eventstreams089.html){:new_window}, che trasferisce i dati {{site.data.keyword.messagehub}} a un'istanza del servizio [Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/ObjectStorage/index.html){:new_window}.
+  - Il [Bridge {{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams/eventstreams089.html){:new_window} è diventato obsoleto dal primo agosto 2018. Per ulteriori informazioni, vedi l'[annuncio di funzionalità deprecata: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
 * Attualmente, i bridge sono disponibili in tutti gli ambienti {{site.data.keyword.Bluemix_notm}} pubblici. I bridge non sono disponibili in {{site.data.keyword.Bluemix_short}} dedicato.
 * Puoi amministrare i bridge nei seguenti due modi:
   - Utilizzando un'[API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-docs){:new_window}, che è un'estensione dell'attuale API di amministrazione {{site.data.keyword.messagehub}}. Puoi anche trovare esempi su come utilizzare curl per gestire il ciclo di vita dei bridge all'indirizzo [message-hub-docs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-docs){:new_window}. Potremmo cambiare questa API REST mentre continuiamo a sviluppare i bridge. Intendiamo stabilizzare questa API.
@@ -51,13 +49,13 @@ Potresti trovare i bridge particolarmente utili nei seguenti due scenari comuni:
 * Puoi associare un massimo di due bridge di qualsiasi tipo a un'istanza del servizio {{site.data.keyword.messagehub}}. Continueremo a riesaminare questa limitazione mentre continuiamo a sviluppare i bridge.
 * Non è previsto alcun costo aggiuntivo per l'utilizzo dei bridge oltre le loro operazioni di messaggistica.
 * Il bridge MQ non supporta l'utilizzo di SSL/TLS per proteggere la riservatezza e l'integrità dei dati mentre vengono trasferiti tra il bridge e il gestore code MQ. Abbiamo intenzione di aggiungere il supporto per l'utilizzo di SSL / TLS al bridge. 
-* Tuttavia, puoi utilizzare il servizio [{{site.data.keyword.SecureGatewayfull}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/SecureGateway/secure_gateway.html){:new_window} per inviare i tuoi dati
+* Tuttavia, puoi utilizzare il servizio [{{site.data.keyword.SecureGatewayfull}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/SecureGateway/index.html#getting-started-with-sg){:new_window} per inviare i tuoi dati
 attraverso un tunnel protetto tra {{site.data.keyword.Bluemix_notm}}
 e un client {{site.data.keyword.SecureGateway}} che puoi installare
 in loco. In questa configurazione, la comunicazione su entrambe le estremità del tunnel non è
 protetta con SSL/TLS.
-* I bridge Cloud Object Storage e {{site.data.keyword.objectstorageshort}} concatenano i messaggi utilizzando caratteri di nuova riga come separatori mentre scrivono i dati rispettivamente in Cloud Object Storage o {{site.data.keyword.objectstorageshort}}. Ciò rende questi bridge inadatti per i messaggi che contengono caratteri di nuova riga incorporati e per i dati dei messaggi binari.
-* Le convenzioni di denominazione degli oggetti attualmente utilizzate dai bridge Cloud Object Storage e {{site.data.keyword.objectstorageshort}} potrebbero cambiare in futuro.
+* Il bridge Cloud Object Storage concatena i messaggi utilizzando i caratteri di nuova riga come separatori mentre scrive i dati in Cloud Object Storage. Ciò rende questo bridge inadatto per i messaggi che contengono caratteri di nuova riga incorporati e per i dati dei messaggi binari.
+* Le convenzioni di denominazione degli oggetti attualmente utilizzate dal bridge Cloud Object Storage potrebbero cambiare in futuro.
 
 ## Bridge da altri servizi in {{site.data.keyword.messagehub}}
 {: notoc}

@@ -15,7 +15,7 @@ lastupdated: "2018-06-01"
 # Bridge MQ
 {: #mq_bridge}
 
-I bridge ** {{site.data.keyword.messagehub}} sono disponibili solo come parte del piano Standard.**
+** Il bridge MQ è disponibile solo come parte del piano Standard.**
 <br/>
 
 Il bridge MQ ti consente di trasferire i dati del messaggio da una coda {{site.data.keyword.IBM_notm}}

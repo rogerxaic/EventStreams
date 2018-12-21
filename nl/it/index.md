@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-18"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -33,7 +33,7 @@ Completa la seguente procedura:
  
 1. Crea un'istanza del servizio {{site.data.keyword.messagehub}}:
 
-  a. Accedi alla console {{site.data.keyword.Bluemix_notm}}.  
+  a. Accedi alla console {{site.data.keyword.Bluemix_notm}}. 
   
   b. Fai clic su **Catalogo**.
   
@@ -76,7 +76,7 @@ Completa la seguente procedura:
 
 7. {: #start_consumer_step notoc} Avvia il consumatore sulla tua console immettendo il seguente comando:
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
     {: codeblock}
     
@@ -85,7 +85,7 @@ Completa la seguente procedura:
     messaggi, l'esempio usa l'API Java Apache Kafka.
 
     Utilizza i valori per *kafka_brokers_sasl*, *kafka_admin_url*
-    e *api_key* dalle credenziali che hai creato nel [passo 2](/docs/services/MessageHub/index.html#create_credentials_step).
+    e *api_key* dalle credenziali che hai creato nel [passo 2](/docs/services/EventStreams/index.html#create_credentials_step).
 	
 	Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti.
     
@@ -100,7 +100,7 @@ Completa la seguente procedura:
 
 8. Avvia il produttore sulla tua console immettendo il seguente comando:
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0.jar 
+    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
  {: codeblock}
   

@@ -15,7 +15,8 @@ lastupdated: "2018-05-25"
 # Come effettuare la connessione e l'autenticazione
 {: #rest_connect}
 
-** L'API Kafka REST è disponibile solo come parte del piano Standard.**
+<!-- info moved to eventstreams025.md because of doc app changes -->
+** L'API REST Kafka è disponibile solo come parte del piano Standard.**
 <br/>
 
 Per stabilire una connessione a {{site.data.keyword.messagehub}}, l'API REST Kafka utilizza le credenziali <code>api_key</code> e <code>kafka_rest_url</code>
