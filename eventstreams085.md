@@ -17,6 +17,7 @@ lastupdated: "2018-11-28"
 {: #plan_choose}
 
 {{site.data.keyword.messagehub}} is available as two different plans depending on your requirements: Standard and Enterprise.
+{: shortdesc}
 
 ## Standard plan
 

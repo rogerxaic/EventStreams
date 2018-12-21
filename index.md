@@ -19,6 +19,7 @@ To get started with {{site.data.keyword.messagehub}}
 and start sending and receiving messages, you can use the Java™ sample. The sample shows how a producer sends
 messages to a consumer using a topic. The same sample program is used to consume messages and
 produce messages.
+{: shortdesc}
 
 To understand more about how {{site.data.keyword.messagehub}} works, see [About {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} was previously called Message Hub.
 
