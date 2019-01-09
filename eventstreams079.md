@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 
 To connect an app to the service, the app must use the <code>user</code>,
 <code>password</code>, and <code>mqlight_lookup_url</code> details from the [VCAP_SERVICES environment variable](/docs/services/EventStreams/eventstreams127.html). Use the following guidance for your chosen language:
+{: shortdesc}
 
 **For Java**
 

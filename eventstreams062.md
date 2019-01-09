@@ -21,6 +21,7 @@ To use the Kafka API with {{site.data.keyword.messagehub}}, choose one of the fo
 * One of the [recommended third-party clients](/docs/services/EventStreams/eventstreams062.html#clients_table).
 
 For both types of client, we recommend always choosing the latest client version. 
+{: shortdesc}
 
 ## Client requirements for connecting to Event Streams
 

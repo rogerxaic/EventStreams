@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 To use the API, add a reference to the latest available {{site.data.keyword.mql}} client API for Ruby as follows:
+{: shortdesc}
 
 Add the following reference to the <code>Gemfile</code>:
 

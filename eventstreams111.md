@@ -16,6 +16,7 @@ lastupdated: "2018-06-25"
 {: #kafka_streams }
 
 The topic APIs work with {{site.data.keyword.messagehub}} with no setup required. Specify your SASL credentials using <code>sasl.jaas.config</code> or a JAAS file and set <code>replication.factor</code> to 3.
+{: shortdesc}
 
 Ensure that you are using Streams at 0.10.2, or later.   
 

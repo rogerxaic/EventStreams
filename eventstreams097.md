@@ -31,6 +31,7 @@ lastupdated: "2018-08-30"
 -->
 
 The {{site.data.keyword.messagehub}} Kafka REST API sample is a Node.js application, which connects to {{site.data.keyword.messagehub}} over the Kafka REST API to produce and consume messages.
+{: shortdesc}
 
 The sample code is in the [event-streams-samples github project ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 

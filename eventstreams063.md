@@ -20,7 +20,7 @@ To connect to {{site.data.keyword.messagehub}}, the Kafka API uses one of the fo
 * the <code>kafka_brokers_sasl</code> credentials, and the <code>user</code> and <code>password</code> from
 the [VCAP_SERVICES environment variable](/docs/services/EventStreams/eventstreams127.html#vcap).
 * the service key. For more information, see [Connecting to your cluster](/docs/services/EventStreams/eventstreams127.html#enterprise_connect).
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## Using the sasl.jaas.config property (connecting and authenticating in a Java application)

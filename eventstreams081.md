@@ -22,6 +22,7 @@ lastupdated: "2018-05-25"
 
 {{site.data.keyword.mql}} messages are stored in a single underlying Kafka topic named "MQLight" and are encoded as detailed in the following table. This encoding can also be used by other API types, such as Kafka or Kafka REST, to exchange messages with applications using the
 {{site.data.keyword.mql}} API.
+{: shortdesc}
 
 ## Kafka message format
 {: #kafka_format notoc}

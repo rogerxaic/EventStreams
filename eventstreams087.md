@@ -15,7 +15,8 @@ lastupdated: "2018-06-06"
 # Choosing between the three APIs (Standard plan)
 {: #choose_api}
 
-{{site.data.keyword.messagehub}} supports three APIs on the Standard plan. Here's some information to help you choose which is most appropriate:
+{{site.data.keyword.messagehub}} supports three APIs on the Standard plan. Here's some information to help you choose which is most appropriate.
+{: shortdesc}
 
 ## Why use the Kafka API?
 {: #why_kafka notoc}
