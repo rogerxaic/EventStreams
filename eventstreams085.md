@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-29"
+lastupdated: "2019-01-31"
 
 ---
 
@@ -82,6 +82,7 @@ The following table summarizes what is supported by the plans:
 			<td>Dallas (us-south)</br>
 			Washington (us-east)<br/>
 			London (eu-gb)<br/>
+			Sydney (au-syd)</br>
 			Frankfurt (eu-de)<br/>
 			Tokyo (jp-tok)<br/>
 
