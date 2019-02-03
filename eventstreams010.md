@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-03"
 
 ---
 
@@ -26,7 +26,6 @@ You can use {{site.data.keyword.messagehub}} to complete the following tasks:
 * Transfer data into another service. For example, to Cloud Object Storage.
 
 By being built with Apache Kafka, it directly benefits from all the innovation occurring in the community and supports Kafka client APIs, Kafka Streams, Kafka Connect, and also KSQL.
-{:shortdesc}
 
 Apache Kafka tools usually work directly with {{site.data.keyword.messagehub}}, although you do need to provide additional configuration because connections to {{site.data.keyword.messagehub}} always authenticate using credentials.
 
