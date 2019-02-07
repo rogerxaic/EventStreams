@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-28"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-11-28"
 
 O {{site.data.keyword.messagehub}} está disponível como dois planos diferentes dependendo de seus requisitos:
 Standard e Enterprise.
+{: shortdesc}
 
 ## Plano padrão
 

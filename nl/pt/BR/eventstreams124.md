@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 É possível assegurar os recursos do seu {{site.data.keyword.messagehub}} de uma maneira com baixa granularidade para gerenciar o acesso que você deseja conceder a cada usuário para cada recurso.
+{: shortdesc}
 
 ## O que posso assegurar?
 

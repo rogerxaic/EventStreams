@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 Vous pouvez utiliser Kafka Connect avec {{site.data.keyword.messagehub}} et exécuter les agents dans ou en dehors de {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 Kafka Connect peut s'exécuter en mode autonome ou distribué. Le mode autonome est destiné aux tests et aux connexions temporaires entre systèmes. Le mode distribué est plus approprié pour une utilisation en production. La configuration nécessaire varie légèrement selon que vous voulez utiliser {{site.data.keyword.messagehub}} avec l'un ou l'autre mode.
 {:shortdesc}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-07"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-11-07"
 
 连接到 {{site.data.keyword.messagehub}} 的方式会有所不同，具体取决于您使用的是标准套餐，还是企业套餐，以及您是从 Cloud Foundry 应用程序进行连接，还是从任何其他外部客户机进行连接。要连接到任何
 {{site.data.keyword.messagehub}} API，您需要收集两条信息：
+{: shortdesc}
 
 * API 的端点 URL
 * 认证凭证

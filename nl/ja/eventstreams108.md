@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-08"
 
 ---
@@ -141,7 +141,7 @@ Kafka REST API は、1 日 1 回、短時間の再始動期間があります。
 {: #disaster_recovery }
 {: faq}
 
-現在、{{site.data.keyword.messagehub}} の災害復旧の管理の責任はお客様にあります。 {{site.data.keyword.messagehub}} データについては、あるロケーション (地域) の {{site.data.keyword.messagehub}} インスタンスと別のロケーションの別のインスタンスとの間でレプリカを生成できます。ただし、リモートの {{site.data.keyword.messagehub}} インスタンスのプロビジョンとレプリカ生成はお客様の責任です。
+現在、{{site.data.keyword.messagehub}} の災害復旧の管理の責任はお客様にあります。 {{site.data.keyword.messagehub}} データについては、あるロケーション (地域) の {{site.data.keyword.messagehub}} インスタンスと別のロケーションの別のインスタンスとの間でレプリカを生成できます。 ただし、リモートの {{site.data.keyword.messagehub}} インスタンスのプロビジョンとレプリカ生成はお客様の責任です。
 
 また、メッセージ・ペイロード・データのバックアップもお客様の責任です。 このデータはクラスター内の複数の Kafka ブローカー間でレプリカ生成されますが、大部分の障害を防ぐため、このレプリカ生成では、ロケーション全体の障害をカバーしません。 
 

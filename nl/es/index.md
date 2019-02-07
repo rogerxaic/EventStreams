@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-15"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-11-15"
 {: #getting_started}
 
 Para empezar a trabajar con {{site.data.keyword.messagehub}} y empezar a enviar y recibir mensajes, puede utilizar el ejemplo Java™. El ejemplo muestra cómo un productor envía mensajes a un consumidor mediante un tema. Se utiliza el mismo programa de ejemplo para consumir mensajes y producir mensajes.
+{: shortdesc}
 
 Para obtener más información sobre el funcionamiento de {{site.data.keyword.messagehub}}, consulte [Acerca de {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} se llamaba anteriormente Message Hub.
 
@@ -55,27 +56,23 @@ Siga estos pasos:
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. Cambie el directorio a la consola de java ejecutando el siguiente mandato:
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. Ejecute los siguientes mandatos de compilación:
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc} Inicie el consumidor en la consola ejecutando el siguiente mandato:
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
-    {: codeblock}
     
     El ejemplo utiliza un tema denominado `kafka-java-console-sample-topic`. Si el tema ya no existe, el ejemplo lo crea utilizando la API de administración de {{site.data.keyword.messagehub}}. Para enviar y recibir mensajes, el ejemplo utiliza la API Apache Kafka Java.
 
@@ -90,7 +87,6 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos.
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     Se recomienda utilizar todos los hosts Kafka listados en el campo **Credenciales** que ha seleccionado.
 
@@ -98,7 +94,6 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos.
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
- {: codeblock}
   
 9. Ahora deberían aparecer en el consumidor los mensajes enviados por el productor. A continuación, se muestra una salida de ejemplo:
 

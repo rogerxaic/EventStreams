@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -16,8 +16,8 @@ lastupdated: "2018-06-26"
 # 既知の制約事項
 {: #restrictions}
 
-{{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。 
-
+{{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。
+{: shortdesc}
 
 ## Kafka ブートストラップ・サーバーで障害が起こっても Java Kafka 呼び出しがフェイルオーバーしない
 {: #calls_failover}

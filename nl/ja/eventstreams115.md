@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-06-01"
 <br/>
 
 {{site.data.keyword.IBM}} Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} Kafka トピックからデータを読み取って [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage/about-cos.html){:new_window} にそのデータを入れる手段を提供します。
+{: shortdesc}
 
 Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} の Kafka トピックから [Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage/about-cos.html){:new_window} のインスタンスへデータを保存することを可能にします。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして Cloud Object Storage サービス内のバケットにアップロードします。 Cloud Object Storage ブリッジを構成することによって、データをオブジェクトとして Cloud Object Storage にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
 

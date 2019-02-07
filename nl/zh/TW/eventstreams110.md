@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-06"
 
 ---
@@ -15,7 +15,8 @@ lastupdated: "2018-02-06"
 # 使用 KSQL 搭配 {{site.data.keyword.messagehub}}
 {: #ksql_using}
 
-您可以使用 [KSQL ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/confluentinc/ksql){:new_window} 搭配 {{site.data.keyword.messagehub}} 以進行串流處理。請確定您使用 KSQL 0.4 或更新版本。 
+您可以使用 [KSQL ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/confluentinc/ksql){:new_window} 搭配 {{site.data.keyword.messagehub}} 以進行串流處理。請確定您使用 KSQL 0.4 或更新版本。
+{: shortdesc}
 
 請完成下列步驟：
 
@@ -23,7 +24,7 @@ lastupdated: "2018-02-06"
 
     例如：
     ```
-        bootstrap.servers=BOOTSTRAP_SERVERS
+    bootstrap.servers=BOOTSTRAP_SERVERS
     application.id=ksql_server_quickstart
     ksql.command.topic.suffix=commands
     listeners=http://localhost:8080

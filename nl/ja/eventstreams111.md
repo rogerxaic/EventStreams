@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-25"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-25"
 {: #kafka_streams }
 
 トピック API は、セットアップを必要とせずに {{site.data.keyword.messagehub}} で機能します。 SASL 資格情報を <code>sasl.jaas.config</code> または JAAS ファイルを使用して指定し、<code>replication.factor</code> を 3 に設定してください。
+{: shortdesc}
 
 0.10.2 以降の Streams を使用していることを確認してください。   
 

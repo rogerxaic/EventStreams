@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-02"
 
 ---
@@ -36,7 +36,7 @@ privacidade dos seus dados:
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-
+{: shortdesc}
 
 
 *  Para acessar o painel do {{site.data.keyword.messagehub}}, deve-se usar um navegador que suporte TLS 1.2.

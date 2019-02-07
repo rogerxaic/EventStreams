@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-23"
 
 
 Un produttore è un'applicazione che pubblica flussi di messaggi ad argomenti Kafka. Queste informazioni si concentrano sull'interfaccia di programmazione Java, che fa parte del progetto Apache Kafka. I concetti si applicano anche ad altri linguaggi ma i nomi sono a volte leggermente differenti.
+{: shortdesc}
 
 Nell'interfaccia di programmazione, un messaggio è in effetto detto record. Ad esempio, la classe Java org.apache.kafka.clients.producer.ProducerRecord viene utilizzata per rappresentare un messaggio dal punto di vista dell'API del produttore. I termini _record_ e _messaggio_ possono essere utilizzati in modo interscambievole ma, essenzialmente, un record viene utilizzato per rappresentare un messaggio.
 

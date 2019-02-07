@@ -27,7 +27,7 @@
 	.st16{font-family:'IBMPlexSans';}
 	.st17{font-size:12px;}
 	.st18{fill:#FFFFFF;}
-	.st19{font-size:11px;}
+	.st19{font-size:10px;}
 </style>
 <g id="Background">
 	<rect x="4" y="6.2" class="st0" width="532.6" height="400.2"/>
@@ -160,14 +160,14 @@
 	<text transform="matrix(1 0 0 1 166 192.302)" class="st16 st17">Partição 1</text>
 	<text transform="matrix(1 0 0 1 167 286.302)" class="st16 st17">Partição 2</text>
 	<text transform="matrix(1 0 0 1 19.7865 234.1412)" class="st18 st14 st17">Produtor</text>
-	<text transform="matrix(1 0 0 1 422.7758 153.6301)" class="st18 st14 st17">Consumidor</text>
-	<text transform="matrix(1 0 0 1 422.6796 195.8079)" class="st18 st14 st17">Consumidor</text>
-	<text transform="matrix(1 0 0 1 422.5962 110.6301)" class="st18 st14 st17">Consumidor</text>
-	<text transform="matrix(1 0 0 1 422.5963 68.1111)" class="st18 st14 st17">Consumidor</text>
-	<text transform="matrix(1 0 0 1 424.6795 317.3126)" class="st18 st14 st19">Consumidor</text>
-	<text transform="matrix(1 0 0 1 424.6794 359.3629)" class="st18 st14 st19">Consumidor</text>
-	<text transform="matrix(1 0 0 1 385.9838 284.2755)" class="st16 st17">Grupo de consumidores B</text>
-	<text transform="matrix(1 0 0 1 386.9842 35.4748)" class="st16 st17">Grupo de consumidores A</text>
+	<text transform="matrix(1 0 0 1 427.7758 153.6301)" class="st18 st14 st19">Consumidor</text>
+	<text transform="matrix(1 0 0 1 427.6796 195.8079)" class="st18 st14 st19">Consumidor</text>
+	<text transform="matrix(1 0 0 1 427.5962 110.6301)" class="st18 st14 st19">Consumidor</text>
+	<text transform="matrix(1 0 0 1 427.5963 68.1111)" class="st18 st14 st19">Consumidor</text>
+	<text transform="matrix(1 0 0 1 427.6795 317.3126)" class="st18 st14 st19">Consumidor</text>
+	<text transform="matrix(1 0 0 1 427.6794 359.3629)" class="st18 st14 st19">Consumidor</text>
+	<text transform="matrix(1 0 0 1 384.9846 284.2755)" class="st16 st17">Grupo de consumidores B</text>
+	<text transform="matrix(1 0 0 1 384.9842 35.4751)" class="st16 st17">Grupo de consumidores A</text>
 	<text transform="matrix(1 0 0 1 172.9143 137.6353)" class="st16 st17">0</text>
 	<text transform="matrix(1 0 0 1 189.9113 137.6354)" class="st16 st17">1</text>
 	<text transform="matrix(1 0 0 1 207.7912 137.6355)" class="st16 st17">2</text>

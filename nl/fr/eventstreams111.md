@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-25"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-25"
 {: #kafka_streams }
 
 Les API de sujet fonctionnent avec {{site.data.keyword.messagehub}} sans qu'aucune configuration ne soit requise. Spécifiez vos données d'identification SASL à l'aide de <code>sasl.jaas.config</code> ou d'un fichier JAAS et définissez <code>replication.factor</code> sur 3.
+{: shortdesc}
 
 Vérifiez que vous utilisez Streams 0.10.2 ou version ultérieure.   
 

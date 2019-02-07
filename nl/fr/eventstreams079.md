@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Pour se connecter au service, une application doit utiliser les informations <code>user</code>, <code>password</code> et <code>mqlight_lookup_url</code> qui figurent dans la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html). Suivez les recommandations ci-après en fonction du langage choisi :
+{: shortdesc}
 
 **Java**
 

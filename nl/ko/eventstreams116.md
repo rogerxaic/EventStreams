@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-12"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-02-12"
 
 간편한 관리 및 메시징 조작을 위해 Apache Kafka는 다양한 콘솔 도구와 함께 제공됩니다. {{site.data.keyword.messagehub}}에서 ZooKeeper
 클러스터에 대한 연결이 허용되지 않는 경우에도 {{site.data.keyword.messagehub}}와 함께 해당 콘솔 도구를 사용할 수 있습니다. Kafka가 발전함에 따라, ZooKeeper에 연결하기 위해 이전에 필요했던 도구는 더 이상 필요하지 않습니다.
+{: shortdesc}
 
 이러한 콘솔 도구는 Kafka 다운로드의 <code>bin</code> 디렉토리에서 찾을 수 있습니다. 예: [Apache Kafka 0.10.2.X 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window}.
 

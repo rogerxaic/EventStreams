@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-20"
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-11-20"
 **La API MQ Light solo está disponible como parte del plan Estándar.**
 <br/>
 
-La API {{site.data.keyword.mql}} se proporciona para motivos de compatibilidad con versiones anteriores del servicio {{site.data.keyword.mql}}. La API proporciona una interfaz de mensajería basada en AMQP para Java&trade;, Node.js, Python y Ruby. 
+La API {{site.data.keyword.mql}} se proporciona por motivos de compatibilidad con versiones anteriores del servicio {{site.data.keyword.mql}}. La API proporciona una interfaz de mensajería basada en AMQP para Java&trade;, Node.js, Python y Ruby. 
 {:shortdesc}
 
 <!-- 02/07/18 - removing words to help deprecate MQ Light
@@ -208,7 +208,7 @@ El código de ejemplo está en el [proyecto GitHub event-streams-samples ![Icono
 ## Límites máximos
 {: #max_limits}
 
-Se aplican los siguientes límites a la API de {{site.data.keyword.mql}} :
+Se aplican los siguientes límites a la API de {{site.data.keyword.mql}}:
 
 * La cantidad máxima de datos que pueden almacenarse está en consonancia con una única partición de Kafka para su plan de pago (normalmente 1 GB). Si se supera este límite de datos, se eliminarán los mensajes más antiguos de la partición a medida que se envíen mensajes nuevos.
 * La cantidad máxima de tiempo que puede almacenarse un mensaje está en consonancia con una única partición de Kafka para su plan de pago (normalmente 24 horas). No se pueden recuperar mensajes con una antigüedad superior a este periodo de tiempo.

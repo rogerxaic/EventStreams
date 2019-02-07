@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-10-29"
 
 ---
@@ -29,7 +29,7 @@ Kafka クライアントと {{site.data.keyword.mql}} API のどちらを使用�
 
 {{site.data.keyword.mql}} API のトピックは、Kafka トピックと同じではありません。 そうではなく、{{site.data.keyword.mql}} API は「MQLight」という名前の単一の Kafka トピックを使用し、{{site.data.keyword.mql}} API を使用して送受信されるすべてのメッセージはこの 1 つの Kafka トピックを経由します。
 
-{{site.data.keyword.mql}} が使用可能な {{site.data.keyword.Bluemix_notm}} 地域は、米国南部 (ダラス)、英国南部 (ロンドン)、および南アジア太平洋 (シドニー) のみです。MQ Light API は、中欧 (フランクフルト) 地域および {{site.data.keyword.Bluemix_notm}} 専用では使用不可です。
+{{site.data.keyword.mql}} が使用可能な {{site.data.keyword.Bluemix_notm}} 地域は、米国南部 (ダラス)、英国南部 (ロンドン)、および南アジア太平洋 (シドニー) のみです。 MQ Light API は、中欧 (フランクフルト) 地域および {{site.data.keyword.Bluemix_notm}} 専用では使用不可です。
 
 <!-- begin STAGING ONLY -->
 どの API を使用するのかの選択について詳しくは、[3 つの API からの選択](/docs/services/EventStreams/eventstreams087.html)を参照してください。

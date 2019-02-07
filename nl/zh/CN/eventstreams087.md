@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-06"
 
 ---
@@ -15,7 +15,8 @@ lastupdated: "2018-06-06"
 # 在三个 API 中进行选择（标准套餐）
 {: #choose_api}
 
-标准套餐中 {{site.data.keyword.messagehub}} 支持三个 API。下面的一些信息可帮助您选择最适用的 API：
+标准套餐中 {{site.data.keyword.messagehub}} 支持三个 API。下面的一些信息可帮助您选择最适用的 API。
+{: shortdesc}
 
 ## 为什么要使用 Kafka API？
 {: #why_kafka notoc}

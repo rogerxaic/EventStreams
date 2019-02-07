@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 A amostra da API Java&trade; Kafka é um exemplo de produtor e consumidor que são gravados em Java, que usa a API Kafka diretamente. É possível executar esta amostra localmente ou no {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 O código de amostra está no [projeto do GitHub event-streams-samples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Embora os usuários de amostra usem a API
 Kafka para enviar e receber mensagens, a amostra usa a API de administração do
@@ -82,9 +83,14 @@ Para um cliente Kafka anterior, deve-se usar um arquivo de configuração do JAA
 
 
 Se você estiver usando os clientes Java, será possível usar os clientes Kafka publicamente disponíveis na 0.10 ou
-mais recente. É altamente recomendado mudar da 0.9.X para a versão mais recente. É possível fazer download de um cliente Kafka em
+mais recente. 
+
+É altamente recomendado mudar da 0.9.X para a versão mais recente. É possível fazer download de um cliente Kafka em
 [https://kafka.apache.org/downloads
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/downloads){:new_window} 
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/downloads){:new_window}.
+
+Para obter informações sobre as implicações do uso de um cliente 0.9.X, consulte
+[Compatibilidade com versões anteriores](/docs/services/EventStreams/eventstreams062.html#compatability).
 
 
 

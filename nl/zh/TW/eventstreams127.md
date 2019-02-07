@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-07"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-07"
 {: #connecting}
 
 您連接至 {{site.data.keyword.messagehub}} 的方式會根據您使用標準方案還是企業方案而不同，也會根據您是從 Cloud Foundry 應用程式還是任何其他外部用戶端連接而不同。您需要收集兩項資訊，以便連接至任何 {{site.data.keyword.messagehub}} API：
+{: shortdesc}
 
 * API 的端點 URL
 * 鑑別用的認證

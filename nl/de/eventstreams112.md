@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-23"
 
 
 Ein Producer ist eine Anwendung, die Datenströme von Nachrichten an Kafka-Topics veröffentlicht. Diese Informationen konzentrieren sich auf die Java-Programmierungsschnittstelle, die Teil des Apache Kafka-Projekts ist. Die Konzepte gelten auch für andere Sprachen, sie heißen nur etwas anders.
+{: shortdesc}
 
 In den Programmierschnittstellen wird eine Nachricht als "Datensatz" bezeichnet. Die Java-Klasse "org.apache.kafka.clients.producer.ProducerRecord" wird beispielsweise verwendet, um eine Nachricht aus der Sicht der Producer-API darzustellen. Die Begriffe _Datensatz_ und _Nachricht_ sind austauschbar, aber im Wesentlichen wird ein Datensatz verwendet, um eine Nachricht darzustellen.
 

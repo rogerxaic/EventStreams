@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -19,7 +19,8 @@ lastupdated: "2018-11-08"
 **{{site.data.keyword.objectstorageshort}} 橋接器已從 2018 年 8 月 1 日淘汰。**
 <br/>
 
-由於 {{site.data.keyword.objectstorageshort}} 橋接器連接的基礎服務已淘汰，{{site.data.keyword.objectstorageshort}} 橋接器也從 2018 年 8 月 1 日淘汰。 
+由於 {{site.data.keyword.objectstorageshort}} 橋接器連接的基礎服務已淘汰，{{site.data.keyword.objectstorageshort}} 橋接器也從 2018 年 8 月 1 日淘汰。
+{: shortdesc}
 
 當 {{site.data.keyword.objectstorageshort}} 服務達到使用期限結束，並且解除任務時，{{site.data.keyword.objectstorageshort}} 橋接器的所有實例也將會解除任務。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
 

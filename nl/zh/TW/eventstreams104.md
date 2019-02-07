@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,10 +28,9 @@ lastupdated: "2018-06-22"
 -->
 
 Java&trade; Kafka API 範例是以 Java 撰寫的範例生產者與消費者，它會直接使用 Kafka API。您可以在本端執行此範例，或是在 {{site.data.keyword.Bluemix_short}} 執行。
+{: shortdesc}
 
-範例程式碼位於 [event-streams-samples GitHub 專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}。雖然範例使用
-Kafka API 來傳送及接收訊息，範例會使用 {{site.data.keyword.messagehub}} 管理 API
-來建立與它傳送及接收訊息的主題。
+範例程式碼位於 [event-streams-samples GitHub 專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}。雖然範例使用 Kafka API 來傳送及接收訊息，範例會使用 {{site.data.keyword.messagehub}} 管理 API 來建立與它傳送及接收訊息的主題。
 
 如需設定及執行範例的相關資訊，請參閱 [README.md ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}。
 
@@ -74,7 +73,11 @@ Liberty for Java 範例會實作一個簡單的應用程式，部署至 Liberty 
 {: #kafka_migrate}
 
 
-如果您使用 Java 用戶端，可以使用公開提供的 Kafka 用戶端 0.10 或更新版本。我們強烈鼓勵您從 0.9.X 移至最新的版本。您可以從 [https://kafka.apache.org/downloads ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://kafka.apache.org/downloads){:new_window} 下載 Kafka 用戶端。 
+如果您使用 Java 用戶端，可以使用公開提供的 Kafka 用戶端 0.10 或更新版本。 
+
+我們強烈鼓勵您從 0.9.X 移至最新的版本。您可以從 [https://kafka.apache.org/downloads ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://kafka.apache.org/downloads){:new_window} 下載 Kafka 用戶端。
+
+如需使用 0.9.X 用戶端之影響的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams/eventstreams062.html#compatability)。
 
 
 

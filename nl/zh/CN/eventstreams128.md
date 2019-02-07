@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-05"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-07-05"
  -->
 
 如果使用的是 0.11 或更高版本的 Kafka 客户机，或者 0.10.2.0 或更高版本的 Kafka Streams，那么可以使用 API 来创建和删除主题。我们已经对创建主题时允许使用的设置施加了一些限制。当前，只能修改以下设置：
+{: shortdesc}
 
 <dl>
 <dt>cleanup.policy</dt>

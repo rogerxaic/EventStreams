@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-22"
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 要连接 {{site.data.keyword.messagehub}}，Kafka API 使用以下其中一套凭证信息： 
 *  <code>kafka_brokers_sasl</code> 凭证以及 [VCAP_SERVICES 环境变量](/docs/services/EventStreams/eventstreams127.html#vcap)中的 <code>user</code> 和 <code>password</code>。
 * 服务密钥。有关更多信息，请参阅[连接集群](/docs/services/EventStreams/eventstreams127.html#enterprise_connect)。
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## 使用 sasl.jaas.config 属性（在 Java 应用程序中进行连接和认证）

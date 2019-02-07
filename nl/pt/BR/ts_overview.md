@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-09-10"
 
 ---
@@ -21,6 +21,7 @@ Se você tiver uma pergunta sobre o {{site.data.keyword.messagehub}}, consulte o
 [Estouro de pilha dedicado ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/questions/tagged/message-hub){: new_window} para ver se ela já foi respondida.
 Se não encontrar, poste sua pergunta e ela será respondida ou por um membro da equipe de desenvolvimento do
 {{site.data.keyword.messagehub}} ou pela comunidade em geral.
+{: shortdesc}
 
 Se você estiver enfrentando um problema com o {{site.data.keyword.messagehub}}, primeiro
 verifique a página de status do [{{site.data.keyword.Bluemix_notm}}

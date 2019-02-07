@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 要使用 API，请添加对用于 Node.js 的最新可用 {{site.data.keyword.mql}} 客户机 API 的引用，如下所示：
+{: shortdesc}
 
 将以下引用添加到 <code>package.json</code> 文件的 dependency 部分：
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 API를 사용하려면 다음과 같이 사용 가능한 최신 Node.js용 {{site.data.keyword.mql}} 클라이언트 API에 참조를 추가하십시오.
+{: shortdesc}
 
 <code>package.json</code> 파일의 종속성 섹션에 다음 참조를 추가하십시오.
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-09-10"
 
 ---
@@ -22,6 +22,7 @@ Si no lo ha sido, publíquela y uno de nuestros miembros del equipo
 de desarrollo de
 {{site.data.keyword.messagehub}}
 o de la comunidad le responderá.
+{: shortdesc}
 
 Si tiene problemas con {{site.data.keyword.messagehub}}, compruebe primero la página de estado de [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/status){:new_window}. Si desea obtener ayuda
 del equipo de {{site.data.keyword.messagehub}}, asegúrese de recopilar toda la información necesaria tal como se detalla en [Notificación de un problema al equipo de {{site.data.keyword.messagehub}} - plan Estándar](/docs/services/EventStreams/eventstreams109.html) o en [Notificación de un problema al equipo de {{site.data.keyword.messagehub}} - plan Empresa](/docs/services/EventStreams/eventstreams125.html).

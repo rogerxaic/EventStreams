@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-10-29"
 
 ---
@@ -34,7 +34,7 @@ un singolo argomento Kafka chiamato "MQLight" e tutti i messaggi inviati e ricev
 
 {{site.data.keyword.mql}} è disponibile solo nelle regioni
 {{site.data.keyword.Bluemix_notm}} Stati Uniti Sud (Dallas), Regno Unito Sud (Londra) e Asia Pacifico Sud (Sydney). L'API MQ Light non è disponibile nella regione Europa Centrale (Francoforte) o in
-{{site.data.keyword.Bluemix_notm}} dedicato. 
+{{site.data.keyword.Bluemix_notm}} dedicato.
 
 <!-- begin STAGING ONLY -->
 Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams/eventstreams087.html).

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-25"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-25"
 {: #kafka_streams }
 
 토픽 API는 설정 없이 {{site.data.keyword.messagehub}}에 대한 작업을 수행할 수 있습니다. <code>sasl.jaas.config</code> 또는 JAAS 파일을 사용하여 SASL 인증 정보를 지정하고 <code>replication.factor</code>를 3으로 설정하십시오.
+{: shortdesc}
 
 0.10.2 이상에서 Streams를 사용 중인지 확인하십시오.   
 

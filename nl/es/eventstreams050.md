@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-28"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-11-28"
 # Utilización de la API de Kafka
 {: #kafka_using}
 
-Si está utilizando los clientes Java, puede utilizar los clientes Kafka públicamente disponibles de la versión 0.10x o posterior. 
+Si está utilizando los clientes Java, puede utilizar los clientes Kafka públicamente disponibles de la versión 0.10x o posterior. Para obtener más información, consulte [Elección de un cliente Kafka para utilizarlo con {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams062.html#kafka_clients).
+{: shortdesc}
 
 Existen clientes Kafka en varios idiomas y proporcionamos instrucciones para algunos de los idiomas. Puede utilizar otros, pero necesitará soporte SASL PLAIN para proporcionar credenciales. Además, si utiliza el plan Empresa, también tendrá que utilizar la extensión SNI (identificación de nombres de servidor) del protocolo TLSv1.2.
 
@@ -49,6 +50,5 @@ Existen clientes Kafka en varios idiomas y proporcionamos instrucciones para alg
 
 </table>
 
-Para obtener más información sobre las API de productor y de consumidor, consulte
-[Kafka Producer API 0.11.0.X ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} y [Kafka Consumer API 0.11.0.X ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
+Para obtener más información sobre las API de productor y de consumidor, consulte [Kafka Producer API 1.1.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} y [Kafka Consumer API 1.1.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
 

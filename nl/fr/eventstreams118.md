@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-01-16"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-01-16"
 {: #partition_leadership }
 
 Chaque partition dispose dans le cluster d'un serveur qui fait office de responsable (leader) de la partition, les autres serveurs faisant office de suiveurs. Toutes les demandes de production et de consommation de la partition sont gérées par le responsable. Les suiveurs répliquent les données de la partition depuis le serveur responsable avec pour objectif de suivre le rythme du responsable. Lorsqu'un suiveur suit le rythme du responsable d'une partition, les répliques de ce suiveur sont totalement synchronisées. 
+{: shortdesc}
 
 Un message envoyé au responsable de la partition n'est pas immédiatement disponible pour les consommateurs. Le responsable ajoute l'enregistrement du message à la partition, en lui affectant le numéro de position suivant de cette partition. Une fois que tous les suiveurs des répliques totalement synchronisées ont répliqué l'enregistrement et confirmé qu'ils l'ont écrit dans leurs répliques, l'enregistrement est *validé*. Le message est disponible pour les consommateurs.
 

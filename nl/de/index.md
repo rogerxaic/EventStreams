@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-15"
 
 ---
@@ -20,6 +20,7 @@ Senden und Empfangen von Nachrichten können Sie das bereitgestellte Java™-Bei
 Beispiel verdeutlicht, wie Nachrichten unter Verwendung eines Topics von einem Producer an einen
 Consumer gesendet werden. Das gleiche Beispielprogramm wird verwendet, um Nachrichten zu verarbeiten und
 Nachrichten zu erstellen.
+{: shortdesc}
 
 Weitere Informationen zur Funktionsweise von {{site.data.keyword.messagehub}} finden Sie in [Informationen zu {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
 
@@ -59,27 +60,23 @@ Führen Sie die folgenden Schritte aus:
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. Wechseln Sie in das Verzeichnis mit dem Beispiel für die Java-Konsole, indem Sie den folgenden Befehl ausführen:
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. Führen Sie die folgenden Erstellungsbefehle aus:
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc} Starten Sie den Consumer in Ihrer Konsole, indem Sie den folgenden Befehl ausführen:
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
-    {: codeblock}
     
     In dem Beispiel wird ein Topic mit dem Namen `kafka-java-console-sample-topic` verwendet. Wenn das Topic noch nicht
     vorhanden ist, wird es in dem Beispiel mithilfe der {{site.data.keyword.messagehub}}-Verwaltungs-API erstellt. Zum Senden und Empfangen
@@ -95,7 +92,6 @@ Führen Sie die folgenden Schritte aus:
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     Es wird empfohlen, alle Kafka-Hosts zu verwenden, die in den von Ihnen ausgewählten **Berechtigungsnachweisen** aufgelistet sind.
 
@@ -103,7 +99,6 @@ Führen Sie die folgenden Schritte aus:
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
- {: codeblock}
   
 9. Nun müssten die vom Producer gesendeten Nachrichten im Consumer angezeigt werden. Im Folgenden ist eine
 Beispielausgabe aufgelistet:

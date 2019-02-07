@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-06"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-02-06"
 {: #ksql_using}
 
 Puoi utilizzare [KSQL ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/confluentinc/ksql){:new_window} con {{site.data.keyword.messagehub}} per l'elaborazione del flusso. Assicurati di utilizzare KSQL 0.4 o successiva. 
+{: shortdesc}
 
 Completa la seguente procedura:
 

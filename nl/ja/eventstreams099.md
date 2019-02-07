@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 {: #mql_java}
 
 この API を使用するには、以下のように、Java 用の最新の使用可能な {{site.data.keyword.mql}} クライアント API への参照を追加する必要があります。
+{: shortdesc}
 
 <code>Maven pom</code> ファイルに次の参照を追加します。
 

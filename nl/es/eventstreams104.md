@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 La API Java&trade; Kafka es una muestra de productor y consumidor escrita en Java, que utiliza directamente la API Kafka. Este ejemplo puede ejecutarse de manera local o en {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 El código de ejemplo está en el [proyecto GitHub event-streams-samples ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. A pesar de que el ejemplo
 utiliza la API Kafka para enviar y recibir mensajes, el
@@ -75,9 +76,12 @@ Para un cliente Kafka anterior, debe utilizar el archivo de configuración JAAS 
 {: #kafka_migrate}
 
 
-Si está utilizando los clientes Java, puede utilizar los clientes Kafka públicamente disponibles en 0.10 o posterior. Se recomienda encarecidamente actualizar la versión 0.9.X a la última
-versión. Puede descargar un cliente Kafka desde
-[https://kafka.apache.org/downloads ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/downloads){:new_window} 
+Si está utilizando los clientes Java, puede utilizar los clientes Kafka públicamente disponibles en 0.10 o posterior. 
+
+Se recomienda encarecidamente actualizar la versión 0.9.X a la última
+versión. Puede descargar un cliente Kafka desde [https://kafka.apache.org/downloads ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/downloads){:new_window}.
+
+Para obtener más información sobre las implicaciones de utilizar un cliente 0.9.X, consulte [Compatibilidad con versiones anteriores](/docs/services/EventStreams/eventstreams062.html#compatability).
 
 
 

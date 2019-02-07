@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 Sie können Ihre {{site.data.keyword.messagehub}}-Ressourcen differenziert schützen, um den Zugriff zu verwalten, den Sie jedem Benutzer für die einzelnen Ressourcen erteilen möchten.
+{: shortdesc}
 
 ## Welche Ressourcen kann ich schützen?
 

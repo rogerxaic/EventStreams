@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 {: #mql_java}
 
 若要使用 API，請為 Java 新增參照到最新的可用 {{site.data.keyword.mql}} 用戶端 API，如下所示：
+{: shortdesc}
 
 新增下列參照到您的 <code>Maven pom</code> 檔案：
 

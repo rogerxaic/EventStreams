@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -38,7 +38,7 @@ lastupdated: "2018-11-08"
 * 以下のタイプのブリッジが提供されています。 
   - [MQ ブリッジ](/docs/services/EventStreams/eventstreams105.html){:new_window}。これは、{{site.data.keyword.IBM}} MQ からメッセージ・データを取り出し、{{site.data.keyword.messagehub}} のトピックへ転送します。 将来は、より広範囲のブリッジのサポートが予定されています。
   - [Cloud Object Storage ブリッジ](/docs/services/EventStreams/eventstreams115.html){:new_window}。これは、{{site.data.keyword.messagehub}} データを [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage/about-cos.html){:new_window} サービスのインスタンスへ転送します。 
-  - [{{site.data.keyword.objectstorageshort}} ブリッジ](/docs/services/EventStreams/eventstreams089.html){:new_window} は、2018 年 8 月 1 日より非推奨になりました。詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。
+  - [{{site.data.keyword.objectstorageshort}} ブリッジ](/docs/services/EventStreams/eventstreams089.html){:new_window} は、2018 年 8 月 1 日より非推奨になりました。 詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。
 * 現在のところ、ブリッジはすべての {{site.data.keyword.Bluemix_notm}} パブリック環境で使用可能です。 {{site.data.keyword.Bluemix_short}} Dedicated ではブリッジは使用可能ではありません。
 * 次の 2 つの方法でブリッジを管理できます。
   - 既存 {{site.data.keyword.messagehub}} 管理 API の拡張である [REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs){:new_window} を使用する。 curl を使用してブリッジのライフサイクルを管理する方法の例も [message-hub-docs ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs){:new_window} にあります。 ブリッジの開発は継続中であるため、この REST API は変更される可能性があります。 この API は安定化される予定です。
@@ -47,7 +47,7 @@ lastupdated: "2018-11-08"
 * ブリッジでのメッセージング操作以外にはブリッジ使用に対する追加料金はありません。
 * MQ ブリッジは、データがブリッジと MQ キュー・マネージャーとの間で転送されるときにデータのプライバシーと保全性を保護するための SSL/TLS の使用をサポートしていません。 SSL/TLS 使用のサポートがブリッジに追加される計画があります。 
 * しかし、[{{site.data.keyword.SecureGatewayfull}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/SecureGateway/index.html#getting-started-with-sg){:new_window} サービスを使用して、{{site.data.keyword.Bluemix_notm}} と、オンプレミスにインストールできる {{site.data.keyword.SecureGateway}} クライアントとの間のセキュア・トンネルを介して、データを送信することができます。 この構成では、トンネルのどちらの終端でも通信は SSL/TLS を使用して保護されてはいません。
-* Cloud Object Storage ブリッジは、データを Cloud Object Storage に書き込むときに、区切り文字として改行文字を使用してメッセージを連結します。このため、改行文字が埋め込まれたメッセージおよびバイナリー・メッセージ・データには、このブリッジは不適切です。
+* Cloud Object Storage ブリッジは、データを Cloud Object Storage に書き込むときに、区切り文字として改行文字を使用してメッセージを連結します。 このため、改行文字が埋め込まれたメッセージおよびバイナリー・メッセージ・データには、このブリッジは不適切です。
 * Cloud Object Storage ブリッジによって現在使用されているオブジェクト命名規則は将来変更される可能性があります。
 
 ## 他のサービスから {{site.data.keyword.messagehub}} へのブリッジ

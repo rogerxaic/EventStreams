@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-03-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-03-23"
 {: #consuming_messages }
 
 Un consumatore è un'applicazione che consuma flussi di messaggi da argomenti Kafka. Un consumatore può sottoscrivere uno o più argomenti o partizioni. Queste informazioni si concentrano sull'interfaccia di programmazione Java, che fa parte del progetto Apache Kafka. I concetti si applicano anche ad altri linguaggi ma i nomi sono a volte leggermente differenti.
+{: shortdesc}
 
 Quando stabilisce una connessione a Kafka, un consumatore esegue una connessione bootstrap iniziale. Tale connessione può essere stabilita con qualsiasi server nel cluster. Il consumatore richiede le informazioni della partizione e della leadership sull'argomento da cui desidera consumare. Il consumatore stabilisce quindi un'altra connessione al leader della partizione e può iniziare a consumare messaggi. Tali azioni si verificano automaticamente internamente quando il tuo consumatore stabilisce una connessione al cluster Kafka.
 

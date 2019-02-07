@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-05"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-07-05"
  -->
 
 Si está utilizando un cliente Kafka de la versión 0.11 o posterior, o bien Kafka Streams versión 0.10.2.0 o posterior, puede utilizar la API para crear y suprimir temas. Existen varias restricciones para la configuración permitida al crear temas. Actualmente, solo se pueden modificar los siguientes valores:
+{: shortdesc}
 
 <dl>
 <dt>cleanup.policy</dt>

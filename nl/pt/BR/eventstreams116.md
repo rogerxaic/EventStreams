@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-12"
 
 ---
@@ -20,6 +20,7 @@ O Apache Kafka é fornecido com uma variedade de ferramentas do console para adm
 e operações de sistemas de mensagens. É possível usar muitas delas com o {{site.data.keyword.messagehub}}, mas o {{site.data.keyword.messagehub}} não permite
 conexão com seu cluster ZooKeeper. Como o Kafka se desenvolveu, muitas das ferramentas que anteriormente
 exigiam conexão com o ZooKeeper não têm mais essa exigência.
+{: shortdesc}
 
 É possível localizar essas ferramentas do console no diretório <code>bin</code> do download de seu Kafka. Por exemplo, [Cliente Apache Kafka 0.10.2.X ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window}.
 

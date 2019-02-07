@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Les messages {{site.data.keyword.mql}} sont stockés dans un sujet Kafka sous-jacent unique nommé "MQLight" et sont codés comme indiqué dans le tableau suivant. Ce codage peut aussi être utilisé par d'autres types d'API, comme Kafka or REST Kafka, pour l'échange de messages avec des applications utilisant l'API {{site.data.keyword.mql}}.
+{: shortdesc}
 
 ## Format de message Kafka
 {: #kafka_format notoc}

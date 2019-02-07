@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-06-01"
 
 El puente de {{site.data.keyword.IBM}} Cloud Object Storage proporciona una forma de leer datos de un tema Kafka de {{site.data.keyword.messagehub}}
 y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+{: shortdesc}
 
 El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un contenedor del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
 
@@ -75,7 +76,7 @@ Para crear un puente nuevo de Cloud Object Storage mediante la API REST de Kafka
   "topic": "kafka-java-console-sample-topic",
   "type": "objectStorageS3Out",
   "configuration" : {
-    "credentials": {
+    "credentials" : {
       "endpoint" : "https://s3-api.us-geo.objectstorage.softlayer.net",
       "resourceInstanceId" : "crn::",
       "apiKey" : "your_api_key"
@@ -179,9 +180,15 @@ Para particionar datos por fecha ISO 8601, siga estos pasos:
     </code></pre>
     {:codeblock}
 
-	El particionamiento por fecha ISO 8601 requiere que los mensajes de Kafka tengan un formato JSON válido. El valor de `"propertyName"` en el JSON que se utiliza para configurar el puente debe corresponder al campo de fecha ISO 8601 en cada mensaje de Kafka. En este ejemplo, el campo `"timestamp"` debe contener un valor de fecha ISO 8601 válido. Entonces los mensajes se particionarán según las fechas correspondientes.
+	El particionamiento por fecha ISO 8601 requiere que los mensajes de Kafka tengan un formato JSON válido. El valor de
+	`"propertyName"` en el JSON que se utiliza para configurar el puente debe corresponder al campo de fecha ISO
+	8601 en cada mensaje de Kafka. En este ejemplo, el campo `"timestamp"` debe contener un valor
+	de fecha ISO 8601 válido. Entonces los mensajes se particionarán según las fechas correspondientes.
 	
-	Un puente configurado como este ejemplo genera objetos con nombres especificados de la siguiente manera: `<object_a>` contiene mensajes JSON con los campos `"timestamp"` con la fecha 2016-12-07 y `<object_b>` y `<object_c>` contienen mensajes JSON con los campos `"timestamp"` con la fecha	2016-12-08.
+	Un puente configurado como este ejemplo genera objetos con nombres especificados de la siguiente manera:
+	`<object_a>` contiene mensajes JSON con los campos `"timestamp"` con
+	la fecha 2016-12-07 y `<object_b>` y `<object_c>` contienen mensajes JSON con los campos `"timestamp"` con la fecha
+	2016-12-08.
 
     <pre class="pre"><code>
         ```

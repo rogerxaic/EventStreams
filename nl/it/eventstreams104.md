@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 L'esempio di API Kafka Java&trade; consiste in un produttore e consumatore di esempio scritto in Java, che utilizza direttamente l'API Kafka. Puoi eseguire questo esempio in locale o in {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 Il codice di esempio si trova nel [progetto GitHub event-streams-samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Anche se l'esempio utilizza l'API Kafka per inviare e ricevere messaggi, l'esempio utilizza l'API di amministrazione {{site.data.keyword.messagehub}} per creare l'argomento a cui invia i messaggi e da cui riceve i messaggi.
 
@@ -72,16 +73,20 @@ Per un precedente client Kafka, devi utilizzare un file di configurazione JAAS p
 {: #kafka_migrate}
 
 
-Se stai utilizzando i client Java, puoi usare i client Kafka pubblicamente disponibili
-alla 0.10 o successiva. Si consiglia vivamente di passare dalla 0.9.X
+Se stai utilizzando i client Java, puoi usare i client Kafka pubblicamente disponibili alla 0.10 o successiva. 
+
+Si consiglia vivamente di passare dalla 0.9.X
 alla versione più recente. Puoi scaricare un client Kafka da
-[https://kafka.apache.org/downloads ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://kafka.apache.org/downloads){:new_window} 
+[https://kafka.apache.org/downloads ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://kafka.apache.org/downloads){:new_window}.
+
+Per informazioni sulle implicazioni dell'utilizzo di un client 0.9.X, consulta
+[Retrocompatibilità](/docs/services/EventStreams/eventstreams062.html#compatability).
 
 
 
 ### Migrazione di un client Kafka a 0.10.2.X o versioni successive
 
-Dalla 0.10.2, puoi configurare l'autenticazione SASL direttamente nelle proprietà del client invece di utilizzare un file JAAS. Questa semplificazione ti consente di eseguire più client nella stessa JVM utilizzando diverse serie di credenziali, cosa non possibile con un file JAAS. 
+Dalla 0.10.2, puoi configurare l'autenticazione SASL direttamente nelle proprietà del client invece di utilizzare un file JAAS. Questa semplificazione ti consente di eseguire più client nella stessa JVM utilizzando diverse serie di credenziali, cosa non possibile con un file JAAS.
 
 Completa la seguente procedura:
 

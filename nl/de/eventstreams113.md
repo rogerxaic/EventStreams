@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 Sie können Kafka Connect mit {{site.data.keyword.messagehub}} verwenden und die Worker innerhalb oder außerhalb von {{site.data.keyword.Bluemix_short}} ausführen.
+{: shortdesc}
 
 Kafka Connect kann im eigenständigen oder im verteilten Modus ausgeführt werden. Der eigenständige Modus ist für Testzwecke und temporäre Verbindungen zwischen Systemen konzipiert. Der verteilte Modus ist besser für den Produktionseinsatz geeignet. Die Konfiguration, die für die Verwendung von {{site.data.keyword.messagehub}} mit diesen beiden Modi erforderlich ist, weist geringfügige Unterschiede auf.
 {:shortdesc}

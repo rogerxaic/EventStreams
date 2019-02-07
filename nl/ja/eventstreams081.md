@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 {{site.data.keyword.mql}} メッセージは、基礎となっている単一の Kafka トピック「MQLight」に保管され、次の表に詳細が示されているようにエンコードされます。 {{site.data.keyword.mql}} API を使用してアプリケーションとメッセージを交換するために、他の API タイプ (Kafka や Kafka REST など) でもこのエンコードを使用できます。
+{: shortdesc}
 
 ## Kafka メッセージ・フォーマット
 {: #kafka_format notoc}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 {: #restrictions}
 
 Si encuentra un problema al utilizar {{site.data.keyword.messagehub}}, revise estas restricciones conocidas y las soluciones temporales. 
-
+{: shortdesc}
 
 ## Las llamadas de Java Kafka no se migran tras error si falla un servidor de programa de arranque.
 {: #calls_failover}

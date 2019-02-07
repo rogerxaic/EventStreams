@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-12"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-02-12"
 {: #kafka_console_tools }
 
 Apache Kafka には、管理とメッセージングを簡単に操作するための各種のコンソール・ツールが付属しています。 それらの多くを {{site.data.keyword.messagehub}} で使用できますが、{{site.data.keyword.messagehub}} ではその ZooKeeper クラスターとの接続は許可されません。 Kafka の開発が進むにつれ、以前は ZooKeeper への接続が必要であったツールの多くで、その要件がなくなりました。
+{: shortdesc}
 
 これらのコンソール・ツールは、Kafka ダウンロードの <code>bin</code> ディレクトリーにあります。 例えば、[Apache Kafka 0.10.2.X クライアント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window} です。
 

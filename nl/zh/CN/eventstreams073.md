@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -15,8 +15,8 @@ lastupdated: "2018-06-29"
 # Apache Kafka 概念
 {: #apache_kafka}
 
-![Kafka 体系结构图。](kafka_overview.png "显示 Kafka 体系结构的图。生产者通过三个分区向 Kafka 主题馈入消息，然后消息由使用者订阅。")
-
+![Kafka 体系结构图。](kafka_overview.png "显示 Kafka 体系结构的图。生产者通过三个分区向 Kafka 主题馈入消息，然后由使用者订阅该消息。")
+{: shortdesc}
 
 下面的列表定义了 Apache Kafka 的部分概念：
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 É possível usar o Kafka Connect com o {{site.data.keyword.messagehub}} e executar os trabalhadores dentro ou fora do {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 O Kafka Connect pode ser executado em modo independente ou distribuído. O modo independente deve ser usado para teste e conexões temporárias entre os sistemas. O modo distribuído é mais apropriado para uso em produção. A configuração requerida para usar o {{site.data.keyword.messagehub}} com esses dois modos é um pouco diferente.
 {:shortdesc}

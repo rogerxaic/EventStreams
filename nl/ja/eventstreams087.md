@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-06"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-06"
 {: #choose_api}
 
 標準プランでは、{{site.data.keyword.messagehub}} は 3 つの API をサポートします。 ここでは、最適な API を選択する際に役立つ情報を示します。
+{: shortdesc}
 
 ## Kafka API を使用する理由
 {: #why_kafka notoc}

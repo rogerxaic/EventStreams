@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-02"
 
 ---
@@ -36,7 +36,7 @@ Datenschutz zu gewährleisten:
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-
+{: shortdesc}
 
 
 *  Für den Zugriff auf das

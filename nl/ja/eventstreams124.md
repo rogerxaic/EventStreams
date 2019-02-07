@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 {{site.data.keyword.messagehub}} リソースの微細な保護により、各ユーザーに付与する各リソースへのアクセス権限を管理することができます。
+{: shortdesc}
 
 ## 保護できる内容
 

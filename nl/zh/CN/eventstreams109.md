@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2018-12-07"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2018-09-11"
 10. 问题对服务有什么影响？
 
 
-您可以通过[提交支持请求 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/get-support/howtogetsupport.html#open-ticket)，在支持凭单中向 IBM 提供所收集的信息。
+您可以通过[提交支持请求 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/get-support/howtogetsupport.html#using-avatar)，在支持凭单中向 IBM 提供所收集的信息。
 
 
 

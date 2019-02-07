@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-01-16"
 
 ---
@@ -20,6 +20,7 @@ Cada partição tem um servidor no cluster que age como líder da partição e o
 como os seguidores. Todas as solicitações de produção e de consumo para a partição são manipuladas
 pelo líder. Os seguidores replicam os dados da partição do líder com o objetivo de acompanhar o ritmo do líder. Se um seguidor está acompanhando o ritmo do líder de uma partição, a réplica do seguidor está
 sincronizada. 
+{: shortdesc}
 
 Quando uma mensagem for enviada para o líder de partição, essa mensagem não estará imediatamente disponível para os consumidores. O líder anexa o registro para a mensagem para a partição, designando o próximo número de deslocamento para essa partição. Depois que todos os seguidores para as réplicas sincronizadas replicam o registro e reconhecem que
 gravaram o registro em suas réplicas, o registro está agora *confirmado*. A mensagem está

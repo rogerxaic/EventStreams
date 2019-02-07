@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-06"
 
 ---
@@ -15,7 +15,8 @@ lastupdated: "2018-06-06"
 # Elección entre las tres API (plan Estándar)
 {: #choose_api}
 
-{{site.data.keyword.messagehub}} da soporte a tres API en el plan Estándar. A continuación, encontrará información para ayudarle a decidir qué opción es la más adecuada:
+{{site.data.keyword.messagehub}} da soporte a tres API en el plan Estándar. A continuación, encontrará información para ayudarle a decidir qué opción es la más adecuada.
+{: shortdesc}
 
 ## ¿Por qué utilizar la API Kafka?
 {: #why_kafka notoc}
@@ -53,7 +54,7 @@ La API REST de Kafka no está pensada como una interfaz de rendimiento elevado y
 **La API MQ Light solo está disponible como parte del plan Estándar.**
 <br/>
 
-La API {{site.data.keyword.mql}} proporciona una interfaz de mensajería basada en AMQP para Java™, Node.js, Python y Ruby. La API se proporciona por motivos de compatibilidad con el servicio {{site.data.keyword.mql}} anterior.
+La API {{site.data.keyword.mql}} proporciona una interfaz de mensajería basada en AMQP para Java™, Node.js, Python y Ruby. La API se proporciona por motivos de compatibilidad con versiones anteriores del servicio {{site.data.keyword.mql}}.
 
 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-06-01"
 
 Il bridge {{site.data.keyword.IBM}} Cloud Object Storage fornisce un modo per leggere i dati da un argomento Kafka {{site.data.keyword.messagehub}}
 e inserire i dati in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+{: shortdesc}
 
 Il bridge Cloud Object Storage ti consente di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} un'istanza del servizio [Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. Il bridge consuma
 batch di messaggi provenienti da Kafka e carica i dati del messaggio come oggetti in un bucket nel

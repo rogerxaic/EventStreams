@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 Java&trade; Kafka API 样本是用 Java 编写的示例生产者和使用者，此样本直接使用 Kafka API。可以在本地或在 {{site.data.keyword.Bluemix_short}} 中运行此样本。
+{: shortdesc}
 
 样本代码位于 [event-streams-samples GitHub 项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window} 中。虽然该样本使用 Kafka API 来发送和接收消息，但该样本使用 {{site.data.keyword.messagehub}} 管理 API 来创建主题，以便向该主题发送消息和从该主题接收消息。
 
@@ -70,8 +71,11 @@ Liberty for Java 样本实现部署到 Liberty 运行时上的简单应用程序
 {: #kafka_migrate}
 
 
-如果使用的是 Java 客户机，那么可以使用公共可用的 0.10 或更高版本的 Kafka 客户机。强烈建议您从 0.9.X 迁移到最新版本。您可以从
-[https://kafka.apache.org/downloads ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/downloads){:new_window} 下载 Kafka 客户机。 
+如果使用的是 Java 客户机，那么可以使用公共可用的 0.10 或更高版本的 Kafka 客户机。 
+
+强烈建议您从 0.9.X 迁移到最新版本。您可以从 [https://kafka.apache.org/downloads ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/downloads){:new_window} 下载 Kafka 客户机。
+
+有关使用 0.9.X 客户机的影响的信息，请参阅[向后兼容性](/docs/services/EventStreams/eventstreams062.html#compatability)。
 
 
 

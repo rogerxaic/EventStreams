@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 
 アプリを当サービスに接続するには、アプリは <code>user</code>、
 <code>password</code>、および <code>mqlight_lookup_url</code> 詳細を [VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)から使用する必要があります。 選択した言語に応じて、以下のガイドを使用してください。
+{: shortdesc}
 
 **Java の場合**
 

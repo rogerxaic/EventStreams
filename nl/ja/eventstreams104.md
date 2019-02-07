@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 Java&trade; Kafka API サンプルは、Kafka API を直接使用するプロデューサーとコンシューマーの例であり、Java で記述されています。 このサンプルは、ローカルで実行するか、{{site.data.keyword.Bluemix_short}} 内で実行することができます。
+{: shortdesc}
 
 サンプル・コードは [event-streams-samples GitHub プロジェクト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window} にあります。 このサンプルは、メッセージの送受信には Kafka API を使用しますが、メッセージの送信先およびメッセージの受信元のトピックの作成には {{site.data.keyword.messagehub}} 管理 API を使用します。
 
@@ -72,9 +73,12 @@ Liberty for Java サンプルは、Liberty ランタイムにデプロイされ�
 
 
 Java クライアントを使用している場合、公開されている
-Kafka クライアント 0.10 以降を使用できます。 0.9.X から最新バージョンに移行する
-ことを強くお勧めします。 Kafka クライアントは、
-[https://kafka.apache.org/downloads ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/downloads){:new_window} からダウンロードできます。 
+Kafka クライアント 0.10 以降を使用できます。 
+
+0.9.X から最新バージョンに移行する
+ことを強くお勧めします。 Kafka クライアントは、[https://kafka.apache.org/downloads ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/downloads){:new_window} からダウンロードできます。
+
+0.9.X クライアントを使用する場合の影響について詳しくは、[後方互換性](/docs/services/EventStreams/eventstreams062.html#compatability)を参照してください。
 
 
 

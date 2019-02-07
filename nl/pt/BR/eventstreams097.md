@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-30"
 
 ---
@@ -33,6 +33,7 @@ lastupdated: "2018-08-30"
 A amostra da API REST Kafka do {{site.data.keyword.messagehub}} é um aplicativo Node.js
 que faz conexão com o {{site.data.keyword.messagehub}} por meio da API REST Kafka para produzir e
 consumir mensagens.
+{: shortdesc}
 
 O código de amostra está no [projeto do GitHub event-streams-samples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 

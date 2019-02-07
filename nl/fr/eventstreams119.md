@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-06-01"
 
 
 {{site.data.keyword.iot_full}} fournit un pont géré qui permet de créer une liaison unidirectionnelle vers {{site.data.keyword.messagehub_full}}.
+{: shortdesc}
 
 En connectant {{site.data.keyword.messagehub}} to {{site.data.keyword.iot_short_notm}}, vous pouvez utiliser {{site.data.keyword.messagehub}} comme pipeline d'événements pour consommer vos événements de périphérique depuis la {{site.data.keyword.iot_short_notm}} et mettre les événements à disposition en temps réel pour le reste de la plateforme. 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-06-01"
 
 {{site.data.keyword.IBM}} Cloud Object Storage 브릿지는 {{site.data.keyword.messagehub}} Kafka 토픽에서 데이터를 읽고 해당 데이터를
 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage/about-cos.html){:new_window}에 저장하는 수단을 제공합니다.
+{: shortdesc}
 
 Cloud Object Storage 브릿지를 사용하면 {{site.data.keyword.messagehub}}에 있는 Kafka 토픽의 데이터를 [Cloud Object Storage
 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage/about-cos.html){:new_window}의 인스턴스에 아카이브할 수 있습니다. 브릿지는

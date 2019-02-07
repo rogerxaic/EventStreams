@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-06"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-06"
 {: #choose_api}
 
 {{site.data.keyword.messagehub}} prend en charge trois API sur le plan Standard. Les informations suivantes vous aideront à choisir celle qui vous convient le mieux.
+{: shortdesc}
 
 ## Pourquoi utiliser l'API Kafka ?
 {: #why_kafka notoc}

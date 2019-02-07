@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -16,8 +16,8 @@ lastupdated: "2018-06-26"
 # 已知限制
 {: #restrictions}
 
-如果您在使用 {{site.data.keyword.messagehub}} 时发现问题，请查看这些已知限制和变通方法。 
-
+如果您在使用 {{site.data.keyword.messagehub}} 时发现问题，请查看这些已知限制和变通方法。
+{: shortdesc}
 
 ## Java Kafka 调用不会在 Kafka 引导程序服务器发生故障时进行故障转移
 {: #calls_failover}

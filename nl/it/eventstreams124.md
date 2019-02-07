@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 Puoi proteggere le tue risorse {{site.data.keyword.messagehub}} in modo dettagliato per gestire l'accesso che vuoi concedere a ogni utente per ogni risorsa.
+{: shortdesc}
 
 ## Cosa posso proteggere?
 

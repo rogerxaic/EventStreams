@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 Vous pouvez sécuriser vos ressources {{site.data.keyword.messagehub}} de manière très affinée afin de gérer l'accès que vous voulez accorder à chaque ressource pour chaque utilisateur.
+{: shortdesc}
 
 ## Que puis-je sécuriser ?
 

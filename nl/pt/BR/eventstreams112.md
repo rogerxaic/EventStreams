@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-23"
 
 
 Um produtor é um aplicativo que publica fluxos de mensagens nos tópicos do Kafka. Essas informações se concentram na interface de programação Java que faz parte do projeto Apache Kafka. Os conceitos se aplicam a outros idiomas também, mas os nomes são, às vezes, um pouco diferentes.
+{: shortdesc}
 
 Nas interfaces de programação, uma mensagem é realmente chamada de um registro. Por exemplo, a classe Java org.apache.kafka.clients.producer.ProducerRecord é usada para representar uma mensagem do ponto de vista da API do produtor. Os termos _registro_ e _mensagem_ podem ser usados de forma intercambiável, mas um registro é usado essencialmente para representar uma mensagem.
 

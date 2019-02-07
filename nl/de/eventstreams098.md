@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-30"
 
 ---
@@ -21,7 +21,8 @@ lastupdated: "2018-05-30"
 
 Die folgenden Voraussetzungen sind für die Verwendung der {{site.data.keyword.mql}}-API mit {{site.data.keyword.messagehub}} erforderlich: 
 
-**Sie müssen explizit ein Kafka-Topic mit dem Namen "MQLight" erstellen, damit die API verwendet werden kann, da alle Nachrichten das Topic "MQLight" durchlaufen. Dieses Topic muss eine einzige Partition enthalten. Durch das Erstellen dieses Topics wird die MQ Light-API für Ihre Serviceinstanz aktiviert. Die in der MQ Light-API verwendeten Topics werden automatisch erstellt, sobald Sie sie verwenden. Alle Nachrichten befinden sich jedoch tatsächlich in dem einzelnen Kafka-Topic "MQLight".** 
+**Sie müssen explizit ein Kafka-Topic mit dem Namen "MQLight" erstellen, damit die API verwendet werden kann, da alle Nachrichten das Topic "MQLight" durchlaufen. Dieses Topic muss eine einzige Partition enthalten. Durch das Erstellen dieses Topics wird die MQ Light-API für Ihre Serviceinstanz aktiviert. Die in der MQ Light-API verwendeten Topics werden automatisch erstellt, sobald Sie sie verwenden. Alle Nachrichten befinden sich jedoch tatsächlich in dem einzelnen Kafka-Topic "MQLight". **
+{: shortdesc}
 
 Das Topic "MQLight" wird von der MQ Light-API für die Speicherung der zugehörigen Nachrichtendaten und für die Interaktion mit anderen Kafka-Clients verwendet. Beachten Sie, dass ab der Erstellung dieses Topics
 Gebühren gemäß dem im Zahlungsplan für Services angegebenen Standardsatz fällig werden.

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-29"
 {: #apache_kafka}
 
 ![Diagrama de la arquitectura de Kafka](kafka_overview.png "Diagrama que muestra una arquitectura de Kafka. Un productor introduce datos en un tema de Kafka sobre 3 particiones y luego los consumidores se suscriben a los mensajes.")
-
+{: shortdesc}
 
 La siguiente lista define algunos conceptos de Apache Kafka:
 

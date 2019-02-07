@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-07"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-07"
 {: #connecting}
 
 La forma de conectar con {{site.data.keyword.messagehub}} varía en función de si utiliza el plan Estándar o Empresa y también de si se conecta desde una aplicación de Cloud Foundry o desde cualquier otro cliente externo. Debe recopilar dos fragmentos de información para conectarse a cualquiera de las API de {{site.data.keyword.messagehub}}:
+{: shortdesc}
 
 * Los URL de punto final correspondientes a las API
 * Credenciales para la autenticación

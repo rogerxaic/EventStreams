@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-06"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-02-06"
 {: #ksql_using}
 
 Puede utilizar [KSQL ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/confluentinc/ksql){:new_window} con {{site.data.keyword.messagehub}} para el proceso de secuencias. Asegúrese de que utiliza KSQL 0.4, o posterior. 
+{: shortdesc}
 
 Siga estos pasos:
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -22,6 +22,7 @@ lastupdated: "2018-05-25"
 Zum Verbinden einer App mit dem Service muss die App den Benutzer <code>user</code>,
 das Kennwort <code>password</code> und die Details für <code>mqlight_lookup_url</code> aus
 [Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html) verwenden. Verwenden Sie die nachfolgende Anleitung für Ihre gewünschte Sprache:
+{: shortdesc}
 
 **Für Java**
 

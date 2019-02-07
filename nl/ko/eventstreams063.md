@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-22"
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-06-22"
 * [VCAP_SERVICES 환경 변수](/docs/services/EventStreams/eventstreams127.html#vcap)의
 <code>user</code> 및 <code>password</code>와 <code>kafka_brokers_sasl</code> 인증 정보
 * 서비스 키. 자세한 정보는 [클러스터에 연결](/docs/services/EventStreams/eventstreams127.html#enterprise_connect)을 참조하십시오.
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## sasl.jaas.config 특성 사용(Java 애플리케이션의 연결 및 인증)

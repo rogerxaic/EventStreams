@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 Java&trade; Kafka API 샘플은 Java로 작성된 제작자 및 이용자 예제이며, Kafka API를 직접 사용합니다. 이 샘플을 로컬에서 또는 {{site.data.keyword.Bluemix_short}}에서 실행할 수 있습니다.
+{: shortdesc}
 
 샘플 코드는 [event-streams-samples GitHub 프로젝트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}에 있습니다. 샘플이 Kafka API를 사용하여 메시지를 보내고 받더라도, 메시지를 보내고 받는 대상 토픽을 작성하는 데에는 {{site.data.keyword.messagehub}} 관리 API를 사용합니다.
 
@@ -73,9 +74,12 @@ Kafka 클라이언트를 0.10.2.1 이상에서 사용 중인 경우 JAAS 파일 
 
 
 Java 클라이언트를 사용 중인 경우에는
-오픈 소스 방식으로 사용 가능한 Kafka 클라이언트 0.10 이상을 사용할 수 있습니다. 0.9.X 버전은 최신 버전으로 업그레이드하는 것이
-좋습니다. Kafka 클라이언트는
-[https://kafka.apache.org/downloads ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/downloads){:new_window}에서 다운로드할 수 있습니다. 
+오픈 소스 방식으로 사용 가능한 Kafka 클라이언트 0.10 이상을 사용할 수 있습니다. 
+
+0.9.X 버전은 최신 버전으로 업그레이드하는 것이
+좋습니다. [https://kafka.apache.org/downloads ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/downloads){:new_window}에서 Kafka 클라이언트를 다운로드할 수있습니다.
+
+0.9.X 클라이언트 사용의 영향에 대한 정보는 [역호환성](/docs/services/EventStreams/eventstreams062.html#compatability)을 참조하십시오.
 
 
 

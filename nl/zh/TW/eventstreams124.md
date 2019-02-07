@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 您可以用精細的方式保護 {{site.data.keyword.messagehub}} 資源，以管理您要授與每位使用者對每項資源的存取權。
+{: shortdesc}
 
 ## 我可以保護什麼？
 

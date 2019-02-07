@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Kafka REST API は、Kafka クラスターへの RESTful インターフェースを提供します。 この API を使用して、メッセージの生成とコンシュームを行うことができます。 API 参照資料などについて詳しくは、[Kafka REST Proxy 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}を参照してください。 {{site.data.keyword.messagehub}} の要求と応答では、バイナリー埋め込み形式のみがサポートされます。 Avro および JSON 埋め込み形式はサポートされません。
+{: shortdesc}
 
 CURL を使用している場合、以下のような例を使用して生成することができます。
 <pre class="pre"><code>
@@ -58,7 +59,8 @@ CURL の場合、[Confluent 資料 ![外部リンク・アイコン](../../icons
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
-{{site.data.keyword.messagehub}} に接続するために、Kafka REST API は、<code>api_key</code> および <code>kafka_rest_url</code> 資格情報を [VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)から使用します。
+{{site.data.keyword.messagehub}} に接続するために、Kafka REST API は [VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)からの <code>api_key</code> および <code>kafka_rest_url</code> 資格情報を使用します。
+
 
 {{site.data.keyword.messagehub}} Kafka REST API で認証するには、
 要求の X-Auth-Token ヘッダーに <code>api_key</code> を指定する必要があります。

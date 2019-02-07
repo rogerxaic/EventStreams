@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -22,6 +22,7 @@ lastupdated: "2018-05-25"
 
 I messaggi di {{site.data.keyword.mql}} vengono memorizzati in un singolo argomento Kafka sottostante denominato "MQLight" e sono codificati come descritto nella seguente tabella. Questa codifica può essere utilizzata anche da altri tipi di API, come Kafka o REST Kafka, per scambiare messaggi con le applicazioni che utilizzano
 l'API {{site.data.keyword.mql}}.
+{: shortdesc}
 
 ## Formato dei messaggi Kafka
 {: #kafka_format notoc}

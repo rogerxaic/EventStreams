@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 Puede utilizar Kafka Connect con {{site.data.keyword.messagehub}} y puede ejecutar los nodos trabajadores fuera o dentro de {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 Kafka Connect se puede ejecutar tanto en modalidad autónoma como en modalidad distribuida. La modalidad autónoma está pensada para pruebas y para conexiones temporales entre sistemas. La modalidad distribuida resulta más adecuada para uso en producción. La configuración necesaria para utilizar {{site.data.keyword.messagehub}} con estas dos modalidades es ligeramente diferente.
 {:shortdesc}

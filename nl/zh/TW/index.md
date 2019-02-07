@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-15"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-11-15"
 {: #getting_started}
 
 若要開始使用 {{site.data.keyword.messagehub}} 和開始傳送及接收訊息，您可以使用 Java™ 範例。範例顯示生產者如何使用主題將訊息傳送到消費者。相同的範例程式用來使用訊息，以及產生訊息。
+{: shortdesc}
 
 若要進一步瞭解 {{site.data.keyword.messagehub}} 的運作方式，請參閱[關於 {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html)。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
 
@@ -55,27 +56,23 @@ lastupdated: "2018-11-15"
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. 執行下列指令切換至 Java 主控台範例目錄：
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. 執行下列建置指令：
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc}執行下列指令，在主控台上啟動消費者：
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
-    {: codeblock}
     
     此範例使用名為 `kafka-java-console-sample-topic` 的主題。如果主題尚不存在，範例會使用 {{site.data.keyword.messagehub}} 管理 API 建立它。為了傳送及接收訊息，範例會使用 Apache Kafka Java API。
 
@@ -88,7 +85,6 @@ lastupdated: "2018-11-15"
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     我們建議您使用所選取**認證**中列出的所有 Kafka 主機。
 
@@ -96,12 +92,11 @@ lastupdated: "2018-11-15"
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
- {: codeblock}
   
 9. 您現在應該會看到生產者傳送的訊息出現在消費者。以下是部分範例輸出：
 
     ```
-[2018-07-02 14:54:50,788] INFO Running in local mode. (com.messagehub.samples.MessageHubConsoleSample)
+    [2018-07-02 14:54:50,788] INFO Running in local mode. (com.messagehub.samples.MessageHubConsoleSample)
     [2018-07-02 14:54:50,789] INFO Kafka Endpoints: kafka-0.mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud:9093,kafka-1.mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud:9093,kafka-2.mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud:9093 (com.messagehub.samples.MessageHubConsoleSample)
     [2018-07-02 14:54:50,789] INFO Admin REST Endpoint: https://mh-zarjkgtnzzspbkfrkqgdhmq.us-south.containers.appdomain.cloud (com.messagehub.samples.MessageHubConsoleSample)
     [2018-07-02 14:54:50,789] INFO Creating the topic kafka-java-console-sample-topic (com.messagehub.samples.MessageHubConsoleSample)

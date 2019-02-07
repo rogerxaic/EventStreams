@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-30"
 
 ---
@@ -21,7 +21,8 @@ lastupdated: "2018-05-30"
 
 要将 {{site.data.keyword.mql}} API 与 {{site.data.keyword.messagehub}} 配合使用，需要满足以下需求： 
 
-**必须显式创建名为“MQLight”的 Kafka 主题后才能使用该 API，因为所有消息都将经过“MQLight”主题。此主题必须具有单个分区。创建此主题后，即可将 MQ Light API 用于您的服务实例。当您使用 MQ Light API 中使用的主题时会自动创建这些主题，但是所有消息实际上位于单个“MQLight”Kafka 主题中。** 
+**必须显式创建名为“MQLight”的 Kafka 主题后才能使用该 API，因为所有消息都将经过“MQLight”主题。此主题必须具有单个分区。创建此主题后，即可将 MQ Light API 用于您的服务实例。当您使用 MQ Light API 中使用的主题时会自动创建这些主题，但是所有消息实际上位于单个“MQLight”Kafka 主题中。**
+{: shortdesc}
 
 MQ Light API 使用“MQLight”主题来存储其消息数据，以及与其他 Kafka 客户机进行交互。请注意，创建此主题时，会按服务支付套餐中概述的标准费率收费。
 

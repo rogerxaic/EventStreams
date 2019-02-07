@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-15"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-11-15"
 {{site.data.keyword.messagehub}}를 시작하여
 메시지 전송 및 수신을 시작하기 위해 Java™ 샘플을 사용할 수 있습니다. 샘플에서는 제작자가 토픽을 사용하여
 이용자에게 메시지를 보내는 방법을 보여줍니다. 메시지를 이용하고 메시지를 생성하는 데 동일한 샘플 프로그램이 사용됩니다.
+{: shortdesc}
 
 {{site.data.keyword.messagehub}}가 어떻게 작동하는지 좀 더 자세히 알아보려는 경우에는 [{{site.data.keyword.messagehub}} 정보](/docs/services/EventStreams/eventstreams010.html)를 참조하십시오. {{site.data.keyword.messagehub}}의 이전 이름은 Message Hub입니다.
 
@@ -57,27 +58,23 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. 다음 명령을 실행하여 java 콘솔 샘플로 디렉토리를 변경하십시오.
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. 다음 빌드 명령을 실행하십시오.
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc}다음 명령을 실행하여 콘솔에서 이용자를 시작하십시오.
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
-    {: codeblock}
     
     샘플은 `kafka-java-console-sample-topic`으로 이름 지정된 토픽을 사용합니다. 토픽이 아직 없는 경우
     샘플은 {{site.data.keyword.messagehub}} 관리 API를 사용하여 토픽을 작성합니다. 메시지를 전송 및 수신하기 위해
@@ -88,12 +85,11 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
 	
 	사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오.
     
-	**중요:** *kafka_brokers_sasl*은 단일 문자열이어야 하며 따옴표로 묶어야 합니다. 예:
+	**중요:** *kafka_brokers_sasl*은 단일 문자열이어야 하며 따옴표로 묶어야 합니다. 예를 들어, 다음과 같은 경우입니다.
 
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     선택한 **인증 정보**에 나열된 모든 Kafka 호스트 사용을 권장합니다.
 
@@ -101,7 +97,6 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
- {: codeblock}
   
 9. 이제 이용자에 표시되는 제작자가 보낸 메시지를 볼 수 있습니다. 일부 샘플 출력은 다음과 같습니다.
 

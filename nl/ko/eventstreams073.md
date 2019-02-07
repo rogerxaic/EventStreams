@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-29"
 {: #apache_kafka}
 
 ![Kafka 아키텍처 다이어그램](kafka_overview.png "Kafka 아키텍처를 표시하는 다이어그램입니다. 제작자가 세 개의 파티션을 통해 Kafka 토픽에 피드를 제공하면 이용자가 메시지를 구독하게 됩니다.")
-
+{: shortdesc}
 
 다음 목록은 일부 Apache Kafka 개념을 정의합니다.
 

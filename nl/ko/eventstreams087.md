@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-06"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-06"
 {: #choose_api}
 
 {{site.data.keyword.messagehub}}는 표준 플랜에서 세 개의 API를 지원합니다. 다음은 가장 적합한 API를 선택하는 데 도움이 되는 정보입니다.
+{: shortdesc}
 
 ## Kafka API를 사용하는 이유
 {: #why_kafka notoc}

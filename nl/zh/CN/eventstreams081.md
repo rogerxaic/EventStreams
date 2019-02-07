@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 {{site.data.keyword.mql}} 消息存储在名为“MQLight”的单个底层 Kafka 主题中并经过编码，如下表中所详述。其他 API 类型（如 Kafka 或 Kafka REST）也可使用此编码通过 {{site.data.keyword.mql}} API 来与应用程序交换消息。
+{: shortdesc}
 
 ## Kafka 消息格式
 {: #kafka_format notoc}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-06-01"
 
 O {{site.data.keyword.iot_full}} fornece uma ponte gerenciada que permite criar um link
 unidirecional para o {{site.data.keyword.messagehub_full}}.
+{: shortdesc}
 
 A conexão do {{site.data.keyword.messagehub}} com o
 {{site.data.keyword.iot_short_notm}}

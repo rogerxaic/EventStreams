@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-30"
 
 ---
@@ -31,6 +31,7 @@ lastupdated: "2018-08-30"
 -->
 
 L'esempio API REST Kafka {{site.data.keyword.messagehub}} è un'applicazione Node.js, che stabilisce una connessione a {{site.data.keyword.messagehub}} sull'API REST Kafka per produrre e consumare messaggi.
+{: shortdesc}
 
 Il codice di esempio si trova nel [progetto github event-streams-samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 

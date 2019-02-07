@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-30"
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2018-05-30"
 **La API MQ Light solo está disponible como parte del plan Estándar.**
 <br/>
 
-Se aplican los siguientes límites a la API de {{site.data.keyword.mql}} :
+Se aplican los siguientes límites a la API de {{site.data.keyword.mql}}:
 {:shortdesc}
 
 * La cantidad máxima de datos que pueden almacenarse está en consonancia con una única partición de Kafka para su plan de pago (normalmente 1 GB). Si se supera este límite de datos, se eliminarán los mensajes más antiguos de la partición a medida que se envíen mensajes nuevos.

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-06-01"
 
 
 {{site.data.keyword.iot_full}} は、{{site.data.keyword.messagehub_full}} への単一方向リンクの作成を可能にする管理対象ブリッジを提供します。
+{: shortdesc}
 
 {{site.data.keyword.messagehub}} を {{site.data.keyword.iot_short_notm}} に接続することは、{{site.data.keyword.messagehub}} をイベント・パイプラインとして使用して {{site.data.keyword.iot_short_notm}} からデバイス・イベントをコンシュームし、それらのイベントをプラットフォームの残りの部分でリアルタイムに使用可能にすることができることを意味します。 
 

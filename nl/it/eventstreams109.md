@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2018-12-07"
 
 ---
 
@@ -38,7 +38,7 @@ Puoi trovare questo ID nel campo "instance_id" nel JSON VCAP_SERVICES del serviz
 10. Qual è l'impatto del problema sul tuo servizio?
 
 
-Puoi fornire le informazioni che hai raccolto da IBM in un ticket di supporto [inviando una richiesta di supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/get-support/howtogetsupport.html#open-ticket).
+Puoi fornire le informazioni che hai raccolto da IBM in un ticket di supporto [inviando una richiesta di supporto ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/get-support/howtogetsupport.html#using-avatar).
 
 
 

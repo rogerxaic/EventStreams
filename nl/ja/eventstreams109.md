@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2018-12-07"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-09-11"
 {{site.data.keyword.messagehub}} チームから支援を受けたい場合は、以下の情報をすべて収集してください。 事前に提供できる情報が多ければ多いほど、チームは問題解決をより効率的に支援できます。
 {:shortdesc}
 
-1. {{site.data.keyword.messagehub}} のインスタンスがプロビジョンされているのはどの {{site.data.keyword.Bluemix_notm}} ロケーション (地域) ですか? 例えば、ダラスやロンドンです。 
+1. {{site.data.keyword.messagehub}} のインスタンスがプロビジョンされているのはどの {{site.data.keyword.Bluemix_notm}} ロケーション (地域) ですか?  例えば、ダラスやロンドンです。 
 2. どのインターフェースで問題が起きていますか? Kafka、REST、AMQP、またはブリッジのどれですか?
 3. 問題が最初に起こったのはいつですか (時刻、日付、タイム・ゾーンを具体的に)? それまでにアプリケーションはどのくらい長く実行されていましたか?
 4. 問題は引き続き発生していますか? 再生成できますか?
@@ -38,7 +38,7 @@ lastupdated: "2018-09-11"
 10. あなたのサービスへの問題の影響は?
 
 
-収集した情報は、[サポート要求を送信する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/get-support/howtogetsupport.html#open-ticket) ことにより、サポート・チケットとして IBM に提出することができます。
+収集した情報は、[サポート要求を送信する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/get-support/howtogetsupport.html#using-avatar) ことにより、サポート・チケットとして IBM に提出することができます。
 
 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-30"
 
 ---
@@ -21,7 +21,8 @@ lastupdated: "2018-05-30"
 
 La configuration suivante est nécessaire pour utiliser l'API {{site.data.keyword.mql}} avec {{site.data.keyword.messagehub}} : 
 
-**Vous devez créer de façon explicite un sujet Kafka nommé "MQLight" pour pouvoir utiliser l'API car tous les messages passent par le sujet "MQLight". Ce sujet doit posséder une partition unique. La création de ce sujet active l'API MQ Light pour votre instance de service. Les sujets utilisés dans l'API MQ Light sont créés automatiquement lorsque vous les utilisez, mais tous les messages se trouvent en fait dans un même sujet Kafka "MQLight".** 
+**Vous devez créer de façon explicite un sujet Kafka nommé "MQLight" pour pouvoir utiliser l'API car tous les messages passent par le sujet "MQLight". Ce sujet doit posséder une partition unique. La création de ce sujet active l'API MQ Light pour votre instance de service. Les sujets utilisés dans l'API MQ Light sont créés automatiquement quand vous les utilisez, mais tous les messages se trouvent en fait dans un même sujet Kafka "MQLight".**
+{: shortdesc}
 
 Le sujet "MQLight" est utilisé par l'API MQ Light pour stocker ses données de messages et interagir avec d'autres clients Kafka. Notez que la création de ce sujet entraîne la facturation de frais au tarif standard indiqué dans le plan de paiement des services.
 

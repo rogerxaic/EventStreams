@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-22"
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 Kafka API は、{{site.data.keyword.messagehub}} に接続するために、以下のいずれかの資格情報セットを使用します。 
 * <code>kafka_brokers_sasl</code> 資格情報と、[VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html#vcap)からの <code>user</code> と <code>password</code>。
 * サービス・キー。 詳しくは、[クラスターへの接続](/docs/services/EventStreams/eventstreams127.html#enterprise_connect)を参照してください。
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## sasl.jaas.config プロパティーの使用 (Java アプリケーションでの接続と認証)

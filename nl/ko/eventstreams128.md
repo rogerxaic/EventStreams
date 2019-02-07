@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-05"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-07-05"
  -->
 
 0.11 이상에서 Kafka 클라이언트를 사용 중이거나 0.10.2.0 이상에서 Kafka Streams를 사용 중인 경우, API를 사용하여 토픽을 작성하고 삭제할 수 있습니다. 토픽 작성 시 허용되는 설정에 대한 제한사항이 있습니다. 현재는 다음 설정만 수정할 수 있습니다.
+{: shortdesc}
 
 <dl>
 <dt>cleanup.policy</dt>

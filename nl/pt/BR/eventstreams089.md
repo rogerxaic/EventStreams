@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -20,23 +20,26 @@ lastupdated: "2018-11-08"
 <br/>
 
 Como o serviço subjacente ao qual a ponte do {{site.data.keyword.objectstorageshort}} se conecta foi descontinuado, a ponte do {{site.data.keyword.objectstorageshort}} também foi descontinuada em 1º de agosto de 2018. 
+{: shortdesc}
 
 Quando o serviço {{site.data.keyword.objectstorageshort}} atingir seu término de vida e for desatribuído, todas as instâncias da ponte do {{site.data.keyword.objectstorageshort}} também serão desatribuídas. Para obter mais informações, consulte o [comunicado de descontinuação: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Como alternativa, é possível usar a [ponte do Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}.
+Como alternativa, é possível usar a [ponte do Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
 {:deprecated}
 
 A ponte do {{site.data.keyword.objectstorageshort}} permite arquivar dados de tópicos Kafka no {{site.data.keyword.messagehub}} em uma instância do serviço do {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ObjectStorage/index.html){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos dados da mensagem como objetos para um contêiner no serviço do {{site.data.keyword.objectstorageshort}}.
 
 Observe que o serviço de armazenamento de objeto preferencial no {{site.data.keyword.Bluemix_short}} agora é o serviço do [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
 
-Ao configurar a ponte do {{site.data.keyword.objectstorageshort}}, é possível controlar como os dados são transferidos por upload como objetos para o {{site.data.keyword.objectstorageshort}}. Por exemplo, as propriedades que podem ser configuradas são as seguintes:
+Ao configurar a ponte do {{site.data.keyword.objectstorageshort}}, é possível controlar como os dados são transferidos por upload como objetos para o {{site.data.keyword.objectstorageshort}}. Por
+exemplo, as propriedades que podem ser configuradas são as seguintes:
 
 * O nome do contêiner no qual os objetos são gravados.
 * Com que frequência os objetos são transferidos por upload para o serviço do {{site.data.keyword.objectstorageshort}}.
 * Quantia de dados que são gravados em cada objeto antes de serem transferidos por upload para o serviço do {{site.data.keyword.objectstorageshort}}.
 
-O formato de saída da ponte é um objeto de serviço de armazenamento de objeto que contém um ou mais registros concatenados com caracteres de nova linha como separadores.
+O formato de saída da ponte é um objeto de serviço de armazenamento de objeto que contém um ou mais
+registros concatenados com caracteres de nova linha como separadores.
 
 ## Como os dados são transferidos usando a ponte do {{site.data.keyword.objectstorageshort}}
 {: notoc}
@@ -112,8 +115,7 @@ Para particionar dados por deslocamento de mensagem do Kafka, conclua as etapas 
      	</code></pre>
     {:codeblock}
 
-    Os nomes de objeto gerados por uma ponte configurada dessa maneira contêm o prefixo `"
-offset=<kafka_offset>"`, em que `"<kafka_offset>"` corresponde à primeira mensagem
+    Os nomes de objeto gerados por uma ponte configurada dessa maneira contêm o prefixo `"offset=<kafka_offset>"`, em que `"<kafka_offset>"` corresponde à primeira mensagem
 do Kafka armazenada em tal partição (o grupo de objetos com este prefixo). Por exemplo, se uma ponte gera
 objetos com nomes como o exemplo a seguir, `<object_a>` e `<object_b>`
 contêm mensagens com deslocamentos no intervalo de 0 a 999, `<object_c>` contém mensagens com
@@ -187,8 +189,7 @@ suas datas.
     </code></pre>
     {:codeblock}
 
-	Quaisquer dados da mensagem que possuam um formato JSON válido, mas sem um campo ou valor de data válido, são gravados em um objeto
-com o prefixo `"dt=1970-01-01"`.
+	Quaisquer dados da mensagem que possuam um formato JSON válido, mas sem um campo ou valor de data válido, são gravados em um objeto com o prefixo `"dt=1970-01-01"`.
 
 ## Métricas de ponte do {{site.data.keyword.objectstorageshort}}
 {: notoc}
@@ -198,5 +199,6 @@ A ponte do {{site.data.keyword.objectstorageshort}} relata métricas, que podem 
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.bytes-consumed-rate</code></dt>
 <dd>Mede a taxa em que a ponte consome dados (em bytes por segundo).</dd>
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.records-lag-max</code></dt>
-<dd>Mede o atraso máximo no número de registros consumidos pela ponte para qualquer partição neste tópico. Um valor crescente ao longo do tempo indica que a ponte não está acompanhando os produtores para o tópico.</dd>
+<dd>Mede o atraso máximo no número de registros consumidos pela ponte para qualquer partição neste tópico. Um
+valor crescente ao longo do tempo indica que a ponte não está acompanhando os produtores para o tópico.</dd>
 </dl>

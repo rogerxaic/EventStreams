@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-28"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-11-28"
 # 使用 Kafka API
 {: #kafka_using}
 
-如果使用的是 Java 客户机，那么可以使用公共可用的 0.10.x 或更高版本的 Kafka 客户机。 
+如果使用的是 Java 客户机，那么可以使用公共可用的 0.10.x 或更高版本的 Kafka 客户机。有关更多信息，请参阅[选择要与 {{site.data.keyword.messagehub}} 一起使用的 Kafka 客户机](/docs/services/EventStreams/eventstreams062.html#kafka_clients)。
+{: shortdesc}
 
 Kafka 客户机存在多种语言版本，我们提供了其中一些语言的指示信息。您可以使用其他语言，但需要 SASL PLAIN 支持来提供凭证。此外，如果使用的是企业套餐，那么还需要使用 TLSv1.2 协议的服务器名称指示 (SNI) 扩展。
 
@@ -49,5 +50,5 @@ Kafka 客户机存在多种语言版本，我们提供了其中一些语言的�
 
 </table>
 
-有关 Producer 和 Consumer API 的信息，请参阅 [Kafka Producer API 0.11.0.X ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 和 [Kafka Consumer API 0.11.0.X ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}。 
+有关 Producer 和 Consumer API 的信息，请参阅 [Kafka Producer API 1.1.0 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 和 [Kafka Consumer API 1.1 0 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}。 
 

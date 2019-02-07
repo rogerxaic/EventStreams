@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 若要使用 API，請為 Ruby 新增參照到最新的可用 {{site.data.keyword.mql}} 用戶端 API，如下所示：
+{: shortdesc}
 
 新增下列參照到 <code>Gemfile</code>：
 

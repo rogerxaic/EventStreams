@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-25"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-25"
 
 As APIs de tópico funcionam com o {{site.data.keyword.messagehub}} sem nenhuma configuração necessária. Especifique suas credenciais SASL usando
 <code>sasl.jaas.config</code> ou um arquivo JAAS e configure <code>replication.factor</code> para 3.
+{: shortdesc}
 
 Assegure-se de que você esteja usando o Streams em 0.10.2 ou mais recente.   
 

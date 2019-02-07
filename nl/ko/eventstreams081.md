@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 {{site.data.keyword.mql}} 메시지는 "MQLight"로 이름 지정된 하나의 기본 Kafka 토픽에 저장되며 다음 표에 세부사항이 나와 있는대로 인코딩됩니다. 이 인코딩은 {{site.data.keyword.mql}} API를 사용하여 애플리케이션과 메시지를 교환하기 위해 다른 API 유형(예: Kafka 또는 Kafka REST)에서도 사용될 수 있습니다.
+{: shortdesc}
 
 ## Kafka 메시지 형식
 {: #kafka_format notoc}

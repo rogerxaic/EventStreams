@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-22"
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 Para conectarse a {{site.data.keyword.messagehub}}, la API de Kafka utiliza uno de los siguientes conjuntos de información de credenciales: 
 * las credenciales <code>kafka_brokers_sasl</code> y los valores de <code>user</code> y <code>password</code> de la [variable de entorno VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html#vcap).
 * la clave de servicio. Para obtener más información, consulte [Conexión con el clúster](/docs/services/EventStreams/eventstreams127.html#enterprise_connect).
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## Utilización de la propiedad sasl.jaas.config (conexión y autenticación en una aplicación Java)

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-25"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-25"
 {: #kafka_streams }
 
 Die Topic-APIs können ohne weitere Konfigurationsschritte zusammen mit {{site.data.keyword.messagehub}} verwendet werden. Geben Sie Ihre SASL-Berechtigungsnachweise in <code>sasl.jaas.config</code> oder in einer JAAS-Datei an und legen Sie für <code>replication.factor</code> den Wert 3 fest.
+{: shortdesc}
 
 Stellen Sie sicher, dass Sie Streams der Version 0.10.2 oder höher verwenden.   
 

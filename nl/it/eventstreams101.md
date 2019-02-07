@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Per utilizzare l'API, aggiungi un riferimento all'ultima API client {{site.data.keyword.mql}} disponibile per Python nel seguente modo:
+{: shortdesc}
 
 Aggiungi il seguente riferimento al file
 <code>requirements.txt</code>:

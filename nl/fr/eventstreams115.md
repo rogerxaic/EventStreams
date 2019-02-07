@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-06-01"
 <br/>
 
 Le pont {{site.data.keyword.IBM}} Cloud Object Storage offre un moyen de lire des données à partir d'un sujet {{site.data.keyword.messagehub}} Kafka et de placer ces données dans [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+{: shortdesc}
 
 Le pont Cloud Object Storage permet d'archiver des données provenant des sujets Kafka de {{site.data.keyword.messagehub}} dans une instance
 du [service Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. Le pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un compartiment du service

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Kafka REST API 提供了一个用于访问 Kafka 集群的 RESTful 界面。您可以使用该 API 生成和使用消息。有关更多信息（包括 API 参考文档），请参阅 [Kafka REST Proxy 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}。在 {{site.data.keyword.messagehub}} 中，仅支持二进制嵌入格式的请求和响应。不支持 Avro 和 JSON 嵌入格式。
+{: shortdesc}
 
 如果您使用 CURL，那么您可以使用类似以下的示例来产生：
 <pre class="pre"><code>

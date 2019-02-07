@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-30"
 
 ---
@@ -31,6 +31,7 @@ lastupdated: "2018-08-30"
 -->
 
 {{site.data.keyword.messagehub}} Kafka REST API サンプルは、Kafka REST API で {{site.data.keyword.messagehub}} に接続して、メッセージを作成およびコンシュームする Node.js アプリケーションです。
+{: shortdesc}
 
 サンプル・コードは [event-streams-samples GitHub プロジェクト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} にあります。
 

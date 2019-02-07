@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2019-01-14"
 
 ---
 
@@ -12,15 +12,149 @@ lastupdated: "2018-06-22"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Quelle est la configuration requise pour utiliser l'API Kafka avec {{site.data.keyword.messagehub}} ?
-{: #kafka_reqs}
+# Choix d'un client Kafka pour une utilisation avec {{site.data.keyword.messagehub}}
+{: #kafka_clients}
 
-La configuration suivante est nécessaire pour utiliser l'API Kafka avec {{site.data.keyword.messagehub}} :
+Pour utiliser l'API Kafka avec {{site.data.keyword.messagehub}}, choisissez un type de client parmi les suivants :
 
-* L'un des clients Apache Kafka suivants :
-	* [Client Apache Kafka 1.1 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.apache.org/dyn/closer.cgi?path=/kafka/1.1.0/kafka_2.11-1.1.0.tgz){:new_window}
-	* [Client Apache Kafka 0.11.0.X ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.11.0.1/kafka_2.11-0.11.0.1.tgz){:new_window}
-	* [Client Apache Kafka 0.10.2.X ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window} 
+* Le client Java officiel. Il s'agit du meilleur choix, car il contient les dernières fonctions disponibles pour Apache Kafka.
+* L'un des [clients tiers recommandés](/docs/services/EventStreams/eventstreams062.html#clients_table).
+
+Pour ces deux types de clients, il est recommandé de toujours utiliser la dernière version du client. 
+{: shortdesc}
+
+## Configuration requise au niveau des clients pour la connexion à Event Streams
+
+Pour se connecter à {{site.data.keyword.messagehub}}, les clients doivent prendre en charge l'authentification via le mécanisme SASL Plain et utiliser l'extension SNI (Server Name Indication) au protocole TLSv1.2.
+
+Le protocole Kafka minimum pris en charge est 0.10.
+
+<!--
+## Support summary for the official Apache Kafka client (Java)
+
+<table>
+    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
+      <tr>
+	        <th></th>
+		    <th>Standard and Enterprise Plans</th>
+		    <th></th>
+        </tr>
+	  		<tr>
+			<td>**Kafka version on cluster**</td>
+			<td>Kafka 1.1</td>
+		</tr>
+	  		<tr>
+			<td>**Supported client versions**</td>
+			<td>Kafka 1.1, or later</td>
+		</tr>
+			<td>**Authentication requirements**</td>
+			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
+		</tr>
+
+</table>
+-->
 	
-* [Javadoc de l'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/0102/javadoc/index.html){:new_window} 
+## Clients tiers
+{: #third_party_clients}
+
+Si vous ne pouvez pas exécuter les clients Java officiels, il est recommandé d'exécuter l'un des [clients tiers recommandés](/docs/services/EventStreams/eventstreams062.html#clients_table), qui sont tous parfaitement testés avec {{site.data.keyword.messagehub}}. 
+
+D'autres clients tiers prenant en charge les conditions minimales requises pour le client peuvent fonctionner avec {{site.data.keyword.messagehub}}. Cependant, nos tests et notre expérience sont limités à ces clients tiers recommandés.
+
+## Récapitulatif de la prise en charge de tous les clients recommandés
+{: #client_summary}
+
+<table id="clients_table">
+    <caption>Tableau 2. Récapitulatif de la prise en charge des clients</caption>
+      <tr>
+		    <th>Client</th>
+		    <th>Langage</th>
+			<th>Version recommandée</th>
+		    <th>Version min. prise en charge [<sup>1</sup>](/docs/services/EventStreams/eventstreams062.html#footnote1)</th>
+			<th>Lien vers un exemple</th>
+        </tr>
+			<tr>
+			<td colspan="3">**Client officiel**</td>
+			</tr>
+	  		<tr>
+			<td>[Client Apache Kafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/downloads)</td>
+			<td>Java</td>
+			<td>Dernière</td>
+			<td>0.10.2 <p> Pour plus d'informations sur les clients plus anciens, voir [Compatibilité avec les versions antérieures](/docs/services/EventStreams/eventstreams062.html#compatability).</p></td>
+			<td>[Exemple de console Java ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
+			[Exemple pour Liberty ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			</td>
+			</tr>
+			<tr>
+			<td colspan="3">**Clients tiers**</td>
+			</tr>
+	  		<tr>
+			<td>[node-rdkafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Blizzard/node-rdkafka)</td>
+			<td>Node.js</td>
+			<td>Dernière</td>
+			<td>2.2.2</td>
+			<td>[Exemple pour Node.js ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample)</td>
+		</tr>
+		<tr>
+			<td>[confluent-kafka-python ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/confluentinc/confluent-kafka-python)</td>
+			<td>Python</td>
+			<td>Dernière</td>
+			<td>0.11.0</td>
+			<td>[Exemple pour Kafka Python ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-python-console-sample)</td>
+		</tr>
+		<tr>
+			<td>[confluent-kafka-go ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/confluentinc/confluent-kafka-go)</td>
+			<td>Golang</td>
+			<td>Dernière</td>
+			<td>0.11.0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>[librdkafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/edenhill/librdkafka)</td>
+			<td>C ou C++</td>
+			<td>Dernière</td>
+			<td>0.11.0</td>
+			<td></td>
+		</tr>
+
+</table>
+### Note de bas de page
+1. {: #footnote1}Cette version est la toute première qui a été validée en test continu. Typiquement, il s'agit de la version initiale disponible dans les 12 derniers mois mais cela peut changer si des problèmes significatifs sont identifiés.
+
+## Compatibilité avec les versions antérieures - Plan Standard
+{: #compatability}
+
+Pour une compatibilité avec les versions antérieures, vous pouvez utiliser le client Apache Kafka 0.9 avec le plan Standard {{site.data.keyword.messagehub}}. Toutefois, du fait de l'âge de ce client, cette pratique est fortement déconseillée. Si vous choisissez d'utiliser cette version de client, vous avez besoin d'un [module de connexion ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library) supplémentaire.
+
+Les versions de client antérieures à 0.11 peuvent faire face à des performances dégradées, du fait de ces conversions de protocoles complémentaires qui sont requises pour se connecter aux versions de serveur Kafka plus récentes.
+
+<!--
+## Unsupported clients
+
+The following clients are not supported by {{site.data.keyword.messagehub}}:
+
+### kafka-node
+The kafka-node client does not fully support SASL authentication with the PLAIN mechanism so cannot currently be used with {{site.data.keyword.messagehub}}.
+
+
+### no-kafka 
+The no-kafka client does not fully support SASL authentication with the PLAIN mechanism so cannot currently be used with {{site.data.keyword.messagehub}}.
+
+-->
+
+## Connexion de votre client à {{site.data.keyword.messagehub}}
+{: #connect_client}
+
+Pour savoir comment configurer votre client Java pour se connecter à {{site.data.keyword.messagehub}}, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
+
+
+
+
+
+
+
+
+
+
+
 

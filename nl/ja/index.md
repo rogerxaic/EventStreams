@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-15"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-11-15"
 {: #getting_started}
 
 {{site.data.keyword.messagehub}} を開始し、メッセージの送受信を開始するには、Java™ サンプルを使用できます。 このサンプルは、プロデューサーがトピックを使用してメッセージをコンシューマーに送信する方法を示します。 同じサンプル・プログラムが、メッセージのコンシュームとメッセージのプロデュースに使用されます。
+{: shortdesc}
 
 {{site.data.keyword.messagehub}} がどのように機能するのかについて詳しくは、[{{site.data.keyword.messagehub}} について](/docs/services/EventStreams/eventstreams010.html)を参照してください。 {{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
 
@@ -55,27 +56,23 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. 次のコマンドを実行して、ディレクトリーを java console sample に変更します。
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. 次のビルド・コマンドを実行します。
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc} 次のコマンドを実行して、ご使用のコンソールでコンシューマーを開始します。
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
-    {: codeblock}
     
     このサンプルでは、`kafka-java-console-sample-topic` という名前のトピックが使用されます。 このトピックがまだ存在していない場合、このサンプルは {{site.data.keyword.messagehub}} 管理 API を使用して作成します。 このサンプルは、メッセージの送受信には Apache Kafka Java API を使用します。
 
@@ -88,7 +85,6 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     選択した**資格情報**にリストされているすべての Kafka ホストを使用することをお勧めします。
 
@@ -96,7 +92,6 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
- {: codeblock}
   
 9. これで、プロデューサーによって送信されたメッセージがコンシューマーで表示されるようになります。 次に出力例の一部を示します。
 

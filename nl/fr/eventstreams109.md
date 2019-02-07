@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2018-12-07"
 
 ---
 
@@ -22,7 +22,7 @@ Si vous rencontrez un problème lié à {{site.data.keyword.messagehub}}, consul
 Si vous souhaitez obtenir de l'aide de la part de l'équipe {{site.data.keyword.messagehub}}, rassemblez toutes les informations suivantes. Plus vous fournirez d'informations à l'avance, plus l'équipe sera en mesure de résoudre le problème de manière efficace :
 {:shortdesc}
 
-1. Dans quel emplacement (région) {{site.data.keyword.Bluemix_notm}} votre instance de {{site.data.keyword.messagehub}} est-elle mise à disposition ? Par exemple, Dallas ou Londres. 
+1. Dans quel emplacement (région) {{site.data.keyword.Bluemix_notm}} votre instance de {{site.data.keyword.messagehub}} est-elle mise à disposition ?  Par exemple, Dallas ou Londres. 
 2. Avec quelle interface rencontrez-vous des problèmes ? Avec Kafka, REST, AMQP ou les ponts ?
 3. Quand le problème s'est-il produit pour la première fois (date et heure précises, fuseau horaire) ? Depuis combien de temps votre application s'exécutait-elle ?
 4. Le problème se produit-il encore ? Pouvez-vous le répliquer ?
@@ -38,7 +38,7 @@ Cet ID figure dans la zone "instance_id" dans le JSON VCAP_SERVICES du service. 
 10. Quel impact le problème a-t-il sur votre service ?
 
 
-Vous pouvez transmettre les informations rassemblées à IBM dans un ticket de demande de service en [soumettant une demande de support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/get-support/howtogetsupport.html#open-ticket).
+Vous pouvez transmettre les informations rassemblées à IBM dans un ticket de demande de service en [soumettant une demande de support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/get-support/howtogetsupport.html#using-avatar).
 
 
 

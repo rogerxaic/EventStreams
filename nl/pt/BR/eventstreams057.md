@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-06-26"
 
 Se você localizar um problema ao usar o {{site.data.keyword.messagehub}}, revise estas restrições e soluções
 alternativas conhecidas. 
-
+{: shortdesc}
 
 ## As chamadas do Java Kafka não executarão failover se um servidor de autoinicialização Kafka falhar
 {: #calls_failover}

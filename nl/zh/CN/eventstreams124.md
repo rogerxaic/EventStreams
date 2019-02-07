@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 您可以采用细颗粒度方式保护 {{site.data.keyword.messagehub}} 资源，以管理您想要授予每个用户对每个资源的访问权。
+{: shortdesc}
 
 ## 我可以保护什么内容？
 

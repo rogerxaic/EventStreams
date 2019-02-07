@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -19,10 +19,9 @@ lastupdated: "2018-06-01"
 <br/>
 
 {{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window}。
+{: shortdesc}
 
-Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window} 的實例。橋接器會從
-Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置
-Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
+Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
 
 * 用於寫入物件的儲存區名稱。
 * 物件上傳至 Cloud Object Storage 服務的頻率。

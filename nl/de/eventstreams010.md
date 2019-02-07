@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-07"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-07"
 # Was ist {{site.data.keyword.messagehub}}?
 {: #about}
 
-{{site.data.keyword.messagehub_full}} ist ein Nachrichtenbus mit hohem Durchsatz, der mit Apache Kafka erstellt wurde. Er ist optimiert für die Aufnahme von Ereignissen in {{site.data.keyword.Bluemix_notm}} und die Ereignisstromverteilung zwischen Ihren Services und Anwendungen. {{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
+{{site.data.keyword.messagehub_full}} ist ein Nachrichtenbus mit hohem Durchsatz, der mit Apache Kafka erstellt wurde. Es handelt sich um vollständig verwaltetes Apache Kafka as a Service, das für die Aufnahme von Ereignissen in {{site.data.keyword.Bluemix_notm}} und und die Ereignisstromverteilung zwischen Ihren Services und Anwendungen optimiert ist. {{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
 {: shortdesc}
 
 Mit {{site.data.keyword.messagehub}} können Sie die folgenden Tasks ausführen:

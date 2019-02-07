@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-30"
 
 ---
@@ -31,6 +31,7 @@ lastupdated: "2018-08-30"
 -->
 
 {{site.data.keyword.messagehub}} Kafka REST API 样本是一个 Node.js 应用程序，它通过 Kafka REST API 连接到 {{site.data.keyword.messagehub}} 来生成和使用消息。
+{: shortdesc}
 
 样本代码位于 [event-streams-samples GitHub 项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 中。
 

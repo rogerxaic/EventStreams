@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-12"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-02-12"
 {: #kafka_console_tools }
 
 Apache Kafka 附带多种控制台工具，用于简单的管理和消息传递操作。虽然 {{site.data.keyword.messagehub}} 不允许连接到其 ZooKeeper 集群，但是您仍可以将其中的许多工具与 {{site.data.keyword.messagehub}} 配合使用。由于 Kafka 已经得到了长足发展，之前需要连接到 ZooKeeper 的许多工具现在已经没有这样的需求了。
+{: shortdesc}
 
 您可以在 Kafka 下载文件的 <code>bin</code> 目录中找到这些控制台工具。例如，
 [Apache Kafka 0.10.2.X 客户机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window}。

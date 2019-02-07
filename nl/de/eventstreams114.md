@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-03-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-03-23"
 {: #consuming_messages }
 
 Ein Consumer ist eine Anwendung, die Datenströme von Nachrichten von Kafka-Topics verarbeitet. Ein Consumer kann mindestens ein Topic oder eine Partition abonnieren. Diese Informationen konzentrieren sich auf die Java-Programmierungsschnittstelle, die Teil des Apache Kafka-Projekts ist. Die Konzepte gelten auch für andere Sprachen, sie heißen nur etwas anders.
+{: shortdesc}
 
 Wenn ein Consumer sich mit Kafka verbindet, wird eine erste Bootstrap-Verbindung hergestellt. Diese Verbindung kann mit einem der Server im Cluster hergestellt werden. Der Consumer fordert Informationen zu Partition und Leadership zum Topic an, den er verarbeiten möchte. Dann baut der Consumer eine weitere Verbindung zum Partitionsleader auf und beginnt, die Nachrichten zu verarbeiten. Diese Aktionen werden automatisch intern ausgeführt, wenn Ihr Consumer eine Verbindung zum Kafka-Cluster herstellt.
 

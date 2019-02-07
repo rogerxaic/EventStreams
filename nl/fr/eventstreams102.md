@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Pour utiliser l'API, ajoutez une référence à l'API du client {{site.data.keyword.mql}} pour Node.js la plus récente comme suit :
+{: shortdesc}
 
 Ajoutez la référence suivante dans la section dependency du fichier <code>package.json</code> :
 

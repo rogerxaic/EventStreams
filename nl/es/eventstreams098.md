@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-30"
 
 ---
@@ -22,6 +22,7 @@ lastupdated: "2018-05-30"
 Deben cumplirse los requisitos siguientes para utilizar la API {{site.data.keyword.mql}} con {{site.data.keyword.messagehub}}: 
 
 **Debe crear explícitamente un tema llamado "MQLight Kafka" para poder utilizar la API porque todos los mensajes pasan por el tema "MQLight". Este tema tiene una única partición. La creación de este tema habilita la API MQ Light para la instancia de servicio. Los temas utilizados en la API MQ Light se crean automáticamente a medida que se utilizan, pero todos los mensajes están realmente en el tema de Kafka "MQLight".** 
+{: shortdesc}
 
 La API MQ Light utiliza el tema "MQLight" para almacenar sus datos de mensajes e interactuar con otros clientes de Kafka. Tenga en cuenta que, cuando se crea este tema, se incurre en cargos en la tarifa estándar tal como se describe en el plan de pago de servicios.
 

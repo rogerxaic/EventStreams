@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 您可以将 Kafka Connect 与 {{site.data.keyword.messagehub}} 配合使用，且可以在 {{site.data.keyword.Bluemix_short}} 内部或外部运行工作程序。
+{: shortdesc}
 
 Kafka Connect 的运行方式有两种：单机方式和分发方式。单机方式适用于进行测试以及在系统之间建立临时连接。分发方式更适用于生产目的。将 {{site.data.keyword.messagehub}} 与这两种方式配合使用所需的配置稍有不同。
 {:shortdesc}

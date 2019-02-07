@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-06"
 
 ---
@@ -15,7 +15,8 @@ lastupdated: "2018-02-06"
 # 将 KSQL 与 {{site.data.keyword.messagehub}} 配合使用
 {: #ksql_using}
 
-您可以将 [KSQL ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/confluentinc/ksql){:new_window} 与{{site.data.keyword.messagehub}} 配合使用以进行流处理。确保您使用的是 KSQL 0.4 或更高版本。 
+您可以将 [KSQL ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/confluentinc/ksql){:new_window} 与{{site.data.keyword.messagehub}} 配合使用以进行流处理。确保您使用的是 KSQL 0.4 或更高版本。
+{: shortdesc}
 
 请完成以下步骤：
 

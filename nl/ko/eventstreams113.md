@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 {{site.data.keyword.messagehub}}와 함께 Kafka Connect를 사용하고 {{site.data.keyword.Bluemix_short}} 내부 또는 외부에서 작업자를 실행할 수 있습니다.
+{: shortdesc}
 
 Kafka Connect는 독립형 또는 분산 모드로 실행될 수 있습니다. 독립형 모드는 테스트 및 시스템 간의 임시 연결에 사용됩니다. 분산 모드는
 프로덕션 사용에 좀 더 적합합니다. 이러한 두 개의 모드로 {{site.data.keyword.messagehub}}를 사용하는 데 필요한 구성은 약간 다릅니다.

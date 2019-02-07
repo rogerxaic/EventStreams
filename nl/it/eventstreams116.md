@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-12"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-02-12"
 {: #kafka_console_tools }
 
 Apache Kafka viene fornito con molti strumenti della console per operazioni di messaggistica e gestione semplici. Puoi utilizzare molti di questi strumenti con {{site.data.keyword.messagehub}}, anche se {{site.data.keyword.messagehub}} non consente la connessione al proprio cluster ZooKeeper. Per come è stato sviluppato Kafka, molti degli strumenti che precedentemente richiedevano la connessione a ZooKeeper non hanno più questo requisito.
+{: shortdesc}
 
 Puoi trovare questi strumenti della console nella directory <code>bin</code> del tuo download di Kafka. Ad esempio, [Apache Kafka 0.10.2.X client ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window}.
 

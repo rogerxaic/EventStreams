@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-29"
 {: #apache_kafka}
 
 ![Kafka 架構圖。](kafka_overview.png "顯示 Kafka 架構的圖表。生產者正在將資料提供給 3 個分割區上的 Kafka 主題，然後由消費者訂閱訊息。")
-
+{: shortdesc}
 
 下列清單定義部分 Apache Kafka 概念：
 

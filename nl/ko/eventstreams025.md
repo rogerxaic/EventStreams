@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Kafka REST API는 Kafka 클러스터에 RESTful 인터페이스를 제공합니다. API를 사용하여 메시지를 생성해서 이용할 수 있습니다. API 참조 문서를 포함한 자세한 정보는 [Kafka REST Proxy 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}를 참조하십시오. {{site.data.keyword.messagehub}}의 요청 및 응답에는 2진 임베디드 형식만 지원됩니다. Avro 및 JSON 임베디드 형식은 지원되지 않습니다.
+{: shortdesc}
 
 CURL을 사용하는 경우 다음과 같은 예제를 사용하여 생성할 수 있습니다.
 <pre class="pre"><code>

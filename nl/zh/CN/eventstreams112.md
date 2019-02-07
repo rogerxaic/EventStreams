@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-23"
 
 
 生产者是用于将消息流发布到 Kafka 主题的应用程序。此处的信息主要针对 Java 编程接口；Java 编程接口是 Apache Kafka 项目的一部分。这些概念也适用于其他语言，但名称有时会略有不同。
+{: shortdesc}
 
 在编程接口中，消息实际上称为记录。例如，从生产者 API 的角度来看，Java 类 org.apache.kafka.clients.producer.ProducerRecord 用于表示消息。术语_记录_和_消息_可以互换使用，但基本上会用记录来表示消息。
 

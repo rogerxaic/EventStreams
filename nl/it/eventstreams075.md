@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-20"
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-11-20"
 ** L'API MQ Light è disponibile solo come parte del piano Standard.**
 <br/>
 
-L'API {{site.data.keyword.mql}} viene fornita per la compatibilità con le versioni precedenti del servizio {{site.data.keyword.mql}}. L'API fornisce un'interfaccia di messaggistica basata su AMQP per Java&trade;, Node.js, Python e Ruby.
+L'API {{site.data.keyword.mql}} viene fornita per la compatibilità con le versioni precedenti del servizio {{site.data.keyword.mql}}. L'API fornisce un'interfaccia di messaggistica basata su AMQP per Java&trade;, Node.js, Python e Ruby. 
 {:shortdesc}
 
 <!-- 02/07/18 - removing words to help deprecate MQ Light
@@ -33,7 +33,6 @@ The {{site.data.keyword.mql}} API is available in the following {{site.data.keyw
 
 L'API {{site.data.keyword.mql}} fornisce un livello di astrazione superiore per la messaggistica, rispetto a Kafka.
 
-
 La scelta tra l'utilizzo di un client Kafka o dell'API {{site.data.keyword.mql}} dipende dalla topologia di messaggistica che vuoi
 creare:
 
@@ -42,7 +41,7 @@ creare:
 
 Gli argomenti nell'API {{site.data.keyword.mql}} non sono gli stessi
 argomenti presenti in Kafka. Al contrario, la API {{site.data.keyword.mql}} utilizza
-un singolo argomento Kafka chiamato MQLight e tutti i messaggi inviati e ricevuti utilizzando la API {{site.data.keyword.mql}} passano attraverso quel solo argomento Kafka.
+un singolo argomento Kafka chiamato "MQLight" e tutti i messaggi inviati e ricevuti utilizzando la API {{site.data.keyword.mql}} passano attraverso quel solo argomento Kafka.
 
 {{site.data.keyword.mql}} è disponibile solo nelle seguenti ubicazioni
 {{site.data.keyword.Bluemix_notm}} (regioni): Dallas (us-south), Londra (eu-gb) e Sydney (au-syd). L'API MQ Light non è disponibile nell'ubicazione Francoforte (eu-de) o in
@@ -75,14 +74,14 @@ Per collegare un'applicazione al servizio, l'applicazione deve utilizzare i dett
 
 **Per Java**
 
-Se si specifica &lsquo;null&rsquo; come parametro endpointService della chiamata create(), questo indica al
-client di leggere i dettagli <code>user</code>, <code>password</code> e 
+Se specifichi &lsquo;null&rsquo; come parametro endpointService della chiamata create(), questo indica al
+client di leggere i dettagli <code>user</code>, <code>password</code> e
 <code>mqlight_lookup_url</code> da VCAP_SERVICES:
 
 <pre>
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
-        client.send("my/topic", "Hello World!", null);
+                client.send("my/topic", "Hello World!", null);
     }
 }, null);</code>
 </pre>

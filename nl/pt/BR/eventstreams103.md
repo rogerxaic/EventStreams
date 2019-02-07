@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 
 Para usar a API, inclua uma referência à API do cliente {{site.data.keyword.mql}} mais recente
 disponível para Ruby como segue:
+{: shortdesc}
 
 Inclua a referência a seguir no <code>Gemfile</code>:
 

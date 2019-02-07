@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 A API REST Kafka fornece uma interface RESTful para um cluster Kafka. É possível produzir e consumir mensagens usando a API. Para obter mais informações, incluindo a documentação de referência da API, consulte [Docs do proxy REST Kafka ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}. Somente o formato binário integrado é suportado para solicitações e respostas no {{site.data.keyword.messagehub}}. Os formatos integrados do Avro e JSON não são suportados.
+{: shortdesc}
 
 Se você estiver usando o CURL, será possível usar um exemplo como o seguinte para produzir:
 <pre class="pre"><code>

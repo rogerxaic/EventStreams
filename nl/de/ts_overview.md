@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-09-10"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-09-10"
 Wenn Sie eine Frage zu {{site.data.keyword.messagehub}} haben, sehen Sie im entsprechenden
 [Stack Overflow-Kanal ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/questions/tagged/message-hub){: new_window} nach, um herauszufinden, ob diese Frage bereits beantwortet wurde.
 Falls nicht, posten Sie Ihre Frage. Sie wird entweder von einem Mitglied des {{site.data.keyword.messagehub}}-Entwicklungsteams oder der jeweiligen Community beantwortet.
+{: shortdesc}
 
 Wenn ein Problem bei {{site.data.keyword.messagehub}} auftritt, überprüfen Sie zuerst die Seite 'Status' in [{{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/status){:new_window}. Wenn Sie dann Unterstützung vom
 {{site.data.keyword.messagehub}}-Team anfordern möchten, stellen Sie sicher, dass Sie alle erforderlichen Informationen sammeln. Details hierzu finden Sie in [Problem an das {{site.data.keyword.messagehub}}-Team melden - Plan "Standard"](/docs/services/EventStreams/eventstreams109.html) oder [Problem an das {{site.data.keyword.messagehub}}-Team melden - Plan "Enterprise"](/docs/services/EventStreams/eventstreams125.html).

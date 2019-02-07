@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-07"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-07"
 {: #connecting}
 
 {{site.data.keyword.messagehub}}에 연결하는 방법은 사용하는 플랜(표준 또는 엔터프라이즈) 및 연결을 시작하는 위치(Cloud Foundry 애플리케이션 또는 기타 외부 클라이언트)에 따라 달라집니다. {{site.data.keyword.messagehub}}의 API에 연결하려면 다음과 같은 두 가지 정보를 수집해야 합니다.
+{: shortdesc}
 
 * API용 엔드포인트 URL
 * 인증을 위한 인증 정보

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-30"
 
 ---
@@ -33,6 +33,7 @@ lastupdated: "2018-08-30"
 {{site.data.keyword.messagehub}} Kafka REST API 샘플은
 Kafka REST API를 통해 {{site.data.keyword.messagehub}}에 연결하여
 메시지를 생성하고 이용하는 Node.js 애플리케이션입니다.
+{: shortdesc}
 
 샘플 코드는 [event-streams-samples GitHub 프로젝트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}에 있습니다.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 L'exemple d'API Java&trade; Kafka contient un producteur et un consommateur, codés en Java, qui utilisent directement l'API Kafka. Cet exemple peut être exécuté en local ou dans {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 L'exemple de code est disponible dans le [projet GitHub event-streams-samples ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Bien qu'il utilise l'API Kafka pour envoyer et recevoir des messages, il utilise l'API d'administration de {{site.data.keyword.messagehub}} pour créer le sujet auquel il en envoie et dont il en reçoit.
 
@@ -72,9 +73,12 @@ Dans le cas d'un client Kafka antérieur, vous devez utiliser un fichier de conf
 
 
 Si vous utilisez les clients Java, vous pouvez utiliser
-les clients Kafka 0.10 ou ultérieurs disponibles. Il est fortement conseillé de migrer la version 0.9.X vers la
-version la plus récente. Vous pouvez télécharger un client Kafka depuis
-[https://kafka.apache.org/downloads ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/downloads){:new_window} 
+les clients Kafka 0.10 ou ultérieurs disponibles. 
+
+Il est fortement conseillé de migrer la version 0.9.X vers la
+version la plus récente. Vous pouvez télécharger un client Kafka depuis [https://kafka.apache.org/downloads ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/downloads){:new_window}.
+
+Pour plus d'informations sur les implications de l'utilisation d'un client 0.9.X, voir [Compatibilité avec les versions antérieures](/docs/services/EventStreams/eventstreams062.html#compatability).
 
 
 

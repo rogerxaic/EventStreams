@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-28"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-28"
 {: #plan_choose}
 
 {{site.data.keyword.messagehub}}는 사용자의 요구사항에 따라 두 가지 다른 플랜(표준 및 엔터프라이즈)으로 사용 가능합니다.
+{: shortdesc}
 
 ## 표준 플랜
 

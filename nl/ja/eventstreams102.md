@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 この API を使用するには、以下のように、Node.js 用の最新の使用可能な {{site.data.keyword.mql}} クライアント API への参照を追加する必要があります。
+{: shortdesc}
 
 <code>package.json</code> ファイルの dependency セクションに次の参照を追加します。
 

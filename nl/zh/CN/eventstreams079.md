@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,7 +21,7 @@ lastupdated: "2018-05-25"
 
 要将应用程序连接到服务，应用程序必须使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams/eventstreams127.html)中的 <code>user</code>、
 <code>password</code> 和 <code>mqlight_lookup_url</code> 详细信息。使用与所选语言对应的以下指导信息：
-
+{: shortdesc}
 
 **对于 Java**
 

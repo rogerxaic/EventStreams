@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-22"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2018-06-22"
 -->
 
 Das Java&trade;-Kafka-API-Beispiel ist ein in Java geschriebenes Beispiel für einen Producer und einen Consumer unter Verwendung der Kafka-API. Dieses Beispiel kann lokal oder in {{site.data.keyword.Bluemix_short}} ausgeführt werden.
+{: shortdesc}
 
 Der Beispielcode befindet sich im [GitHub-Projekt 'event-streams-samples' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Obwohl das Beispiel die Kafka-API zum Senden und Empfangen von Nachrichten nutzt, verwendet es die {{site.data.keyword.messagehub}}-Verwaltungs-API zum Erstellen des Topics, an das es Nachrichten sendet und von dem es Nachrichten empfängt.
 
@@ -74,7 +75,13 @@ Für einen älteren Kafka-Client müssen Sie eine JAAS-Konfigurationsdatei zur A
 {: #kafka_migrate}
 
 
-Wenn Sie mit den Java-Clients arbeiten, können Sie die offiziell verfügbaren Kafka-Clients der Version 0.10 oder höher verwenden. Es wird dringend empfohlen, von der Version 0.9.X auf die aktuelle Version umzustellen. Sie können einen Kafka-Client von [https://kafka.apache.org/downloads ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/downloads){:new_window} herunterladen. 
+Wenn Sie mit den Java-Clients arbeiten, können Sie die offiziell verfügbaren Kafka-Clients der Version 0.10 oder höher verwenden. 
+
+Es wird dringend empfohlen, von der Version 0.9.X auf die aktuelle Version umzustellen. Sie können einen Kafka-Client von
+[https://kafka.apache.org/downloads ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/downloads){:new_window} herunterladen. 
+
+Informationen zu den Auswirkungen der Verwendunhg eines Clients der Verison 0.9.X finden Sie in
+[Kompatibilität mit früheren Versionen](/docs/services/EventStreams/eventstreams062.html#compatability). 
 
 
 

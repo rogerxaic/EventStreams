@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-06"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-02-06"
 
 É possível usar o [KSQL ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/confluentinc/ksql){:new_window}
 com o {{site.data.keyword.messagehub}} para processamento de fluxo. Certifique-se de usar o KSQL 0.4 ou mais recente. 
+{: shortdesc}
 
 Execute as seguintes etapas:
 

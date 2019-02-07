@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-09-10"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-09-10"
 전용 [Stack Overflow 채널 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/questions/tagged/message-hub){: new_window}에 답변이 이미 있는지 확인하십시오.
 답변이 없는 경우 질문을 게시하면 {{site.data.keyword.messagehub}} 개발 팀 또는
 다양한 커뮤니티의 구성원이 답변을 제공할 것입니다.
+{: shortdesc}
 
 {{site.data.keyword.messagehub}}에 문제점이 생긴 경우, [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/status){:new_window}를 우선 확인하십시오. {{site.data.keyword.messagehub}} 팀의
 도움이 필요한 경우에는 [{{site.data.keyword.messagehub}} 팀에 문제점 보고 - 표준 플랜](/docs/services/EventStreams/eventstreams109.html) 또는 [{{site.data.keyword.messagehub}} 팀에 문제점 보고 - 엔터프라이즈 플랜](/docs/services/EventStreams/eventstreams125.html)에 자세히 설명되어 있는 모든 필수 정보를 수집해야 합니다.

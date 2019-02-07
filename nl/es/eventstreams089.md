@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-11-08"
 <br/>
 
 Puesto que el servicio subyacente al que se conecta el puente de {{site.data.keyword.objectstorageshort}} está en desuso, el puente de {{site.data.keyword.objectstorageshort}} también ha quedado en desuso desde el 1 de agosto de 2018. 
+{: shortdesc}
 
 Cuando el servicio de {{site.data.keyword.objectstorageshort}} alcanza la finalización del ciclo de vida y está fuera de servicio, todas las instancias del puente de {{site.data.keyword.objectstorageshort}} también quedarán fuera de servicio. Para obtener más información, consulte el anuncio acerca del desuso: [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
@@ -140,9 +141,15 @@ Para particionar datos por fecha ISO 8601, siga estos pasos:
     </code></pre>
     {:codeblock}
 
-	El particionamiento por fecha ISO 8601 requiere que los mensajes de Kafka tengan un formato JSON válido. El valor de `"propertyName"` en el JSON que se utiliza para configurar el puente debe corresponder al campo de fecha ISO 8601 en cada mensaje de Kafka. En este ejemplo, el campo `"timestamp"` debe contener un valor de fecha ISO 8601 válido. Entonces los mensajes se particionarán según las fechas correspondientes.
+	El particionamiento por fecha ISO 8601 requiere que los mensajes de Kafka tengan un formato JSON válido. El valor de
+	`"propertyName"` en el JSON que se utiliza para configurar el puente debe corresponder al campo de fecha ISO
+	8601 en cada mensaje de Kafka. En este ejemplo, el campo `"timestamp"` debe contener un valor
+	de fecha ISO 8601 válido. Entonces los mensajes se particionarán según las fechas correspondientes.
 	
-	Un puente configurado como este ejemplo genera objetos con nombres especificados de la siguiente manera: `<object_a>` contiene mensajes JSON con los campos `"timestamp"` con la fecha 2016-12-07 y `<object_b>` y `<object_c>` contienen mensajes JSON con los campos `"timestamp"` con la fecha	2016-12-08.
+	Un puente configurado como este ejemplo genera objetos con nombres especificados de la siguiente manera:
+	`<object_a>` contiene mensajes JSON con los campos `"timestamp"` con
+	la fecha 2016-12-07 y `<object_b>` y `<object_c>` contienen mensajes JSON con los campos `"timestamp"` con la fecha
+	2016-12-08.
 
     <pre class="pre"><code>
         ```

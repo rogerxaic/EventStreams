@@ -47,7 +47,7 @@ Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-Gli eventi {{site.data.keyword.cloudaccesstrailshort}} sono disponibili nel **dominio dell'account** {{site.data.keyword.cloudaccesstrailshort}} disponibile nell'ubicazione (regione) {{site.data.keyword.Bluemix_notm}} in cui vengono generati gli eventi. 
+Gli eventi {{site.data.keyword.cloudaccesstrailshort}} sono disponibili nel **dominio dell'account** {{site.data.keyword.cloudaccesstrailshort}} disponibile nell'ubicazione (regione) {{site.data.keyword.Bluemix_notm}} in cui vengono generati gli eventi.
 
 
 

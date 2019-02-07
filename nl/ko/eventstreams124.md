@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-04"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-07-04"
 {: #security }
 
 각 리소스에 대해 각 사용자에게 부여할 액세스 권한을 관리하는 위한 세부적인 방식으로 {{site.data.keyword.messagehub}} 리소스의 보안을 설정할 수 있습니다.
+{: shortdesc}
 
 ## 어떻게 보안을 설정할 수 있습니까?
 

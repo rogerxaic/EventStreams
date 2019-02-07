@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-15"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-11-15"
 Para começar a usar o {{site.data.keyword.messagehub}} e iniciar o envio e recebimento
 de mensagens, é possível usar a amostra Java™. A amostra exibe como um produtor envia mensagens para um consumidor usando um tópico. O
 mesmo programa de amostra é usado para consumir e produzir mensagens.
+{: shortdesc}
 
 Para entender mais sobre como o {{site.data.keyword.messagehub}} funciona, consulte
 [Sobre o {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}}  foi chamado anteriormente de Message Hub.
@@ -61,27 +62,23 @@ do {{site.data.keyword.messagehub}} é aberta.
     <pre class="pre">
     git clone https://github.com/ibm-messaging/event-streams-samples.git
     </pre>
-	{: codeblock}
 
 5. Mude o diretório para a amostra do console java executando o comando a seguir:
 
     <pre class="pre">
     cd event-streams-samples/kafka-java-console-sample
     </pre>
-	{: codeblock}
 
 6. Execute os seguintes comandos de construção:
 
     <pre class="pre">
     gradle clean && gradle build
     </pre>
-	{: codeblock}
 
 7. {: #start_consumer_step notoc} Inicie o consumidor em seu console executando o comando a seguir:
 
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname"> kafka_brokers_sasl </var>  <var class="keyword varname"> kafka_admin_url </var>  token <var class="keyword varname"> :api_key </var>  -consumer</pre>
-    {: codeblock}
     
     A amostra usa um tópico denominado `kafka-java-console-sample-topic`. Se o tópico
 ainda não existir, a amostra o criará usando a API de administração do {{site.data.keyword.messagehub}}. Para enviar e receber mensagens, a amostra usa a API do Apache Kafka Java.
@@ -98,7 +95,6 @@ deve ser colocada entre aspas. Por exemplo:
     <pre class="pre">
     "host1:port1,host2:port2"
     </pre>
-	{: codeblock}
 
     Recomendamos usar todos os hosts do Kafka listados nas **Credenciais** que você
 selecionou.
@@ -107,7 +103,6 @@ selecionou.
    
     <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
 	<var class="keyword varname"> kafka_brokers_sasl </var>  <var class="keyword varname"> kafka_admin_url </var>  token <var class="keyword varname"> :api_key </var>  -producer</pre>
- {: codeblock}
   
 9. Agora as mensagens enviadas pelo produtor deverão aparecer no consumidor. A seguir está uma saída de
 amostra:

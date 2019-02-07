@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-28"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-28"
 {: #plan_choose}
 
 {{site.data.keyword.messagehub}} 可提供两种不同的套餐：标准套餐和企业套餐，具体取决于您的要求。
+{: shortdesc}
 
 ## 标准套餐
 

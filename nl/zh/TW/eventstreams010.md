@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-07"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-07"
 # 何謂 {{site.data.keyword.messagehub}}？
 {: #about}
 
-{{site.data.keyword.messagehub_full}} 以 Apache Kafka 建置的高產量訊息匯流排。它針對將事件汲取至 {{site.data.keyword.Bluemix_notm}} 及服務與應用程式之間的事件串流配送而最佳化。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
+{{site.data.keyword.messagehub_full}} 以 Apache Kafka 建置的高產量訊息匯流排。它是服務形式的完全管理 Apache Kafka，針對將事件汲取至 {{site.data.keyword.Bluemix_notm}} 及服務與應用程式之間的事件串流配送而最佳化。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
 {: shortdesc}
 
 您可以使用 {{site.data.keyword.messagehub}} 來完成下列作業：

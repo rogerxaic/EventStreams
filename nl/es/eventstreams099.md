@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -21,6 +21,7 @@ lastupdated: "2018-05-25"
 {: #mql_java}
 
 Para utilizar la API, añada una referencia a la última API de cliente {{site.data.keyword.mql}} disponible para Java de la siguiente manera:
+{: shortdesc}
 
 Añada la siguiente referencia al archivo <code>Maven</code>:
 

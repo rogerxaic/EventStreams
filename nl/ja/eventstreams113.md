@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 Kafka Connect を {{site.data.keyword.messagehub}} と共に使用して、{{site.data.keyword.Bluemix_short}} の内外のワーカーを実行することができます。
+{: shortdesc}
 
 Kafka Connect は、スタンドアロン・モードまたは分散モードで実行することができます。 スタンドアロン・モードは、テストのため、そしてシステム間の一時的な接続のためのものです。 分散モードは、実動環境での使用に適しています。 これらの 2 つのモードでは、{{site.data.keyword.messagehub}} を使用するために必要な構成が少し異なります。
 {:shortdesc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-28"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-11-28"
 # Utilisation de l'API Kafka
 {: #kafka_using}
 
-Si vous utilisez les clients Java, vous pouvez utiliser les clients Kafka 0.10.x ou ultérieurs disponibles. 
+Si vous utilisez les clients Java, vous pouvez utiliser les clients Kafka 0.10.x ou ultérieurs disponibles. Pour plus d'informations, voir [Choix d'un client Kafka pour une utilisation avec {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams062.html#kafka_clients).
+{: shortdesc}
 
 Les clients Kafka existent en plusieurs langages et nous fournissons des instructions pour certains d'entre eux. Vous pouvez en utiliser d'autres, mais vous aurez besoin d'une prise en charge SASL PLAIN pour les données d'identification. De plus, si vous utilisez le plan Enterprise, vous devrez également utiliser l'extension SNI (Server Name Indication) au protocole TLSv1.2.
 
@@ -49,7 +50,5 @@ Les clients Kafka existent en plusieurs langages et nous fournissons des instruc
 
 </table>
 
-Pour plus d'informations sur les API producteur et consommateur, voir
-[API producteur Kafka 0.11.0.X ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} et
-[API consommateur Kafka 0.11.0.X ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
+Pour plus d'informations sur les API producteur et consommateur, voir [Package org.apache.kafka.clients.producer![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} et [Package org.apache.kafka.clients.consumer![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
 

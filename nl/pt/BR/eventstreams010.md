@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-07"
+  years: 2015, 2019
+lastupdated: "2018-12-21"
 
 ---
 
@@ -15,8 +15,8 @@ lastupdated: "2018-11-07"
 # O que é o {{site.data.keyword.messagehub}}?
 {: #about}
 
-O {{site.data.keyword.messagehub_full}} é um barramento de mensagem de alto rendimento desenvolvido com o Apache Kafka. Ele é otimizado para a ingestão de eventos no {{site.data.keyword.Bluemix_notm}} e para a distribuição de fluxo de eventos entre
-os seus serviços e os seus aplicativos. O {{site.data.keyword.messagehub}}  era conhecido anteriormente como Message Hub.
+O {{site.data.keyword.messagehub_full}} é um barramento de mensagem de alto rendimento desenvolvido com o Apache Kafka. É
+um Apache Kafka totalmente gerenciado como um serviço que é otimizado para a ingestão de eventos no {{site.data.keyword.Bluemix_notm}} e distribuição do fluxo do evento entre seus serviços e aplicativos. O {{site.data.keyword.messagehub}}  era conhecido anteriormente como Message Hub.
 {: shortdesc}
 
 É possível usar o {{site.data.keyword.messagehub}} para concluir as tarefas a seguir:

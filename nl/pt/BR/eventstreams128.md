@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-07-05"
 
 ---
@@ -24,6 +24,7 @@ Se estiver usando um cliente Kafka em 0.11 ou mais recente ou o Streams Kafka em
 mais recente, será possível utilizar APIs para criar e excluir tópicos. Colocamos algumas restrições nas
 configurações permitidas ao criar tópicos. Atualmente, é possível modificar somente as configurações
 a seguir:
+{: shortdesc}
 
 <dl>
 <dt>cleanup.policy</dt>

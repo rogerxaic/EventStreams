@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 {: #restrictions}
 
 {{site.data.keyword.messagehub}} 사용 중에 문제점을 발견하면 알려진 제한사항 및 임시 해결책을 검토하십시오. 
-
+{: shortdesc}
 
 ## Kafka 부트스트랩 서버가 실패하는 경우 Java Kafka 호출은 장애 복구를 수행하지 않음
 {: #calls_failover}

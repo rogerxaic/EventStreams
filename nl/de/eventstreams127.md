@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-07"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-07"
 {: #connecting}
 
 Die Art der Herstellung einer Verbindung zu {{site.data.keyword.messagehub}} variiert abhängig davon, ob Sie den Plan "Standard" oder den Plan "Enterprise" verwenden und auch je nachdem, ob die Verbindung von einer Cloud Foundry-Anwendung oder einem beliebigen anderen externen Client hergestellt wird. Sie müssen zwei Einzelinformationen abrufen, um eine Verbindung zu einer der {{site.data.keyword.messagehub}}-APIs herstellen zu können:
+{: shortdesc}
 
 * Endpunkt-URLs für die APIs
 * Berechtigungsnachweise für die Authentifizierung

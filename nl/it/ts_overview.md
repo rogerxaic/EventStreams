@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-09-10"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-09-10"
 Se hai una domanda su {{site.data.keyword.messagehub}}, dai un'occhiata al
 [canale Stack Overflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/questions/tagged/message-hub){: new_window} dedicato per vedere se già ha avuto risposta.
 In caso negativo, invia la tua domanda; risponderà un membro del team di sviluppo {{site.data.keyword.messagehub}} oppure la più ampia platea della community.
+{: shortdesc}
 
 Se riscontri un problema con {{site.data.keyword.messagehub}}, per prima cosa controlla la [pagina sugli stati di {{site.data.keyword.Bluemix_notm}}  ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/status){:new_window}. Se desideri quindi assistenza dal team
 di {{site.data.keyword.messagehub}}, assicurati di aver fornito tutte le informazioni necessarie come descritto in [Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - Piano Standard](/docs/services/EventStreams/eventstreams109.html) o [Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - Piano Enterprise](/docs/services/EventStreams/eventstreams125.html).

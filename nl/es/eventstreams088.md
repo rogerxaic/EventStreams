@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -38,7 +38,7 @@ Puede encontrar puentes útiles en los dos siguientes casos de ejemplo habituale
 * Proporcionamos los siguientes tipos de puente: 
   - [El puente de MQ](/docs/services/EventStreams/eventstreams105.html){:new_window}, que obtiene datos de mensajes de {{site.data.keyword.IBM}} MQ y los transfiere a un tema en {{site.data.keyword.messagehub}}. A largo plazo, tenemos la intención de dar soporte a una variedad más amplia de puentes.
   - [El puente de Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}, que transfiere datos de {{site.data.keyword.messagehub}} a una instancia del servicio [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. 
-  - El puente de [{{site.data.keyword.objectstorageshort}} ](/docs/services/EventStreams/eventstreams089.html){:new_window} está en desuso desde el 1 de agosto de 2018. Para obtener más información, consulte el anuncio acerca del desuso: [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
+  - El [puente de {{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams/eventstreams089.html){:new_window} está en desuso desde el 1 de agosto de 2018. Para obtener más información, consulte el anuncio acerca del desuso: [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
 * Actualmente, los puentes están disponibles en todos los entornos públicos de {{site.data.keyword.Bluemix_notm}}. Los puentes no están disponibles en {{site.data.keyword.Bluemix_short}} Dedicated.
 * Puede administrar puentes de las dos formas siguientes:
   - Utilizando una [API REST ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-docs){:new_window}, que es la ampliación de la API de administración de {{site.data.keyword.messagehub}} existente. Encontrará ejemplos sobre cómo utilizar de curl para gestionar el ciclo de vida de los puentes en [message-hub-docs ![Icono de mensaje externo](../../icons/launch-glyph.svg "Icono de mensaje externo")](https://github.com/ibm-messaging/event-streams-docs){:new_window}. Es posible que, durante el desarrollo de puentes, esta API REST cambie. Intentaremos estabilizar esta API.

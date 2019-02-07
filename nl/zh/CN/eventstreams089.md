@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -19,7 +19,8 @@ lastupdated: "2018-11-08"
 **{{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起已弃用。**
 <br/>
 
-因为 {{site.data.keyword.objectstorageshort}} 网桥连接的底层服务已弃用，所以 {{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起也已弃用。 
+因为 {{site.data.keyword.objectstorageshort}} 网桥连接的底层服务已弃用，所以 {{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起也已弃用。
+{: shortdesc}
 
 在 {{site.data.keyword.objectstorageshort}} 服务达到使用期限被废弃后，{{site.data.keyword.objectstorageshort}} 网桥的所有实例也将被废弃。有关更多信息，请参阅[弃用声明：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
 

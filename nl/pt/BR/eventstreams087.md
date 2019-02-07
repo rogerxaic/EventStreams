@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-06"
 
 ---
@@ -15,8 +15,8 @@ lastupdated: "2018-06-06"
 # Escolhendo entre as três APIs (plano Standard)
 {: #choose_api}
 
-O {{site.data.keyword.messagehub}} suporta três APIs no plano Standard. A seguir há algumas informações para ajudá-lo
-a escolher o que é mais apropriado:
+O {{site.data.keyword.messagehub}} suporta três APIs no plano Standard. Aqui estão algumas informações para ajudar você a escolher qual é a mais apropriada.
+{: shortdesc}
 
 ## Por que usar a API Kafka?
 {: #why_kafka notoc}

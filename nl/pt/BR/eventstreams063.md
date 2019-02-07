@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-22"
 
 ---
@@ -21,7 +21,7 @@ a seguir:
 * as credenciais <code>kafka_brokers_sasl</code>, além de <code>user</code> e <code>password</code> da [variável de ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html#vcap).
 * a chave de serviço. Para obter mais informações, consulte
 [Conectando-se ao seu cluster](/docs/services/EventStreams/eventstreams127.html#enterprise_connect).
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## Usando a propriedade sasl.jaas.config (conectando e autenticando em um aplicativo Java)

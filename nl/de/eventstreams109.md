@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2018-12-07"
 
 ---
 
@@ -22,7 +22,7 @@ Wenn ein Problem mit {{site.data.keyword.messagehub}} auftritt, überprüfen Sie
 Wenn Sie Unterstützung vom {{site.data.keyword.messagehub}}-Team benötigen, sammeln Sie bitte die folgenden Informationen. Je mehr Informationen Sie zu Beginn angeben können, desto effizienter kann Sie das Team bei der Lösung des Problems unterstützen.
 {:shortdesc}
 
-1. An welchem {{site.data.keyword.Bluemix_notm}}-Standort (in welcher Region) wird die {{site.data.keyword.messagehub}}-Instanz bereitgestellt? Beispiel: Dallas oder London. 
+1. An welchem {{site.data.keyword.Bluemix_notm}}-Standort (in welcher Region) wird die {{site.data.keyword.messagehub}}-Instanz bereitgestellt?  Beispiel: Dallas oder London. 
 2. In welcher Schnittstelle treten Probleme auf (Kafka, REST, AMQP oder Bridges)?
 3. Wann ist das Problem zum ersten Mal aufgetreten (Datum, genaue Uhrzeit und Zeitzone)? Wie lange war Ihre App zu diesem Zeitpunkt bereits aktiv?
 4. Tritt das Problem weiterhin auf? Können Sie das Problem erneut hervorrufen?
@@ -38,7 +38,7 @@ Sie finden diese ID im Feld "instance_id" in der JSON-Umgebungsvariablen VCAP_SE
 10. Wie wirkt sich das Problem auf Ihren Service aus?
 
 
-Sie können IBM die zusammengestellten Informationen in einem Support-Ticket zur Verfügung stellen, indem Sie [eine Support-Anforderung übergeben![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/get-support/howtogetsupport.html#open-ticket).
+Sie können IBM die zusammengestellten Informationen in einem Support-Ticket zur Verfügung stellen, indem Sie [eine Support-Anforderung übergeben![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/get-support/howtogetsupport.html#using-avatar).
 
 
 

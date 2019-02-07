@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-29"
 {: #apache_kafka}
 
 ![Kafka アーキテクチャー図。](kafka_overview.png "Kafka アーキテクチャーを示す図。プロデューサーは Kafka トピックを 3 つのパーティションを介してメッセージを配信していて、それらのメッセージはコンシューマーによってサブスクライブされています。")
-
+{: shortdesc}
 
 以下に、Apache Kafka の概念をいくつか定義してリストします。
 

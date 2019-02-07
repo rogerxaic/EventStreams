@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -15,8 +15,8 @@ lastupdated: "2018-06-29"
 # Apache Kafka-Konzepte
 {: #apache_kafka}
 
-![Diagramm der Kafka-Architektur.](kafka_overview.png "Diagramm einer Kafka-Architektur. Ein Producer sendet Nachrichten an ein Kafka-Topic über 3 Partitionen, und die Nachrichten werden dann von Consumern abonniert.")
-
+![Diagramm einer Kafka-Architektur](kafka_overview.png "Diagramm einer Kafka-Architektur. Ein Producer sendet Nachrichten an ein Kafka-Topic über 3 Partitionen, und die Nachrichten werden dann von Consumern abonniert.")
+{: shortdesc}
 
 Die folgende Liste enthält einige Apache Kafka-Konzepte:
 

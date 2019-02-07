@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-09-10"
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-09-10"
 {: #troubleshooting}
 
 如果您有 {{site.data.keyword.messagehub}} 的疑問，可以查看專用的 [Stack Overflow 頻道 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/questions/tagged/message-hub){: new_window}，確認是否已經回答。若否，請張貼您的問題，將會有 {{site.data.keyword.messagehub}} 開發團隊或是更廣泛社群的成員來回答。
-
+{: shortdesc}
 
 如果您遇到 {{site.data.keyword.messagehub}} 的問題，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/status){:new_window}。如果您接著需要 {{site.data.keyword.messagehub}} 團隊的協助，則請確定收集[向 {{site.data.keyword.messagehub}} 團隊報告問題 - 標準方案](/docs/services/EventStreams/eventstreams109.html)或[向 {{site.data.keyword.messagehub}} 團隊報告問題 - 企業方案](/docs/services/EventStreams/eventstreams125.html)中詳述的所有必要資訊。
 {:shortdesc}

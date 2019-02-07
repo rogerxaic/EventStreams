@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -23,6 +23,7 @@ Para conectar um aplicativo ao serviço, o aplicativo deve usar os detalhes de <
 <code>password</code> e <code>mqlight_lookup_url</code> da
 [variável de ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html). Use a
 seguinte orientação para sua linguagem escolhida:
+{: shortdesc}
 
 **Para Java**
 

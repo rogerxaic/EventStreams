@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-05-25"
 
 Die Kafka-REST-API stellt eine REST-konforme Schnittstelle zu einem Kafka-Cluster bereit. Mithilfe der API können Sie Nachrichten erstellen und
 verarbeiten. Weitere Informationen einschließlich der API-Referenzdokumentation finden Sie in den [Kafka-REST-Proxy-Dokumenten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}. Nur das eingebettete Binärformat wird für Anforderungen und Antworten in {{site.data.keyword.messagehub}} unterstützt. Die eingebetteten Avro- und JSON-Formate werden nicht unterstützt.
+{: shortdesc}
 
 Wenn Sie mit CURL arbeiten, können Sie für die Erstellung ein Beispiel wie das folgende verwenden:
 <pre class="pre"><code>

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-23"
 
 
 生產者是一個將訊息串流發佈至 Kafka 主題的應用程式。此資訊主要討論作為 Apache Kafka 專案一部分的 Java 程式設計介面。這些概念也套用於其他語言，但名稱有時會稍有不同。
+{: shortdesc}
 
 在程式設計介面中，訊息實際上被稱為記錄。例如，Java 類別 org.apache.kafka.clients.producer.ProducerRecord 用來表示來自生產者 API 觀點的訊息。可交換使用_記錄_ 及_訊息_ 術語，但基本上記錄是用來表示訊息。
 

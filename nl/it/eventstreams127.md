@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-07"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-07"
 {: #connecting}
 
 Il modo in cui stabilisci una connessione a {{site.data.keyword.messagehub}} varia a seconda del fatto che tu stia utilizzando il piano Standard oppure quello Enterprise e anche dal fatto che tu stia stabilendo la connessione da un'applicazione Cloud Foundry oppure da qualsiasi altro client esterno. Devi raccogliere due informazioni per stabilire una connessione a una qualsiasi delle API di {{site.data.keyword.messagehub}}:
+{: shortdesc}
 
 * Gli URL endpoint per le API
 * Le credenziali per l'autenticazione

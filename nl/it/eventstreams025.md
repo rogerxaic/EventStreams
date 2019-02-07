@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 L'API REST Kafka fornisce un'interfaccia RESTful a un cluster Kafka. Puoi produrre e consumare messaggi utilizzando l'API. Per ulteriori informazioni, inclusa la documentazione di riferimento dell'API, consulta la [Documentazione Kafka REST Proxy ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}. Solo il formato integrato binario è supportato per le richieste e le risposte in {{site.data.keyword.messagehub}}. I formati incorporati Avro e JSON non sono supportati.
+{: shortdesc}
 
 Se stai utilizzando CURL, puoi utilizzare un esempio come il seguente per produrre:
 <pre class="pre"><code>
@@ -65,7 +66,7 @@ dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstr
 Per eseguire l'autenticazione con l'API REST Kafka {{site.data.keyword.messagehub}}, devi specificare <code>api_key</code> nell'intestazione X-Auth-Token delle tue richieste.
 
 
-## Come utilizzare l'API 
+## Come utilizzare l'API
 {: #rest_how}
 
 <!-- info was in eventstreams097.md -->

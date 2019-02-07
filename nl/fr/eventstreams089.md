@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -20,10 +20,11 @@ lastupdated: "2018-11-08"
 <br/>
 
 Le pont {{site.data.keyword.objectstorageshort}} a été déprécié le 1er août 2018 suite à la dépréciation du service sous-jacent auquel il se connectait. 
+{: shortdesc}
 
 Une fois que le service {{site.data.keyword.objectstorageshort}} arrivant en fin de vie est déclassé, toutes les instances du pont {{site.data.keyword.objectstorageshort}} sont également déclassées. Pour en savoir plus, veuillez consulter [l'annonce d'obsolescence : {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Comme alternative, vous pouvez utiliser le [pont Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}.
+Comme alternative, vous pouvez utiliser le [pont Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
 {:deprecated}
 
 Le pont {{site.data.keyword.objectstorageshort}} vous permet d'archiver des données provenant des sujets Kafka de {{site.data.keyword.messagehub}} dans une instance du [service {{site.data.keyword.objectstorageshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ObjectStorage/index.html){:new_window} {{site.data.keyword.Bluemix_short}}. Le

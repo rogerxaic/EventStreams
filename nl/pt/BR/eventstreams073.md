@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-29"
 
 ---
@@ -15,9 +15,10 @@ lastupdated: "2018-06-29"
 # Conceitos do Apache Kafka
 {: #apache_kafka}
 
-![Diagrama da arquitetura Kafka.](kafka_overview.png "Diagrama que mostra uma arquitetura Kafka. Um produtor está alimentando umtópico Kafka sobre três partições e os consumidores estão se inscrevendo nas mensagens.")
+![Diagrama da
+arquitetura Kafka.](kafka_overview.png "Diagrama que mostra uma arquitetura Kafka. Um produtor está alimentando umtópico Kafka sobre três partições e os consumidores estão se inscrevendo nas mensagens.")
 
-
+{: shortdesc}
 
 A lista a seguir define alguns conceitos do Apache Kafka:
 

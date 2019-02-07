@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 Puoi utilizzare Kafka Connect con {{site.data.keyword.messagehub}} e puoi eseguire i nodi di lavoro all'interno o all'esterno di {{site.data.keyword.Bluemix_short}}.
+{: shortdesc}
 
 Kafka Connect può essere eseguito in modalità distribuita o autonoma. La modalità autonoma è destinata per la verifica e per le connessioni temporanee tra i sistemi. La modalità distribuita è più appropriata per l'utilizzo nella produzione. La configurazione necessaria per utilizzare {{site.data.keyword.messagehub}} con queste due modalità è leggermente differente.
 {:shortdesc}

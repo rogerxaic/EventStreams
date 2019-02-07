@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-11"
+  years: 2015, 2019
+lastupdated: "2018-12-07"
 
 ---
 
@@ -24,7 +24,7 @@ verifique a página de status do [{{site.data.keyword.Bluemix_notm}}
 Se quiser ajuda da equipe do {{site.data.keyword.messagehub}}, reúna todas as informações a seguir. Quanto mais informações você puder fornecer diretamente, mais eficientemente a equipe poderá ajudar com o problema:
 {:shortdesc}
 
-1. A sua instância do {{site.data.keyword.messagehub}} está provisionada em qual localização (região) do {{site.data.keyword.Bluemix_notm}}? Por exemplo, Dallas ou Londres. 
+1. A sua instância do {{site.data.keyword.messagehub}} está provisionada em qual localização (região) do {{site.data.keyword.Bluemix_notm}}?  Por exemplo, Dallas ou Londres. 
 2. Em qual interface você está encontrando problemas? Kafka, REST, AMQP ou pontes?
 3. Quando o primeiro problema ocorreu (especificamente hora, data e fuso horário)? Por quanto tempo
 seu aplicativo esteve em execução antes disso?
@@ -43,7 +43,7 @@ usando?
 
 
 É possível fornecer as informações reunidas para a IBM em um chamado de suporte [enviando uma solicitação
-de suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/get-support/howtogetsupport.html#open-ticket).
+de suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/get-support/howtogetsupport.html#using-avatar).
 
 
 

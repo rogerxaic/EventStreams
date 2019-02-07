@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-22"
 
 ---
@@ -20,7 +20,7 @@ Zum Herstellen einer Verbindung zu {{site.data.keyword.messagehub}} verwendet di
 * Die <code>kafka_brokers_sasl</code>-Berechtigungsnachweise sowie <code>user</code> und <code>password</code> aus der
 [Umgebungsvariablen VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html#vcap).
 * Den Serviceschlüssel. Weitere Informationen finden Sie in [Verbindung zum Cluster herstellen](/docs/services/EventStreams/eventstreams127.html#enterprise_connect).
-
+{: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
 ## Eigenschaft 'sasl.jaas.config' verwenden (Herstellen einer Verbindung und Authentifizierung in einer Java-Anwendung)

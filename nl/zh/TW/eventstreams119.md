@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-06-01"
 
 
 {{site.data.keyword.iot_full}} 提供一個受管理的橋接器，容許您建立與 {{site.data.keyword.messagehub_full}} 的單向鏈結。
+{: shortdesc}
 
 將 {{site.data.keyword.messagehub}} 連接至 {{site.data.keyword.iot_short_notm}}，表示您可以使用 {{site.data.keyword.messagehub}} 作為事件管線，以從 {{site.data.keyword.iot_short_notm}} 中取用裝置事件，並即時將事件提供給平台的其餘部分使用。 
 

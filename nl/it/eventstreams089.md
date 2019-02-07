@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -20,10 +20,11 @@ lastupdated: "2018-11-08"
 <br/>
 
 Poiché il servizio sottostante a cui si collega il bridge {{site.data.keyword.objectstorageshort}} è obsoleto, anche il bridge {{site.data.keyword.objectstorageshort}} è diventato obsoleto dal primo agosto 2018. 
+{: shortdesc}
 
 Quando il servizio {{site.data.keyword.objectstorageshort}} raggiunge il termine del suo ciclo di vita e viene disattivato, saranno disattivate anche tutte le istanze del bridge {{site.data.keyword.objectstorageshort}}. Per ulteriori informazioni, vedi l'[annuncio di funzionalità deprecata: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Come alternativa, puoi utilizzare il [Bridge Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}.
+Come alternativa, puoi utilizzare il [Bridge Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
 {:deprecated}
 
 Il bridge {{site.data.keyword.objectstorageshort}} ti consente

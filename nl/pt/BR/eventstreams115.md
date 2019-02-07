@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -20,6 +20,7 @@ lastupdated: "2018-06-01"
 
 A ponte do {{site.data.keyword.IBM}} Cloud Object Storage fornece uma maneira de ler dados de um tópico do {{site.data.keyword.messagehub}} Kafka
 e de colocá-los no [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+{: shortdesc}
 
 A ponte do Cloud Object Storage permite arquivar dados de tópicos do Kafka no
 {{site.data.keyword.messagehub}} em uma instância do serviço do [Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos
@@ -229,8 +230,7 @@ deve conter um valor de data de ISO 8601 válido. Em seguida, as mensagens são 
 suas datas.
 	
 	Uma ponte configurada como este exemplo gera objetos com nomes especificados como segue:
- `<object_a>` contém mensagens JSON com campos `"timestamp"` com
- uma data de 07/12/2016 e `<object_b>` e `<object_c>` contêm mensagens JSON com campos `"timestamp"` com uma data de
+ `<object_a>` contém mensagens JSON com campos `"timestamp"` com uma data de 07/12/2016 e `<object_b>` e `<object_c>` contêm mensagens JSON com campos `"timestamp"` com uma data de
  08/12/2016.
 
     <pre class="pre"><code>

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-06-01"
 
 
 {{site.data.keyword.iot_full}}에서는 {{site.data.keyword.messagehub_full}}에 대한 단방향 링크를 작성할 수 있는 관리 브릿지를 제공합니다.
+{: shortdesc}
 
 {{site.data.keyword.messagehub}}를 {{site.data.keyword.iot_short_notm}}에 연결하면 {{site.data.keyword.messagehub}}를 이벤트 파이프라인으로 사용하여 {{site.data.keyword.iot_short_notm}}의 디바이스 이벤트를 이용하고 나머지 플랫폼에서 실시간으로 이벤트를 사용 가능하게 할 수 있습니다. 
 

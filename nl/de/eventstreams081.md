@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -22,6 +22,7 @@ lastupdated: "2018-05-25"
 
 {{site.data.keyword.mql}}-Nachrichten werden in einem einzigen Kafka-Basistopic mit dem Namen "MQLight" gespeichert und codiert, wie in der folgenden Tabelle angegeben. Diese Codierung kann auch von anderen API-Typen (z. B. Kafka- oder Kafka-REST-APIs) verwendet werden, um Nachrichten mit Anwendungen über die
 {{site.data.keyword.mql}}-API auszutauschen.
+{: shortdesc}
 
 ## Kafka-Nachrichtenformat
 {: #kafka_format notoc}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-28"
 
 ---
@@ -17,10 +17,11 @@ lastupdated: "2018-11-28"
 {: #plan_choose}
 
 {{site.data.keyword.messagehub}} está disponible como dos planes diferentes en función de sus requisitos: Estándar y Empresa.
+{: shortdesc}
 
 ## Plan Estándar
 
-El plan Estándar resulta adecuado si requiere funciones de ingestión y distribución de sucesos, pero no necesita las ventajas adicionales del plan Empresa. El plan Estándar ofrece acceso compartido a un clúster de {{site.data.keyword.messagehub}} multiarrendatario.
+El plan Estándar resulta adecuado si requiere funciones de ingesta y distribución de sucesos, pero no necesita las ventajas adicionales del plan Empresa. El plan Estándar ofrece acceso compartido a un clúster de {{site.data.keyword.messagehub}} multiarrendatario.
 
 ## Plan Empresa 
 

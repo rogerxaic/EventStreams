@@ -47,7 +47,7 @@ lastupdated: "2018-08-14"
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->
 
-{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 이벤트가 생성되는 {{site.data.keyword.Bluemix_notm}} 위치(지역)에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에 있습니다. 
+{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 이벤트가 생성되는 {{site.data.keyword.Bluemix_notm}} 위치(지역)에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에 있습니다.
 
 
 

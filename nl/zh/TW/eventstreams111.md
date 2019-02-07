@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-25"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-06-25"
 {: #kafka_streams }
 
 主題 API 可搭配 {{site.data.keyword.messagehub}} 運作，不需要設定。請使用 <code>sasl.jaas.config</code> 或 JAAS 檔案指定 SASL 認證，並將 <code>replication.factor</code> 設為 3。
+{: shortdesc}
 
 請確定您使用 Streams 0.10.2 或更新版本。   
 

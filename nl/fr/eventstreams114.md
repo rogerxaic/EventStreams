@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-03-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-03-23"
 {: #consuming_messages }
 
 Un consommateur est une application qui consomme les flux de messages issus des sujets Kafka. Un consommateur peut s'abonner à un ou plusieurs sujets ou partitions. Ces informations se concentrent sur l'interface de programmation Java qui fait partie du projet Apache Kafka. Les concepts s'appliquent également à d'autres langages, mais avec des noms parfois légèrement différents.
+{: shortdesc}
 
 Lorsqu'un consommateur se connecte à Kafka, il établit une connexion d'amorçage initiale. Cette connexion peut viser n'importe quel serveur du cluster. Le consommateur demande des informations concernant la partition et le responsable du sujet qu'il veut "consommer". Puis il établit une autre connexion au responsable de la partition et peut commencer à consommer des messages. Ces actions s'exécutent automatiquement en interne lorsque votre consommateur se connecte au cluster Kafka.
 

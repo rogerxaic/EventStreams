@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-23"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-06-23"
 
 
 Un producteur est une application qui publie des flux de messages dans des sujets Kafka. Ces informations se concentrent sur l'interface de programmation Java qui fait partie du projet Apache Kafka. Les concepts s'appliquent également à d'autres langages, mais avec des noms parfois légèrement différents.
+{: shortdesc}
 
 Dans les interfaces de programmation, un message est appelé enregistrement. Ainsi, la classe Java org.apache.kafka.clients.producer.ProducerRecord est utilisée pour représenter un message du point de vue de l'API producteur. Les termes _enregistrement_ et _message_ sont interchangeables, mais le terme enregistrement est majoritairement utilisé pour désigner un message.
 

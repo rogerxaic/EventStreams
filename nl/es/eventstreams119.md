@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-01"
 
 ---
@@ -18,6 +18,7 @@ lastupdated: "2018-06-01"
 
 
 {{site.data.keyword.iot_full}} proporciona un puente gestionado que le permite crear un enlace unidireccional a {{site.data.keyword.messagehub_full}}.
+{: shortdesc}
 
 Conectar {{site.data.keyword.messagehub}} con {{site.data.keyword.iot_short_notm}} significa que puede utilizar {{site.data.keyword.messagehub}} como conducto de sucesos para consumir los sucesos de su dispositivo desde {{site.data.keyword.iot_short_notm}} y hacer que los sucesos estén disponibles en tiempo real para el resto de la plataforma. 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -20,8 +20,8 @@ lastupdated: "2018-05-25"
 ** MQ Light API 只提供於標準方案中。**
 <br/>
 
-{{site.data.keyword.mql}} 訊息儲存在稱為 "MQLight" 的單一基礎 Kafka 主題，並詳細編碼於下表中。此編碼也可供其他 API 類型（例如 Kafka 或 Kafka REST）用來與使用
-{{site.data.keyword.mql}} API 的應用程式交換訊息。
+{{site.data.keyword.mql}} 訊息儲存在稱為 "MQLight" 的單一基礎 Kafka 主題，並詳細編碼於下表中。此編碼也可供其他 API 類型（例如 Kafka 或 Kafka REST）用來與使用 {{site.data.keyword.mql}} API 的應用程式交換訊息。
+{: shortdesc}
 
 ## Kafka 訊息格式
 {: #kafka_format notoc}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2017-11-02"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2017-11-02"
 {: #kafka_connect }
 
 您可以使用 Kafka Connect 搭配 {{site.data.keyword.messagehub}}，且可以在 {{site.data.keyword.Bluemix_short}} 內部或外部執行工作者節點。
+{: shortdesc}
 
 Kafka Connect 可以用獨立式或分散式模式執行。獨立式模式是用於系統之間的測試及暫存連線。分散式模式更適合正式作業使用。這兩種模式要與 {{site.data.keyword.messagehub}} 搭配使用所需的配置略有不同。
 {:shortdesc}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-08"
 
 ---
@@ -20,10 +20,11 @@ lastupdated: "2018-11-08"
 <br/>
 
 {{site.data.keyword.objectstorageshort}} 브릿지에서 연결하는 기본 서비스가 더 이상 사용되지 않으므로 {{site.data.keyword.objectstorageshort}} 브릿지도 2018년 8월 1일부터 더 이상 사용되지 않습니다. 
+{: shortdesc}
 
 {{site.data.keyword.objectstorageshort}} 서비스가 기한 끝에 도달하고 사용이 중지되면 {{site.data.keyword.objectstorageshort}} 브릿지의 모든 인스턴스도 사용이 중지됩니다. 자세한 정보는 [사용 중단 공지사항: {{site.data.keyword.objectstorageshort}} OpenStack Swift(PaaS) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}를 참조하십시오. 
 
-대안으로서 [Cloud Object Storage 브릿지](/docs/services/EventStreams/eventstreams115.html){:new_window}를 사용할 수 있습니다.
+대안으로서 [Cloud Object Storage 브릿지](/docs/services/EventStreams/eventstreams115.html){:new_window}를 사용할 수 있습니다. 
 {:deprecated}
 
 {{site.data.keyword.objectstorageshort}} 브릿지는

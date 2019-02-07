@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-02-06"
 
 ---
@@ -16,6 +16,7 @@ lastupdated: "2018-02-06"
 {: #ksql_using}
 
 스트림 처리를 위해 {{site.data.keyword.messagehub}}와 함께 [KSQL ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/confluentinc/ksql){:new_window}을 사용할 수 있습니다. 반드시 KSQL 0.4 이상을 사용해야 합니다. 
+{: shortdesc}
 
 다음 단계를 완료하십시오.
 

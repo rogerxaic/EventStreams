@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 {: #restrictions}
 
 En cas de problème lors de l'utilisation de {{site.data.keyword.messagehub}}, passez en revue ces restrictions et solutions connues. 
-
+{: shortdesc}
 
 ## Les appels Java Kafka ne basculent pas en cas de défaillance du serveur d'amorce Kafka
 {: #calls_failover}

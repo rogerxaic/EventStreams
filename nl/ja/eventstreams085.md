@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-11-28"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-11-28"
 {: #plan_choose}
 
 {{site.data.keyword.messagehub}} は、必要に応じて、標準プランとエンタープライズ・プランという 2 つのプランでご使用いただけます。
+{: shortdesc}
 
 ## 標準プラン
 
@@ -77,7 +78,7 @@ lastupdated: "2018-11-28"
 			<td>ダラス (us-south)</br>
 			ロンドン (eu-gb)</br>
 			シドニー (au-syd))</br>
-			フランクフルト (eu-de) - {{site.data.keyword.mql}} API なし</td>
+			フランクフルト (eu-de) - {{site.data.keyword.mql}} API なし </td>
 			<td>ダラス (us-south)</br>
 			ワシントン (us-east))<br/>
 			ロンドン (eu-gb)<br/>

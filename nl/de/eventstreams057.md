@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-06-26"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2018-06-26"
 {: #restrictions}
 
 Wenn bei der Verwendung von {{site.data.keyword.messagehub}} Probleme auftreten, prüfen Sie die hier beschriebenen bekannten Einschränkungen und Problemumgehungen. 
-
+{: shortdesc}
 
 ## Keine Funktionsübernahme durch Java-Kafka-Aufrufe, wenn ein Kafka-Bootstrap-Server fehlschlägt
 {: #calls_failover}

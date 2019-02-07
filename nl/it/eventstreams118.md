@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-01-16"
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-01-16"
 {: #partition_leadership }
 
 Ogni partizione ha un server nel cluster che funge da suo leader e altri server che fungono da follower. Tutte le richieste di produzione e consumo per la partizione sono gestite dal leader. I follower replicano i dati della partizione dal leader con l'obiettivo di tenere il passo con quest'ultimo. Se un follower sta tenendo il passo con un leader di una partizione, la sua replica è sincronizzata. 
+{: shortdesc}
 
 Quando viene inviato al leader della partizione, tale messaggio non è immediatamente disponibile per i consumatori. Il leader accoda il record per il messaggio alla partizione, assegnando ad esso il numero di offset successivo per tale partizione. Dopo che tutti i follower per le repliche sincronizzate hanno replicato il record e riconosciuto che hanno scritto il record nelle loro repliche, per il record si considera ora eseguito il *commit*. Il messaggio è disponibile per i consumatori.
 

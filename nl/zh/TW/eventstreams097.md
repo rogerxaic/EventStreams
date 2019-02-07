@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-08-30"
 
 ---
@@ -31,6 +31,7 @@ lastupdated: "2018-08-30"
 -->
 
 {{site.data.keyword.messagehub}} Kafka REST API 範例是一個 Node.js 應用程式，它會透過 Kafka REST API 連接至 {{site.data.keyword.messagehub}}，以生產及取用訊息。
+{: shortdesc}
 
 範例程式碼位於 [event-streams-samples GitHub 專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}。
 

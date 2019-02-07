@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 lastupdated: "2018-05-25"
 
 ---
@@ -19,6 +19,7 @@ lastupdated: "2018-05-25"
 <br/>
 
 Kafka REST API 提供 Kafka 叢集的 RESTful 介面。您可以使用 API 生產和使用訊息。如需包括 API 參考資料文件的相關資訊，請參閱 [Kafka REST Proxy 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}。{{site.data.keyword.messagehub}} 中的要求及回應只支援二進位內嵌格式。不支援 Avro 及 JSON 內嵌格式。
+{: shortdesc}
 
 如果您使用 CURL，可以使用類似如下的範例來生產：
 <pre class="pre"><code>
