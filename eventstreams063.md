@@ -13,7 +13,7 @@ lastupdated: "2018-06-22"
 {:pre: .pre}
 
 # Configuring your Kafka API client
-{: #kafka_connect}
+{: #kafka_api_client}
 
 
 To connect to {{site.data.keyword.messagehub}}, the Kafka API uses one of the following sets of credential information: 
