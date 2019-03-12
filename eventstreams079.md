@@ -18,7 +18,7 @@ subcollection: eventstreams
 
 <!-- 12/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # How to connect and authenticate
-{: #mql_connect}
+{: #mql_connect_authenticate}
 
 ** The MQ Light API is available as part of the Standard plan only.**
 <br/>

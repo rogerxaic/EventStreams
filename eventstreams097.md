@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 
 # How to use the Kafka REST API
-{: #rest_how}
+{: #rest_api_how}
 
 <!-- info moved to eventstreams025.md because of doc app changes -->
 ** The Kafka REST API is available as part of the Standard plan only.**

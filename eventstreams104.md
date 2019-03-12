@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 
 # Using the Kafka Java client
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 

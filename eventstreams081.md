@@ -19,7 +19,7 @@ subcollection: eventstreams
 
 <!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Exchanging messages between the MQ Light API and the Kafka or Kafka REST APIs
-{: #mql_exchange}
+{: #mql_exchange_rest}
 
 ** The MQ Light API is available as part of the Standard plan only.**
 <br/>
@@ -29,7 +29,7 @@ subcollection: eventstreams
 {: shortdesc}
 
 ## Kafka message format
-{: #kafka_format notoc}
+{: #kafka_message_format notoc}
 
 <table border='1'>
 <caption>Table 1. Kafka message format</caption>

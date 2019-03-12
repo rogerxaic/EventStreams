@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 
 # How to connect and authenticate
-{: #rest_connect}
+{: #rest_connect_authenticate}
 
 <!-- info moved to eventstreams025.md because of doc app changes -->
 ** The Kafka REST API is available as part of the Standard plan only.**
