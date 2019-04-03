@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-01"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -19,10 +23,10 @@ lastupdated: "2018-06-01"
 <br/>
 
 El puente de {{site.data.keyword.IBM}} Cloud Object Storage proporciona una forma de leer datos de un tema Kafka de {{site.data.keyword.messagehub}}
-y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
 {: shortdesc}
 
-El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un contenedor del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
+El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un contenedor del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
 
 * El nombre de grupo en el que se graban los objetos.
 * La frecuencia con que se cargan los objetos en el servicio Cloud Object Storage.
@@ -60,7 +64,7 @@ Debe proporcionar credenciales para permitir que el puente de Cloud Object Stora
    Como alternativa, puede tomar los campos <code>apikey</code> e <code>id_instancia_servicio</code> y entrarlos en el panel de control de {{site.data.keyword.messagehub}} o establecerlos en el JSON de creación de puente si está creando el puente directamente utilizando una llamada REST.
 
 La credencial que cree otorga acceso de escritor a toda la instancia de Cloud Object Storage, por lo tanto, es posible que desee restringir este acceso al grupo con el que interactuará el puente.
-1. Vaya a la [página de Identity & Access Management ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/iam/?env_id=ibm%3Ayp%3Aus-south#/serviceids){:new_window}.
+1. Vaya a la [página de gestión de accesos y usuarios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/iam#/overview){:new_window}.
 2. Debería ver el ID de servicio generado automáticamente en esta página. Cuando haya identificado el ID específico, seleccione la acción **Gestionar ID de servicio**. 
 3. Seleccione la acción **Editar política** para restringirlo a un **Tipo de recurso** determinado, que es el grupo y un **ID de recurso**, que es el nombre del grupo. Pulse **Guardar**.
 

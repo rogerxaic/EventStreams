@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -103,7 +107,7 @@ Si tiene un archivo de manifiesto, puede crear una app nueva con este mandato:</
  <code>ibmcloud app env <var class="keyword varname">nombre_app</var></code>. 
 </li>
 <li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html).
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Es posible que tenga que volver a transferir la aplicación para que los cambios entren en vigor.</p></li>
 </ol>
 
@@ -123,7 +127,7 @@ Para las aplicaciones que se ejecutan fuera de Cloud Foundry, las credenciales s
 6. Especifique los detalles de la nueva credencial como un nombre y pulse **Añadir**. Aparece una nueva credencial en la lista de credenciales.
 7. Pulse esta credencial en **Ver credenciales** para ver los detalles en formato JSON.
 8. Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html).
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 
 ### Obtención de credenciales mediante la CLI de IBM Cloud 
 {: #connect_standard_external_cli }
@@ -145,15 +149,15 @@ o utilizar una clave de servicio existente: <br/>
 <code>ibmcloud service key-show <var class="keyword varname">nombre_servicio</var> <var class="keyword varname">nombre_clave_servicio</var></code></br>
 Esto devuelve los detalles de la clave de servicio en formato JSON.</li>
 <li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html).</li>
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).</li>
 </ol>
 
  
 ## Visión general del plan Empresa
 {: #connect_enterprise}
 
-Los servicios suministrados mediante el plan Empresa se agrupan en el panel de control bajo la cabecera **Servicios**. El plan Empresa está [habilitado para IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}. No es necesario que entienda IAM para empezar a trabajar, pero se recomienda tener algunos conocimientos si desea proteger el servicio {{site.data.keyword.messagehub}}. Para obtener más información, consulte
-[Protección de los recursos de {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams124.html)
+Los servicios suministrados mediante el plan Empresa se agrupan en el panel de control bajo la cabecera **Servicios**. El plan Empresa está [habilitado para IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}. No es necesario que entienda IAM para empezar a trabajar, pero se recomienda tener algunos conocimientos si desea proteger el servicio {{site.data.keyword.messagehub}}. Para obtener más información, consulte
+[Protección de los recursos de {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-security).
 
 Siga los pasos siguientes para enlazar la aplicación y obtener claves de servicio para el servicio. Para tener autorización para crear temas, la aplicación o la clave de servicio deben tener un rol con acceso de gestor.
 
@@ -207,7 +211,7 @@ Como alternativa, puede actualizar el archivo de manifiesto y volver a enviar po
 <li>Verifique que la variable de entorno VCAP_SERVICES está disponible en el tiempo de ejecución de la aplicación:<br/>
 <code>ibmcloud app env <var class="keyword varname">nombre_app</var></code></li>
 <li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html). 
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
 <p>Es posible que tenga que volver a transferir la aplicación para que los cambios entren en vigor.</p></li>
 </ol>
 
@@ -227,7 +231,7 @@ Para las aplicaciones que se ejecutan fuera de Cloud Foundry, las credenciales s
 5. Especifique los detalles de la nueva credencial como un nombre y un rol y pulse **Añadir**. Aparece una nueva credencial en la lista de credenciales.
 6. Pulse esta credencial en **Ver credenciales** para ver los detalles en formato JSON.
 7. Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html).
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
    <br/><br/>Asegúrese de que la aplicación analiza los detalles.
 
 ### Obtención de credenciales mediante la CLI de IBM Cloud
@@ -241,7 +245,7 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para ob
 <li>Imprima la clave de servicio:<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">nombre_clave</var></code></li>
 <li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams/eventstreams063.html).
+y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Asegúrese de que la aplicación analiza los detalles.</p></li>
 </ol>
 
@@ -250,8 +254,8 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para ob
 
 Ahora que tiene la información de conexión y de credenciales, puede elegir un cliente de {{site.data.keyword.messagehub}}. Su elección dependerá de su plan.
 
-* Si utiliza el plan Estándar, consulte [Elección entre las tres API](/docs/services/EventStreams/eventstreams087.html) para obtener información sobre qué cliente elegir y cómo conectarse.
-* Si utiliza el plan Empresa, consulte [Utilización de la API Kafka](/docs/services/EventStreams/eventstreams050.html).
+* Si utiliza el plan Estándar, consulte [Elección entre las tres API](/docs/services/EventStreams?topic=eventstreams-choose_api) para obtener información sobre qué cliente elegir y cómo conectarse.
+* Si utiliza el plan Empresa, consulte [Utilización de la API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 	Solo puede ver el tema <code>__consumer_offsets</code> interno de Kafka en modalidad de solo lectura si utiliza el plan Empresa. Se recomienda encarecidamente que no intente gestionar el tema de ninguna forma. 
 

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-30"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-05-30"
 {:pre: .pre}
 
 # ¿Qué se necesita para utilizar la API MQ Light con {{site.data.keyword.messagehub}}?
-{: #mql_reqs}
+{: #mql_api_reqs}
 
 <!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** La API MQ Light solo está disponible como parte del plan Estándar.**

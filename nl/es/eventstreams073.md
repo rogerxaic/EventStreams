@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-29"
+lastupdated: "2019-01-23"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -31,7 +35,7 @@ La siguiente lista define algunos conceptos de Apache Kafka:
 <dt>Mensaje</dt>
 <dd>La unidad de datos en Kafka. Cada mensaje está representado en forma de registro, que consta de dos partes: clave y valor. La clave se utiliza habitualmente para los datos sobre el mensaje y el valor es el cuerpo del mensaje. Kafka utiliza los términos registro y mensaje de forma intercambiable. 
 
-<p>Muchos otros sistemas de mensajería también tienen una manera de llevar otra información junto con los mensajes. Kafka 0.11 introduce las cabeceras de registro con este propósito, lo que recibe soporte del plan Empresa de {{site.data.keyword.messagehub}}. Actualmente el plan Estándar de {{site.data.keyword.messagehub}} se basa en Kafka 0.10.2.1, por lo que aún no da soporte a las cabeceras de registro. </p> 
+<p>Muchos otros sistemas de mensajería también tienen una manera de llevar otra información junto con los mensajes. Kafka 0.11 introduce las cabeceras de registro con este propósito, lo que está soportado por {{site.data.keyword.messagehub}}.  </p> 
 
 <p>Puesto que muchas herramientas del ecosistema de Kafka (como los conectores para otros sistemas) utilizan sólo el valor e ignoran la clave, es mejor poner todos los datos del mensaje en el valor y sólo utilizar la clave para el particionamiento o la compactación de registros. No debería confiar en todo lo que se lee de Kafka para hacer uso de la clave.</p>   </dd>
 <dt>Tema</dt>
@@ -41,7 +45,7 @@ La siguiente lista define algunos conceptos de Apache Kafka:
 <dd>Cada tema contiene una o más particiones. Cada partición es una lista ordenada de mensajes. Se da a cada uno de los mensajes de una partición un número creciente monotónicamente denominado desplazamiento. 
 <p>Cada partición tiene un servidor en el clúster que actúa como líder de la partición y otros servidores que actúan como seguidores.<p>
 <p>Si un tema tiene más de una partición, permite a los datos alimentarse en paralelo para aumentar el rendimiento distribuyendo las particiones en el clúster. El número de particiones también influye en el equilibrio de carga de trabajo entre los consumidores.</p>
-<p>Para obtener más información, consulte [Liderazgo de particiones](/docs/services/EventStreams/eventstreams118.html).</dd>
+<p>Para obtener más información, consulte [Liderazgo de particiones](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
 <dt>Productor</dt>
 <dd>Un proceso que publica secuencias de mensajes en temas Kafka. Un productor puede publicar en uno o más temas y puede elegir opcionalmente la partición que almacena los datos.<br/></dd>
 <br/>
@@ -58,9 +62,9 @@ La siguiente lista define algunos conceptos de Apache Kafka:
 </dl>
 
 Para saber más, consulte la siguiente información:
-- [Generación de mensajes](/docs/services/EventStreams/eventstreams112.html)
-- [Consumo de mensajes](/docs/services/EventStreams/eventstreams114.html) 
-- [Liderazgo de particiones](/docs/services/EventStreams/eventstreams118.html) 
+- [Generación de mensajes](/docs/services/EventStreams?topic=eventstreams-producing_messages)
+- [Consumo de mensajes](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
+- [Liderazgo de particiones](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
 - [Documentación de Apache Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

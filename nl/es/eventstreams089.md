@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,12 +28,12 @@ Puesto que el servicio subyacente al que se conecta el puente de {{site.data.key
 
 Cuando el servicio de {{site.data.keyword.objectstorageshort}} alcanza la finalización del ciclo de vida y está fuera de servicio, todas las instancias del puente de {{site.data.keyword.objectstorageshort}} también quedarán fuera de servicio. Para obtener más información, consulte el anuncio acerca del desuso: [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Como alternativa, puede utilizar el [puente de Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
+Como alternativa, puede utilizar el [puente de Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge). 
 {:deprecated}
 
-El puente de {{site.data.keyword.objectstorageshort}} permite archivar los datos de temas de Kafka de {{site.data.keyword.messagehub}} en una instancia del servicio de {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ObjectStorage/index.html){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos de datos a un contenedor del servicio de {{site.data.keyword.objectstorageshort}}.
+El puente de {{site.data.keyword.objectstorageshort}} permite archivar los datos de temas de Kafka en una instancia del servicio de {{site.data.keyword.messagehub}} en una instancia del servicio {{site.data.keyword.Bluemix_short}}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos de datos a un contenedor del servicio de {{site.data.keyword.objectstorageshort}}.
 
-Tenga en cuenta que el servicio de almacenamiento de objetos preferido en {{site.data.keyword.Bluemix_short}} ahora es el [servicio {{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+Tenga en cuenta que el servicio de almacenamiento de objetos preferido en {{site.data.keyword.Bluemix_short}} ahora es el [servicio {{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
 
 Al configurar el puente de {{site.data.keyword.objectstorageshort}}, puede controlar cómo se suben los datos como objetos a {{site.data.keyword.objectstorageshort}}. Por ejemplo, las propiedades que puede configurar son las siguientes:
 
@@ -65,7 +69,7 @@ Cada vez que el puente de {{site.data.keyword.objectstorageshort}} tiene un lote
 * Por desplazamiento de mensajes Kafka.
 * Por una fecha ISO 8601 presente en el mensaje de Kafka. Esta opción requiere que los mensajes de Kafka incluyan un objeto de formato JSON válido.
 
-## Particionamiento de desplazamiento de mensajes de Kafka
+## Particionamiento mediante el desplazamiento de mensajes de Kafka
 {: notoc}
 
 Para particionar datos por desplazamiento de mensajes de Kafka, siga estos pasos:

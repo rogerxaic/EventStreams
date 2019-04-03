@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -96,7 +100,7 @@ del límite.
 
 Puede cambiar el límite de tiempo para la retención de mensajes cuando cree un tema utilizando la interfaz de usuario o la API de administración. El límite de tiempo es un mínimo de una hora y un máximo de 30 días.
 
-Para obtener información sobre las restricciones de los valores permitidos al crear temas utilizando un cliente Kafka o Kafka Streams, consulte [API para la administración de temas](/docs/services/EventStreams/eventstreams104.html).
+Para obtener información sobre las restricciones de los valores permitidos al crear temas utilizando un cliente Kafka o Kafka Streams, consulte [Uso de la API de Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Creación y supresión de temas en Kafka
 {: #create_delete}
@@ -106,8 +110,7 @@ En Kafka, la creación y supresión de temas son operaciones asíncronas que pue
 ## API REST de Kafka
 {: #trouble_rest}
 
-*  Para solicitudes y respuestas, sólo se admite el
-formato compacto binario. No se da soporte a los formatos incorporado Avro y JSON.
+*  Para solicitudes y respuestas, sólo se admite el formato compacto binario. No se da soporte a los formatos incorporado Avro y JSON.
 *  Las solicitudes actuales no se admiten para una instancia de consumidores.
    Las solicitudes read, commit o
                     delete correspondientes a una instancia de consumidores deben enviarse sólo después de

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,9 +31,9 @@ Cuando se envía un mensaje al líder de la partición, este mensaje no está di
 
 Cada mensaje está representado en forma de registro que consta de dos partes: clave y valor. La clave se utiliza habitualmente para los datos sobre el mensaje y el valor es el cuerpo del mensaje. Puesto que muchas herramientas del ecosistema de Kafka (como los conectores para otros sistemas) utilizan sólo el valor e ignoran la clave, es mejor poner todos los datos del mensaje en el valor y sólo utilizar la clave para el particionamiento o la compactación de registros. No debería confiar en todo lo que se lee de Kafka para hacer uso de la clave.
 
-Muchos otros sistemas de mensajería también tienen una manera de llevar otra información junto con los mensajes. Kafka 0.11 introduce las cabeceras de registro con este propósito, lo que recibe soporte del plan Empresa de {{site.data.keyword.messagehub}}. Actualmente el plan Estándar de {{site.data.keyword.messagehub}} se basa en Kafka 0.10.2.1, por lo que aún no da soporte a las cabeceras de registro. 
+Muchos otros sistemas de mensajería también tienen una manera de llevar otra información junto con los mensajes. Kafka 0.11 introduce las cabeceras de registro con este propósito.
 
-Puede resultarle útil leer esta información junto con [Consumo de mensajes](/docs/services/EventStreams/eventstreams114.html) en {{site.data.keyword.messagehub}}.
+Puede resultarle útil leer esta información junto con [Consumo de mensajes](/docs/services/EventStreams?topic=eventstreams-consuming_messages) en {{site.data.keyword.messagehub}}.
 
 ## Valores de configuración
 {: #config_settings}
@@ -53,7 +57,7 @@ Hay muchos más valores de configuración disponibles, pero asegúrese de leer d
 
 Cuando el productor publica un mensaje en un tema, el productor puede elegir qué partición utilizar. Si el orden es importante, debe recordar que una partición es una secuencia ordenada de registros, pero un tema consta de una o varias particiones. Si desea un conjunto de mensajes se entreguen en orden, asegúrese de que todos ellos vayan en la misma partición. La forma más sencilla de lograrlo es dar la misma clave a todos los mensajes. 
  
-El productor puede especificar explícitamente un número de partición cuando publica un mensaje. Esto permite el control directo, pero hace que el código de productor sea más complejo porque toma la responsabilidad de gestionar la selección de partición. Para obtener más información, consulte la llamada de método Producer.partitionsFor. Por ejemplo, la llamada se describe para [Kafka 0.11.0.1 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+El productor puede especificar explícitamente un número de partición cuando publica un mensaje. Esto permite el control directo, pero hace que el código de productor sea más complejo porque toma la responsabilidad de gestionar la selección de partición. Para obtener más información, consulte la llamada de método Producer.partitionsFor. Por ejemplo, la llamada se describe para [Kafka 1.1.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Si el productor no especifica un número de partición, un particionador realiza la selección de la partición. El particionador predeterminado incluido en el productor de Kafka funciona de la siguiente manera:
 
@@ -156,5 +160,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-Para obtener más información, consulte el [Javadoc para el cliente Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/0110/javadoc/index.html){:new_window}, que es muy completo. 
+Para obtener más información, consulte el [Javadoc para el cliente Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window}, que es muy completo. 
 

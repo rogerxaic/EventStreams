@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # Uso del cliente Kafka Java
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -38,7 +42,7 @@ para crear un tema desde el cual envía y recibe mensajes.
 
 Para obtener más información sobre cómo configurar y ejecutar el ejemplo, consulte [README.md ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}.
 
-Para obtener una explicación detallada sobre cómo ejecutar el ejemplo, consulte [Iniciación a {{site.data.keyword.messagehub}}](/docs/services/EventStreams/index.html#getting_started_steps).
+Para obtener una explicación detallada sobre cómo ejecutar el ejemplo, consulte [Iniciación a {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps).
 
 ## Cómo utilizar, descargar y ejecutar el ejemplo de Liberty for Java
 {: #liberty_sample notoc}
@@ -64,7 +68,7 @@ Si está utilizando un cliente Kafka de la versión 0.10.2.1 o posterior, puede 
 
 donde USERNAME y PASSWORD son los valores del separador de {{site.data.keyword.messagehub}} **Credenciales de servicio** en {{site.data.keyword.Bluemix_notm}}.
 
-Si utiliza <code>sasl.jaas.config</code>, los clientes que se ejecuten en la misma JVM podrán utilizar credenciales diferentes. Para obtener más información, consulte [Configuración de clientes Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}
+Si utiliza <code>sasl.jaas.config</code>, los clientes que se ejecuten en la misma JVM podrán utilizar credenciales diferentes. Para obtener más información, consulte [Configuración de clientes Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}.
 
 Para un cliente Kafka anterior, debe utilizar el archivo de configuración JAAS para especificar las credenciales. Este mecanismo le resultará menos cómodo, por lo que recomendamos utilizar en su lugar la propiedad <code>sasl.jaas.config</code>.
 
@@ -81,7 +85,7 @@ Si está utilizando los clientes Java, puede utilizar los clientes Kafka públic
 Se recomienda encarecidamente actualizar la versión 0.9.X a la última
 versión. Puede descargar un cliente Kafka desde [https://kafka.apache.org/downloads ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/downloads){:new_window}.
 
-Para obtener más información sobre las implicaciones de utilizar un cliente 0.9.X, consulte [Compatibilidad con versiones anteriores](/docs/services/EventStreams/eventstreams062.html#compatability).
+Para obtener más información sobre las implicaciones de utilizar un cliente 0.9.X, consulte [Compatibilidad con versiones anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
 
 
 

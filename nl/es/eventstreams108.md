@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -132,7 +136,7 @@ Durante este período, la API REST de Kafka puede estar disponible. Si esto suce
 {: #plan_compare }
 {: faq}
 
-Para encontrar más información sobre los dos planes distintos de {{site.data.keyword.messagehub}}, consulte [Elección del plan](/docs/services/EventStreams/eventstreams085.html).
+Para encontrar más información sobre los dos planes distintos de {{site.data.keyword.messagehub}}, consulte [Elección del plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## ¿Cómo manejo la recuperación tras desastre?
 {: #disaster_recovery }

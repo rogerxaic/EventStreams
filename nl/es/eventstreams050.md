@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +19,7 @@ lastupdated: "2018-12-21"
 # Utilización de la API de Kafka
 {: #kafka_using}
 
-Si está utilizando los clientes Java, puede utilizar los clientes Kafka públicamente disponibles de la versión 0.10x o posterior. Para obtener más información, consulte [Elección de un cliente Kafka para utilizarlo con {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams062.html#kafka_clients).
+Si está utilizando los clientes Java, puede utilizar los clientes Kafka públicamente disponibles de la versión 0.10x o posterior. Para obtener más información, consulte [Elección de un cliente Kafka para utilizarlo con {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-kafka_clients#kafka_clients).
 {: shortdesc}
 
 Existen clientes Kafka en varios idiomas y proporcionamos instrucciones para algunos de los idiomas. Puede utilizar otros, pero necesitará soporte SASL PLAIN para proporcionar credenciales. Además, si utiliza el plan Empresa, también tendrá que utilizar la extensión SNI (identificación de nombres de servidor) del protocolo TLSv1.2.

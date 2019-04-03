@@ -2,7 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-28"
+lastupdated: "2019-01-31"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -77,11 +80,12 @@ En la tabla siguiente se resumen las funciones a las que dan soporte los planes:
 			<td>**Disponibilidad de ubicación (región)**</td>
 			<td>Dallas (us-south)</br>
 			Londres (eu-gb)</br>
-			Sídney (au-syd))</br>
-			Frankfurt (eu-de) - no API de {{site.data.keyword.mql}} </td>
+			Sídney (au-syd)</br>
+			Frankfurt (eu-de) - sin API de {{site.data.keyword.mql}} </td>
 			<td>Dallas (us-south)</br>
-			Washington (us-east))<br/>
+			Washington (us-east)<br/>
 			Londres (eu-gb)<br/>
+			Sídney (au-syd)</br>
 			Frankfurt (eu-de)<br/>
 			Tokio (jp-tok)<br/>
 

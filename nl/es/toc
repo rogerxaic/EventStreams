@@ -13,6 +13,7 @@ IBM Event Streams
 		eventstreams010.md
 		eventstreams073.md
 	 	eventstreams085.md
+		eventstreams132.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -58,7 +59,7 @@ IBM Event Streams
 
 	{: .topicgroup}
 	Guías de aprendizaje
-	 	[Guía de aprendizaje sobre el proceso de datos asíncronos utilizando almacenamiento de objetos y mensajería pub/sub](https://console.bluemix.net/docs/tutorials/pub-sub-object-storage.html#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
+	 	[Guía de aprendizaje sobre el proceso de datos asíncronos utilizando almacenamiento de objetos y mensajería pub/sub](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-pub-sub-object-storage#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
@@ -74,8 +75,8 @@ IBM Event Streams
 	{: .topicgroup}
 	Enlaces relacionados
 	 	[Ejemplo de Event Streams Java Kafka](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
-	 	[Cliente Apache Kafka 0.10.2.1](http://kafka.apache.org/0102/javadoc/index.html)
-		[IBM Event Streams on developerWorks](https://www.ibm.com/cloud/message-hub)
+	 	[Cliente Apache Kafka 1.1.0](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz)
+		[IBM Event Streams en ibm.com](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 
 

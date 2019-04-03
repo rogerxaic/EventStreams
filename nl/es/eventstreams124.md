@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-07-04"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -82,7 +86,7 @@ En esta tabla se resumen algunos casos de ejemplo habituales de {{site.data.keyw
 | Suprimir grupo de consumidores |Tipo de recurso: <code>cluster</code> |No aplicable  |Tipo de recurso: <code>group</code> <br/>ID de recurso: <var class="keyword varname">ID_grupo</var>      |
 | Utilizar Streams |Tipo de recurso: <code>cluster</code></br>Tipo de recurso: <code>group</code>| No aplicable  |Tipo de recurso: <code>topic</code>    |
 
-Para obtener más información sobre IAM, utilice [IBM Cloud Identity and Access Management](/docs/iam/index.html#iamoverview).
+Para obtener más información sobre IAM, utilice [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).
 
 Para ver un ejemplo de cómo definir políticas, consulte: [Claves de API e ID de servicio IBM Cloud IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}.
 
@@ -91,7 +95,7 @@ Para ver un ejemplo de cómo definir políticas, consulte: [Claves de API e ID d
 {: #connect_message_enterprise }
 
 Para obtener información sobre cómo enlazar una aplicación de Cloud Foundry o cómo obtener una credencial de clave de seguridad para una aplicación externa, consulte
-[Conexión a {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams127.html#connect_messagehub).
+[Conexión a {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 <!-- 28/06/18 - Karen: draft info only
 

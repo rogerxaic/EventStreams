@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +31,7 @@ Cuando un consumidor procesa un mensaje, el mensaje no se elimina de su tema. En
 
 En las interfaces de programación, un mensaje realmente se denomina un registro. Por ejemplo, la clase Java org.apache.kafka.clients.consumer.ConsumerRecord se utiliza para representar un mensaje para la API de consumidor. Los términos _registro_ y _mensaje_ se pueden utilizar indistintamente, pero en esencia un registro se utiliza para representar un mensaje.
 
-Puede resultarle útil leer esta información conjuntamente con [Generación de mensajes](/docs/services/EventStreams/eventstreams112.html) en {{site.data.keyword.messagehub}}.
+Puede resultarle útil leer esta información conjuntamente con [Generación de mensajes](/docs/services/EventStreams?topic=eventstreams-producing_messages) en {{site.data.keyword.messagehub}}.
 
 ## Configuración de propiedades de consumidor 
 {: #configuring_consumer_properties }
