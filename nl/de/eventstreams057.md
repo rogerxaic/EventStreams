@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -95,7 +99,7 @@ Die Aufbewahrungsdauer für Nachrichten können Sie beim Erstellen eines Topics
 in der Benutzerschnittstelle oder mit der Verwaltungs-API ändern. Das Zeitlimit muss im Bereich von 1 Stunde (Minimalwert) bis
 30 Tage (Maximalwert) liegen.
 
-Informationen zu den Einschränkungen für die zulässigen Einstellungen beim Erstellen von Topics mithilfe eines Kafka-Clients oder mithilfe von Kafka Streams finden Sie im Abschnitt [APIs für die Topicverwaltung](/docs/services/EventStreams/eventstreams104.html).
+Informationen zu den Einschränkungen für die zulässigen Einstellungen beim Erstellen von Topics mithilfe eines Kafka-Clients oder mithilfe von Kafka Streams finden Sie in [Kafka-API verwenden](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Topics in Kafka erstellen und löschen
 {: #create_delete}
@@ -108,7 +112,8 @@ und erneute Erstellen von Topics.
 ## Kafka-REST-API
 {: #trouble_rest}
 
-*  Nur das eingebettete Binärformat wird für Anforderungen und Antworten unterstützt. Die eingebetteten Avro- und JSON-Formate werden nicht unterstützt.
+*  Nur das eingebettete Binärformat wird für Anforderungen und Antworten
+   unterstützt. Die eingebetteten Avro- und JSON-Formate werden nicht unterstützt.
 *  Gleichzeitige Anforderungen werden für eine Consumer-Instanz nicht unterstützt.
    Lese-, Commit- oder Löschanforderungen, die sich auf eine Consumer-Instanz beziehen,
 sollten erst gesendet werden, wenn für alle ausstehenden Anforderungen dieser Instanz entsprechende Antworten empfangen wurden.

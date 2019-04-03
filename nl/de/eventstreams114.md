@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-03-23"
 {:pre: .pre}
 
 
-# Consumer-Nachrichten
+# Nachrichten verarbeiten
 {: #consuming_messages }
 
 Ein Consumer ist eine Anwendung, die Datenströme von Nachrichten von Kafka-Topics verarbeitet. Ein Consumer kann mindestens ein Topic oder eine Partition abonnieren. Diese Informationen konzentrieren sich auf die Java-Programmierungsschnittstelle, die Teil des Apache Kafka-Projekts ist. Die Konzepte gelten auch für andere Sprachen, sie heißen nur etwas anders.
@@ -27,7 +31,7 @@ Wenn ein Consumer eine Nachricht verarbeitet, wird die Nachricht nicht aus dem T
 
 In den Programmierschnittstellen wird eine Nachricht als "Datensatz" bezeichnet. Die Java-Klasse "org.apache.kafka.clients.consumer.ConsumerRecord" wird beispielsweise verwendet, um eine Nachricht für die Consumer-API darzustellen. Die Begriffe _Datensatz_ und _Nachricht_ sind austauschbar, aber im Wesentlichen wird ein Datensatz verwendet, um eine Nachricht darzustellen.
 
-Weitere nützliche Informationen finden Sie unter [Nachrichten erstellen](/docs/services/EventStreams/eventstreams112.html) in {{site.data.keyword.messagehub}}.
+Weitere nützliche Informationen finden Sie unter [Nachrichten erstellen](/docs/services/EventStreams?topic=eventstreams-producing_messages) in {{site.data.keyword.messagehub}}.
 
 ## Consumer-Eigenschaften konfigurieren 
 {: #configuring_consumer_properties }

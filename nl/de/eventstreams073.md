@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-29"
+lastupdated: "2019-01-23"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -31,7 +35,7 @@ Die folgende Liste enthält einige Apache Kafka-Konzepte:
 <dt>Nachricht</dt>
 <dd>Die Dateneinheit in Kafka. Jede Nachricht wird als Datensatz dargestellt, der aus zwei Teilen besteht: Schlüssel und Wert. Der Schlüssel wird in der Regel für Daten zur Nachricht verwendet und der Wert ist der Nachrichtentext. Kafka verwendet die Begriffe "Datensatz" und "Nachricht" synonym. 
 
-<p>Viele andere Nachrichtensysteme können mit den Nachrichten auch andere Informationen übertragen. Kafka 0.11 enthält erstmalig zu diesem Zweck Datensatz-Header, die vom {{site.data.keyword.messagehub}}-Plan "Enterprise" unterstützt werden. Der {{site.data.keyword.messagehub}}-Plan "Standard" basiert zurzeit auf Kafka 0.10.2.1, daher werden Datensatz-Header noch nicht unterstützt. </p> 
+<p>Viele andere Nachrichtensysteme können mit den Nachrichten auch andere Informationen übertragen. Kafka 0.11 enthält erstmalig zu diesem Zweck Datensatz-Header, die von {{site.data.keyword.messagehub}} unterstützt werden. </p> 
 
 <p>Da viele Tools im Kafka-Ökosystem (wie Connectors zu anderen Systemen) nur den Wert verwenden und den Schlüssel ignorieren, wird empfohlen, alle Nachrichtendaten in den Wert aufzunehmen und nur den Schlüssel für die Partitionierung oder Protokollkomprimierung zu verwenden. Verlassen Sie sich nicht auf alles, was aus Kafka ausgelesen wird, um den Schlüssel zu nutzen.</p>   </dd>
 <dt>Topic</dt>
@@ -41,7 +45,7 @@ Die folgende Liste enthält einige Apache Kafka-Konzepte:
 <dd>Jedes Topic setzt sich aus einer oder mehreren Partitionen zusammen. Jede Partition ist eine sortierte Liste von Nachrichten. Die Nachrichten auf einer Partition erhalten jeweils eine monoton ansteigende Zahl, die Offset heißt. 
 <p>Jede Partition verfügt über einen Server im Cluster, der als Leader der Partition fungiert, und über andere Server, die als Follower fungieren.<p>
 <p>Wenn ein Topic mehr als eine Partition aufweist, können Daten parallel gespeist werden, um den Durchsatz zu erhöhen, indem die Partitionen im Cluster verteilt werden. Die Anzahl der Partitionen beeinflusst auch den Lastausgleich zwischen den Consumern.</p>
-<p>Weitere Informationen finden Sie in [Partitions-Leadership](/docs/services/EventStreams/eventstreams118.html).</dd>
+<p>Weitere Informationen finden Sie in [Partitions-Leadership](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
 <dt>Producer</dt>
 <dd>Ein Prozess, der Datenströme von Nachrichten in Kafka-Topics veröffentlicht. Ein Producer kann Datenströme in einem oder mehreren Topics veröffentlichen und optional die Partition auswählen, in denen die Daten gespeichert werden.<br/></dd>
 <br/>
@@ -58,9 +62,9 @@ Die folgende Liste enthält einige Apache Kafka-Konzepte:
 </dl>
 
 Weitere Informationen finden Sie hier:
-- [Nachrichten erstellen](/docs/services/EventStreams/eventstreams112.html)
-- [Nachrichten verarbeiten](/docs/services/EventStreams/eventstreams114.html) 
-- [Partitions-Leadership](/docs/services/EventStreams/eventstreams118.html) 
+- [Nachrichten erstellen](/docs/services/EventStreams?topic=eventstreams-producing_messages)
+- [Nachrichten verarbeiten](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
+- [Partitions-Leadership](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
 - [Apache Kafka-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

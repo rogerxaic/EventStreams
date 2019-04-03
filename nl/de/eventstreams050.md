@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +19,7 @@ lastupdated: "2018-12-21"
 # Kafka-API verwenden
 {: #kafka_using}
 
-Wenn Sie mit den Java-Clients arbeiten, können Sie die allgemein zugänglichen Kafka-Clients der Version 0.10.x oder höher verwenden. Weitere Informationen finden Sie in [Kafka-Client zur Verwendung mit {{site.data.keyword.messagehub}} auswählen](/docs/services/EventStreams/eventstreams062.html#kafka_clients).
+Wenn Sie mit den Java-Clients arbeiten, können Sie die allgemein zugänglichen Kafka-Clients der Version 0.10.x oder höher verwenden. Weitere Informationen finden Sie in [Kafka-Client zur Verwendung mit {{site.data.keyword.messagehub}} auswählen](/docs/services/EventStreams?topic=eventstreams-kafka_clients#kafka_clients).
 {: shortdesc}
 
 Kafka-Clients sind in vielen Sprachen verfügbar. Anweisungen für einige dieser Sprachen werden von uns bereitgestellt. Wenn andere Kafka-Clients verwendet werden, ist Unterstützung für SASL PLAIN erforderlich, damit Berechtigungsnachweise bereitgestellt werden können. Wenn Sie mit dem Plan "Enterprise" arbeiten, müssen Sie darüber hinaus die SNI-Erweiterung (Server Name Identification) für das TLSv1.2-Protokoll verwenden.
@@ -52,5 +56,5 @@ Kafka-Clients sind in vielen Sprachen verfügbar. Anweisungen für einige dieser
 
 Informationen zu den Producer- und Consumer-APIs finden Sie in
 [Kafka Producer API 1.1.0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} und
-in [Kafka Consumer API 1.1 0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}.  
+in [Kafka Consumer API 1.1 0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/11/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}. 
 

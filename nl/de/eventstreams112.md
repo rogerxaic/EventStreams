@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,9 +31,9 @@ Wenn eine Nachricht an den Leader der Partition gesendet wird, ist diese Nachric
 
 Jede Nachricht wird als Datensatz dargestellt, der aus zwei Teilen besteht: Schlüssel und Wert. Der Schlüssel wird in der Regel für Daten zur Nachricht verwendet und der Wert ist der Nachrichtentext. Da viele Tools im Kafka-Ökosystem (wie Connectors zu anderen Systemen) nur den Wert verwenden und den Schlüssel ignorieren, wird empfohlen, alle Nachrichtendaten in den Wert aufzunehmen und nur den Schlüssel für die Partitionierung oder Protokollkomprimierung zu verwenden. Verlassen Sie sich nicht auf alles, was aus Kafka ausgelesen wird, um den Schlüssel zu nutzen.
 
-Viele andere Nachrichtensysteme können mit den Nachrichten auch andere Informationen übertragen. Kafka 0.11 enthält erstmalig zu diesem Zweck Datensatz-Header, die vom {{site.data.keyword.messagehub}}-Plan "Enterprise" unterstützt werden. Der {{site.data.keyword.messagehub}}-Plan "Standard" basiert zurzeit auf Kafka 0.10.2.1, daher werden Datensatz-Header noch nicht unterstützt. 
+Viele andere Nachrichtensysteme können mit den Nachrichten auch andere Informationen übertragen. Kafka 0.11 enthält erstmalig zu diesem Zweck Datensatz-Header. 
 
-Weitere nützliche Informationen finden Sie unter [Nachrichten verarbeiten](/docs/services/EventStreams/eventstreams114.html) in {{site.data.keyword.messagehub}}.
+Weitere nützliche Informationen finden Sie unter [Nachrichten verarbeiten](/docs/services/EventStreams?topic=eventstreams-consuming_messages) in {{site.data.keyword.messagehub}}.
 
 ## Konfigurationseinstellungen
 {: #config_settings}
@@ -53,7 +57,8 @@ Es noch viele weitere Konfigurationseinstellungen verfügbar. Lesen Sie dennoch 
 
 Wenn der Producer eine Nachricht zu einem Topic veröffentlicht, wählt der Producer die zu verwendende Partition aus. Wenn die Reihenfolge wichtig ist, müssen Sie berücksichtigten, dass es sich bei einer Partition um eine geordnete Reihenfolge von Datensätzen handelt. Ein Topic umfasst aber eine oder mehrere Partitionen. Wenn eine Reihe von Nachrichten in der richtigen Reihenfolge bereitgestellt werden soll, stellen Sie sicher, dass sie alle zur gleichen Partition gehören. Die einfachste Möglichkeit, um dies zu erreichen, ist es, wenn alle Nachrichten denselben Schlüssel haben. 
  
-Der Producer kann explizit eine Partitionsnummer angeben, wenn er eine Nachricht veröffentlicht. Somit haben Sie eine direkte Kontrolle. Aber der Producercode wird dadurch auch komplexer, da er für die Partitionsauswahl verwaltet. Weitere Informationen dazu finden im Methodenaufruf "Producer.partitionsFor". Der Aufruf wird beispielsweise für [Kafka 0.11.0.1 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} beschrieben.
+Der Producer kann explizit eine Partitionsnummer angeben, wenn er eine Nachricht veröffentlicht. Somit haben Sie eine direkte Kontrolle. Aber der Producercode wird dadurch auch komplexer, da er für die Partitionsauswahl verwaltet. Weitere Informationen dazu finden im Methodenaufruf "Producer.partitionsFor". Der Aufruf wird beispielsweise für
+[Kafka 1.1.0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} beschrieben.
  
 Wenn der Producer keine Partitionsnummer angibt, wird die Auswahl der Partition durch eine Partitionierungsfunktion getroffen. Die Standard-Partitionierungsfunktion, die im Kafka-Producer enthalten ist, funktioniert wie folgt:
 
@@ -156,5 +161,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-Weitere Informationen finden Sie in der Referenz [Javadoc für den Kafka-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/0110/javadoc/index.html){:new_window}, die sehr ausführlich ist. 
+Weitere Informationen finden Sie in der Referenz [Javadoc für den Kafka-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window}, die sehr ausführlich ist. 
 

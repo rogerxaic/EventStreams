@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -62,7 +66,7 @@ Für CURL können Sie auch die Codebeispiele anpassen, die in den
 basic introduction, definitely including health warning
 -->
 Um eine Verbindung zu {{site.data.keyword.messagehub}} herzustellen, verwendet die Kafka-REST-API die Berechtigungsnachweise <code>api_key</code> und <code>kafka_rest_url</code>
-aus [Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+aus [Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
 
 Um sich bei der Kafka-REST-API von {{site.data.keyword.messagehub}} zu authentifizieren, müssen Sie die Berechtigung <code>api_key</code> im X-Auth-Token-Header Ihrer Anforderungen angeben.
 
@@ -74,7 +78,7 @@ Um sich bei der Kafka-REST-API von {{site.data.keyword.messagehub}} zu authentif
 
 Das {{site.data.keyword.messagehub}}-Kafka-REST-API-Beispiel ist eine Node.js-Anwendung, die eine Verbindung zu {{site.data.keyword.messagehub}} über die Kafka-REST-API herstellt, um Nachrichten zu produzieren und zu verarbeiten.
 
-Der Beispielcode befindet sich im [Github-Projekt 'event-streams-samples' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
+Der Beispielcode befindet sich im [GitHub-Projekt 'event-streams-samples' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 
 Befolgen Sie die Anweisungen in der Datei [README.md ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} für dieses Projekt, um das Beispiel zu erstellen und auszuführen.
 

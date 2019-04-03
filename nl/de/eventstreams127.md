@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -102,7 +106,7 @@ Wenn Sie über eine Manifestdatei verfügen, können Sie mithilfe des folgenden 
 <li>Überprüfen Sie, ob die Umgebungsvariable VCAP_SERVICES in Ihrer Anwendungslaufzeit verfügbar ist, indem Sie den folgenden Befehl ausführen:</br> 
  <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>. 
 </li>
-<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).
+<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Sie müssen möglicherweise ein erneutes Staging Ihrer Anwendung durchführen, damit die Änderungen wirksam werden.</p></li>
 </ol>
 
@@ -121,7 +125,7 @@ Für Anwendungen, die außerhalb von Cloud Foundry ausgeführt werden, werden di
 5. Klicken Sie auf **Neuer Berechtigungsnachweis**.
 6. Geben Sie die Details zu Ihrem neuen Berechtigungsnachweis, z. B. einen Namen, ein und klicken Sie auf **Hinzufügen**. In der Berechtigungsnachweisliste wird ein neuer Berechtigungsnachweis angezeigt.
 7. Klicken Sie auf diesen Berechtigungsnachweis mithilfe von **Berechtigungsnachweise anzeigen**, um die Details in JSON-Formatierung sichtbar zu machen.
-8. Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).
+8. Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 
 ### Berechtigungsnachweise über die IBM Cloud-CLI abrufen 
 {: #connect_standard_external_cli }
@@ -142,15 +146,15 @@ oder einen vorhandenen Serviceschlüssel verwenden: <br/>
 <li>Rufen Sie die Details zu dem Schlüssel ab:</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service_key_name</var></code></br>
 Auf diese Weise werden die Details zu dem Serviceschlüssel in JSON-Formatierung zurückgegeben.</li>
-<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).</li>
+<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect).</li>
 </ol>
 
  
 ## Plan "Enterprise" - Übersicht
 {: #connect_enterprise}
 
-Services, die unter Verwendung des Plans "Enterprise" bereitgestellt werden, werden im Dashboard unter der Überschrift **Services** gruppiert. Der Plan "Enterprise" ist für [IAM aktiviert ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}. Sie müssen keine Kenntnisse über IAM besitzen, um erste Schritte auszuführen, es empfiehlt sich jedoch ein gewisses Grundwissen, wenn Sie Ihren {{site.data.keyword.messagehub}}-Service schützen möchten. Weitere Informationen finden Sie in
-[{{site.data.keyword.messagehub}}-Ressourcen schützen](/docs/services/EventStreams/eventstreams124.html).
+Services, die unter Verwendung des Plans "Enterprise" bereitgestellt werden, werden im Dashboard unter der Überschrift **Services** gruppiert. Der Plan "Enterprise" ist für [IAM aktiviert ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}. Sie müssen keine Kenntnisse über IAM besitzen, um erste Schritte auszuführen, es empfiehlt sich jedoch ein gewisses Grundwissen, wenn Sie Ihren {{site.data.keyword.messagehub}}-Service schützen möchten. Weitere Informationen finden Sie in
+[{{site.data.keyword.messagehub}}-Ressourcen schützen](/docs/services/EventStreams?topic=eventstreams-security).
 
 Führen Sie die folgenden Schritte aus, um Ihre Anwendung zu binden und Serviceschlüssel für Ihren Service abzurufen. Ihre Anwendung oder Ihr Serviceschlüssel muss die Zugriffsrolle "Manager" aufweisen, damit sie bzw. er zum Erstellen von Topics berechtigt ist.
 
@@ -203,7 +207,7 @@ Da die App noch nicht an {{site.data.keyword.messagehub}} gebunden ist, kann die
 Alternativ können Sie Ihre Manifestdatei aktualisieren und die Anwendung erneut mit Push-Operation übertragen.</li>
 <li>Überprüfen Sie, ob die Umgebungsvariable VCAP_SERVICES in Ihrer Anwendungslaufzeit verfügbar ist:<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html). 
+<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
 <p>Sie müssen möglicherweise ein erneutes Staging Ihrer Anwendung durchführen, damit die Änderungen wirksam werden.</p></li>
 </ol>
 
@@ -222,7 +226,7 @@ Für Anwendungen, die außerhalb von Cloud Foundry ausgeführt werden, werden di
 4. Klicken Sie auf **Neuer Berechtigungsnachweis**. 
 5. Geben Sie die Details zu Ihrem neuen Berechtigungsnachweis, z. B. einen Namen und eine Rolle, ein und klicken Sie auf **Hinzufügen**. In der Berechtigungsnachweisliste wird ein neuer Berechtigungsnachweis angezeigt.
 6. Klicken Sie auf diesen Berechtigungsnachweis mithilfe von **Berechtigungsnachweise anzeigen**, um die Details in JSON-Formatierung sichtbar zu machen.
-7. Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).
+7. Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
    <br/><br/>Stellen Sie sicher, dass Ihre Anwendung ein Parsing der Details durchführt.
 
 ### Berechtigungsnachweise über die IBM Cloud-CLI abrufen
@@ -235,7 +239,7 @@ Für Anwendungen, die außerhalb von Cloud Foundry ausgeführt werden, werden di
 <code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>Geben Sie den Serviceschlüssel aus:<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
-<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams/eventstreams063.html).
+<li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Stellen Sie sicher, dass Ihre Anwendung ein Parsing der Details durchführt.</p></li>
 </ol>
 
@@ -245,8 +249,8 @@ Für Anwendungen, die außerhalb von Cloud Foundry ausgeführt werden, werden di
 Nachdem Sie über eine Verbindung und Berechtigungsinformationen verfügen, können Sie einen {{site.data.keyword.messagehub}}-Client auswählen. Ihre Auswahl ist von Ihrem Plan abhängig.
 
 * Wenn Sie den Plan "Standard" verwenden, finden Sie im Abschnitt
-[Geeignete API auswählen](/docs/services/EventStreams/eventstreams087.html) Informationen zur Auswahl des Clients und zur Verbindungsherstellung.
-* Wenn Sie den Plan "Enterprise" verwenden, finden Sie im Abschnitt [Kafka-API verwenden](/docs/services/EventStreams/eventstreams050.html) geeignete Informationen.
+[Geeignete API auswählen](/docs/services/EventStreams?topic=eventstreams-choose_api) Informationen zur Auswahl des Clients und zur Verbindungsherstellung.
+* Wenn Sie den Plan "Enterprise" verwenden, finden Sie im Abschnitt [Kafka-API verwenden](/docs/services/EventStreams?topic=eventstreams-kafka_using) geeignete Informationen.
 
 	Das interne Kafka-Topic <code>__consumer_offsets</code> ist für Sie schreibgeschützt sichtbar,
 	wenn Sie den Plan "Enterprise" verwenden. Es wird dringend empfohlen, keinen Versuch zu unternehmen, dieses Topic in irgendeiner Weise zu steuern. 

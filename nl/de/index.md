@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-15"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,7 +16,7 @@ lastupdated: "2018-11-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.messagehub}} 
+# Lernprogramm zur Einführung
 {: #getting_started}
 
 Als Einführung in die Verwendung von {{site.data.keyword.messagehub}} zum
@@ -22,7 +26,7 @@ Consumer gesendet werden. Das gleiche Beispielprogramm wird verwendet, um Nachri
 Nachrichten zu erstellen.
 {: shortdesc}
 
-Weitere Informationen zur Funktionsweise von {{site.data.keyword.messagehub}} finden Sie in [Informationen zu {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
+Weitere Informationen zur Funktionsweise von {{site.data.keyword.messagehub}} finden Sie in [Informationen zu {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-about). {{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
 
 Um auf andere {{site.data.keyword.messagehub}}-Beispiele zuzugreifen, beispielsweise auf "Node.js" und "Python" siehe die [{{site.data.keyword.messagehub}}-Beispiele ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples){:new_window}.
 
@@ -45,9 +49,9 @@ Führen Sie die folgenden Schritte aus:
   
   e. Klicken Sie auf **Erstellen**.
 
-2. {: #create_credentials_step notoc} Erstellen Sie {{site.data.keyword.messagehub}}-Berechtigungsnachweise, indem Sie diese Schritte ausführen: [Berechtigungsnachweise abrufen und Verbindung über die IBM Cloud-Konsole herstellen](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Erstellen Sie {{site.data.keyword.messagehub}}-Berechtigungsnachweise, indem Sie diese Schritte ausführen: [Berechtigungsnachweise abrufen und Verbindung über die IBM Cloud-Konsole herstellen](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
    <br/>
-   <br/>Sie benötigen die Werte für *kafka_brokers_sasl*, *kafka_admin_url* und *api_key* für [Schritt 7](/docs/services/EventStreams/index.html#start_consumer_step) dieser Task.   
+   <br/>Sie benötigen die Werte für *kafka_brokers_sasl*, *kafka_admin_url* und *api_key* für [Schritt 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) dieser Task.   
 
 3. Installieren Sie die folgenden vorausgesetzten Komponenten (falls noch nicht vorhanden):
 
@@ -83,7 +87,7 @@ Führen Sie die folgenden Schritte aus:
     von Nachrichten wird in dem Beispiel die Apache Kafka-Java-API verwendet.
 
     Verwenden Sie die Werte für *kafka_brokers_sasl*, *kafka_admin_url* und
-    *api_key* aus den Berechtigungsnachweisen, die Sie in [Schritt 2](/docs/services/EventStreams/index.html#create_credentials_step) erstellt haben.
+    *api_key* aus den Berechtigungsnachweisen, die Sie in [Schritt 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) erstellt haben.
 	
 	Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander.
     

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # Kafka-Java-Client verwenden
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -34,7 +38,7 @@ Der Beispielcode befindet sich im [GitHub-Projekt 'event-streams-samples' ![Symb
 
 Weitere Informationen zum Einrichten und Ausführen des Beispiels finden Sie in der Datei [README.md ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}.
 
-Eine schrittweise Anleitung zum Ausführen des Beispiels finden Sie in [Einführung in {{site.data.keyword.messagehub}}](/docs/services/EventStreams/index.html#getting_started_steps).
+Eine schrittweise Anleitung zum Ausführen des Beispiels finden Sie in [Einführung in {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps).
 
 ## Liberty for Java-Beispiel verwenden, herunterladen und ausführen
 {: #liberty_sample notoc}
@@ -62,8 +66,8 @@ für die Clientkonfiguration verwenden. Um eine Verbindung zu {{site.data.keywor
 
 Dabei sind USERNAME und PASSWORD die Werte auf der {{site.data.keyword.messagehub}}-Registerkarte **Serviceberechtigungsnachweise** in {{site.data.keyword.Bluemix_notm}}.
 
-Wenn Sie <code>sasl.jaas.config</code> verwenden, können Clients, die in derselben JVM ausgeführt werden, verschiedene Berechtigungsnachweise verwenden. Weitere
-Informationen finden Sie unter [Kafka-Clients konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}.
+Wenn Sie <code>sasl.jaas.config</code> verwenden, können Clients, die in derselben JVM ausgeführt werden, verschiedene Berechtigungsnachweise verwenden. Weitere Informatione finden Sie in
+[Kafka-Clients konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}.
 
 Für einen älteren Kafka-Client müssen Sie eine JAAS-Konfigurationsdatei zur Angabe der Berechtigungsnachweise verwenden. Dieses Verfahren ist weniger benutzerfreundlich, daher wird stattdessen die Verwendung der Eigenschaft <code>sasl.jaas.config</code> empfohlen.
 
@@ -78,10 +82,10 @@ Für einen älteren Kafka-Client müssen Sie eine JAAS-Konfigurationsdatei zur A
 Wenn Sie mit den Java-Clients arbeiten, können Sie die offiziell verfügbaren Kafka-Clients der Version 0.10 oder höher verwenden. 
 
 Es wird dringend empfohlen, von der Version 0.9.X auf die aktuelle Version umzustellen. Sie können einen Kafka-Client von
-[https://kafka.apache.org/downloads ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/downloads){:new_window} herunterladen. 
+[https://kafka.apache.org/downloads ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/downloads){:new_window} herunterladen.
 
 Informationen zu den Auswirkungen der Verwendunhg eines Clients der Verison 0.9.X finden Sie in
-[Kompatibilität mit früheren Versionen](/docs/services/EventStreams/eventstreams062.html#compatability). 
+[Kompatibilität mit früheren Versionen](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility). 
 
 
 

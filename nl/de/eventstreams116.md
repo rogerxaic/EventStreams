@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-02-12"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -19,7 +23,7 @@ lastupdated: "2018-02-12"
 Apache Kafka umfasst verschiedene Konsolentools für einfache Verwaltungs- und Messaging-Operationen. Viele dieser Tools können mit {{site.data.keyword.messagehub}} verwendet werden, {{site.data.keyword.messagehub}} lässt jedoch keine Verbindung zum ZooKeeper-Cluster zu. Durch die Weiterentwicklung von Kafka gilt für zahlreiche Tools, für die bisher eine Verbindung zu ZooKeeper erforderlich war, diese Anforderung nicht mehr.
 {: shortdesc}
 
-Die Konsolentools befinden sich im Verzeichnis <code>bin</code> in Ihrem Kafka-Download. Beispiel: [Apache Kafka 0.10.2.X Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window}.
+Die Konsolentools befinden sich im Verzeichnis <code>bin</code> in Ihrem Kafka-Download. Beispiel: [Apache Kafka 1.1.0-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}.
 
 Zur Angabe der SASL-Berechtigungsnachweise für diese Tools erstellen Sie eine Eigenschaftendatei auf der Basis des folgenden Beispiels:
 

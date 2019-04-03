@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,14 +18,14 @@ lastupdated: "2018-05-25"
 
 <!-- 12/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Vorgehensweise zum Verbinden und Authentifizieren
-{: #mql_connect}
+{: #mql_connect_authenticate}
 
 ** Die MQ Light-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
 <br/>
 
 Zum Verbinden einer App mit dem Service muss die App den Benutzer <code>user</code>,
 das Kennwort <code>password</code> und die Details für <code>mqlight_lookup_url</code> aus
-[Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html) verwenden. Verwenden Sie die nachfolgende Anleitung für Ihre gewünschte Sprache:
+[Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting) verwenden. Verwenden Sie die nachfolgende Anleitung für Ihre gewünschte Sprache:
 {: shortdesc}
 
 **Für Java**

@@ -4,6 +4,10 @@ copyright:
   years: 2016, 2018
 lastupdated: "2018-08-14"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,7 +27,7 @@ lastupdated: "2018-08-14"
 Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie im Rahmen des Plans "Enterprise" verfolgen, wie Benutzer und Anwendungen mit dem {{site.data.keyword.messagehub}}-Service in {{site.data.keyword.Bluemix}} interagieren. 
 {: shortdesc}
 
-Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die eine Statusänderung eines Service in {{site.data.keyword.Bluemix_notm}} bewirken. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die eine Statusänderung eines Service in {{site.data.keyword.Bluemix_notm}} bewirken. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla){:new_window}.
 
 <!-- You can create different sections to group events by area. -->
 

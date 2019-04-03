@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -144,7 +148,7 @@ REST-API den folgenden JSON-Code zurück:
 {: #plan_compare }
 {: faq}
 
-Weitere Informationen zu den beiden unterschiedlichen {{site.data.keyword.messagehub}}-Plänen finden Sie in [Plan auswählen](/docs/services/EventStreams/eventstreams085.html).
+Weitere Informationen zu den beiden unterschiedlichen {{site.data.keyword.messagehub}}-Plänen finden Sie in [Plan auswählen](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## Wie wird die Disaster-Recovery gehandhabt?
 {: #disaster_recovery }

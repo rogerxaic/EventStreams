@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 # Merkmale der MQ Light-API
-{: #mqlight}
+{: #mqlight_api}
 
 <!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** Die MQ Light-API ist nur als Bestandteil des Plans "Standard" verfügbar. **
@@ -38,6 +42,6 @@ USA (Süden) (Dallas), Vereinigtes Königreich (Süden) (London) und Asien-Pazif
 {{site.data.keyword.Bluemix_notm}} Dedicated verfügbar.
 
 <!-- begin STAGING ONLY -->
-Weitere Informationen zur Auswahl zwischen den APIs finden Sie im Abschnitt [Geeignete API auswählen](/docs/services/EventStreams/eventstreams087.html).
+Weitere Informationen zur Auswahl zwischen den APIs finden Sie im Abschnitt [Geeignete API auswählen](/docs/services/EventStreams?topic=eventstreams-choose_api).
 <!-- end STAGING ONLY -->
 

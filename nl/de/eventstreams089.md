@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,15 +28,15 @@ Da der zugrunde liegende Service, zu dem die {{site.data.keyword.objectstoragesh
 
 Wenn der {{site.data.keyword.objectstorageshort}}-Service eingestellt wird, werden auch alle Instanzen der {{site.data.keyword.objectstorageshort}}-Bridge außer Betrieb gesetzt. Weitere Informationen finden Sie in der [Ankündigung zur Einstellung der Unterstützung: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Als Alternative kann die [Cloud Object Storage-Bridge](/docs/services/EventStreams/eventstreams115.html){:new_window} verwendet werden. 
+Als Alternative kann die [Cloud Object Storage-Bridge](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge) verwendet werden. 
 {:deprecated}
 
-Die {{site.data.keyword.objectstorageshort}}-Bridge ermöglicht das Archivieren von Daten
-aus den Kafka-Topics von {{site.data.keyword.messagehub}} in einer Instanz des {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}}-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ObjectStorage/index.html){:new_window}. Die Bridge verarbeitet
+Die {{site.data.keyword.objectstorageshort}}-Bridge ermöglicht das Archivieren von
+Daten aus den Kafka-Topics in {{site.data.keyword.messagehub}} in einer Instanz des {{site.data.keyword.Bluemix_short}}-Service. Die Bridge verarbeitet
 Nachrichten von Kafka im Stapelbetrieb und lädt die Nachrichtendaten als Objekte in einen Container
 im {{site.data.keyword.objectstorageshort}}-Service.
 
-Beachten Sie, dass der bevorzugte Objektspeicher in {{site.data.keyword.Bluemix_short}} jetzt der [{{site.data.keyword.IBM_notm}} Cloud Object Storage-Service ist. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+Beachten Sie, dass der bevorzugte Objektspeicher in {{site.data.keyword.Bluemix_short}} jetzt der [{{site.data.keyword.IBM_notm}} Cloud Object Storage-Service ist. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
 
 Durch Konfigurieren der
 {{site.data.keyword.objectstorageshort}}-Bridge können Sie steuern, wie die Daten
@@ -98,7 +102,7 @@ die beiden folgenden Methoden zum Partitionieren von Kafka-Nachrichten in {{site
 * Nach dem Offset der Kafka-Nachricht
 * Nach dem Datum im ISO 8601-Format, das in jeder Kafka-Nachricht enthalten ist. Bei dieser Methode wird vorausgesetzt, dass die Kafka-Nachrichten ein gültiges Objekt im JSON-Format enthalten.
 
-## Partitionierung nach Offset der Kafka-Nachricht
+## Partitionierung anhand des Offsets der Kafka-Nachricht
 {: notoc}
 
 Führen Sie die folgenden Schritte aus, um Daten nach dem Offset der Kafka-Nachricht zu partitionieren:

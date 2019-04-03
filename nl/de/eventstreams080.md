@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +18,7 @@ lastupdated: "2018-05-25"
 
 <!-- 14/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Mit vorhandenen MQ Light-Anwendungen verbinden
-{: #mql_exist_apps}
+{: #mql_exist_mql_apps}
 
 ** Die MQ Light-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
 <br/>
@@ -27,7 +31,7 @@ funktionieren weiter in der gewohnten Weise.
 Führen Sie die folgenden Prüfungen durch, um vorhandene Apps zu verbinden:
 
 * Stellen Sie sicher, dass die App die neueste verfügbare {{site.data.keyword.mql}}-API-Clientversion für Ihre Sprache verwendet.
-* Stellen Sie sicher, dass die aus der Umgebungsvariablen VCAP_SERVICES extrahierten Verbindungsdetails auf den Servicetyp <code>messagehub</code> verweisen und den Benutzernamen der Verbindung aus der Eigenschaft <code>credentials.user</code> abrufen und nicht aus der Eigenschaft <code>credentials.username</code>, sowie die Such-URL der Verbindung aus der Eigenschaft <code>credentials.mqlight_lookup_url</code> und nicht aus der Eigenschaft <code>credentials.connectionLookupURI</code>. Weitere Informationen finden Sie in [Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+* Stellen Sie sicher, dass die aus der Umgebungsvariablen VCAP_SERVICES extrahierten Verbindungsdetails auf den Servicetyp <code>messagehub</code> verweisen und den Benutzernamen der Verbindung aus der Eigenschaft <code>credentials.user</code> abrufen und nicht aus der Eigenschaft <code>credentials.username</code>, sowie die Such-URL der Verbindung aus der Eigenschaft <code>credentials.mqlight_lookup_url</code> und nicht aus der Eigenschaft <code>credentials.connectionLookupURI</code>. Weitere Informationen finden Sie in [Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 	Beachten Sie, dass dieser Schritt automatisch ausgeführt wird, wenn Sie den Java&trade;-Client verwenden und 'null' für den Parameter 'endpointService' im Aufruf 'create()' angeben, damit der Client die Informationen selbstständig abruft.
 	
@@ -36,5 +40,5 @@ Führen Sie die folgenden Prüfungen durch, um vorhandene Apps zu verbinden:
 Beachten Sie außerdem die folgenden Hinweise:
 
 * Die Grenzwerte für Nachrichten sind mit {{site.data.keyword.messagehub}} konsistent, können jedoch von anderen Servern abweichen, die
-die {{site.data.keyword.mql}}-API unterstützen. Weitere Informationen finden Sie in [Maximalwerte](/docs/services/EventStreams/eventstreams083.html).
+die {{site.data.keyword.mql}}-API unterstützen. Weitere Informationen finden Sie in [Maximalwerte](https://cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits).
 * JMS wird nicht unterstützt.

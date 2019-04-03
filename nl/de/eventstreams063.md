@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-06-22"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -13,13 +16,13 @@ lastupdated: "2018-06-22"
 {:pre: .pre}
 
 # Kafka-API-Client konfigurieren
-{: #kafka_connect}
+{: #kafka_api_client}
 
 
 Zum Herstellen einer Verbindung zu {{site.data.keyword.messagehub}} verwendet die Kafka-API eines der folgenden Sets von Berechtigungsinformationen: 
 * Die <code>kafka_brokers_sasl</code>-Berechtigungsnachweise sowie <code>user</code> und <code>password</code> aus der
-[Umgebungsvariablen VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html#vcap).
-* Den Serviceschlüssel. Weitere Informationen finden Sie in [Verbindung zum Cluster herstellen](/docs/services/EventStreams/eventstreams127.html#enterprise_connect).
+[Umgebungsvariablen VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
+* Den Serviceschlüssel. Weitere Informationen finden Sie in [Verbindung zum Cluster herstellen](/docs/services/EventStreams?topic=eventstreams-connecting).
 {: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
