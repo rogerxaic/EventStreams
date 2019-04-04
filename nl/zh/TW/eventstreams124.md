@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-07-04"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -82,7 +86,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |刪除消費者群組|資源類型：<code>cluster</code>   |不適用|資源類型：<code>group</code>   <br/>資源 ID：<var class="keyword varname">group_ID</var>      |
 |使用 Streams |資源類型：<code>cluster</code>   </br>資源類型：<code>group</code>   |不適用|資源類型：<code>topic</code>   |
 
-如需 IAM 的相關資訊，請參閱 [IBM Cloud Identity and Access Management](/docs/iam/index.html#iamoverview)。
+如需 IAM 的相關資訊，請參閱 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)。
 
 如需如何設定原則的範例，請參閱：[IBM Cloud IAM Service IDs and API Keys ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}。
 
@@ -90,7 +94,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 ## 連接至 {{site.data.keyword.messagehub}}
 {: #connect_message_enterprise }
 
-如需如何連結 Cloud Foundry 應用程式或取得外部應用程式安全金鑰認證的相關資訊，請參閱[連接至 {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams127.html#connect_messagehub)。
+如需如何連結 Cloud Foundry 應用程式或取得外部應用程式安全金鑰認證的相關資訊，請參閱[連接至 {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting)。
 
 <!-- 28/06/18 - Karen: draft info only
 

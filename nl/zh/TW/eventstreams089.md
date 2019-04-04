@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,12 +28,12 @@ lastupdated: "2018-11-08"
 
 當 {{site.data.keyword.objectstorageshort}} 服務達到使用期限結束，並且解除任務時，{{site.data.keyword.objectstorageshort}} 橋接器的所有實例也將會解除任務。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
 
-或者，您可以使用 [Cloud Object Storage 橋接器](/docs/services/EventStreams/eventstreams115.html){:new_window}。
+或者，您可以使用 [Cloud Object Storage 橋接器](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)。
 {:deprecated}
 
-{{site.data.keyword.objectstorageshort}} 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ObjectStorage/index.html){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 {{site.data.keyword.objectstorageshort}} 服務中的容器。
+{{site.data.keyword.objectstorageshort}} 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 {{site.data.keyword.Bluemix_short}} 服務的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 {{site.data.keyword.objectstorageshort}} 服務中的容器。
 
-請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window}。
+請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}。
 
 藉由配置 {{site.data.keyword.objectstorageshort}} 橋接器，您可以控制資料如何當作物件上傳到 {{site.data.keyword.objectstorageshort}}。例如，您可以配置的內容如下：
 
@@ -77,7 +81,7 @@ Kafka 訊息分割成 {{site.data.keyword.objectstorageshort}} 物件：
 * 藉由 Kafka 訊息偏移。
 * 藉由每個 Kafka 訊息中出現的 ISO 8601 日期。這需要 Kafka 訊息包含有效的 JSON 格式物件。
 
-## 依 Kafka 訊息偏移進行分割
+## 使用 Kafka 訊息偏移進行分割
 {: notoc}
 
 若要依 Kafka 訊息偏移分割資料，請完成下列步驟：

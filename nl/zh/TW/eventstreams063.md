@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-06-22"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -13,12 +16,12 @@ lastupdated: "2018-06-22"
 {:pre: .pre}
 
 # 配置 Kafka API 用戶端
-{: #kafka_connect}
+{: #kafka_api_client}
 
 
 為了連接至 {{site.data.keyword.messagehub}}，Kafka API 會使用下列其中一組認證資訊： 
-* <code>kafka_brokers_sasl</code> 認證，以及來自 [VCAP_SERVICES 環境變數](/docs/services/EventStreams/eventstreams127.html#vcap)的 <code>user</code> 及 <code>password</code>。
-* 服務金鑰。如需相關資訊，請參閱[連接叢集](/docs/services/EventStreams/eventstreams127.html#enterprise_connect)。
+* <code>kafka_brokers_sasl</code> 認證，以及來自 [VCAP_SERVICES 環境變數](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)的 <code>user</code> 及 <code>password</code>。
+* 服務金鑰。如需相關資訊，請參閱[連接叢集](/docs/services/EventStreams?topic=eventstreams-connecting)。
 {: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->

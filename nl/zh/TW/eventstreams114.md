@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +31,7 @@ lastupdated: "2018-03-23"
 
 在程式設計介面中，訊息實際上被稱為記錄。例如，Java 類別 org.apache.kafka.clients.consumer.ConsumerRecord 用來表示消費者 API 的訊息。可交換使用_記錄_ 及_訊息_ 術語，但基本上記錄是用來表示訊息。
 
-您可能會發現在 {{site.data.keyword.messagehub}} 中使用[產生訊息](/docs/services/EventStreams/eventstreams112.html)一起讀取此資訊會很有用。
+您可能會發現在 {{site.data.keyword.messagehub}} 中使用[產生訊息](/docs/services/EventStreams?topic=eventstreams-producing_messages)一起讀取此資訊會很有用。
 
 ## 配置消費者內容 
 {: #configuring_consumer_properties }

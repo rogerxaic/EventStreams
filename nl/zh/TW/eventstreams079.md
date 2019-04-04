@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,12 +18,12 @@ lastupdated: "2018-05-25"
 
 <!-- 12/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 如何連接及鑑別
-{: #mql_connect}
+{: #mql_connect_authenticate}
 
 ** MQ Light API 只提供於標準方案中。**
 <br/>
 
-若要將應用程式連接至服務，應用程式必須使用來自 [VCAP_SERVICES 環境變數](/docs/services/EventStreams/eventstreams127.html)的 <code>user</code>、
+若要將應用程式連接至服務，應用程式必須使用來自 [VCAP_SERVICES 環境變數](/docs/services/EventStreams?topic=eventstreams-connecting)的 <code>user</code>、
 <code>password</code> 及 <code>mqlight_lookup_url</code> 詳細資料。請使用適用於您的選擇語言的下列指引：
 
 {: shortdesc}

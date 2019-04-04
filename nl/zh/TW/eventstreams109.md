@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-12-07"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -17,7 +20,7 @@ lastupdated: "2018-12-07"
 # 向 {{site.data.keyword.messagehub}} 團隊報告問題 - 標準方案
 {: #report_problem}
 
-如果您遇到 {{site.data.keyword.messagehub}} 的問題，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/status){:new_window}。 
+如果您遇到 {{site.data.keyword.messagehub}} 的問題，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/status?selected=status){:new_window}。 
 
 如果您需要 {{site.data.keyword.messagehub}} 團隊的協助，請收集下列所有資訊。您可以事先提供的資訊越多，團隊就越可更有效率地協助解決問題：
 {:shortdesc}
@@ -37,7 +40,7 @@ lastupdated: "2018-12-07"
 10. 問題對您的服務有什麼影響？
 
 
-您可以[提交支援要求 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/get-support/howtogetsupport.html#using-avatar) 在支援問題單中提供收集的資訊給 IBM。
+您可以[提交支援要求 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window} 在支援問題單中提供收集的資訊給 IBM。
 
 
 

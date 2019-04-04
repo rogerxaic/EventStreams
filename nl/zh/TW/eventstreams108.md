@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -132,7 +136,7 @@ Kafka REST API 每天會重新啟動一次，需要一小段時間。
 {: #plan_compare }
 {: faq}
 
-若要找出這兩個不同 {{site.data.keyword.messagehub}} 方案的相關資訊，請參閱[選擇方案](/docs/services/EventStreams/eventstreams085.html)。
+若要找出這兩個不同 {{site.data.keyword.messagehub}} 方案的相關資訊，請參閱[選擇方案](/docs/services/EventStreams?topic=eventstreams-plan_choose)。
 
 ## 如何處理災難回復？
 {: #disaster_recovery }

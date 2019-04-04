@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-01"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -18,10 +22,10 @@ lastupdated: "2018-06-01"
 ** Cloud Object Storage 橋接器只提供於標準方案中。**
 <br/>
 
-{{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window}。
+{{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}。
 {: shortdesc}
 
-Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage/about-cos.html){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
+Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
 
 * 用於寫入物件的儲存區名稱。
 * 物件上傳至 Cloud Object Storage 服務的頻率。
@@ -67,7 +71,7 @@ Cloud Object Storage 使用者介面建立認證，如下所示：
    或者，您也可以取用 <code>apikey</code> 及 <code>resource_instance_id</code> 欄位，然後將它們輸入至 {{site.data.keyword.messagehub}} 儀表板，或者，如果您使用 REST 呼叫直接建立橋接器，則在建立橋接器 JSON 中進行設定。
 
 您建立的認證授權撰寫者存取整個 Cloud Object Storage 實例，因此，您可能想要將此存取限制為橋接器將與之互動的特定儲存區。
-1. 請移至[身分 & 存取管理頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/iam/?env_id=ibm%3Ayp%3Aus-south#/serviceids){:new_window}。
+1. 移至[管理存取權與使用者頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/iam#/overview){:new_window}。
 2. 您應該會在此頁面上看到自動產生的服務 ID。當您識別特定 ID 後，請選取**管理服務 ID** 動作。 
 3. 選取**編輯原則**動作，進一步將它限制為特定的**資源類型**（即儲存區）和**資源 ID**（即儲存區的名稱）。按一下**儲存**。
 
@@ -82,17 +86,17 @@ Cloud Object Storage 使用者介面建立認證，如下所示：
   "name": "cosbridge",
   "topic": "kafka-java-console-sample-topic",
   "type": "objectStorageS3Out",
-      "configuration" : {
-"credentials": {
-          "endpoint" : "https://s3-api.us-geo.objectstorage.softlayer.net",
+  "configuration" : {
+    "credentials" : {
+      "endpoint" : "https://s3-api.us-geo.objectstorage.softlayer.net",
       "resourceInstanceId" : "crn::",
       "apiKey" : "your_api_key"
     },
     "bucket" : "cosbridge0",
     "uploadDurationThresholdSeconds" : 600,
     "uploadSizeThresholdKB" : 1024,
-            "partitioning" : [ {
-                "type" : "kafkaOffset"
+    "partitioning" : [ {
+        "type" : "kafkaOffset"
       }
     ]
   }
@@ -104,14 +108,9 @@ Cloud Object Storage 使用者介面建立認證，如下所示：
 ## Cloud Object Storage 橋接器將資料分割成物件的方式
 {: notoc}
 
-Cloud Object Storage 橋接器的其中一個特性是能夠分割
-Kafka 訊息，並將它們儲存為以一般字首命名的物件。以一般字首命名的一群物件，稱為分割區。Cloud Object Storage 橋接器分割與
-Kafka 分割是不同的概念。
+Cloud Object Storage 橋接器的其中一個特性是能夠分割 Kafka 訊息，並將它們儲存為以一般字首命名的物件。以一般字首命名的一群物件，稱為分割區。Cloud Object Storage 橋接器分割與 Kafka 分割是不同的概念。
 
-每次 Cloud Object Storage 橋接器有一批資料要上傳至
-Cloud Object Storage 服務時，它會建立一個以上包含資料的物件。關於如何分割訊息及命名所產生之物件的決策，取決於橋接器的配置方式。物件名稱可以包含
-Kafka meta 資料，也可能包含來自訊息本身的資料。橋接器目前支援下列兩種方式，以將
-Kafka 訊息分割成 Cloud Object Storage 物件：
+每次 Cloud Object Storage 橋接器有一批資料要上傳至 Cloud Object Storage 服務時，它會建立一個以上包含資料的物件。關於如何分割訊息及命名所產生之物件的決策，取決於橋接器的配置方式。物件名稱可以包含 Kafka meta 資料，也可能包含來自訊息本身的資料。橋接器目前支援下列兩種方式，以將 Kafka 訊息分割成 Cloud Object Storage 物件：
 
 * 藉由 Kafka 訊息偏移。
 * 藉由每個 Kafka 訊息中出現的 ISO 8601 日期。這需要 Kafka 訊息包含有效的 JSON 格式物件。

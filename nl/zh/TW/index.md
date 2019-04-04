@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-15"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,13 +16,13 @@ lastupdated: "2018-11-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 開始使用 {{site.data.keyword.messagehub}} 
+# 入門指導教學
 {: #getting_started}
 
 若要開始使用 {{site.data.keyword.messagehub}} 和開始傳送及接收訊息，您可以使用 Java™ 範例。範例顯示生產者如何使用主題將訊息傳送到消費者。相同的範例程式用來使用訊息，以及產生訊息。
 {: shortdesc}
 
-若要進一步瞭解 {{site.data.keyword.messagehub}} 的運作方式，請參閱[關於 {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html)。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
+若要進一步瞭解 {{site.data.keyword.messagehub}} 的運作方式，請參閱[關於 {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-about)。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
 
 若要存取其他 {{site.data.keyword.messagehub}} 範例（包括 Node.js 及 Python 範例），請參閱 [{{site.data.keyword.messagehub}} 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples){:new_window}。
 
@@ -41,9 +45,9 @@ lastupdated: "2018-11-15"
   
   e. 按一下**建立**。
 
-2. {: #create_credentials_step notoc} 完成下列步驟，以建立部分 {{site.data.keyword.messagehub}} 認證：[使用 IBM Cloud 主控台取得認證並連接](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console)。
+2. {: #create_credentials_step notoc}完成下列步驟，以建立部分 {{site.data.keyword.messagehub}} 認證：[使用 IBM Cloud 主控台取得認證並連接](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console)。
    <br/>
-   <br/>針對此作業的[步驟 7](/docs/services/EventStreams/index.html#start_consumer_step)，您將需要 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。   
+   <br/>針對此作業的[步驟 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)，您將需要 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。   
 
 3. 如果您還沒有下列必要條件，請安裝它們：
 
@@ -76,7 +80,7 @@ lastupdated: "2018-11-15"
     
     此範例使用名為 `kafka-java-console-sample-topic` 的主題。如果主題尚不存在，範例會使用 {{site.data.keyword.messagehub}} 管理 API 建立它。為了傳送及接收訊息，範例會使用 Apache Kafka Java API。
 
-    使用[步驟 2](/docs/services/EventStreams/index.html#create_credentials_step) 中所建立認證的 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。
+    使用[步驟 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) 中所建立認證的 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。
 	
 	指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。
     

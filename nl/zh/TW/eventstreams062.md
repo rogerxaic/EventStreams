@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2019-01-14"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -18,7 +22,7 @@ lastupdated: "2019-01-14"
 若要使用 Kafka API 搭配 {{site.data.keyword.messagehub}}，請選擇下列其中一種用戶端：
 
 * 官方 Java 用戶端。這是最佳的選項，因為它包含可用於 Apache Kafka 的最新特性。
-* 其中一個[建議的協力廠商用戶端](/docs/services/EventStreams/eventstreams062.html#clients_table)。
+* 其中一個[建議的協力廠商用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table)。
 
 針對兩種用戶端，我們建議一律選擇最新的用戶端版本。
 {: shortdesc}
@@ -57,7 +61,7 @@ lastupdated: "2019-01-14"
 ## 協力廠商用戶端
 {: #third_party_clients}
 
-如果您無法執行官方的 Java 用戶端，我們建議執行其中一個[建議的協力廠商用戶端](/docs/services/EventStreams/eventstreams062.html#clients_table)，這些全都進行過 {{site.data.keyword.messagehub}} 的詳細測試。 
+如果您無法執行官方的 Java 用戶端，我們建議執行其中一個[建議的協力廠商用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table)，這些全都進行過 {{site.data.keyword.messagehub}} 的詳細測試。 
 
 支援最少用戶端需求集的其他協力廠商用戶端也可能適用於 {{site.data.keyword.messagehub}}。不過，我們只測試過建議的協力廠商用戶端並具有其經驗。
 
@@ -66,12 +70,12 @@ lastupdated: "2019-01-14"
 
 <table id="clients_table">
     <caption>表 2. 用戶端支援摘要</caption>
-      <tr>
-		    <th>用戶端</th>
-		    <th>語言</th>
-			<th>建議版本</th>
-		    <th>支援的最低版本 [<sup>1</sup>](/docs/services/EventStreams/eventstreams062.html#footnote1)</th>
-			<th>範例鏈結</th>
+     <tr>
+		    <th id="client" scope="col">用戶端</th>
+		    <th id="language" scope="col">語言</th>
+			<th id="version" scope="col">建議版本</th>
+		    <th id="minimum version" scope="col">支援的最低版本 [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+			<th id="sample link" scope="col">範例鏈結</th>
         </tr>
 			<tr>
 			<td colspan="3">**官方用戶端**</td>
@@ -80,7 +84,7 @@ lastupdated: "2019-01-14"
 			<td>[Apache Kafka 用戶端 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>最新</td>
-			<td>0.10.2<p> 如需較舊用戶端的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams/eventstreams062.html#compatability)。</p></td>
+			<td>0.10.2<p> 如需較舊用戶端的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。</p></td>
 			<td>[Java 主控台範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Liberty 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -122,7 +126,7 @@ lastupdated: "2019-01-14"
 1. {: #footnote1}此版本是我們已在持續測試中驗證過的最早版本。通常這是在過去 12 個月內可用的起始版本，但如果已知有重要的問題存在，可能會更新。
 
 ## 舊版相容性 - 標準方案
-{: #compatability}
+{: #compatibility}
 
 如需舊版相容性，您可以使用 Apache Kafka 0.9 Java 用戶端搭配 {{site.data.keyword.messagehub}} 標準方案。不過，由於此用戶端的年限，我們強烈阻止使用它。如果您選擇使用這個用戶端版本，則需要其他[登入模組 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)。
 
@@ -145,7 +149,7 @@ The no-kafka client does not fully support SASL authentication with the PLAIN me
 ## 將用戶端連接至 {{site.data.keyword.messagehub}}
 {: #connect_client}
 
-如需如何配置 Java 用戶端以連接至 {{site.data.keyword.messagehub}} 的相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。
+如需如何配置 Java 用戶端以連接至 {{site.data.keyword.messagehub}} 的相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 
 
 

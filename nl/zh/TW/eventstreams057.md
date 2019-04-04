@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -90,7 +94,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 
 當您以使用者介面或管理 API 建立主題時，可以變更訊息保留的時間限制。時間限制為最短一小時，最長 30 天。
 
-如需使用 Kafka 用戶端或 Kafka Streams 建立主題時所接受設定之限制的相關資訊，請參閱[主題管理用的 API](/docs/services/EventStreams/eventstreams104.html)。
+如需使用 Kafka 用戶端或 Kafka Streams 建立主題時所接受設定之限制的相關資訊，請參閱[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
 
 ## 在 Kafka 中建立及刪除主題
 {: #create_delete}

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 # 什麼是 MQ Light API，它有什麼不同？
-{: #mqlight}
+{: #mqlight_api}
 
 <!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** MQ Light API 只提供於標準方案中。**
@@ -33,6 +37,6 @@ lastupdated: "2018-10-29"
 {{site.data.keyword.mql}} 僅適用於下列 {{site.data.keyword.Bluemix_notm}} 地區：美國南部（達拉斯）、英國南部（倫敦）和亞太地區南部（雪梨）。MQ Light API 無法用於歐盟中部（法蘭克福）地區或 {{site.data.keyword.Bluemix_notm}} Dedicated。
 
 <!-- begin STAGING ONLY -->
-如需在 API 之間選擇的相關資訊，請參閱[在三個 API 之間抉擇](/docs/services/EventStreams/eventstreams087.html)。
+如需在 API 之間選擇的相關資訊，請參閱[在三個 API 之間抉擇](/docs/services/EventStreams?topic=eventstreams-choose_api)。
 <!-- end STAGING ONLY -->
 

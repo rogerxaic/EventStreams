@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-30"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-08-30"
 {:pre: .pre}
 
 # 如何使用 Kafka REST API
-{: #rest_how}
+{: #rest_api_how}
 
 <!-- info moved to eventstreams025.md because of doc app changes -->
 ** Kafka REST API 只提供於標準方案中。**

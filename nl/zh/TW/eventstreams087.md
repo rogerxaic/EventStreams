@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-06"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -44,7 +48,7 @@ Kafka REST API 是可用於下列狀況的便利介面：
 * 在延遲時間不是重要因素的特定低傳輸量使用案例中。
 * 對於除錯及錯誤搜尋
 
-Kafka REST API 不能當作高傳輸量、低延遲時間的介面。對於這些類型的需求，建議您使用 Kafka API 與 {{site.data.keyword.messagehub}} 相互連接。如需相關資訊，請參閱[使用 Kafka 用戶端](/docs/services/EventStreams/eventstreams050.html#kafka_using)。
+Kafka REST API 不能當作高傳輸量、低延遲時間的介面。對於這些類型的需求，建議您使用 Kafka API 與 {{site.data.keyword.messagehub}} 相互連接。如需相關資訊，請參閱[使用 Kafka 用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using)。
 
 ## 為何要使用 {{site.data.keyword.mql}} API？
 {: #why_mql notoc}

@@ -4,6 +4,10 @@ copyright:
   years: 2016, 2018
 lastupdated: "2018-08-14"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,7 +27,7 @@ lastupdated: "2018-08-14"
 使用 {{site.data.keyword.cloudaccesstrailfull}} 服務，以追蹤使用者及應用程式如何與 {{site.data.keyword.Bluemix}} 之企業方案上的 {{site.data.keyword.messagehub}} 服務互動。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始並且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始並且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla){:new_window}。
 
 <!-- You can create different sections to group events by area. -->
 

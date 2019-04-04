@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,9 +31,9 @@ lastupdated: "2018-06-23"
 
 每一則訊息都表示為一筆記錄，其包含兩個部分：索引鍵及值。索引鍵通常用於有關訊息的資料，值則是訊息內文。因為 Kafka 生態系統中的許多工具（例如連接至其他系統的連接器）都只使用值而忽略索引鍵，所以最好是將所有訊息資料都放入值中，並只使用索引鍵進行分割或日誌壓縮。您不應該根據從 Kafka 讀取的任何內容來使用索引鍵。
 
-許多其他傳訊系統也有一種攜帶其他資訊與訊息的方式。Kafka 0.11 基於此目的引進了記錄標頭，這受到 {{site.data.keyword.messagehub}} 企業方案的支援。{{site.data.keyword.messagehub}} 標準方案目前以 Kafka 0.10.2.1 為基礎，因此還不支援記錄標頭。 
+許多其他傳訊系統也有一種攜帶其他資訊與訊息的方式。Kafka 0.11 基於此目的引進了記錄標頭。
 
-您可能會發現在 {{site.data.keyword.messagehub}} 中使用[取用訊息](/docs/services/EventStreams/eventstreams114.html)一起讀取此資訊會很有用。
+您可能會發現在 {{site.data.keyword.messagehub}} 中使用[取用訊息](/docs/services/EventStreams?topic=eventstreams-consuming_messages)一起讀取此資訊會很有用。
 
 ## 配置設定
 {: #config_settings}
@@ -53,8 +57,7 @@ lastupdated: "2018-06-23"
 
 當生產者在主題上發佈訊息時，生產者可以選擇要使用的分割區。如果排序很重要，則必須記住，分割區是有序的記錄序列，但是一個主題包含一個以上分割區。如果您要依序遞送一組訊息，請確定它們全部都在同一個分割區中。達成此目的的最直接方式為對所有這些訊息提供相同的索引鍵。 
  
-在生產者發佈訊息時，可以明確指定分割區號碼。這提供直接控制，但會讓生產者程式碼更複雜，因為它要負責管理分割區選擇。如需相關資訊，請參閱呼叫 Producer.partitionsFor 的方法。例如，針對
-[Kafka 0.11.0.1 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 所說明的呼叫。
+在生產者發佈訊息時，可以明確指定分割區號碼。這提供直接控制，但會讓生產者程式碼更複雜，因為它要負責管理分割區選擇。如需相關資訊，請參閱呼叫 Producer.partitionsFor 的方法。例如，針對 [Kafka 1.1.0 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 所說明的呼叫。
  
 如果生產者未指定分割區號碼，則由分割程式進行分割區選擇。Kafka 生產者的內建預設分割程式的運作方式如下：
 
@@ -157,5 +160,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-如需相關資訊，請參閱 [Kafka 用戶端的 Javadoc ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://kafka.apache.org/0110/javadoc/index.html){:new_window}，其提供非常全面的資訊。 
+如需相關資訊，請參閱 [Kafka 用戶端的 Javadoc ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window}，其提供非常全面的資訊。 
 

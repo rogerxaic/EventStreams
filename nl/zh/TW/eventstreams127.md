@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -101,7 +105,7 @@ VCAP_SERVICES 的範例如下：
 <li>執行下列指令，驗證可以您的應用程式運行環境中使用 VCAP_SERVICES 環境變數：</br> 
  <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>
 </li>
-<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。
+<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 <p>您可能需要重新編譯打包應用程式，變更才能生效。</p></li>
 </ol>
 
@@ -120,7 +124,7 @@ VCAP_SERVICES 的範例如下：
 5. 按一下**新建認證**。
 6. 輸入新認證的詳細資料，例如名稱，然後按一下**新增**。新認證會出現在認證清單中。
 7. 使用**檢視認證**按一下此認證，以顯示 JSON 格式的詳細資料。
-8. 將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。
+8. 將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 
 ### 使用 IBM Cloud CLI 取得認證 
 {: #connect_standard_external_cli }
@@ -141,14 +145,14 @@ VCAP_SERVICES 的範例如下：
 <li>取得金鑰的詳細資料：</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>
 這會以 JSON 格式傳回服務金鑰詳細資料。</li>
-<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。</li>
+<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。</li>
 </ol>
 
  
 ## 企業方案概觀
 {: #connect_enterprise}
 
-使用企業方案佈建的服務會在在儀表板中分組於標題**服務**下。企業方案[已啟用 IAM 功能 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}。您不需要瞭解 IAM 即可開始使用，但如果想要保護您的 {{site.data.keyword.messagehub}} 服務，建議需要具備一些知識。如需相關資訊，請參閱[保護您的 {{site.data.keyword.messagehub}} 資源](/docs/services/EventStreams/eventstreams124.html)。
+使用企業方案佈建的服務會在在儀表板中分組於標題**服務**下。企業方案[已啟用 IAM 功能 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}。您不需要瞭解 IAM 即可開始使用，但如果想要保護您的 {{site.data.keyword.messagehub}} 服務，建議需要具備一些知識。如需相關資訊，請參閱[保護您的 {{site.data.keyword.messagehub}} 資源](/docs/services/EventStreams?topic=eventstreams-security)。
 
 請完成下列步驟，以連結應用程式並取得服務的服務金鑰。若要獲得授權建立主題，您的應用程式或服務金鑰必須有管理員存取角色。
 
@@ -201,7 +205,7 @@ VCAP_SERVICES 的範例如下：
 或者，您可以更新您的資訊清單檔，然後再次推送應用程式。</li>
 <li>驗證可以您的應用程式運行環境中使用 VCAP_SERVICES 環境變數：<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。
+<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 <p>您可能需要重新編譯打包應用程式，變更才能生效。</p></li>
 </ol>
 
@@ -220,7 +224,7 @@ VCAP_SERVICES 的範例如下：
 4. 按一下**新建認證**。 
 5. 填寫新認證的詳細資料，例如名稱及角色，然後按一下**新增**。新認證會出現在認證清單中。
 6. 使用**檢視認證**按一下此認證，以顯示 JSON 格式的詳細資料。
-7. 將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。
+7. 將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
    <br/><br/>請確定您的應用程式會剖析詳細資料。
 
 ### 使用 IBM Cloud CLI 取得認證
@@ -233,7 +237,7 @@ VCAP_SERVICES 的範例如下：
 <code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>列印服務金鑰：<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
-<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams/eventstreams063.html)。
+<li>將這些認證傳遞給您的應用程式。指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。如需相關資訊，請參閱[配置用戶端](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 <p>請確定您的應用程式會剖析詳細資料。</p></li>
 </ol>
 
@@ -242,8 +246,8 @@ VCAP_SERVICES 的範例如下：
 
 現在您已有連線及認證資訊，您可以選擇 {{site.data.keyword.messagehub}} 用戶端。您的選項取決於您的方案。
 
-* 如果使用標準方案，請參閱[在三個 API 之間抉擇](/docs/services/EventStreams/eventstreams087.html)，以取得要選擇哪個用戶端以及如何連接的相關資訊。
-* 如果使用企業方案，請參閱[使用 Kafka API](/docs/services/EventStreams/eventstreams050.html)。
+* 如果使用標準方案，請參閱[在三個 API 之間抉擇](/docs/services/EventStreams?topic=eventstreams-choose_api)，以取得要選擇哪個用戶端以及如何連接的相關資訊。
+* 如果使用企業方案，請參閱[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
 
 	如果您使用企業方案，內部 Kafka <code>__consumer_offsets</code> 主題可供您以唯讀方式查看。強烈建議您不要試圖以任何方式管理主題。 
 
