@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2018-06-26"
 # 既知の制約事項
 {: #restrictions}
 
-{{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。
+{{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。 
 {: shortdesc}
 
 ## Kafka ブートストラップ・サーバーで障害が起こっても Java Kafka 呼び出しがフェイルオーバーしない
@@ -90,7 +94,7 @@ Kafka Java クライアント呼び出しで Kafka を検出できないこと�
 
 ユーザー・インターフェースまたは管理 API のいずれかを使用して、トピックを作成するときにメッセージ保存の時間制限を変更できます。 時間制限は、最小 1 時間、最大 30 日間です。
 
-Kafka クライアントまたは Kafka Streams を使用してトピックを作成するときに許可される設定の制限については、[トピック管理用の API](/docs/services/EventStreams/eventstreams104.html) を参照してください。
+Kafka クライアントまたは Kafka Streams を使用してトピックを作成するときに許可される設定の制限については、[Kafka API の使用](/docs/services/EventStreams?topic=eventstreams-kafka_using)を参照してください。
 
 ## Kafka でのトピックの作成および削除
 {: #create_delete}
@@ -100,7 +104,7 @@ Kafka では、トピックの作成および削除は非同期操作であり�
 ## Kafka REST API
 {: #trouble_rest}
 
-*  要求と応答では、バイナリー埋め込み形式のみがサポートされます。 Avro および JSON 埋め込み形式はサポートされません。
+*  要求と応答では、バイナリー埋め込み形式のみがサポートされます。Avro および JSON 埋め込み形式はサポートされません。
 *  コンシューマー・インスタンスに同時要求はサポートされません。
    コンシューマー・インスタンスに対応する読み取り、コミット、または削除の要求は、必ず、そのインスタンスの未完了要求の応答が受信されてから送信してください。
 
@@ -118,7 +122,7 @@ Kafka REST API を使用しているアプリケーションは、各 ApiKey の
 ## Kafka REST API 日次再始動
 {: #rest_restart}
 
-Kafka REST API は、1 日 1 回、短時間の再始動期間があります。 この期間中には、Kafka REST API が利用不可になることがあります。 これが起こった場合、要求を再試行することをお勧めします。 REST API が再始動された後、Kafka コンシューマー・インスタンスの再作成が必要になります。 この場合、REST API は次の JSON を返します。
+Kafka REST API は、1 日 1 回、短時間の再始動期間があります。 この期間中には、Kafka REST API が利用不可になることがあります。 これが起こった場合、要求を再試行することをお勧めします。 REST API が再始動した後、Kafka コンシューマー・インスタンスを再度作成する必要があります。この場合、REST API は次の JSON を返します。
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

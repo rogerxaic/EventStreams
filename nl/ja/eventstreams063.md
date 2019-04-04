@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-06-22"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -13,12 +16,12 @@ lastupdated: "2018-06-22"
 {:pre: .pre}
 
 # Kafka API クライアントの構成
-{: #kafka_connect}
+{: #kafka_api_client}
 
 
 Kafka API は、{{site.data.keyword.messagehub}} に接続するために、以下のいずれかの資格情報セットを使用します。 
-* <code>kafka_brokers_sasl</code> 資格情報と、[VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html#vcap)からの <code>user</code> と <code>password</code>。
-* サービス・キー。 詳しくは、[クラスターへの接続](/docs/services/EventStreams/eventstreams127.html#enterprise_connect)を参照してください。
+* <code>kafka_brokers_sasl</code> 資格情報と、[VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)からの <code>user</code> と <code>password</code>。
+* サービス・キー。 詳しくは、[クラスターへの接続](/docs/services/EventStreams?topic=eventstreams-connecting)を参照してください。
 {: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->

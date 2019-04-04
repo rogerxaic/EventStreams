@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-20"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -43,7 +47,7 @@ Kafka クライアントと {{site.data.keyword.mql}} API のどちらを使用�
 {{site.data.keyword.mql}} は、ダラス (us-south)、ロンドン (eu-gb)、およびシドニー (au-syd) の
 {{site.data.keyword.Bluemix_notm}} ロケーション (地域) でのみ使用できます。 MQ Light API は、フランクフルト (eu-de) ロケーションおよび {{site.data.keyword.Bluemix_notm}} 専用では使用不可です。
 
-どの API を使用するのかの選択について詳しくは、[3 つの API からの選択](/docs/services/EventStreams/eventstreams087.html)を参照してください。
+どの API を使用するのかの選択について詳しくは、[3 つの API からの選択](/docs/services/EventStreams?topic=eventstreams-choose_api)を参照してください。
 
 
 ## MQ Light API を {{site.data.keyword.messagehub}} で使用するために必要なもの
@@ -65,11 +69,11 @@ MQ Light API を無効にするには、「MQLight」トピックを削除しま
 {: #mql_connect}
 
 アプリを当サービスに接続するには、アプリは <code>user</code>、
-<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を [VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)から使用する必要があります。 選択した言語に応じて、以下のガイドを使用してください。
+<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を [VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)から使用する必要があります。選択した言語に応じて、以下のガイドを使用してください。
 
 **Java の場合**
 
-create() 呼び出しの endpointService パラメーターとして「null」を指定する場合、これは、クライアントに <code>user</code>、<code>password</code>、および
+create() 呼び出しの endpointService パラメーターとして <code>null</code> を指定する場合、これは、クライアントに <code>user</code>、<code>password</code>、および
 <code>mqlight_lookup_url</code> 詳細を VCAP_SERVICES から読み取ることを指示します。
 
 <pre>
@@ -154,7 +158,7 @@ client = mqlight.Client(service=service,
 既存のアプリケーションを接続するには、以下を確認してください。
 
 * アプリケーションが、ご使用の言語での最新の使用可能なバージョンの {{site.data.keyword.mql}} API クライアントを使用していることを確認します。
-* VCAP_SERVICES から取り出した接続詳細が、<code>messagehub</code> サービス・タイプを参照していること、接続ユーザー名を <code>credentials.username</code> プロパティーではなく <code>credentials.user</code> プロパティーから取り出していること、および、接続ルックアップ URL を <code>credentials.connectionLookupURI</code> プロパティーではなく <code>credentials.mqlight_lookup_url</code> プロパティーから取り出していることを確認します。 詳しくは、[VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)を参照してください。
+* VCAP_SERVICES から取り出した接続詳細が、<code>messagehub</code> サービス・タイプを参照していること、接続ユーザー名を <code>credentials.username</code> プロパティーではなく <code>credentials.user</code> プロパティーから取り出していること、および、接続ルックアップ URL を <code>credentials.connectionLookupURI</code> プロパティーではなく <code>credentials.mqlight_lookup_url</code> プロパティーから取り出していることを確認します。 詳しくは、[VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting)を参照してください。
 
 	このステップが行われるのは、Java&trade; クライアントを使用していて、クライアント自体が情報を取り出すように create() 呼び出しの endpointService パラメーターとして「null」を指定しているユーザーのためであることに注意してください。
 	
@@ -162,7 +166,7 @@ client = mqlight.Client(service=service,
 
 以下の点にも注意する必要があります。
 
-* メッセージ限度は {{site.data.keyword.messagehub}} と整合していますが、{{site.data.keyword.mql}} API をサポートする他のサーバーとは異なっている可能性があります。 詳しくは、[最大限度](/docs/services/EventStreams/eventstreams075.html#max_limits)を参照してください。
+* メッセージ限度は {{site.data.keyword.messagehub}} と整合していますが、{{site.data.keyword.mql}} API をサポートする他のサーバーとは異なっている可能性があります。 詳しくは、[最大限度](/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits)を参照してください。
 * JMS はサポートされません。
 
 <!-- 15/11/18: info was in eventstreams081.md, moved because of doc app changes -->

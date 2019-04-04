@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-03"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -15,7 +19,7 @@ lastupdated: "2018-12-21"
 # {{site.data.keyword.messagehub}} とは
 {: #about}
 
-{{site.data.keyword.messagehub_full}} は、Apache Kafka で構築されている高スループットのメッセージ・バスです。 これは、{{site.data.keyword.Bluemix_notm}} へのイベントの取り込みのため、および、お客様のサービスおよびアプリケーション間でイベント・ストリームを分散させるために最適化されたサービスとしての完全マネージド Apache Kafka です。{{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
+{{site.data.keyword.messagehub_full}} は、Apache Kafka で構築されている高スループットのメッセージ・バスです。 これは、{{site.data.keyword.Bluemix_notm}} へのイベントの取り込みのため、および、お客様のサービスおよびアプリケーション間でイベント・ストリームを分散させるために最適化されたサービスとしての完全マネージド Apache Kafka です。 {{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
 {: shortdesc}
 
 {{site.data.keyword.messagehub}} を使用することによって、以下のタスクを実行できます。
@@ -25,8 +29,7 @@ lastupdated: "2018-12-21"
 * イベント・データを複数のアプリケーションにパブリッシュしてリアルタイムに対応する。
 * 別のサービスにデータを転送する。 例えば、Cloud Object Storage などへです。
 
-Apache Kafka で構築されることによって、コミュニティーで起こっているすべてのイノベーションの利点を直接活用でき、Kafka クライアント API、Kafka Stream、Kafka Connect、および KSQL をサポートできます。
-{:shortdesc}
+Apache Kafka で構築されることによって、コミュニティーで起こっているすべてのイノベーションを直接活用でき、Kafka クライアント API、Kafka Stream、Kafka Connect、および KSQL をサポートします。
 
 {{site.data.keyword.messagehub}} への接続は常に資格情報を使用して認証されるので追加の構成を提供する必要はありますが、Apache Kafka ツールは、通常 {{site.data.keyword.messagehub}} で直接使用できます。
 

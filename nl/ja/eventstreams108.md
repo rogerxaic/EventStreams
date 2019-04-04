@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -135,7 +139,7 @@ Kafka REST API は、1 日 1 回、短時間の再始動期間があります。
 {: #plan_compare }
 {: faq}
 
-2 つの異なる {{site.data.keyword.messagehub}} プランについて詳しくは、[プランの選択](/docs/services/EventStreams/eventstreams085.html)を参照してください。
+2 つの異なる {{site.data.keyword.messagehub}} プランについて詳しくは、[プランの選択](/docs/services/EventStreams?topic=eventstreams-plan_choose)を参照してください。
 
 ## 災害復旧は、どのようにすればよいですか?
 {: #disaster_recovery }

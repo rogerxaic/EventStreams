@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -101,7 +105,7 @@ VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされ
 <li>以下を実行して、アプリケーション・ランタイムで VCAP_SERVICES 環境変数が使用可能であることを検証します。</br> 
  <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code> 
 </li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。
 <p>変更を有効にするために、アプリケーションの再ステージが必要な場合があります。</p></li>
 </ol>
 
@@ -120,7 +124,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 5. **「新規資格情報」**をクリックします。
 6. 名前など、新規資格情報の詳細を入力し、**「追加」**をクリックします。 新規資格情報が資格情報リストに表示されます。
 7. **「資格情報の表示」**を使用してこの資格情報をクリックして、JSON 形式の詳細を表示します。
-8. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+8. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。
 
 ### IBM Cloud CLI を使用した資格情報の取得 
 {: #connect_standard_external_cli }
@@ -141,14 +145,14 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 <li>キーの詳細を取得します。</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>
 JSON 形式のサービス・キー詳細が返されます。</li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。</li>
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。</li>
 </ol>
 
  
 ## エンタープライズ・プランの概要
 {: #connect_enterprise}
 
-エンタープライズ・プランを使用してプロビジョンされたサービスは、ダッシュボードの**「サービス」**というヘッダーの下にグループ化されます。 エンタープライズ・プランでは [IAM が有効 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window} です。 開始するにあたって IAM を理解する必要はありませんが、{{site.data.keyword.messagehub}} サービスを保護したい場合は、いくらかの知識を持つことが推奨されます。 詳しくは、[{{site.data.keyword.messagehub}} リソースの保護](/docs/services/EventStreams/eventstreams124.html)を参照してください。
+エンタープライズ・プランを使用してプロビジョンされたサービスは、ダッシュボードの**「サービス」**というヘッダーの下にグループ化されます。 エンタープライズ・プランでは [IAM が有効 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/iam?topic=iam-getstarted#getstarted){:new_window} です。 開始するにあたって IAM を理解する必要はありませんが、{{site.data.keyword.messagehub}} サービスを保護したい場合は、いくらかの知識を持つことが推奨されます。 詳しくは、[{{site.data.keyword.messagehub}} リソースの保護](/docs/services/EventStreams?topic=eventstreams-security)を参照してください。
 
 以下の手順を実行して、アプリケーションをバインドし、サービスのサービス・キーを取得します。 トピックを作成する許可を得るために、アプリケーションまたはサービス・キーには管理者アクセス役割がなければなりません。
 
@@ -201,7 +205,7 @@ JSON 形式のサービス・キー詳細が返されます。</li>
 あるいは、マニフェスト・ファイルを更新し、アプリケーションをもう一度プッシュすることもできます。</li>
 <li>アプリケーション・ランタイムで VCAP_SERVICES 環境変数が使用可能であることを検証します。<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。 
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。 
 <p>変更を有効にするために、アプリケーションの再ステージが必要な場合があります。</p></li>
 </ol>
 
@@ -220,7 +224,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 4. **「新規資格情報」**をクリックします。 
 5. 名前や役割など、新規資格情報の詳細を入力し、**「追加」**をクリックします。 新規資格情報が資格情報リストに表示されます。
 6. **「資格情報の表示」**を使用してこの資格情報をクリックして、JSON 形式の詳細を表示します。
-7. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+7. これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。
    <br/><br/>アプリケーションが詳細を構文解析することを確認してください。
 
 ### IBM Cloud CLI を使用した資格情報の取得
@@ -233,7 +237,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 <code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>サービス・キーを表示します。<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
-<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams/eventstreams063.html)を参照してください。
+<li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。
 <p>アプリケーションが詳細を構文解析することを確認してください。</p></li>
 </ol>
 
@@ -242,8 +246,8 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 
 これで、接続情報および資格情報を取得したので、{{site.data.keyword.messagehub}} クライアントを選択できます。 選択はプランによって異なります。
 
-* 標準プランを使用している場合、選択するクライアントおよび接続方法について、[3 つの API からの選択](/docs/services/EventStreams/eventstreams087.html)を参照してください。
-* エンタープライズ・プランを使用している場合、[Kafka API の使用](/docs/services/EventStreams/eventstreams050.html)を参照してください。
+* 標準プランを使用している場合、選択するクライアントおよび接続方法について、[3 つの API からの選択](/docs/services/EventStreams?topic=eventstreams-choose_api)を参照してください。
+* エンタープライズ・プランを使用している場合、[Kafka API の使用](/docs/services/EventStreams?topic=eventstreams-kafka_using)を参照してください。
 
 	エンタープライズ・プランを使用している場合、内部 Kafka <code>__consumer_offsets</code> トピックが読み取り専用として可視になります。 このトピックは、いかなる場合も絶対に管理しないでください。 
 

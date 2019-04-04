@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-01"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -18,10 +22,10 @@ lastupdated: "2018-06-01"
 ** Cloud Object Storage ブリッジは、標準プランのみの一部として使用可能です。**
 <br/>
 
-{{site.data.keyword.IBM}} Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} Kafka トピックからデータを読み取って [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage/about-cos.html){:new_window} にそのデータを入れる手段を提供します。
+{{site.data.keyword.IBM}} Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} Kafka トピックからデータを読み取って [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} にそのデータを入れる手段を提供します。
 {: shortdesc}
 
-Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} の Kafka トピックから [Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage/about-cos.html){:new_window} のインスタンスへデータを保存することを可能にします。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして Cloud Object Storage サービス内のバケットにアップロードします。 Cloud Object Storage ブリッジを構成することによって、データをオブジェクトとして Cloud Object Storage にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
+Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} の Kafka トピックから [Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} のインスタンスへデータを保存することを可能にします。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして Cloud Object Storage サービス内のバケットにアップロードします。 Cloud Object Storage ブリッジを構成することによって、データをオブジェクトとして Cloud Object Storage にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
 
 * オブジェクトが書き込まれる先のバケットの名前。
 * オブジェクトが Cloud Object Storage サービスにアップロードされる頻度。
@@ -59,7 +63,7 @@ Cloud Object Storage ブリッジが Cloud Object Storage インスタンスへ�
    代替方法として、<code>apikey</code> フィールドおよび <code>resource_instance_id</code> フィールドを取得して、{{site.data.keyword.messagehub}} ダッシュボードにそれらを入力するか、または、REST 呼び出しを使用して直接ブリッジを作成する場合はブリッジ作成 JSON 内にそれらを設定することができます。
 
 作成する資格情報は Cloud Object Storage インスタンス全体への書き込みアクセス権限を認可するので、このアクセス権限を、ブリッジが対話する相手の特定のバケットに制限することが望ましい場合もあります。
-1. [「ID およびアクセス管理」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/iam/?env_id=ibm%3Ayp%3Aus-south#/serviceids){:new_window} に移動します。
+1. [「アクセスおよびユーザーの管理」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/iam#/overview){:new_window} に移動します。
 2. このページに、自動生成されたサービス ID が表示されるはずです。 特定の ID を識別した場合は、**「サービス ID の管理」**アクションを選択してください。 
 3. **「ポリシーの編集」**アクションを選択し、さらに制限して特定のバケットに限定するため、**「リソース・タイプ」**でバケットを選択し、**「リソース ID」**にバケットの名前を指定します。 **「保存」**をクリックします。
 

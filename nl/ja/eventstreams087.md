@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-06"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -44,7 +48,7 @@ Kafka REST API は、以下のシチュエーションで使用できる便利�
 * 待ち時間は重要なファクターではなく、スループットが低い一部のユース・ケース
 * デバッグおよび障害検出の目的
 
-Kafka REST API は、スループットが高く待ち時間が短いインターフェースを目的としたものではありません。こうしたタイプの要件がある場合、Kafka API を使用して {{site.data.keyword.messagehub}} と相互に接続することをお勧めします。 詳細については、[Kafka クライアントの使用](/docs/services/EventStreams/eventstreams050.html#kafka_using)を参照してください。
+Kafka REST API は、スループットが高く待ち時間が短いインターフェースを目的としたものではありません。こうしたタイプの要件がある場合、Kafka API を使用して {{site.data.keyword.messagehub}} と相互に接続することをお勧めします。 詳細については、[Kafka クライアントの使用](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using)を参照してください。
 
 ## {{site.data.keyword.mql}} API を使用する理由
 {: #why_mql notoc}

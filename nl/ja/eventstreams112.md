@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,9 +31,9 @@ lastupdated: "2018-06-23"
 
 各メッセージが 1 つのレコードとして表され、レコードはキーと値の 2 つの部分からなります。 キーは一般的にメッセージに関するデータ用に使用され、値はメッセージ本体です。 Kafka エコシステム内の多くのツール (他のシステムへのコネクターなど) は、値のみを使用し、キーを無視します。そのため、メッセージ・データのすべてを値に入れ、パーティショニングまたはログ圧縮のためにのみキーを使用するのが最良です。 キーを使用するために Kafka から読み取りを行うものに依存してはなりません。
 
-その他の多くのメッセージング・システムにも、他の情報をメッセージと共に受け渡す方法があります。 この目的のためのレコード・ヘッダーが、{{site.data.keyword.messagehub}} エンタープライズ・プランでサポートされる Kafka 0.11 で導入されました。 {{site.data.keyword.messagehub}} 標準プランは、現在は Kafka 0.10.2.1 に基づいているため、まだレコード・ヘッダーをサポートしていません。 
+その他の多くのメッセージング・システムにも、他の情報をメッセージと共に受け渡す方法があります。 この目的のためのレコード・ヘッダーが Kafka 0.11 で導入されました。
 
-ここでの説明と合わせて {{site.data.keyword.messagehub}} での[メッセージのコンシューム](/docs/services/EventStreams/eventstreams114.html)も読むことをお勧めします。
+ここでの説明と合わせて {{site.data.keyword.messagehub}} での[メッセージのコンシューム](/docs/services/EventStreams?topic=eventstreams-consuming_messages)も読むことをお勧めします。
 
 ## 構成設定
 {: #config_settings}
@@ -53,7 +57,7 @@ lastupdated: "2018-06-23"
 
 プロデューサーは、トピックにメッセージをパブリッシュするときに、どのパーティションを使用するのかを選択できます。 順序が重要な場合、パーティションはレコードの順序付きシーケンスであるが、1 つのトピックは 1 つ以上のパーティションからなる、という点に注意する必要があります。 一群のメッセージが順序通りに配信されるようにする必要がある場合、それらのメッセージが確実に同じパーティションに送信されるようにします。 これを行うための最も単純な方法は、それらのメッセージのすべてに同じキーを付与することです。 
  
-プロデューサーは、メッセージをパブリッシュするときにパーティション番号を明示的に指定できます。 この方法は直接制御を可能にしますが、プロデューサーのコードはパーティション選択の管理について責任を担うため、より複雑になります。 詳しくは、Producer.partitionsFor メソッド呼び出しを参照してください。 例えば、[Kafka 0.11.0.1 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} でのこの呼び出しの説明があります。
+プロデューサーは、メッセージをパブリッシュするときにパーティション番号を明示的に指定できます。 この方法は直接制御を可能にしますが、プロデューサーのコードはパーティション選択の管理について責任を担うため、より複雑になります。 詳しくは、Producer.partitionsFor メソッド呼び出しを参照してください。 例えば、[Kafka 1.1.0 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} でのこの呼び出しの説明があります。
  
 プロデューサーがパーティション番号を指定しない場合、パーティションの選択はパーティショナーによって行われます。 Kafka プロデューサーに組み込まれたデフォルト・パーティショナーは、以下のように動作します。
 
@@ -156,5 +160,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-詳しくは、包括的に記述されている [Kafka クライアントの Javadoc ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/0110/javadoc/index.html){:new_window} を参照してください。 
+詳しくは、包括的に記述されている [Kafka クライアントの Javadoc ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window} を参照してください。 
 

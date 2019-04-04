@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -59,7 +63,7 @@ CURL の場合、[Confluent 資料 ![外部リンク・アイコン](../../icons
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
-{{site.data.keyword.messagehub}} に接続するために、Kafka REST API は [VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)からの <code>api_key</code> および <code>kafka_rest_url</code> 資格情報を使用します。
+{{site.data.keyword.messagehub}} に接続するために、Kafka REST API は [VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)からの <code>api_key</code> および <code>kafka_rest_url</code> 資格情報を使用します。
 
 
 {{site.data.keyword.messagehub}} Kafka REST API で認証するには、

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,13 +18,13 @@ lastupdated: "2018-05-25"
 
 <!-- 12/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 接続および認証の方法
-{: #mql_connect}
+{: #mql_connect_authenticate}
 
 **MQ Light API は、標準プランのみの一部として使用可能です。**
 <br/>
 
 アプリを当サービスに接続するには、アプリは <code>user</code>、
-<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を [VCAP_SERVICES 環境変数](/docs/services/EventStreams/eventstreams127.html)から使用する必要があります。 選択した言語に応じて、以下のガイドを使用してください。
+<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を [VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting)から使用する必要があります。選択した言語に応じて、以下のガイドを使用してください。
 {: shortdesc}
 
 **Java の場合**

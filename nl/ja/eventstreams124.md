@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-07-04"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -82,7 +86,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 | コンシューマー・グループを削除する |リソース・タイプ: <code>cluster</code> |適用外  |リソース・タイプ: <code>group</code> <br/>リソース ID: <var class="keyword varname">group_ID</var>      |
 | Streams を使用する |リソース・タイプ: <code>cluster</code></br>リソース・タイプ: <code>group</code>| 適用外  |リソース・タイプ: <code>topic</code>    |
 
-IAM について詳しくは、[IBM Cloud Identity and Access Management](/docs/iam/index.html#iamoverview) を参照してください。
+IAM について詳しくは、[IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview) を参照してください。
 
 ポリシーの設定方法に関する例については、[IBM Cloud IAM Service IDs and API Keys ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window} を参照してください。
 
@@ -90,7 +94,7 @@ IAM について詳しくは、[IBM Cloud Identity and Access Management](/docs/
 ## {{site.data.keyword.messagehub}} への接続
 {: #connect_message_enterprise }
 
-Cloud Foundry アプリケーションのバインド方法または外部アプリケーション用のセキュリティー・キー資格情報の取得方法について詳しくは、[{{site.data.keyword.messagehub}} への接続](/docs/services/EventStreams/eventstreams127.html#connect_messagehub)を参照してください。
+Cloud Foundry アプリケーションのバインド方法または外部アプリケーション用のセキュリティー・キー資格情報の取得方法について詳しくは、[{{site.data.keyword.messagehub}} への接続](/docs/services/EventStreams?topic=eventstreams-connecting)を参照してください。
 
 <!-- 28/06/18 - Karen: draft info only
 

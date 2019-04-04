@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 
-#モニタリングとロギング (標準プラン)
+# モニタリングとロギング (標準プラン)
 {: #monitoring}
 
 標準プランの {{site.data.keyword.messagehub}} ではメトリックおよびイベントが自動的に収集されるため、{{site.data.keyword.messagehub}} の使用をモニターすることができます。

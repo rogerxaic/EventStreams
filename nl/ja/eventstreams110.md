@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-02-06"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +19,7 @@ lastupdated: "2018-02-06"
 # {{site.data.keyword.messagehub}} での KSQL の使用
 {: #ksql_using}
 
-ストリーム処理のために、[KSQL ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/confluentinc/ksql){:new_window} を {{site.data.keyword.messagehub}} と共に使用できます。 必ず KSQL 0.4 以降を使用してください。
+ストリーム処理のために、[KSQL ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/confluentinc/ksql){:new_window} を {{site.data.keyword.messagehub}} と共に使用できます。 必ず KSQL 0.4 以降を使用してください。 
 {: shortdesc}
 
 以下のステップを実行してください。

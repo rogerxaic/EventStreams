@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-17"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +17,9 @@ lastupdated: "2018-12-17"
 {:pre: .pre}
 
 # {{site.data.keyword.messagehub}} チームへの問題の報告 - エンタープライズ・プラン
-{: #report_problem}
+{: #report_problem_enterprise}
 
-{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/status){:new_window} を確認してください。
+{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/status?selected=status){:new_window} を確認してください。
 {: shortdesc}
 
 {{site.data.keyword.messagehub}} チームから支援を受けたい場合は、以下の情報をすべて収集してください。 事前に提供できる情報が多ければ多いほど、チームは問題解決をより効率的に支援できます。
@@ -35,7 +39,7 @@ lastupdated: "2018-12-17"
 7. 発生している問題は何ですか? 影響を受けているトピック、クライアント ID、グループ ID、およびトランザクション ID は?
 8. あなたのサービスへの問題の影響は?
 
-収集した情報は、[サポート要求を送信する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/get-support/howtogetsupport.html#using-avatar) ことにより、サポート・チケットとして IBM に提出することができます。
+収集した情報は、[サポート要求を送信する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window} ことにより、サポート・チケットとして IBM に提出することができます。
 
 
 

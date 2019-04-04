@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # Kafka Java クライアントの使用
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -34,7 +38,7 @@ Java&trade; Kafka API サンプルは、Kafka API を直接使用するプロデ
 
 このサンプルのセットアップおよび実行について詳しくは、[README.md ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window} を参照してください。
 
-このサンプルの実行方法の段階的な詳しい説明については、[{{site.data.keyword.messagehub}} 入門](/docs/services/EventStreams/index.html#getting_started_steps)を参照してください。
+このサンプルの実行方法の段階的な詳しい説明については、[{{site.data.keyword.messagehub}} 入門](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps)を参照してください。
 
 ## Liberty for Java サンプルの使用、ダウンロード、および実行の方法
 {: #liberty_sample notoc}
@@ -60,7 +64,7 @@ Liberty for Java サンプルは、Liberty ランタイムにデプロイされ�
 
 ここで、USERNAME および PASSWORD は、{{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.messagehub}} **「サービス資格情報」**タブからの値です。
 
-<code>sasl.jaas.config</code> を使用する場合、同じ JVM で稼働している複数のクライアントはそれぞれ異なる資格情報を使用できます。 詳しくは、[Configuring Kafka clients  ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window} を参照してください。
+<code>sasl.jaas.config</code> を使用する場合、同じ JVM で稼働している複数のクライアントはそれぞれ異なる資格情報を使用できます。 詳しくは、[Configuring Kafka clients ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window} を参照してください。
 
 以前の Kafka クライアントでは、JAAS 構成ファイルを使用して資格情報を指定する必要がありました。 この方法は不便なため、代わりに <code>sasl.jaas.config</code> プロパティーを使用することをお勧めします。
 
@@ -78,7 +82,7 @@ Kafka クライアント 0.10 以降を使用できます。
 0.9.X から最新バージョンに移行する
 ことを強くお勧めします。 Kafka クライアントは、[https://kafka.apache.org/downloads ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/downloads){:new_window} からダウンロードできます。
 
-0.9.X クライアントを使用する場合の影響について詳しくは、[後方互換性](/docs/services/EventStreams/eventstreams062.html#compatability)を参照してください。
+0.9.X クライアントを使用する場合の影響について詳しくは、[後方互換性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)を参照してください。
 
 
 

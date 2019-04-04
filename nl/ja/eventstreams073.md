@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-29"
+lastupdated: "2019-01-23"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -31,7 +35,7 @@ lastupdated: "2018-06-29"
 <dt>メッセージ</dt>
 <dd>Kafka におけるデータの単位。 各メッセージが 1 つのレコードとして表され、レコードはキーと値の 2 つの部分からなります。 キーは一般的にメッセージに関するデータ用に使用され、値はメッセージ本体です。 Kafka ではレコードいう用語とメッセージという用語が区別せずに使用されています。 
 
-<p>その他の多くのメッセージング・システムにも、他の情報をメッセージと共に受け渡す方法があります。 この目的のためのレコード・ヘッダーが、{{site.data.keyword.messagehub}} エンタープライズ・プランでサポートされる Kafka 0.11 で導入されました。 {{site.data.keyword.messagehub}} 標準プランは、現在は Kafka 0.10.2.1 に基づいているため、まだレコード・ヘッダーをサポートしていません。 </p> 
+<p>その他の多くのメッセージング・システムにも、他の情報をメッセージと共に受け渡す方法があります。 この目的のために、{{site.data.keyword.messagehub}} でサポートされるレコード・ヘッダーが Kafka 0.11 で導入されています。</p> 
 
 <p>Kafka エコシステム内の多くのツール (他のシステムへのコネクターなど) は、値のみを使用し、キーを無視します。そのため、メッセージ・データのすべてを値に入れ、パーティショニングまたはログ圧縮のためにのみキーを使用するのが最良です。 キーを使用するために Kafka から読み取りを行うものに依存してはなりません。</p>   </dd>
 <dt>トピック</dt>
@@ -41,7 +45,7 @@ lastupdated: "2018-06-29"
 <dd>各トピックは、1 つ以上のパーティションから成ります。 各パーティションは、メッセージの順序付きリストです。 パーティションにあるメッセージのそれぞれに、オフセットと呼ばれる単調に増加する数値が付与されます。 
 <p>各パーティションで、クラスター内の 1 つのサーバーがパーティションのリーダーとして動作し、その他のサーバーはフォロワーとして動作します。<p>
 <p>1 つのトピックに複数のパーティションがある場合、クラスター全体でそれらのパーティションを配分することによって、データを並行してフィードし、スループットを向上させることができます。 パーティションの数は、コンシューマー間の作業負荷のバランシングにも影響します。</p>
-<p>詳しくは、[パーティションのリーダー](/docs/services/EventStreams/eventstreams118.html)を参照してください。</dd>
+<p>詳しくは、[パーティションのリーダー](/docs/services/EventStreams?topic=eventstreams-partition_leadership)を参照してください。</dd>
 <dt>プロデューサー</dt>
 <dd>Kafka トピックにメッセージのストリームをパブリッシュするプロセス。 プロデューサーは、1 つ以上のトピックにパブリッシュすることができます。
 また、オプションで、データを格納するパーティションを選択できます。<br/></dd>
@@ -59,9 +63,9 @@ lastupdated: "2018-06-29"
 </dl>
 
 詳細については、以下の資料を参照してください。
-- [メッセージのプロデュース](/docs/services/EventStreams/eventstreams112.html)
-- [メッセージのコンシューム](/docs/services/EventStreams/eventstreams114.html) 
-- [パーティションのリーダー](/docs/services/EventStreams/eventstreams118.html) 
+- [メッセージのプロデュース](/docs/services/EventStreams?topic=eventstreams-producing_messages)
+- [メッセージのコンシューム](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
+- [パーティションのリーダー](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
 - [Apache Kafka 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/documentation.html){:new_window} 
 
 
