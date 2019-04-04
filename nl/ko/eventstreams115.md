@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-01"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -19,11 +23,11 @@ lastupdated: "2018-06-01"
 <br/>
 
 {{site.data.keyword.IBM}} Cloud Object Storage 브릿지는 {{site.data.keyword.messagehub}} Kafka 토픽에서 데이터를 읽고 해당 데이터를
-[{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage/about-cos.html){:new_window}에 저장하는 수단을 제공합니다.
+[{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}에 저장하는 수단을 제공합니다.
 {: shortdesc}
 
 Cloud Object Storage 브릿지를 사용하면 {{site.data.keyword.messagehub}}에 있는 Kafka 토픽의 데이터를 [Cloud Object Storage
-서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage/about-cos.html){:new_window}의 인스턴스에 아카이브할 수 있습니다. 브릿지는
+서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}의 인스턴스에 아카이브할 수 있습니다. 브릿지는
 Kafka에서 일괄처리 메시지를 이용하고 메시지 데이터를 Cloud Object
 Storage 서비스의 버킷에 오브젝트로 업로드합니다. Cloud Object Storage
 브릿지를 구성하여 Cloud Object Storage에 데이터를 오브젝트로 업로드하는
@@ -85,11 +89,11 @@ Cloud Object Storage 인스턴스의 소유자 또는 관리자가 Cloud Object 
 
 작성된 인증 정보는 작성자 액세스 권한을 전체 Cloud Object Storage 인스턴스에 부여하므로
 이 액세스 권한을 브릿지가 상호작용할 특정 버킷으로 제한할 수 있습니다.
-1. [ID 및 액세스 관리 페이지![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/iam/?env_id=ibm%3Ayp%3Aus-south#/serviceids){:new_window}로 이동하십시오.
+1. [액세스 및 사용자 관리 페이지![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/iam#/overview){:new_window}로 이동하십시오.
 2. 이 페이지에서 자동 생성된 서비스 ID를 확인해야 합니다. 특정 ID를 식별한 경우
 **서비스 ID 관리** 조치를 선택하십시오. 
-3. **정책 편집** 조치를 선택하여 이를 버킷인 특정 **자원 유형** 및
-버킷의 이름인 **자원 ID**로 제한하십시오. **저장**을 클릭하십시오.
+3. **정책 편집** 조치를 선택하여 이를 버킷인 특정 **리소스 유형** 및
+버킷의 이름인 **리소스 ID**로 제한하십시오. **저장**을 클릭하십시오.
 
 
 ## Cloud Object Storage 브릿지 작성

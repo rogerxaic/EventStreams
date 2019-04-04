@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-12-07"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -17,7 +20,7 @@ lastupdated: "2018-12-07"
 # {{site.data.keyword.messagehub}} 팀에 문제점 보고 - 표준 플랜
 {: #report_problem}
 
-{{site.data.keyword.messagehub}}에 문제점이 생긴 경우, [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/status){:new_window}를 우선 확인하십시오. 
+{{site.data.keyword.messagehub}}에 문제점이 생긴 경우, [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status?selected=status){:new_window}를 우선 확인하십시오. 
 
 {{site.data.keyword.messagehub}} 팀의 도움이 필요한 경우에는 다음 정보를 모두 수집하십시오. 미리 제공할 수 있는 정보가 많을수록 팀에서 문제점에 대해 더 효과적으로 도움을 줄 수 있습니다.
 {:shortdesc}
@@ -39,7 +42,7 @@ lastupdated: "2018-12-07"
 
 
 [지원 요청
-제출![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/get-support/howtogetsupport.html#using-avatar)을 통해 지원 티켓으로 수집한 정보를 IBM에 제공할 수 있습니다.
+제출![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}을 통해 지원 티켓으로 수집한 정보를 IBM에 제공할 수 있습니다.
 
 
 

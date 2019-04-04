@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-30"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +18,7 @@ lastupdated: "2018-05-30"
 
 <!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 최대 한계
-{: #max_limits}
+{: #maximum_limits}
 
 ** MQ Light API는 표준 플랜의 일부로만 사용 가능합니다.**
 <br/>

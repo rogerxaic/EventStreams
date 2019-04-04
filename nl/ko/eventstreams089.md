@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,16 +28,15 @@ lastupdated: "2018-11-08"
 
 {{site.data.keyword.objectstorageshort}} 서비스가 기한 끝에 도달하고 사용이 중지되면 {{site.data.keyword.objectstorageshort}} 브릿지의 모든 인스턴스도 사용이 중지됩니다. 자세한 정보는 [사용 중단 공지사항: {{site.data.keyword.objectstorageshort}} OpenStack Swift(PaaS) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}를 참조하십시오. 
 
-대안으로서 [Cloud Object Storage 브릿지](/docs/services/EventStreams/eventstreams115.html){:new_window}를 사용할 수 있습니다. 
+대안으로서 [Cloud Object Storage 브릿지](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)를 사용할 수 있습니다. 
 {:deprecated}
 
-{{site.data.keyword.objectstorageshort}} 브릿지는
-{{site.data.keyword.messagehub}}의 Kafka 토픽에서 데이터를 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 서비스 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ObjectStorage/index.html){:new_window}의 인스턴스에 아카이브합니다. 브릿지는
+{{site.data.keyword.objectstorageshort}} 브릿지는 {{site.data.keyword.messagehub}}의 Kafka 토픽에서 데이터를 {{site.data.keyword.Bluemix_short}} 서비스의 인스턴스에 아카이브합니다. 브릿지는
 Kafka에서 일괄처리 메시지를 이용하고 메시지 데이터를
 {{site.data.keyword.objectstorageshort}} 서비스의 컨테이너에 오브젝트로
 업로드합니다.
 
-{{site.data.keyword.Bluemix_short}}의 선호되는 오브젝트 스토리지 서비스는 이제 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage/about-cos.html){:new_window}입니다.
+{{site.data.keyword.Bluemix_short}}의 선호되는 오브젝트 스토리지 서비스는 이제 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}입니다.
 
 {{site.data.keyword.objectstorageshort}} 브릿지를 구성하여
 데이터가 {{site.data.keyword.objectstorageshort}}에 오브젝트로 업로드되는 방식을 제어할 수 있습니다. 예를 들면, 구성할 수 있는
@@ -96,7 +99,7 @@ Kafka 메시지를 {{site.data.keyword.objectstorageshort}} 오브젝트로 파�
 * Kafka 메시지 오프셋 사용.
 * 각 Kafka 메시지에 있는 ISO 8601 날짜 사용. 여기에는 올바른 JSON 형식 오브젝트를 구성하기 위해 Kafka 메시지가 필요합니다.
 
-## Kafka 메시지 오프셋으로 파티셔닝
+## Kafka 메시지 오프셋을 사용하여 파티셔닝
 {: notoc}
 
 Kafka 메시지 오프셋으로 데이터를 파티셔닝하려면 다음 단계를 완료하십시오.

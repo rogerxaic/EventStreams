@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-07-04"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -83,7 +87,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 | Streams 사용 목적 |리소스 유형: <code>cluster</code></br>리소스 유형: <code>group</code>|해당 사항 없음  |리소스 유형: <code>topic</code>    |
 
 IAM에 대한 자세한 정보는
-[IBM Cloud Identity and Access Management](/docs/iam/index.html#iamoverview)를 참조하십시오.
+[IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)를 참조하십시오.
 
 정책을 설정하는 방법에 대한 예는
 [IBM Cloud IAM 서비스 ID 및 API 키 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}를 참조하십시오.
@@ -93,7 +97,7 @@ IAM에 대한 자세한 정보는
 {: #connect_message_enterprise }
 
 Cloud Foundry 애플리케이션 바인드 방법 또는 외부 애플리케이션에 대한 보안 키 인증 정보 가져오기에 대한 정보는
-[{{site.data.keyword.messagehub}}에 연결](/docs/services/EventStreams/eventstreams127.html#connect_messagehub)을 참조하십시오.
+[{{site.data.keyword.messagehub}}에 연결](/docs/services/EventStreams?topic=eventstreams-connecting)을 참조하십시오.
 
 <!-- 28/06/18 - Karen: draft info only
 

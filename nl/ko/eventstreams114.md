@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +31,7 @@ lastupdated: "2018-03-23"
 
 프로그래밍 인터페이스에서 메시지는 실제로 레코드라고 합니다. 예를 들어, Java 클래스 org.apache.kafka.clients.consumer.ConsumerRecord는 이용자 API의 메시지를 나타내는 데 사용됩니다. 용어 _레코드_와 _메시지_는 상호 교환적으로 사용될 수 있지만 기본적으로 레코드는 메시지를 나타내는 데 사용됩니다.
 
-{{site.data.keyword.messagehub}}에서 [메시지 생성](/docs/services/EventStreams/eventstreams112.html)과 관련된 정보를 읽는 것이 좋습니다.
+{{site.data.keyword.messagehub}}에서 [메시지 생성](/docs/services/EventStreams?topic=eventstreams-producing_messages)과 관련된 정보를 읽는 것이 좋습니다.
 
 ## 이용자 특성 구성 
 {: #configuring_consumer_properties }

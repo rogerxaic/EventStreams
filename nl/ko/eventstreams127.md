@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -101,7 +105,7 @@ Manifest 파일이 있으면 다음을 실행하여 새 앱을 작성할 수 있
 <li>다음을 실행하여 VCAP_SERVICES 환경 변수가 애플리케이션 런타임에서 사용 가능한지 확인하십시오.</br> 
  <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>. 
 </li>
-<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams/eventstreams063.html)을 참조하십시오.
+<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오.
 <p>변경사항을 적용하기 위해 애플리케이션을 다시 스테이징해야 할 수 있습니다.</p></li>
 </ol>
 
@@ -120,7 +124,7 @@ Cloud Foundry 외부에서 실행 중인 애플리케이션의 경우 인증 정
 5. **새 인증 정보**를 클릭하십시오.
 6. 이름과 같은 새 인증 정보에 대한 세부사항을 입력하고 **추가**를 클릭하십시오. 새 인증 정보가 인증 정보 목록에 표시됩니다.
 7. JSON 형식으로 세부사항을 표시하려면 **인증 정보 보기**를 사용하여 이 인증 정보를 클릭하십시오.
-8. 인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams/eventstreams063.html)을 참조하십시오.
+8. 인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오.
 
 ### IBM Cloud CLI를 사용하여 인증 정보 가져오기 
 {: #connect_standard_external_cli }
@@ -141,15 +145,14 @@ Cloud Foundry 외부에서 실행 중인 애플리케이션의 경우 인증 정
 <li>키에 대한 세부사항 가져오기:</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>
 이를 통해 서비스 키 세부사항이 JSON 형식으로 리턴됩니다.</li>
-<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams/eventstreams063.html)을 참조하십시오.</li>
+<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오.</li>
 </ol>
 
  
 ## 엔터프라이즈 플랜 개요
 {: #connect_enterprise}
 
-엔터프라이즈 플랜을 사용하여 프로비저닝된 서비스는 대시보드에서 **서비스** 표제 아래에 그룹화됩니다. 엔터프라이즈 플랜은 [IAM 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}입니다. 시작하기 위해 IAM을 이해할 필요는 없지만 {{site.data.keyword.messagehub}} 서비스의 보안을 설정하려면 어느 정도 알고 있는 것이 좋습니다. 자세한 정보는
-[{{site.data.keyword.messagehub}} 리소스 보안](/docs/services/EventStreams/eventstreams124.html)을 참조하십시오.
+엔터프라이즈 플랜을 사용하여 프로비저닝된 서비스는 대시보드에서 **서비스** 표제 아래에 그룹화됩니다. 엔터프라이즈 플랜은 [IAM 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}입니다. 시작하기 위해 IAM을 이해할 필요는 없지만 {{site.data.keyword.messagehub}} 서비스의 보안을 설정하려면 어느 정도 알고 있는 것이 좋습니다. 자세한 정보는 [{{site.data.keyword.messagehub}} 리소스 보안](/docs/services/EventStreams?topic=eventstreams-security)을 참조하십시오.
 
 애플리케이션을 바인드하고 서비스에 대한 서비스 키를 가져오려면 다음 단계를 완료하십시오. 토픽 작성을 위한 권한이 부여되려면 애플리케이션 또는 서비스 키에 관리자 액세스 역할이 있어야 합니다.
 
@@ -202,7 +205,7 @@ Manifest 파일이 있으면 다음을 실행하여 새 앱을 작성할 수 있
 또는, Manifest 파일을 업데이트하여 애플리케이션을 다시 푸시할 수 있습니다.</li>
 <li>VCAP_SERVICES 환경 변수가 애플리케이션 런타임에서 사용 가능한지 확인하십시오.<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams/eventstreams063.html)을 참조하십시오. 
+<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오. 
 <p>변경사항을 적용하기 위해 애플리케이션을 다시 스테이징해야 할 수 있습니다.</p></li>
 </ol>
 
@@ -221,7 +224,7 @@ Cloud Foundry 외부에서 실행 중인 애플리케이션의 경우 인증 정
 4. **새 인증 정보**를 클릭하십시오. 
 5. 이름 및 역할과 같은 새 인증 정보에 대한 세부사항을 완료한 후 **추가**를 클릭하십시오. 새 인증 정보가 인증 정보 목록에 표시됩니다.
 6. JSON 형식으로 세부사항을 표시하려면 **인증 정보 보기**를 사용하여 이 인증 정보를 클릭하십시오.
-7. 인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams/eventstreams063.html)을 참조하십시오.
+7. 인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오.
    <br/><br/>애플리케이션이 세부사항을 구문 분석하는지 확인하십시오.
 
 ### IBM Cloud CLI를 사용하여 인증 정보 가져오기
@@ -234,7 +237,7 @@ Cloud Foundry 외부에서 실행 중인 애플리케이션의 경우 인증 정
 <code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>서비스 키 인쇄:<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
-<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams/eventstreams063.html)을 참조하십시오.
+<li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오.
 <p>애플리케이션이 세부사항을 구문 분석하는지 확인하십시오.</p></li>
 </ol>
 
@@ -244,8 +247,8 @@ Cloud Foundry 외부에서 실행 중인 애플리케이션의 경우 인증 정
 연결하여 인증 정보를 확보했으므로 이제 {{site.data.keyword.messagehub}} 클라이언트를 선택할 수 있습니다. 사용자의 플랜에 따라 선택사항이 달라집니다.
 
 * 표준 플랜을 사용 중인 경우 선택할 클라이언트와 연결 방법에 대한 정보를 보려면
-[세 개의 API 중에서 선택](/docs/services/EventStreams/eventstreams087.html)을 참조하십시오.
-* 엔터프라이즈 플랜을 사용 중인 경우 [Kafka API 사용](/docs/services/EventStreams/eventstreams050.html)을 참조하십시오.
+[세 개의 API 중에서 선택](/docs/services/EventStreams?topic=eventstreams-choose_api)을 참조하십시오.
+* 엔터프라이즈 플랜을 사용 중인 경우 [Kafka API 사용](/docs/services/EventStreams?topic=eventstreams-kafka_using)을 참조하십시오.
 
 	엔터프라이즈 플랜을 사용 중인 경우
 	내부 Kafka <code>__consumer_offsets</code> 토픽은 읽기 전용으로 사용자에게 표시됩니다. 어떠한 방식으로도 토픽 관리를 시도하지 않는 것이 좋습니다. 

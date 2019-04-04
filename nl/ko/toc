@@ -13,6 +13,7 @@ IBM Event Streams
 		eventstreams010.md
 		eventstreams073.md
 	 	eventstreams085.md
+		eventstreams132.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -58,7 +59,7 @@ IBM Event Streams
 
 	{: .topicgroup}
 	튜토리얼
-	 	[오브젝트 스토리지 및 발행/구독 메시징 튜토리얼을 사용한 비동기 데이터 처리](https://console.bluemix.net/docs/tutorials/pub-sub-object-storage.html#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
+	 	[오브젝트 스토리지 및 발행/구독 메시징 튜토리얼을 사용한 비동기 데이터 처리](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-pub-sub-object-storage#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
@@ -74,8 +75,8 @@ IBM Event Streams
 	{: .topicgroup}
 	관련 링크
 	 	[Event Streams Java Kafka 샘플](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
-	 	[Apache Kafka 0.10.2.1 클라이언트](http://kafka.apache.org/0102/javadoc/index.html)
-		[developerWorks의 IBM Event Streams](https://www.ibm.com/cloud/message-hub)
+	 	[Apache Kafka 1.1.0 클라이언트](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz)
+		[IBM Event Streams on ibm.com](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 
 

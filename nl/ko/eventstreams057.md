@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -93,7 +97,7 @@ KIP(Kafka Improvement Proposal) #302는 Kafka 클라이언트가 사용 가능�
 사용자 인터페이스 또는 관리 API 중 하나를 사용하여 토픽을 작성할 때 메시지 보유에 대한 시간 한계를
 변경할 수 있습니다. 시간 한계는 최소 1시간이며 최대 30일입니다.
 
-Kafka 클라이언트 또는 Kafka Streams를 사용하여 토픽을 작성할 때 허용되는 설정의 제한사항에 대한 정보는 [토픽 관리용 API](/docs/services/EventStreams/eventstreams104.html)를 참조하십시오.
+Kafka 클라이언트 또는 Kafka Streams를 사용하여 토픽을 작성할 때 허용되는 설정의 제한사항에 대한 정보는 [Kafka API 사용](/docs/services/EventStreams?topic=eventstreams-kafka_using)을 참조하십시오.
 
 ## Kafka에서 토픽 작성 및 삭제
 {: #create_delete}
@@ -125,7 +129,7 @@ Kafka REST API를 사용하는 애플리케이션은 각 ApiKey에 대한 비율
 
 Kafka REST API는 단기간 동안 하루에 한 번 다시 시작합니다. 이 기간 동안에 Kafka REST API를
 사용하지 못하게 될 수 있습니다. 이런 상황이 발생하는 경우, 요청을 재시도하십시오. REST API가 다시 시작된 후에
-Kafka 이용자 인스턴스를 재작성해야 합니다. 이런 경우, REST API는 다음과 같은 JSON을 리턴합니다.
+Kafka 이용자 인스턴스를 다시 작성해야 합니다. 이런 경우, REST API는 다음과 같은 JSON을 리턴합니다.
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

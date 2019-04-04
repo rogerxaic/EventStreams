@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-02"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-08-02"
 {:pre: .pre}
 
 
-#데이터 보안 및 개인정보 보호정책
+# 데이터 보안 및 개인정보 보호정책
 {: #data_security}
 
 

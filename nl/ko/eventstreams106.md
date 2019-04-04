@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 # MQ Light API의 개념 및 차이점
-{: #mqlight}
+{: #mqlight_api}
 
 <!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** MQ Light API는 표준 플랜의 일부로만 사용 가능합니다.**
@@ -36,6 +40,6 @@ AP 남부(시드니)와 같은 {{site.data.keyword.Bluemix_notm}} 지역에서�
 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서는 사용할 수 없습니다.
 
 <!-- begin STAGING ONLY -->
-API 중에서의 선택에 대한 자세한 정보는 [세 개의 API 중에서 선택](/docs/services/EventStreams/eventstreams087.html)을 참조하십시오.
+API 중에서의 선택에 대한 자세한 정보는 [세 개의 API 중에서 선택](/docs/services/EventStreams?topic=eventstreams-choose_api)을 참조하십시오.
 <!-- end STAGING ONLY -->
 

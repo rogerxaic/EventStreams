@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -60,7 +64,7 @@ CURL의 경우 명령행에 다음 행을 추가하여
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
-{{site.data.keyword.messagehub}}에 연결하기 위해 Kafka REST API는 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams/eventstreams127.html)에서 <code>api_key</code> 및 <code>kafka_rest_url</code>
+{{site.data.keyword.messagehub}}에 연결하기 위해 Kafka REST API는 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)에서 <code>api_key</code> 및 <code>kafka_rest_url</code>
 인증 정보를 사용합니다.
 
 {{site.data.keyword.messagehub}} Kafka REST API와 인증하려면 사용자 요청의 X-Auth-Token 헤더에 <code>api_key</code>를 지정해야 합니다.

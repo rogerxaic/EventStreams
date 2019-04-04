@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-15"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,7 +16,7 @@ lastupdated: "2018-11-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.messagehub}} 시작하기 
+# 시작하기 튜토리얼
 {: #getting_started}
 
 {{site.data.keyword.messagehub}}를 시작하여
@@ -20,7 +24,7 @@ lastupdated: "2018-11-15"
 이용자에게 메시지를 보내는 방법을 보여줍니다. 메시지를 이용하고 메시지를 생성하는 데 동일한 샘플 프로그램이 사용됩니다.
 {: shortdesc}
 
-{{site.data.keyword.messagehub}}가 어떻게 작동하는지 좀 더 자세히 알아보려는 경우에는 [{{site.data.keyword.messagehub}} 정보](/docs/services/EventStreams/eventstreams010.html)를 참조하십시오. {{site.data.keyword.messagehub}}의 이전 이름은 Message Hub입니다.
+{{site.data.keyword.messagehub}}가 어떻게 작동하는지 더 자세히 알아보려면 [{{site.data.keyword.messagehub}} 정보](/docs/services/EventStreams?topic=eventstreams-about)를 참조하십시오. {{site.data.keyword.messagehub}}의 이전 이름은 Message Hub입니다.
 
 Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}} 샘플에 액세스하려면 [{{site.data.keyword.messagehub}} 샘플![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples){:new_window}을 참조하십시오.
 
@@ -43,9 +47,9 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
   
   e. **작성**을 클릭하십시오.
 
-2. {: #create_credentials_step notoc} [IBM Cloud 콘솔을 사용하여 인증 정보 가져오기 및 연결](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console) 단계를 완료하여 몇 가지 {{site.data.keyword.messagehub}} 인증 정보를 작성하십시오.
+2. {: #create_credentials_step notoc} [IBM Cloud 콘솔을 사용하여 인증 정보 가져오기 및 연결](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console) 단계를 완료하여 몇 가지 {{site.data.keyword.messagehub}} 인증 정보를 작성하십시오.
    <br/>
-   <br/>이 태스크의 [7단계](/docs/services/EventStreams/index.html#start_consumer_step)를 수행하려면 *kafka_brokers_sasl*, *kafka_admin_url* 및 *api_key*의 값이 필요합니다.   
+   <br/>이 태스크의 [7단계](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)를 수행하려면 *kafka_brokers_sasl*, *kafka_admin_url* 및 *api_key*의 값이 필요합니다.   
 
 3. 아직 설치되어 있지 않다면, 다음 필수 소프트웨어를 설치하십시오.
 
@@ -80,7 +84,7 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
     샘플은 {{site.data.keyword.messagehub}} 관리 API를 사용하여 토픽을 작성합니다. 메시지를 전송 및 수신하기 위해
     샘플은 Apache Kafka Java API를 사용합니다.
 
-    [2단계](/docs/services/EventStreams/index.html#create_credentials_step)에서 작성한 인증 정보의
+    [2단계](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step)에서 작성한 인증 정보의
     *kafka_brokers_sasl*, *kafka_admin_url* 및 *api_key* 값을 사용하십시오.
 	
 	사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오.

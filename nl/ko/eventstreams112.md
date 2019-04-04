@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,9 +31,9 @@ lastupdated: "2018-06-23"
 
 각 메시지는 두 파트(키와 값)로 구성된 레코드로 표시됩니다. 키는 일반적으로 메시지에 대한 데이터에 사용되며 값은 메시지의 본문입니다. Kafka 에코시스템의 많은 도구(예: 다른 시스템에 대한 커넥터)가 값만 사용하고 키는 무시하므로, 값에 모든 메시지 데이터를 넣고 파티셔닝 또는 로그 압축에는 키를 사용하는 것이 좋습니다. 키를 사용하는 데 Kafka에서 읽는 모든 내용이 필요하지는 않습니다.
 
-기타 많은 메시징 시스템에도 메시지와 함께 다른 정보를 전달하는 방법이 있습니다. Kafka 0.11은 이를 위해 {{site.data.keyword.messagehub}} 엔터프라이즈 플랜으로 지원되는 레코드 헤더를 도입합니다. {{site.data.keyword.messagehub}} 표준 플랜은 현재 Kafka 0.10.2.1을 기반으로 하므로 레코드 헤더를 아직 지원하지 않습니다. 
+기타 많은 메시징 시스템에도 메시지와 함께 다른 정보를 전달하는 방법이 있습니다. Kafka 0.11은 이를 위해 레코드 헤더를 도입했습니다. 
 
-{{site.data.keyword.messagehub}}에서 [메시지 이용](/docs/services/EventStreams/eventstreams114.html)과 관련된 정보를 읽는 것이 좋습니다.
+{{site.data.keyword.messagehub}}에서 [메시지 이용](/docs/services/EventStreams?topic=eventstreams-consuming_messages)과 관련된 정보를 읽는 것이 좋습니다.
 
 ## 구성 설정
 {: #config_settings}
@@ -54,7 +58,7 @@ lastupdated: "2018-06-23"
 제작자가 토픽에 대한 메시지를 공개하는 경우 사용할 파티션을 선택할 수 있습니다. 순서가 중요한 경우, 파티션이 순서가 지정된 레코드 시퀀스이지만 토픽이 하나 이상의 파티션으로 구성되어 있다는 것을 기억해야 합니다. 메시지 세트를 순서대로 전달하려는 경우 이러한 메시지가 모두 동일한 파티션으로 이동해야 합니다. 이를 수행하는 가장 간단한 방법은 모든 메시지에 동일한 키를 제공하는 것입니다. 
  
 제작자는 메시지를 공개할 때 파티션 번호를 명시적으로 지정할 수 있습니다. 이렇게 하면 직접적으로 제어할 수 있지만, 파티션 선택사항을 관리해야 하므로 제작자 코드가 복잡해집니다. 자세한 정보는 메소드 호출 Producer.partitionsFor를 참조하십시오. 예를 들어, 호출은
-[Kafka 0.11.0.1![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}에 대해 설명되어 있습니다.
+[Kafka 1.1.0![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}에 대해 설명되어 있습니다.
  
 제작자가 파티션 번호를 지정하지 않으면 파티셔너가 파티션을 선택합니다. Kafka 제작자에 빌드된 기본 파티셔너는 다음과 같이 작동합니다.
 
@@ -157,5 +161,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-자세한 정보는 매우 포괄적인 내용을 포함하는 [Kafka 클라이언트의 Javadoc![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/0110/javadoc/index.html){:new_window}을 참조하십시오. 
+자세한 정보는 매우 포괄적인 내용을 포함하는 [Kafka 클라이언트의 Javadoc![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window}을 참조하십시오. 
 

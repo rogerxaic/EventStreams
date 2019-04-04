@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -139,7 +143,7 @@ Kafka 이용자 인스턴스를 재작성해야 합니다. 이런 경우, REST A
 {: #plan_compare }
 {: faq}
 
-두 가지 서로 다른 {{site.data.keyword.messagehub}} 플랜에 대한 자세한 정보를 알아보려면 [플랜 선택](/docs/services/EventStreams/eventstreams085.html)을 참조하십시오.
+두 가지 서로 다른 {{site.data.keyword.messagehub}} 플랜에 대한 자세한 정보를 알아보려면 [플랜 선택](/docs/services/EventStreams?topic=eventstreams-plan_choose)을 참조하십시오.
 
 ## 재해 복구는 어떻게 수행해야 합니까?
 {: #disaster_recovery }

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -40,9 +44,9 @@ lastupdated: "2018-11-08"
 {: notoc}
 
 * 다음 유형의 브릿지를 제공합니다. 
-  - [MQ 브릿지](/docs/services/EventStreams/eventstreams105.html){:new_window}는 {{site.data.keyword.IBM}} MQ에서 메시지 데이터를 택해서 {{site.data.keyword.messagehub}}의 토픽에 전송합니다. 향후에는 더 광범위한 범위의 브릿지를 지원할 계획입니다.
-  - [Cloud Object Storage 브릿지](/docs/services/EventStreams/eventstreams115.html){:new_window}는 {{site.data.keyword.messagehub}} 데이터를 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage/about-cos.html){:new_window} 서비스의 인스턴스로 전송합니다. 
-  - [{{site.data.keyword.objectstorageshort}} 브릿지](/docs/services/EventStreams/eventstreams089.html){:new_window}는 2018년 8월 1일부터 더 이상 사용되지 않습니다. 자세한 정보는 [사용 중단 공지사항: {{site.data.keyword.objectstorageshort}} OpenStack Swift(PaaS) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}를 참조하십시오.
+  - [MQ 브릿지](/docs/services/EventStreams?topic=eventstreams-mq_bridge)는 {{site.data.keyword.IBM}} MQ에서 메시지 데이터를 택해서 {{site.data.keyword.messagehub}}의 토픽에 전송합니다. 향후에는 더 광범위한 범위의 브릿지를 지원할 계획입니다.
+  - [Cloud Object Storage 브릿지](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)는 {{site.data.keyword.messagehub}} 데이터를 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} 서비스의 인스턴스로 전송합니다. 
+  - [{{site.data.keyword.objectstorageshort}} 브릿지](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge)는 2018년 8월 1일부터 더 이상 사용되지 않습니다. 자세한 정보는 [사용 중단 공지사항: {{site.data.keyword.objectstorageshort}} OpenStack Swift(PaaS) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}를 참조하십시오.
 * 현재 브릿지는 모든 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에서 사용 가능합니다. 브릿지는 {{site.data.keyword.Bluemix_short}} 데디케이티드에서는 사용할 수 없습니다.
 * 다음 두 가지 방법으로 브릿지를 관리할 수 있습니다.
   - [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-docs){:new_window}를 사용하며, 이는 기존 {{site.data.keyword.messagehub}} 관리 API에 대한 확장입니다. [message-hub-docs ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-docs){:new_window}에서 브릿지의 라이프사이클 관리를 위한 curl 사용 방법의 예제를 찾을 수도 있습니다. 브릿지를 계속 개발함에 따라 이 REST API를 변경할 수 있습니다. 이 API를 안정화할 예정입니다.
@@ -50,7 +54,7 @@ lastupdated: "2018-11-08"
 * {{site.data.keyword.messagehub}} 서비스의 인스턴스와 모든 유형의 브릿지를 최대 두 개까지 연관시킬 수 있습니다. 브릿지를 계속 개발함에 따라 이 제한사항을 계속 검토하게 됩니다.
 * 해당 메시징 오퍼레이션 이외의 브릿지 사용에 대한 추가 비용은 없습니다.
 * MQ 브릿지는 브릿지와 MQ 큐 관리자 간에 전송되므로 데이터의 개인정보 보호 및 무결성을 보호하기 위해 SSL/TLS의 사용을 지원하지 않습니다. 브릿지에 SSL/TLS 사용에 대한 지원을 추가할 계획입니다. 
-* 그러나 [{{site.data.keyword.SecureGatewayfull}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/SecureGateway/index.html#getting-started-with-sg){:new_window} 서비스를 사용하여
+* 그러나 [{{site.data.keyword.SecureGatewayfull}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg){:new_window} 서비스를 사용하여
 {{site.data.keyword.Bluemix_notm}}와 온프레미스로 설치할 수 있는 {{site.data.keyword.SecureGateway}} 클라이언트 사이의 보안 터널을 통해
 데이터를 전송할 수 있습니다. 이 구성에서는 SSL/TLS를 사용하여 터널의 양쪽 끝에서 통신의 보안이 되지 않습니다.
 * Cloud Object Storage 브릿지는 Cloud Object Storage에 데이터를 기록할 때
@@ -60,6 +64,6 @@ lastupdated: "2018-11-08"
 ## 다른 서비스에서 {{site.data.keyword.messagehub}}로의 브릿지
 {: notoc}
 
-* {{site.data.keyword.iot_full}}은 고유 [브릿지를 {{site.data.keyword.messagehub}}에](/docs/services/EventStreams/eventstreams119.html){:new_window} 제공합니다. 브릿지는 사용자가 히스토리 데이터를 저장할 수 있는 {{site.data.keyword.messagehub}}로의 단방향 링크를 제공합니다. {{site.data.keyword.messagehub}}를 {{site.data.keyword.iot_short_notm}}에 연결하면 {{site.data.keyword.messagehub}}를 이벤트 파이프라인으로 사용하여 Watson IoT Platform의 디바이스 이벤트를 이용하고 나머지 플랫폼에서 실시간으로 이벤트를 사용 가능하게 할 수 있습니다. 
+* {{site.data.keyword.iot_full}}에서는 고유 [브릿지를 {{site.data.keyword.messagehub}}에](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 제공합니다. 브릿지는 사용자가 히스토리 데이터를 저장할 수 있는 {{site.data.keyword.messagehub}}로의 단방향 링크를 제공합니다. {{site.data.keyword.messagehub}}를 {{site.data.keyword.iot_short_notm}}에 연결하면 {{site.data.keyword.messagehub}}를 이벤트 파이프라인으로 사용하여 Watson IoT Platform의 디바이스 이벤트를 이용하고 나머지 플랫폼에서 실시간으로 이벤트를 사용 가능하게 할 수 있습니다. 
 
 

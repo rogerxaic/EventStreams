@@ -2,7 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-28"
+lastupdated: "2019-01-31"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -77,11 +80,12 @@ lastupdated: "2018-11-28"
 			<td>**위치(지역) 가용성**</td>
 			<td>댈러스(us-south)</br>
 			런던(eu-gb)</br>
-			시드니(au-syd))</br>
+			시드니(au-syd)</br>
 			프랑크푸르트(eu-de) - {{site.data.keyword.mql}} API가 없음 </td>
 			<td>댈러스(us-south)</br>
-			워싱턴(us-east))<br/>
+			워싱턴(us-east)<br/>
 			런던(eu-gb)<br/>
+			시드니(au-syd)</br>
 			프랑크푸르트(eu-de)<br/>
 			도쿄(jp-tok)<br/>
 

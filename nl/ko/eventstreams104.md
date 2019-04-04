@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # Kafka Java 클라이언트 사용
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -34,7 +38,7 @@ Java&trade; Kafka API 샘플은 Java로 작성된 제작자 및 이용자 예제
 
 샘플 설정 및 실행에 대한 자세한 정보는 [README.md ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}를 참조하십시오.
 
-샘플 실행 방법에 대한 자세한 둘러보기는 [{{site.data.keyword.messagehub}} 시작하기](/docs/services/EventStreams/index.html#getting_started_steps)를 참조하십시오.
+샘플 실행 방법에 대한 자세한 둘러보기는 [{{site.data.keyword.messagehub}} 시작하기](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps)를 참조하십시오.
 
 ## Liberty for Java 샘플 사용, 다운로드 및 실행 방법
 {: #liberty_sample notoc}
@@ -61,7 +65,7 @@ Kafka 클라이언트를 0.10.2.1 이상에서 사용 중인 경우 JAAS 파일 
 여기서 USERNAME 및 PASSWORD는 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.messagehub}} **서비스 인증 정보** 탭에 있는 값입니다.
 
 <code>sasl.jaas.config</code>를 사용하는 경우 동일한 JVM에서 실행 중인 클라이언트가 다른 인증 정보를 사용할 수 있습니다. 자세한 정보는
-[Kafka 클라이언트 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}을 참조하십시오.
+[Kafka 클라이언트 구성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}을 참조하십시오 
 
 초기 Kafka 클라이언트에서 인증 정보를 지정하려면 JAAS 구성 파일을 사용해야 합니다. 이 메커니즘의 편의성이 부족하므로, 대신 <code>sasl.jaas.config</code> 특성을 사용하는 것이 좋습니다.
 
@@ -79,7 +83,7 @@ Java 클라이언트를 사용 중인 경우에는
 0.9.X 버전은 최신 버전으로 업그레이드하는 것이
 좋습니다. [https://kafka.apache.org/downloads ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/downloads){:new_window}에서 Kafka 클라이언트를 다운로드할 수있습니다.
 
-0.9.X 클라이언트 사용의 영향에 대한 정보는 [역호환성](/docs/services/EventStreams/eventstreams062.html#compatability)을 참조하십시오.
+0.9.X 클라이언트 사용의 영향에 대한 정보는 [역호환성](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)을 참조하십시오.
 
 
 

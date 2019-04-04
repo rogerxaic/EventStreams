@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-20"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -46,7 +50,7 @@ Kafka 클라이언트 또는 {{site.data.keyword.mql}} API 사용 중에서 선�
 {{site.data.keyword.Bluemix_notm}} 위치(지역)에서만 사용 가능합니다. MQ Light API는 프랑크프루트(eu-de) 지역 또는
 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서는 사용할 수 없습니다.
 
-API 중에서의 선택에 대한 자세한 정보는 [세 개의 API 중에서 선택](/docs/services/EventStreams/eventstreams087.html)을 참조하십시오.
+API 중에서의 선택에 대한 자세한 정보는 [세 개의 API 중에서 선택](/docs/services/EventStreams?topic=eventstreams-choose_api)을 참조하십시오.
 
 
 ## {{site.data.keyword.messagehub}}에서 MQ Light API를 사용하는 데 필요한 사항
@@ -68,12 +72,12 @@ MQ Light API를 사용 안함으로 설정하려면 "MQLight" 토픽을 삭제�
 ## 연결 및 인증 방법
 {: #mql_connect}
 
-앱을 서비스에 연결하려면 앱은 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams/eventstreams127.html)에서 <code>user</code>,
+앱을 서비스에 연결하려면 앱은 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)에서 <code>user</code>,
 <code>password</code> 및 <code>mqlight_lookup_url</code> 세부사항을 사용해야 합니다. 사용자가 선택한 언어에 대한 다음 안내를 사용하십시오.
 
 **Java의 경우**
 
-create() 호출의 endpointService 매개변수로 &lsquo;null&rsquo;을 지정하는 경우,
+create() 호출의 endpointService 매개변수로 <code>null</code>을 지정하는 경우,
 이는 클라이언트가 <code>user</code>, <code>password</code> 및 
 <code>mqlight_lookup_url</code> 세부사항을 VCAP_SERVICES에서 읽도록 지시합니다.
 
@@ -160,7 +164,7 @@ client = mqlight.Client(service=service,
 기존 앱에 연결하려면 다음 확인사항을 완료하십시오.
 
 * 앱이 사용자의 언어에 사용 가능한 최신 {{site.data.keyword.mql}} API 클라이언트 버전을 사용 중인지 확인하십시오.
-* VCAP_SERVICES에서 추출된 연결 세부사항이 <code>messagehub</code> 서비스 유형을 참조하고, <code>credentials.username</code> 특성보다는 <code>credentials.user</code> 특성에서 연결 사용자 이름을 검색하고, <code>credentials.connectionLookupURI</code> 특성보다는 <code>credentials.mqlight_lookup_url</code> 특성에서 연결 검색 URL을 검색하는지 확인하십시오. 자세한 정보는 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams/eventstreams127.html)를 참조하십시오.
+* VCAP_SERVICES에서 추출된 연결 세부사항이 <code>messagehub</code> 서비스 유형을 참조하고, <code>credentials.username</code> 특성보다는 <code>credentials.user</code> 특성에서 연결 사용자 이름을 검색하고, <code>credentials.connectionLookupURI</code> 특성보다는 <code>credentials.mqlight_lookup_url</code> 특성에서 연결 검색 URL을 검색하는지 확인하십시오. 자세한 정보는 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams?topic=eventstreams-connecting)를 참조하십시오.
 
 	Java&trade; 클라이언트를 사용하는 경우 이 단계가 완료되도록 하고 클라이언트가 스스로 정보를 검색하도록 create() 호출에서 'null'을 endpointService 매개변수로 지정하십시오.
 	
@@ -168,7 +172,7 @@ client = mqlight.Client(service=service,
 
 다음 정보에도 주의해야 합니다.
 
-* 메시지 한계는 {{site.data.keyword.messagehub}}와 일치하지만 {{site.data.keyword.mql}} API를 지원하는 다른 서버와는 다를 수 있습니다. 자세한 정보는 [최대 한계](/docs/services/EventStreams/eventstreams075.html#max_limits)를 참조하십시오.
+* 메시지 한계는 {{site.data.keyword.messagehub}}와 일치하지만 {{site.data.keyword.mql}} API를 지원하는 다른 서버와는 다를 수 있습니다. 자세한 정보는 [최대 한계](/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits)를 참조하십시오.
 * JMS가 지원되지 않습니다.
 
 <!-- 15/11/18: info was in eventstreams081.md, moved because of doc app changes -->

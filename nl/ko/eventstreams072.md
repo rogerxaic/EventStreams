@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 
-#모니터링 및 로깅(표준 플랜)
+# 모니터링 및 로깅(표준 플랜)
 {: #monitoring}
 
 표준 플랜의 {{site.data.keyword.messagehub}}는 {{site.data.keyword.messagehub}}의 사용을 모니터링할 수 있도록

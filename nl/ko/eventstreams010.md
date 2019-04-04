@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-03"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -26,7 +30,6 @@ lastupdated: "2018-12-21"
 * 데이터를 다른 서비스로 전송합니다 (예: Cloud Object Storage).
 
 Apache Kafka로 빌드하여 커뮤니티에서 발생하는 모든 호출로부터 직접적으로 혜택을 받고 Kafka 클라이언트 API, Kafka Streams, Kafka Connect 및 KSQL도 지원합니다.
-{:shortdesc}
 
  {{site.data.keyword.messagehub}}에 대한 연결이 항상 인증 정보 사용을 인증하므로 추가 구성을 제공해야 하는 경우에도
 Apache Kafka 도구는 일반적으로 {{site.data.keyword.messagehub}}와 함께 직접적으로 작동합니다.

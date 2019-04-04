@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-06-22"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -13,13 +16,13 @@ lastupdated: "2018-06-22"
 {:pre: .pre}
 
 # Kafka API 클라이언트 구성
-{: #kafka_connect}
+{: #kafka_api_client}
 
 
 {{site.data.keyword.messagehub}}에 연결하기 위해 Kafka API는 다음 인증 정보 세트 중 하나를 사용합니다. 
-* [VCAP_SERVICES 환경 변수](/docs/services/EventStreams/eventstreams127.html#vcap)의
+* [VCAP_SERVICES 환경 변수](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)의
 <code>user</code> 및 <code>password</code>와 <code>kafka_brokers_sasl</code> 인증 정보
-* 서비스 키. 자세한 정보는 [클러스터에 연결](/docs/services/EventStreams/eventstreams127.html#enterprise_connect)을 참조하십시오.
+* 서비스 키. 자세한 정보는 [클러스터에 연결](/docs/services/EventStreams?topic=eventstreams-connecting)을 참조하십시오.
 {: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->
