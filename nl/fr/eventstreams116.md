@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-02-12"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -19,7 +23,7 @@ lastupdated: "2018-02-12"
 Apache Kafka est fourni avec un certain nombre d'outils de console pour des opération simples d'administration et de messagerie. Vous pouvez utiliser la plupart d'entre eux avec {{site.data.keyword.messagehub}}, même si ce dernier ne permet pas la connexion à son cluster ZooKeeper. Tels qu'ils ont été développés par Kafka, bon nombre des outils ne nécessitent plus dorénavant la connexion à ZooKeeper précédemment requise.
 {: shortdesc}
 
-Ces outils de console sont disponibles dans le répertoire <code>bin</code> de votre téléchargement Kafka. Par exemple, [Client Apache Kafka 0.10.2.X ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz){:new_window}.
+Ces outils de console sont disponibles dans le répertoire <code>bin</code> de votre téléchargement Kafka. Par exemple, [Client Apache Kafka 1.1.0 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}.
 
 Pour fournir les données d'identification SASL à ces outils, créez un fichier de propriétés à l'image de l'exemple suivant :
 

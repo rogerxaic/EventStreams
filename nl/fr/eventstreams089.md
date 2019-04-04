@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,14 +28,15 @@ Le pont {{site.data.keyword.objectstorageshort}} a été déprécié le 1er aoû
 
 Une fois que le service {{site.data.keyword.objectstorageshort}} arrivant en fin de vie est déclassé, toutes les instances du pont {{site.data.keyword.objectstorageshort}} sont également déclassées. Pour en savoir plus, veuillez consulter [l'annonce d'obsolescence : {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Comme alternative, vous pouvez utiliser le [pont Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
+Comme alternative, vous pouvez utiliser le [pont Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge). 
 {:deprecated}
 
-Le pont {{site.data.keyword.objectstorageshort}} vous permet d'archiver des données provenant des sujets Kafka de {{site.data.keyword.messagehub}} dans une instance du [service {{site.data.keyword.objectstorageshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ObjectStorage/index.html){:new_window} {{site.data.keyword.Bluemix_short}}. Le
+Le pont {{site.data.keyword.objectstorageshort}} vous permet d'archiver des données provenant des sujets
+Kafka de {{site.data.keyword.messagehub}} dans une instance du service {{site.data.keyword.Bluemix_short}}. Le
 pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un conteneur du service {{site.data.keyword.objectstorageshort}}.
 
 Le service de stockage d'objets préféré dans {{site.data.keyword.Bluemix_short}} est désormais le service [{{site.data.keyword.IBM_notm}} Cloud
-Object Storage. ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+Object Storage. ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
 
 En
 configurant le pont {{site.data.keyword.objectstorageshort}}, vous pouvez contrôler le mode de transfert des données sous forme d'objets vers {{site.data.keyword.objectstorageshort}}. Les

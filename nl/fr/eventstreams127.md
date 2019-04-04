@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -101,7 +105,7 @@ Si vous disposez d'un fichier manifeste, vous pouvez créer une nouvelle applica
 <li>Vérifiez que la variable d'environnement VCAP_SERVICES est disponible dans le contexte d'exécution d'application en exécutant :</br> 
  <code>ibmcloud app env <var class="keyword varname">nom_votre_application</var></code>. 
 </li>
-<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
+<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Vous devrez peut-être reconstituer votre application pour que les modifications prennent effet.</p></li>
 </ol>
 
@@ -120,7 +124,7 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 5. Cliquez sur **Nouvelles données d'identification**.
 6. Entrez les détails de votre nouvelle donnée d'identification tel un nom, puis cliquez sur **Ajouter**. Une nouvelle donnée d'identification s'affiche dans la liste des données d'identification.
 7. Cliquez sur cette donnée d'identification en utilisant **Afficher les données d'identification** pour afficher ses détails au format JSON.
-8. Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
+8. Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 
 ### Obtention des données d'identification à l'aide de l'interface de ligne de commande IBM Cloud 
 {: #connect_standard_external_cli }
@@ -141,14 +145,15 @@ ou utiliser une clé de service existante comme suit : <br/>
 <li>Obtenez les détails de la clé comme suit :</br>
 <code>ibmcloud service key-show <var class="keyword varname">nom_votre_service</var> <var class="keyword varname">nom_clé_service</var></code></br>
 Cette ligne de commande renvoie les détails de la clé de service au format JSON.</li>
-<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).</li>
+<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).</li>
 </ol>
 
  
 ## Présentation de plan Enterprise
 {: #connect_enterprise}
 
-Les services mis à disposition à l'aide du plan Enterprise sont regroupés dans le tableau de bord sous l'en-tête **Services**. Le plan Enterprise est [activé pour IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}. Vous n'avez pas besoin de comprendre parfaitement IAM pour démarrer mais un minimum de connaissances est recommandé si vous voulez sécuriser votre service {{site.data.keyword.messagehub}}. Pour plus d'informations, voir [Sécurisation de vos ressources {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams124.html)
+Les services mis à disposition à l'aide du plan Enterprise sont regroupés dans le tableau de bord sous l'en-tête **Services**. Le plan Enterprise est [activé pour IAM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}. Vous n'avez pas besoin de comprendre parfaitement IAM pour démarrer mais un minimum de connaissances est recommandé si vous voulez sécuriser votre service {{site.data.keyword.messagehub}}. Pour plus d'informations, voir
+[Sécurisation de vos ressources {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-security).
 
 Procédez comme suit pour lier votre application et obtenir les clés de service de vos service. Pour être autorisée à créer des sujets, votre application oui votre clé de service doit avoir un rôle d'accès Responsable.
 
@@ -201,7 +206,7 @@ L'application n'étant pas encore liée à {{site.data.keyword.messagehub}}, ell
 Vous pouvez également mettre à jour votre fichier manifeste et envoyer de nouveau l'application par commande push.</li>
 <li>Vérifiez que la variable d'environnement VCAP_SERVICES est disponible dans le contexte d'exécution d'application comme suit :<br/>
 <code>ibmcloud app env <var class="keyword varname">nom_votre_application</var></code></li>
-<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html). 
+<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
 <p>Vous devrez peut-être reconstituer votre application pour que les modifications prennent effet.</p></li>
 </ol>
 
@@ -220,7 +225,7 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 4. Cliquez sur **Nouvelles données d'identification**. 
 5. Entrez les détails de votre nouvelle donnée d'identification, par exemple un nom et un rôle, puis cliquez sur **Ajouter**. Une nouvelle donnée d'identification s'affiche dans la liste des données d'identification.
 6. Cliquez sur cette donnée d'identification en utilisant **Afficher les données d'identification** pour afficher ses détails au format JSON.
-7. Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
+7. Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
    <br/><br/>Vérifiez que votre application analyse les détails.
 
 ### Obtention des données d'identification à l'aide de l'interface de ligne de commande IBM Cloud
@@ -233,7 +238,7 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 <code>ibmcloud resource service-key-create <var class="keyword varname">nom_clé</var> <var class="keyword varname">rôle_clé</var> --instance-name <var class="keyword varname">nom_votre_service</var></code></li>
 <li>Imprimez la clé de service comme suit :<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">nom_clé</var></code></li>
-<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams/eventstreams063.html).
+<li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Vérifiez que votre application analyse les détails.</p></li>
 </ol>
 
@@ -243,8 +248,8 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 Maintenant que vous disposez d'une connexion et des données d'identification, vous pouvez sélectionner un client {{site.data.keyword.messagehub}}. Votre choix est fonction de votre plan.
 
 * Si vous utilisez le plan Standard, voir
-[Choix entre les trois API](/docs/services/EventStreams/eventstreams087.html) pour plus d'informations concernant le client à choisir et comment se connecter.
-* Si vous utilisez le plan Enterprise, voir [Utilisation de l'API Kafka](/docs/services/EventStreams/eventstreams050.html).
+[Choix entre les trois API](/docs/services/EventStreams?topic=eventstreams-choose_api) pour plus d'informations concernant le client à choisir et comment se connecter.
+* Si vous utilisez le plan Enterprise, voir [Utilisation de l'API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 	Vous n'avez accès au sujet Kafka <code>__consumer_offsets</code> interne qu'en lecture seule si vous utilisez le plan Enterprise. Nous vous conseillons vivement de ne tenter en aucune manière de gérer ce sujet. 
 

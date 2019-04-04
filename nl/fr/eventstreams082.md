@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +18,7 @@ lastupdated: "2018-05-25"
 
 <!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Exemples de l'API MQ Light
-{: #mql_samples}
+{: #mql_api_samples}
 
 **L'API MQ Light est disponible uniquement dans le cadre du plan Standard.**
 <br/>

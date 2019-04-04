@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-03"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -26,7 +30,6 @@ Vous pouvez utiliser {{site.data.keyword.messagehub}} pour effectuer les tâches
 * Transférer des données vers un autre service, par exemple, vers Cloud Object Storage.
 
 Etant généré avec Apache Kafka, il bénéficie directement de toutes les innovations qui voient le jour dans la communauté et prend en charge des API de client Kafka, Kafka Streams, Kafka Connect et également KSQL.
-{:shortdesc}
 
 En général, les outils Apache Kafka fonctionnent directement avec {{site.data.keyword.messagehub}}, mais vous devez cependant fournir une configuration supplémentaire car les connexions à {{site.data.keyword.messagehub}} sont toujours authentifiées à l'aide de données d'identification.
 

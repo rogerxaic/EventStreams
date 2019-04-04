@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +31,7 @@ Lorsqu'un consommateur traite un message, ce dernier n'est pas supprimé du suje
 
 Dans les interfaces de programmation, un message est appelé enregistrement. Par exemple, la classe Java org.apache.kafka.clients.consumer.ConsumerRecord est utilisée pour représenter l'API consommateur. Les termes _enregistrement_ et _message_ sont interchangeables, mais le terme enregistrement est majoritairement utilisé pour désigner un message.
 
-Vous trouverez sans doute utile de coupler ces informations à la [génération de messages](/docs/services/EventStreams/eventstreams112.html) dans {{site.data.keyword.messagehub}}.
+Vous trouverez sans doute utile de coupler ces informations à la [génération de messages](/docs/services/EventStreams?topic=eventstreams-producing_messages) dans {{site.data.keyword.messagehub}}.
 
 ## Configuration des propriétés du consommateur 
 {: #configuring_consumer_properties }

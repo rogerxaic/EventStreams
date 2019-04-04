@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-06-22"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -13,13 +16,13 @@ lastupdated: "2018-06-22"
 {:pre: .pre}
 
 # Configuration de votre client API Kafka
-{: #kafka_connect}
+{: #kafka_api_client}
 
 
 Pour se connecter à {{site.data.keyword.messagehub}}, l'API Kafka utilise l'un des ensembles de données d'identification suivants : 
 * Les données d'identification <code>kafka_brokers_sasl</code> ainsi que <code>user</code> et <code>password</code> issus de la
-[variable d'environnement VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html#vcap).
-* la clé de service. Pour plus d'informations, voir [Connexion à votre cluster](/docs/services/EventStreams/eventstreams127.html#enterprise_connect).
+[variable d'environnement VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
+* la clé de service. Pour plus d'informations, voir [Connexion à votre cluster](/docs/services/EventStreams?topic=eventstreams-connecting).
 {: shortdesc}
 
 <!--17/10/17 - Karen: following info duplicated at messagehub104 -->

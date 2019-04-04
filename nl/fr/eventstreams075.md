@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-20"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -42,7 +46,7 @@ Les sujets de l'API {{site.data.keyword.mql}} ne sont pas les mêmes que les suj
 
 L'API {{site.data.keyword.mql}} est uniquement disponible dans les emplacements (régions) {{site.data.keyword.Bluemix_notm}} suivants : Dallas (us-south), Londres (eu-gb) et Sydney (au-syd). Elle n'est pas disponible dans l'emplacement de Francfort (eu-de) ni dans {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Pour plus d'informations sur le choix entre les API, voir [Choix entre les trois API](/docs/services/EventStreams/eventstreams087.html).
+Pour plus d'informations sur le choix entre les API, voir [Choix entre les trois API](/docs/services/EventStreams?topic=eventstreams-choose_api).
 
 
 ## Quelle est la configuration requise pour utiliser l'API MQ Light avec {{site.data.keyword.messagehub}} ?
@@ -63,11 +67,11 @@ Pour désactiver l'API MQ Light, supprimez le sujet "MQLight". La suppression de
 ## Procédure de connexion et d'authentification
 {: #mql_connect}
 
-Pour se connecter au service, une application doit utiliser les informations <code>user</code>, <code>password</code> et <code>mqlight_lookup_url</code> qui figurent dans la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html). Suivez les recommandations ci-après en fonction du langage choisi :
+Pour se connecter au service, une application doit utiliser les informations <code>user</code>, <code>password</code> et <code>mqlight_lookup_url</code> qui figurent dans la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Suivez les recommandations ci-après en fonction du langage choisi :
 
 **Java**
 
-Si vous spécifiez &lsquo;null&rsquo; comme paramètre endpointService de l'appel create(), le client reçoit l'instruction de lire les informations correspondant aux éléments <code>user</code>, <code>password</code> et
+Si vous spécifiez <code>null</code> comme paramètre endpointService de l'appel create(), le client reçoit l'instruction de lire les informations correspondant aux éléments <code>user</code>, <code>password</code> et
 <code>mqlight_lookup_url</code> de VCAP_SERVICES :
 
 <pre>
@@ -152,7 +156,7 @@ applications continuent de fonctionner de la même manière.
 Pour connecter des applications existantes, procédez aux vérifications suivantes :
 
 * Vérifiez que l'application utilise la version disponible la plus récente du client API {{site.data.keyword.mql}} correspondant à votre langage.
-* Vérifiez que les détails de connexion extraits de VCAP_SERVICES font référence au type de service <code>messagehub</code> et procédez à l'extraction du nom d'utilisateur des connexions à partir de la propriété <code>credentials.user</code> plutôt qu'à partir de la propriété <code>credentials.username</code>, puis procédez à l'extraction de l'URL de recherche de connexion à partir de la propriété <code>credentials.mqlight_lookup_url</code> plutôt qu'à partir de la propriété <code>credentials.connectionLookupURI</code>. Pour plus d'informations, voir [Variable d'environnement VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+* Vérifiez que les détails de connexion extraits de VCAP_SERVICES font référence au type de service <code>messagehub</code> et procédez à l'extraction du nom d'utilisateur des connexions à partir de la propriété <code>credentials.user</code> plutôt qu'à partir de la propriété <code>credentials.username</code>, puis procédez à l'extraction de l'URL de recherche de connexion à partir de la propriété <code>credentials.mqlight_lookup_url</code> plutôt qu'à partir de la propriété <code>credentials.connectionLookupURI</code>. Pour plus d'informations, voir [Variable d'environnement VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 	Notez que cette étape est effectuée pour vous si vous utilisez le client Java&trade; et que vous spécifiez 'null' comme paramètre endpointService dans l'appel create(), de telle sorte que le client procède lui-même à l'extraction des informations.
 	
@@ -160,7 +164,7 @@ Pour connecter des applications existantes, procédez aux vérifications suivant
 
 Notez également les informations suivantes :
 
-* Les limites de message sont cohérentes avec {{site.data.keyword.messagehub}}, mais peuvent différer de celles des autres serveurs prenant en charge l'API {{site.data.keyword.mql}}. Pour plus d'informations, voir [Limites maximales](/docs/services/EventStreams/eventstreams075.html#max_limits).
+* Les limites de message sont cohérentes avec {{site.data.keyword.messagehub}}, mais peuvent différer de celles des autres serveurs prenant en charge l'API {{site.data.keyword.mql}}. Pour plus d'informations, voir [Limites maximales](/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits).
 * JMS n'est pas pris en charge.
 
 <!-- 15/11/18: info was in eventstreams081.md, moved because of doc app changes -->

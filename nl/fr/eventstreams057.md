@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -71,7 +75,7 @@ Parfois, un appel client Java Kafka n'arrive pas à trouver Kafka. La cause de c
 ### Solution palliative
 {: #calls_timeout_workaround notoc}
 
-Renouvelez vos appels après avoir attendu suffisamment longtemps pour qie la mise en cache des URL de courtier par la machine virtuelle Java expire. Lors des appels Kafka ultérieurs, une adresse IP de courtier de travail doit être renvoyée depuis la requête DNS et utilisée. 
+Renouvelez vos appels après avoir attendu suffisamment longtemps pour que la mise en cache des URL de courtier par la machine virtuelle Java expire. Lors des appels Kafka ultérieurs, une adresse IP de courtier de travail doit être renvoyée depuis la requête DNS et utilisée. 
 
 Une proposition d'amélioration (KIP, Kafka Improvement Proposal) N° 302 a été créée pour s'assurer que les clients Kafka essaient toutes les adresses IP de courtier disponibles, et non un sous-ensemble, de sorte que la défaillance d'une seule adresse IP n'entraîne pas d'échec.
 
@@ -91,7 +95,7 @@ Par défaut, les messages sont conservés dans Kafka pendant 24 heures maximum e
 
 Vous pouvez modifier la durée de conservation des messages lorsque vous créez un sujet à l'aide de l'interface utilisateur ou de l'API d'administration. La limite de temps a un minimum d'une heure et un maximum de 30 jours.
 
-Pour plus d'informations sur les restrictions concernant les paramètres autorisés lorsque vous créez des sujets à l'aide d'un client Kafka ou de Kafka Streams, voir [API pour l'administration des sujets](/docs/services/EventStreams/eventstreams104.html).
+Pour plus d'informations sur les restrictions concernant les paramètres autorisés lorsque vous créez des sujets à l'aide d'un client Kafka ou de Kafka Streams, voir [Utilisation de l'API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Création et suppression de sujets dans Kafka
 {: #create_delete}
@@ -101,7 +105,8 @@ Dans Kafka, la création et la suppression de sujets sont des opérations asynch
 ## API REST Kafka
 {: #trouble_rest}
 
-*  Seul le format binaire intégré est pris en charge pour les demandes et les réponses. Les formats Avro et JSON intégrés ne sont pas pris en charge.
+*  Seul le format binaire intégré est pris en charge pour les demandes et les
+   réponses. Les formats Avro et JSON intégrés ne sont pas pris en charge.
 *  Les demandes simultanées ne sont pas prises en charge pour une instance consommateur.
    Les demandes de lecture, de validation ou de suppression correspondant à une instance consommateur ne doivent être envoyées qu'après réception d'une réponse aux demandes en attente pour cette instance.
 
@@ -122,8 +127,8 @@ Si vous rencontrez cette erreur, patientez et soumettez à nouveau la demande.
 {: #rest_restart}
 
 L'API REST Kafka redémarre une fois par jour pendant un court laps de
-temps. Au cours de cette période, elle est susceptible de ne plus être disponible. Si cela se produit, il est conseillé de relancer votre demande. Après le redémarrage
-de l'API REST, vous devez créer à nouveau vos instances consommateur Kafka. Dans ce cas,
+temps. Au cours de cette période, elle est susceptible de ne plus être disponible. Si cela se produit, il est conseillé de relancer votre demande. Après le redémarrage de l'API REST, vous devez
+à nouveau créer vos instances consommateur Kafka. Dans ce cas,
 l'API REST renvoie le code JSON suivant :
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'

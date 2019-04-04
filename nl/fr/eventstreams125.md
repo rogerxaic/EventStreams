@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-17"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +17,9 @@ lastupdated: "2018-12-17"
 {:pre: .pre}
 
 # Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - plan Enterprise
-{: #report_problem}
+{: #report_problem_enterprise}
 
-Si vous rencontrez un problème lié à {{site.data.keyword.messagehub}}, consultez d'abord la [ page de statut {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/status){:new_window}.
+Si vous rencontrez un problème lié à {{site.data.keyword.messagehub}}, consultez d'abord la page de statut [{{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/status?selected=status){:new_window}.
 {: shortdesc}
 
 Si vous souhaitez obtenir de l'aide de la part de l'équipe {{site.data.keyword.messagehub}}, rassemblez toutes les informations suivantes. Plus vous fournirez d'informations à l'avance, plus l'équipe sera en mesure de résoudre le problème de manière efficace :
@@ -39,7 +43,7 @@ Si vous souhaitez obtenir de l'aide de la part de l'équipe {{site.data.keyword.
    les ID transaction affectés ?
 8. Quel impact le problème a-t-il sur votre service ?
 
-Vous pouvez transmettre les informations rassemblées à IBM dans un ticket de demande de service en [soumettant une demande de support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/get-support/howtogetsupport.html#using-avatar).
+Vous pouvez transmettre les informations rassemblées à IBM dans un ticket de demande de service en [soumettant une demande de support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}.
 
 
 

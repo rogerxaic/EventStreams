@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # Utilisation du client Java Kafka
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -34,7 +38,7 @@ L'exemple de code est disponible dans le [projet GitHub event-streams-samples ![
 
 Pour plus d'informations sur la configuration et l'exécution de l'exemple, voir le fichier [README.md ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}.
 
-Pour la procédure détaillée de l'exécution de l'exemple, voir [Initiation à {{site.data.keyword.messagehub}}](/docs/services/EventStreams/index.html#getting_started_steps).
+Pour la procédure détaillée de l'exécution de l'exemple, voir [Initiation à {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps).
 
 ## Utilisation, téléchargement et exécution de l'exemple Liberty for Java
 {: #liberty_sample notoc}
@@ -60,7 +64,8 @@ Si vous utilisez la version 0.10.2.1 ou une version ultérieure du client Kafka,
 
 Où USERNAME et PASSWORD sont les valeurs issues de l'onglet **Données d'identification pour le service** {{site.data.keyword.messagehub}} dans {{site.data.keyword.Bluemix_notm}}.
 
-Si vous utilisez <code>sasl.jaas.config</code>, les clients exécutés dans la même machine virtuelle Java peuvent employer des données d'identification différentes. Pour plus d'informations, voir [Configuring Kafka clients ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}
+Si vous utilisez <code>sasl.jaas.config</code>, les clients exécutés dans la même machine virtuelle Java peuvent employer des données d'identification différentes. Pour plus d'informations, voir
+[Configuring Kafka clients ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}.
 
 Dans le cas d'un client Kafka antérieur, vous devez utiliser un fichier de configuration JAAS pour spécifier les données d'identification. Ce mécanisme étant moins pratique, nous recommandons d'utiliser plutôt la propriété <code>sasl.jaas.config</code>.
 
@@ -78,7 +83,8 @@ les clients Kafka 0.10 ou ultérieurs disponibles.
 Il est fortement conseillé de migrer la version 0.9.X vers la
 version la plus récente. Vous pouvez télécharger un client Kafka depuis [https://kafka.apache.org/downloads ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/downloads){:new_window}.
 
-Pour plus d'informations sur les implications de l'utilisation d'un client 0.9.X, voir [Compatibilité avec les versions antérieures](/docs/services/EventStreams/eventstreams062.html#compatability).
+Pour plus d'informations sur les implications de l'utilisation d'un client 0.9.X, voir
+[Compatibilité avec les versions antérieures](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
 
 
 

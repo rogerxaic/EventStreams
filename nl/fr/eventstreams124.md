@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-07-04"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -83,7 +87,7 @@ Ce tableau résume quelques scénarios {{site.data.keyword.messagehub}} courants
 | Utiliser Streams |Type de ressource : <code>cluster</code></br>Type de ressource : <code>groupe</code>| Non applicable  |Type de ressource : <code>sujet</code>    |
 
 Pour plus d'informations sur IAM, voir
-[IBM Cloud Identity and Access Management](/docs/iam/index.html#iamoverview).
+[IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).
 
 Pour un exemple de définition de règles, voir
 [ID de service et clés d'API IAM d'IBM Cloud![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}.
@@ -92,7 +96,7 @@ Pour un exemple de définition de règles, voir
 ## Connexion à {{site.data.keyword.messagehub}}
 {: #connect_message_enterprise }
 
-Pour savoir comment lier une application Cloud Foundry ou obtenir des données d'identification de clé de sécurité pour une application externe, voir [Connexion à {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams127.html#connect_messagehub).
+Pour savoir comment lier une application Cloud Foundry ou obtenir des données d'identification de clé de sécurité pour une application externe, voir [Connexion à {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 <!-- 28/06/18 - Karen: draft info only
 

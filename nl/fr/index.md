@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-15"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,7 +16,7 @@ lastupdated: "2018-11-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Initiation à {{site.data.keyword.messagehub}} 
+# Tutoriel d'initiation
 {: #getting_started}
 
 Pour vous familiariser avec {{site.data.keyword.messagehub}}
@@ -21,7 +25,7 @@ un producteur envoie des messages à un consommateur à l'aide d'un sujet. Le m�
 exemple de programme permet de consommer et de produire des messages.
 {: shortdesc}
 
-Pour mieux comprendre comment fonctionne {{site.data.keyword.messagehub}}, voir [A propos de {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} était auparavant connu sous le nom de Message Hub.
+Pour mieux comprendre comment fonctionne {{site.data.keyword.messagehub}}, voir [A propos de {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-about). {{site.data.keyword.messagehub}} était auparavant connu sous le nom de Message Hub.
 
 Pour accéder à d'autres exemples de {{site.data.keyword.messagehub}}, y compris des exemples pour Node.js et Python, voir [Exemples de {{site.data.keyword.messagehub}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples){:new_window}.
 
@@ -44,9 +48,9 @@ Procédez comme suit :
   
   e. Cliquez sur **Créer**.
 
-2. {: #create_credentials_step notoc} Pour créer des données d'identification {{site.data.keyword.messagehub}}, suivez les étapes décrites dans [Obtention des données d'identification et connexion à l'aide de la console IBM Cloud](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Pour créer des données d'identification {{site.data.keyword.messagehub}}, suivez les étapes décrites dans [Obtention des données d'identification et connexion à l'aide de la console IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
    <br/>
-   <br/>Vous aurez besoin des valeurs de *kafka_brokers_sasl*, *kafka_admin_url* et *api_key* pour [l'étape 7](/docs/services/EventStreams/index.html#start_consumer_step) de cette tâche.   
+   <br/>Vous aurez besoin des valeurs de *kafka_brokers_sasl*, *kafka_admin_url* et *api_key* pour [l'étape 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) de cette tâche.   
 
 3. Si ce n'est pas déjà fait, installez la configuration requise suivante :
 
@@ -79,7 +83,7 @@ Procédez comme suit :
     
     Cet exemple utilise un sujet nommé `kafka-java-console-sample-topic`. Si le sujet n'existe pas déjà, l'exemple le crée à l'aide de l'API d'administration {{site.data.keyword.messagehub}}. Pour envoyer et recevoir des messages, l'exemple utilise l'API Java Apache Kafka.
 
-    Utilisez les valeurs de *kafka_brokers_sasl*, *kafka_admin_url* et *api_key* des données d'identification créées à [l'étape 2](/docs/services/EventStreams/index.html#create_credentials_step).
+    Utilisez les valeurs de *kafka_brokers_sasl*, *kafka_admin_url* et *api_key* des données d'identification créées à [l'étape 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
 	
 	Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule.
     

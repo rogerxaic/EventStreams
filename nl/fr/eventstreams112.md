@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,9 +31,9 @@ Un message envoyé au responsable de la partition n'est pas immédiatement dispo
 
 Chaque message est représenté sous forme d'enregistrement composé de deux parties : une clé et une valeur. La clé est généralement utilisée pour les données concernant le message et la valeur constitue le corps du message. Etant donné que de nombreux outils de l'écosystème Kafka (tels les connecteurs à d'autres systèmes) utilisent uniquement la valeur et ignorent la clé, il est préférable de placer toutes les données du message dans la valeur et de n'utiliser la clé que pour le partitionnement ou la compression de journal. Ne vous fiez pas à tout ce que vous pouvez lire sur Kafka pour utiliser la clé.
 
-Bon nombre d'autres systèmes de messagerie disposent également d'un moyen de transmettre d'autres informations avec les messages. Kafka 0.11 introduit à cet effet les en-têtes d'enregistrement, qui sont pris en charge par le plan Enterprise de {{site.data.keyword.messagehub}}. Etant donné que le plan Standard de {{site.data.keyword.messagehub}} est actuellement basé sur Kafka 0.10.2.1, il ne prend pas encore en charge les en-têtes. 
+Bon nombre d'autres systèmes de messagerie disposent également d'un moyen de transmettre d'autres informations avec les messages. Kafka 0.11 introduit à cet effet les en-têtes d'enregistrement.
 
-Vous trouverez sans doute utile de coupler ces informations à la [consommation de messages](/docs/services/EventStreams/eventstreams114.html) dans {{site.data.keyword.messagehub}}.
+Vous trouverez sans doute utile de coupler ces informations à la [consommation de messages](/docs/services/EventStreams?topic=eventstreams-consuming_messages) dans {{site.data.keyword.messagehub}}.
 
 ## Paramètres de configuration
 {: #config_settings}
@@ -53,7 +57,8 @@ De nombreux autres paramètres de configuration sont disponibles, mais lisez d'a
 
 Lorsqu'un producteur publie un message sur un sujet, il peut choisir la partition à utiliser. Si l'ordre est important, vous devez vous rappeler qu'une partition est une séquence ordonnée d'enregistrements et qu'un sujet contient une ou plusieurs partitions. Si vous voulez qu'une série de messages soit distribuée dans l'ordre, assurez-vous que les messages se trouvent tous dans la même partition. Le moyen le plus simple pour obtenir ce résultat consiste à attribuer la même clé à tous ces messages. 
  
-Le producteur peut explicitement indiquer un numéro de partition lorsqu'il publie un message. Cela permet un contrôle direct, mais rend le code du producteur plus complexe car il prend la responsabilité de contrôler la sélection des partitions. Pour plus d'informations, voir l'appel de méthode Producer.partitionsFor. A titre d'exemple, l'appel est décrit pour [Kafka 0.11.0.1 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+Le producteur peut explicitement indiquer un numéro de partition lorsqu'il publie un message. Cela permet un contrôle direct, mais rend le code du producteur plus complexe car il prend la responsabilité de contrôler la sélection des partitions. Pour plus d'informations, voir l'appel de méthode Producer.partitionsFor. Par exemple, l'appel est décrit pour
+[Kafka 1.1.0 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Si le producteur n'indique pas de numéro de partition, la sélection de la partition s'effectue via un programme de partitionnement. Le programme de partitionnement par défaut intégré au producteur Kafka fonctionne comme suit :
 
@@ -156,5 +161,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-Pour plus d'informations, voir la [documentation Java pour le client Kafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/0110/javadoc/index.html){:new_window}, qui est très complète. 
+Pour plus d'informations, voir la [documentation Java pour le client Kafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window}, qui est très complète. 
 

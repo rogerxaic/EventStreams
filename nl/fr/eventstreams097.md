@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-30"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-08-30"
 {:pre: .pre}
 
 # Utilisation de l'API REST Kafka
-{: #rest_how}
+{: #rest_api_how}
 
 <!-- info moved to eventstreams025.md because of doc app changes -->
 ** L'API REST Kafka est uniquement disponible dans le cadre du plan Standard.**

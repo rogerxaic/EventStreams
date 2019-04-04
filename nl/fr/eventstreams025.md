@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -60,7 +64,7 @@ dans la [documentation Confluent ![Icône de lien externe](../../icons/launch-gl
 <!-- Comment from Andrew
 basic introduction, definitely including health warning
 -->
-Pour se connecter à {{site.data.keyword.messagehub}}, l'API Kafka utilise les données d'identification <code>api_key</code> et <code>kafka_rest_url</code> provenant de la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+Pour se connecter à {{site.data.keyword.messagehub}}, l'API Kafka utilise les données d'identification <code>api_key</code> et <code>kafka_rest_url</code> provenant de la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
 
 Pour vous authentifier à l'API REST Kafka {{site.data.keyword.messagehub}}, vous devez spécifier l'attribut <code>api_key</code> dans l'en-tête X-Auth-Token de vos demandes.
 
@@ -73,7 +77,7 @@ Pour vous authentifier à l'API REST Kafka {{site.data.keyword.messagehub}}, vou
 L'exemple d'API REST Kafka de {{site.data.keyword.messagehub}} est une application Node.js qui se connecte à {{site.data.keyword.messagehub}} par le biais de l'API REST Kafka pour produire et
 consommer des messages.
 
-L'exemple de code est disponible dans le [projet GitHub event-streams-samples![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
+L'exemple de code est disponible dans le [projet GitHub event-streams-samples ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 
 Suivez les instructions du fichier [README.md ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} de ce projet pour générer et exécuter l'exemple.
 
