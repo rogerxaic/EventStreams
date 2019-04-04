@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,12 +28,12 @@ lastupdated: "2018-11-08"
 
 在 {{site.data.keyword.objectstorageshort}} 服务达到使用期限被废弃后，{{site.data.keyword.objectstorageshort}} 网桥的所有实例也将被废弃。有关更多信息，请参阅[弃用声明：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
 
-作为替代方法，您可以使用 [Cloud Object Storage 网桥](/docs/services/EventStreams/eventstreams115.html){:new_window}。
+作为替代方法，您可以使用 [Cloud Object Storage 网桥](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)。
 {:deprecated}
 
-{{site.data.keyword.objectstorageshort}} 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ObjectStorage/index.html){:new_window} 的实例。网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 {{site.data.keyword.objectstorageshort}} 服务中的容器。
+{{site.data.keyword.objectstorageshort}} 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 {{site.data.keyword.Bluemix_short}} 服务的实例中。网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 {{site.data.keyword.objectstorageshort}} 服务中的容器。
 
-请注意，{{site.data.keyword.Bluemix_short}} 中的首选 Object Storage 服务现在为 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服务。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage/about-cos.html){:new_window}。
+请注意，{{site.data.keyword.Bluemix_short}} 中的首选 Object Storage 服务现在为 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服务。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}。
 
 通过配置 {{site.data.keyword.objectstorageshort}} 网桥，可以控制数据如何作为对象上传到 {{site.data.keyword.objectstorageshort}}。例如，可以配置的属性如下所示：
 
@@ -65,7 +69,7 @@ lastupdated: "2018-11-08"
 * 按 Kafka 消息偏移量。
 * 按每条 Kafka 消息中提供的 ISO 8601 日期。这需要 Kafka 消息包含有效的 JSON 格式对象。
 
-## 按 Kafka 消息偏移量分区
+## 使用 Kafka 消息偏移量分区
 {: notoc}
 
 要按 Kafka 消息偏移量对数据分区，请完成以下步骤：

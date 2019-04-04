@@ -13,6 +13,7 @@ IBM Event Streams
 		eventstreams010.md
 		eventstreams073.md
 	 	eventstreams085.md
+		eventstreams132.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -58,7 +59,7 @@ IBM Event Streams
 
 	{: .topicgroup}
 	教程
-	 	[Asynchronous data processing using object storage and pub/sub messaging tutorial](https://console.bluemix.net/docs/tutorials/pub-sub-object-storage.html#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
+	 	[Asynchronous data processing using object storage and pub/sub messaging tutorial](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-pub-sub-object-storage#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
@@ -74,8 +75,8 @@ IBM Event Streams
 	{: .topicgroup}
 	相关链接
 	 	[Event Streams Java Kafka 样本](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
-	 	[Apache Kafka 0.10.2.1 客户机](http://kafka.apache.org/0102/javadoc/index.html)
-		[developerWorks 上的 IBM Event Streams](https://www.ibm.com/cloud/message-hub)
+	 	[Apache Kafka 1.1.0 客户机](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz)
+		[ibm.com 上的 IBM Event Streams](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 
 

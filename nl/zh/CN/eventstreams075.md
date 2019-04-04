@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-20"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -44,7 +48,7 @@ The {{site.data.keyword.mql}} API is available in the following {{site.data.keyw
 
 {{site.data.keyword.mql}} 仅在以下 {{site.data.keyword.Bluemix_notm}} 位置（区域）中可用：达拉斯 (us-south)、伦敦 (eu-gb) 和悉尼 (au-syd)。MQ Light API 在法兰克福 (eu-de) 位置或 {{site.data.keyword.Bluemix_notm}} Dedicated 中不可用。
 
-有关在 API 之间进行选择的更多信息，请参阅[在三个 API 之间选择](/docs/services/EventStreams/eventstreams087.html)。
+有关在 API 之间进行选择的更多信息，请参阅[在三个 API 之间选择](/docs/services/EventStreams?topic=eventstreams-choose_api)。
 
 
 ## 将 MQ Light API 与 {{site.data.keyword.messagehub}} 配合使用时需要满足哪些需求？
@@ -65,13 +69,13 @@ MQ Light API 使用“MQLight”主题来存储其消息数据，以及与其他
 ## 如何连接和认证
 {: #mql_connect}
 
-要将应用程序连接到服务，应用程序必须使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams/eventstreams127.html)中的 <code>user</code>、
+要将应用程序连接到服务，应用程序必须使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)中的 <code>user</code>、
 <code>password</code> 和 <code>mqlight_lookup_url</code> 详细信息。使用与所选语言对应的以下指导信息：
 
 
 **对于 Java**
 
-如果将 &lsquo;null&rsquo; 指定为 create() 调用的 endpointService 参数，这将指示客户机从 VCAP_SERVICES 读取 <code>user</code>、<code>password</code> 和 
+如果将 <code>null</code> 指定为 create() 调用的 endpointService 参数，这将指示客户机从 VCAP_SERVICES 读取 <code>user</code>、<code>password</code> 和 
 <code>mqlight_lookup_url</code> 详细信息：
 
 
@@ -161,7 +165,7 @@ client = mqlight.Client(service=service,
 要连接现有应用程序，请完成以下检查：
 
 * 确保应用程序使用的是适合您语言的最新可用的 {{site.data.keyword.mql}} API 客户机版本。
-* 检查从 VCAP_SERVICES 中提取的连接详细信息是否引用的是 <code>messagehub</code> 服务类型，在 <code>credentials.user</code> 属性（而不是 <code>credentials.username</code> 属性）中检索连接用户名，以及在 <code>credentials.mqlight_lookup_url</code> 属性（而不是 <code>credentials.connectionLookupURI</code> 属性）中检索连接查找 URL。有关更多信息，请参阅 [VCAP_SERVICES 环境变量](/docs/services/EventStreams/eventstreams127.html)。
+* 检查从 VCAP_SERVICES 中提取的连接详细信息是否引用的是 <code>messagehub</code> 服务类型，在 <code>credentials.user</code> 属性（而不是 <code>credentials.username</code> 属性）中检索连接用户名，以及在 <code>credentials.mqlight_lookup_url</code> 属性（而不是 <code>credentials.connectionLookupURI</code> 属性）中检索连接查找 URL。有关更多信息，请参阅 [VCAP_SERVICES 环境变量](/docs/services/EventStreams?topic=eventstreams-connecting)。
 
 	请注意，如果使用的是 Java&trade; 客户机，并且将“null”指定为 create() 调用中的 endpointService 参数，以便客户机自行检索信息，那么此步骤已完成。
 	
@@ -169,7 +173,7 @@ client = mqlight.Client(service=service,
 
 此外，还应该注意以下信息：
 
-* 消息限制与 {{site.data.keyword.messagehub}} 一致，但可能与支持 {{site.data.keyword.mql}} API 的其他服务器不同。有关更多信息，请参阅[最大限制](/docs/services/EventStreams/eventstreams075.html#max_limits)。
+* 消息限制与 {{site.data.keyword.messagehub}} 一致，但可能与支持 {{site.data.keyword.mql}} API 的其他服务器不同。有关更多信息，请参阅[最大限制](/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits)。
 * 不支持 JMS。
 
 <!-- 15/11/18: info was in eventstreams081.md, moved because of doc app changes -->

@@ -2,7 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-28"
+lastupdated: "2019-01-31"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -21,7 +24,7 @@ lastupdated: "2018-11-28"
 
 ## 标准套餐
 
-如果您需要事件获取和分发功能，但是不需要企业套餐的其他任何好处，那么标准套餐比较合适。标准套餐提供多租户 {{site.data.keyword.messagehub}} 集群的共享访问权。
+如果您需要事件摄入和分发功能，但是不需要企业套餐的其他任何好处，那么标准套餐比较合适。标准套餐提供多租户 {{site.data.keyword.messagehub}} 集群的共享访问权。
 
 ## 企业套餐 
 
@@ -77,11 +80,12 @@ lastupdated: "2018-11-28"
 			<td>**位置（区域）可用性**</td>
 			<td>达拉斯 (us-south)</br>
 			伦敦 (eu-gb)</br>
-			悉尼 (au-syd))</br>
+			悉尼 (au-syd)</br>
 			法兰克福 (eu-de) - 无 {{site.data.keyword.mql}} API </td>
 			<td>达拉斯 (us-south)</br>
-			华盛顿 (us-east))<br/>
+			华盛顿 (us-east)<br/>
 			伦敦 (eu-gb)<br/>
+			悉尼 (au-syd)</br>
 			法兰克福 (eu-de)<br/>
 			东京 (jp-tok)<br/>
 

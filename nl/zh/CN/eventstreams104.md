@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # 使用 Kafka Java 客户机
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -34,7 +38,7 @@ Java&trade; Kafka API 样本是用 Java 编写的示例生产者和使用者，�
 
 有关设置和运行此样本的更多信息，请参阅 [README.md ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}。
 
-有关如何运行样本的详细说明，请参阅 [{{site.data.keyword.messagehub}} 入门](/docs/services/EventStreams/index.html#getting_started_steps)。
+有关如何运行样本的详细说明，请参阅 [{{site.data.keyword.messagehub}} 入门](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps)。
 
 ## 如何使用、下载和运行 Liberty for Java 样本
 {: #liberty_sample notoc}
@@ -75,7 +79,7 @@ Liberty for Java 样本实现部署到 Liberty 运行时上的简单应用程序
 
 强烈建议您从 0.9.X 迁移到最新版本。您可以从 [https://kafka.apache.org/downloads ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/downloads){:new_window} 下载 Kafka 客户机。
 
-有关使用 0.9.X 客户机的影响的信息，请参阅[向后兼容性](/docs/services/EventStreams/eventstreams062.html#compatability)。
+有关使用 0.9.X 客户机的影响的信息，请参阅[向后兼容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。
 
 
 

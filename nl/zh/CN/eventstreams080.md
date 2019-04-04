@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +18,7 @@ lastupdated: "2018-05-25"
 
 <!-- 14/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 如何连接现有 MQ Light 应用程序
-{: #mql_exist_apps}
+{: #mql_exist_mql_apps}
 
 **MQ Light API 仅在标准套餐中提供。**
 <br/>
@@ -26,7 +30,7 @@ lastupdated: "2018-05-25"
 要连接现有应用程序，请完成以下检查：
 
 * 确保应用程序使用的是适合您语言的最新可用的 {{site.data.keyword.mql}} API 客户机版本。
-* 检查从 VCAP_SERVICES 中提取的连接详细信息是否引用的是 <code>messagehub</code> 服务类型，在 <code>credentials.user</code> 属性（而不是 <code>credentials.username</code> 属性）中检索连接用户名，以及在 <code>credentials.mqlight_lookup_url</code> 属性（而不是 <code>credentials.connectionLookupURI</code> 属性）中检索连接查找 URL。有关更多信息，请参阅 [VCAP_SERVICES 环境变量](/docs/services/EventStreams/eventstreams127.html)。
+* 检查从 VCAP_SERVICES 中提取的连接详细信息是否引用的是 <code>messagehub</code> 服务类型，在 <code>credentials.user</code> 属性（而不是 <code>credentials.username</code> 属性）中检索连接用户名，以及在 <code>credentials.mqlight_lookup_url</code> 属性（而不是 <code>credentials.connectionLookupURI</code> 属性）中检索连接查找 URL。有关更多信息，请参阅 [VCAP_SERVICES 环境变量](/docs/services/EventStreams?topic=eventstreams-connecting)。
 
 	请注意，如果使用的是 Java&trade; 客户机，并且将“null”指定为 create() 调用中的 endpointService 参数，以便客户机自行检索信息，那么此步骤已完成。
 	
@@ -34,5 +38,5 @@ lastupdated: "2018-05-25"
 
 此外，还应该注意以下信息：
 
-* 消息限制与 {{site.data.keyword.messagehub}} 一致，但可能与支持 {{site.data.keyword.mql}} API 的其他服务器不同。有关更多信息，请参阅[最大限制](/docs/services/EventStreams/eventstreams083.html)。
+* 消息限制与 {{site.data.keyword.messagehub}} 一致，但可能与支持 {{site.data.keyword.mql}} API 的其他服务器不同。有关更多信息，请参阅[最大限制](https://cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits)。
 * 不支持 JMS。

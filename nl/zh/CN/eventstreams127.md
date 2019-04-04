@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -103,7 +107,7 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 </li>
 <li>通过运行以下命令验证 VCAP_SERVICES 环境变量在应用程序运行时中是否可用：</br> 
  <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>。  </li>
-<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。<p>您可能需要重新编译打包您的应用程序，以使更改生效。</p></li>
+<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。<p>您可能需要重新编译打包您的应用程序，以使更改生效。</p></li>
 </ol>
 
 ## 外部应用程序（标准套餐）
@@ -121,7 +125,7 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 5. 单击**新建凭证**。
 6. 输入新凭证的详细信息，例如名称，并单击**添加**。凭证列表中将显示新的凭证。
 7. 通过**查看凭证**单击此凭证，以采用 JSON 格式显示详细信息。
-8. 将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。
+8. 将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 
 ### 使用 IBM Cloud CLI 获取凭证  
 {: #connect_standard_external_cli }
@@ -142,17 +146,16 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 <li>获取密钥的详细信息：</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>
 这将返回 JSON 格式的服务密钥详细信息。</li>
-<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。</li>
+<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。</li>
 </ol>
 
  
 ## 企业套餐概述
 {: #connect_enterprise}
 
-使用企业套餐供应的服务将分组到仪表板中标题**服务**下。企业套餐[支持 IAM ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}。您不需要了解 IAM 即可入门，但是如果您想要保护 {{site.data.keyword.messagehub}} 服务，建议您了解一些相关知识。有关更多信息，请参阅
-[保护您的 {{site.data.keyword.messagehub}} 资源](/docs/services/EventStreams/eventstreams124.html)
+使用企业套餐供应的服务将分组到仪表板中标题**服务**下。企业套餐[支持 IAM ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}。您不需要了解 IAM 即可入门，但是如果您想要保护 {{site.data.keyword.messagehub}} 服务，建议您了解一些相关知识。有关更多信息，请参阅[保护您的 {{site.data.keyword.messagehub}} 资源](/docs/services/EventStreams?topic=eventstreams-security)。
 
-完成以下步骤，以绑定您的应用程序并获取服务的服务密钥。要获得授权以创建主题，您的应用程序或服务密钥必须具有管理员访问角色。
+完成以下步骤，以绑定您的应用程序并获取服务的服务密钥。要获得授权以创建主题，您的应用程序或服务密钥必须具有管理者访问角色。
 
 要连接应用程序，使用的方法取决于该应用程序的部署位置，即在 Cloud Foundry 内部还是外部，例如在 Kubernetes 服务中。
 
@@ -203,7 +206,7 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 或者，您可以更新清单文件，并再次推送应用程序。</li>
 <li>验证 VCAP_SERVICES 环境变量在应用程序运行时中是否可用：<br/>
 <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
-<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。<p>您可能需要重新编译打包您的应用程序，以使更改生效。</p></li>
+<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。<p>您可能需要重新编译打包您的应用程序，以使更改生效。</p></li>
 </ol>
 
 
@@ -221,7 +224,7 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 4. 单击**新建凭证**。 
 5. 填写新凭证的详细信息，例如名称和角色，并单击**添加**。凭证列表中将显示新的凭证。
 6. 通过**查看凭证**单击此凭证，以采用 JSON 格式显示详细信息。
-7. 将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。
+7. 将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
    <br/><br/>确保您的应用程序会解析这些详细信息。
 
 ### 使用 IBM Cloud CLI 获取凭证 
@@ -234,7 +237,7 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 <code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>打印服务密钥：<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
-<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。<p>确保您的应用程序会解析这些详细信息。</p></li>
+<li>将这些凭证传递给应用程序。指定 <code>token</code> 作为用户名，<var class="keyword varname">api_key</var> 作为密码。使用冒号分隔 <code>token</code> 和 <var class="keyword varname">api_key</var>。有关更多信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。<p>确保您的应用程序会解析这些详细信息。</p></li>
 </ol>
 
 ## 后续步骤
@@ -242,8 +245,8 @@ VCAP_SERVICES 中仅列出前 5 个代理程序。如果您具有 5 个以上的
 
 现在，您有了连接和凭证信息，可以选择一个 {{site.data.keyword.messagehub}} 客户机。您的选择取决于您的套餐。
 
-* 如果您使用的是标准套餐，请参阅[在三个 API 中进行选择](/docs/services/EventStreams/eventstreams087.html)，以获取有关选择哪个客户机以及如何连接的信息。
-* 如果您使用的是企业套餐，请参阅[使用 Kafka API](/docs/services/EventStreams/eventstreams050.html)。
+* 如果您使用的是标准套餐，请参阅[在三个 API 中进行选择](/docs/services/EventStreams?topic=eventstreams-choose_api)，以获取有关选择哪个客户机以及如何连接的信息。
+* 如果您使用的是企业套餐，请参阅[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
 
 	如果您使用企业套餐，内部 Kafka <code>__consumer_offsets</code> 主题将以只读方式显示给您。强烈建议您不要尝试以任何方式管理主题。 
 

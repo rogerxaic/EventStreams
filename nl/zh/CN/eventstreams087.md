@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-06"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -40,11 +44,11 @@ lastupdated: "2018-06-06"
 
 Kafka REST API 是一个方便的接口，可在以下情况下使用：
 
-* 开发人员想要开始使用 {{site.data.keyword.messagehub}}
+* 开发者想要开始使用 {{site.data.keyword.messagehub}}
 * 在等待时间不是关键因素的某些吞吐量较低的用例中
 * 用于调试和排查故障
 
-Kafka REST API 并不是一个等待时间短的高吞吐量接口。对于这些类型的需求，我们建议使用 Kafka API 与 {{site.data.keyword.messagehub}} 建立连接。有关更多信息，请参阅[使用 Kafka 客户机](/docs/services/EventStreams/eventstreams050.html#kafka_using)。
+Kafka REST API 并不是一个等待时间短的高吞吐量接口。对于这些类型的需求，我们建议使用 Kafka API 与 {{site.data.keyword.messagehub}} 建立连接。有关更多信息，请参阅[使用 Kafka 客户机](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using)。
 
 ## 为什么要使用 {{site.data.keyword.mql}} API？
 {: #why_mql notoc}

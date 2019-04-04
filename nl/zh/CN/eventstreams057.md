@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -90,7 +94,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 
 使用用户界面或管理 API 创建主题时，可以更改消息保留时间的限制。时间限制最短为 1 小时，最长为 30 天。
 
-有关使用 Kafka 客户机或 Kafka Streams 创建主题时允许的设置限制的信息，请参阅[主题管理 API](/docs/services/EventStreams/eventstreams104.html)。
+有关使用 Kafka 客户机或 Kafka Streams 创建主题时所允许设置的限制的信息，请参阅[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
 
 ## 在 Kafka 中创建和删除主题
 {: #create_delete}
@@ -117,7 +121,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ## Kafka REST API 每日重新启动
 {: #rest_restart}
 
-Kafka REST API 每天重新启动一次，重新启动需要很短的一段时间。在此时间段内，Kafka REST API 可能会变得不可用。如果发生此情况，建议重试请求。重新启动 REST API 后，必须重新创建 Kafka 使用者实例。否则，REST API 会返回以下 JSON：
+Kafka REST API 每天重新启动一次，重新启动需要很短的一段时间。在此时间段内，Kafka REST API 可能会变得不可用。如果发生此情况，建议重试请求。重新启动 REST API 后，必须再次创建 Kafka 使用者实例。否则，REST API 会返回以下 JSON：
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

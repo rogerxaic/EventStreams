@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-03"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -26,7 +30,7 @@ lastupdated: "2018-12-21"
 * 将数据传输到其他服务中。例如，传输到 Cloud Object Storage。
 
 使用 Apache Kafka 构建之后，它可以直接受益于社区内发生的所有创新，并支持 Kafka 客户机 API、Kafka Streams、Kafka Connect 以及 KSQL。
-{:shortdesc}
+
 
 虽然由于与 {{site.data.keyword.messagehub}} 的连接始终使用凭证进行认证，您需要提供其他配置，但是 Apache Kafka 工具通常直接使用 {{site.data.keyword.messagehub}}。
 

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +19,7 @@ lastupdated: "2018-05-25"
 
 <!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # 在 MQ Light API 和 Kafka 或 Kafka REST API 之间交换消息
-{: #mql_exchange}
+{: #mql_exchange_rest}
 
 **MQ Light API 仅在标准套餐中提供。**
 <br/>
@@ -24,7 +28,7 @@ lastupdated: "2018-05-25"
 {: shortdesc}
 
 ## Kafka 消息格式
-{: #kafka_format notoc}
+{: #kafka_message_format notoc}
 
 <table border='1'>
 <caption>表 1. Kafka 消息格式</caption>

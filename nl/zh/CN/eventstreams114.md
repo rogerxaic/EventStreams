@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +31,7 @@ lastupdated: "2018-03-23"
 
 在编程接口中，消息实际上称为记录。例如，对于使用者 API，Java 类 org.apache.kafka.clients.consumer.ConsumerRecord 用于表示消息。术语_记录_和_消息_可以互换使用，但基本上会用记录来表示消息。
 
-您可能会发现，阅读这些信息以及在 {{site.data.keyword.messagehub}} 中[生成消息](/docs/services/EventStreams/eventstreams112.html)会非常有用。
+您可能会发现，阅读这些信息以及在 {{site.data.keyword.messagehub}} 中[生成消息](/docs/services/EventStreams?topic=eventstreams-producing_messages)会非常有用。
 
 ## 配置使用者属性 
 {: #configuring_consumer_properties }

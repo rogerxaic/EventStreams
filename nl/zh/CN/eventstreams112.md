@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,10 +31,9 @@ lastupdated: "2018-06-23"
 
 每条消息表示为一条记录，由两部分组成：键和值。键通常用于表示消息相关数据，值是消息的主体。由于 Kafka 生态系统中的许多工具（例如，连接其他系统的连接器）只使用值而忽略键，因此最好将所有消息数据都放入值中，并仅在分区或记录压缩时使用键。不应该为了使用键而依赖从 Kafka 读取的所有内容。
 
-其他许多消息传递系统也可以随消息一起传递其他信息。针对此用途，Kafka 0.11 引入了记录头，{{site.data.keyword.messagehub}} 企业套餐支持记录头。
-{{site.data.keyword.messagehub}} 标准套餐目前基于 Kafka 0.10.2.1，因此它尚不支持记录头。 
+其他许多消息传递系统也可以随消息一起传递其他信息。针对此用途，Kafka 0.11 引入了记录头。
 
-您可能会发现，阅读这些信息以及在 {{site.data.keyword.messagehub}} 中[使用消息](/docs/services/EventStreams/eventstreams114.html)会非常有用。
+您可能会发现，阅读这些信息以及在 {{site.data.keyword.messagehub}} 中[使用消息](/docs/services/EventStreams?topic=eventstreams-consuming_messages)会非常有用。
 
 ## 配置设置
 {: #config_settings}
@@ -54,7 +57,7 @@ lastupdated: "2018-06-23"
 
 生产者在主题上发布消息时，生产者可以选择使用哪个分区。如果排序很重要，请务必记住，分区是有顺序的记录序列，但一个主题可包含一个或多个分区。如果要按顺序传递一组消息，请确保这些消息全部传递到同一分区上。实现这一操作的最直接方法是为所有这些消息提供相同的键。 
  
-生产者发布消息时，可以明确指定分区号。这样可以直接控制，但也会使生产者代码更加复杂，因为它将承担管理分区选择的责任。有关更多信息，请参阅方法调用 Producer.partitionsFor。例如，[Kafka 0.11.0.1 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 描述了该调用。
+生产者发布消息时，可以明确指定分区号。这样可以直接控制，但也会使生产者代码更加复杂，因为它将承担管理分区选择的责任。有关更多信息，请参阅方法调用 Producer.partitionsFor。例如，针对 [Kafka 1.1.0 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 描述了该调用。
  
 如果生产者未指定分区号，那么分区的选择由分区程序执行。Kafka 生产者中内置缺省分区程序的工作方式如下：
 
@@ -98,7 +101,7 @@ Kafka 通常的做法是编写应用程序来处理偶然出现的消息重复�
 
 为了提高效率，生产者实际上会将多批记录收集在一起发送给服务器。如果启用压缩，生产者会压缩每个批次，这可以减少需要通过网络传输的数据，从而提高性能。
 
-如果尝试使用的消息发布速度比向服务器发送消息的速度快，那么生产者会自动将消息缓存到批处理请求中。生产者会为每个分区维护一个缓冲区，用于缓存未发送的记录。当然存在一个临界点，也就是说即使进行批处理也无法达到期望的速率。
+如果尝试使用的消息发布速度比向服务器发送消息的速度快，那么生产者会自动将消息缓存到批处理请求中。生产者会为每个分区维护一个缓冲区，用于缓存未发送的记录。当然，存在一个临界点，达到此临界点之后，即使批处理也不允许实现您想要的速率。
  
 另外还有一个影响因素。为了防止单个生产者或使用者大量涌入集群而使集群应接不暇，{{site.data.keyword.messagehub}} 应用了吞吐量配额。程序会计算每个生产者发送数据的速率，并对试图超过其配额的任何生产者进行调速。应用调速的方式是略微延迟向生产者发送响应。通常，此行为就像是一个天然制动器。
  
@@ -157,5 +160,5 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 });
 ```
 
-有关更多信息，请参阅非常全面的 [Kafka 客户机的 Javadoc ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/0110/javadoc/index.html){:new_window}。 
+有关更多信息，请参阅非常全面的 [Kafka 客户机的 Javadoc ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window}。 
 

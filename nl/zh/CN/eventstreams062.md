@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2019-01-14"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -18,7 +22,7 @@ lastupdated: "2019-01-14"
 要将 {{site.data.keyword.messagehub}} 与 Kafka API 一起使用，请选择以下其中一种客户机类型：
 
 * 官方 Java 客户机。这是最好的选择，因为它包含 Apache Kafka 可用的最新功能。
-* [建议的第三方客户机](/docs/services/EventStreams/eventstreams062.html#clients_table)之一。
+* [建议的第三方客户机](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table)之一。
 
 对于这两种客户机类型，我们建议始终选择最新版本的客户机。
 {: shortdesc}
@@ -57,7 +61,7 @@ lastupdated: "2019-01-14"
 ## 第三方客户机
 {: #third_party_clients}
 
-如果无法运行官方 Java 客户机，我们建议运行一个[建议的第三方客户机](/docs/services/EventStreams/eventstreams062.html#clients_table)，这些客户机全都通过了 {{site.data.keyword.messagehub}} 的测试。 
+如果无法运行官方 Java 客户机，我们建议运行一个[建议的第三方客户机](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table)，这些客户机全都通过了 {{site.data.keyword.messagehub}} 的测试。 
 
 其他支持最低客户机需求的第三方客户机可能也可用于 {{site.data.keyword.messagehub}}。但是，我们只测试了建议的第三方客户机，而且只有这些客户机的使用经验。
 
@@ -66,12 +70,12 @@ lastupdated: "2019-01-14"
 
 <table id="clients_table">
     <caption>表 2. 客户机支持摘要</caption>
-      <tr>
-		    <th>客户机</th>
-		    <th>语言</th>
-			<th>建议的版本</th>
-		    <th>支持的最低版本 [<sup>1</sup>](/docs/services/EventStreams/eventstreams062.html#footnote1)</th>
-			<th>样本链接</th>
+     <tr>
+		    <th id="client" scope="col">客户机</th>
+		    <th id="language" scope="col">语言</th>
+			<th id="version" scope="col">建议的版本</th>
+		    <th id="minimum version" scope="col">支持的最低版本 [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+			<th id="sample link" scope="col">样本链接</th>
         </tr>
 			<tr>
 			<td colspan="3">**官方客户机**</td>
@@ -80,7 +84,7 @@ lastupdated: "2019-01-14"
 			<td>[Apache Kafka 客户机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>最新版</td>
-			<td>0.10.2<p> 有关旧版客户机的信息，请参阅[向后兼容性](/docs/services/EventStreams/eventstreams062.html#compatability)。</p></td>
+			<td>0.10.2<p> 有关旧版客户机的信息，请参阅[向后兼容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。</p></td>
 			<td>[Java 控制台样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Liberty 样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -122,7 +126,7 @@ lastupdated: "2019-01-14"
 1. {: #footnote1}此版本是我们在持续测试中验证的最早版本。通常，这是在过去 12 个月内提供的初始版本，但如果已知存在严重问题，那么可能会更新
 
 ## 向后兼容性 - 标准套餐
-{: #compatability}
+{: #compatibility}
 
 对于向后兼容性，可以与 {{site.data.keyword.messagehub}} 标准套餐一起使用 Apache Kafka 0.9 Java 客户机。但是，由于此客户机的年限，我们强烈建议不要使用它。如果选择使用此版本客户机，那么您需要附加的[登录模块 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)。
 
@@ -145,7 +149,7 @@ The no-kafka client does not fully support SASL authentication with the PLAIN me
 ## 将客户机连接到 {{site.data.keyword.messagehub}}
 {: #connect_client}
 
-有关如何配置 Java 客户机以连接到 {{site.data.keyword.messagehub}} 的信息，请参阅[配置客户机](/docs/services/EventStreams/eventstreams063.html)。
+有关如何配置 Java 客户机以连接到 {{site.data.keyword.messagehub}} 的信息，请参阅[配置客户机](/docs/services/EventStreams?topic=eventstreams-kafka_connect)。
 
 
 

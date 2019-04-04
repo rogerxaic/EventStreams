@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-07-04"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -30,9 +34,9 @@ lastupdated: "2018-07-04"
 
 |访问角色|操作描述|操作示例|
 |:-----------------|:-----------------|:-----------------|
-|读者 | 在 {{site.data.keyword.messagehub}} 中执行只读操作，例如查看资源|通过向集群资源类型分配读访问权，以允许应用程序连接到集群|
-|作者 | 作者的许可权超过读者角色，包括创建和编辑 {{site.data.keyword.messagehub}} 资源。|通过分配对主题资源和主题名称类型的写访问权，允许应用程序向主题生成内容。|
-|管理员|管理员的许可权超过作者角色，可以完成特权操作。此外，您可以创建和编辑 {{site.data.keyword.messagehub}} 资源。|通过分配对 {{site.data.keyword.messagehub}} 实例的管理访问权，允许对所有资源的完全访问权|
+|读取者 | 在 {{site.data.keyword.messagehub}} 中执行只读操作，例如查看资源|通过向集群资源类型分配读访问权，以允许应用程序连接到集群|
+|写入者 | 写入者的许可权超过读取者角色，包括创建和编辑 {{site.data.keyword.messagehub}} 资源。|通过分配对主题资源和主题名称类型的写访问权，允许应用程序向主题生成内容。|
+|管理者|管理者的许可权超过写入者角色，可以完成特权操作。此外，您可以创建和编辑 {{site.data.keyword.messagehub}} 资源。|通过分配对 {{site.data.keyword.messagehub}} 实例的管理访问权，允许对所有资源的完全访问权|
 {: caption="表 1. {{site.data.keyword.messagehub}} 用户角色和操作示例" caption-side="top"}
 
 <!-- comment from Charlie and my reply 
@@ -48,11 +52,11 @@ Cloud Identity 和 Access Management (IAM) 策略附加到要进行控制的资�
 * 要保护的服务实例。您可以将策略范围限定为包含某个服务类型的所有实例。 
 * 要保护的资源类型。有效值为 <code>cluster</code>、<code>topic</code>、<code>group</code> 或 <code>txnid</code>。指定类型是可选操作。如果不指定类型，那么策略将应用于服务实例中的所有资源。 
 * 要保护的资源。指定类型 <code>topic</code>、<code>group</code> 和 <code>txnid</code> 的资源。如果不指定资源，那么策略将应用于服务实例中指定类型的所有资源。 
-* 分配给用户的角色。例如，“读者”、“作者”或“管理员”。 
+* 分配给用户的角色。例如，“读取者”、“写入者”或“管理者”。 
 
 ## 什么是缺省安全设置？
 
-缺省情况下，供应 {{site.data.keyword.messagehub}} 时，进行供应的用户将被授予对该实例的所有资源的管理员角色。此外，同一帐户中具有“全部”服务或“全部 {{site.data.keyword.messagehub}} 服务实例”的管理员角色的任何用户也将具有完全访问权。 
+缺省情况下，供应 {{site.data.keyword.messagehub}} 时，进行供应的用户将被授予对该实例的所有资源的管理者角色。此外，同一帐户中具有“全部”服务或“全部 {{site.data.keyword.messagehub}} 服务实例”的管理者角色的任何用户也将具有完全访问权。 
 
 然后，您可以应用其他策略以扩展其他用户的访问权。您可以将策略范围限定为适用于整个 {{site.data.keyword.messagehub}} 或者 {{site.data.keyword.messagehub}} 中的个别资源。有关更多信息，请参阅[常见场景](#security_scenarios)。
 
@@ -67,7 +71,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 
 此表总结了一些常见的 {{site.data.keyword.messagehub}} 场景以及您需要分配的访问权：
 
-|操作 |读者角色|作者角色|管理员角色|
+|操作 |读取者角色|写入者角色|管理者角色|
 |---------|----------------|
 |允许对所有资源的完全访问权|不适用|不适用|服务实例：<var class="keyword varname">your_service_instance</var>|
 |允许应用程序或用户创建或删除主题|资源类型：<code>cluster</code>   |不适用|资源类型：topic <br/><br/>可选：资源标识：<var class="keyword varname">name_of_topic</var> |
@@ -82,7 +86,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |删除使用者组|资源类型：<code>cluster</code>   |不适用|资源类型：<code>group</code>   <br/>资源标识：<var class="keyword varname">group_ID</var>      |
 | 要使用 Streams |资源类型：<code>cluster</code></br>资源类型：<code>group</code>   |不适用|资源类型：<code>topic</code>   |
 
-有关 IAM 的更多信息，请参阅 [IBM Cloud Identity and Access Management](/docs/iam/index.html#iamoverview)。
+有关 IAM 的更多信息，请参阅 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)。
 
 有关如何设置策略的示例，请参阅：[IBM Cloud IAM Service IDs and API Keys ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}。
 
@@ -90,7 +94,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 ## 连接到 {{site.data.keyword.messagehub}}
 {: #connect_message_enterprise }
 
-有关如何绑定 Cloud Foundry 应用程序或者获取外部应用程序的安全密钥凭证的信息，请参阅[连接到 {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams127.html#connect_messagehub)。
+有关如何绑定 Cloud Foundry 应用程序或者获取外部应用程序的安全密钥凭证的信息，请参阅[连接到 {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting)。
 
 <!-- 28/06/18 - Karen: draft info only
 

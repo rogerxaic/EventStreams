@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 
-#监视和日志记录（标准套餐）
+# 监视和日志记录（标准套餐）
 {: #monitoring}
 
 标准套餐中的 {{site.data.keyword.messagehub}} 会自动收集度量值和事件，以便您可以监视 {{site.data.keyword.messagehub}} 的使用情况。
