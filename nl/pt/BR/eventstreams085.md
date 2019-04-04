@@ -2,7 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-28"
+lastupdated: "2019-01-31"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -85,6 +88,7 @@ A tabela a seguir resume o que é suportado pelos planos:
 			<td>Dallas (us-sul)</br>
 			Washington (us-east)<br/>
 			Londres (eu-gb)<br/>
+			Sydney (au-syd)</br>
 			Frankfurt (eu-de)<br/>
 			Tóquio (jp-tok)<br/>
 

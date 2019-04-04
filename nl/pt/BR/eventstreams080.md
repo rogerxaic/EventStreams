@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +18,7 @@ lastupdated: "2018-05-25"
 
 <!-- 14/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Como conectar aplicativos MQ Light existentes
-{: #mql_exist_apps}
+{: #mql_exist_mql_apps}
 
 ** A API do MQ Light está disponível como parte somente do plano Standard.**
 <br/>
@@ -33,7 +37,7 @@ tipo de serviço <code>messagehub</code>, recuperam o nome de usuário de conex�
 <code>credentials.user</code> em vez da propriedade <code>credentials.username</code> e recuperam a URL de
 consulta de conexão por meio da propriedade <code>credentials.mqlight_lookup_url</code> em vez da propriedade
 <code>credentials.connectionLookupURI</code>. Para obter mais informações, consulte
-[Variável de ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+[Variável de ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 	Observe que esta etapa será executada se o cliente Java&trade; for utilizado e se 'null'
 for especificado como o parâmetro endpointService na chamada create(), para que o cliente recupere as informações
@@ -46,5 +50,5 @@ Também é necessário observar as seguintes informações:
 
 * Os limites de mensagens são consistentes com o {{site.data.keyword.messagehub}}, mas podem
 ser diferentes de outros servidores que suportam a API do {{site.data.keyword.mql}}. Para obter mais
-informações, consulte [Limites máximos](/docs/services/EventStreams/eventstreams083.html).
+informações, consulte [Limites máximos](https://cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits).
 * O JMS não é suportado.

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-01"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +18,7 @@ lastupdated: "2018-06-01"
 
 
 # Ponte do Watson IoT Platform
-{: #consuming_messages }
+{: #consuming_messages_watson}
 
 
 O {{site.data.keyword.iot_full}} fornece uma ponte gerenciada que permite criar um link
@@ -31,10 +35,7 @@ Um padrão comum é usar a ponte do {{site.data.keyword.iot_short_notm}}, o
 {{site.data.keyword.messagehub}} e a ponte do Cloud Object Storage para criar um
 pipeline de ponta a ponta, facilitando as interações em tempo real e de lote.
 
-Para obter informações sobre como criar esta ponte, consulte:
-[Conectando e configurando um serviço historiador usando
-o {{site.data.keyword.messagehub}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link
-externo")](/docs/services/IoT/message_hub.html#messagehub_main){:new_window}.
+Para obter informações sobre como criar essa ponte, consulte: [Conectando e configurando um conector histórico para usar o {{site.data.keyword.messagehub}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}.
 
 
 

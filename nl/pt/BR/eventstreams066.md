@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-05-25"
 {:pre: .pre}
 
 # Como conectar e autenticar
-{: #rest_connect}
+{: #rest_connect_authenticate}
 
 <!-- info moved to eventstreams025.md because of doc app changes -->
 ** A API de REST do Kafka está disponível somente como parte do plano Standard.**
@@ -21,7 +25,7 @@ lastupdated: "2018-05-25"
 
 Para conectar-se ao {{site.data.keyword.messagehub}}, a API de REST do Kafka usa as
 credenciais <code>api_key</code> e <code>kafka_rest_url</code> da
-[variável de ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+[variável de ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting).
 {: shortdesc}
 
 Para autenticar com a API REST do {{site.data.keyword.messagehub}} Kafka, você

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 # O que é API do MQ Light e como ela é diferente?
-{: #mqlight}
+{: #mqlight_api}
 
 <!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** A API do MQ Light está disponível somente como parte do plano Standard.**
@@ -42,6 +46,6 @@ do Kafka.
 O {{site.data.keyword.mql}} está disponível somente nas seguintes regiões do {{site.data.keyword.Bluemix_notm}}: Sul dos EUA (Dallas), Sul do Reino Unido (Londres) e Sul da Ásia-Pacífico (Sydney). A API do MQ Light não está disponível na região Central da União Europeia (Frankfurt) ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
 
 <!-- begin STAGING ONLY -->
-Para obter mais informações sobre como escolher entre as APIs, consulte [Escolhendo entre as três APIs](/docs/services/EventStreams/eventstreams087.html).
+Para obter mais informações sobre como escolher entre as APIs, consulte [Escolhendo entre as três APIs](/docs/services/EventStreams?topic=eventstreams-choose_api).
 <!-- end STAGING ONLY -->
 

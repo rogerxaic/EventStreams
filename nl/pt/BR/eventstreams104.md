@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-12-21"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-12-21"
 {:pre: .pre}
 
 # Usando o cliente Kafka Java
-{: #kafka_using}
+{: #kafka_java_using}
 
 <!-- 21/06/18 - removing until some content ready
 
@@ -37,7 +41,7 @@ mensagens de.
 
 Para obter informações adicionais sobre a instalação e execução da amostra, consulte [README.md ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}.
 
-Para obter uma apresentação detalhada de como executar a amostra, consulte [Introdução ao {{site.data.keyword.messagehub}}](/docs/services/EventStreams/index.html#getting_started_steps).
+Para obter uma apresentação detalhada de como executar a amostra, consulte [Introdução ao {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-getting_started#getting_started_steps).
 
 ## Como usar, fazer download e executar a amostra do Liberty para Java
 {: #liberty_sample notoc}
@@ -69,8 +73,7 @@ em que USERNAME e PASSWORD são os valores do {{site.data.keyword.messagehub}} n
 
 Se usar <code>sasl.jaas.config</code>, os clientes em execução na mesma JVM poderão usar credenciais
 diferentes. Para obter mais informações, consulte
-[Configurando clientes do
-Kafka ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}
+[Configurando clientes Kafka ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}.
 
 Para um cliente Kafka anterior, deve-se usar um arquivo de configuração do JAAS para especificar as credenciais. Esse mecanismo é menos conveniente, portanto, recomendamos o uso da propriedade <code>sasl.jaas.config</code> como alternativa.
 
@@ -89,8 +92,8 @@ mais recente.
 [https://kafka.apache.org/downloads
 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/downloads){:new_window}.
 
-Para obter informações sobre as implicações do uso de um cliente 0.9.X, consulte
-[Compatibilidade com versões anteriores](/docs/services/EventStreams/eventstreams062.html#compatability).
+Para obter informações sobre as implicações de usar um cliente 0.9.X, consulte
+[Compatibilidade com versões anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
 
 
 

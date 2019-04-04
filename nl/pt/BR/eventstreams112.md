@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,10 +31,10 @@ Quando uma mensagem for enviada para o líder de partição, essa mensagem não 
 
 Cada mensagem é representada como um registro que inclui duas partes: chave e valor. A chave é comumente usada para dados sobre a mensagem e o valor é o corpo da mensagem. Como muitas ferramentas no ecossistema do Kafka (como conectores para outros sistemas) usam apenas o valor e ignoram a chave, é melhor colocar todos os dados da mensagem no valor e apenas usar a chave para particionamento ou compactação de log. Você não deve confiar em tudo que lê no Kafka para usar a chave.
 
-Muitos outros sistemas de mensagens também têm uma forma de carregar outras informações juntamente com as mensagens. O Kafka 0.11 introduz cabeçalhos de registro com esse propósito, que são suportados pelo plano Enterprise do {{site.data.keyword.messagehub}}. O plano Standard do {{site.data.keyword.messagehub}} atualmente é baseado no Kafka 0.10.2.1, portanto, ele ainda não suporta cabeçalhos de registro. 
+Muitos outros sistemas de mensagens também têm uma forma de carregar outras informações juntamente com as mensagens. O Kafka 0.11 apresenta cabeçalhos de registro para esse propósito.
 
 Talvez você ache útil ler estas informações em conjunto com o
-[consumo de mensagens](/docs/services/EventStreams/eventstreams114.html) no
+[consumo de mensagens](/docs/services/EventStreams?topic=eventstreams-consuming_messages) no
 {{site.data.keyword.messagehub}}.
 
 ## Definições de configuração
@@ -59,7 +63,8 @@ Embora muito mais definições de configuração estejam disponíveis, certifiqu
 
 Quando o produtor publica uma mensagem em um tópico, o produtor pode escolher qual partição usar. Se a ordenação é importante, é preciso lembrar-se de que uma partição é uma sequência ordenada de registros e que um tópico abrange uma ou mais partições. Se você deseja que um conjunto de mensagens seja entregue em ordem, assegure-se de que todas elas sejam encaminhadas para a mesma partição. A maneira mais direta de fazer isso é fornecer a mesma chave a todas essas mensagens. 
  
-O produtor pode especificar explicitamente um número de partição ao publicar uma mensagem. Isso fornece um controle direto, mas torna o código do produtor mais complexo, já que ele assume a responsabilidade de gerenciar a seleção de partição. Para obter mais informações, consulte a chamada de método Producer.partitionsFor. Por exemplo, a chamada é descrita para [Kafka 0.11.0.1 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/0110/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+O produtor pode especificar explicitamente um número de partição ao publicar uma mensagem. Isso fornece um controle direto, mas torna o código do produtor mais complexo, já que ele assume a responsabilidade de gerenciar a seleção de partição. Para obter mais informações, consulte a chamada de método Producer.partitionsFor. Por exemplo, a chamada é descrita para o
+[Kafka 1.1.0 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Se o produtor não especificar um número de partição, a seleção de partição será feita por um particionador. O particionador padrão que é construído no produtor Kafka funciona da seguinte forma:
 
@@ -103,7 +108,7 @@ Se possível, evite a espera pela confirmação de uma mensagem antes da publica
 
 Para propósitos de eficiência, o produtor na realidade coleta lotes de registros juntos a serem enviados para os servidores. Se você ativar a compactação, o produtor compactará cada lote, o que poderá melhorar o desempenho exigindo que menos dados sejam transferidos pela rede.
 
-Se você tentar publicar mensagens mais rapidamente do que elas podem ser enviadas para um servidor, o produtor as armazenará em buffer automaticamente nas solicitações em lote. O produtor mantém um buffer de registros não enviados para cada partição. Logicamente, chega a um ponto em que até mesmo o envio em lote não permite que a taxa desejada seja atingida.
+Se você tentar publicar mensagens mais rapidamente do que elas podem ser enviadas para um servidor, o produtor as armazenará em buffer automaticamente nas solicitações em lote. O produtor mantém um buffer de registros não enviados para cada partição. Logicamente, chega um ponto em que até mesmo o envio em lote não permite que a taxa desejada seja atingida.
  
 Há outro fator que tem um impacto. Para evitar que produtores ou consumidores individuais sobrecarreguem o cluster, o {{site.data.keyword.messagehub}} aplica cotas de rendimento. A taxa na qual cada produtor envia dados é calculada e qualquer produtor que tenta exceder sua cota é regulado. A regulagem é aplicada
 atrasando um pouco o envio de respostas para o produtor. Em geral, isso age apenas como um freio natural.
@@ -159,6 +164,6 @@ producer.send(new ProducerRecord<String,String>("T1","key","value", new Callback
 
 Para obter mais informações, consulte o
 [Javadoc para o cliente Kafka
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/0110/javadoc/index.html){:new_window},
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/11/javadoc/index.html?overview-summary.html){:new_window},
 que é muito abrangente. 
 

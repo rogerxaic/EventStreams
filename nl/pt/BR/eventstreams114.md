@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -29,7 +33,7 @@ Quando um consumidor processa uma mensagem, a mensagem não é removida de seu t
 Nas interfaces de programação, uma mensagem é realmente chamada de um registro. Por exemplo, a classe Java org.apache.kafka.clients.consumer.ConsumerRecord é usada para representar uma mensagem para a API do consumidor. Os termos _registro_ e _mensagem_ podem ser usados de forma intercambiável, mas um registro é usado essencialmente para representar uma mensagem.
 
 Talvez você ache útil ler estas informações em conjunto com a
-[produção de mensagens](/docs/services/EventStreams/eventstreams112.html) no
+[produção de mensagens](/docs/services/EventStreams?topic=eventstreams-producing_messages) no
 {{site.data.keyword.messagehub}}.
 
 ## Configurando propriedades do consumidor 
@@ -106,8 +110,7 @@ Quando os deslocamentos confirmados são salvos no Kafka e os consumidores são 
 ### Confirmando deslocamentos automaticamente
 
 A maneira mais fácil de confirmar deslocamentos é permitir que o consumidor do Kafka faça isso automaticamente. Isso é simples, mas oferece menos controle do que a confirmação manual. Por padrão, um
-consumidor confirma automaticamente os deslocamentos a cada 5 segundos. Essa confirmação padrão acontece a cada cinco
-segundos, independentemente do progresso que o consumidor está fazendo para processar as mensagens. Além disso, quando o consumidor chama `poll()`, isso também faz com que o deslocamento mais recente retornado da chamada anterior a `poll()` seja confirmado (porque ele provavelmente foi processado).
+consumidor confirma automaticamente os deslocamentos a cada 5 segundos. Essa confirmação padrão acontece a cada cinco segundos, independentemente do progresso que o consumidor está fazendo no processamento das mensagens. Além disso, quando o consumidor chama `poll()`, isso também faz com que o deslocamento mais recente retornado da chamada anterior a `poll()` seja confirmado (porque ele provavelmente foi processado).
 
 Caso o deslocamento confirmado ultrapasse o processamento das mensagens e aconteça uma falha de consumidor, é possível que
 algumas mensagens não sejam processadas. Isso ocorre porque o processamento é reiniciado no deslocamento

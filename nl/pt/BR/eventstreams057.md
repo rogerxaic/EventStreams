@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -106,8 +110,7 @@ no limite.
 É possível mudar o limite de tempo para retenção mensagem ao criar um tópico usando a interface
 com o usuário ou a API de administração. O limite de tempo é um mínimo de uma hora e um máximo de 30 dias.
 
-Para obter informações sobre restrições nas configurações permitidas ao criar tópicos usando um cliente Kafka ou o Kafka
-Streams, consulte [APIs para administração de tópico](/docs/services/EventStreams/eventstreams104.html).
+Para obter informações sobre restrições nas configurações permitidas ao criar tópicos usando um cliente Kafka ou Kafka Streams, consulte [Usando a API do Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Criando e excluindo tópicos no Kafka
 {: #create_delete}
@@ -119,7 +122,8 @@ de tópicos ou da rápida exclusão e recriação de tópicos.
 ## API REST Kafka
 {: #trouble_rest}
 
-*  Somente o formato integrado binário é suportado para solicitações e respostas. Os formatos integrados do Avro e JSON não são suportados.
+*  Somente o formato integrado binário é suportado em solicitações e
+respostas. Os formatos integrados do Avro e JSON não são suportados.
 *  Solicitações simultâneas não são suportadas para uma instância do consumidor.
    Solicitações de leitura, confirmação
                     ou exclusão correspondentes a uma instância do consumidor devem ser enviadas somente após uma
@@ -142,8 +146,8 @@ Se este erro ocorrer, aguarde e envie a solicitação novamente.
 
 A API de REST do Kafka reinicia uma vez por dia por um curto período de tempo. Durante esse período, a
 API de REST do Kafka pode se tornar indisponível. Se isso acontecer, é recomendado tentar novamente
-sua solicitação. Após a API de REST ser reiniciada, será necessário recriar suas instâncias do consumidor
-do Kafka. Se este for o caso, a API de REST retornará o JSON a seguir:
+sua solicitação. Após a API de REST ser reiniciada, será necessário recriar
+suas instâncias do consumidor do Kafka. Se este for o caso, a API de REST retornará o JSON a seguir:
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

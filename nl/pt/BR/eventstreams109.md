@@ -3,6 +3,9 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-12-07"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -17,9 +20,8 @@ lastupdated: "2018-12-07"
 # Relatando um problema para a equipe do {{site.data.keyword.messagehub}} - plano Standard
 {: #report_problem}
 
-Se você estiver enfrentando um problema com o {{site.data.keyword.messagehub}}, primeiro
-verifique a página de status do [{{site.data.keyword.Bluemix_notm}}
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/status){:new_window}. 
+Se você estiver enfrentando um problema com o {{site.data.keyword.messagehub}}, primeiro verifique a página de status do [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/status?selected=status){:new_window}.
+ 
 
 Se quiser ajuda da equipe do {{site.data.keyword.messagehub}}, reúna todas as informações a seguir. Quanto mais informações você puder fornecer diretamente, mais eficientemente a equipe poderá ajudar com o problema:
 {:shortdesc}
@@ -43,7 +45,7 @@ usando?
 
 
 É possível fornecer as informações reunidas para a IBM em um chamado de suporte [enviando uma solicitação
-de suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/get-support/howtogetsupport.html#using-avatar).
+de suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}.
 
 
 

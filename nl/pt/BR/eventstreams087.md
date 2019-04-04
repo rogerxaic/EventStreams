@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-06-06"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -47,7 +51,7 @@ A API REST do Kafka é uma interface conveniente que pode ser usada nas situaç�
 * Em determinados casos de uso de baixo rendimento em que a latência não é um fator crítico
 * Para depuração e descoberta de falhas
 
-A API REST do Kafka não foi planejada como uma interface de alto rendimento e baixa latência.​Para esses tipos de requisitos, recomendamos o uso da API Kafka para conectar-se ao {{site.data.keyword.messagehub}} e por meio dele. Para obter informações adicionais, consulte [Usando um cliente Kafka](/docs/services/EventStreams/eventstreams050.html#kafka_using).
+A API REST do Kafka não foi planejada como uma interface de alto rendimento e baixa latência.​Para esses tipos de requisitos, recomendamos o uso da API Kafka para conectar-se ao {{site.data.keyword.messagehub}} e por meio dele. Para obter informações adicionais, consulte [Usando um cliente Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using).
 
 ## Por que usar a API {{site.data.keyword.mql}}?
 {: #why_mql notoc}

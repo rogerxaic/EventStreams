@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-29"
+lastupdated: "2019-01-23"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -36,7 +40,7 @@ distribuindo-a entre os servidores.</dd>
 <dd>A unidade de dados no Kafka. Cada mensagem é representada como um registro, que inclui duas partes: chave
 e valor. A chave é comumente usada para dados sobre a mensagem e o valor é o corpo da mensagem. O Kafka usa os temos registro e mensagem de forma intercambiável. 
 
-<p>Muitos outros sistemas de mensagens também têm uma forma de carregar outras informações juntamente com as mensagens. O Kafka 0.11 introduz cabeçalhos de registro com esse propósito, que são suportados pelo plano Enterprise do {{site.data.keyword.messagehub}}. O plano Standard do {{site.data.keyword.messagehub}} atualmente é baseado no Kafka 0.10.2.1, portanto, ele ainda não suporta cabeçalhos de registro. </p> 
+<p>Muitos outros sistemas de mensagens também têm uma forma de carregar outras informações juntamente com as mensagens. Para esse propósito, o Kafka 0.11 apresenta cabeçalhos de registro que são suportados pelo {{site.data.keyword.messagehub}}. </p> 
 
 <p>Como muitas ferramentas no ecossistema do Kafka (como conectores para outros sistemas) usam apenas o valor e ignoram a chave, é melhor colocar todos os dados da mensagem no valor e apenas usar a chave para particionamento ou compactação de log. Você não deve confiar em tudo que lê no Kafka para usar a chave.</p>   </dd>
 <dt>Tópico</dt>
@@ -49,7 +53,7 @@ chamado de deslocamento.
 <p>Cada partição tem um servidor no cluster que age como líder da partição e outros servidores que agem
 como os seguidores.<p>
 <p>Se um tópico tiver mais de uma partição, ele permitirá que os dados sejam alimentados em paralelo para aumentar o rendimento distribuindo as partições no cluster. O número de partições também influencia o balanceamento da carga de trabalho entre os consumidores.</p>
-<p>Para obter mais informações, consulte [Liderança de partição](/docs/services/EventStreams/eventstreams118.html).</dd>
+<p>Para obter mais informações, consulte [Liderança de partição](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
 <dt>Produtor</dt>
 <dd>Um processo que publica fluxos de mensagens para tópicos do Kafka. Um produtor pode publicar
             um ou mais tópicos e escolher, opcionalmente, a partição que armazena os dados.<br/></dd>
@@ -70,9 +74,9 @@ consumir de um ou mais tópicos ou partições.</dd>
 </dl>
 
 Para saber mais, consulte as informações a seguir:
-- [Produzindo mensagens](/docs/services/EventStreams/eventstreams112.html)
-- [Consumindo mensagens](/docs/services/EventStreams/eventstreams114.html) 
-- [Liderança da partição](/docs/services/EventStreams/eventstreams118.html) 
+- [Produzindo mensagens](/docs/services/EventStreams?topic=eventstreams-producing_messages)
+- [Consumindo mensagens](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
+- [Liderança da partição](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
 - [Documentação do Apache Kafka ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

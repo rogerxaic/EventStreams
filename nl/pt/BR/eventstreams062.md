@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2019-01-14"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -18,7 +22,7 @@ lastupdated: "2019-01-14"
 Para usar a API do Kafka com o {{site.data.keyword.messagehub}}, escolha um dos seguintes tipos de cliente:
 
 * O cliente Java oficial. Ele é a melhor opção porque contém os recursos mais recentes disponíveis para o Apache Kafka.
-* Um dos [clientes de terceiros recomendados](/docs/services/EventStreams/eventstreams062.html#clients_table).
+* Um dos [clientes de terceiros recomendados](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table).
 
 Para ambos os tipos de cliente, recomendamos sempre escolher a versão do cliente mais recente. 
 {: shortdesc}
@@ -57,7 +61,7 @@ O protocolo Kafka mínimo que suportamos é o 0.10.
 ## Clientes de terceiros
 {: #third_party_clients}
 
-Caso você não possa executar os clientes Java oficiais, recomendamos executar um dos [clientes de terceiros recomendados](/docs/services/EventStreams/eventstreams062.html#clients_table), que são todos bem testados com o {{site.data.keyword.messagehub}}. 
+Caso você não possa executar os clientes Java oficiais, recomendamos executar um dos [clientes de terceiros recomendados](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table), que são todos bem testados com o {{site.data.keyword.messagehub}}. 
 
 Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cliente podem funcionar com o {{site.data.keyword.messagehub}}. Entretanto, testamos e temos experiência apenas com os clientes de terceiros recomendados.
 
@@ -66,12 +70,12 @@ Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cl
 
 <table id="clients_table">
     <caption>Tabela 2. Resumo do suporte a clientes</caption>
-      <tr>
-		    <th>Cliente</th>
-		    <th>Programação</th>
-			<th>Versão Recomendada</th>
-		    <th>Versão mínima suportada [<sup>1</sup>](/docs/services/EventStreams/eventstreams062.html#footnote1)</th>
-			<th>Link para a amostra</th>
+     <tr>
+		    <th id="client" scope="col">Cliente</th>
+		    <th id="language" scope="col">Programação</th>
+			<th id="version" scope="col">Versão Recomendada</th>
+		    <th id="minimum version" scope="col">Versão mínima suportada [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+			<th id="sample link" scope="col">Link para a amostra</th>
         </tr>
 			<tr>
 			<td colspan="3">**Cliente oficial**</td>
@@ -81,7 +85,7 @@ Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cl
 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>Latest</td>
-			<td>0.10.2 <p> Para obter informações sobre clientes mais antigos, consulte [Compatibilidade com versões anteriores](/docs/services/EventStreams/eventstreams062.html#compatability).</p></td>
+			<td>0.10.2 <p> Para obter informações sobre clientes mais antigos, consulte [compatibilidade com versões anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
 			<td>[Amostra do console Java ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Amostra do Liberty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -122,8 +126,8 @@ Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cl
 ### Nota de Rodapé
 1. {: #footnote1}Essa versão é a mais antiga que validamos em testes contínuos. Geralmente, essa é a versão inicial disponível dentro dos últimos 12 meses, mas ela pode ser mais recente se problemas significativos forem conhecidos.
 
-## Compatibilidade com versões anteriores: plano Standard
-{: #compatability}
+## Compatibilidade com versões anteriores - plano Standard
+{: #compatibility}
 
 Para compatibilidade com versões anteriores, é possível usar o cliente Apache Kafka 0.9 Java com o plano Standard do {{site.data.keyword.messagehub}}. No entanto, por causa da idade desse cliente, nós desencorajamos fortemente seu uso. Se você optar por usar essa versão do cliente, precisará de um [módulo de login adicional ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library).
 
@@ -146,7 +150,7 @@ The no-kafka client does not fully support SASL authentication with the PLAIN me
 ## Conectando o cliente ao {{site.data.keyword.messagehub}}
 {: #connect_client}
 
-Para obter informações sobre como configurar o cliente Java para se conectar ao {{site.data.keyword.messagehub}}, consulte [Configurando o cliente](/docs/services/EventStreams/eventstreams063.html).
+Para obter informações sobre como configurar o cliente Java para se conectar ao {{site.data.keyword.messagehub}}, consulte [Configurando o cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 
 
 

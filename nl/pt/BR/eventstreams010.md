@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-02-03"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -28,7 +32,6 @@ um Apache Kafka totalmente gerenciado como um serviço que é otimizado para a i
 
 Por ser desenvolvido com o Apache Kafka, ele se beneficia diretamente de toda a inovação que ocorre na comunidade e suporta as
 APIs do cliente Kafka, o Kafka Streams, o Kafka Connect e também o KSQL.
-{:shortdesc}
 
 As ferramentas do Apache Kafka geralmente trabalham diretamente com o {{site.data.keyword.messagehub}}, embora você precise fornecer configuração adicional porque as conexões com o {{site.data.keyword.messagehub}} sempre são autenticadas usando credenciais.
 

@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 
-#Monitorando e registrando (plano Standard)
+# Monitorando e registrando (plano Standard)
 {: #monitoring}
 
 O {{site.data.keyword.messagehub}} no plano Standard coleta métricas e eventos automaticamente para que seja
