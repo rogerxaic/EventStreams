@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 
-#Monitoraggio e registrazione (piano Standard)
+# Monitoraggio e registrazione (piano Standard)
 {: #monitoring}
 
 {{site.data.keyword.messagehub}} nel piano Standard raccoglie automaticamente le metriche e gli eventi in modo che tu possa

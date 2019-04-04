@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-26"
+lastupdated: "2018-10-19"
+
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -95,7 +99,7 @@ crei un argomento utilizzando l'interfaccia utente o
 l'API di amministrazione. Il limite di tempo è pari a un minimo di un'ora e
 a un massimo di 30 giorni.
 
-Per informazioni sulle limitazioni sulle impostazioni consentite quando crei degli argomenti utilizzando un client Kafka o Kafka Streams, vedi [API per l'amministrazione degli argomenti](/docs/services/EventStreams/eventstreams104.html).
+Per informazioni sulle limitazioni sulle impostazioni consentite quando crei degli argomenti utilizzando un client Kafka o Kafka Streams, vedi [Utilizzo dell'API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Creazione ed eliminazione di argomenti in Kafka
 {: #create_delete}

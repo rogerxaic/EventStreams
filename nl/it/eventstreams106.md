@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-10-29"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +17,7 @@ lastupdated: "2018-10-29"
 {:pre: .pre}
 
 # Che cos'è l'API MQ Light e in che cosa è differente?
-{: #mqlight}
+{: #mqlight_api}
 
 <!-- 30/10/18: info moved to eventstreams075.md because of doc app changes -->
 ** L'API MQ Light è disponibile solo come parte del piano Standard.**
@@ -37,6 +41,6 @@ un singolo argomento Kafka chiamato "MQLight" e tutti i messaggi inviati e ricev
 {{site.data.keyword.Bluemix_notm}} dedicato.
 
 <!-- begin STAGING ONLY -->
-Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams/eventstreams087.html).
+Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams?topic=eventstreams-choose_api).
 <!-- end STAGING ONLY -->
 

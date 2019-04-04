@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-15"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,7 +16,7 @@ lastupdated: "2018-11-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introduzione a {{site.data.keyword.messagehub}} 
+# Esercitazione introduttiva
 {: #getting_started}
 
 Per iniziare a utilizzare {{site.data.keyword.messagehub}}
@@ -21,7 +25,7 @@ i messaggi a un consumatore utilizzando un argomento. Viene utilizzato lo stesso
 i messaggi.
 {: shortdesc}
 
-Per comprendere meglio la modalità di funzionamento di {{site.data.keyword.messagehub}}, vedi [Informazioni su {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams010.html). {{site.data.keyword.messagehub}} era precedentemente conosciuto come Message Hub.
+Per comprendere meglio la modalità di funzionamento di {{site.data.keyword.messagehub}}, vedi [Informazioni su {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-about). {{site.data.keyword.messagehub}} era precedentemente conosciuto come Message Hub.
 
 Per accedere ad altri esempi di {{site.data.keyword.messagehub}}, compresi quelli per Node.js e Python, vedi la pagina degli [esempi di {{site.data.keyword.messagehub}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples){:new_window}.
 
@@ -44,9 +48,9 @@ Completa la seguente procedura:
   
   e. Fai clic su **Crea**.
 
-2. {: #create_credentials_step notoc} Crea alcune credenziali {{site.data.keyword.messagehub}} completando queste istruzioni: [Ottieni le credenziali e stabilisci la connessione utilizzando la console IBM Cloud](/docs/services/EventStreams/eventstreams127.html#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Crea alcune credenziali {{site.data.keyword.messagehub}} completando queste istruzioni: [Ottieni le credenziali e stabilisci la connessione utilizzando la console IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
    <br/>
-   <br/>Avrai bisogno dei valori di *kafka_brokers_sasl*, *kafka_admin_url* e *api_key* per il [passo 7](/docs/services/EventStreams/index.html#start_consumer_step) di questa attività.   
+   <br/>Avrai bisogno dei valori di *kafka_brokers_sasl*, *kafka_admin_url* e *api_key* per il [passo 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) di questa attività.   
 
 3. Se non li hai ancora, installa i seguenti prerequisiti:
 
@@ -82,7 +86,7 @@ Completa la seguente procedura:
     messaggi, l'esempio usa l'API Java Apache Kafka.
 
     Utilizza i valori per *kafka_brokers_sasl*, *kafka_admin_url*
-    e *api_key* dalle credenziali che hai creato nel [passo 2](/docs/services/EventStreams/index.html#create_credentials_step).
+    e *api_key* dalle credenziali che hai creato nel [passo 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
 	
 	Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti.
     

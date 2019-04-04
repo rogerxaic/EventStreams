@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-08-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -143,7 +147,7 @@ l'API REST restituisce il seguente JSON:
 {: #plan_compare }
 {: faq}
 
-Per trovare ulteriori informazioni sui due diversi piani {{site.data.keyword.messagehub}}, consulta [Scelta del tuo piano](/docs/services/EventStreams/eventstreams085.html).
+Per trovare ulteriori informazioni sui due diversi piani {{site.data.keyword.messagehub}}, consulta [Scelta del tuo piano](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## Come gestisco il ripristino di emergenza?
 {: #disaster_recovery }

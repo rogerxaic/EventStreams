@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-03-23"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +31,7 @@ Quando un consumatore elabora un messaggio, quest'ultimo non viene rimosso dal s
 
 Nell'interfaccia di programmazione, un messaggio è in effetto detto record. Ad esempio, la classe Java org.apache.kafka.clients.consumer.ConsumerRecord viene utilizzata per rappresentare un messaggio per l'API consumatore. I termini _record_ e _messaggio_ possono essere utilizzati in modo interscambievole ma, essenzialmente, un record viene utilizzato per rappresentare un messaggio.
 
-Potresti trovare utile leggere queste informazioni insieme alla [produzione di messaggi](/docs/services/EventStreams/eventstreams112.html) in {{site.data.keyword.messagehub}}.
+Potresti trovare utile leggere queste informazioni insieme alla [produzione di messaggi](/docs/services/EventStreams?topic=eventstreams-producing_messages) in {{site.data.keyword.messagehub}}.
 
 ## Configurazione delle proprietà del consumatore 
 {: #configuring_consumer_properties }

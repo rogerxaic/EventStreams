@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-08"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -24,15 +28,15 @@ Poiché il servizio sottostante a cui si collega il bridge {{site.data.keyword.o
 
 Quando il servizio {{site.data.keyword.objectstorageshort}} raggiunge il termine del suo ciclo di vita e viene disattivato, saranno disattivate anche tutte le istanze del bridge {{site.data.keyword.objectstorageshort}}. Per ulteriori informazioni, vedi l'[annuncio di funzionalità deprecata: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
-Come alternativa, puoi utilizzare il [Bridge Cloud Object Storage](/docs/services/EventStreams/eventstreams115.html){:new_window}. 
+Come alternativa, puoi utilizzare il [Bridge Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge). 
 {:deprecated}
 
 Il bridge {{site.data.keyword.objectstorageshort}} ti consente
-di archiviare i dati degli argomenti Kafka in {{site.data.keyword.messagehub}} in un'istanza del servizio {{site.data.keyword.Bluemix_short}} [{{site.data.keyword.objectstorageshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/ObjectStorage/index.html){:new_window}. Il bridge consuma
+di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} in un'istanza del servizio {{site.data.keyword.Bluemix_short}}. Il bridge consuma
 batch di messaggi provenienti da Kafka e carica i dati del messaggio come oggetti in un contenitore nel
 servizio {{site.data.keyword.objectstorageshort}}.
 
-Nota: il servizio di storage di oggetti preferito in {{site.data.keyword.Bluemix_short}} è ora il servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icona collegamento esterno](../../icons/launch-glyph.svg "Icona collegamento esterno")](/docs/services/cloud-object-storage/about-cos.html){:new_window}.
+Nota: il servizio di storage di oggetti preferito in {{site.data.keyword.Bluemix_short}} è ora il servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icona collegamento esterno](../../icons/launch-glyph.svg "Icona collegamento esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
 
 Configurando il bridge {{site.data.keyword.objectstorageshort}}, puoi controllare il modo in cui i dati vengono caricati come oggetti in {{site.data.keyword.objectstorageshort}}. Ad esempio, le proprietà che
 puoi configurare sono le seguenti:
@@ -95,7 +99,7 @@ per partizionare i messaggi Kafka in oggetti {{site.data.keyword.objectstoragesh
 * Per offset dei messaggi Kafka.
 * Per una data ISO 8601 presente in ogni messaggio Kafka. Ciò richiede che i messaggi Kafka includano un oggetto di formato JSON valido.
 
-## Partizionamento per offset dei messaggi Kafka
+## Partizionamento utilizzando l'offset dei messaggi Kafka
 {: notoc}
 
 Per partizionare i dati per offset dei messaggi Kafka, completa la seguente procedura:

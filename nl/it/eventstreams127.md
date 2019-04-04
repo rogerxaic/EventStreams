@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-07"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -102,7 +106,7 @@ Se hai un file manifest, puoi creare una nuova applicazione eseguendo:</br>
 <li>Verifica che la variabile di ambiente VCAP_SERVICES sia disponibile nel runtime dell'applicazione eseguendo:</br> 
  <code>ibmcloud app env <var class="keyword varname">tuo_nome_applicazione</var></code>. 
 </li>
-<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html).
+<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Potresti dover ripreparare la tua applicazione per rendere effettive le modifiche.</p></li>
 </ol>
 
@@ -121,7 +125,7 @@ Per le applicazioni in esecuzione esternamente a Cloud Foundry, le credenziali v
 5. Fai clic su ** Nuova credenziale**.
 6. Immetti i dettagli per la tua nuova credenziale, come ad esempio un nome, e fai clic su **Aggiungi**. Viene visualizzata una nuova credenziale nell'elenco delle credenziali.
 7. Fai clic su questa credenziale utilizzando **Visualizza credenziali** per rivelare i dettagli in formato JSON.
-8. Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html).
+8. Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 
 ### Ottieni le credenziali utilizzando la CLI IBM Cloud 
 {: #connect_standard_external_cli }
@@ -142,15 +146,15 @@ oppure utilizzare una chiave di servizio esistente: <br/>
 <li>Ottieni i dettagli per la chiave:</br>
 <code>ibmcloud service key-show <var class="keyword varname">tuo_nome_servizio</var> <var class="keyword varname">nome_chiave_servizio</var></code></br>
 Questo restituisce i dettagli della chiave di servizio in formato JSON.</li>
-<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html).</li>
+<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).</li>
 </ol>
 
  
 ## Panoramica del piano Enterprise
 {: #connect_enterprise}
 
-I servizi di cui è stato eseguito il provisioning utilizzando il piano Enterprise sono raggruppati nel dashboard sotto l'intestazione **Servizi**. Il piano Enterprise è [abilitato a IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/iam/quickstart.html#getstarted){:new_window}. Non devi necessariamente comprendere IAM per iniziare a lavorare ma una certa dimestichezza è consigliata, se vuoi proteggere il tuo servizio {{site.data.keyword.messagehub}}. Per ulteriori informazioni, vedi
-[Protezione delle tue risorse {{site.data.keyword.messagehub}}](/docs/services/EventStreams/eventstreams124.html)
+I servizi di cui è stato eseguito il provisioning utilizzando il piano Enterprise sono raggruppati nel dashboard sotto l'intestazione **Servizi**. Il piano Enterprise è [abilitato a IAM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}. Non devi necessariamente comprendere IAM per iniziare a lavorare ma una certa dimestichezza è consigliata, se vuoi proteggere il tuo servizio {{site.data.keyword.messagehub}}. Per ulteriori informazioni, vedi
+[Protezione delle tue risorse {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-security).
 
 Completa la seguente procedura per eseguire il bind della tua applicazione e ottenere le chiavi di servizio per il tuo servizio. Per disporre dell'autorizzazione a creare gli argomenti, la tua applicazione o la chiave di servizio devono disporre di un ruolo di accesso di Gestore.
 
@@ -203,7 +207,7 @@ Poiché della tua applicazione non è stato ancora eseguito il bind a {{site.dat
 In alternativa, puoi aggiornare il tuo file manifest ed eseguire nuovamente il push dell'applicazione.</li>
 <li>Verifica che variabile di ambiente VCAP_SERVICES sia disponibile nel tuo runtime dell'applicazione:<br/>
 <code>ibmcloud app env <var class="keyword varname">tuo_nome_applicazione</var></code></li>
-<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html). 
+<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
 <p>Potresti dover ripreparare la tua applicazione per rendere effettive le modifiche.</p></li>
 </ol>
 
@@ -222,7 +226,7 @@ Per le applicazioni in esecuzione esternamente a Cloud Foundry, le credenziali v
 4. Fai clic su ** Nuova credenziale**. 
 5. Completa i dettagli per la tua nuova credenziale, come ad esempio un nome e un ruolo, e fai clic su **Aggiungi**. Viene visualizzata una nuova credenziale nell'elenco delle credenziali.
 6. Fai clic su questa credenziale utilizzando **Visualizza credenziali** per rivelare i dettagli in formato JSON.
-7. Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html).
+7. Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
    <br/><br/>Assicurati che la tua applicazione analizzi i dettagli.
 
 ### Ottieni le credenziali utilizzando la CLI IBM Cloud
@@ -235,7 +239,7 @@ Per le applicazioni in esecuzione esternamente a Cloud Foundry, le credenziali v
 <code>ibmcloud resource service-key-create <var class="keyword varname">nome_chiave</var> <var class="keyword varname">ruolo_chiave</var> --instance-name <var class="keyword varname">tuo_nome_servizio</var></code></li>
 <li>Stampa la chiave di servizio:<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">nome_chiave</var></code></li>
-<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams/eventstreams063.html).
+<li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Assicurati che la tua applicazione analizzi i dettagli.</p></li>
 </ol>
 
@@ -244,8 +248,8 @@ Per le applicazioni in esecuzione esternamente a Cloud Foundry, le credenziali v
 
 Ora che disponi delle informazioni di connessione e credenziale, puoi scegliere un client {{site.data.keyword.messagehub}}. La tua scelta dipende dal tuo piano.
 
-* Se stai utilizzando il piano Standard, vedi [Scegli tra le tre API](/docs/services/EventStreams/eventstreams087.html) per informazioni su quale client scegliere e come stabilire la connessione.
-* Se stai utilizzando il piano Enterprise, vedi [Utilizzo dell'API Kafka](/docs/services/EventStreams/eventstreams050.html).
+* Se stai utilizzando il piano Standard, vedi [Scegli tra le tre API](/docs/services/EventStreams?topic=eventstreams-choose_api) per informazioni su quale client scegliere e come stabilire la connessione.
+* Se stai utilizzando il piano Enterprise, vedi [Utilizzo dell'API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 	L'argomento <code>__consumer_offsets</code> Kafka interno è visibile per te in sola lettura
 	se stai utilizzando il piano Enterprise. Ti consigliamo vivamente di non provare a gestire l'argomento in alcun modo. 

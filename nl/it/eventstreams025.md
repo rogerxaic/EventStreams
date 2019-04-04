@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -61,7 +65,7 @@ descritti nella [Documentazione di Confluent ![Icona link esterno](../../icons/l
 basic introduction, definitely including health warning
 -->
 Per stabilire una connessione a {{site.data.keyword.messagehub}}, l'API REST Kafka utilizza le credenziali <code>api_key</code> e <code>kafka_rest_url</code>
-dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
 
 Per eseguire l'autenticazione con l'API REST Kafka {{site.data.keyword.messagehub}}, devi specificare <code>api_key</code> nell'intestazione X-Auth-Token delle tue richieste.
 
@@ -73,7 +77,7 @@ Per eseguire l'autenticazione con l'API REST Kafka {{site.data.keyword.messagehu
 
 L'esempio API REST Kafka {{site.data.keyword.messagehub}} è un'applicazione Node.js, che stabilisce una connessione a {{site.data.keyword.messagehub}} sull'API REST Kafka per produrre e consumare messaggi.
 
-Il codice di esempio si trova nel [progetto github event-streams-samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
+Il codice di esempio si trova nel [progetto GitHub event-streams-samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 
 Attieniti alle istruzioni contenute nel file [README.md ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} per tale progetto per creare ed eseguire l'esempio.
 

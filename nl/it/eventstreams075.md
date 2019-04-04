@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-11-20"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -47,7 +51,7 @@ un singolo argomento Kafka chiamato "MQLight" e tutti i messaggi inviati e ricev
 {{site.data.keyword.Bluemix_notm}} (regioni): Dallas (us-south), Londra (eu-gb) e Sydney (au-syd). L'API MQ Light non è disponibile nell'ubicazione Francoforte (eu-de) o in
 {{site.data.keyword.Bluemix_notm}} dedicato.
 
-Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams/eventstreams087.html).
+Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams?topic=eventstreams-choose_api).
 
 
 ## Cosa è richiesto per utilizzare l'API MQ Light con {{site.data.keyword.messagehub}}?
@@ -70,11 +74,11 @@ Per disabilitare l'API MQ Light, elimina l'argomento "MQLight". Ricorda che all'
 {: #mql_connect}
 
 Per collegare un'applicazione al servizio, l'applicazione deve utilizzare i dettagli <code>user</code>,
-<code>password</code> e <code>mqlight_lookup_url</code> dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html). Utilizza le seguenti indicazioni per il linguaggio che hai scelto:
+<code>password</code> e <code>mqlight_lookup_url</code> dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Utilizza le seguenti indicazioni per il linguaggio che hai scelto:
 
 **Per Java**
 
-Se specifichi &lsquo;null&rsquo; come parametro endpointService della chiamata create(), questo indica al
+Se specifichi <code>null</code> come parametro endpointService della chiamata create(), questo indica al
 client di leggere i dettagli <code>user</code>, <code>password</code> e
 <code>mqlight_lookup_url</code> da VCAP_SERVICES:
 
@@ -164,7 +168,7 @@ Puoi connettere al servizio delle applicazioni esistenti attualmente in esecuzio
 Per connettere applicazioni esistenti, completa i seguenti controlli:
 
 * Assicurati che l'applicazione utilizzi l'ultima versione disponibile del client API {{site.data.keyword.mql}} per il tuo linguaggio.
-* Controlla che i dettagli di connessione estratti da VCAP_SERVICES si riferiscano al tipo di servizio <code>messagehub</code> e che richiamino il nome utente di connessione dalla proprietà <code>credentials.user</code> anziché dalla proprietà <code>credentials.username</code> e richiamino l'URL di ricerca della connessione dalla proprietà <code>credentials.mqlight_lookup_url</code> anziché dalla proprietà <code>credentials.connectionLookupURI</code>. Per ulteriori informazioni, vedi [Variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams/eventstreams127.html).
+* Controlla che i dettagli di connessione estratti da VCAP_SERVICES si riferiscano al tipo di servizio <code>messagehub</code> e che richiamino il nome utente di connessione dalla proprietà <code>credentials.user</code> anziché dalla proprietà <code>credentials.username</code> e richiamino l'URL di ricerca della connessione dalla proprietà <code>credentials.mqlight_lookup_url</code> anziché dalla proprietà <code>credentials.connectionLookupURI</code>. Per ulteriori informazioni, vedi [Variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 	Nota che questo passaggio viene completato automaticamente se utilizzi il client Java&trade; e specifichi 'null' come parametro endpointService nella chiamata create(), pertanto è il client stesso a recuperare le informazioni.
 	
@@ -172,7 +176,7 @@ Per connettere applicazioni esistenti, completa i seguenti controlli:
 
 Nota anche le seguenti informazioni:
 
-* I limiti dei messaggi sono coerenti con {{site.data.keyword.messagehub}} ma potrebbero essere diversi da altri server che supportano l'API {{site.data.keyword.mql}}. Per ulteriori informazioni, vedi [Limiti massimi](/docs/services/EventStreams/eventstreams075.html#max_limits).
+* I limiti dei messaggi sono coerenti con {{site.data.keyword.messagehub}} ma potrebbero essere diversi da altri server che supportano l'API {{site.data.keyword.mql}}. Per ulteriori informazioni, vedi [Limiti massimi](/docs/services/EventStreams?topic=eventstreams-mql_using#max_limits).
 * JMS non è supportato.
 
 <!-- 15/11/18: info was in eventstreams081.md, moved because of doc app changes -->

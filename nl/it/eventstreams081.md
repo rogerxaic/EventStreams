@@ -4,6 +4,10 @@ copyright:
   years: 2015, 2019
 lastupdated: "2018-05-25"
 
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
+
 ---
 
 {:new_window: target="_blank"}
@@ -15,7 +19,7 @@ lastupdated: "2018-05-25"
 
 <!-- 15/11/18: info moved to eventstreams075.md, moved because of doc app changes -->
 # Scambio di messaggi tra l'API MQ Light e le API Kafka o REST Kafka
-{: #mql_exchange}
+{: #mql_exchange_rest}
 
 ** L'API MQ Light è disponibile solo come parte del piano Standard.**
 <br/>
@@ -25,7 +29,7 @@ l'API {{site.data.keyword.mql}}.
 {: shortdesc}
 
 ## Formato dei messaggi Kafka
-{: #kafka_format notoc}
+{: #kafka_message_format notoc}
 
 <table border='1'>
 <caption>Tabella 1. Formato dei messaggi Kafka</caption>

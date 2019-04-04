@@ -2,7 +2,10 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-28"
+lastupdated: "2019-01-31"
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+
+subcollection: eventstreams
 
 ---
 
@@ -77,11 +80,12 @@ La seguente tabella riepiloga cosa è supportato dai piani:
 			<td>**Disponibilità ubicazione (regione)**</td>
 			<td>Dallas (us-south)</br>
 			Londra (eu-gb)</br>
-			Sydney (au-syd))</br>
+			Sydney (au-syd)</br>
 			Francoforte (eu-de) - nessuna API {{site.data.keyword.mql}} </td>
 			<td>Dallas (us-south)</br>
-			Washington (us-east))<br/>
+			Washington (us-east)<br/>
 			Londra (eu-gb)<br/>
+			Sydney (au-syd)</br>
 			Francoforte (eu-de)<br/>
 			Tokyo (jp-tok)<br/>
 
