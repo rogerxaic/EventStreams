@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #sla}
 
 {{site.data.keyword.messagehub}} サービスは、エンタープライズ・プランに 99.95% の可用性を提供します。
-{{site.data.keyword.Bluemix}} の SLA について詳しくは、[{{site.data.keyword.Bluemix_notm}} サービスの説明 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-14/$file/i126-6605-14_08-2018_en_US.pdf){:new_window} を参照してください。
+{{site.data.keyword.Bluemix}} の SLA について詳しくは、[{{site.data.keyword.Bluemix_notm}} サービスの説明 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window} を参照してください。
 
 ## 99.95% の可用性の意味
 可用性とは、Kafka トピックからのメッセージを生成およびコンシュームするアプリケーションの機能を指します。

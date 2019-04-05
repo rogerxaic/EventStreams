@@ -19,7 +19,7 @@ subcollection: eventstreams
 # {{site.data.keyword.messagehub}} 可用性（企業方案）的服務水準合約 (SLA)
 {: #sla}
 
-{{site.data.keyword.messagehub}} 服務在企業方案提供 99.95% 的可用性。如需 {{site.data.keyword.Bluemix}} 的 SLA 相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} service description ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-14/$file/i126-6605-14_08-2018_en_US.pdf){:new_window}。
+{{site.data.keyword.messagehub}} 服務在企業方案提供 99.95% 的可用性。如需 {{site.data.keyword.Bluemix}} 的 SLA 相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} service description ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
 
 ## 99.95% 可用性代表什麼意義？
 可用性是指應用程式產生及耗用 Kafka 主題之訊息的能力。

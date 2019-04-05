@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 Le service {{site.data.keyword.messagehub}} est fourni avec une disponibilité de 99.95% sur le plan Enterprise. 
 Pour plus d'informations sur l'accord sur les niveaux de service de {{site.data.keyword.Bluemix}}, voir
-la description de service [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-14/$file/i126-6605-14_08-2018_en_US.pdf){:new_window}.
+la description de service [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
 
 ## Que signifie 99.95% de disponibilité ?
 La disponibilité fait référence à la capacité des applications à produire et à utiliser des messages provenant de sujets Kafka.

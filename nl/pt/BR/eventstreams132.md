@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 O serviço {{site.data.keyword.messagehub}} é fornecido com uma disponibilidade de 99,95% no plano Enterprise. 
 Para obter mais sobre o SLA para o {{site.data.keyword.Bluemix}}, consulte a descrição do serviço do
-[{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-14/$file/i126-6605-14_08-2018_en_US.pdf){:new_window}.
+[{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
 
 ## O que significa 99,95% de disponibilidade?
 Disponibilidade refere-se à capacidade de aplicativos produzirem e consumirem mensagens de tópicos do Kafka.

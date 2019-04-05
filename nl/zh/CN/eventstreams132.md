@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #sla}
 
 在企业套餐上提供的 {{site.data.keyword.messagehub}} 服务的可用性为 99.95%。有关 {{site.data.keyword.Bluemix}} 的 SLA 的更多信息，请参阅
-[{{site.data.keyword.Bluemix_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-14/$file/i126-6605-14_08-2018_en_US.pdf){:new_window}。
+[{{site.data.keyword.Bluemix_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
 
 ## 99.95% 的可用性意味着什么？
 可用性是指应用程序生成和消耗 Kafka 主题中的消息的能力。

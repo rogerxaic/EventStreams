@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #sla}
 
 {{site.data.keyword.messagehub}} 서비스는 엔터프라이즈 플랜에서 99.95%의 가용성으로 제공됩니다.  
-{{site.data.keyword.Bluemix}}의 SLA에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 서비스 명세서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-14/$file/i126-6605-14_08-2018_en_US.pdf){:new_window}를 참조하십시오.
+{{site.data.keyword.Bluemix}}의 SLA에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 서비스 명세서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}를 참조하십시오.
 
 ## 99.95% 가용성은 무엇을 의미합니까?
 가용성은 Kafka 항목에서 메시지를 생성하고 사용할 수 있는 애플리케이션의 기능을 말합니다. 
