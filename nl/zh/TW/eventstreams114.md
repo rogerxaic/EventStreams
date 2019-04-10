@@ -134,7 +134,7 @@ Kafka 會自動偵測失敗的消費者，以將分割區重新指派給工作�
 ## 程式碼 Snippet
 {: #consumer_code_snippets notoc}
 
-這些程式碼 Snippet 的層級非常高，用來說明所涉及的概念。如需完整範例，請參閱 GitHub 中的 {{site.data.keyword.messagehub}} 範例：https://github.com/ibm-messaging/event-streams-samples。
+這些程式碼 Snippet 的層級非常高，用來說明所涉及的概念。如需完整範例，請參閱 GitHub 中的 {{site.data.keyword.messagehub}} 範例：https://github.com/ibm-messaging/event-streams-samples
 
 若要連接至 {{site.data.keyword.messagehub}}，您需要先建置一組配置內容。所有連接至 {{site.data.keyword.messagehub}} 的連線都使用傳輸層安全 (TLS) 及使用者/密碼鑑別進行安全保護，所以您至少需要這些內容。請將 KAFKA_BROKERS_SASL、USER 及 PASSWORD 取代為您自己的服務認證：
 

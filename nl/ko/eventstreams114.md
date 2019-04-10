@@ -200,7 +200,7 @@ finally {
 
 ## 예외 처리
 
-Kafka 클라이언트를 사용하는 강력한 애플리케이션은 예상되는 특정 상황에 대한 예외를 처리해야 합니다. 어떤 경우에는 일부 메소드가 비동기식이고 `Future` 또는 콜백을 사용하여 해당 결과를 전달하므로 예외가 직접적으로 발생하지 않습니다. [GitHub![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples)에서 전체 예제를 보여주는 코드 예제를 찾을 수 있습니다.
+Kafka 클라이언트를 사용하는 강력한 애플리케이션은 예상되는 특정 상황에 대한 예외를 처리해야 합니다. 어떤 경우에는 일부 메소드가 비동기식이고 `Future` 또는 콜백을 사용하여 해당 결과를 전달하므로 예외가 직접적으로 발생하지 않습니다. [GitHub![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples) 에서 전체 예제를 보여주는 코드 예제를 찾을 수 있습니다.
 
 다음은 코드에서 처리해야 하는 예외 목록입니다.
 
