@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23a"
+lastupdated: "2018-06-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -110,7 +110,7 @@ Kafka 通常的做法是编写应用程序来处理偶然出现的消息重复�
 ## 代码片段
 {: #code_snippets}
 
-以下代码片段在很高的级别展示了所涉及的概念。有关完整示例，请参阅 GitHub 中的 {{site.data.keyword.messagehub}} 样本：https://github.com/ibm-messaging/event-streams-samples。
+以下代码片段在很高的级别展示了所涉及的概念。有关完整示例，请参阅 GitHub 中的 {{site.data.keyword.messagehub}} 样本：https://github.com/ibm-messaging/event-streams-samples
 
 要连接到 {{site.data.keyword.messagehub}}，首先需要构建一组配置属性。所有到 {{site.data.keyword.messagehub}} 的连接都会使用 TLS 和用户/密码认证来确保安全，所以您至少需要这些属性。请使用您自己的服务凭证替换 KAFKA_BROKERS_SASL、USER 和 PASSWORD：
 
