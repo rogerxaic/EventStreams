@@ -110,7 +110,7 @@ Kafka は、通常、プロデューサーによって送信された順序で�
 ## コード・スニペット
 {: #code_snippets}
 
-以下のコード・スニペットは、関係する概念を示すための概要レベルのものです。 完全な例については、Github で {{site.data.keyword.messagehub}} サンプルを参照してください (https://github.com/ibm-messaging/event-streams-samples){:new_window}。
+以下のコード・スニペットは、関係する概念を示すための概要レベルのものです。 完全な例については、Github で {{site.data.keyword.messagehub}} サンプルを参照してください (https://github.com/ibm-messaging/event-streams-samples)
 
 {{site.data.keyword.messagehub}} に接続するため、最初に構成プロパティーのセットを作成する必要があります。 {{site.data.keyword.messagehub}} へのすべての接続は、TLS およびユーザーとパスワードの認証を使用して保護されるため、最低限これらのプロパティーが必要です。 KAFKA_BROKERS_SASL、USER、および PASSWORD は、独自のサービス資格情報に置き換えてください。
 
