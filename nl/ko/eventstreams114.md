@@ -134,7 +134,7 @@ ConsumerRebalanceListener를 사용하면 "on partitions revoked" 콜백으로 �
 ## 코드 스니펫
 {: #consumer_code_snippets notoc}
 
-이러한 코드 스니펫은 관련 개념을 보여주는 상위 레벨에 있습니다. 전체 예는 GitHub에 있는 {{site.data.keyword.messagehub}} 샘플(https://github.com/ibm-messaging/event-streams-samples)을 참조하십시오.
+이러한 코드 스니펫은 관련 개념을 보여주는 상위 레벨에 있습니다. 전체 예는 GitHub에 있는 {{site.data.keyword.messagehub}} 샘플(https://github.com/ibm-messaging/event-streams-samples) 을 참조하십시오.
 
 {{site.data.keyword.messagehub}}에 연결하려면 먼저 구성 특성 세트를 빌드해야 합니다. {{site.data.keyword.messagehub}}에 대한 모든 연결은 TLS 및 사용자/비밀번호 인증을 사용하여 보안이 설정되므로 최소한 이러한 특성이 필요합니다. KAFKA_BROKERS_SASL, USER 및 PASSWORD를 고유 서비스 인증 정보로 바꾸십시오.
 
