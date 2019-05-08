@@ -88,6 +88,7 @@ Complete the following steps:
     Use the values for *kafka_brokers_sasl*
     and *api_key* from the credentials you created in [step 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
 	
+	.
     
 	**Important:** *kafka_brokers_sasl* must be a single string and you must enclose it in quotes. For example:
 
@@ -99,7 +100,7 @@ Complete the following steps:
 
 8. Start the producer on your console by running the following command:
    
-    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0-all.jar
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
 	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -producer</pre>
   
 9. You should now see the messages sent by the producer appearing in the consumer. The following
