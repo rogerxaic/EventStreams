@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-10-19"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -88,6 +88,7 @@ A Kafka Improvement Proposal (KIP) #302 has been created to ensure that Kafka cl
 *  Each {{site.data.keyword.Bluemix_notm}} space has a limit of 100 partitions. To create
    more partitions, you must use a new {{site.data.keyword.Bluemix_notm}} space.
 
+<!--following message retention info duplicted in FAQs eventstreams108-->
 ## Message retention
 {: #message_retention}
 
@@ -100,7 +101,7 @@ create a topic using either the user interface or the
 administration API. The time limit is a minimum of an hour and a
 maximum of 30 days.
 
-For information about restrictions on the settings allowed when you create topics using a Kafka client or Kafka Streams, see [Using the Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using).
+For information about restrictions on the settings allowed when you create topics using a Kafka client or Kafka Streams, see [How do I use Kafka APIs to create and delete topics?](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin).
 
 ## Creating and deleting topics in Kafka
 {: #create_delete}
