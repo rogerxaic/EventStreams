@@ -13,7 +13,7 @@ IBM Event Streams
 		eventstreams010.md
 		eventstreams073.md
 	 	eventstreams085.md
-		eventstreams132.md
+		eventstreams143.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -60,6 +60,7 @@ IBM Event Streams
 
 	{: .topicgroup}
 	Tutorials
+		eventstreams104.md
 	 	[Asynchronous data processing using object storage and pub/sub messaging tutorial](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-pub-sub-object-storage#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
 	{: .navgroup-end}
 
@@ -70,13 +71,13 @@ IBM Event Streams
 	Troubleshooting
 		ts_overview.md
 		eventstreams057.md
-		eventstreams109.md
 		eventstreams125.md
+		eventstreams109.md
 		
 	{: .topicgroup}
 	Related links
 	 	[Event Streams Java Kafka sample](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
-	 	[Apache Kafka 1.1.0 client](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz)
+	 	[Apache Kafka client downloads](https://kafka.apache.org/downloads)
 		[IBM Event Streams on ibm.com](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 
