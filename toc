@@ -17,11 +17,8 @@ IBM Event Streams
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	eventstreams112.md
-	eventstreams114.md
-	eventstreams118.md
+	eventstreams132.md
 	eventstreams068.md
-	eventstreams072.md
 	at-events.md
 	
 	{: .topicgroup}
@@ -71,10 +68,6 @@ IBM Event Streams
 
 	{: .topicgroup}
 	Integrating with other services
-		eventstreams088.md
-		eventstreams105.md
-		eventstreams115.md
-		eventstreams089.md
 		eventstreams119.md
 
 	{: .topicgroup}

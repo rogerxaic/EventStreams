@@ -42,7 +42,7 @@ privacy of your data:
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-{: shortdesc}
+
 
 
 *  To access the {{site.data.keyword.messagehub}} dashboard, you must use a browser
