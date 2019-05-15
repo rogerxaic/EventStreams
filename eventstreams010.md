@@ -19,7 +19,7 @@ subcollection: eventstreams
 # What is {{site.data.keyword.messagehub}}?
 {: #about}
 
-{{site.data.keyword.messagehub_full}} is a high-throughput message bus built with Apache Kafka. It is a fully managed Apache Kafka as a service that is optimized for event ingestion into {{site.data.keyword.Bluemix_notm}} and event stream distribution between your services and applications. {{site.data.keyword.messagehub}} was previously known as Message Hub.
+{{site.data.keyword.messagehub_full}} is a high-throughput message bus built with Apache Kafka. It is optimized for event ingestion into {{site.data.keyword.Bluemix_notm}} and event stream distribution between your services and applications. {{site.data.keyword.messagehub}} was previously known as Message Hub.
 {: shortdesc}
 
 You can use {{site.data.keyword.messagehub}} to complete the following tasks:
@@ -27,7 +27,6 @@ You can use {{site.data.keyword.messagehub}} to complete the following tasks:
 * Offload work to back-end worker applications.
 * Connect event streams to streaming analytics to realize powerful insights.
 * Publish event data to multiple applications to react in real time.
-* Transfer data into another service. For example, to Cloud Object Storage.
 
 By being built with Apache Kafka, it directly benefits from all the innovation occurring in the community and supports Kafka client APIs, Kafka Streams, Kafka Connect, and also KSQL.
 

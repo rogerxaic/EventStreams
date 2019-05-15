@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # Known restrictions
@@ -89,6 +90,7 @@ A Kafka Improvement Proposal (KIP) #302 has been created to ensure that Kafka cl
    more partitions, you must use a new {{site.data.keyword.Bluemix_notm}} space.
 
 <!--following message retention info duplicted in FAQs eventstreams108-->
+
 ## Message retention
 {: #message_retention}
 
@@ -111,8 +113,13 @@ that might take some time to complete. You are recommended to
 avoid usage patterns that rely on the rapid creation and deletion
 of topics, or on the rapid deletion and re-creation of topics.
 
+<!--
 ## Kafka REST API
 {: #trouble_rest}
+
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
 
 *  Only the binary-embedded format is supported for requests and
    responses. The Avro and JSON embedded formats are not supported.
@@ -120,6 +127,12 @@ of topics, or on the rapid deletion and re-creation of topics.
    Read, commit, or delete requests corresponding to a consumer
    instance should be sent only after a response is received for
    any outstanding requests of that instance.
+
+-->
+<!--
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
 
 ## Kafka REST API rate limitation
 {: #kafka_rate}
@@ -133,7 +146,12 @@ responds with the following HTTP error:
 
 If you see this error, wait and submit the request again.
 
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+-->
 <!--12/04/18 - Karen: same info duplicated at messagehub108 -->
+<!--
 ## Kafka REST API daily restart
 {: #rest_restart}
 
@@ -147,9 +165,11 @@ REST API returns the following JSON:
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```
 {:screen}
-
+-->
+<!--
 ## Kafka high-level consumer API
 {: #kafka_consumer}
 
 You cannot use the Apache Kafka 0.8.2 simple or high-level
-consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.9.
+consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.10.
+-->

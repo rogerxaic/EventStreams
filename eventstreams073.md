@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Kafka architecture diagram.](kafka_overview.png "Diagram that shows a Kafka architecture. A producer is feeding into a Kafka topic over 3 partitions and the messages are then being subscribed to by consumers.")
-{: shortdesc}
+
 
 The following list defines some Apache Kafka concepts:
 
@@ -45,7 +45,7 @@ The following list defines some Apache Kafka concepts:
 <dd>Each topic comprises one or more partitions. Each partition is an ordered list of messages. The messages on a partition are each given a monotonically increasing number called the offset. 
 <p>Each partition has one server in the cluster that acts as the partition's leader and other servers that act as the followers.<p>
 <p>If a topic has more than one partition, it allows data to be fed through in parallel to increase throughput by distributing the partitions across the cluster. The number of partitions also influences the balancing of workload among consumers.</p>
-<p>For more information, see [Partition leadership](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
+<p>For more information, see [Partition leadership](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership).</dd>
 <dt>Producer</dt>
 <dd>A process that publishes streams of messages to Kafka topics. A producer can publish to one or
 more topics and can optionally choose the partition that stores the data.<br/></dd>
@@ -64,9 +64,9 @@ partitions.</li>
 </dl>
 
 To learn more, see the following information:
-- [Producing messages](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [Consuming messages](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [Partition leadership](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [Producing messages](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [Consuming messages](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [Partition leadership](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Apache Kafka documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/documentation.html){:new_window} 
 
 
