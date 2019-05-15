@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Using the MQ Light API 
+# Using the MQ Light API on the Classic plan
 {: #mql_using}
 
-** The MQ Light API is available as part of the Standard plan only.**
+** The MQ Light API is available as part of the Classic plan only.**
 <br/>
 
 The {{site.data.keyword.mql}} API is provided for backward compatibility with the earlier {{site.data.keyword.mql}} service. The API provides an AMQP-based messaging interface for Java&trade;, Node.js, Python, and Ruby. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## What is the MQ Light API and how is it different?
 {: #mqlight}
@@ -41,7 +38,7 @@ The choice between using a Kafka client or the {{site.data.keyword.mql}} API dep
 want to build:
 
 * With Kafka, you use a small number of topics and can have multiple partitions for each topic for additional scalability. You can share messages among consumers by using consumer groups, but each consumer must be able to keep up with the rate of messages for the partitions assigned to it.
-* With the {{site.data.keyword.mql}} API, you can use a much larger number of topics and the topic names are hierarchical (for example: <code>&lsquo;/sports/football&rsquo;</code> and <code>&lsquo;/sports/tiddlywinks&rsquo;</code>).  
+* With the {{site.data.keyword.mql}} API, you can use a much larger number of topics and the topic names are hierarchical (for example: <code>&lsquo;/sports/football&rsquo;</code> and <code>&lsquo;/sports/tiddlywinks&rsquo;</code>). 
 
 The topics in the {{site.data.keyword.mql}} API are not the same
 as Kafka topics. Instead, the {{site.data.keyword.mql}} API uses a
@@ -51,7 +48,7 @@ The {{site.data.keyword.mql}} is available in the following
 {{site.data.keyword.Bluemix_notm}} locations (regions) only: Dallas (us-south), London (eu-gb), and Sydney (au-syd). The MQ Light API not available in the Frankfurt (eu-de) location or in
 {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-For more information about choosing between the APIs, see [Choosing between the three APIs](/docs/services/EventStreams?topic=eventstreams-choose_api).
+For more information about choosing between the APIs, see [Choosing between the three APIs](/docs/services/EventStreams?topic=eventstreams-choose_api_classic).
 
 
 ## What's required to use the MQ Light API with {{site.data.keyword.messagehub}}?
@@ -74,11 +71,11 @@ To disable the MQ Light API, delete the "MQLight" topic. Note that all data is d
 {: #mql_connect}
 
 To connect an app to the service, the app must use the <code>user</code>,
-<code>password</code>, and <code>mqlight_lookup_url</code> details from the [VCAP_SERVICES environment variable](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Use the following guidance for your chosen language:
+<code>password</code>, and <code>mqlight_lookup_url</code> details from the [VCAP_SERVICES environment variable](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf). Use the following guidance for your chosen language:
 
 **For Java**
 
-If you specify <code>null</code> as the endpointService parameter of the create() call, this instructs the
+If you specify ```null``` as the endpointService parameter of the create() call, this instructs the
 client to read the <code>user</code>, <code>password</code> and,
 <code>mqlight_lookup_url</code> details from VCAP_SERVICES:
 
@@ -86,7 +83,7 @@ client to read the <code>user</code>, <code>password</code> and,
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
         client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -16,11 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Using the MQ Light clients
+# Using the MQ Light clients on the Classic plan
 {: #mql_clients}
 
-** The MQ Light API is available as part of the Standard plan only.**
+** The MQ Light API is available as part of the Classic plan only. **
+{: note}
 <br/>
+
 ## Using the MQ Light Java client
 {: #mql_java}
 
@@ -38,6 +40,7 @@ Add the following reference to your <code>Maven pom</code> file:
 ```
 {:codeblock}
 
+
 <!-- 12/11/18: info was in eventstreams102.md, moved because of doc app changes -->
 
 ## Using the MQ Light Node.js client 
@@ -54,7 +57,7 @@ Add the following reference to the dependency section of your <code>package.json
 And add the following require statement to your source
 file:
 
-<pre class="pre"><code>var mqlight = require(&lsquo;mqlight&rsquo;);</code></pre>
+<pre class="pre"><code>var mqlight = require(‘mqlight’);</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams103.md, moved because of doc app changes -->
@@ -74,7 +77,9 @@ gem 'mqlight', '~> 1.0'
 
 And add the following require statement to your source file:
 
-<pre class="pre"><code>require &lsquo;mqlight&rsquo;</code></pre>
+```
+require ‘mqlight’
+```
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams101.md, moved because of doc app changes -->
@@ -104,3 +109,6 @@ Instructions for getting started, with links for more info
 Simple send source and receive source in-line
 
 -->
+
+
+
