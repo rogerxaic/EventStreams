@@ -19,7 +19,7 @@ subcollection: eventstreams
 
 
 # Migrating {{site.data.keyword.messagehub}} 
-{: #migrate_classic_plan}
+{: #migrate_classic_plan%20-%20migrate_classic_plan}
 
 This is information will be available soon.
 {: shortdesc}
