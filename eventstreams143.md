@@ -18,7 +18,7 @@ subcollection: eventstreams
 {:note: .note}
 
 
-# Migrating from the {{site.data.keyword.messagehub}} Classic plan
+# Migrating {{site.data.keyword.messagehub}} 
 {: #migrate_classic_plan}
 
 This is information will be available soon.
