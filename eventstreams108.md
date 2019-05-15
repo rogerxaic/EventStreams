@@ -21,6 +21,8 @@ subcollection: eventstreams
 {: #faqs}
 
 Answers to common questions about the {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} service.
+
+For answers to questions specific to the Classic plan, see [FAQs for the Classic plan](/docs/services/EventStreams?topic=eventstreams-faqs_classic).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -78,9 +80,11 @@ Enterprise plan only. Set to any value between 5 minutes and 30 days</p>
 ## How long does {{site.data.keyword.messagehub}} set the log retention window for the consumer offsets topic?
 {: #offsets }
 {: faq}
+
 {{site.data.keyword.messagehub}} retains consumer offsets for 7 days. This corresponds to the Kafka configuration offsets.retention.minutes. 
 
 Offset retention is system-wide so you cannot set it at an individual topic level. All consumer groups get only 7 days of stored offsets even if using a topic with a log retention that has been increased to the maximum of 30 days. 
+
 The internal Kafka <code>__consumer_offsets</code> topic is visible to you as read-only. 
 You are strongly recommended not to attempt to manage the topic in any way. 
 
@@ -113,11 +117,6 @@ As part of the regular operation of {{site.data.keyword.messagehub}}, the nodes 
 In some cases, your apps will be aware as the cluster reassigns resources. Write your apps to be resilient
 to these changes and to be able to reconnect and retry operations.
 
-### {{site.data.keyword.messagehub}} bridges (Standard plan only)
-{: #bridge_availability }
-
-Write your apps to handle the possibility that bridges might restart from time to time.
-
 ## What is {{site.data.keyword.messagehub}}'s maximum message size? 
 {: #max_message_size }
 {: faq}
@@ -130,42 +129,14 @@ Write your apps to handle the possibility that bridges might restart from time t
 
 {{site.data.keyword.messagehub}} is configured to provide strong availability and durability.
 The following configuration settings apply to all topics and cannot be changed:
-* replication.factor = 3
+* replication.factor = 3 
 * min.insync.replicas = 2
-
-## How does {{site.data.keyword.messagehub}}'s billing work on the Standard plan? 
-{: #billing }
-{: faq}
-
-{{site.data.keyword.messagehub}} on the Standard plan regularly samples a user's topic count and {{site.data.keyword.Bluemix_notm}} records the maximum sample value each day. {{site.data.keyword.messagehub}} bills for the maximum number of concurrent partitions seen and for the sum of messages that are sent and received daily.
-
-For example, if you create and delete 1 topic 10 times in a day, you are charged for a maximum of 1 topic. However, if you create 10 topics and delete them, you might be charged for either 0 or 10 topics depending when the sampling takes place.
-
-{{site.data.keyword.messagehub}} bills either for each message or for each 64 k. A message up to 64 k counts as 1 billable message. Messages larger than 64 k count as the following number of billable messages: <code><var class="keyword varname">message_size</var> &divide; 64 k</code>.
-
-<!--12/04/18 - Karen: same info duplicated at messagehub057 -->
-## How often does the Kafka REST API restart? 
-{: #REST_restart }
-{: faq}
-
-The Kafka REST API restarts once a day for a short period of
-time. 
-
-During this period, the Kafka REST API might become
-unavailable. If this happens, you are recommended to retry your
-request. After the REST API has restarted, you will have to
-recreate your Kafka consumer instances. If this is the case, the
-REST API returns the following JSON:
-
-```'{"error_code":40403,"message":"Consumer instance not found."}'
-```
-{:screen}
 
 ## What are the differences between the {{site.data.keyword.messagehub}} Standard and {{site.data.keyword.messagehub}} Enterprise plans?
 {: #plan_compare }
 {: faq}
 
-To find out more information about the two different {{site.data.keyword.messagehub}} plans, see [Choosing your plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).
+To find out more information about the different {{site.data.keyword.messagehub}} plans, see [Choosing your plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## How do I handle disaster recovery?
 {: #disaster_recovery }
