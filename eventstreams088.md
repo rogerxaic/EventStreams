@@ -16,13 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Linking to other services using bridges
+# Linking to other services using bridges on the Classic plan 
 {: #bridges}
 
-** {{site.data.keyword.messagehub}} bridges are available as part of the Standard plan only.**
+** {{site.data.keyword.messagehub}} bridges are available as part of the Classic plan only.**
 <br/>
 
-The {{site.data.keyword.messagehub}} Standard plan also
+The {{site.data.keyword.messagehub}} Classic plan also
 supports bridges to a selection of other systems. Bridges are unidirectional links between {{site.data.keyword.messagehub}} and another service. Bridges allow either
 data to be read from {{site.data.keyword.messagehub}} and written
 into another service, or data to be read from another service and written into {{site.data.keyword.messagehub}}. A bridge can take messages from the other system and publish them onto a topic, or consume

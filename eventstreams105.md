@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# MQ bridge
+# MQ bridge on the Classic plan 
 {: #mq_bridge}
 
-** The MQ bridge is available as part of the Standard plan only.**
+** The MQ bridge is available as part of the Classic plan only.**
 <br/>
 
 The MQ bridge allows you to transfer message data from an {{site.data.keyword.IBM_notm}}
