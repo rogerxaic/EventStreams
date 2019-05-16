@@ -43,12 +43,12 @@ Use the producer API to write messages to topics. To be able to produce to a top
 You must retrieve the URL and credential details that are needed to connect to the API from a Service credentials object or service key for the service instance. For information about creating these objects, see 
 [Connecting to {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
 
-The URL for the API's endpoint is provided in the ```kafka_http_url``` property.
+The URL for the API's endpoint is provided in the <code>kafka_http_url</code> property.
 
 Use one of the following methods to authenticate:
 
 * **To authenticate using Basic Auth:**<br/> 
-    Use the ```user``` and ```api_key``` properties of the above objects as the username and password. Place these values into the ```Authorization``` header of the HTTP request in the form ```Basic <base64 encoding of username:password joined by a single colon (:)>```.
+    Use the <code>user</code> and <code>api_key</code> properties of the above objects as the username and password. Place these values into the <code>Authorization</code> header of the HTTP request in the form <code>Basic <base64 encoding of username:password joined by a single colon (:)></code>.
 
 * **To authenticate using a bearer token:**<br/> 
     To obtain your token using the IBM Cloud CLI, first log in to IBM Cloud then run the following command: 
@@ -58,10 +58,10 @@ Use one of the following methods to authenticate:
     ```
     {: codeblock}
 
-    Place this token in the Authorization header of the HTTP request in the form ```Bearer <token>```. Both API key or JWT tokens are supported. 
+    Place this token in the Authorization header of the HTTP request in the form <code>Bearer <token></code>. Both API key or JWT tokens are supported. 
 
 * ** To authenticate directly using the api_key:**<br/> 
-    Place the key directly as the value of the ```X-Auth-Token``` HTTP header.
+    Place the key directly as the value of the <code>X-Auth-Token</code> HTTP header.
 
 <br/>
 The following code shows an example of sending a message using curl:
