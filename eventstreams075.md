@@ -149,8 +149,8 @@ client = mqlight.Client(service=service,
 
 <br>
 
-For more information about the {{site.data.keyword.mql}} APIs,
-see: [{{site.data.keyword.mql}} developerWorks&reg; site ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/messaging/mq-light/){:new_window}.
+For more information about the APIs,
+see: [{{site.data.keyword.mql}} APIs on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/mqlight){:new_window}.
 
 
 <!-- 14/11/18: info was in eventstreams080.md, moved because of doc app changes -->
