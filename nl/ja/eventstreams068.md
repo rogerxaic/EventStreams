@@ -39,7 +39,7 @@ subcollection: eventstreams
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-{: shortdesc}
+
 
 
 *  {{site.data.keyword.messagehub}} ダッシュボードにアクセスするには、TLS 1.2 がサポートされているブラウザーを使用する必要があります。

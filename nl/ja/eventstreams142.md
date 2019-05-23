@@ -18,10 +18,10 @@ subcollection: eventstreams
 
 
 
-# {{site.data.keyword.messagehub}} チームへの問題の報告 - クラシック・プラン 
-{: #report_problem}
+# クラシック・プランの {{site.data.keyword.messagehub}} チームへの問題の報告
+{: #report_problem_classic}
 
-{{site.data.keyword.messagehub}} クラシック・プランで問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/status?selected=status){:new_window} を確認してください。 
+{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/status?selected=status){:new_window} を確認してください。 
 
 {{site.data.keyword.messagehub}} チームから支援を受けたい場合は、以下の情報をすべて収集してください。 事前に提供できる情報が多ければ多いほど、チームは問題解決をより効率的に支援できます。
 {:shortdesc}

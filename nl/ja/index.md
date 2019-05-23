@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-15"
+lastupdated: "2019-05-08"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -22,7 +22,7 @@ subcollection: eventstreams
 {{site.data.keyword.messagehub}} を開始し、メッセージの送受信を開始するには、Java™ サンプルを使用できます。 このサンプルは、プロデューサーがトピックを使用してメッセージをコンシューマーに送信する方法を示します。 同じサンプル・プログラムが、メッセージのコンシュームとメッセージのプロデュースに使用されます。
 {: shortdesc}
 
-{{site.data.keyword.messagehub}} がどのように機能するのかについて詳しくは、[{{site.data.keyword.messagehub}} について](/docs/services/EventStreams?topic=eventstreams-about)を参照してください。{{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
+{{site.data.keyword.messagehub}} がどのように機能するのかについて詳しくは、[{{site.data.keyword.messagehub}} について](/docs/services/EventStreams?topic=eventstreams-about)を参照してください。 {{site.data.keyword.messagehub}} は、以前は Message Hub と呼ばれていました。
 
 Node.js および Python のサンプルを含め、他の {{site.data.keyword.messagehub}} サンプルにアクセスするには、[{{site.data.keyword.messagehub}} サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples){:new_window} を参照してください。
 
@@ -39,7 +39,7 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
   
   b. **「カタログ」**をクリックします。
   
-  c. **「統合」**セクションで、**{{site.data.keyword.messagehub}}「標準プラン」**を選択します。 {{site.data.keyword.messagehub}} サービス・インスタンス・ページが開きます。
+  c. **「統合」**セクションで、{{site.data.keyword.messagehub}} タイルをクリックし、**「標準プラン」**を選択します。{{site.data.keyword.messagehub}} サービス・インスタンス・ページが開きます。
   
   d. サービスの名前を入力します。 デフォルト値を使用することができます。
   
@@ -47,7 +47,7 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
 
 2. {: #create_credentials_step notoc} [IBM Cloud コンソールを使用した資格情報の取得および接続](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console)のステップを実行して、{{site.data.keyword.messagehub}} の資格情報を作成します。
    <br/>
-   <br/>このタスクの[ステップ 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) で、*kafka_brokers_sasl*、*kafka_admin_url*、および *api_key* の値が必要になります。   
+   <br/>このタスクの[ステップ 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) で *kafka_brokers_sasl* および *api_key* の値が必要になります。   
 
 3. 前提条件である以下の製品がまだインストールされていない場合はインストールします。
 
@@ -75,15 +75,15 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
 
 7. {: #start_consumer_step notoc} 次のコマンドを実行して、ご使用のコンソールでコンシューマーを開始します。
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -consumer</pre>
     
     このサンプルでは、`kafka-java-console-sample-topic` という名前のトピックが使用されます。 このトピックがまだ存在していない場合、このサンプルは {{site.data.keyword.messagehub}} 管理 API を使用して作成します。 このサンプルは、メッセージの送受信には Apache Kafka Java API を使用します。
 
-    [ステップ 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) で作成した資格情報の、*kafka_brokers_sasl*、*kafka_admin_url*、および *api_key* の値を使用します。
-	
-	ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。
-    
+    [ステップ 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) で作成した資格情報から *kafka_brokers_sasl*
+    および *api_key* の値を使用します。
+	<p></p>
+
 	**重要:** *kafka_brokers_sasl* は、単一ストリングでなければならず、引用符で囲む必要があります。 以下に例を示します。
 
     <pre class="pre">
@@ -94,8 +94,8 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
 
 8. 次のコマンドを実行して、ご使用のコンソールでプロデューサーを開始します。
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -producer</pre>
   
 9. これで、プロデューサーによって送信されたメッセージがコンシューマーで表示されるようになります。 次に出力例の一部を示します。
 

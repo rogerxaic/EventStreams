@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-08-14"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,13 +21,13 @@ subcollection: eventstreams
 
 <!-- Name your file `at-events.md` and include it in the Reference nav group in your toc file. -->
 
-# {{site.data.keyword.cloudaccesstrailshort}} イベント (エンタープライズ・プラン)
+# {{site.data.keyword.cloudaccesstrailshort}} イベント 
 {: #at_events}
 
-エンタープライズ・プランで、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.messagehub}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。 
+標準プランとエンタープライズ・プランで、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.messagehub}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla){:new_window}を参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}を参照してください。
 
 <!-- You can create different sections to group events by area. -->
 
@@ -36,12 +36,12 @@ subcollection: eventstreams
 
 <!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
 
-エンタープライズ・プランの {{site.data.keyword.messagehub}} は、お客様がサービスのアクティビティーをトラッキングできるように、イベントを自動的に生成します。
+標準プランとエンタープライズ・プランの {{site.data.keyword.messagehub}} は、お客様がサービスのアクティビティーをトラッキングできるように、イベントを自動的に生成します。
 
 | アクション | 説明 |
 |:-------|:------------|
-| messagehub.topic.create | トピックを作成するとイベントが作成される|
-| messagehub.topic.delete | トピックを削除するとイベントが作成される|
+| event-streams.topic.create | トピックを作成するとイベントが作成される|
+| event-streams.topic.delete | トピックを削除するとイベントが作成される|
 {: caption="表 1. {{site.data.keyword.messagehub}} イベント" caption-side="top"}
 
 ## イベントの表示場所

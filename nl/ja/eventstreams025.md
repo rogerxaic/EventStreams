@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,70 +15,75 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Kafka REST API の使用
-{: #rest_using}
+# REST プロデューサー API の使用
+{: #rest_producer_using}
 
-**Kafka REST API は、標準プランのみの一部として使用可能です。**
+
+** REST プロデューサー API は、新規 {{site.data.keyword.messagehub}} 標準プランのみの一部として使用可能です。**
 <br/>
 
-Kafka REST API は、Kafka クラスターへの RESTful インターフェースを提供します。 この API を使用して、メッセージの生成とコンシュームを行うことができます。 API 参照資料などについて詳しくは、[Kafka REST Proxy 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}を参照してください。 {{site.data.keyword.messagehub}} の要求と応答では、バイナリー埋め込み形式のみがサポートされます。 Avro および JSON 埋め込み形式はサポートされません。
-{: shortdesc}
+{{site.data.keyword.messagehub}} が提供する REST API は、既存のシステムを {{site.data.keyword.messagehub}} Kafka クラスターに接続する際に役立ちます。この API を使用して、{{site.data.keyword.messagehub}} と、RESTful API をサポートする任意のシステムを統合することができます。
 
-CURL を使用している場合、以下のような例を使用して生成することができます。
-<pre class="pre"><code>
-curl -X POST -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Content-Type: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var> -d 
+REST プロデューサー API はスケーラブルな REST インターフェースであり、セキュアな HTTP エンドポイントを経由して {{site.data.keyword.messagehub}} にメッセージをプロデュースするために使用します。イベント・データを {{site.data.keyword.messagehub}} に送信し、Kafka テクノロジーを利用してデータ・フィードを処理し、{{site.data.keyword.messagehub}} フィーチャーを活用してデータを管理します。
 
-'
-{
-  "records": [
-    {
-      "value": "<var class="keyword varname">A base 64 encoded value string</var>"
-    }
-  ]
-}
-'
-</code></pre>
+API を使用して既存のシステムを {{site.data.keyword.messagehub}} に接続します。システムから {{site.data.keyword.messagehub}} へのプロデュース要求を作成します。メッセージ・キー、ヘッダー、およびメッセージの書き込み先のトピックの指定などが含まれます。
+
+
+## REST を使用したメッセージのプロデュース
+{: #rest_produce_messages}
+
+プロデューサー API を使用してメッセージをトピックに書き込みます。トピックへのプロデュースを実行できるようにするには、以下の情報が使用可能であることが必要です。
+
+* {{site.data.keyword.messagehub}} API エンドポイントの URL (ポート番号を含む)。
+* プロデュース先のトピック。
+* 選択したトピックに接続し、プロデュースするための許可を付与する API キー。
+
+サービス・インスタンスのサービス資格情報オブジェクトまたはサービス・キーから、 API に接続するために必要な URL と資格情報の詳細を取得する必要があります。これらのオブジェクトの作成について詳しくは、[{{site.data.keyword.messagehub}} への接続](/docs/services/EventStreams?topic=eventstreams-connecting)を参照してください。
+
+API のエンドポイントの URL は、<code>kafka_http_url</code> プロパティーに指定されています。
+
+次のいずれかの方法を使用して認証を行います。
+
+* **基本認証を使用して認証を行うには:**<br/>
+    ユーザー名とパスワードに、上記オブジェクトの <code>user</code> プロパティーと <code>api_key</code> プロパティーを使用します。これらの値は HTTP 要求の <code>Authorization</code> ヘッダーに、<code>Basic <単一コロン (:) で結合した Base64 エンコードの username:password></code> の形式で指定します。
+
+* **ベアラー・トークンを使用して認証するには:**<br/>
+    IBM Cloud CLI を使用してトークンを取得するには、まず IBM Cloud にログインしてから、次のコマンドを実行します。 
+
+    ```
+    ibmcloud iam oauth-tokens
+    ```
+    {: codeblock}
+
+    このトークンを、HTTP 要求の Authorization ヘッダーに <code>Bearer <token></code> の形式で指定します。API キーと JWT トークンの両方がサポートされています。 
+
+* ** API キーを直接使用して認証するには: **<br/>
+    キーを <code>X-Auth-Token</code> HTTP ヘッダーの値として直接指定します。
+
+<br/>
+以下のコードが示すのは curl を使用したメッセージ送信の例です。
+
+```
+curl -v -X POST -H "Authorization: Basic <base64 username:password>" -H "Content-Type: text/plain" -H "Accept: application/json" -d 'test message' "<kafka_http_url>/topics/<topic_name>/records"
+```
 {: codeblock}
-<br/>
-<br/>
-CURL を使用している場合、以下のような例を使用してコンシュームすることができます。
-<pre class="pre"><code>
-curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var>/partitions/<var class="keyword varname">partition ID</var>/messages?offset=<var class="keyword varname">offset to start from</var>
-</code></pre>
-{: codeblock}
-
-<br/>
-<br/>
-CURL の場合、[Confluent 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.confluent.io/2.0.0/){:new_window} に詳しく説明されているように、コマンド・ラインに以下の行を追加することによってコード例を適応させることもできます。
-<pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
-{: codeblock}
-
-<br/>
-## 接続および認証の方法
-{: #rest_connect}
-
-<!-- info was in eventstreams066.md -->
-
-<!-- Comment from Andrew
-basic introduction, definitely including health warning
--->
-{{site.data.keyword.messagehub}} に接続するために、Kafka REST API は [VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)からの <code>api_key</code> および <code>kafka_rest_url</code> 資格情報を使用します。
 
 
-{{site.data.keyword.messagehub}} Kafka REST API で認証するには、
-要求の X-Auth-Token ヘッダーに <code>api_key</code> を指定する必要があります。
+## API リファレンス
+{: #rest_api_reference}
+
+API についての詳細情報は、[{{site.data.keyword.messagehub}} REST プロデューサー API リファレンス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://ibm.github.io/event-streams/api/){:new_window}を参照してください。
 
 
-## API の使用法
-{: #rest_how}
 
-<!-- info was in eventstreams097.md -->
 
-{{site.data.keyword.messagehub}} Kafka REST API サンプルは、Kafka REST API で {{site.data.keyword.messagehub}} に接続して、メッセージを作成およびコンシュームする Node.js アプリケーションです。
 
-サンプル・コードは [event-streams-samples GitHub プロジェクト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} にあります。
 
-プロジェクトの [README.md ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} ファイルに記載された説明に従って、サンプルをビルドし、実行してください。
+
+
+
+
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -16,11 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# MQ Light クライアントの使用
+# クラシック・プランの MQ Light クライアントの使用
 {: #mql_clients}
 
-**MQ Light API は、標準プランのみの一部として使用可能です。**
+** MQ Light API は、クラシック・プランのみの一部として使用可能です。**
+{: note}
 <br/>
+
 ## MQ Light Java クライアントの使用
 {: #mql_java}
 
@@ -38,6 +40,7 @@ subcollection: eventstreams
 ```
 {:codeblock}
 
+
 <!-- 12/11/18: info was in eventstreams102.md, moved because of doc app changes -->
 
 ## MQ Light Node.js クライアントの使用 
@@ -53,7 +56,7 @@ subcollection: eventstreams
 
 ソース・ファイルに次の require ステートメントを追加します。
 
-<pre class="pre"><code>var mqlight = require(&lsquo;mqlight&rsquo;);</code></pre>
+<pre class="pre"><code>var mqlight = require(‘mqlight’);</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams103.md, moved because of doc app changes -->
@@ -73,7 +76,9 @@ gem 'mqlight', '~> 1.0'
 
 ソース・ファイルに次の require ステートメントを追加します。
 
-<pre class="pre"><code>require &lsquo;mqlight&rsquo;</code></pre>
+```
+require ‘mqlight’
+```
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams101.md, moved because of doc app changes -->
@@ -102,3 +107,6 @@ Instructions for getting started, with links for more info
 Simple send source and receive source in-line
 
 -->
+
+
+

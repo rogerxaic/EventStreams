@@ -16,16 +16,17 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Cloud Object Storage ブリッジ 
+# クラシック・プランの Cloud Object Storage ブリッジ
 {: #cloud_object_storage_bridge }
 
-** Cloud Object Storage ブリッジは、標準プランのみの一部として使用可能です。**
+
+** Cloud Object Storage ブリッジは、クラシック・プランのみの一部として使用可能です。**
 <br/>
 
-{{site.data.keyword.IBM}} Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} Kafka トピックからデータを読み取って [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} にそのデータを入れる手段を提供します。
+{{site.data.keyword.IBM}} Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} Kafka トピックからデータを読み取って [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} にそのデータを入れる手段を提供します。
 {: shortdesc}
 
-Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} の Kafka トピックから [Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} のインスタンスへデータを保存することを可能にします。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして Cloud Object Storage サービス内のバケットにアップロードします。 Cloud Object Storage ブリッジを構成することによって、データをオブジェクトとして Cloud Object Storage にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
+Cloud Object Storage ブリッジは、{{site.data.keyword.messagehub}} の Kafka トピックから [Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} のインスタンスへデータを保存することを可能にします。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして Cloud Object Storage サービス内のバケットにアップロードします。 Cloud Object Storage ブリッジを構成することによって、データをオブジェクトとして Cloud Object Storage にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
 
 * オブジェクトが書き込まれる先のバケットの名前。
 * オブジェクトが Cloud Object Storage サービスにアップロードされる頻度。
@@ -187,7 +188,9 @@ ISO 8601 日付によってデータをパーティション化するには、�
 	ISO 8601 日付によるパーティション化には、Kafka メッセージが有効な JSON フォーマットであることが必要です。 ブリッジを構成するために使用される JSON の `"propertyName"` の値は、各 Kafka メッセージ内の 8601 日付フィールドに対応する必要があります。 上の例では、`"timestamp"` フィールドの値は、有効な ISO 8601 日付値を含んでいなければなりません。 そうすれば、メッセージはメッセージの日付に従ってパーティション化されます。
 	
 	この例のように構成されたブリッジは、次のように示された名前のオブジェクトを生成します。
-	`<object_a>` は、`"timestamp"` フィールドが日付 2016-12-07 の JSON メッセージを含み、`<object_b>` と `<object_c>` の両方は、`"timestamp"` フィールドが日付 2016-12-08 の JSON メッセージを含みます。
+	`<object_a>` は、`"timestamp"` フィールドが日付 2016-12-07 の JSON メッセージを含み、
+	`<object_b>` と `<object_c>` の両方は、`"timestamp"` フィールドが日付
+	2016-12-08 の JSON メッセージを含みます。
 
     <pre class="pre"><code>
         ```

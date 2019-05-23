@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-13"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,13 +15,12 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note: .note}
 
 
-# 既知の制約事項
-{: #restrictions}
+# クラシック・プランの既知の制約事項 
+{: #restrictions_classic}
 
-{{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。 
+クラシック・プランの {{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。
 {: shortdesc}
 
 ## Kafka ブートストラップ・サーバーで障害が起こっても Java Kafka 呼び出しがフェイルオーバーしない
@@ -88,8 +87,6 @@ Kafka Java クライアント呼び出しで Kafka を検出できないこと�
 *  トピックのデフォルトのパーティション数は 1 つです。
 *  各 {{site.data.keyword.Bluemix_notm}} スペースのパーティションは 100 までに制限されています。 それより多くのパーティションを作成するには、新しい {{site.data.keyword.Bluemix_notm}} スペースを使用する必要があります。
 
-<!--following message retention info duplicted in FAQs eventstreams108-->
-
 ## メッセージの保存
 {: #message_retention}
 
@@ -97,71 +94,41 @@ Kafka Java クライアント呼び出しで Kafka を検出できないこと�
 
 ユーザー・インターフェースまたは管理 API のいずれかを使用して、トピックを作成するときにメッセージ保存の時間制限を変更できます。 時間制限は、最小 1 時間、最大 30 日間です。
 
-Kafka クライアントまたは Kafka Streams を使用してトピックを作成するときに許可される設定の制限については、[Kafka API を使用してトピックの作成と削除を行うにはどうしたらよいか?
-](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin)を参照してください。
+Kafka クライアントまたは Kafka Streams を使用してトピックを作成するときに許可される設定の制限については、[Kafka API の使用](/docs/services/EventStreams?topic=eventstreams-kafka_using)を参照してください。
 
 ## Kafka でのトピックの作成および削除
 {: #create_delete}
 
 Kafka では、トピックの作成および削除は非同期操作であり、完了するのに時間がかかることがあります。 トピックの迅速な作成および削除に依存する使用パターンや、トピックの迅速な削除および再作成に依存する使用パターンを避けることをお勧めします。
 
-<!--
 ## Kafka REST API
 {: #trouble_rest}
 
-<br/>
-**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
-{: note}
+*  要求と応答では、バイナリー埋め込み形式のみがサポートされます。 Avro および JSON 埋め込み形式はサポートされません。
+*  コンシューマー・インスタンスに同時要求はサポートされません。
+   コンシューマー・インスタンスに対応する読み取り、コミット、または削除の要求は、必ず、そのインスタンスの未完了要求の応答が受信されてから送信してください。
 
-*  Only the binary-embedded format is supported for requests and
-   responses. The Avro and JSON embedded formats are not supported.
-*  Concurrent requests are not supported for a consumer instance.
-   Read, commit, or delete requests corresponding to a consumer
-   instance should be sent only after a response is received for
-   any outstanding requests of that instance.
-
--->
-<!--
-<br/>
-**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
-{: note}
-
-## Kafka REST API rate limitation
+## Kafka REST API 速度制限
 {: #kafka_rate}
 
-Applications using the Kafka REST API can be subject to rate
-limiting for each ApiKey. When this limiting occurs, the API
-responds with the following HTTP error:
+Kafka REST API を使用しているアプリケーションは、各 ApiKey の速度制限の対象となることがあります。 この制限を超えると、API は次の HTTP エラーで応答します。
 
 <code>429 Too Many Requests</code>
 {:screen}
 
-If you see this error, wait and submit the request again.
+このエラーが表示されたら、待機してから要求を再サブミットしてください。
 
-<br/>
-**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
-{: note}
--->
 <!--12/04/18 - Karen: same info duplicated at messagehub108 -->
-<!--
-## Kafka REST API daily restart
+## Kafka REST API 日次再始動
 {: #rest_restart}
 
-The Kafka REST API restarts once a day for a short period of
-time. During this period, the Kafka REST API might become
-unavailable. If this happens, you are recommended to retry your
-request. After the REST API has restarted, you will have to
-create your Kafka consumer instances again. If this is the case, the
-REST API returns the following JSON:
+Kafka REST API は、1 日 1 回、短時間の再始動期間があります。 この期間中には、Kafka REST API が利用不可になることがあります。 これが起こった場合、要求を再試行することをお勧めします。 REST API が再始動した後、Kafka コンシューマー・インスタンスを再度作成する必要があります。 この場合、REST API は次の JSON を返します。
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```
 {:screen}
--->
-<!--
-## Kafka high-level consumer API
+
+## Kafka ハイレベル・コンシューマー API
 {: #kafka_consumer}
 
-You cannot use the Apache Kafka 0.8.2 simple or high-level
-consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.10.
--->
+Apache Kafka 0.8.2 の単純コンシューマー API または ハイレベル・コンシューマー API を {{site.data.keyword.messagehub}} で使用することはできません。 代わりに、サポートされる最初の Kafka コンシューマー API である 0.10 を使用できます。

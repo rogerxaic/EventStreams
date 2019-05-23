@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Watson IoT Platform ブリッジ
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}} は、{{site.data.keyword.messagehub_full}} への単一方向リンクの作成を可能にする管理対象ブリッジを提供します。
 {: shortdesc}
 

@@ -13,16 +13,33 @@ IBM Event Streams
 		eventstreams010.md
 		eventstreams073.md
 	 	eventstreams085.md
-		eventstreams132.md
+		eventstreams143.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	eventstreams112.md
-	eventstreams114.md
-	eventstreams118.md
+	eventstreams132.md
 	eventstreams068.md
-	eventstreams072.md
 	at-events.md
+	
+	{: .topicgroup}
+	クラシック・プラン
+		eventstreams134.md
+		eventstreams135.md
+		eventstreams136.md
+		eventstreams147.md
+		eventstreams137.md
+		eventstreams138.md
+		eventstreams141.md
+		eventstreams146.md
+		eventstreams075.md
+		eventstreams099.md
+		eventstreams088.md
+		eventstreams105.md
+		eventstreams115.md
+		eventstreams089.md
+		eventstreams139.md
+		eventstreams140.md
+		eventstreams144.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
@@ -34,31 +51,28 @@ IBM Event Streams
 		eventstreams128.md
 		eventstreams116.md
 		eventstreams124.md
+
+	
 	
 	{: .topicgroup}
 	Event Streams を使用したアプリの開発
 		eventstreams050.md
-		eventstreams062.md
-		eventstreams063.md
-		eventstreams104.md
+		eventstreams112.md
+		eventstreams114.md
+		eventstreams118.md
 		eventstreams113.md
 		eventstreams111.md
 		eventstreams110.md
 		eventstreams025.md
-		eventstreams075.md
-		eventstreams099.md
-		eventstreams087.md
+		eventstreams117.md
 
 	{: .topicgroup}
 	他のサービスとの統合
-		eventstreams088.md
-		eventstreams105.md
-		eventstreams115.md
-		eventstreams089.md
 		eventstreams119.md
 
 	{: .topicgroup}
 	チュートリアル
+		eventstreams104.md
 	 	[Asynchronous data processing using object storage and pub/sub messaging tutorial](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-pub-sub-object-storage#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
 	{: .navgroup-end}
 
@@ -69,13 +83,13 @@ IBM Event Streams
 	トラブルシューティング
 		ts_overview.md
 		eventstreams057.md
-		eventstreams109.md
 		eventstreams125.md
+		eventstreams109.md
 		
 	{: .topicgroup}
 	関連リンク
 	 	[Event Streams Java Kafka サンプル](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
-	 	[Apache Kafka 1.1.0 クライアント](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz)
+	 	[Apache Kafka クライアント・ダウンロード](https://kafka.apache.org/downloads)
 		[ibm.com の IBM Event Streams](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 

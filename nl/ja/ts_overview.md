@@ -25,7 +25,9 @@ subcollection: eventstreams
 ない場合は、質問を投稿してください。{{site.data.keyword.messagehub}} 開発チームのメンバー、またはより幅広いコミュニティーのメンバーが質問に応答します。
 {: shortdesc}
 
-{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/status?selected=status){:new_window} を確認してください。 その上で、{{site.data.keyword.messagehub}} チームからの支援が必要な場合は、[{{site.data.keyword.messagehub}} チームへの問題の報告 - 標準プラン](/docs/services/EventStreams?topic=eventstreams-report_problem)または[{{site.data.keyword.messagehub}} チームへの問題の報告 - エンタープライズ・プラン](/docs/services/EventStreams?topic=eventstreams-report_problem)のいずれかに詳細が記述された、必要なすべての情報を収集してください。
+{{site.data.keyword.messagehub}} で問題が起こった場合、最初に [{{site.data.keyword.Bluemix_notm}} 状況ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/status?selected=status){:new_window} を確認してください。 その上で {{site.data.keyword.messagehub}} チームからの支援が必要な場合は、[{{site.data.keyword.messagehub}} チームへの問題の報告 - 標準プランおよびエンタープライズ・プラン](/docs/services/EventStreams?topic=eventstreams-report_problem_enterprise#report_problem_enterprise)に詳細が記述された、必要なすべての情報を収集してください。
+
+クラシック・プランを使用している場合は、[{{site.data.keyword.messagehub}} チームへの問題の報告 - クラシック・プラン](/docs/services/EventStreams?topic=eventstreams-report_problem#report_problem)でチームに必要な情報の一覧を参照してください。
 {:shortdesc}
 
 ## 便利なリンク
@@ -33,11 +35,9 @@ subcollection: eventstreams
 
 *  [{{site.data.keyword.Bluemix_short}} 無料トライアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [{{site.data.keyword.messagehub}} Java Kafka サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} を使用した Web アプリケーションの作成および Cloud Foundry を使用したアプリのデプロイ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+*  [{{site.data.keyword.Bluemix_notm}} を使用した Web アプリケーションの作成および Cloud Foundry を使用したアプリのデプロイ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Apache Kafka 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/documentation.html){: new_window}
-*  [Apache Kafka 1.1.0 クライアント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}
-*  [A Comprehensive, Open Source REST Proxy for Kafka. ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window} 
-	このブログには、Kafka REST API の強みと弱みの概要が示されています。 Kafka REST API は、標準プランのみの一部として使用可能です。
-*  [{{site.data.keyword.Bluemix_notm}} 価格情報 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}
+*  [Apache Kafka 2.2.0 クライアント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
+*  [{{site.data.keyword.Bluemix_notm}} 価格情報 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}
 
 

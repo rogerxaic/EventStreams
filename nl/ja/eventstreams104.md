@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-04-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -82,7 +82,10 @@ Kafka クライアント 0.10 以降を使用できます。
 0.9.X から最新バージョンに移行する
 ことを強くお勧めします。 Kafka クライアントは、[https://kafka.apache.org/downloads ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://kafka.apache.org/downloads){:new_window} からダウンロードできます。
 
-0.9.X クライアントを使用する場合の影響について詳しくは、[後方互換性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)を参照してください。
+<!--
+For information about the implications of using a 0.9.X client, see 
+[Backward compatibility](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+-->
 
 
 
@@ -93,7 +96,6 @@ Kafka クライアント 0.10 以降を使用できます。
 以下のステップを実行してください。
 
 1. JAAS ファイルを削除します。 JVM プロパティー java.security.auth.login.config=<PATH TO JAAS> も不要になったので注意してください。
-2. 0.9.X からマイグレーションする場合、{{site.data.keyword.messagehub}} ログイン jar モジュールを削除します。
 2. クライアントのプロパティーに以下を追加します。
     ```
 	sasl.mechanism=PLAIN
@@ -101,25 +103,6 @@ Kafka クライアント 0.10 以降を使用できます。
 	```
 
 	ここで、USERNAME および PASSWORD は、{{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.messagehub}} **「サービス資格情報」**タブからの値です。
-	
-	
 
-### Kafka クライアント 0.9.X から 0.10.0.X または 0.10.1.X へのマイグレーション
 
-以下のステップを実行してください。
 
-1. {{site.data.keyword.messagehub}} ログイン jar モジュールを削除します。
-2. <code>jaas.conf</code> ファイルを次のように変更します。
-    ```
-        KafkaClient {
-          org.apache.kafka.common.security.plain.PlainLoginModule required
-          serviceName="kafka"
-            username="USERNAME"
-            password="PASSWORD";
-        };
-    ```
-    {: codeblock}
-
-	ここで、USERNAME および PASSWORD は、{{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.messagehub}} **「サービス資格情報」**タブからの値です。
-	
-3. コンシューマーおよびプロデューサーのプロパティーに <code>sasl.mechanism=PLAIN</code> という行を追加します。

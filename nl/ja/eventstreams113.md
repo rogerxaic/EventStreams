@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,9 +28,24 @@ Kafka Connect は、スタンドアロン・モードまたは分散モードで
 ## スタンドアロン・ワーカーの構成
 {: #standalone_worker notoc}
 
-Kafka Connect スタンドアロン・ワーカーを開始するときに提供するワーカー・プロパティー・ファイルに、ブートストラップ・サーバーと SASL 資格情報の情報を指定する必要があります。
-
 スタンドアロン・ワーカーは、内部トピックを使用しません。 代わりにファイルを使用してオフセット情報を保管します。
+
+Kafka Connect スタンドアロン・ワーカーを開始するときに提供するワーカー・プロパティー・ファイルに、ブートストラップ・サーバーと SASL 資格情報の情報を指定する必要があります。以下の例では、プロパティー・ファイルに指定する必要のあるプロパティーがリストされています。
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+KAFKA_BROKERS_SASL、USER、PASSWORD を、{{site.data.keyword.Bluemix_notm}} コンソール内の {{site.data.keyword.messagehub}}**「サービス資格情報」**タブにある値に置き換えます。
 
 ### ソース・コネクター
 {: #source_connector notoc }

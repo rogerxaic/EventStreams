@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-12"
+lastupdated: "2019-05-07"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # {{site.data.keyword.messagehub}} での Kafka コンソール・ツールの使用
@@ -23,7 +24,7 @@ subcollection: eventstreams
 Apache Kafka には、管理とメッセージングを簡単に操作するための各種のコンソール・ツールが付属しています。 それらの多くを {{site.data.keyword.messagehub}} で使用できますが、{{site.data.keyword.messagehub}} ではその ZooKeeper クラスターとの接続は許可されません。 Kafka の開発が進むにつれ、以前は ZooKeeper への接続が必要であったツールの多くで、その要件がなくなりました。
 {: shortdesc}
 
-これらのコンソール・ツールは、Kafka ダウンロードの <code>bin</code> ディレクトリーにあります。 例えば、[Apache Kafka 1.1.0 クライアント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window} です。
+これらのコンソール・ツールは、Kafka ダウンロードの <code>bin</code> ディレクトリーにあります。 クライアントは、[Apache Kafka ダウンロード![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/downloads){:new_window}からダウンロードできます。
 
 それらのツールに SASL 資格情報を提供するには、以下の例に基づいてプロパティー・ファイルを作成します。
 

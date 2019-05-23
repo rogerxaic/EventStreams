@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Object Storage ブリッジ (非推奨)
+# クラシック・プランの Object Storage ブリッジ
 {: #object_storage_bridge }
 
 ** {{site.data.keyword.objectstorageshort}} ブリッジは、2018 年 8 月 1 日より非推奨になりました。**
@@ -31,9 +31,9 @@ subcollection: eventstreams
 別の方法として、[Cloud Object Storage ブリッジ](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)を使用することもできます。 
 {:deprecated}
 
-{{site.data.keyword.objectstorageshort}} ブリッジを使用すると、{{site.data.keyword.messagehub}} の Kafka トピックのデータを、{{site.data.keyword.Bluemix_short}} サービスのインスタンスにアーカイブすることができます。このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして {{site.data.keyword.objectstorageshort}} サービス内のコンテナーにアップロードします。
+{{site.data.keyword.objectstorageshort}} ブリッジを使用すると、{{site.data.keyword.messagehub}} の Kafka トピックのデータを、{{site.data.keyword.Bluemix_short}} サービスのインスタンスにアーカイブすることができます。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして {{site.data.keyword.objectstorageshort}} サービス内のコンテナーにアップロードします。
 
-{{site.data.keyword.Bluemix_short}} での優先オブジェクト・ストレージ・サービスは現在は [{{site.data.keyword.IBM_notm}} Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} であることに注意してください。
+{{site.data.keyword.Bluemix_short}} での優先オブジェクト・ストレージ・サービスは現在は [{{site.data.keyword.IBM_notm}} Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} であることに注意してください。
 
 {{site.data.keyword.objectstorageshort}} ブリッジを構成することによって、データをオブジェクトとして {{site.data.keyword.objectstorageshort}} にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
 
@@ -150,7 +150,9 @@ ISO 8601 日付によってデータをパーティション化するには、�
 	ISO 8601 日付によるパーティション化には、Kafka メッセージが有効な JSON フォーマットであることが必要です。 ブリッジを構成するために使用される JSON の `"propertyName"` の値は、各 Kafka メッセージ内の 8601 日付フィールドに対応する必要があります。 上の例では、`"timestamp"` フィールドの値は、有効な ISO 8601 日付値を含んでいなければなりません。 そうすれば、メッセージはメッセージの日付に従ってパーティション化されます。
 	
 	この例のように構成されたブリッジは、次のように示された名前のオブジェクトを生成します。
-	`<object_a>` は、`"timestamp"` フィールドが日付 2016-12-07 の JSON メッセージを含み、`<object_b>` と `<object_c>` の両方は、`"timestamp"` フィールドが日付 2016-12-08 の JSON メッセージを含みます。
+	`<object_a>` は、`"timestamp"` フィールドが日付 2016-12-07 の JSON メッセージを含み、
+	`<object_b>` と `<object_c>` の両方は、`"timestamp"` フィールドが日付
+	2016-12-08 の JSON メッセージを含みます。
 
     <pre class="pre"><code>
         ```

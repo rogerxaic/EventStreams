@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# MQ Light API の使用 
+# クラシック・プランの MQ Light API の使用
 {: #mql_using}
 
-**MQ Light API は、標準プランのみの一部として使用可能です。**
+**MQ Light API は、クラシック・プランのみの一部として使用可能です。**
 <br/>
 
 {{site.data.keyword.mql}} API は、以前の {{site.data.keyword.mql}} サービスとの後方互換性のために提供されています。 API は、Java&trade;、Node.js、Python、Ruby 用に AMQP ベースのメッセージング・インターフェースを提供します。 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## MQ Light API について、および他の API との違い
 {: #mqlight}
@@ -40,14 +37,14 @@ The {{site.data.keyword.mql}} API is available in the following {{site.data.keyw
 Kafka クライアントと {{site.data.keyword.mql}} API のどちらを使用するのかの選択は、構築したいメッセージング・トポロジーに基づきます。
 
 * Kafka を使用する場合は、少数のトピックを使用し、スケーラビリティーを高めるために各トピックに複数のパーティションを含めることが可能です。 コンシューマー・グループを使用することによってコンシューマー間でメッセージを共有できますが、各コンシューマーは、割り当てられたパーティションでメッセージ速度に遅れずに対応できなければなりません。
-* {{site.data.keyword.mql}} API を使用する場合は、ずっと多くのトピックを使用でき、トピック名は階層的です (例: <code>&lsquo;/sports/football&rsquo;</code> および <code>&lsquo;/sports/tiddlywinks&rsquo;</code>)。  
+* {{site.data.keyword.mql}} API を使用する場合は、ずっと多くのトピックを使用でき、トピック名は階層的です (例: <code>&lsquo;/sports/football&rsquo;</code> および <code>&lsquo;/sports/tiddlywinks&rsquo;</code>)。 
 
 {{site.data.keyword.mql}} API のトピックは、Kafka トピックと同じではありません。 そうではなく、{{site.data.keyword.mql}} API は「MQLight」という名前の単一の Kafka トピックを使用し、{{site.data.keyword.mql}} API を使用して送受信されるすべてのメッセージはこの 1 つの Kafka トピックを経由します。
 
 {{site.data.keyword.mql}} は、ダラス (us-south)、ロンドン (eu-gb)、およびシドニー (au-syd) の
 {{site.data.keyword.Bluemix_notm}} ロケーション (地域) でのみ使用できます。 MQ Light API は、フランクフルト (eu-de) ロケーションおよび {{site.data.keyword.Bluemix_notm}} 専用では使用不可です。
 
-どの API を使用するのかの選択について詳しくは、[3 つの API からの選択](/docs/services/EventStreams?topic=eventstreams-choose_api)を参照してください。
+どの API を使用するのかの選択について詳しくは、[3 つの API からの選択](/docs/services/EventStreams?topic=eventstreams-choose_api_classic)を参照してください。
 
 
 ## MQ Light API を {{site.data.keyword.messagehub}} で使用するために必要なもの
@@ -68,8 +65,8 @@ MQ Light API を無効にするには、「MQLight」トピックを削除しま
 ## 接続および認証の方法
 {: #mql_connect}
 
-アプリを当サービスに接続するには、アプリは <code>user</code>、
-<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を [VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)から使用する必要があります。選択した言語に応じて、以下のガイドを使用してください。
+アプリを当サービスに接続するには、アプリは、[VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf)にある <code>user</code>、
+<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を使用する必要があります。選択した言語に応じて、以下のガイドを使用してください。
 
 **Java の場合**
 
@@ -80,7 +77,7 @@ create() 呼び出しの endpointService パラメーターとして <code>null<
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
         client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

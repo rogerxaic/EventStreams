@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# {{site.data.keyword.messagehub}} リソースへのアクセス管理 (エンタープライズ・プラン)
+# {{site.data.keyword.messagehub}} リソースへのアクセスの管理 
 {: #security }
 
 {{site.data.keyword.messagehub}} リソースの微細な保護により、各ユーザーに付与する各リソースへのアクセス権限を管理することができます。
 {: shortdesc}
+
+IAM ポリシーと許可に変更を加えた場合、基礎となるサービスに変更が反映されるまで数分かかる可能性があります。
+{: important}
 
 ## 保護できる内容
 
@@ -75,15 +80,15 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |---------|----------------|
 | すべてのリソースへの全アクセス権限を許可する|適用外   |適用外  |サービス・インスタンス: <var class="keyword varname">your_service_instance</var>|
 | アプリまたはユーザーがトピックの作成または削除を行うのを許可する |リソース・タイプ: <code>cluster</code>   |適用外  |リソース・タイプ: topic <br/><br/>オプション: リソース ID: <var class="keyword varname">name_of_topic</var> |
-| グループ、トピック、およびオフセットをリストする <br/> グループ、トピック、およびブローカーの構成を記述する | リソース・タイプ: <code>cluster</code>      |適用外  |適用外      |
+| グループ、トピック、およびオフセットをリストする <br/> グループ、トピック、およびブローカーの構成を記述する| リソース・タイプ: <code>cluster</code>      |適用外  |適用外      |
 | アプリがクラスターに接続するのを許可する  |リソース・タイプ: <code>cluster</code>| 適用外     |適用外      |
 | アプリが任意のトピックにプロデュースするのを許可する  |リソース・タイプ: <code>cluster</code>|リソース・タイプ: <code>topic</code> |適用外     |
 | アプリが特定のトピックにプロデュースするのを許可する  |リソース・タイプ: <code>cluster</code>|リソース・タイプ: <code>topic</code><br/>リソース ID: <var class="keyword varname">name_of_topic</var>      |適用外     |
-| アプリが任意のトピックに接続してそこからコンシュームするのを許可する (コンシューマー・グループなし)  |リソース・タイプ: <code>cluster</code> <br/>リソース・タイプ: <code>topic</code> |リソース・タイプ: <code>topic</code>|適用外     |
+| アプリが任意のトピックに接続してそこからコンシュームするのを許可する (コンシューマー・グループなし)  |リソース・タイプ: <code>cluster</code> <br/>リソース・タイプ: <code>topic</code> |適用外    |適用外     |
 | アプリが特定のトピックに接続してそこからコンシュームするのを許可する (コンシューマー・グループなし)  | リソース・タイプ: <code>cluster</code> <br/>リソース・タイプ: <code>topic</code><br/>リソース ID: <var class="keyword varname">name_of_topic</var> |適用外     |適用外     |
 | アプリがトピックをコンシュームするのを許可する (コンシューマー・グループ)  |リソース・タイプ: <code>cluster</code> <br/>リソース・タイプ: <code>topic</code><br/> リソース・タイプ: <code>group</code> |適用外      |適用外     |
 | アプリが一時的にトピックにプロデュースするのを許可する  |リソース・タイプ: <code>cluster</code> <br/> リソース・タイプ: <code>group</code>|リソース・タイプ: <code>topic</code> <br/>リソース ID: <var class="keyword varname">name_of_topic</var> <br/>リソース・タイプ: <code>txnid</code> |適用外     |
-| コンシューマー・グループを削除する |リソース・タイプ: <code>cluster</code> |適用外  |リソース・タイプ: <code>group</code> <br/>リソース ID: <var class="keyword varname">group_ID</var>      |
+| コンシューマー・グループを削除する |リソース・タイプ: <code>cluster</code> |適用外  |リソース・タイプ: <code>group</code> <br/>リソース ID: <var class="keyword varname">group_ID</var>|
 | Streams を使用する |リソース・タイプ: <code>cluster</code></br>リソース・タイプ: <code>group</code>| 適用外  |リソース・タイプ: <code>topic</code>    |
 
 IAM について詳しくは、[IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview) を参照してください。
