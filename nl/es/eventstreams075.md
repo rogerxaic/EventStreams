@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Utilización de la API MQ Light 
+# Utilización de la API MQ Light en el plan Clásico
 {: #mql_using}
 
-**La API MQ Light solo está disponible como parte del plan Estándar.**
+**La API MQ Light solo está disponible como parte del plan Clásico.**
 <br/>
 
 La API {{site.data.keyword.mql}} se proporciona por motivos de compatibilidad con versiones anteriores del servicio {{site.data.keyword.mql}}. La API proporciona una interfaz de mensajería basada en AMQP para Java&trade;, Node.js, Python y Ruby. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## ¿Qué es la API MQ Light y cuáles son sus particularidades?
 {: #mqlight}
@@ -40,13 +37,13 @@ La API {{site.data.keyword.mql}} proporciona un nivel superior de abstracción p
 La elección entre el uso de un cliente Kafka o la API {{site.data.keyword.mql}} depende de la topología de mensajería que desee crear:
 
 * Con Kafka, se utiliza un número reducido de temas y puede haber varias particiones para cada tema para obtener mayor escalabilidad. Puede compartir mensajes entre consumidores utilizando grupos de consumidores, pero cada consumidor debe poder mantener la tasa de mensajes de las particiones asignadas.
-* Con la API {{site.data.keyword.mql}}, puede utilizar un número de temas mucho mayor y los nombres de temas son jerárquicos (por ejemplo: <code>&lsquo;/sports/football&rsquo;</code> y <code>&lsquo;/sports/tiddlywinks&rsquo;</code>).  
+* Con la API {{site.data.keyword.mql}}, puede utilizar un número de temas mucho mayor y los nombres de temas son jerárquicos (por ejemplo: <code>&lsquo;/sports/football&rsquo;</code> y <code>&lsquo;/sports/tiddlywinks&rsquo;</code>). 
 
 Los temas de la API {{site.data.keyword.mql}} no son los mismos que los temas de Kafka. En su lugar, la API {{site.data.keyword.mql}} utiliza un tema único denominado "MQLight Kafka" y todos los mensajes enviados y recibidos utilizando la API {{site.data.keyword.mql}} pasan por ese tema de Kafka concreto.
 
 {{site.data.keyword.mql}} solo está disponible en las siguientes ubicaciones (regiones) de {{site.data.keyword.Bluemix_notm}}: Dallas (us-south), Londres (eu-gb) y Sídney (au-syd). La API MQ Light no está disponible en la ubicación Frankfurt (eu-de) o en {{site.data.keyword.Bluemix_notm}} dedicado.
 
-Para obtener más información sobre qué API elegir, consulte [Elección entre las tres API](/docs/services/EventStreams?topic=eventstreams-choose_api).
+Para obtener más información sobre qué API elegir, consulte [Elección entre las tres API](/docs/services/EventStreams?topic=eventstreams-choose_api_classic).
 
 
 ## ¿Qué se necesita para utilizar la API MQ Light con {{site.data.keyword.messagehub}}?
@@ -68,7 +65,7 @@ Para inhabilitar la API MQ Light, suprima el tema "MQLight". Tenga en cuenta que
 {: #mql_connect}
 
 Para conectar una app al servicio, esta debe usar los detalles <code>user</code>,
-<code>password</code> y <code>mqlight_lookup_url</code> de la variable de entorno [VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Utilice la siguiente guía para el idioma elegido:
+<code>password</code> y <code>mqlight_lookup_url</code> de la variable de entorno [VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf). Utilice la siguiente guía para el idioma elegido:
 
 **Para Java**
 
@@ -79,7 +76,7 @@ Si especifica <code>null</code> como parámetro endpointService de la llamada cr
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
         client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

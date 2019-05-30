@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-12"
+lastupdated: "2019-05-07"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # Usando as ferramentas do console Kafka com o {{site.data.keyword.messagehub}}
@@ -26,7 +27,7 @@ conexão com seu cluster ZooKeeper. Como o Kafka se desenvolveu, muitas das ferr
 exigiam conexão com o ZooKeeper não têm mais essa exigência.
 {: shortdesc}
 
-É possível localizar essas ferramentas do console no diretório <code>bin</code> do download de seu Kafka. Por exemplo, o [Cliente Apache Kafka 1.1.0 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}.
+É possível localizar essas ferramentas do console no diretório <code>bin</code> do download de seu Kafka. É possível fazer download de um cliente em [Downloads do Apache Kafka ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://kafka.apache.org/downloads){:new_window}.
 
 Para fornecer as credenciais SASL para essas ferramentas, crie um arquivo de propriedades com
 base no exemplo a seguir:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,9 +28,24 @@ Kafka Connect 可以用獨立式或分散式模式執行。獨立式模式是用
 ## 獨立式工作者節點配置
 {: #standalone_worker notoc}
 
-在您啟動 Kafka Connect 獨立式工作者節點時，必須在提供的工作者節點內容檔中提供引導伺服器和 SASL 認證資訊。
-
 獨立式工作者節點不會使用任何內部主題。相反地，它使用檔案來儲存偏移資訊。
+
+在您啟動 Kafka Connect 獨立式工作者節點時，必須在提供的工作者節點內容檔中提供引導伺服器和 SASL 認證資訊。下列範例列出您必須在內容檔中提供的內容：
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+請將 KAFKA_BROKERS_SASL、USER 及 PASSWORD 取代為來自 {{site.data.keyword.Bluemix_notm}} 主控台中 {{site.data.keyword.messagehub}} **服務認證**標籤的值。
 
 ### 來源連接器
 {: #source_connector notoc }

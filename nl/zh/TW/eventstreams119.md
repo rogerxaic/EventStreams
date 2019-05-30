@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Watson IoT Platform 橋接器
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}} 提供一個受管理的橋接器，容許您建立與 {{site.data.keyword.messagehub_full}} 的單向鏈結。
 {: shortdesc}
 

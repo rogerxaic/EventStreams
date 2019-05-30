@@ -40,7 +40,7 @@ la confidentialité de vos données :
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-{: shortdesc}
+
 
 
 *  Pour accéder au tableau de bord

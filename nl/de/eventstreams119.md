@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Watson IoT Platform-Bridge
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}} stellt eine verwaltete Bridge bereit, mit der Sie eine unidirektionale Verbindung zu {{site.data.keyword.messagehub_full}} herstellen können.
 {: shortdesc}
 

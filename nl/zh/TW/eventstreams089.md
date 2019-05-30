@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Object Storage 橋接器（已淘汰）
+# 經典方案上的 Object Storage 橋接器
 {: #object_storage_bridge }
 
 **{{site.data.keyword.objectstorageshort}} 橋接器已從 2018 年 8 月 1 日淘汰。**
@@ -33,7 +33,7 @@ subcollection: eventstreams
 
 {{site.data.keyword.objectstorageshort}} 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 {{site.data.keyword.Bluemix_short}} 服務的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 {{site.data.keyword.objectstorageshort}} 服務中的容器。
 
-請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}。
+請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
 
 藉由配置 {{site.data.keyword.objectstorageshort}} 橋接器，您可以控制資料如何當作物件上傳到 {{site.data.keyword.objectstorageshort}}。例如，您可以配置的內容如下：
 
@@ -113,9 +113,9 @@ Kafka 訊息分割成 {{site.data.keyword.objectstorageshort}} 物件：
 
     以此方式配置的橋接器，所產生的物件名稱會包含字首
     `"offset=<kafka_offset>"` 其中 `"<kafka_offset>"` 對應於該分割區（具有此字首的物件群組）中儲存的第一個
-    Kafka 訊息。例如，如果橋接器產生名稱類似下列範例的物件，`<object_a>` 及 `<object_b>` 會包含偏移在範圍
-    0 - 999 的訊息、`<object_c>` 會包含偏移在範圍 1000 -
-    1999 的訊息，依此類推。
+    Kafka 訊息。例如，如果橋接器產生的物件名稱類似下列範例，`<object_a>` 和 `<object_b>` 會包含偏移在範圍
+    0 - 999 內的訊息，`<object_c>` 會包含偏移在範圍 1000 -
+    1999 內的訊息，依此類推。
 
     <pre class="pre"><code>
         ```
@@ -166,7 +166,7 @@ Kafka 訊息分割成 {{site.data.keyword.objectstorageshort}} 物件：
 	
 	像此範例這樣配置的橋接器，所產生的物件會具有如下列所指定的名稱：
 	`<object_a>` 包含具有 `"timestamp"` 欄位且日期為
-	2016-12-07 的 JSON 訊息，`<object_b>` 及 `<object_c>` 都包含具有 `"timestamp"` 欄位且日期為
+	2016-12-07 的 JSON 訊息，`<object_b>` 和 `<object_c>` 都包含具有 `"timestamp"` 欄位且日期為
 	2016-12-08 的 JSON 訊息。
 
     <pre class="pre"><code>

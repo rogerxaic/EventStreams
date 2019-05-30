@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# 管理对 {{site.data.keyword.messagehub}} 资源的访问权（企业套餐）
+# 管理对 {{site.data.keyword.messagehub}} 资源的访问权 
 {: #security }
 
 您可以采用细颗粒度方式保护 {{site.data.keyword.messagehub}} 资源，以管理您想要授予每个用户对每个资源的访问权。
 {: shortdesc}
+
+变更 IAM 策略和许可权时，有时候底层的服务需要几分钟后才能反映出来。
+{: important}
 
 ## 我可以保护什么内容？
 
@@ -74,17 +79,17 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |操作 |读取者角色|写入者角色|管理者角色|
 |---------|----------------|
 |允许对所有资源的完全访问权|不适用|不适用|服务实例：<var class="keyword varname">your_service_instance</var>|
-|允许应用程序或用户创建或删除主题|资源类型：<code>cluster</code>   |不适用|资源类型：topic <br/><br/>可选：资源标识：<var class="keyword varname">name_of_topic</var> |
-|列出组、主题和偏移量<br/> 描述组、主题和代理配置|资源类型：<code>cluster</code>   |不适用|不适用|
+|允许应用程序或用户创建或删除主题|资源类型：<code>cluster</code>   |不适用|资源类型：主题 <br/><br/>可选：资源标识：<var class="keyword varname">name_of_topic</var> |
+|列出组、主题和偏移量<br/> 描述组、主题和代理程序配置|资源类型：<code>cluster</code>   |不适用|不适用|
 |允许应用程序连接到集群|资源类型：<code>cluster</code>|不适用|不适用|
 |允许应用程序向任何主题生成内容|资源类型：<code>cluster</code>|资源类型：<code>topic</code>   |不适用|
-|允许应用程序向特定主题生成内容|资源类型：<code>cluster</code>|资源类型：<code>topic</code>   <br/>资源标识：<var class="keyword varname">name_of_topic</var>      |不适用|
-| 允许应用程序连接到任何主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code>   <br/>资源类型：<code>topic</code>   |资源类型：<code>topic</code>   |不适用|
-| 允许应用程序连接到特定主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code>   <br/>资源类型：<code>topic</code>   <br/>资源标识：<var class="keyword varname">name_of_topic</var>      |不适用|不适用|
-| 允许应用程序使用主题（使用者组）|资源类型：<code>cluster</code>   <br/>资源类型：<code>topic</code>   <br/> 资源类型：<code>group</code>   |不适用|不适用|
-|允许应用程序按事务向主题生成内容|资源类型：<code>cluster</code>   <br/> 资源类型：<code>group</code>   |资源类型：<code>topic</code>   <br/>资源标识：<var class="keyword varname">name_of_topic</var>      <br/>资源类型：<code>txnid</code>   |不适用|
-|删除使用者组|资源类型：<code>cluster</code>   |不适用|资源类型：<code>group</code>   <br/>资源标识：<var class="keyword varname">group_ID</var>      |
-| 要使用 Streams |资源类型：<code>cluster</code></br>资源类型：<code>group</code>   |不适用|资源类型：<code>topic</code>   |
+|允许应用程序向特定主题生成内容|资源类型：<code>cluster</code>|资源类型：<code>topic</code><br/>资源标识：<var class="keyword varname">name_of_topic</var>      |不适用|
+| 允许应用程序连接到任何主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code> <br/>资源类型：<code>topic</code> |不适用|不适用|
+| 允许应用程序连接到特定主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code> <br/>资源类型：<code>topic</code><br/>资源标识：<var class="keyword varname">name_of_topic</var> |不适用|不适用|
+| 允许应用程序使用主题（使用者组）|资源类型：<code>cluster</code> <br/>资源类型：<code>topic</code><br/> 资源类型：<code>group</code> |不适用|不适用|
+|允许应用程序按事务向主题生成内容|资源类型：<code>cluster</code> <br/> 资源类型：<code>group</code>|资源类型：<code>topic</code> <br/>资源标识：<var class="keyword varname">name_of_topic</var> <br/>资源类型：<code>txnid</code> |不适用|
+|删除使用者组|资源类型：<code>cluster</code>   |不适用|资源类型：<code>group</code> <br/>资源标识：<var class="keyword varname">group_ID</var>      |
+| 要使用 Streams |资源类型：<code>cluster</code></br> 资源类型：<code>group</code>|不适用|资源类型：<code>topic</code>   |
 
 有关 IAM 的更多信息，请参阅 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)。
 

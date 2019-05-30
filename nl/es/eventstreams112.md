@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Generación de mensajes
 {: #producing_messages }
@@ -57,7 +58,7 @@ Hay muchos más valores de configuración disponibles, pero asegúrese de leer d
 
 Cuando el productor publica un mensaje en un tema, el productor puede elegir qué partición utilizar. Si el orden es importante, debe recordar que una partición es una secuencia ordenada de registros, pero un tema consta de una o varias particiones. Si desea un conjunto de mensajes se entreguen en orden, asegúrese de que todos ellos vayan en la misma partición. La forma más sencilla de lograrlo es dar la misma clave a todos los mensajes. 
  
-El productor puede especificar explícitamente un número de partición cuando publica un mensaje. Esto permite el control directo, pero hace que el código de productor sea más complejo porque toma la responsabilidad de gestionar la selección de partición. Para obtener más información, consulte la llamada de método Producer.partitionsFor. Por ejemplo, la llamada se describe para [Kafka 1.1.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+El productor puede especificar explícitamente un número de partición cuando publica un mensaje. Esto permite el control directo, pero hace que el código de productor sea más complejo porque toma la responsabilidad de gestionar la selección de partición. Para obtener más información, consulte la llamada de método Producer.partitionsFor. Por ejemplo, la llamada se describe para [Kafka 2.2.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Si el productor no especifica un número de partición, un particionador realiza la selección de la partición. El particionador predeterminado incluido en el productor de Kafka funciona de la siguiente manera:
 
@@ -74,7 +75,7 @@ Kafka normalmente escribe los mensajes en el orden en el que el productor los ha
  
 El productor también puede reintentar enviar mensajes automáticamente. A menudo es una buena idea habilitar esta característica de reintento porque la alternativa es que el código de la aplicación tenga que realizar los reintentos él mismo. La combinación de lotes en Kafka y reintentos automáticos puede tener el efecto de duplicar los mensajes y reordenarlos.
  
-Por ejemplo, si publica una secuencia de tres mensajes &lt; M1, M2, M3 &gt; en un tema. Los registros pueden ajustarse todos al mismo lote, de modo que en realidad todos se envían juntos al líder de la partición. El líder luego los escribe en la partición y los replica como registros separados. En el caso de que se produzca una anomalía, es posible que M1 y M2 se añadan a la partición, pero no M3. El productor no recibe ningún acuse de recibo, de modo que vuelve a intentar enviar &lt;M1, M2, M3&gt;. El nuevo líder simplemente escribe M1, M2 y M3 en la partición, que ahora contiene &lt;M1, M2, M1, M2, M3&gt;, donde el M1 duplicado en realidad sigue al M2 original. Si restringe el número de solicitudes en curso a cada intermediario a sólo una, puede evitar esta reordenación. Aún puede encontrar que un único registro esté duplicado, como &lt;M1, M2, M2, M3 &gt;, pero nunca se desordenarán las secuencias. En Kafka 0,11 (todavía no disponible en {{site.data.keyword.messagehub}}), también puede utilizar la función de productor idempotente para evitar la duplicación de M2.
+Por ejemplo, si publica una secuencia de tres mensajes &lt; M1, M2, M3 &gt; en un tema. Los registros pueden ajustarse todos al mismo lote, de modo que en realidad todos se envían juntos al líder de la partición. El líder luego los escribe en la partición y los replica como registros separados. En el caso de que se produzca una anomalía, es posible que M1 y M2 se añadan a la partición, pero no M3. El productor no recibe ningún acuse de recibo, de modo que vuelve a intentar enviar &lt;M1, M2, M3&gt;. El nuevo líder simplemente escribe M1, M2 y M3 en la partición, que ahora contiene &lt;M1, M2, M1, M2, M3&gt;, donde el M1 duplicado en realidad sigue al M2 original. Si restringe el número de solicitudes en curso a cada intermediario a sólo una, puede evitar esta reordenación. Aún puede encontrar que un único registro esté duplicado, como &lt;M1, M2, M2, M3 &gt;, pero nunca se desordenarán las secuencias. En Kafka 0.11 o posterior, también puede utilizar la función de productor idempotente para evitar la duplicación de M2.
  
 Es una práctica normal con Kafka escribir aplicaciones para que gestionen duplicados de mensajes ocasionales porque el impacto en el rendimiento de tener sólo una única solicitud en curso es significativo.
 
@@ -104,13 +105,15 @@ Para mejorar la eficiencia, el productor agrupa lotes de registros para enviarlo
 Si intenta publicar mensajes de forma más rápida que la necesaria para que se envíen a un servidor, el productor las almacena automáticamente en solicitudes por lotes. El productor mantiene un almacenamiento intermedio de registros no enviados para cada partición. Por supuesto, llega un momento en que incluso la agrupación por lotes no permite lograr la velocidad deseada.
  
 Hay otro factor que tiene un impacto. Para evitar que productores o consumidores individuales inunden el clúster, {{site.data.keyword.messagehub}} aplica cuotas de rendimiento. Se calcula la velocidad con la que cada productor envía datos y se regula a cualquier productor que intente superar su cuota. La regulación se aplica retrasando ligeramente el envío de respuestas al productor. Normalmente, este método actúa como un freno natural.
+
+Para obtener información de orientación para un mejor rendimiento, consulte [Límites y cuotas](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas). 
  
 En resumen, cuando un mensaje se publica, su primer registro se escribe primero en un almacenamiento intermedio en el productor. En segundo plano, el productor agrupa los registros en lotes y los envía al servidor. A continuación, el servidor responde al productor, posiblemente aplicando un retraso de limitación si el productor está publicando demasiado rápido. Si se llena el almacenamiento intermedio del productor, la llamada de envío del productor se retrasa, pero podría fallar con una excepción.
 
 ## Fragmentos de código
 {: #code_snippets}
 
-Estos fragmentos de código tienen un nivel muy alto para ilustrar los conceptos implicados. Para ver ejemplos completos, consulte los ejemplos de {{site.data.keyword.messagehub}} en GitHub https://github.com/ibm-messaging/event-streams-samples.
+Estos fragmentos de código tienen un nivel muy alto para ilustrar los conceptos implicados. Para ver ejemplos completos, consulte los ejemplos de {{site.data.keyword.messagehub}} en [GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples).
 
 Para conectarse a {{site.data.keyword.messagehub}}, primero debe crear el conjunto de propiedades de configuración. Todas las conexiones a {{site.data.keyword.messagehub}} están protegidas mediante TLS y autenticación de usuario/contraseña, de modo que necesita estas propiedades como mínimo. Sustituya KAFKA_BROKERS_SASL, USER y PASSWORD por sus credenciales de servicio:
 

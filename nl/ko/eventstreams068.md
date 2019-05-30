@@ -39,7 +39,7 @@ subcollection: eventstreams
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-{: shortdesc}
+
 
 
 *  {{site.data.keyword.messagehub}} 대시보드에

@@ -13,16 +13,33 @@ IBM Event Streams
 		eventstreams010.md
 		eventstreams073.md
 	 	eventstreams085.md
-		eventstreams132.md
+		eventstreams143.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	eventstreams112.md
-	eventstreams114.md
-	eventstreams118.md
+	eventstreams132.md
 	eventstreams068.md
-	eventstreams072.md
 	at-events.md
+	
+	{: .topicgroup}
+	클래식 플랜
+		eventstreams134.md
+		eventstreams135.md
+		eventstreams136.md
+		eventstreams147.md
+		eventstreams137.md
+		eventstreams138.md
+		eventstreams141.md
+		eventstreams146.md
+		eventstreams075.md
+		eventstreams099.md
+		eventstreams088.md
+		eventstreams105.md
+		eventstreams115.md
+		eventstreams089.md
+		eventstreams139.md
+		eventstreams140.md
+		eventstreams144.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
@@ -34,31 +51,28 @@ IBM Event Streams
 		eventstreams128.md
 		eventstreams116.md
 		eventstreams124.md
+
+	
 	
 	{: .topicgroup}
 	Event Streams를 사용한 앱 개발
 		eventstreams050.md
-		eventstreams062.md
-		eventstreams063.md
-		eventstreams104.md
+		eventstreams112.md
+		eventstreams114.md
+		eventstreams118.md
 		eventstreams113.md
 		eventstreams111.md
 		eventstreams110.md
 		eventstreams025.md
-		eventstreams075.md
-		eventstreams099.md
-		eventstreams087.md
+		eventstreams117.md
 
 	{: .topicgroup}
 	기타 서비스와 통합
-		eventstreams088.md
-		eventstreams105.md
-		eventstreams115.md
-		eventstreams089.md
 		eventstreams119.md
 
 	{: .topicgroup}
 	튜토리얼
+		eventstreams104.md
 	 	[오브젝트 스토리지 및 발행/구독 메시징 튜토리얼을 사용한 비동기 데이터 처리](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-pub-sub-object-storage#asynchronous-data-processing-using-object-storage-and-pub-sub-messaging)
 	{: .navgroup-end}
 
@@ -69,13 +83,13 @@ IBM Event Streams
 	문제점 해결
 		ts_overview.md
 		eventstreams057.md
-		eventstreams109.md
 		eventstreams125.md
+		eventstreams109.md
 		
 	{: .topicgroup}
 	관련 링크
 	 	[Event Streams Java Kafka 샘플](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)
-	 	[Apache Kafka 1.1.0 클라이언트](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz)
+	 	[Apache Kafka 클라이언트 다운로드](https://kafka.apache.org/downloads)
 		[IBM Event Streams on ibm.com](https://www.ibm.com/cloud/message-hub)
 	{: .navgroup-end}
 

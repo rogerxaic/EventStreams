@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Object Storage 网桥（不推荐）
+# 经典套餐上的 Object Storage 网桥
 {: #object_storage_bridge }
 
 **{{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起已弃用。**
@@ -33,7 +33,7 @@ subcollection: eventstreams
 
 {{site.data.keyword.objectstorageshort}} 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 {{site.data.keyword.Bluemix_short}} 服务的实例中。网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 {{site.data.keyword.objectstorageshort}} 服务中的容器。
 
-请注意，{{site.data.keyword.Bluemix_short}} 中的首选 Object Storage 服务现在为 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服务。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}。
+请注意，{{site.data.keyword.Bluemix_short}} 中的首选 Object Storage 服务现在为 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服务。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
 
 通过配置 {{site.data.keyword.objectstorageshort}} 网桥，可以控制数据如何作为对象上传到 {{site.data.keyword.objectstorageshort}}。例如，可以配置的属性如下所示：
 
@@ -99,7 +99,7 @@ subcollection: eventstreams
      	</code></pre>
     {:codeblock}
 
-    通过此方式配置的网桥所生成的对象名称包含前缀 `"offset=<kafka_offset>"`，其中 `"<kafka_offset>"` 对应于该分区中存储的第一条 Kafka 消息（具有此前缀的对象组）。例如，如果网桥生成名称类似以下示例的对象，那么 `<object_a>` 和 `<object_b>` 包含具有 0 - 999 范围内偏移量的消息，`<object_c>` 包含具有 1000 - 1999 范围内偏移量的消息，依此类推。
+    通过此方式配置的网桥所生成的对象名称包含前缀 `"offset=<kafka_offset>"`，其中 `"<kafka_offset>"` 对应于该分区（具有此前缀的一组对象）中存储的第一条 Kafka 消息。例如，如果网桥生成其名称类似于以下示例的对象，那么 `<object_a>` 和 `<object_b>` 包含偏移量在 0 - 999 范围内的消息，`<object_c>` 包含偏移量在 1000 - 1999 范围内的消息，以此类推。
 
     <pre class="pre"><code>
         ```
@@ -147,10 +147,7 @@ subcollection: eventstreams
 
 	按 ISO 8601 日期分区需要 Kafka 消息具有有效的 JSON 格式。用于配置网桥的 JSON 格式的 `"propertyName"` 值必须对应于每条 Kafka 消息中的 ISO 8601 日期字段。在此示例中，`"timestamp"` 字段必须包含有效的 ISO 8601 日期值。然后，将根据消息的日期来对消息分区。
 	
-	类似此示例进行配置的网桥会生成指定名称的对象，如下所示：
-	`<object_a>` 包含 JSON 消息以及日期为 2016-12-07 的 `"timestamp"` 字段，
-	`<object_b>` 和 `<object_c>` 都包含 JSON 消息以及日期为
-	2016-12-08 的 `"timestamp"` 字段。
+	类似此示例进行配置的网桥会生成指定名称的对象，如下所示：`<object_a>` 包含其 `"timestamp"` 字段的日期为 2016-12-07 的 JSON 消息，`<object_b>` 和 `<object_c>` 包含其 `"timestamp"` 字段的日期为 2016-12-08 的 JSON 消息。
 
     <pre class="pre"><code>
         ```

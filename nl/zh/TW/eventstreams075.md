@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# 使用 MQ Light API 
+# 在經典方案上使用 MQ Light API
 {: #mql_using}
 
-** MQ Light API 只提供於標準方案中。**
+**MQ Light API 只提供於經典方案中。**
 <br/>
 
 提供 {{site.data.keyword.mql}} API 的原因是為了與較早期 {{site.data.keyword.mql}} 服務的舊版相容性。API 針對 Java、Node.js、Python 及 Ruby 提供了一個以 AMQP 為基礎的傳訊介面。
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## 什麼是 MQ Light API，它有什麼不同？
 {: #mqlight}
@@ -41,13 +38,13 @@ The {{site.data.keyword.mql}} API is available in the following {{site.data.keyw
 使用 Kafka 用戶端或是 {{site.data.keyword.mql}} API 之間的選擇，取決於您想要建置的傳訊拓蹼：
 
 * 使用 Kafka，您會使用少量的主題，且可以針對每個主題有多個分割區，獲得額外的可擴充性。您可以使用消費者群組在消費者之間共用訊息，但每個消費者必須能夠跟上指派給他的分割區訊息速率。
-* 使用 {{site.data.keyword.mql}} API，您可以使用大量的主題，且主題名稱為階層式（例如：<code>&lsquo;/sports/football&rsquo;</code> 及 <code>&lsquo;/sports/tiddlywinks&rsquo;</code>）。  
+* 使用 {{site.data.keyword.mql}} API，您可以使用大量的主題，且主題名稱為階層式（例如：<code>&lsquo;/sports/football&rsquo;</code> 及 <code>&lsquo;/sports/tiddlywinks&rsquo;</code>）。 
 
 {{site.data.keyword.mql}} API 中的主題與 Kafka 主題不同。相反地，{{site.data.keyword.mql}} API 會使用稱為 "MQLight" 的單一 Kafka 主題，使用 {{site.data.keyword.mql}} API 傳送和接收的所有訊息會通過那一個 Kafka 主題。
 
 {{site.data.keyword.mql}} 只提供於下列 {{site.data.keyword.Bluemix_notm}} 位置（地區）：達拉斯 (us-south)、倫敦 (eu-gb) 及雪梨 (au-syd)。MQ Light API 無法用於法蘭克福 (eu-de) 位置或 {{site.data.keyword.Bluemix_notm}} Dedicated。
 
-如需在 API 之間選擇的相關資訊，請參閱[在三個 API 之間抉擇](/docs/services/EventStreams?topic=eventstreams-choose_api)。
+如需在 API 之間選擇的相關資訊，請參閱[在三個 API 之間抉擇](/docs/services/EventStreams?topic=eventstreams-choose_api_classic)。
 
 
 ## 使用 MQ Light API 搭配 {{site.data.keyword.messagehub}} 需要些什麼嗎？
@@ -68,21 +65,23 @@ MQ Light API 使用 "MQLight" 主題來儲存其訊息資料，以及與其他 K
 ## 如何連接及鑑別
 {: #mql_connect}
 
-若要將應用程式連接至服務，應用程式必須使用來自 [VCAP_SERVICES 環境變數](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)的 <code>user</code>、
+若要將應用程式連接至服務，應用程式必須使用來自 [VCAP_SERVICES 環境變數](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf)的 <code>user</code>、
 <code>password</code> 及 <code>mqlight_lookup_url</code> 詳細資料。請使用適用於您的選擇語言的下列指引：
 
 
 
 **針對 Java**
 
-如果您指定 <code>null</code> 作為 create() 呼叫的 endpointService 參數，這會指示用戶端從 VCAP_SERVICES 讀取 <code>user</code>、<code>password</code> 及 <code>mqlight_lookup_url</code> 詳細資料：
+如果將 <code>null</code> 指定為 create() 呼叫的 endpointService 參數，這將指示用戶端從 VCAP_SERVICES 讀取 <code>user</code>、<code>password</code> 和 
+<code>mqlight_lookup_url</code> 詳細資料：
+
 
 
 <pre>
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
         client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}
@@ -91,8 +90,8 @@ MQ Light API 使用 "MQLight" 主題來儲存其訊息資料，以及與其他 K
 
 **針對 Node.js**
 
-從 VCAP_SERVICES 擷取 <code>user</code>、<code>password</code> 及
-<code>mqlight_lookup_url</code> 詳細資料，然後使用它們建立用戶端，如下所示：
+在 VCAP_SERVICES 中擷取 <code>user</code>、 <code>password</code> 和 
+<code>mqlight_lookup_url</code> 詳細資料，並將其用於建立用戶端，如下所示：
 
 
 
@@ -111,9 +110,8 @@ var mqlightClient = mqlight.createClient(opts, function(err) {
 
 **針對 Ruby**
 
-從 VCAP_SERVICES 擷取 <code>user</code>、<code>password</code> 及
-<code>mqlight_lookup_url</code> 詳細資料，然後使用它們建立用戶端，如下所示：
-
+在 VCAP_SERVICES 中擷取 <code>user</code>、 <code>password</code> 和 
+<code>mqlight_lookup_url</code> 詳細資料，並將其用於建立用戶端，如下所示：
 <pre>
 <code>vcap_services = JSON.parse(ENV['VCAP_SERVICES'])
 conn_details = vcap_services['messagehub']
@@ -130,9 +128,8 @@ set :client, Mqlight::BlockingClient.new(service, opts)
 
 **針對 Python**
 
-從 VCAP_SERVICES 擷取 <code>user</code>、<code>password</code> 及
-<code>mqlight_lookup_url</code> 詳細資料，然後使用它們建立用戶端，如下所示：
-
+在 VCAP_SERVICES 中擷取 <code>user</code>、 <code>password</code> 和 
+<code>mqlight_lookup_url</code> 詳細資料，並將其用於建立用戶端，如下所示：
 <pre>
 <code>vcap_services = json.loads(os.environ.get('VCAP_SERVICES'))
 conn_details = vcap_services['messagehub'][0]

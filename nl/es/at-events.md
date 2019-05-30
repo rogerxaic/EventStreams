@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-08-14"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,13 +21,13 @@ subcollection: eventstreams
 
 <!-- Name your file `at-events.md` and include it in the Reference nav group in your toc file. -->
 
-# Sucesos de {{site.data.keyword.cloudaccesstrailshort}} (plan Empresa)
+# Sucesos de {{site.data.keyword.cloudaccesstrailshort}} 
 {: #at_events}
 
-Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con el servicio {{site.data.keyword.messagehub}} en el plan Empresa en {{site.data.keyword.Bluemix}}. 
+Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con el servicio {{site.data.keyword.messagehub}} en los planes Estándar y Empresa de {{site.data.keyword.Bluemix}}. 
 {: shortdesc}
 
-El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [{{site.data.keyword.cloudaccesstrailshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla){:new_window}.
+El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [{{site.data.keyword.cloudaccesstrailshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}.
 
 <!-- You can create different sections to group events by area. -->
 
@@ -36,12 +36,12 @@ El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades
 
 <!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
 
-{{site.data.keyword.messagehub}} en el plan Empresa genera sucesos automáticamente, de forma que puede realizar el seguimiento de la actividad del servicio.
+{{site.data.keyword.messagehub}}, en los planes Estándar y Empresa, genera sucesos automáticamente, para que se pueda realizar el seguimiento de la actividad del servicio.
 
 | Acción | Descripción |
 |:-------|:------------|
-| messagehub.topic.create | Un suceso se crea al crear un tema|
-| messagehub.topic.delete | Un suceso se crea al suprimir un tema|
+| event-streams.topic.create | Se crea un suceso al crear un tema|
+| event-streams.topic.delete | Se crea un suceso al suprimir un tema|
 {: caption="Tabla 1. Sucesos de {{site.data.keyword.messagehub}}" caption-side="top"}
 
 ## Dónde ver los sucesos

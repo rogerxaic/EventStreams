@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# Zugriff auf {{site.data.keyword.messagehub}}-Ressourcen verwalten (Enterprise-Plan)
+# Zugriff auf Ihre {{site.data.keyword.messagehub}}-Ressourcen verwalten 
 {: #security }
 
 Sie können Ihre {{site.data.keyword.messagehub}}-Ressourcen differenziert schützen, um den Zugriff zu verwalten, den Sie jedem Benutzer für die einzelnen Ressourcen erteilen möchten.
 {: shortdesc}
+
+Wenn Sie Änderungen an IAM-Richtlinien und -Berechtigungen vornehmen, kann es einige Minuten dauern, bis diese im zugrunde liegenden Service umgesetzt werden.
+{: important}
 
 ## Welche Ressourcen kann ich schützen?
 
@@ -74,16 +79,16 @@ In der nachfolgenden Tabelle finden Sie eine Zusammenfassung einiger allgemeiner
 | Aktion | Rolle 'Leseberechtigter' | Rolle 'Schreibberechtigter' | Rolle 'Manager' |
 |---------|----------------|
 | Uneingeschränkten Zugriff auf alle Ressourcen ermöglichen|Nicht zutreffend   |Nicht zutreffend  |Serviceinstanz: <var class="keyword varname">your_service_instance</var>|
-| Einer App oder einem Benutzer ermöglichen, ein Topic zu erstellen oder zu löschen |Ressourcentyp: <code>cluster</code>   |Nicht zutreffend  |Ressourcentyp: topic <br/><br/>Optional: Ressourcen-ID: <var class="keyword varname">name_of_topic</var> |
+| Einer App oder einem Benutzer ermöglichen, ein Topic zu erstellen oder zu löschen |Ressourcentyp: <code>cluster</code>   |Nicht zutreffend  |Ressourcentyp: topic <br/><br/>Optional: Ressourcen-ID: <var class="keyword varname">Topicname</var> |
 | Gruppen, Topics und Offsets auflisten <br/> Gruppen-, Topic- und Brokerkonfigurationen beschreiben | Ressourcentyp: <code>cluster</code>      |Nicht zutreffend  |Nicht zutreffend      |
 | Einer App das Herstellen einer Verbindung zum Cluster ermöglichen  |Ressourcentyp: <code>cluster</code>| Nicht zutreffend     |Nicht zutreffend      |
 | Einer App ermöglichen, Nachrichten an ein beliebiges Topic zu senden  |Ressourcentyp: <code>cluster</code>|Ressourcentyp: <code>topic</code> |Nicht zutreffend     |
-| Einer App ermöglichen, Nachrichten an ein bestimmtes Topic zu senden  |Ressourcentyp: <code>cluster</code>|Ressourcentyp: <code>topic</code><br/>Ressourcen-ID: <var class="keyword varname">name_of_topic</var>      |Nicht zutreffend     |
-| Einer App ermöglichen, eine Verbindung von einem beliebigen Topic herzustellen und Nachrichten von diesem zu verarbeiten (keine Consumergruppe)  |Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code> |Ressourcentyp: <code>topic</code>|Nicht zutreffend     |
-| Einer App ermöglichen, eine Verbindung von einem bestimmten Topic herzustellen und Nachrichten von diesem zu verarbeiten (keine Consumergruppe)  | Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code><br/>Ressourcen-ID: <var class="keyword varname">name_of_topic</var> |Nicht zutreffend     |Nicht zutreffend     |
+| Einer App ermöglichen, Nachrichten an ein bestimmtes Topic zu senden  |Ressourcentyp: <code>cluster</code>|Ressourcentyp: <code>topic</code><br/>Ressourcen-ID: <var class="keyword varname">Topicname</var>      |Nicht zutreffend     |
+| Einer App ermöglichen, eine Verbindung von einem beliebigen Topic herzustellen und Nachrichten von diesem zu verarbeiten (keine Consumergruppe)  |Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code> |Nicht zutreffend    |Nicht zutreffend     |
+| Einer App ermöglichen, eine Verbindung von einem bestimmten Topic herzustellen und Nachrichten von diesem zu verarbeiten (keine Consumergruppe)  | Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code><br/>Ressourcen-ID: <var class="keyword varname">Topicname</var> |Nicht zutreffend     |Nicht zutreffend     |
 | Einer App ermöglichen, ein Topic zu verarbeiten (Consumergruppe)  |Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code><br/> Ressourcentyp: <code>group</code> |Nicht zutreffend      |Nicht zutreffend     |
-| Einer App ermöglichen, Nachrichten transaktionsorientiert an ein Topic zu senden  |Ressourcentyp: <code>cluster</code> <br/> Ressourcentyp: <code>group</code>|Ressourcentyp: <code>topic</code> <br/>Ressourcen-ID: <var class="keyword varname">name_of_topic</var> <br/>Ressourcentyp: <code>txnid</code> |Nicht zutreffend     |
-| Consumergruppe löschen |Ressourcentyp: <code>cluster</code> |Nicht zutreffend  |Ressourcentyp: <code>group</code> <br/>Ressourcen-ID: <var class="keyword varname">group_ID</var>      |
+| Einer App ermöglichen, Nachrichten transaktionsorientiert an ein Topic zu senden  |Ressourcentyp: <code>cluster</code> <br/> Ressourcentyp: <code>group</code>|Ressourcentyp:  <code>topic</code> <br/>Ressourcen-ID: <var class="keyword varname">Topicname</var> <br/>Ressourcentyp: <code>txnid</code> |Nicht zutreffend     |
+| Consumergruppe löschen |Ressourcentyp: <code>cluster</code> |Nicht zutreffend  |Ressourcentyp: <code>group</code> <br/>Ressourcen-ID: <var class="keyword varname">Gruppen-ID</var>      |
 | Verwendung von Streams |Ressourcentyp: <code>cluster</code></br>Ressourcentyp: <code>group</code>| Nicht zutreffend  |Ressourcentyp: <code>topic</code>    |
 
 Weitere Informationen zu IAM finden Sie unter

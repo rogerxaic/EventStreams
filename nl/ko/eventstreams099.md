@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -16,11 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# MQ Light 클라이언트 사용
+# 클래식 플랜에서 MQ Light 클라이언트 사용
 {: #mql_clients}
 
-** MQ Light API는 표준 플랜의 일부로만 사용 가능합니다.**
+** MQ Light API는 클래식 플랜의 일부로만 사용 가능합니다. **
+{: note}
 <br/>
+
 ## MQ Light Java 클라이언트 사용
 {: #mql_java}
 
@@ -38,6 +40,7 @@ API를 사용하려면 다음과 같이 사용 가능한 최신 Java용 {{site.d
 ```
 {:codeblock}
 
+
 <!-- 12/11/18: info was in eventstreams102.md, moved because of doc app changes -->
 
 ## MQ Light Node.js 클라이언트 사용 
@@ -53,7 +56,7 @@ API를 사용하려면 다음과 같이 사용 가능한 최신 Node.js용 {{sit
 
 그리고 소스 파일에 다음 require 문을 추가하십시오.
 
-<pre class="pre"><code>var mqlight = require(&lsquo;mqlight&rsquo;);</code></pre>
+<pre class="pre"><code>var mqlight = require(‘mqlight’);</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams103.md, moved because of doc app changes -->
@@ -73,7 +76,9 @@ gem 'mqlight', '~> 1.0'
 
 그리고 소스 파일에 다음 require 문을 추가하십시오.
 
-<pre class="pre"><code>require &lsquo;mqlight&rsquo;</code></pre>
+```
+require ‘mqlight’
+```
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams101.md, moved because of doc app changes -->
@@ -102,3 +107,6 @@ Instructions for getting started, with links for more info
 Simple send source and receive source in-line
 
 -->
+
+
+

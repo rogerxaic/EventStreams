@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -29,9 +29,25 @@ Kafka Connect는 독립형 또는 분산 모드로 실행될 수 있습니다. �
 ## 독립형 작업자 구성
 {: #standalone_worker notoc}
 
-Kafka Connect 독립형 작업자를 시작할 때 제공하는 작업자 특성 파일에 부트스트랩 서버 및 SASL 인증 정보를 제공해야 합니다.
-
 독립형 작업자는 내부 토픽을 사용하지 않습니다. 대신, 오프셋 정보를 저장하기 위해 파일을 사용합니다.
+
+Kafka Connect 독립형 작업자를 시작할 때 제공하는 작업자 특성 파일에 부트스트랩 서버 및 SASL 인증 정보를 제공해야 합니다. 다음 예제는 특성 파일에 제공해야 하는 특성을 나열합니다.
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+KAFKA_BROKERS_SASL, USER 및 PASSWORD를 {{site.data.keyword.Bluemix_notm}} 콘솔의
+{{site.data.keyword.messagehub}} **서비스 인증 정보**에 있는 값으로 대체하십시오.
 
 ### 소스 커넥터
 {: #source_connector notoc }

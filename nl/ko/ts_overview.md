@@ -27,8 +27,9 @@ subcollection: eventstreams
 다양한 커뮤니티의 구성원이 답변을 제공할 것입니다.
 {: shortdesc}
 
-{{site.data.keyword.messagehub}}에 문제점이 생긴 경우, [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status?selected=status){:new_window}를 우선 확인하십시오. {{site.data.keyword.messagehub}} 팀의
-도움이 필요한 경우에는 [{{site.data.keyword.messagehub}} 팀에 문제점 보고 - 표준 플랜](/docs/services/EventStreams?topic=eventstreams-report_problem) 또는 [{{site.data.keyword.messagehub}} 팀에 문제점 보고 - 엔터프라이즈 플랜](/docs/services/EventStreams?topic=eventstreams-report_problem)에 자세히 설명되어 있는 모든 필수 정보를 수집해야 합니다.
+{{site.data.keyword.messagehub}}에 문제점이 생긴 경우, [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status?selected=status){:new_window}를 우선 확인하십시오. {{site.data.keyword.messagehub}} 팀의 도움을 받으려면 [{{site.data.keyword.messagehub}} 팀에 문제점 보고 - 표준 및 엔터프라이즈 플랜](/docs/services/EventStreams?topic=eventstreams-report_problem_enterprise#report_problem_enterprise)에 서명되어 있는 모든 필수 정보를 수집해야 합니다.
+
+클래식 플랜을 사용 중인 경우 팀에 필요한 정보 목록은 [{{site.data.keyword.messagehub}} 팀에 문제점 보고 - 클래식 플랜](/docs/services/EventStreams?topic=eventstreams-report_problem#report_problem)을 참조하십시오.
 {:shortdesc}
 
 ## 유용한 링크
@@ -36,12 +37,9 @@ subcollection: eventstreams
 
 *  [{{site.data.keyword.Bluemix_short}} 무료 평가판 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [{{site.data.keyword.messagehub}} Java Kafka 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}를 사용하여 웹 애플리케이션 작성 및
-   Cloud Foundry를 사용하여 앱 배치![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+*  [{{site.data.keyword.Bluemix_notm}}를 사용하여 웹 애플리케이션 작성 및 Cloud Foundry를 사용하여 앱 배치 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Apache Kafka 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation.html){: new_window}
-*  [Apache Kafka 1.1.0 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}
-*  [A Comprehensive, Open Source REST Proxy for Kafka. ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window} 
-	이 블로그는 Kafka REST API의 강점과 약점에 대한 유용한 소개를 제공합니다. Kafka REST API는 표준 플랜의 일부로만 사용 가능합니다.
-*  [{{site.data.keyword.Bluemix_notm}} 가격 정보![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}
+*  [Apache Kafka 2.2.0 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
+*  [{{site.data.keyword.Bluemix_notm}} 가격 정보![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}
 
 

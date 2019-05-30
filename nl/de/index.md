@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-15"
+lastupdated: "2019-05-08"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -43,7 +43,7 @@ Führen Sie die folgenden Schritte aus:
   
   b. Klicken Sie auf **Katalog**.
   
-  c. Wählen Sie im Abschnitt **Integration** den **{{site.data.keyword.messagehub}}-Plan "Standard"** aus. Die Seite für die {{site.data.keyword.messagehub}}-Serviceinstanz wird geöffnet.
+  c. Klicken Sie im Abschnitt **Integration** auf die {{site.data.keyword.messagehub}}-Kachel und wählen Sie dann den **Plan "Standard"** aus. Die Seite für die {{site.data.keyword.messagehub}}-Serviceinstanz wird geöffnet.
   
   d. Geben Sie einen Namen für den Service ein. Sie können den Standardwert verwenden.
   
@@ -51,7 +51,7 @@ Führen Sie die folgenden Schritte aus:
 
 2. {: #create_credentials_step notoc} Erstellen Sie {{site.data.keyword.messagehub}}-Berechtigungsnachweise, indem Sie diese Schritte ausführen: [Berechtigungsnachweise abrufen und Verbindung über die IBM Cloud-Konsole herstellen](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
    <br/>
-   <br/>Sie benötigen die Werte für *kafka_brokers_sasl*, *kafka_admin_url* und *api_key* für [Schritt 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) dieser Task.   
+   <br/>Sie benötigen die Werte für *kafka_brokers_sasl* und *api_key* für [Schritt 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) dieser Task.   
 
 3. Installieren Sie die folgenden vorausgesetzten Komponenten (falls noch nicht vorhanden):
 
@@ -79,18 +79,16 @@ Führen Sie die folgenden Schritte aus:
 
 7. {: #start_consumer_step notoc} Starten Sie den Consumer in Ihrer Konsole, indem Sie den folgenden Befehl ausführen:
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -consumer</pre>
     
     In dem Beispiel wird ein Topic mit dem Namen `kafka-java-console-sample-topic` verwendet. Wenn das Topic noch nicht
     vorhanden ist, wird es in dem Beispiel mithilfe der {{site.data.keyword.messagehub}}-Verwaltungs-API erstellt. Zum Senden und Empfangen
     von Nachrichten wird in dem Beispiel die Apache Kafka-Java-API verwendet.
 
-    Verwenden Sie die Werte für *kafka_brokers_sasl*, *kafka_admin_url* und
-    *api_key* aus den Berechtigungsnachweisen, die Sie in [Schritt 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) erstellt haben.
-	
-	Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander.
-    
+    Verwenden Sie die Werte für *kafka_brokers_sasl*
+    und *api_key* aus den Berechtigungsnachweisen, die Sie in [Schritt 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) erstellt haben. <p></p>
+
 	**Wichtig:** *kafka_brokers_sasl* muss eine einzige Zeichenfolge sein, die in Anführungszeichen angegeben ist. Beispiel:
 
     <pre class="pre">
@@ -101,8 +99,8 @@ Führen Sie die folgenden Schritte aus:
 
 8. Starten Sie den Producer in Ihrer Konsole, indem Sie den folgenden Befehl ausführen:
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -producer</pre>
   
 9. Nun müssten die vom Producer gesendeten Nachrichten im Consumer angezeigt werden. Im Folgenden ist eine
 Beispielausgabe aufgelistet:

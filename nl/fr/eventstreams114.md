@@ -134,7 +134,7 @@ Vous pouvez utiliser un programme d'écoute de rééquilibrage des consommateurs
 ## Fragments de code
 {: #consumer_code_snippets notoc}
 
-Les fragments de code qui suivent sont d'un niveau très élevé afin d'illustrer les concepts impliqués. Pour obtenir des exemples complets, voir les exemples de {{site.data.keyword.messagehub}} dans GitHub, https://github.com/ibm-messaging/event-streams-samples.
+Les fragments de code qui suivent sont d'un niveau très élevé afin d'illustrer les concepts impliqués. Pour obtenir des exemples complets, voir les exemples de {{site.data.keyword.messagehub}} dans [GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples).
 
 Pour pouvoir vous connecter à {{site.data.keyword.messagehub}}, vous devez d'abord générer le jeu de propriétés de configuration. Etant donné que toutes les connexions à {{site.data.keyword.messagehub}} sont sécurisées à l'aide de TLS et d'une authentification par nom d'utilisateur/mot de passe, vous avez au minimum besoin de ces propriétés. Remplacez KAFKA_BROKERS_SASL, USER et PASSWORD par vos propres données d'identification de service :
 

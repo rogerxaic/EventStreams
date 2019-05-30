@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-15"
+lastupdated: "2019-05-08"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -41,7 +41,7 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
   
   b. **카탈로그**를 클릭하십시오.
   
-  c. **통합** 섹션에서 **{{site.data.keyword.messagehub}} 표준 플랜**을 선택하십시오. {{site.data.keyword.messagehub}} 서비스 인스턴스 페이지가 열립니다.
+  c. **통합** 섹션에서 {{site.data.keyword.messagehub}} 타일을 클릭한 후 **표준 플랜**을 선택하십시오. {{site.data.keyword.messagehub}} 서비스 인스턴스 페이지가 열립니다.
   
   d. 서비스의 이름을 입력하십시오. 기본값을 사용할 수 있습니다.
   
@@ -49,7 +49,7 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
 
 2. {: #create_credentials_step notoc} [IBM Cloud 콘솔을 사용하여 인증 정보 가져오기 및 연결](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console) 단계를 완료하여 몇 가지 {{site.data.keyword.messagehub}} 인증 정보를 작성하십시오.
    <br/>
-   <br/>이 태스크의 [7단계](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)를 수행하려면 *kafka_brokers_sasl*, *kafka_admin_url* 및 *api_key*의 값이 필요합니다.   
+   <br/>이 태스크의 [7단계](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)를 수행하려면 *kafka_brokers_sasl* 및 *api_key*의 값이 필요합니다.   
 
 3. 아직 설치되어 있지 않다면, 다음 필수 소프트웨어를 설치하십시오.
 
@@ -77,18 +77,15 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
 
 7. {: #start_consumer_step notoc}다음 명령을 실행하여 콘솔에서 이용자를 시작하십시오.
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -consumer</pre>
     
     샘플은 `kafka-java-console-sample-topic`으로 이름 지정된 토픽을 사용합니다. 토픽이 아직 없는 경우
     샘플은 {{site.data.keyword.messagehub}} 관리 API를 사용하여 토픽을 작성합니다. 메시지를 전송 및 수신하기 위해
     샘플은 Apache Kafka Java API를 사용합니다.
 
-    [2단계](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step)에서 작성한 인증 정보의
-    *kafka_brokers_sasl*, *kafka_admin_url* 및 *api_key* 값을 사용하십시오.
-	
-	사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오.
-    
+    [2단계](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step)에서 작성한 인증 정보의 *kafka_brokers_sasl* 및 *api_key* 값을 사용하십시오.<p></p>
+
 	**중요:** *kafka_brokers_sasl*은 단일 문자열이어야 하며 따옴표로 묶어야 합니다. 예를 들어, 다음과 같은 경우입니다.
 
     <pre class="pre">
@@ -99,8 +96,8 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
 
 8. 다음 명령을 실행하여 콘솔에서 제작자를 시작하십시오.
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -producer</pre>
   
 9. 이제 이용자에 표시되는 제작자가 보낸 메시지를 볼 수 있습니다. 일부 샘플 출력은 다음과 같습니다.
 

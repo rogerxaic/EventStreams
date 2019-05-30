@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-08-14"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,13 +21,13 @@ subcollection: eventstreams
 
 <!-- Name your file `at-events.md` and include it in the Reference nav group in your toc file. -->
 
-# {{site.data.keyword.cloudaccesstrailshort}} 事件（企业套餐）
+# {{site.data.keyword.cloudaccesstrailshort}} 事件 
 {: #at_events}
 
-使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix}} 中企业套餐内的 {{site.data.keyword.messagehub}} 服务进行交互。
+使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix}} 中标准和企业套餐内的 {{site.data.keyword.messagehub}} 服务进行交互。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服务会记录 {{site.data.keyword.Bluemix_notm}} 中用户发起的更改服务状态的活动。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla){:new_window}。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服务会记录 {{site.data.keyword.Bluemix_notm}} 中用户发起的更改服务状态的活动。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}。
 
 <!-- You can create different sections to group events by area. -->
 
@@ -36,12 +36,12 @@ subcollection: eventstreams
 
 <!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
 
-企业套餐中的 {{site.data.keyword.messagehub}} 会自动生成事件，以便您可以跟踪服务相关活动。
+标准和企业套餐中的 {{site.data.keyword.messagehub}} 会自动生成事件，以便您可以跟踪服务相关活动。
 
 |操作 |描述                                                         |
 |:-------|:------------|
-| messagehub.topic.create |创建主题时会创建一个事件|
-| messagehub.topic.delete |删除主题时会创建一个事件|
+| event-streams.topic.create |创建主题时会创建一个事件|
+| event-streams.topic.delete |删除主题时会创建一个事件|
 {: caption="表 1. {{site.data.keyword.messagehub}} 事件" caption-side="top"}
 
 ## 在何处查看事件

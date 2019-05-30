@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Diagramma dell'architettura Kafka.](kafka_overview.png "Diagramma che mostra un'architettura Kafka. Un produttore sta eseguendo il feed in un argomento Kafka su 3 partizioni e i messaggi vengono quindi sottoscritti dai consumatori. ")
-{: shortdesc}
+
 
 Il seguente elenco definisce alcun concetti di Apache Kafka:
 
@@ -35,7 +35,7 @@ Il seguente elenco definisce alcun concetti di Apache Kafka:
 <dt>Messaggio</dt>
 <dd>L'unità di dati in Kafka. Ciascun messaggio è rappresentato come un record che si articola in due parti: chiave e valore. La chiave viene di solito usata per i dati relativi al messaggio e il valore è il corpo del messaggio. Kafka utilizza i termini record e messaggio in modo interscambiabile. 
 
-<p>Anche molti altri sistemi di messaggistica hanno un modo per trasportare altre informazioni insieme ai messaggi. A tale scopo, Kafka 0.11 introduce delle intestazioni di record, che sono supportate da {{site.data.keyword.messagehub}}. </p> 
+<p>Anche molti altri sistemi di messaggistica hanno un modo per trasportare altre informazioni insieme ai messaggi. A tale scopo, Kafka 0.11 introduce delle intestazioni di record, che sono supportate da {{site.data.keyword.messagehub}}.  </p> 
 
 <p>Poiché molti strumenti nell'ecosistema Kafka (quali i connettori ad altri sistemi) utilizzano solo il valore e ignorano la chiave, è meglio inserire tutti i dati del messaggio nel valore e utilizzare la chiave solo per il partizionamento o la compattazione del log. Non devi contare sul fatto che tutte le applicazioni che leggono da Kafka facciano uso della chiave.</p>   </dd>
 <dt>Argomento</dt>
@@ -45,7 +45,7 @@ Il seguente elenco definisce alcun concetti di Apache Kafka:
 <dd>Ogni argomento si articola in una o più partizioni. Ogni partizione è un elenco ordinato di messaggi. A ciascun messaggio su una partizione viene dato un numero, che aumenta in modo uniforme, detto offset. 
 <p>Ogni partizione ha un server nel cluster che funge da suo leader e altri server che fungono da follower.<p>
 <p>Se un argomento ha più di una partizione, consente di eseguire il feed dei dati in parallelo per aumentare la velocità effettiva distribuendo le partizioni su tutto il cluster. Il numero di partizioni influenza anche il bilanciamento del carico di lavoro tra i consumatori.</p>
-<p>Per ulteriori informazioni, vedi [Leadership della partizione](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
+<p>Per ulteriori informazioni, vedi [Leadership della partizione](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership).</dd>
 <dt>Produttore</dt>
 <dd>Un processo che pubblica flussi di messaggi ad argomenti Kafka. Un produttore può eseguire
 pubblicazioni per uno o più argomenti e può, facoltativamente, scegliere la partizione che memorizza i dati.<br/></dd>
@@ -63,9 +63,9 @@ pubblicazioni per uno o più argomenti e può, facoltativamente, scegliere la pa
 </dl>
 
 Per ulteriori informazioni, consultare le seguenti informazioni:
-- [Produzione di messaggi](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [Consumo di messaggi](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [Leadership della partizione](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [Produzione di messaggi](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [Consumo di messaggi](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [Leadership della partizione](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Documentazione di Apache Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

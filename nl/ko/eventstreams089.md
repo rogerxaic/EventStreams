@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Object Storage 브릿지(더 이상 사용되지 않음)
+# 클래식 플랜의 Object Storage 브릿지
 {: #object_storage_bridge }
 
 ** {{site.data.keyword.objectstorageshort}} 브릿지는 2018년 8월 1일부터 더 이상 사용되지 않습니다.**
@@ -36,7 +36,7 @@ Kafka에서 일괄처리 메시지를 이용하고 메시지 데이터를
 {{site.data.keyword.objectstorageshort}} 서비스의 컨테이너에 오브젝트로
 업로드합니다.
 
-{{site.data.keyword.Bluemix_short}}의 선호되는 오브젝트 스토리지 서비스는 이제 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}입니다.
+{{site.data.keyword.Bluemix_short}}의 선호되는 오브젝트 스토리지 서비스는 이제 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}입니다.
 
 {{site.data.keyword.objectstorageshort}} 브릿지를 구성하여
 데이터가 {{site.data.keyword.objectstorageshort}}에 오브젝트로 업로드되는 방식을 제어할 수 있습니다. 예를 들면, 구성할 수 있는
@@ -129,13 +129,7 @@ Kafka 메시지 오프셋으로 데이터를 파티셔닝하려면 다음 단계
      	</code></pre>
     {:codeblock}
 
-    이 방법으로 구성된 브릿지에서 생성한 오브젝트 이름에는
-    `"offset=<kafka_offset>"` 접두부가 포함됩니다. 여기서 `"<kafka_offset>"`은
-    해당 파티션(이 접두부를 사용하는 오브젝트 그룹)에 저장된 첫 번째 Kafka 메시지에 해당됩니다. 예를 들어,
-    브릿지가 다음 예제와 같은 이름이 있는 오브젝트를 생성하는 경우
-    `<object_a>` 및 `<object_b>`에는 0 - 999 범위의 오프셋이 있는
-    메시지가 포함되고, `<object_c>`에는 1000 - 1999 범위의 오프셋이 있는
-    메시지가 포함됩니다.
+    이 방법으로 구성된 브릿지에서 생성한 오브젝트 이름에는 `"offset=<kafka_offset>"` 접두부가 포함됩니다. 여기서 `"<kafka_offset>"`은 해당 파티션(이 접두부를 사용하는 오브젝트 그룹)에 저장된 첫 번째 Kafka 메시지에 해당됩니다. 예를 들어, 브릿지가 다음 예제와 같은 이름이 있는 오브젝트를 생성하는 경우 `<object_a>` 및 `<object_b>`에는 0 - 999 범위의 오프셋이 있는 메시지가 포함되고, `<object_c>`에는 1000 - 1999 범위의 오프셋이 있는 메시지가 포함됩니다.
 
     <pre class="pre"><code>
         ```
@@ -187,10 +181,7 @@ ISO 8601 날짜로 데이터를 파티셔닝하려면 다음 단계를 완료하
 	날짜 필드에 해당해야 합니다. 이 예제에서 `"timestamp"` 필드에는
 	올바른 ISO 8601 날짜 값이 포함되어야 합니다. 그러면 그 날짜에 따라서 메시지가 파티셔닝됩니다.
 	
-	이 예제처럼 구성된 브릿지는 다음과 같이 이름이 지정된 오브젝트를 생성합니다.
-	`<object_a>`에는 날짜가 2016-12-07인 `"timestamp"` 필드가 있는
-	JSON 메시지가 포함되어 있으며, `<object_b>` 및 `<object_c>`에는 모두 날짜가 2016-12-08인 `"timestamp"` 필드가 있는
-	JSON 메시지가 포함되어 있습니다.
+	이 예제처럼 구성된 브릿지는 다음과 같이 이름이 지정된 오브젝트를 생성합니다. `<object_a>`에는 날짜가 2016-12-07인 `"timestamp"` 필드가 있는	JSON 메시지가 포함되어 있으며, `<object_b>` 및 `<object_c>`에는 모두 날짜가 2016-12-08인 `"timestamp"` 필드가 있는	JSON 메시지가 포함되어 있습니다.
 
     <pre class="pre"><code>
         ```

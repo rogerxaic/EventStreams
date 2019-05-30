@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,9 +28,24 @@ Kafka Connect kann im eigenständigen oder im verteilten Modus ausgeführt werde
 ## Konfiguration für eigenständige Worker
 {: #standalone_worker notoc}
 
-Sie müssen die Bootstrap-Server und die SASL-Berechtigungsnachweisinformationen in der Workereigenschaftendatei angeben, die Sie beim Starten eines eigenständigen Kafka Connect-Workers angeben.
-
 Der eigenständige Worker verwendet keine internen Topics. Stattdessen verwendet er eine Datei zum Speichern von Offsetinformationen.
+
+Sie müssen die Bootstrap-Server und die SASL-Berechtigungsnachweisinformationen in der Workereigenschaftendatei angeben, die Sie beim Starten eines eigenständigen Kafka Connect-Workers angeben. Im folgenden Beispiel sind die Eigenschaften aufgeführt, die in der Eigenschaftendatei angegeben werden müssen:
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+Ersetzen Sie KAFKA_BROKERS_SASL, USER und PASSWORD durch die Werte auf der {{site.data.keyword.messagehub}}-Registerkarte **Serviceberechtigungsnachweise** in der {{site.data.keyword.Bluemix_notm}}-Konsole.
 
 ### Quellenconnector
 {: #source_connector notoc }

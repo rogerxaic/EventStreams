@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Pont Object Storage (obsolète)
+# Pont Object Storage dans le plan Classic
 {: #object_storage_bridge }
 
 ** Le pont {{site.data.keyword.objectstorageshort}} a été déprécié le 1er août 2018.**
@@ -36,7 +36,7 @@ Kafka de {{site.data.keyword.messagehub}} dans une instance du service {{site.da
 pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un conteneur du service {{site.data.keyword.objectstorageshort}}.
 
 Le service de stockage d'objets préféré dans {{site.data.keyword.Bluemix_short}} est désormais le service [{{site.data.keyword.IBM_notm}} Cloud
-Object Storage. ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+Object Storage. ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 En
 configurant le pont {{site.data.keyword.objectstorageshort}}, vous pouvez contrôler le mode de transfert des données sous forme d'objets vers {{site.data.keyword.objectstorageshort}}. Les
@@ -131,13 +131,8 @@ Pour partitionner des données selon la position de message Kafka, procédez com
      	</code></pre>
     {:codeblock}
 
-    Les noms d'objet générés par un pont configuré de cette manière contiennent
-le préfixe `"offset=<kafka_offset>"`, où `"<kafka_offset>"`
-correspond au premier message Kafka stocké dans cette partition (le groupe d'objets dotés de ce préfixe). Par
-exemple, si un pont génère des objets nommés comme indiqué ci-après, `<object_a>`
-et `<object_b>` contiennent les messages dont les positions figurent
-dans la plage 0 - 999, `<object_c>` contient les messages dont les
-positions sont comprises dans la plage 1000 - 1999, et ainsi de suite.
+    Les noms d'objet générés par un pont configuré de cette manière contiennent le préfixe `"offset=<kafka_offset>"` où `"<kafka_offset>"` correspond au premier message Kafka stocké dans cette partition (le groupe d'objets avec ce préfixe). Par exemple, si un pont génère des objets avec des noms comme dans l'exemple suivant,
+    `<object_a>` et `<object_b>` contiennent des messages avec des décalages compris entre  0 et 999, `<object_c>` contient des messages avec des décalages compris entre 1000 et 1999, etc.
 
     <pre class="pre"><code>
         ```
@@ -189,11 +184,10 @@ valeur de `"propertyName"` dans le JSON utilisé pour configurer le pont
 doit correspondre à la zone de date ISO 	8601 dans chaque message Kafka. Dans cet exemple, la zone `"timestamp"` doit contenir une valeur de date ISO 8601
 valide. Les messages sont ensuite partitionnés selon leurs dates.
 	
-	Un pont configuré comme dans cet exemple génère des objets dont les noms sont spécifiés comme suit :
-	`<object_a>` contient les messages JSON dont les zones
-`"timestamp"` indiquent la date 2016-12-07, et `<object_b>`
-et `<object_c>` contiennent les messages JSON dont les zones `"timestamp"` indiquent la date
-	2016-12-08.
+	Un pont configuré comme dans cet exemple génère des objets avec des noms spécifiés comme suit :
+	`<object_a>` contient des messages JSON avec des zones `"timestamp"` ayant pour
+date 2016-12-07 tandis que `<object_b>` et `<object_c>` contiennent des messages JSON avec des zones `"timestamp"` ayant pour date
+2016-12-08.
 
     <pre class="pre"><code>
         ```
@@ -209,12 +203,12 @@ et `<object_c>` contiennent les messages JSON dont les zones `"timestamp"` indiq
 ## Mesures du pont {{site.data.keyword.objectstorageshort}}
 {: notoc}
 
-Le pont {{site.data.keyword.objectstorageshort}} indique des mesures que vous pouvez afficher sur votre tableau de bord à l'aide de Grafana. Les
-mesures susceptibles de vous intéresser sont les suivantes :
+Le pont {{site.data.keyword.objectstorageshort}} indique des mesures que vous pouvez afficher sur votre tableau de bord à l'aide de Grafana. Les mesures susceptibles de vous intéresser sont les suivantes :
 <dl>
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.bytes-consumed-rate</code></dt>
 <dd>Mesure le débit de consommation des données par le pont (en octets par seconde).</dd>
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.records-lag-max</code></dt>
-<dd>Mesure le décalage maximal du nombre d'enregistrements consommés par le pont pour n'importe quelle partition du sujet. Si
+<dd>Mesure le décalage maximal du nombre d'enregistrements consommés par le pont pour n'importe quelle partition du
+sujet. Si
 cette valeur augmente dans le temps, cela signifie que le pont ne suit pas le rythme des auteurs du sujet.</dd>
 </dl>

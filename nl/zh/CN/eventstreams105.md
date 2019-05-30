@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# MQ 网桥
+# 经典套餐上的 MQ 网桥 
 {: #mq_bridge}
 
-**MQ 网桥仅在标准套餐中提供。**
+**MQ 网桥仅在经典套餐中提供。**
 <br/>
 
 通过 MQ 网桥，您可以将消息数据从 {{site.data.keyword.IBM_notm}} MQ 队列传输到 {{site.data.keyword.messagehub}} Kafka 主题。MQ 网桥支持针对您企业中生成的 {{site.data.keyword.IBM_notm}} MQ 消息数据，高效地执行云样式工作负载（例如，数据分析）。

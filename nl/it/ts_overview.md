@@ -27,7 +27,9 @@ In caso negativo, invia la tua domanda; risponderà un membro del team di svilup
 {: shortdesc}
 
 Se riscontri un problema con {{site.data.keyword.messagehub}}, per prima cosa controlla la [pagina sugli stati di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/status?selected=status){:new_window}. Se desideri quindi assistenza dal team
-di {{site.data.keyword.messagehub}}, assicurati di aver fornito tutte le informazioni necessarie come descritto in [Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - Piano Standard](/docs/services/EventStreams?topic=eventstreams-report_problem) o [Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - Piano Enterprise](/docs/services/EventStreams?topic=eventstreams-report_problem).
+{{site.data.keyword.messagehub}}, assicurati di aver fornito tutte le informazioni necessarie come descritto in [Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - Piani Standard e Enterprise](/docs/services/EventStreams?topic=eventstreams-report_problem_enterprise#report_problem_enterprise).
+
+Se stai utilizzando il piano Classic, vedi [Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - Piano Classic](/docs/services/EventStreams?topic=eventstreams-report_problem#report_problem) per un elenco delle informazioni necessarie al team.
 {:shortdesc}
 
 ## Link utili
@@ -35,12 +37,10 @@ di {{site.data.keyword.messagehub}}, assicurati di aver fornito tutte le informa
 
 *  [Versione di prova gratuita {{site.data.keyword.Bluemix_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [Esempio di {{site.data.keyword.messagehub}} Java Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [Creazione di applicazioni web con {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} e distribuzione della tua
-   applicazione con Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+*  [Creazione di applicazioni web con {{site.data.keyword.Bluemix_notm}} e distribuzione della tua
+   applicazione con Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Documentazione di Apache Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://kafka.apache.org/documentation.html){: new_window}
-*  [Client Apache Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}
-*  [Un proxy REST open source completo per Kafka. ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window} 
-	Questo blog offre una buona introduzione ai punti di forza e a quelli deboli dell'API REST Kafka. L'API Kafka REST è disponibile solo come parte del piano Standard.
-*  [Informazioni sui prezzi di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}
+*  [Client Apache Kafka 2.2.0![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
+*  [Informazioni sui prezzi {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}
 
 

@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 <!-- 
-17/10/17 - Karen: following info duplicated at messagehub108
+17/10/17 - Karen: following info duplicated at eventstreams108
  -->
 
 Si está utilizando un cliente Kafka de la versión 0.11 o posterior, o bien Kafka Streams versión 0.10.2.0 o posterior, puede utilizar la API para crear y suprimir temas. Existen varias restricciones para la configuración permitida al crear temas. Actualmente, solo se pueden modificar los siguientes valores:

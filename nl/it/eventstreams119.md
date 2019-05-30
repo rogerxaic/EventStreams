@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Bridge Watson IoT Platform
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}} fornisce un bridge gestito che ti consente di creare un collegamento unidirezionale a {{site.data.keyword.messagehub_full}}.
 {: shortdesc}
 

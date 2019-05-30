@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # 生成消息
 {: #producing_messages }
@@ -57,7 +58,7 @@ subcollection: eventstreams
 
 生产者在主题上发布消息时，生产者可以选择使用哪个分区。如果排序很重要，请务必记住，分区是有顺序的记录序列，但一个主题可包含一个或多个分区。如果要按顺序传递一组消息，请确保这些消息全部传递到同一分区上。实现这一操作的最直接方法是为所有这些消息提供相同的键。 
  
-生产者发布消息时，可以明确指定分区号。这样可以直接控制，但也会使生产者代码更加复杂，因为它将承担管理分区选择的责任。有关更多信息，请参阅方法调用 Producer.partitionsFor。例如，针对 [Kafka 1.1.0 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 描述了该调用。
+生产者发布消息时，可以明确指定分区号。这样可以直接控制，但也会使生产者代码更加复杂，因为它将承担管理分区选择的责任。有关更多信息，请参阅方法调用 Producer.partitionsFor。例如，针对 [Kafka 2.2.0 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} 描述了该调用。
  
 如果生产者未指定分区号，那么分区的选择由分区程序执行。Kafka 生产者中内置缺省分区程序的工作方式如下：
 
@@ -74,7 +75,7 @@ Kafka 通常会按生产者发送消息的顺序写入消息。但是，有些�
  
 生产者也可以自动重试发送消息。通常最好启用此重试功能，因为另一个选择是应用程序代码必须自行执行任何重试。将 Kafka 中的批处理和自动重试结合使用可能会导致消息的重复和重新排序。
  
-例如，如果在主题上发布了包含三条消息 &lt;M1, M2, M3&gt; 的序列。这些记录可能全部位于同一批次中，所以实际上会将其一起发送给分区领导者。然后领导者将这些记录写入分区，并将其复制为单独的记录。发生故障时，M1 和 M2 可能已添加到分区，但 M3 还没添加。生产者没有收到确认，因此重试发送 &lt;M1, M2, M3&gt;。新领导者简单地将 M1、M2 和 M3 写入分区，该分区现在包含 &lt;M1, M2, M1, M2, M3&gt;，其中重复的 M1 实际上跟随的是原始 M2。如果将每个代理程序中的动态请求数限制为只有一个，就可以防止这种重新排序操作。您可能仍然会发现单个记录是重复的，例如 &lt;M1, M2, M2, M3&gt;，但是永远不会出现序列排序混乱。在 Kafka 0.11（{{site.data.keyword.messagehub}} 中尚未提供）中，还可以使用幂等生产者功能来防止 M2 重复。
+例如，如果在主题上发布了包含三条消息 &lt;M1, M2, M3&gt; 的序列。这些记录可能全部位于同一批次中，所以实际上会将其一起发送给分区领导者。然后领导者将这些记录写入分区，并将其复制为单独的记录。发生故障时，M1 和 M2 可能已添加到分区，但 M3 还没添加。生产者没有收到确认，因此重试发送 &lt;M1, M2, M3&gt;。新领导者简单地将 M1、M2 和 M3 写入分区，该分区现在包含 &lt;M1, M2, M1, M2, M3&gt;，其中重复的 M1 实际上跟随的是原始 M2。如果将每个代理程序中的动态请求数限制为只有一个，就可以防止这种重新排序操作。您可能仍然会发现单个记录是重复的，例如 &lt;M1, M2, M2, M3&gt;，但是永远不会出现序列排序混乱。在 Kafka 0.11 或更高版本中，还可以使用幂等生产者功能来防止 M2 重复。
  
 Kafka 通常的做法是编写应用程序来处理偶然出现的消息重复，因为只有一个动态请求对性能的影响十分显著。
 
@@ -104,13 +105,15 @@ Kafka 通常的做法是编写应用程序来处理偶然出现的消息重复�
 如果尝试使用的消息发布速度比向服务器发送消息的速度快，那么生产者会自动将消息缓存到批处理请求中。生产者会为每个分区维护一个缓冲区，用于缓存未发送的记录。当然，存在一个临界点，达到此临界点之后，即使批处理也不允许实现您想要的速率。
  
 另外还有一个影响因素。为了防止单个生产者或使用者大量涌入集群而使集群应接不暇，{{site.data.keyword.messagehub}} 应用了吞吐量配额。程序会计算每个生产者发送数据的速率，并对试图超过其配额的任何生产者进行调速。应用调速的方式是略微延迟向生产者发送响应。通常，此行为就像是一个天然制动器。
+
+有关吞吐量指导信息，请参阅[限制和配额](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas)。 
  
 总之，发布消息时，其记录会首先写入生产者中的缓冲区。生产者在后台对记录分批后，将记录发送到服务器。然后服务器会响应生产者，如果生产者发布速度太快，可能会应用调速延迟。如果生产者中的缓冲区已满，将延迟生产者的 send 调用，但最终可能会失败并返回异常。
 
 ## 代码片段
 {: #code_snippets}
 
-以下代码片段在很高的级别展示了所涉及的概念。有关完整示例，请参阅 GitHub 中的 {{site.data.keyword.messagehub}} 样本：https://github.com/ibm-messaging/event-streams-samples
+以下代码片段在很高的级别展示了所涉及的概念。有关完整示例，请参阅 [GitHub ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples) 中的 {{site.data.keyword.messagehub}} 样本。
 
 要连接到 {{site.data.keyword.messagehub}}，首先需要构建一组配置属性。所有到 {{site.data.keyword.messagehub}} 的连接都会使用 TLS 和用户/密码认证来确保安全，所以您至少需要这些属性。请使用您自己的服务凭证替换 KAFKA_BROKERS_SASL、USER 和 PASSWORD：
 

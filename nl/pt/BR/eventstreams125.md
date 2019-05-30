@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-17"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,19 +15,19 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Relatando um problema para a equipe do {{site.data.keyword.messagehub}} - plano Enterprise
+# Relatando um problema para a equipe do {{site.data.keyword.messagehub}} - planos Padrão e Corporativo
 {: #report_problem_enterprise}
 
-Se você estiver enfrentando um problema com o {{site.data.keyword.messagehub}}, primeiro verifique a página de status do [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/status?selected=status){:new_window}.
+
+Se você estiver tendo problemas com o {{site.data.keyword.messagehub}}, verifique primeiro a [página de status do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/status?selected=status){:new_window}.
 {: shortdesc}
 
 Se quiser ajuda da equipe do {{site.data.keyword.messagehub}}, reúna todas as informações a seguir. Quanto mais informações você puder fornecer diretamente, mais eficientemente a equipe poderá ajudar com o problema:
 {:shortdesc}
 
-1. Qual é o ID do CRN do serviço {{site.data.keyword.messagehub}} que você está usando?  É possível fornecer esse ID colando a URL
-completa do console do {{site.data.keyword.Bluemix_notm}} depois de clicar no
-serviço ou colando a saída do comando da CLI a seguir:<br/>
+1. Qual é o ID do CRN do serviço {{site.data.keyword.messagehub}} que você está usando?  É possível fornecer esse ID colando a URL completa do console do {{site.data.keyword.Bluemix_notm}} depois de clicar no serviço ou colando a saída por meio do comando da CLI a seguir:<br/>
    <pre class="pre">
    ibmcloud resource service-instance NAME
    </pre>

@@ -19,7 +19,7 @@ subcollection: eventstreams
 # 何謂 {{site.data.keyword.messagehub}}？
 {: #about}
 
-{{site.data.keyword.messagehub_full}} 以 Apache Kafka 建置的高產量訊息匯流排。它是服務形式的完全管理 Apache Kafka，針對將事件汲取至 {{site.data.keyword.Bluemix_notm}} 及服務與應用程式之間的事件串流配送而最佳化。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
+{{site.data.keyword.messagehub_full}} 以 Apache Kafka 建置的高傳輸量訊息匯流排。它針對將事件汲取至 {{site.data.keyword.Bluemix_notm}} 及服務與應用程式之間的事件串流配送而最佳化。{{site.data.keyword.messagehub}} 先前稱為 Message Hub。
 {: shortdesc}
 
 您可以使用 {{site.data.keyword.messagehub}} 來完成下列作業：
@@ -27,7 +27,6 @@ subcollection: eventstreams
 * 將工作卸載至後端工作者節點應用程式。
 * 將事件串流連接至串流分析，以實現強大的見解。
 * 將事件資料提發佈多個應用程式，以便即時回應。
-* 將資料傳送到另一個服務。例如，Cloud Object Storage。
 
 藉由使用 Apache Kafka 建置，它能直接獲益於在社群中發生的所有創新，並支援 Kafka 用戶端 API、Kafka Streams、Kafka Connect 以及 KSQL。
 

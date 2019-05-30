@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-12"
+lastupdated: "2019-05-07"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # 使用 Kafka 主控台工具搭配 {{site.data.keyword.messagehub}}
@@ -23,7 +24,7 @@ subcollection: eventstreams
 Apache Kafka 具有各種主控台工具，可以執行簡單的管理及傳訊作業。您可以使用當中的許多種來搭配 {{site.data.keyword.messagehub}}，不過 {{site.data.keyword.messagehub}} 並不允許對其 ZooKeeper 叢集的連線。隨著 Kafka 的發展，先前需要 ZooKeeper 連線的許多工具已不再有該項需求。
 {: shortdesc}
 
-您可以在 Kafka 下載的 <code>bin</code> 目錄中找到這些主控台工具。例如，[Apache Kafka 1.1.0 用戶端 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}。
+您可以在 Kafka 下載的 <code>bin</code> 目錄中找到這些主控台工具。您可以從 [Apache Kafka 下載 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://kafka.apache.org/downloads){:new_window} 中下載用戶端。
 
 若要提供 SASL 認證給這些工具，請根據下列範例建立內容檔：
 

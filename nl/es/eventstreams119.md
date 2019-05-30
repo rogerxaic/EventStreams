@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Puente de Watson IoT Platform
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}} proporciona un puente gestionado que le permite crear un enlace unidireccional a {{site.data.keyword.messagehub_full}}.
 {: shortdesc}
 

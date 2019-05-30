@@ -20,8 +20,6 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Kafka 体系结构图。](kafka_overview.png "显示 Kafka 体系结构的图。生产者通过三个分区向 Kafka 主题馈入消息，然后由使用者订阅该消息。")
-{: shortdesc}
-
 下面的列表定义了 Apache Kafka 的部分概念：
 
 <dl>
@@ -44,9 +42,9 @@ subcollection: eventstreams
 <dt>分区</dt>
 <dd>每个主题包含一个或多个分区。每个分区都是一个有序的消息列表。分区上的每条消息都会被赋予一个单调递增数字，此数字称为偏移量。<p>每个分区在集群中都有一台服务器充当分区的领导者，其他服务器充当追随者。<p>
 <p>如果某个主题的分区不止一个，那么可以将这些分区分布到整个集群中，这样就能并行馈送数据，从而提高吞吐量。分区的数量也会影响工作负载在使用者之间的均衡。</p>
-<p>有关更多信息，请参阅[分区领导权](/docs/services/EventStreams?topic=eventstreams-partition_leadership)。</dd>
+<p>有关更多信息，请参阅[分区领导权](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership)。</dd>
 <dt>生产者</dt>
-<dd>向 Kafka 主题发布消息流的过程。生产者可以发布一个或更多主题，并且可以选择用于存储数据的分区。<br/></dd>
+<dd>向 Kafka 主题发布消息流的过程。生产者可以发布到一个或更多主题，并且可以选择用于存储数据的分区。<br/></dd>
 <br/>
 <dt>使用者</dt>
 <dd>使用 Kafka 主题中的消息以及对消息订阅源进行处理的过程。使用者可以使用一个或多个主题或分区。</dd>
@@ -60,9 +58,9 @@ subcollection: eventstreams
 </dl>
 
 要了解更多信息，请参阅以下信息：
-- [生成消息](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [使用消息](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [分区领导权](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [生成消息](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [使用消息](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [分区领导权](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Apache Kafka 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

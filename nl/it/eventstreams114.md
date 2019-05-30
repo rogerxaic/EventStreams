@@ -134,7 +134,7 @@ Puoi utilizzare ConsumerRebalanceListener per eseguire manualmente il commit deg
 ## Frammenti di codice
 {: #consumer_code_snippets notoc}
 
-Questi frammenti di codice sono a un livello molto alto per illustrare i concetti coinvolti. Per degli esempi completi, vedi gli esempi {{site.data.keyword.messagehub}} in GitHub https://github.com/ibm-messaging/event-streams-samples.
+Questi frammenti di codice sono a un livello molto alto per illustrare i concetti coinvolti. Per degli esempi completi, vedi gli esempi {{site.data.keyword.messagehub}} in [GitHub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples).
 
 Per stabilire una connessione a {{site.data.keyword.messagehub}}, devi prima creare l'insieme di proprietà di configurazione. Tutte le connessioni a {{site.data.keyword.messagehub}} sono protette utilizzando TLS e l'autenticazione utente/password, quindi ti servono almeno queste proprietà. Sostituisci KAFKA_BROKERS_SASL, USER e PASSWORD con le tue credenziali di servizio:
 

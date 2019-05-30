@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Produzindo mensagens
 {: #producing_messages }
@@ -23,7 +24,7 @@ subcollection: eventstreams
 Um produtor é um aplicativo que publica fluxos de mensagens nos tópicos do Kafka. Essas informações se concentram na interface de programação Java que faz parte do projeto Apache Kafka. Os conceitos se aplicam a outros idiomas também, mas os nomes são, às vezes, um pouco diferentes.
 {: shortdesc}
 
-Nas interfaces de programação, uma mensagem é realmente chamada de um registro. Por exemplo, a classe Java org.apache.kafka.clients.producer.ProducerRecord é usada para representar uma mensagem do ponto de vista da API do produtor. Os termos _registro_ e _mensagem_ podem ser usados de forma intercambiável, mas um registro é usado essencialmente para representar uma mensagem.
+Nas interfaces de programação, uma mensagem é realmente chamada de um registro. Por exemplo, a classe Java org.apache.kafka.clients.producer.ProducerRecord é usada para representar uma mensagem do ponto de vista da API producer. Os termos _registro_ e _mensagem_ podem ser usados de forma intercambiável, mas um registro é usado essencialmente para representar uma mensagem.
 
 Quando um produtor se conecta ao Kafka, ele faz uma conexão de autoinicialização inicial. Essa conexão pode ser qualquer um dos servidores no cluster. O produtor solicita as informações de partição e de liderança sobre o tópico no qual deseja publicar. Em seguida, o produtor estabelece outra conexão com o líder da partição e pode começar a publicar mensagens. Essas ações acontecem automaticamente e internamente quando seu produtor se conecta ao cluster do Kafka.
  
@@ -63,8 +64,7 @@ Embora muito mais definições de configuração estejam disponíveis, certifiqu
 
 Quando o produtor publica uma mensagem em um tópico, o produtor pode escolher qual partição usar. Se a ordenação é importante, é preciso lembrar-se de que uma partição é uma sequência ordenada de registros e que um tópico abrange uma ou mais partições. Se você deseja que um conjunto de mensagens seja entregue em ordem, assegure-se de que todas elas sejam encaminhadas para a mesma partição. A maneira mais direta de fazer isso é fornecer a mesma chave a todas essas mensagens. 
  
-O produtor pode especificar explicitamente um número de partição ao publicar uma mensagem. Isso fornece um controle direto, mas torna o código do produtor mais complexo, já que ele assume a responsabilidade de gerenciar a seleção de partição. Para obter mais informações, consulte a chamada de método Producer.partitionsFor. Por exemplo, a chamada é descrita para o
-[Kafka 1.1.0 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+O produtor pode especificar explicitamente um número de partição ao publicar uma mensagem. Isso fornece um controle direto, mas torna o código do produtor mais complexo, já que ele assume a responsabilidade de gerenciar a seleção de partição. Para obter mais informações, consulte a chamada de método Producer.partitionsFor. Por exemplo, a chamada é descrita para o [Kafka 2.2.0 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Se o produtor não especificar um número de partição, a seleção de partição será feita por um particionador. O particionador padrão que é construído no produtor Kafka funciona da seguinte forma:
 
@@ -81,7 +81,7 @@ O Kafka geralmente grava mensagens na ordem em que elas são enviadas pelo produ
  
 O produtor também é capaz de tentar novamente o envio de mensagens automaticamente. É sempre recomendado ativar esse recurso de nova tentativa, já que a alternativa é que o seu próprio código do aplicativo deverá executar quaisquer novas tentativas. A combinação de envio em lote no Kafka e de novas tentativas automáticas pode ter o efeito de duplicação ou de reordenação de mensagens.
  
-Por exemplo, se você publica uma sequência de três mensagens &lt;M1, M2, M3&gt; em um tópico. Todos os registros podem ajustar-se dentro do mesmo lote, de modo que todos eles sejam realmente enviados juntos ao líder da partição. O líder, então, os grava na partição e os replica como registros separados. No caso de uma falha, é possível que M1 e M2 sejam incluídos na partição, exceto o M3. O produtor não recebe uma confirmação, portanto, ele tenta enviar &lt;M1, M2, M3&gt; novamente. O novo líder simplesmente grava M1, M2 e M3 na partição, que agora contém &lt;M1, M2, M1, M2, M3&gt;, em que o M1 duplicado na realidade segue o M2 original. Se você restringir o número de solicitações em andamento de cada broker para um só, essa reordenação poderá ser evitada. Talvez você ainda ache que um registro único está duplicado, como &lt;M1, M2, M2, M3&gt;, mas nunca sairá das sequências de ordem. No Kafka 0.11 (ainda não disponível no {{site.data.keyword.messagehub}}), também é possível usar o recurso do produtor idempotente para evitar a duplicação do M2.
+Por exemplo, se você publica uma sequência de três mensagens &lt;M1, M2, M3&gt; em um tópico. Todos os registros podem ajustar-se dentro do mesmo lote, de modo que todos eles sejam realmente enviados juntos ao líder da partição. O líder, então, os grava na partição e os replica como registros separados. No caso de uma falha, é possível que M1 e M2 sejam incluídos na partição, exceto o M3. O produtor não recebe uma confirmação, portanto, ele tenta enviar &lt;M1, M2, M3&gt; novamente. O novo líder simplesmente grava M1, M2 e M3 na partição, que agora contém &lt;M1, M2, M1, M2, M3&gt;, em que o M1 duplicado na realidade segue o M2 original. Se você restringir o número de solicitações em andamento de cada broker para um só, essa reordenação poderá ser evitada. Talvez você ainda ache que um registro único está duplicado, como &lt;M1, M2, M2, M3&gt;, mas nunca sairá das sequências de ordem. No Kafka 0.11 ou mais recente, também é possível usar o recurso de produtor idempotent para evitar a duplicação do M2.
  
 O Kafka normalmente grava os aplicativos para manipular duplicatas de mensagens ocasionais, já que o impacto de desempenho de ter apenas uma única solicitação em andamento é significativo.
 
@@ -112,13 +112,15 @@ Se você tentar publicar mensagens mais rapidamente do que elas podem ser enviad
  
 Há outro fator que tem um impacto. Para evitar que produtores ou consumidores individuais sobrecarreguem o cluster, o {{site.data.keyword.messagehub}} aplica cotas de rendimento. A taxa na qual cada produtor envia dados é calculada e qualquer produtor que tenta exceder sua cota é regulado. A regulagem é aplicada
 atrasando um pouco o envio de respostas para o produtor. Em geral, isso age apenas como um freio natural.
+
+Para obter informações de orientação sobre rendimento, consulte [Limites e cotas](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas). 
  
 Em resumo, quando uma mensagem é publicada, primeiramente seu registro é gravado em um buffer no produtor. Em segundo plano, o produtor envia os registros em lote para o servidor. O servidor, então, responde ao produtor, possivelmente aplicando um atraso de regulagem se o produtor está publicando muito rápido. Se o buffer no produtor se enche, a chamada de envio do produtor é atrasada, podendo finalmente falhar com uma exceção.
 
 ## Fragmentos de código
 {: #code_snippets}
 
-Esses fragmentos de código estão em um nível muito alto para ilustrar os conceitos envolvidos. Para obter exemplos completos, veja as amostras do {{site.data.keyword.messagehub}} no GitHub https://github.com/ibm-messaging/event-streams-samples.
+Esses fragmentos de código estão em um nível muito alto para ilustrar os conceitos envolvidos. Para obter exemplos completos, consulte as amostras do {{site.data.keyword.messagehub}} no [GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples).
 
 Para conectar-se ao {{site.data.keyword.messagehub}}, primeiro é necessário construir o conjunto de propriedades de configuração. Como todas as conexões com o {{site.data.keyword.messagehub}} são protegidas usando TLS e autenticação de usuário/senha, pelo menos essas propriedades são necessárias. Substitua KAFKA_BROKERS_SASL, USER e PASSWORD por suas próprias credenciais de serviço:
 

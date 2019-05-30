@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-04-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -79,7 +79,10 @@ Liberty for Java 样本实现部署到 Liberty 运行时上的简单应用程序
 
 强烈建议您从 0.9.X 迁移到最新版本。您可以从 [https://kafka.apache.org/downloads ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://kafka.apache.org/downloads){:new_window} 下载 Kafka 客户机。
 
-有关使用 0.9.X 客户机的影响的信息，请参阅[向后兼容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。
+<!--
+For information about the implications of using a 0.9.X client, see 
+[Backward compatibility](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+-->
 
 
 
@@ -90,7 +93,6 @@ Liberty for Java 样本实现部署到 Liberty 运行时上的简单应用程序
 请完成以下步骤：
 
 1. 删除 JAAS 文件。请注意，也不再需要 JVM 属性 java.security.auth.login.config=<PATH TO JAAS>。
-2. 如果是从 0.9.X 进行迁移，请删除 {{site.data.keyword.messagehub}} 登录 JAR 模块。
 2. 将以下内容添加到客户机属性：
     ```
 	sasl.mechanism=PLAIN
@@ -98,25 +100,6 @@ Liberty for Java 样本实现部署到 Liberty 运行时上的简单应用程序
 	```
 
 	其中，USERNAME 和 PASSWORD 是 {{site.data.keyword.Bluemix_notm}} 的 {{site.data.keyword.messagehub}} **服务凭证**选项卡中的值。
-	
-	
 
-### 将 Kafka 客户机从 0.9.X 迁移到 0.10.0.X 或 0.10.1.X
 
-请完成以下步骤：
 
-1. 删除 {{site.data.keyword.messagehub}} 登录 JAR 模块。
-2. 将 <code>jaas.conf</code> 文件更改为以下内容：
-    ```
-        KafkaClient {
-          org.apache.kafka.common.security.plain.PlainLoginModule required
-          serviceName="kafka"
-            username="USERNAME"
-            password="PASSWORD";
-        };
-    ```
-    {: codeblock}
-
-	其中，USERNAME 和 PASSWORD 是 {{site.data.keyword.Bluemix_notm}} 的 {{site.data.keyword.messagehub}} **服务凭证**选项卡中的值。
-	
-3. 将以下行添加到使用者和生产者属性：<code>sasl.mechanism=PLAIN</code>

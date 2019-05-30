@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# MQ Light API 사용 
+# 클래식 플랜에서 MQ Light API 사용
 {: #mql_using}
 
-** MQ Light API는 표준 플랜의 일부로만 사용 가능합니다.**
+** MQ Light API는 클래식 플랜의 일부로만 사용 가능합니다.**
 <br/>
 
 {{site.data.keyword.mql}} API는 초기 {{site.data.keyword.mql}} 서비스와의 역호환성을 위해 제공됩니다. API는 AMQP 기반 메시징 인터페이스를 Java&trade;, Node.js, Python 및 Ruby에 제공합니다. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## MQ Light API의 개념 및 차이점
 {: #mqlight}
@@ -41,7 +38,7 @@ Kafka 클라이언트 또는 {{site.data.keyword.mql}} API 사용 중에서 선�
 빌드하려는 메시징 토폴로지에 좌우됩니다.
 
 * Kafka로 적은 수의 토픽을 사용하여 추가 확장성을 위해 각 토픽에 여러 개의 파티션이 생기도록 할 수 있습니다. 이용자 그룹을 사용하여 이용자들 간에서 메시지를 공유할 수 있지만, 각 이용자가 지정된 파티션에 대한 메시지의 비율과 맞출 수 있어야 합니다.
-* {{site.data.keyword.mql}} API로 훨씬 더 많은 수의 토픽을 사용할 수 있으며 토픽 이름은 계층 구조(예: <code>&lsquo;/sports/football&rsquo;</code> 및 <code>&lsquo;/sports/tiddlywinks&rsquo;</code>)입니다.  
+* {{site.data.keyword.mql}} API로 훨씬 더 많은 수의 토픽을 사용할 수 있으며 토픽 이름은 계층 구조(예: <code>&lsquo;/sports/football&rsquo;</code> 및 <code>&lsquo;/sports/tiddlywinks&rsquo;</code>)입니다. 
 
 {{site.data.keyword.mql}} API의 토픽은 Kafka 토픽과 같지 않습니다. 그 대신, {{site.data.keyword.mql}} API는
 "MQLight"로 이름 지정된 단일 Kafka 토픽을 사용하며 {{site.data.keyword.mql}} API를 사용하여 보내고 받은 모든 메시지가 그 하나의 Kafka 토픽을 통해 이동합니다.
@@ -50,7 +47,7 @@ Kafka 클라이언트 또는 {{site.data.keyword.mql}} API 사용 중에서 선�
 {{site.data.keyword.Bluemix_notm}} 위치(지역)에서만 사용 가능합니다. MQ Light API는 프랑크프루트(eu-de) 지역 또는
 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서는 사용할 수 없습니다.
 
-API 중에서의 선택에 대한 자세한 정보는 [세 개의 API 중에서 선택](/docs/services/EventStreams?topic=eventstreams-choose_api)을 참조하십시오.
+API 중에서의 선택에 대한 자세한 정보는 [세 개의 API 중에서 선택](/docs/services/EventStreams?topic=eventstreams-choose_api_classic)을 참조하십시오.
 
 
 ## {{site.data.keyword.messagehub}}에서 MQ Light API를 사용하는 데 필요한 사항
@@ -72,7 +69,7 @@ MQ Light API를 사용 안함으로 설정하려면 "MQLight" 토픽을 삭제�
 ## 연결 및 인증 방법
 {: #mql_connect}
 
-앱을 서비스에 연결하려면 앱은 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)에서 <code>user</code>,
+앱을 서비스에 연결하려면 앱은 [VCAP_SERVICES 환경 변수](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf)에서 <code>user</code>,
 <code>password</code> 및 <code>mqlight_lookup_url</code> 세부사항을 사용해야 합니다. 사용자가 선택한 언어에 대한 다음 안내를 사용하십시오.
 
 **Java의 경우**
@@ -85,7 +82,7 @@ create() 호출의 endpointService 매개변수로 <code>null</code>을 지정�
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
         client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

@@ -16,17 +16,18 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Bridge Cloud Object Storage 
+# Bridge Cloud Object Storage sul piano Classic
 {: #cloud_object_storage_bridge }
 
-** Il bridge Cloud Object Storage è disponibile solo come parte del piano Standard.**
+
+** Il bridge Cloud Object Storage è disponibile solo come parte del piano Classic.**
 <br/>
 
 Il bridge {{site.data.keyword.IBM}} Cloud Object Storage fornisce un modo per leggere i dati da un argomento Kafka {{site.data.keyword.messagehub}}
-e inserire i dati in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+e inserire i dati in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
-Il bridge Cloud Object Storage ti consente di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} un'istanza del servizio [Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. Il bridge consuma
+Il bridge Cloud Object Storage ti consente di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} un'istanza del servizio [Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Il bridge consuma
 batch di messaggi provenienti da Kafka e carica i dati del messaggio come oggetti in un bucket nel
 servizio Cloud Object Storage. Configurando il bridge Cloud Object Storage, puoi controllare il modo in cui i dati vengono caricati come oggetti in Cloud Object Storage. Ad esempio, le proprietà che
 puoi configurare sono le seguenti:
@@ -160,12 +161,12 @@ Per partizionare i dati per offset dei messaggi Kafka, completa la seguente proc
      	</code></pre>
     {:codeblock}
 
-    I nomi oggetto generati da un bridge configurato in questo modo contengono il prefisso
-    `"offset=<kafka_offset>"` dove `"<kafka_offset>"` corrisponde al
-    primo messaggio Kafka memorizzato in tale partizione (il gruppo di oggetti con questo prefisso). Ad
-    esempio, se un bridge genera oggetti con dei nomi come il seguente esempio,
-    `<object_a>` e `<object_b>` contengono i messaggi con offset compresi nell'intervallo
-    che va da 0 a 999, `<object_c>` contiene i messaggi con offset compresi nell'intervallo che va da 1000 a
+    I nomi dell'oggetto generati da un bridge configurato in questo modo contengono il prefisso
+    `"offset=<kafka_offset>"` in cui `"<kafka_offset>"` corrisponde al
+    primo messaggio Kafka memorizzato in tale partizione (il gruppo di oggetti con questo prefisso). Ad esempio,
+    se un bridge genera degli oggetti con nomi simili al seguente esempio,
+    `<object_a>` e `<object_b>` contengono dei messaggi con gli offset
+    nell'intervallo 0 - 999, `<object_c>` contiene dei messaggi con gli offset nell'intervallo 1000 -
     1999 e così via.
 
     <pre class="pre"><code>
@@ -218,9 +219,9 @@ Per partizionare i dati per la data ISO 8601, completa la seguente procedura:
 	8601 in ogni messaggio Kafka. In questo esempio, il campo `"timestamp"` deve
 	contenere un valore di data ISO 8601 valido. I messaggi vengono quindi partizionati in base alle loro date.
 	
-	Un bridge configurato come questo esempio genera oggetti con nomi specificati come i seguenti:
-	`<object_a>` contiene messaggi JSON con i campi `"timestamp"` con la data
-	 2016-12-07 ed entrambi `<object_b>` e `<object_c>` contengono messaggi JSON con i campi `"timestamp"` con la data
+	Un bridge configurato come questo esempio genera degli oggetti con i nomi specificati nel seguente modo:
+	`<object_a>` contiene dei messaggi JSON con i campi `"timestamp"` con la data
+	2016-12-07 e `<object_b>` e `<object_c>` contengono dei messaggi JSON con i campi `"timestamp"` con una data
 	2016-12-08.
 
     <pre class="pre"><code>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-15"
+lastupdated: "2019-05-08"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -39,7 +39,7 @@ Siga estos pasos:
   
   b. Pulse **Catálogo**.
   
-  c. En la sección **Integración**, seleccione **Plan Estándar de {{site.data.keyword.messagehub}}**. Se abrirá la página de instancia de servicio de {{site.data.keyword.messagehub}}.
+  c. En la sección **Integración**, pulse el icono {{site.data.keyword.messagehub}} y, a continuación, seleccione el **Plan Estándar**. Se abrirá la página de instancia de servicio de {{site.data.keyword.messagehub}}.
   
   d. Escriba un nombre para el servicio. Puede utilizar el valor predeterminado.
   
@@ -47,7 +47,7 @@ Siga estos pasos:
 
 2. {: #create_credentials_step notoc} Cree algunas credenciales de {{site.data.keyword.messagehub}} completando estos pasos: [obtención de credenciales y conexión mediante la consola de IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
    <br/>
-   <br/>Necesitará los valores de *kafka_brokers_sasl*, *kafka_admin_url* y *api_key* para el [paso 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) de esta tarea.   
+   <br/>Necesitará los valores de *kafka_brokers_sasl* y *api_key* para el [paso 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) de esta tarea.   
 
 3. Si aún no los tiene, instale los requisitos previos siguientes:
 
@@ -75,17 +75,15 @@ Siga estos pasos:
 
 7. {: #start_consumer_step notoc} Inicie el consumidor en la consola ejecutando el siguiente mandato:
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -consumer</pre>
     
     El ejemplo utiliza un tema denominado `kafka-java-console-sample-topic`. Si el tema ya no existe, el ejemplo lo crea utilizando la API de administración de {{site.data.keyword.messagehub}}. Para enviar y recibir mensajes, el ejemplo utiliza la API Apache Kafka Java.
 
-    Utilice los valores para *kafka_brokers_sasl*, *kafka_admin_url*
-    y *api_key* desde las credenciales que ha creado en el [paso 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
-	
-	Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos.
-    
+    Utilice los valores de *kafka_brokers_sasl*
+    y *api_key* de las credenciales que ha creado en el [paso 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
+	<p></p>
+
 	**Importante:** *kafka_brokers_sasl* debe ser una serie única y debe escribirse entre comillas. Por ejemplo:
 
     <pre class="pre">
@@ -96,8 +94,8 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos.
 
 8. Inicie el productor en la consola ejecutando el siguiente mandato:
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -producer</pre>
   
 9. Ahora deberían aparecer en el consumidor los mensajes enviados por el productor. A continuación, se muestra una salida de ejemplo:
 

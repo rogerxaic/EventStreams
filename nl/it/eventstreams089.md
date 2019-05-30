@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Bridge Object Storage (obsoleto)
+# Bridge Object Storage sul piano Classic
 {: #object_storage_bridge }
 
 ** Il bridge {{site.data.keyword.objectstorageshort}} è diventato obsoleto dal primo agosto 2018.**
@@ -36,7 +36,7 @@ di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} i
 batch di messaggi provenienti da Kafka e carica i dati del messaggio come oggetti in un contenitore nel
 servizio {{site.data.keyword.objectstorageshort}}.
 
-Nota: il servizio di storage di oggetti preferito in {{site.data.keyword.Bluemix_short}} è ora il servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icona collegamento esterno](../../icons/launch-glyph.svg "Icona collegamento esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+Nota: il servizio di storage di oggetti preferito in {{site.data.keyword.Bluemix_short}} è ora il servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icona collegamento esterno](../../icons/launch-glyph.svg "Icona collegamento esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 Configurando il bridge {{site.data.keyword.objectstorageshort}}, puoi controllare il modo in cui i dati vengono caricati come oggetti in {{site.data.keyword.objectstorageshort}}. Ad esempio, le proprietà che
 puoi configurare sono le seguenti:
@@ -129,12 +129,12 @@ Per partizionare i dati per offset dei messaggi Kafka, completa la seguente proc
      	</code></pre>
     {:codeblock}
 
-    I nomi oggetto generati da un bridge configurato in questo modo contengono il prefisso
-    `"offset=<kafka_offset>"` dove `"<kafka_offset>"` corrisponde al
-    primo messaggio Kafka memorizzato in tale partizione (il gruppo di oggetti con questo prefisso). Ad
-    esempio, se un bridge genera oggetti con dei nomi come il seguente esempio,
-    `<object_a>` e `<object_b>` contengono i messaggi con offset compresi nell'intervallo
-    che va da 0 a 999, `<object_c>` contiene i messaggi con offset compresi nell'intervallo che va da 1000 a
+    I nomi dell'oggetto generati da un bridge configurato in questo modo contengono il prefisso
+    `"offset=<kafka_offset>"` in cui `"<kafka_offset>"` corrisponde al
+    primo messaggio Kafka memorizzato in tale partizione (il gruppo di oggetti con questo prefisso). Ad esempio,
+    se un bridge genera degli oggetti con nomi simili al seguente esempio,
+    `<object_a>` e `<object_b>` contengono dei messaggi con gli offset
+    nell'intervallo 0 - 999, `<object_c>` contiene dei messaggi con gli offset nell'intervallo 1000 -
     1999 e così via.
 
     <pre class="pre"><code>
@@ -187,9 +187,9 @@ Per partizionare i dati per la data ISO 8601, completa la seguente procedura:
 	8601 in ogni messaggio Kafka. In questo esempio, il campo `"timestamp"` deve
 	contenere un valore di data ISO 8601 valido. I messaggi vengono quindi partizionati in base alle loro date.
 	
-	Un bridge configurato come questo esempio genera oggetti con nomi specificati come i seguenti:
-	`<object_a>` contiene messaggi JSON con i campi `"timestamp"` con la data
-	 2016-12-07 ed entrambi `<object_b>` e `<object_c>` contengono messaggi JSON con i campi `"timestamp"` con la data
+	Un bridge configurato come questo esempio genera degli oggetti con i nomi specificati nel seguente modo:
+	`<object_a>` contiene dei messaggi JSON con i campi `"timestamp"` con la data
+	2016-12-07 e `<object_b>` e `<object_c>` contengono dei messaggi JSON con i campi `"timestamp"` con una data
 	2016-12-08.
 
     <pre class="pre"><code>

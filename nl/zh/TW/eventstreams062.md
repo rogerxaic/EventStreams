@@ -33,30 +33,6 @@ subcollection: eventstreams
 
 我們支援的最低 Kafka 通訊協定是 0.10。
 
-<!--
-## Support summary for the official Apache Kafka client (Java)
-
-<table>
-    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
-      <tr>
-	        <th></th>
-		    <th>Standard and Enterprise Plans</th>
-		    <th></th>
-        </tr>
-	  		<tr>
-			<td>**Kafka version on cluster**</td>
-			<td>Kafka 1.1</td>
-		</tr>
-	  		<tr>
-			<td>**Supported client versions**</td>
-			<td>Kafka 1.1, or later</td>
-		</tr>
-			<td>**Authentication requirements**</td>
-			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
-		</tr>
-
-</table>
--->
 	
 ## 協力廠商用戶端
 {: #third_party_clients}
@@ -70,7 +46,7 @@ subcollection: eventstreams
 
 <table id="clients_table">
     <caption>表 2. 用戶端支援摘要</caption>
-     <tr>
+      <tr>
 		    <th id="client" scope="col">用戶端</th>
 		    <th id="language" scope="col">語言</th>
 			<th id="version" scope="col">建議版本</th>
@@ -84,7 +60,7 @@ subcollection: eventstreams
 			<td>[Apache Kafka 用戶端 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>最新</td>
-			<td>0.10.2<p> 如需較舊用戶端的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。</p></td>
+			<td>0.10.2<p> 如需較舊用戶端的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic)。</p></td>
 			<td>[Java 主控台範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Liberty 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -125,12 +101,6 @@ subcollection: eventstreams
 ### 註腳
 1. {: #footnote1}此版本是我們已在持續測試中驗證過的最早版本。通常這是在過去 12 個月內可用的起始版本，但如果已知有重要的問題存在，可能會更新。
 
-## 舊版相容性 - 標準方案
-{: #compatibility}
-
-如需舊版相容性，您可以使用 Apache Kafka 0.9 Java 用戶端搭配 {{site.data.keyword.messagehub}} 標準方案。不過，由於此用戶端的年限，我們強烈阻止使用它。如果您選擇使用這個用戶端版本，則需要其他[登入模組 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)。
-
-早於 0.11 的用戶端版本可能會遇到效能欠佳，因為連接至較新 Kafka 伺服器版本時需要額外的通訊協定轉換。
 
 <!--
 ## Unsupported clients

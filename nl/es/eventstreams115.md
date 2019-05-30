@@ -16,17 +16,18 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Puente de Cloud Object Storage 
+# Puente de Cloud Object Storage en el plan Clásico
 {: #cloud_object_storage_bridge }
 
-** El puente de Cloud Object Storage solo está disponible como parte del plan Estándar.**
+
+** El puente de Cloud Object Storage solo está disponible como parte del plan Clásico.**
 <br/>
 
 El puente de {{site.data.keyword.IBM}} Cloud Object Storage proporciona una forma de leer datos de un tema Kafka de {{site.data.keyword.messagehub}}
-y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
-El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un contenedor del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
+El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un grupo del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
 
 * El nombre de grupo en el que se graban los objetos.
 * La frecuencia con que se cargan los objetos en el servicio Cloud Object Storage.
@@ -138,7 +139,12 @@ Para particionar datos por desplazamiento de mensajes de Kafka, siga estos pasos
      	</code></pre>
     {:codeblock}
 
-    Los nombres de objeto generados por un puente configurado de esta forma contienen el prefijo `" offset=<kafka_offset>"` donde `"<kafka_offset>"` corresponde al primer mensaje de Kafka almacenado en la partición en cuestión (el grupo de objetos con este prefijo). Por ejemplo, si un puente genera objetos con nombres como en el ejemplo siguiente, `<object_a>` y `<object_b>` contienen mensajes con desplazamientos en el rango 0-999, `<object_c>` contiene mensajes con desplazamientos en el rango de 1000 a 1999 y así sucesivamente.
+    Los nombres de objeto generados por un puente configurado de esta forma contienen el prefijo
+    `"offset=<kafka_offset>"` donde `"<kafka_offset>"` corresponde al primer mensaje de Kafka almacenado en la partición en cuestión (el grupo de objetos con este prefijo). Por
+    ejemplo, si un puente genera objetos con nombres como en el ejemplo siguiente,
+    `<object_a>` y `<object_b>` contienen mensajes con desplazamientos
+    en el rango 0 - 999, `<object_c>` contiene mensajes con desplazamientos en el rango de 1000 -
+    1999, y así sucesivamente.
 
     <pre class="pre"><code>
         ```
@@ -190,8 +196,8 @@ Para particionar datos por fecha ISO 8601, siga estos pasos:
 	de fecha ISO 8601 válido. Entonces los mensajes se particionarán según las fechas correspondientes.
 	
 	Un puente configurado como este ejemplo genera objetos con nombres especificados de la siguiente manera:
-	`<object_a>` contiene mensajes JSON con los campos `"timestamp"` con
-	la fecha 2016-12-07 y `<object_b>` y `<object_c>` contienen mensajes JSON con los campos `"timestamp"` con la fecha
+	`<object_a>` contiene mensajes JSON con los campos `"timestamp"` con la fecha
+	2016-12-07, y tanto `<object_b>` como `<object_c>` contienen mensajes JSON con campos `"timestamp"` con la fecha
 	2016-12-08.
 
     <pre class="pre"><code>
@@ -208,7 +214,7 @@ Para particionar datos por fecha ISO 8601, siga estos pasos:
 ## Métricas del puente de Cloud Object Storage
 {: notoc}
 
-El puente de Cloud Object Storage notifica métricas, que se pueden visualizar en el panel utilizando Grafana. Entre las métricas de interés se incluyen las siguientes:
+El puente de Cloud Object Storage notifica métricas, que se pueden visualizar en el panel de control utilizando Grafana. Entre las métricas de interés se incluyen las siguientes:
 <dl>
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.bytes-consumed-rate</code></dt>
 <dd>Mide la velocidad con que el puente consume los datos (en bytes por segundo).</dd>

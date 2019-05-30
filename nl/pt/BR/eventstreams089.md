@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Ponte do Object Storage (descontinuada)
+# Ponte do Object Storage no plano Clássico
 {: #object_storage_bridge }
 
 ** A ponte do {{site.data.keyword.objectstorageshort}} foi descontinuada em 1º de agosto de 2018. **
@@ -34,17 +34,15 @@ Como alternativa, é possível usar a [ponte do Cloud Object Storage](/docs/serv
 A ponte do {{site.data.keyword.objectstorageshort}} permite arquivar dados de tópicos
 do Kafka no {{site.data.keyword.messagehub}} em uma instância do serviço do {{site.data.keyword.Bluemix_short}}. A ponte consome lotes de mensagens do Kafka e faz upload dos dados da mensagem como objetos para um contêiner no serviço do {{site.data.keyword.objectstorageshort}}.
 
-Observe que o serviço de armazenamento de objeto preferencial no {{site.data.keyword.Bluemix_short}} agora é o serviço do [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+Observe que o serviço de armazenamento de objeto preferencial no {{site.data.keyword.Bluemix_short}} agora é o serviço do [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
-Ao configurar a ponte do {{site.data.keyword.objectstorageshort}}, é possível controlar como os dados são transferidos por upload como objetos para o {{site.data.keyword.objectstorageshort}}. Por
-exemplo, as propriedades que podem ser configuradas são as seguintes:
+Ao configurar a ponte do {{site.data.keyword.objectstorageshort}}, é possível controlar como os dados são transferidos por upload como objetos para o {{site.data.keyword.objectstorageshort}}. Por exemplo, as propriedades que podem ser configuradas são as seguintes:
 
 * O nome do contêiner no qual os objetos são gravados.
 * Com que frequência os objetos são transferidos por upload para o serviço do {{site.data.keyword.objectstorageshort}}.
 * Quantia de dados que são gravados em cada objeto antes de serem transferidos por upload para o serviço do {{site.data.keyword.objectstorageshort}}.
 
-O formato de saída da ponte é um objeto de serviço de armazenamento de objeto que contém um ou mais
-registros concatenados com caracteres de nova linha como separadores.
+O formato de saída da ponte é um objeto de serviço de armazenamento de objeto que contém um ou mais registros concatenados com caracteres de nova linha como separadores.
 
 ## Como os dados são transferidos usando a ponte do {{site.data.keyword.objectstorageshort}}
 {: notoc}
@@ -120,11 +118,7 @@ Para particionar dados por deslocamento de mensagem do Kafka, conclua as etapas 
      	</code></pre>
     {:codeblock}
 
-    Os nomes de objeto gerados por uma ponte configurada dessa maneira contêm o prefixo `"offset=<kafka_offset>"`, em que `"<kafka_offset>"` corresponde à primeira mensagem
-do Kafka armazenada em tal partição (o grupo de objetos com este prefixo). Por exemplo, se uma ponte gera
-objetos com nomes como o exemplo a seguir, `<object_a>` e `<object_b>`
-contêm mensagens com deslocamentos no intervalo de 0 a 999, `<object_c>` contém mensagens com
-deslocamentos no intervalo de 1000 a 1999, e assim por diante.
+    Os nomes de objetos gerados por uma ponte configurada dessa maneira contêm o prefixo `"offset=<kafka_offset>"`, em que `"<kafka_offset>"` corresponde à primeira mensagem do Kafka armazenada nessa partição (o grupo de objetos com esse prefixo). Por exemplo, se uma ponte gerar objetos com nomes como o exemplo a seguir, `<object_a>` e `<object_b>` conterão mensagens com deslocamentos no intervalo de 0 a 999, `<object_c>` conterá mensagens com deslocamentos no intervalo de 1000 a 1999 e assim por diante.
 
     <pre class="pre"><code>
         ```
@@ -180,10 +174,7 @@ ao campo de data do ISO 8601 em cada mensagem do Kafka. Neste exemplo, o campo `
 deve conter um valor de data de ISO 8601 válido. Em seguida, as mensagens são particionadas de acordo com
 suas datas.
 	
-	Uma ponte configurada como este exemplo gera objetos com nomes especificados como segue:
- `<object_a>` contém mensagens JSON com campos `"timestamp"` com
- uma data de 07/12/2016 e `<object_b>` e `<object_c>` contêm mensagens JSON com campos `"timestamp"` com uma data de
- 08/12/2016.
+	Uma ponte configurada como este exemplo gera objetos com nomes especificados conforme a seguir: `<object_a>` contém mensagens JSON com campos `"timestamp"` com uma data de 07/12/2016 e ambos, `<object_b>` e `<object_c>`, contêm mensagens JSON com campos `"timestamp"` com uma data de 08/12/2016.
 
     <pre class="pre"><code>
         ```
@@ -194,7 +185,8 @@ suas datas.
     </code></pre>
     {:codeblock}
 
-	Quaisquer dados da mensagem que possuam um formato JSON válido, mas sem um campo ou valor de data válido, são gravados em um objeto com o prefixo `"dt=1970-01-01"`.
+	Quaisquer dados da mensagem que possuam um formato JSON válido, mas sem um campo ou valor de data válido, são gravados em um objeto
+com o prefixo `"dt=1970-01-01"`.
 
 ## Métricas de ponte do {{site.data.keyword.objectstorageshort}}
 {: notoc}
@@ -204,6 +196,5 @@ A ponte do {{site.data.keyword.objectstorageshort}} relata métricas, que podem 
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.bytes-consumed-rate</code></dt>
 <dd>Mede a taxa em que a ponte consome dados (em bytes por segundo).</dd>
 <dt><code>*.<var class="keyword varname">topicName</var>.<var class="keyword varname">bridgeName</var>.records-lag-max</code></dt>
-<dd>Mede o atraso máximo no número de registros consumidos pela ponte para qualquer partição neste tópico. Um
-valor crescente ao longo do tempo indica que a ponte não está acompanhando os produtores para o tópico.</dd>
+<dd>Mede o atraso máximo no número de registros consumidos pela ponte para qualquer partição neste tópico. Um valor crescente ao longo do tempo indica que a ponte não está acompanhando os produtores para o tópico.</dd>
 </dl>

@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #monitoring}
 
 {{site.data.keyword.messagehub}} nel piano Standard raccoglie automaticamente le metriche e gli eventi in modo che tu possa
-monitorare l'utilizzo che fai di {{site.data.keyword.messagehub}}.
+monitorare il tuo utilizzo di {{site.data.keyword.messagehub}}.
 {:shortdesc}
 
 **Nota:** le metriche e gli eventi sono disponibili come parte del piano Standard di {{site.data.keyword.messagehub}} solo in Dallas (us-south), Londra (eu-gb) e Sydney (au-syd). 

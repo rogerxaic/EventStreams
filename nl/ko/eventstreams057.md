@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-10-19"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # 알려진 제한사항
@@ -89,6 +90,8 @@ KIP(Kafka Improvement Proposal) #302는 Kafka 클라이언트가 사용 가능�
 *  각 {{site.data.keyword.Bluemix_notm}} 영역에는 파티션의 수가 100개로 제한됩니다. 더 많은 파티션을 작성하려면,
 새 {{site.data.keyword.Bluemix_notm}} 영역을 사용해야 합니다.
 
+<!--following message retention info duplicted in FAQs eventstreams108-->
+
 ## 메시지 보유
 {: #message_retention}
 
@@ -97,7 +100,7 @@ KIP(Kafka Improvement Proposal) #302는 Kafka 클라이언트가 사용 가능�
 사용자 인터페이스 또는 관리 API 중 하나를 사용하여 토픽을 작성할 때 메시지 보유에 대한 시간 한계를
 변경할 수 있습니다. 시간 한계는 최소 1시간이며 최대 30일입니다.
 
-Kafka 클라이언트 또는 Kafka Streams를 사용하여 토픽을 작성할 때 허용되는 설정의 제한사항에 대한 정보는 [Kafka API 사용](/docs/services/EventStreams?topic=eventstreams-kafka_using)을 참조하십시오.
+Kafka 클라이언트 또는 Kafka Streams를 사용하여 토픽을 작성할 때 허용되는 설정의 제한사항에 대한 정보는 [토픽 작성 및 삭제를 위해 Kafka API를 사용하는 방법](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin)을 참조하십시오.
 
 ## Kafka에서 토픽 작성 및 삭제
 {: #create_delete}
@@ -106,37 +109,63 @@ Kafka에서 토픽 작성 및 삭제는 비동기 작업으로 완료하는 데 
 있습니다. 토픽의 빠른 작성 및 삭제 또는 토픽의 빠른 삭제 및 재작성에 의존하는
 사용법 패턴은 피하는 것이 좋습니다.
 
+<!--
 ## Kafka REST API
 {: #trouble_rest}
 
-*  요청 및 응답에 2진 임베디드 형식만 지원됩니다. Avro 및 JSON 임베디드 형식은 지원되지 않습니다.
-*  동시 요청은 이용자 인스턴스에 대해 지원되지 않습니다.
-   이용자 인스턴스에 해당하는 읽기, 커미트 또는 삭제 요청은 해당 인스턴스의 미해결 요청에 대한 응답을 수신한 후에만 전송해야 합니다.
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
 
-## Kafka REST API 비율 제한사항
+*  Only the binary-embedded format is supported for requests and
+   responses. The Avro and JSON embedded formats are not supported.
+*  Concurrent requests are not supported for a consumer instance.
+   Read, commit, or delete requests corresponding to a consumer
+   instance should be sent only after a response is received for
+   any outstanding requests of that instance.
+
+-->
+<!--
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+
+## Kafka REST API rate limitation
 {: #kafka_rate}
 
-Kafka REST API를 사용하는 애플리케이션은 각 ApiKey에 대한 비율 제한 대상이 될 수 있습니다. 이 제한이 발생할 때 API는 다음과 같은 HTTP 오류로 응답합니다.
+Applications using the Kafka REST API can be subject to rate
+limiting for each ApiKey. When this limiting occurs, the API
+responds with the following HTTP error:
 
 <code>429 Too Many Requests</code>
 {:screen}
 
-이 오류가 발생하는 경우 잠시 대기한 후에 요청을 다시 제출하십시오.
+If you see this error, wait and submit the request again.
 
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+-->
 <!--12/04/18 - Karen: same info duplicated at messagehub108 -->
-## Kafka REST API 일별 다시 시작
+<!--
+## Kafka REST API daily restart
 {: #rest_restart}
 
-Kafka REST API는 단기간 동안 하루에 한 번 다시 시작합니다. 이 기간 동안에 Kafka REST API를
-사용하지 못하게 될 수 있습니다. 이런 상황이 발생하는 경우, 요청을 재시도하십시오. REST API가 다시 시작된 후에
-Kafka 이용자 인스턴스를 다시 작성해야 합니다. 이런 경우, REST API는 다음과 같은 JSON을 리턴합니다.
+The Kafka REST API restarts once a day for a short period of
+time. During this period, the Kafka REST API might become
+unavailable. If this happens, you are recommended to retry your
+request. After the REST API has restarted, you will have to
+create your Kafka consumer instances again. If this is the case, the
+REST API returns the following JSON:
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```
 {:screen}
-
-## Kafka 상위 레벨 이용자 API
+-->
+<!--
+## Kafka high-level consumer API
 {: #kafka_consumer}
 
-Apache Kafka 0.8.2 단순 또는 상위 레벨 이용자 API는
-{{site.data.keyword.messagehub}}와 함께 사용할 수 없습니다. 대신, 가장 초기에 지원된 Kafka 이용자 API 즉, 0.9를 사용할 수 있습니다.
+You cannot use the Apache Kafka 0.8.2 simple or high-level
+consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.10.
+-->

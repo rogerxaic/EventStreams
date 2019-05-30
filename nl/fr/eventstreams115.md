@@ -16,17 +16,18 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Pont Cloud Object Storage 
+# Pont Cloud Object Storage dans le plan Classic
 {: #cloud_object_storage_bridge }
 
-** Le pont Cloud Object Storage est uniquement disponible dans le cadre du plan Standard.**
+
+** Le pont Cloud Object Storage est uniquement disponible dans le plan Classic.**
 <br/>
 
-Le pont {{site.data.keyword.IBM}} Cloud Object Storage offre un moyen de lire des données à partir d'un sujet {{site.data.keyword.messagehub}} Kafka et de placer ces données dans [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+Le pont {{site.data.keyword.IBM}} Cloud Object Storage offre un moyen de lire des données à partir d'un sujet {{site.data.keyword.messagehub}} Kafka et de placer ces données dans [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
 Le pont Cloud Object Storage permet d'archiver des données provenant des sujets Kafka de {{site.data.keyword.messagehub}} dans une instance
-du [service Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. Le pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un compartiment du service
+du [service Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Le pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un compartiment du service
 Cloud Object Storage. En configurant
 le pont Cloud Object Storage, vous pouvez
 contrôler le mode de transfert des données sous forme d'objets vers Cloud Object Storage. Les
@@ -36,22 +37,23 @@ propriétés que vous pouvez configurer sont les suivantes :
 * La fréquence de transfert des objets vers le service Cloud Object Storage.
 * La quantité de données écrites dans chaque objet avant son transfert vers le service Cloud Object Storage.
 
-Le format de sortie du pont est un objet de service de stockage d'objets contenant un ou plusieurs enregistrements concaténés avec des caractères de retour à la ligne comme séparateurs.
+Le format de sortie du pont est un objet de service de stockage d'objets contenant un ou plusieurs
+enregistrements concaténés avec des caractères de retour à la ligne comme séparateurs.
 
 ## Transfert des données via le pont Cloud Object Storage
 {: #data_transfer notoc}
 
 Le pont Cloud Object Storage lit
 un certain nombre d'enregistrements Kafka à partir d'un sujet et écrit les données de ces enregistrements
-dans un objet. Cet objet est transféré vers une instance du service Cloud Object Storage. Chaque pont Cloud Object Storage lit les données des messages à partir d'un
+dans un objet. Cet objet est transféré vers une instance du service Cloud Object Storage. Chaque pont Cloud Object Storage
+lit les données des messages à partir d'un
 seul sujet Kafka, même si un sujet peut être lu par plusieurs ponts à la fois. Une nouvelle instance du pont Cloud Object Storage
 commence toujours sa lecture par la position la moins récente du sujet Kafka. Le pont Cloud Object Storage utilise la gestion des positions de
 consommateur de Kafka pour transférer les données de manière fiable depuis Kafka sans
 perte, mais avec un léger risque de duplication.
 
 Vous pouvez contrôler le nombre d'enregistrements lus depuis Kafka avant l'écriture des données dans l'instance de service Cloud Object Storage
-à l'aide des propriétés ci-après. Indiquez
-ces propriétés lorsque vous créez ou mettez à jour un pont :
+à l'aide des propriétés ci-après. Indiquez ces propriétés lorsque vous créez ou mettez à jour un pont :
 <dl><dt>Upload Duration Threshold (seconds)</dt> 
 <dd>Définit une durée en secondes au bout de laquelle les données accumulées à partir de Kafka
 sont transférées vers le service Cloud Object Storage.</dd>
@@ -63,7 +65,8 @@ Cloud Object Storage.</dd>
 
 Le transfert des données lues à partir de Kafka par le pont Cloud Object Storage
 vers le service Cloud Object Storage est déclenché lorsque l'une de ces
-valeurs est atteinte. Le pont Cloud Object Storage ne garantit pas le transfert des données vers le service Cloud Object Storage au moment précis où le premier point de ces seuils est atteint. Les données
+valeurs est atteinte. Le pont Cloud Object Storage ne garantit pas le transfert des données vers le service Cloud Object Storage
+au moment précis où le premier point de ces seuils est atteint. Les données
 transférées peuvent ainsi arriver plus tard ou être plus volumineuses que les valeurs indiquées pour ces propriétés.
 
 Le pont Cloud Object Storage concatène les messages en utilisant des caractères de retour à la ligne comme séparateurs lorsqu'il écrit les
@@ -74,7 +77,8 @@ séparateurs, le pont ne convient ni aux messages contenant des caractères de r
 ## Obtention de données d'identification à utiliser avec le pont Cloud Object Storage
 {: notoc}
 
-Vous devez fournir des données d'identification pour permettre au pont Cloud Object Storage de se connecter à votre instance Cloud Object Storage. Demandez au propriétaire ou à l'administrateur de votre instance Cloud Object Storage de créer les données d'identification à l'aide de l'interface utilisateur de Cloud Object Storage comme suit : 
+Vous devez fournir des données d'identification pour permettre au pont Cloud Object Storage de se connecter à votre instance Cloud Object Storage. Demandez au
+propriétaire ou à l'administrateur de votre instance Cloud Object Storage de créer les données d'identification à l'aide de l'interface utilisateur de Cloud Object Storage comme suit : 
 
 1. Sélectionnez **Données d'identification pour le service**, puis **Nouvelles données d'identification**. 
 2. Dans **Nouvelles données d'identification**, sélectionnez **Auteur** pour **Rôle d'accès** et **Générer automatiquement** pour **ID de service**.
@@ -88,7 +92,8 @@ de sorte que vous voudrez sans doute limiter cet accès aux seuls compartiments 
 1. Accédez à la [page Gérer l'accès et les utilisateurs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam#/overview){:new_window}.
 2. Cette page doit afficher l'ID de service généré automatiquement. Une fois que vous avez identifié l'ID requis, sélectionnez
 l'action **Gérer un ID de service**. 
-3. Sélectionnez l'action **Editer la règle** afin d'étendre la restriction à un **Type de ressource** spécifique, qui est un compartiment, et à un **ID de ressource**, qui correspond au nom du compartiment. Cliquez sur **Sauvegarder**.
+3. Sélectionnez l'action **Editer la règle** afin d'étendre la restriction à un **Type de ressource** spécifique, qui est un compartiment, et à un **ID de ressource**, qui correspond
+au nom du compartiment. Cliquez sur **Sauvegarder**.
 
 
 ## Création d'un pont Cloud Object Storage
@@ -130,8 +135,7 @@ est différent du partitionnement Kafka.
 
 A chaque fois que le pont Cloud Object Storage
 dispose d'un lot de données à transférer vers le service Cloud Object Storage, il crée un ou plusieurs
-objets contenant les données. La
-décision quant au mode de partitionnement des messages et de nommage des objets qui en
+objets contenant les données. La décision quant au mode de partitionnement des messages et de nommage des objets qui en
 résultent dépend de la configuration du pont. Les noms d'objet peuvent contenir des
 métadonnées Kafka et éventuellement des données provenant des messages eux-mêmes. Actuellement, le pont prend en charge les deux modes de
 partitionnement suivants des messages Kafka en objets Cloud Object Storage :
@@ -169,13 +173,8 @@ Pour partitionner des données selon la position de message Kafka, procédez com
      	</code></pre>
     {:codeblock}
 
-    Les noms d'objet générés par un pont configuré de cette manière contiennent
-le préfixe `"offset=<kafka_offset>"`, où `"<kafka_offset>"`
-correspond au premier message Kafka stocké dans cette partition (le groupe d'objets dotés de ce préfixe). Par
-exemple, si un pont génère des objets nommés comme indiqué ci-après, `<object_a>`
-et `<object_b>` contiennent les messages dont les positions figurent
-dans la plage 0 - 999, `<object_c>` contient les messages dont les
-positions sont comprises dans la plage 1000 - 1999, et ainsi de suite.
+    Les noms d'objet générés par un pont configuré de cette manière contiennent le préfixe `"offset=<kafka_offset>"` où `"<kafka_offset>"` correspond au premier message Kafka stocké dans cette partition (le groupe d'objets avec ce préfixe). Par exemple, si un pont génère des objets avec des noms comme dans l'exemple suivant,
+    `<object_a>` et `<object_b>` contiennent des messages avec des décalages compris entre  0 et 999, `<object_c>` contient des messages avec des décalages compris entre 1000 et 1999, etc.
 
     <pre class="pre"><code>
         ```
@@ -227,11 +226,10 @@ valeur de `"propertyName"` dans le JSON utilisé pour configurer le pont
 doit correspondre à la zone de date ISO 	8601 dans chaque message Kafka. Dans cet exemple, la zone `"timestamp"` doit contenir une valeur de date ISO 8601
 valide. Les messages sont ensuite partitionnés selon leurs dates.
 	
-	Un pont configuré comme dans cet exemple génère des objets dont les noms sont spécifiés comme suit :
-	`<object_a>` contient les messages JSON dont les zones
-`"timestamp"` indiquent la date 2016-12-07, et `<object_b>`
-et `<object_c>` contiennent les messages JSON dont les zones `"timestamp"` indiquent la date
-	2016-12-08.
+	Un pont configuré comme dans cet exemple génère des objets avec des noms spécifiés comme suit :
+	`<object_a>` contient des messages JSON avec des zones `"timestamp"` ayant
+pour date 2016-12-07 tandis que `<object_b>` et `<object_c>` contiennent des messages JSON avec des zones `"timestamp"` ayant pour date
+2016-12-08.
 
     <pre class="pre"><code>
         ```

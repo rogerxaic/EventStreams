@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Diagramme d'architecture Kafka.](kafka_overview.png "Diagramme illustrant l'architecture Kafka. Un producteur publie dans un sujet Kafka de 3 partitions, puis les consommateurs s'abonnent aux messages.")
-{: shortdesc}
+
 
 La liste suivante présente certains concepts d'Apache Kafka :
 
@@ -44,8 +44,8 @@ La liste suivante présente certains concepts d'Apache Kafka :
 <dt>Partition</dt>
 <dd>Chaque sujet comporte une ou plusieurs partitions. Chaque partition est une liste ordonnée de messages. Un numéro, appelé position, qui s'accroît de manière monotone, est attribué à chaque message d'une partition. 
 <p>Chaque partition dispose dans le cluster d'un serveur qui fait office de responsable (leader) de la partition, les autres serveurs faisant office de suiveurs.<p>
-<p>Si un sujet dispose de plusieurs partions, les données peuvent y être envoyées en parallèle afin d'augmenter la capacité de traitement en répartissant les partitions dans le cluster. Le nombre de partitions joue également sur l'équilibrage de la charge de travail entre les consommateurs.</p>
-<p>Pour plus d'informations, voir [Leadership de partition](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
+<p>Si un sujet dispose de plusieurs partitions, les données peuvent y être envoyées en parallèle afin d'augmenter le débit en répartissant les partitions dans le cluster. Le nombre de partitions joue également sur l'équilibrage de la charge de travail entre les consommateurs.</p>
+<p>Pour plus d'informations, voir [Leadership de partition](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership).</dd>
 <dt>Producteur</dt>
 <dd>Processus qui publie les flux de messages dans les sujets Kafka. Un producteur peut publier dans un ou plusieurs sujets et choisir éventuellement la partition qui stocke les données.<br/></dd>
 <br/>
@@ -62,9 +62,9 @@ La liste suivante présente certains concepts d'Apache Kafka :
 </dl>
 
 Pour en savoir plus, voir les informations suivantes :
-- [Génération de messages](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [Messages relatifs à la consommation](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [Leadership de partition](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [Génération de messages](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [Messages relatifs à la consommation](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [Leadership de partition](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Documentation Apache Kafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

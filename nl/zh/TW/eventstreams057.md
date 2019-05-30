@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-10-19"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # 已知限制
@@ -87,6 +88,8 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 *  一個主題的預設分割區數目是一 (1)。
 *  每個 {{site.data.keyword.Bluemix_notm}} 空間有 100 個分割區的限制。若要建立更多分割區，您必須使用新的 {{site.data.keyword.Bluemix_notm}} 空間。
 
+<!--following message retention info duplicted in FAQs eventstreams108-->
+
 ## 訊息保留
 {: #message_retention}
 
@@ -94,40 +97,70 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 
 當您以使用者介面或管理 API 建立主題時，可以變更訊息保留的時間限制。時間限制為最短一小時，最長 30 天。
 
-如需使用 Kafka 用戶端或 Kafka Streams 建立主題時所接受設定之限制的相關資訊，請參閱[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
+如需使用 Kafka 用戶端或 Kafka Streams 建立主題時所接受設定之限制的相關資訊，請參閱[如何使用 Kafka API 刪除主題？](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin)。
 
 ## 在 Kafka 中建立及刪除主題
 {: #create_delete}
 
 在 Kafka 中，主題建立及刪除是非同步作業，可能需要一些時間才能完成。建議您避免使用依賴快速建立及刪除主題的模式，或是使用依賴快速刪除並重建主題的模式。
 
+<!--
 ## Kafka REST API
 {: #trouble_rest}
 
-*  要求及回應只支援二進位內嵌格式。不支援 Avro 及 JSON 內嵌格式。
-*  消費者實例不支援並行要求。對應於消費者實例的讀取、確定或刪除要求，應該只能在收到該實例之任何未完成要求的回應之後傳送。
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
 
-## Kafka REST API 速率限制
+*  Only the binary-embedded format is supported for requests and
+   responses. The Avro and JSON embedded formats are not supported.
+*  Concurrent requests are not supported for a consumer instance.
+   Read, commit, or delete requests corresponding to a consumer
+   instance should be sent only after a response is received for
+   any outstanding requests of that instance.
+
+-->
+<!--
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+
+## Kafka REST API rate limitation
 {: #kafka_rate}
 
-使用 Kafka REST API 的應用程式，可能受限於每個 ApiKey 的速率限制。發生此限制時，API 會回應下列 HTTP 錯誤：
+Applications using the Kafka REST API can be subject to rate
+limiting for each ApiKey. When this limiting occurs, the API
+responds with the following HTTP error:
 
-<code>429 要求太多</code>
+<code>429 Too Many Requests</code>
 {:screen}
 
-如果您看到此錯誤，請稍候，然後重新提交要求。
+If you see this error, wait and submit the request again.
 
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+-->
 <!--12/04/18 - Karen: same info duplicated at messagehub108 -->
-## Kafka REST API 每日重新啟動
+<!--
+## Kafka REST API daily restart
 {: #rest_restart}
 
-Kafka REST API 每天會重新啟動一次，需要一小段時間。在此期間內，Kafka REST API 可能變成無法使用。如果發生這種情況，建議您重試要求。REST API 重新啟動之後，您需要重建 Kafka 消費者實例。如果是這種情況，REST API 會傳回下列 JSON：
+The Kafka REST API restarts once a day for a short period of
+time. During this period, the Kafka REST API might become
+unavailable. If this happens, you are recommended to retry your
+request. After the REST API has restarted, you will have to
+create your Kafka consumer instances again. If this is the case, the
+REST API returns the following JSON:
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```
 {:screen}
-
-## Kafka 高階消費者 API
+-->
+<!--
+## Kafka high-level consumer API
 {: #kafka_consumer}
 
-您無法使用 Apache Kafka 0.8.2 簡單或高階消費者 API 與 {{site.data.keyword.messagehub}} 搭配。您可以改用最早版本的受支援 Kafka 消費者 API，也就是 0.9。
+You cannot use the Apache Kafka 0.8.2 simple or high-level
+consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.10.
+-->

@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Kafka 架構圖。](kafka_overview.png "顯示 Kafka 架構的圖表。生產者正在將資料提供給 3 個分割區上的 Kafka 主題，然後由消費者訂閱訊息。")
-{: shortdesc}
+
 
 下列清單定義部分 Apache Kafka 概念：
 
@@ -43,7 +43,7 @@ subcollection: eventstreams
 <dt>分割區</dt>
 <dd>每個主題包含一個以上的分割區。每一個分割區都是訊息的排序清單。分割區上的每一則訊息都被指定一個單調的遞增數字，稱為偏移。<p>每一個分割區在叢集中都有一部伺服器用來作為分割區的領導者，而其他伺服器則作為追隨者。<p>
 <p>如果某個主題具有多個分割區，它容許藉由在整個叢集中配送分割區來同時提供資料以增加傳輸量。分割區數目也會影響消費者的工作負載平衡。</p>
-<p>如需相關資訊，請參閱[分割區領導權](/docs/services/EventStreams?topic=eventstreams-partition_leadership)。</dd>
+<p>如需相關資訊，請參閱[分割區領導權](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership)。</dd>
 <dt>生產者</dt>
 <dd>將訊息串流發佈至 Kafka 主題的處理程序。生產者可以發佈至一個以上的主題，也可以選擇性地選擇用來儲存資料的分割區。<br/></dd>
 <br/>
@@ -59,9 +59,9 @@ subcollection: eventstreams
 </dl>
 
 若要進一步瞭解，請參閱下列資訊：
-- [產生訊息](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [取用訊息](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [分割區領導權](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [產生訊息](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [取用訊息](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [分割區領導權](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Apache Kafka 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

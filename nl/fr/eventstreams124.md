@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,19 +15,24 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# Gestion de l'accès à vos ressources {{site.data.keyword.messagehub}} (plan Enterprise)
+# Gestion de l'accès à vos ressources {{site.data.keyword.messagehub}} 
 {: #security }
 
 Vous pouvez sécuriser vos ressources {{site.data.keyword.messagehub}} de manière très affinée afin de gérer l'accès que vous voulez accorder à chaque ressource pour chaque utilisateur.
 {: shortdesc}
 
+Lorsque vous apportez des modifications aux autorisations et aux politiques IAM, ces modifications peuvent mettre plusieurs minutes à se refléter dans le service sous-jacent.
+{: important}
+
 ## Que puis-je sécuriser ?
 
 Dans {{site.data.keyword.messagehub}}, vous pouvez sécuriser l'accès aux ressources suivantes :
 * Cluster (cluster) : vous pouvez contrôler quelles applications et quels utilisateurs peuvent se connecter au service
-* Sujets (sujet) : vous pouvez contrôler la possibilité des utilisateurs et des applications de créer, supprimer, lire et écrire dans un sujet 
-* Groupes de consommateurs (groupe) : vous pouvez contrôler la possibilité d'une application de rejoindre un groupe de consommateurs 
+* Sujets (topic) : vous pouvez contrôler la possibilité des utilisateurs et des applications de créer, supprimer, lire et écrire dans un sujet 
+* Groupes de consommateurs (group) : vous pouvez contrôler la possibilité d'une application de rejoindre un groupe de consommateurs 
 * Transactions de producteur (txnid) : vous pouvez contrôler la possibilité d'utiliser la fonctionnalité de producteur transactionnel de Kafka (c'est-à-dire, écritures atomiques uniques dans plusieurs partitions)
 
 Les niveaux d'accès (ou rôles) que vous pouvez affecter à un utilisateur sur chaque ressource sont les suivants :
@@ -50,8 +55,8 @@ KR: I think they do inherit the lower level access https://console.bluemix.net/d
 Les règles Cloud Identity and Access Management (IAM) sont jointes aux ressources à contrôler. Chaque règle définit le niveau d'accès qu'un utilisateur particulier doit avoir et à quelle ressource ou un ensemble de ressources. Une règle est constituée des informations suivantes : 
 * Le type de service auquel s'applique la règle. Par exemple, {{site.data.keyword.messagehub}}. Vous pouvez définir la portée d'une règle de manière à y inclure tous les types de service. 
 * L'instance de service à sécuriser. Vous pouvez définir la portée d'une règle de manière à y inclure toutes les instances d'un type de service. 
-* Le type de ressource à sécuriser. Les valeurs admises sont <code>cluster</code>, <code>sujet</code>, <code>groupe</code> et <code>txnid</code>. La spécification du type est facultative. Si vous n'indiquez aucun type, la règle s'applique alors à toutes les ressources de l'instance de service. 
-* La ressource à sécuriser. Spécifiez pour les ressources de type <code>sujet</code>, <code>groupe</code> et <code>txnid</code>. Si vous n'indiquez de ressource, la règle s'applique alors à toutes les ressources du type spécifié dans l'instance de service. 
+* Le type de ressource à sécuriser. Les valeurs admises sont <code>cluster</code>, <code>topic</code>, <code>group</code> et <code>txnid</code>. La spécification du type est facultative. Si vous n'indiquez aucun type, la règle s'applique alors à toutes les ressources de l'instance de service. 
+* La ressource à sécuriser. Spécifiez pour les ressources de type <code>topic</code>, <code>group</code> et <code>txnid</code>. Si vous n'indiquez pas de ressource, la règle s'applique à toutes les ressources du type spécifié dans l'instance de service. 
 * Le rôle affecté à l'utilisateur. Par exemple, Lecteur, Auteur ou Responsable. 
 
 ## Quels sont les paramètres de sécurité par défaut ?
@@ -74,17 +79,17 @@ Ce tableau résume quelques scénarios {{site.data.keyword.messagehub}} courants
 | Action | Rôle de lecteur | Rôle d'auteur | Rôle de responsable |
 |---------|----------------|
 | Accorder l'accès complet à toutes les ressources|Non applicable   |Non applicable  |Instance de service : <var class="keyword varname">votre_instance_service</var>|
-| Autoriser une application ou un utilisateur à créer ou supprimer un sujet |Type de ressource : <code>cluster</code>   |Non applicable  |Type de ressource : sujet <br/><br/>Facultatif : ID ressource : <var class="keyword varname">nom_sujet</var> |
-| Lister des groupes, des sujets et des positions <br/> Décrire des configurations de groupe, de sujet et de courtier | Type de ressource : <code>cluster</code>      |Non applicable  |Non applicable      |
+| Autoriser une application ou un utilisateur à créer ou supprimer un sujet |Type de ressource : <code>cluster</code>   |Non applicable  |Type de ressource : topic <br/><br/>Facultatif : ID ressource : <var class="keyword varname">nom_de_sujet</var> |
+| Répertorier les groupes, les sujets et les décalages <br/> Décrire les configurations des courtiers, groupes, et sujets | Type de ressource : <code>cluster</code>      |Non applicable  |Non applicable      |
 | Autoriser une application à se connecter au cluster  |Type de ressource : <code>cluster</code>| Non applicable     |Non applicable      |
 | Autoriser une application à produire pour un sujet  |Type de ressource : <code>cluster</code>|Type de ressource : <code>sujet</code> |Non applicable     |
-| Autoriser une application à produire pour un sujet spécifique  |Type de ressource : <code>cluster</code>|Type de ressource : <code>sujet</code><br/>ID ressource : <var class="keyword varname">nom_sujet</var>      |Non applicable     |
-| Autoriser une application à se connecter et à consommer dans tout sujet (aucun groupe de consommateurs)  |Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>sujet</code> |Type de ressource : <code>sujet</code>|Non applicable     |
-| Autoriser une application à se connecter et à consommer dans un sujet spécifique (aucun groupe de consommateurs)  | Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>sujet</code><br/>ID ressource : <var class="keyword varname">nom_sujet</var> |Non applicable     |Non applicable     |
-| Autoriser une application de consommer un sujet (groupe de consommateurs)  |Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>sujet</code><br/> Type de ressource : <code>groupe</code> |Non applicable      |Non applicable     |
-| Autoriser une application à produire ponctuellement pour un sujet  |Type de ressource : <code>cluster</code> <br/> Type de ressource : <code>groupe</code>|Type de ressource : <code>sujet</code> <br/>ID ressource : <var class="keyword varname">nom_sujet</var> <br/>Type de ressource : <code>txnid</code> |Non applicable     |
-| Supprimer un groupe de consommateurs |Type de ressource : <code>cluster</code> |Non applicable  |Type de ressource : <code>groupe</code> <br/>ID ressource : <var class="keyword varname">ID_groupe</var>      |
-| Utiliser Streams |Type de ressource : <code>cluster</code></br>Type de ressource : <code>groupe</code>| Non applicable  |Type de ressource : <code>sujet</code>    |
+| Autoriser une application à produire pour un sujet spécifique  |Type de ressource : <code>cluster</code>|Type de ressource : <code>topic</code><br/>ID ressource : <var class="keyword varname">nom_de_sujet</var>      |Non applicable     |
+| Autoriser une application à se connecter et à consommer dans tout sujet (aucun groupe de consommateurs)  |Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>topic</code> |Non applicable    |Non applicable     |
+| Autoriser une application à se connecter et à consommer dans un sujet spécifique (aucun groupe de consommateurs)  | Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>topic</code><br/>ID ressource : <var class="keyword varname">nom_de_sujet</var> |Non applicable     |Non applicable     |
+| Autoriser une application de consommer un sujet (groupe de consommateurs)  |Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>topic</code><br/> Type de ressource : <code>group</code> |Non applicable      |Non applicable     |
+| Autoriser une application à produire ponctuellement pour un sujet  |Type de ressource : <code>cluster</code> <br/> Type de ressources : <code>group</code>|Type de ressource : <code>topic</code> <br/>ID ressource : <var class="keyword varname">nom_de_sujet</var> <br/>Type de ressource : <code>txnid</code> |Non applicable     |
+| Supprimer un groupe de consommateurs |Type de ressource : <code>cluster</code> |Non applicable  |Type de ressource : <code>group</code> <br/>ID ressource : <var class="keyword varname">ID_groupe</var>      |
+| Utiliser Streams |Type de ressource : <code>cluster</code></br>Type de ressource : <code>group</code>| Non applicable  |Type de ressource : <code>topic</code>    |
 
 Pour plus d'informations sur IAM, voir
 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).

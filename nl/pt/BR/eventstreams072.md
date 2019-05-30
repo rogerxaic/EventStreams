@@ -20,7 +20,7 @@ subcollection: eventstreams
 # Monitorando e registrando (plano Standard)
 {: #monitoring}
 
-O {{site.data.keyword.messagehub}} no plano Standard coleta métricas e eventos automaticamente para que seja
+O {{site.data.keyword.messagehub}} no plano Padrão coleta métricas e eventos automaticamente para que seja
 possível monitorar seu uso do {{site.data.keyword.messagehub}}.
 {:shortdesc}
 

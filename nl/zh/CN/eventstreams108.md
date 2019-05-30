@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-08-08"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,6 +21,9 @@ subcollection: eventstreams
 {: #faqs}
 
 对有关 {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} 服务的常见问题的解答。
+
+
+有关特定于经典套餐的问题的解答，请参阅[经典套餐常见问题解答](/docs/services/EventStreams?topic=eventstreams-faqs_classic)。
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -78,9 +81,23 @@ subcollection: eventstreams
 ## {{site.data.keyword.messagehub}} 为使用者偏移量主题设置保留时间窗口需要多长时间？
 {: #offsets }
 {: faq}
+
 {{site.data.keyword.messagehub}} 保留使用者偏移量 7 天。这对应于 Kafka 配置 offsets.retention.minutes。 
 
 偏移量保留时间适用于整个系统范围，所以不能在单个主题级别对其进行设置。所有使用者组都只能获得 7 天的存储偏移量，即便所使用主题的日志保留时间已经增大到最长 30 天也是如此。 
+
+内部 Kafka <code>__consumer_offsets</code> 主题将以只读方式显示给您。强烈建议您不要尝试以任何方式管理主题。 
+
+<!--following message retention info duplicted in eventstreams057-->
+
+## 消息保留多久？
+{: #messages_retained}
+
+缺省情况下，消息在 Kafka 中最多保留 24 小时，并且每个分区的上限是 1 GB。如果达到 1 GB 上限，那么将废弃最旧的消息以防超出限制。
+
+使用用户界面或管理 API 创建主题时，可以更改消息保留时间的限制。时间限制最短为 1 小时，最长为 30 天。
+
+有关使用 Kafka 客户机或 Kafka Streams 创建主题时所允许设置的限制的信息，请参阅[如何使用 Kafka API 创建和删除主题？](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin)。
 
 ## {{site.data.keyword.messagehub}} 的可用性行为如何？
 {: #availability}
@@ -94,11 +111,6 @@ subcollection: eventstreams
 作为 {{site.data.keyword.messagehub}} 日常操作的一部分，Kafka 集群的节点有时会重新启动。
 在某些情况下，应用程序将识别到集群重新分配了资源。编写应用程序时，使其能够迅速从这些更改中恢复，能够重新连接并重试操作。
 
-### {{site.data.keyword.messagehub}} 网桥（仅限标准套餐）
-{: #bridge_availability }
-
-编写应用程序时，使其能够处理网桥可能不时重新启动的情况。
-
 ## {{site.data.keyword.messagehub}} 的最大消息大小是多少？ 
 {: #max_message_size }
 {: faq}
@@ -111,37 +123,14 @@ subcollection: eventstreams
 
 {{site.data.keyword.messagehub}} 配置为提供强大的可用性和耐用性。
 以下配置设置适用于所有主题且不能更改：
-* replication.factor = 3
+* replication.factor = 3 
 * min.insync.replicas = 2
-
-## 标准套餐中 {{site.data.keyword.messagehub}} 如何记帐？ 
-{: #billing }
-{: faq}
-
-标准套餐上的 {{site.data.keyword.messagehub}} 定期对用户的主题计数进行采样，{{site.data.keyword.Bluemix_notm}} 记录每天的最大采样值。{{site.data.keyword.messagehub}} 对查看的最大并发分区数以及每天发送和接收的消息总数进行记帐。
-
-例如，如果您创建 1 个主题随后删除了该主题，并且此操作在一天中执行了 10 次，那么将按最多为 1 个主题收费。但是，如果您创建 10 个主题随后将其删除，那么可能会按 0 个主题收费，也可能会按 10 个主题收费，具体取决于执行采样的时间。
-
-{{site.data.keyword.messagehub}} 会按每条消息或按每 64K 记帐。不大于 64K 的消息按 1 个可记帐消息计数。大于 64K 的消息按以下可记帐消息数计数：<code><var class="keyword varname">message_size</var> &divide; 64K</code>。
-
-<!--12/04/18 - Karen: same info duplicated at messagehub057 -->
-## Kafka REST API 多久重新启动一次？ 
-{: #REST_restart }
-{: faq}
-
-Kafka REST API 每天重新启动一次，重新启动需要很短的一段时间。 
-
-在此时间段内，Kafka REST API 可能会变得不可用。如果发生此情况，建议重试请求。重新启动 REST API 后，必须重新创建 Kafka 使用者实例。否则，REST API 会返回以下 JSON：
-
-```'{"error_code":40403,"message":"Consumer instance not found."}'
-```
-{:screen}
 
 ## {{site.data.keyword.messagehub}} 标准套餐与 {{site.data.keyword.messagehub}} 企业套餐有何不同？
 {: #plan_compare }
 {: faq}
 
-要了解有关两个不同 {{site.data.keyword.messagehub}} 套餐的更多信息，请参阅[选择套餐](/docs/services/EventStreams?topic=eventstreams-plan_choose)。
+要了解有关不同 {{site.data.keyword.messagehub}} 套餐的更多信息，请参阅[选择套餐](/docs/services/EventStreams?topic=eventstreams-plan_choose)。
 
 ## 我要如何处理灾难恢复？
 {: #disaster_recovery }

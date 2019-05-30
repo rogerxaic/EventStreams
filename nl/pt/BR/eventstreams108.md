@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-08-08"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -22,6 +22,8 @@ subcollection: eventstreams
 
 Respostas para perguntas comuns sobre o serviço do {{site.data.keyword.IBM}}
 {{site.data.keyword.messagehub}}.
+
+Para obter respostas para perguntas específicas para o plano Clássico, consulte [Perguntas mais frequentes para o plano Clássico](/docs/services/EventStreams?topic=eventstreams-faqs_classic).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -77,12 +79,29 @@ valor como múltiplos de horas.
 ## Por quanto tempo o {{site.data.keyword.messagehub}} configura a janela de retenção de log para o tópico de compensações do consumidor?
 {: #offsets }
 {: faq}
+
 O {{site.data.keyword.messagehub}} retém as compensações do consumidor por sete dias. Isso corresponde
 à configuração offsets.retention.minutes do Kafka. 
 
 A retenção de compensação é feita no sistema inteiro, portanto, não é possível configurá-la
 em um nível de tópico individual. Todos os grupos de consumidores obtêm somente 7 dias de compensações armazenadas, mesmo se usando um tópico com uma retenção de log que foi aumentada para
 o máximo de 30 dias. 
+
+O tópico interno <code>__consumer_offsets</code> do Kafka é visível como somente leitura.
+É altamente recomendado não tentar gerenciar o tópico de nenhuma maneira. 
+
+<!--following message retention info duplicted in eventstreams057-->
+
+## Quanto tempo as mensagens ficam retidas?
+{: #messages_retained}
+
+Por padrão, as mensagens são retidas no Kafka por até 24 horas e cada partição é limitada a 1 GB. Se um valor máximo de 1 GB for atingido, as mensagens mais antigas serão descartadas para permanecerem
+no limite.
+
+É possível mudar o limite de tempo para retenção mensagem ao criar um tópico usando a interface
+com o usuário ou a API de administração. O limite de tempo é um mínimo de uma hora e um máximo de 30 dias.
+
+Para obter informações sobre restrições das configurações permitidas ao criar tópicos usando um cliente Kafka ou o Kafka Streams, consulte [Como eu uso as APIs do Kafka para criar e excluir tópicos?](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin).
 
 ## O que é comportamento de disponibilidade do {{site.data.keyword.messagehub}}?
 {: #availability}
@@ -101,11 +120,6 @@ Em alguns casos, seus aplicativos se tornam perceptivos conforme o cluster redes
 aplicativos para que sejam resilientes a essas mudanças e capazes de se reconectarem e tentarem novamente as
 operações.
 
-### Pontes do {{site.data.keyword.messagehub}} (somente o plano Standard)
-{: #bridge_availability }
-
-Grave seus aplicativos para manipular a possibilidade de que pontes possam reiniciar ocasionalmente.
-
 ## Qual é o tamanho máximo da mensagem do {{site.data.keyword.messagehub}}? 
 {: #max_message_size }
 {: faq}
@@ -119,46 +133,14 @@ O tamanho máximo de mensagem do {{site.data.keyword.messagehub}} é 1 MB, que �
 O {{site.data.keyword.messagehub}} é configurado para fornecer disponibilidade e
 durabilidade fortes.
 As seguintes definições de configuração se aplicam a todos os tópicos e não podem mudar:
-* replication.factor = 3
+* replication.factor = 3 
 * min.insync.replicas = 2
-
-## Como o faturamento do {{site.data.keyword.messagehub}} funciona no plano Standard? 
-{: #billing }
-{: faq}
-
-{{site.data.keyword.messagehub}} no plano Standard regularmente executa amostragem da contagem de tópicos
-de um usuário e o {{site.data.keyword.Bluemix_notm}} registra o valor máximo de amostra todos os dias. O {{site.data.keyword.messagehub}} cobra pelo número máximo de partições simultâneas vistas e pela
-soma de mensagens que são enviadas e recebidas diariamente.
-
-Por exemplo, se você cria e exclui 1 tópico 10 vezes em um dia, você é cobrado pelo máximo de 1
-tópico. No entanto, se você cria 10 tópicos e os exclui, talvez você seja cobrado por 0 ou 10
-tópicos, dependendo de quando a amostragem ocorre.
-
-O {{site.data.keyword.messagehub}} cobra por mensagem ou a cada 64 k. Uma mensagem de até 64 k
-é cobrada como 1 mensagem faturável. Já as mensagens maiores que 64 k são contadas como o seguinte número de
-mensagens faturáveis: <code><var class="keyword varname">message_size</var> &divide; 64 k</code>.
-
-<!--12/04/18 - Karen: same info duplicated at messagehub057 -->
-## Com que frequência a API de REST do Kafka é reiniciada? 
-{: #REST_restart }
-{: faq}
-
-A API de REST do Kafka reinicia uma vez por dia por um curto período de tempo. 
-
-Durante esse período, a
-API de REST do Kafka pode se tornar indisponível. Se isso acontecer, é recomendado tentar novamente
-sua solicitação. Após a API de REST ser reiniciada, será necessário recriar suas instâncias do consumidor
-do Kafka. Se este for o caso, a API de REST retornará o JSON a seguir:
-
-```'{"error_code":40403,"message":"Consumer instance not found."}'
-```
-{:screen}
 
 ## Quais são as diferenças entre os planos {{site.data.keyword.messagehub}} Standard e {{site.data.keyword.messagehub}} Enterprise?
 {: #plan_compare }
 {: faq}
 
-Para descobrir mais informações sobre os dois planos diferentes do {{site.data.keyword.messagehub}}, consulte [Escolhendo seu plano](/docs/services/EventStreams?topic=eventstreams-plan_choose).
+Para localizar mais informações sobre os diferentes planos do {{site.data.keyword.messagehub}}, consulte [Escolhendo seu plano](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## Como eu manipulo a recuperação de desastre?
 {: #disaster_recovery }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Utilisation de l'API MQ Light 
+# Utilisation de l'API MQ Light avec le plan Classic
 {: #mql_using}
 
-**L'API MQ Light est disponible uniquement dans le cadre du plan Standard.**
+**L'API MQ Light est uniquement disponible dans le plan Classic.**
 <br/>
 
 L'API {{site.data.keyword.mql}} est fournie pour compatibilité avec les versions antérieures du service {{site.data.keyword.mql}}. Elle propose une interface de messagerie basée sur AMQP pour Java&trade;, Node.js, Python et Ruby. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## Présentation de l'API MQ Light et de ses particularités
 {: #mqlight}
@@ -40,13 +37,13 @@ L'API {{site.data.keyword.mql}} offre un niveau plus élevé d'abstraction à la
 Le choix d'un client Kafka ou de l'API {{site.data.keyword.mql}} dépend de la topologie de messagerie que vous souhaitez construire :
 
 * Avec Kafka, vous utilisez un petit nombre de sujets et vous pouvez disposer de plusieurs partitions pour chaque sujet afin d'accroître l'évolutivité. Vous pouvez partager des messages entre consommateurs grâce aux groupes de consommateurs, mais chaque consommateur doit pouvoir suivre le débit des messages pour les partitions qui lui sont affectés.
-* Avec l'API {{site.data.keyword.mql}}, vous pouvez utiliser un nombre de sujets bien plus élevé et les noms de sujet sont hiérarchiques (par exemple : <code>&lsquo;/sports/football&rsquo;</code> et <code>&lsquo;/sports/tiddlywinks&rsquo;</code>).  
+* Avec l'API {{site.data.keyword.mql}}, vous pouvez utiliser un nombre de sujets bien plus élevé et les noms de sujet sont hiérarchiques (par exemple : <code>&lsquo;/sports/football&rsquo;</code> et <code>&lsquo;/sports/tiddlywinks&rsquo;</code>). 
 
 Les sujets de l'API {{site.data.keyword.mql}} ne sont pas les mêmes que les sujets Kafka. L'API {{site.data.keyword.mql}} utilise un seul sujet Kafka nommé "MQLight" et tous les messages envoyés et reçus via l'API {{site.data.keyword.mql}} transitent par ce sujet Kafka.
 
 L'API {{site.data.keyword.mql}} est uniquement disponible dans les emplacements (régions) {{site.data.keyword.Bluemix_notm}} suivants : Dallas (us-south), Londres (eu-gb) et Sydney (au-syd). Elle n'est pas disponible dans l'emplacement de Francfort (eu-de) ni dans {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Pour plus d'informations sur le choix entre les API, voir [Choix entre les trois API](/docs/services/EventStreams?topic=eventstreams-choose_api).
+Pour plus d'informations sur le choix entre les API, voir [Choix entre les trois API](/docs/services/EventStreams?topic=eventstreams-choose_api_classic).
 
 
 ## Quelle est la configuration requise pour utiliser l'API MQ Light avec {{site.data.keyword.messagehub}} ?
@@ -67,7 +64,7 @@ Pour désactiver l'API MQ Light, supprimez le sujet "MQLight". La suppression de
 ## Procédure de connexion et d'authentification
 {: #mql_connect}
 
-Pour se connecter au service, une application doit utiliser les informations <code>user</code>, <code>password</code> et <code>mqlight_lookup_url</code> qui figurent dans la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Suivez les recommandations ci-après en fonction du langage choisi :
+Pour se connecter au service, une application doit utiliser les informations <code>user</code>, <code>password</code> et <code>mqlight_lookup_url</code> qui figurent dans la [variable d'environnement VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf). Suivez les recommandations ci-après en fonction du langage choisi :
 
 **Java**
 
@@ -78,7 +75,7 @@ Si vous spécifiez <code>null</code> comme paramètre endpointService de l'appel
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
                 client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

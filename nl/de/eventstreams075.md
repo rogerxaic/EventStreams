@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# MQ Light-API verwenden 
+# MQ Light-API im Plan "Classic" verwenden
 {: #mql_using}
 
-** Die MQ Light-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
+** Die MQ Light-API ist nur als Bestandteil des Plans "Classic" verfügbar.**
 <br/>
 
 Mit der {{site.data.keyword.mql}}-API steht Abwärtskompatibilität mit dem früheren {{site.data.keyword.mql}}-Service bereit. Die API bietet eine Messaging-Schnittstelle auf AMQP-Basis für Java&trade;, Node.js, Python und Ruby. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## Merkmale der MQ Light-API
 {: #mqlight}
@@ -41,7 +38,7 @@ Das Auswahlkriterium für die Verwendung eines Kafka-Clients oder der {{site.dat
 die zu erstellende Messaging-Topologie:
 
 * Mit Kafka erstellen Sie eine kleine Anzahl von Topics, die eine Vielzahl von Partitionen für jedes Topic enthalten können, um eine hohe Skalierbarkeit zu erzielen. Mithilfe von Consumergruppen können Consumer Nachrichten zwar gemeinsam nutzen, doch jeder Consumer muss darauf achten, dass die zugeordnete Nachrichtenrate auch tatsächlich verarbeitet werden kann.
-* Mit der {{site.data.keyword.mql}}-API können Sie eine große Anzahl von Topics mit hierarchisch strukturierten Topicnamen verwenden (z. B. <code>&lsquo;/sports/football&rsquo;</code> und <code>&lsquo;/sports/tiddlywinks&rsquo;</code>).  
+* Mit der {{site.data.keyword.mql}}-API können Sie eine große Anzahl von Topics mit hierarchisch strukturierten Topicnamen verwenden (z. B. <code>&lsquo;/sports/football&rsquo;</code> und <code>&lsquo;/sports/tiddlywinks&rsquo;</code>). 
 
 Die Topics in der {{site.data.keyword.mql}}-API unterscheiden sich von
 den Kafka-Topics. In der {{site.data.keyword.mql}}-API wird ein einziges Kafka-Topic
@@ -51,7 +48,7 @@ und empfangenen Nachrichten durchlaufen dieses eine Kafka-Topic.
 {{site.data.keyword.mql}} ist nur an den folgenden {{site.data.keyword.Bluemix_notm}}-Standorten (in den folgenden Regionen) verfügbar: Dallas (us-south), London (eu-gb) und Sydney (au-syd). Die MQ Light-API ist weder am Standor Frankfurt (eu-de) noch in
 {{site.data.keyword.Bluemix_notm}} Dedicated verfügbar.
 
-Weitere Informationen zur Auswahl zwischen den APIs finden Sie im Abschnitt [Geeignete API auswählen](/docs/services/EventStreams?topic=eventstreams-choose_api).
+Weitere Informationen zur Auswahl zwischen den APIs finden Sie im Abschnitt [Geeignete API auswählen](/docs/services/EventStreams?topic=eventstreams-choose_api_classic).
 
 
 ## Voraussetzungen für die Verwendung der MQ Light-API mit {{site.data.keyword.messagehub}}
@@ -75,7 +72,7 @@ Um die MQ Light-API zu inaktivieren, löschen Sie das Topic "MQLight". Beim Lös
 
 Zum Verbinden einer App mit dem Service muss die App den Benutzer <code>user</code>,
 das Kennwort <code>password</code> und die Details für <code>mqlight_lookup_url</code> aus
-[Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf) verwenden. Verwenden Sie die nachfolgende Anleitung für Ihre gewünschte Sprache:
+[Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf) verwenden. Verwenden Sie die nachfolgende Anleitung für Ihre gewünschte Sprache:
 
 **Für Java**
 
@@ -87,7 +84,7 @@ die Details für <code>user</code>, <code>password</code> und
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
                 client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

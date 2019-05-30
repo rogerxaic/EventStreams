@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,20 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Utilizzo dell'API MQ Light 
+# Utilizzo dell'API MQ Light sul piano Classic
 {: #mql_using}
 
-** L'API MQ Light è disponibile solo come parte del piano Standard.**
+** L'API MQ Light è disponibile solo come parte del piano Classic.**
 <br/>
 
 L'API {{site.data.keyword.mql}} viene fornita per la compatibilità con le versioni precedenti del servizio {{site.data.keyword.mql}}. L'API fornisce un'interfaccia di messaggistica basata su AMQP per Java&trade;, Node.js, Python e Ruby. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## Che cos'è l'API MQ Light e in che cosa è differente?
 {: #mqlight}
@@ -41,7 +38,7 @@ La scelta tra l'utilizzo di un client Kafka o dell'API {{site.data.keyword.mql}}
 creare:
 
 * Con Kafka, utilizzi un numero ridotto di argomenti e puoi avere più partizioni per ogni argomento per una maggiore scalabilità. Puoi condividere i messaggi tra i consumatori utilizzando gruppi di consumatori, ma ogni consumatore deve essere in grado di mantenere il passo con la frequenza dei messaggi per le partizioni assegnate.
-* Con l'API {{site.data.keyword.mql}}, puoi utilizzare un numero molto maggiore di argomenti e i nomi degli argomenti sono gerarchici (ad esempio: <code>&lsquo;/sports/football&rsquo;</code> e <code>&lsquo;/sports/tiddlywinks&rsquo;</code>).  
+* Con l'API {{site.data.keyword.mql}}, puoi utilizzare un numero molto maggiore di argomenti e i nomi degli argomenti sono gerarchici (ad esempio: <code>&lsquo;/sports/football&rsquo;</code> e <code>&lsquo;/sports/tiddlywinks&rsquo;</code>). 
 
 Gli argomenti nell'API {{site.data.keyword.mql}} non sono gli stessi
 argomenti presenti in Kafka. Al contrario, la API {{site.data.keyword.mql}} utilizza
@@ -51,7 +48,7 @@ un singolo argomento Kafka chiamato "MQLight" e tutti i messaggi inviati e ricev
 {{site.data.keyword.Bluemix_notm}} (regioni): Dallas (us-south), Londra (eu-gb) e Sydney (au-syd). L'API MQ Light non è disponibile nell'ubicazione Francoforte (eu-de) o in
 {{site.data.keyword.Bluemix_notm}} dedicato.
 
-Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams?topic=eventstreams-choose_api).
+Per ulteriori informazioni sulla scelta tra le API, consulta [Scelta tra le tre API](/docs/services/EventStreams?topic=eventstreams-choose_api_classic).
 
 
 ## Cosa è richiesto per utilizzare l'API MQ Light con {{site.data.keyword.messagehub}}?
@@ -74,7 +71,7 @@ Per disabilitare l'API MQ Light, elimina l'argomento "MQLight". Ricorda che all'
 {: #mql_connect}
 
 Per collegare un'applicazione al servizio, l'applicazione deve utilizzare i dettagli <code>user</code>,
-<code>password</code> e <code>mqlight_lookup_url</code> dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Utilizza le seguenti indicazioni per il linguaggio che hai scelto:
+<code>password</code> e <code>mqlight_lookup_url</code> dalla [variabile di ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf). Utilizza le seguenti indicazioni per il linguaggio che hai scelto:
 
 **Per Java**
 
@@ -86,7 +83,7 @@ client di leggere i dettagli <code>user</code>, <code>password</code> e
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
                 client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

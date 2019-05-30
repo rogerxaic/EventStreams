@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,71 +15,76 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Kafka-REST-API verwenden
-{: #rest_using}
+# REST-Producer-API verwenden
+{: #rest_producer_using}
 
-** Die Kafka-REST-API ist nur als Bestandteil des Plans "Standard" verfügbar.**
+
+** Die REST-Producer-API ist nur als Bestandteil des neuen {{site.data.keyword.messagehub}}-Plans "Standard" verfügbar.**
 <br/>
 
-Die Kafka-REST-API stellt eine REST-konforme Schnittstelle zu einem Kafka-Cluster bereit. Mithilfe der API können Sie Nachrichten erstellen und
-verarbeiten. Weitere Informationen einschließlich der API-Referenzdokumentation finden Sie in den [Kafka-REST-Proxy-Dokumenten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}. Nur das eingebettete Binärformat wird für Anforderungen und Antworten in {{site.data.keyword.messagehub}} unterstützt. Die eingebetteten Avro- und JSON-Formate werden nicht unterstützt.
-{: shortdesc}
+{{site.data.keyword.messagehub}} stellt eine REST-API bereit, die Sie beim Verbinden Ihrer vorhandenen Systeme mit Ihrem {{site.data.keyword.messagehub}}-Kafka-Cluster unterstützt. Mit der API können Sie {{site.data.keyword.messagehub}} in jedes System integrieren, das REST-konforme APIs unterstützt.
 
-Wenn Sie mit CURL arbeiten, können Sie für die Erstellung ein Beispiel wie das folgende verwenden:
-<pre class="pre"><code>
-curl -X POST -H "X-Auth-Token:<var class="keyword varname">API-Schlüssel</var>" -H "Content-Type: application/vnd.kafka.binary.v1+json" <var class="keyword varname">Kafka-REST-Endpunkt</var>/topics/<var class="keyword varname">Topicname</var> -d 
+Die REST-Producer-API ist eine skalierbare REST-Schnittstelle für die Erstellung von Nachrichten an {{site.data.keyword.messagehub}} über einen sicheren HTTP-Endpunkt. Senden Sie Ereignisdaten an {{site.data.keyword.messagehub}}, verwenden Sie die Kafka-Technologie, um Datenfeeds zu verarbeiten, und nutzen Sie die {{site.data.keyword.messagehub}}-Funktionen zur Verwaltung Ihrer Daten.
 
-'
-{
-  "records": [
-    {
-      "value": "<var class="keyword varname">Base 64-codierte Wertzeichenfolge</var>"
-    }
-  ]
-}
-'
-</code></pre>
+Verwenden Sie die API, um vorhandene Systeme mit {{site.data.keyword.messagehub}} zu verbinden. Erstellen Sie Erstellungsanforderungen aus Ihren Systemen in {{site.data.keyword.messagehub}}, einschließlich der Angabe des Nachrichtenschlüssels, der Header und der Topics, an die Nachrichten geschrieben werden sollen.
+
+
+## Nachrichten mit REST erstellen
+{: #rest_produce_messages}
+
+Verwenden Sie die Producer-API, um Nachrichten an Topics zu schreiben. Damit Sie Nachrichten an ein Topic senden können, müssen Sie über die folgenden Informationen verfügen:
+
+* Die URL des {{site.data.keyword.messagehub}}-API-Endpunkts, einschließlich der Portnummer.
+* Das Topic, an das Sie Nachrichten senden möchten.
+* Der API-Schlüssel, der die Berechtigung zum Herstellen der Verbindung zu dem ausgewählten Topic und zum Senden von Nachrichten an dieses Topic erteilt.
+
+Sie müssen die URL und die Berechtigungsnachweisdetails, die für die Verbindung mit der API erforderlich sind, von einem Serviceberechtigungsnachweisobjekt oder Serviceschlüssel für die Serviceinstanz abrufen. Informationen zum Erstellen dieser Objekte finden Sie in [Verbindung zu {{site.data.keyword.messagehub}} herstellen](/docs/services/EventStreams?topic=eventstreams-connecting).
+
+Die URL für den Endpunkt der API ist in der Eigenschaft <code>kafka_http_url</code> angegeben.
+
+Verwenden Sie eine der folgenden Methoden zur Authentifizierung:
+
+* **Authentifizierung mit Basisauthentifizierung:**<br/>
+    Verwenden Sie die Eigenschaften <code>user</code> und <code>api_key</code> der oben genannten Objekte als Benutzername und Kennwort. Geben Sie diese Werte im Header <code>Authorization</code> der HTTP-Anforderung in der Form <code>Basic <Base64-Codierung von Benutzername:Kennwort, verbunden durch einen Doppelpunkt (:)></code> an.
+
+* **Authentifizierung mit Trägertoken:**<br/>
+    Um Ihr Token über die IBM Cloud-Befehlszeilenschnittstelle abzurufen, melden Sie sich zuerst bei IBM Cloud an und führen Sie dann den folgenden Befehl aus: 
+
+    ```
+    ibmcloud iam oauth-tokens
+    ```
+    {: codeblock}
+
+    Stellen Sie dieses Token in den Authentifizierungsheader der HTTP-Anforderung in der Form <code>Bearer <Token></code>. Es werden sowohl API-Schlüssel als auch JWT-Token unterstützt. 
+
+* ** Authentifizierung direkt über API-Schlüssel (api_key):**<br/>
+    Geben Sie den Schlüssel direkt als Wert für den HTTP-Header <code>X-Auth-Token</code> an.
+
+<br/>
+Der folgende Code zeigt ein Beispiel für das Senden einer Nachricht unter Verwendung von 'curl':
+
+```
+curl -v -X POST -H "Authorization: Basic <Base64-Benutzername:Kennwort>" -H "Content-Type: text/plain" -H "Accept: application/json" -d 'test message' "<Kafka-http-url>/topics/<Topicname>/records"
+```
 {: codeblock}
-<br/>
-<br/>
-Wenn Sie mit CURL arbeiten, können Sie für die Verarbeitung ein Beispiel wie das folgende verwenden:
-<pre class="pre"><code>
-curl -X GET -H "X-Auth-Token:<var class="keyword varname">API-Schlüssel</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">Kafka-REST-Endpunkt</var>/topics/<var class="keyword varname">Topicname</var>/partitions/<var class="keyword varname">Partitions-ID</var>/messages?offset=<var class="keyword varname">Startoffset</var>
-</code></pre>
-{: codeblock}
-
-<br/>
-<br/>
-Für CURL können Sie auch die Codebeispiele anpassen, die in den
-[Confluent-Dokumenten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.confluent.io/2.0.0/){:new_window} beschrieben sind, indem Sie die folgende Zeile zur Befehlszeile hinzufügen:
-<pre class="pre">-H "X-Auth-Token: <var class="keyword varname">API-Schlüssel</var>"</pre>
-{: codeblock}
-
-<br/>
-## Vorgehensweise zum Verbinden und Authentifizieren
-{: #rest_connect}
-
-<!-- info was in eventstreams066.md -->
-
-<!-- Comment from Andrew
-basic introduction, definitely including health warning
--->
-Um eine Verbindung zu {{site.data.keyword.messagehub}} herzustellen, verwendet die Kafka-REST-API die Berechtigungsnachweise <code>api_key</code> und <code>kafka_rest_url</code>
-aus [Umgebungsvariable VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
-
-Um sich bei der Kafka-REST-API von {{site.data.keyword.messagehub}} zu authentifizieren, müssen Sie die Berechtigung <code>api_key</code> im X-Auth-Token-Header Ihrer Anforderungen angeben.
 
 
-## API verwenden
-{: #rest_how}
+## API-Referenz
+{: #rest_api_reference}
 
-<!-- info was in eventstreams097.md -->
+Vollständige Informationen zur API finden Sie in der
+[Referenzdokumentation zur {{site.data.keyword.messagehub}}-REST-Producer-API![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://ibm.github.io/event-streams/api/){:new_window}.
 
-Das {{site.data.keyword.messagehub}}-Kafka-REST-API-Beispiel ist eine Node.js-Anwendung, die eine Verbindung zu {{site.data.keyword.messagehub}} über die Kafka-REST-API herstellt, um Nachrichten zu produzieren und zu verarbeiten.
 
-Der Beispielcode befindet sich im [GitHub-Projekt 'event-streams-samples' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 
-Befolgen Sie die Anweisungen in der Datei [README.md ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} für dieses Projekt, um das Beispiel zu erstellen und auszuführen.
+
+
+
+
+
+
+
 
 

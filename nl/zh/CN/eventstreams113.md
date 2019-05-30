@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,9 +28,25 @@ Kafka Connect 的运行方式有两种：单机方式和分发方式。单机方
 ## 单机工作程序配置
 {: #standalone_worker notoc}
 
-启动 Kafka Connect 单机工作程序时，必须在所提供的工作程序属性文件中提供引导程序服务器和 SASL 凭证信息。
-
 单机工作程序不使用任何内部主题。相反，它使用文件来存储偏移量信息。
+
+启动 Kafka Connect 单机工作程序时，必须在所提供的工作程序属性文件中提供引导程序服务器和 SASL 凭证信息。以下示例列出必须在属性文件中提供的属性：
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+将 KAFKA_BROKERS_SASL、USER 和 PASSWORD 替换为 {{site.data.keyword.Bluemix_notm}} 控制台的 {{site.data.keyword.messagehub}} **服务凭证**选项卡中的值。
+
 
 ### 源连接器
 {: #source_connector notoc }

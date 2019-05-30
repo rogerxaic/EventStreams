@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Puente de MQ
+# MQ bridge en el plan Clásico 
 {: #mq_bridge}
 
-**El puente de MQ solo está disponible como parte del plan Estándar.**
+**El puente de MQ solo está disponible como parte del plan Clásico.**
 <br/>
 
 El puente de MQ permite transferir datos de mensajes de una cola de MQ de {{site.data.keyword.IBM_notm}} a un tema de Kafka de {{site.data.keyword.messagehub}}. El puente de MQ permite realizar con eficacia cargas de trabajo al estilo de la nube (por ejemplo, análisis de datos) en los datos de mensajes MQ de {{site.data.keyword.IBM_notm}} generados en la empresa.

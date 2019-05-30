@@ -19,7 +19,7 @@ subcollection: eventstreams
 # {{site.data.keyword.messagehub}}의 개념
 {: #about}
 
-{{site.data.keyword.messagehub_full}}는 Apache Kafka로 빌드된 높은 처리량의 메시지 버스입니다. 이는 {{site.data.keyword.Bluemix_notm}}로의 이벤트 삽입과 서비스 및 애플리케이션 간의 이벤트 스트림 분배에 최적화된 서비스로 완전히 관리되는 Apache Kafka입니다. {{site.data.keyword.messagehub}}의 이전 이름은 Message Hub입니다.
+{{site.data.keyword.messagehub_full}}는 Apache Kafka로 빌드된 높은 처리량의 메시지 버스입니다. 이는 {{site.data.keyword.Bluemix_notm}}로의 이벤트 삽입과 서비스 및 애플리케이션 간의 이벤트 스트림 분배에 최적화되어 있습니다. {{site.data.keyword.messagehub}}의 이전 이름은 Message Hub입니다.
 {: shortdesc}
 
 {{site.data.keyword.messagehub}}를 사용하여 다음과 같은 태스크를 완료할 수 있습니다.
@@ -27,7 +27,6 @@ subcollection: eventstreams
 * 백엔드 작업자 애플리케이션에 작업을 오프로드합니다.
 * 이벤트 스트림을 스트리밍 분석에 연결하여 강력한 인사이트를 실현합니다.
 * 실시간으로 반응하도록 이벤트 데이터를 여러 애플리케이션에 공개합니다.
-* 데이터를 다른 서비스로 전송합니다 (예: Cloud Object Storage).
 
 Apache Kafka로 빌드하여 커뮤니티에서 발생하는 모든 호출로부터 직접적으로 혜택을 받고 Kafka 클라이언트 API, Kafka Streams, Kafka Connect 및 KSQL도 지원합니다.
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-07"
+lastupdated: "2018-09-11"
+
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
 subcollection: eventstreams
@@ -17,10 +18,11 @@ subcollection: eventstreams
 
 
 
-# 向 {{site.data.keyword.messagehub}} 团队报告问题 - 标准套餐 
+# 向 {{site.data.keyword.messagehub}} 团队报告问题 - 经典套餐 
 {: #report_problem}
 
-如果使用 {{site.data.keyword.messagehub}} 时遇到问题，请首先检查 [{{site.data.keyword.Bluemix_notm}} 状态页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/status?selected=status){:new_window}。 
+如果使用 {{site.data.keyword.messagehub}} 经典套餐时遇到问题，请首先检查 [{{site.data.keyword.Bluemix_notm}} 状态页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/status?selected=status){:new_window}。
+ 
 
 如果希望获得 {{site.data.keyword.messagehub}} 团队的帮助，请收集以下所有信息。预先提供的信息越多，团队帮助您解决问题的效率就会越高：
 {:shortdesc}

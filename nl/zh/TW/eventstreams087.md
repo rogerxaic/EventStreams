@@ -19,7 +19,7 @@ subcollection: eventstreams
 # 在三個 API 之間抉擇（標準方案）
 {: #choose_api}
 
-{{site.data.keyword.messagehub}} 支援標準方案上的三個 API。下列資訊可協助您選擇最合適的一個。
+{{site.data.keyword.messagehub}} 支援標準方案上的三個 API。下列資訊可協助您選擇最合適的一個：
 {: shortdesc}
 
 ## 為何要使用 Kafka API？

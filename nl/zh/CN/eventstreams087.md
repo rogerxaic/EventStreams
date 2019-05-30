@@ -19,7 +19,7 @@ subcollection: eventstreams
 # 在三个 API 中进行选择（标准套餐）
 {: #choose_api}
 
-标准套餐中 {{site.data.keyword.messagehub}} 支持三个 API。下面的一些信息可帮助您选择最适用的 API。
+标准套餐中 {{site.data.keyword.messagehub}} 支持三个 API。下面的一些信息可帮助您选择最适用的 API：
 {: shortdesc}
 
 ## 为什么要使用 Kafka API？

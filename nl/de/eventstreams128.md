@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 <!-- 
-17/10/17 - Karen: following info duplicated at messagehub108
+17/10/17 - Karen: following info duplicated at eventstreams108
  -->
 
 Wenn Sie einen Kafka-Client der Version 0.11 oder höher verwenden oder Kafka Streams Version 0.10.2.0 oder höher, können Sie APIs verwenden, um Topics zu erstellen oder zu löschen. Für die zulässigen Einstellungen beim Erstellen von Topics gelten bestimmte Einschränkungen. Gegenwärtig können Sie nur die folgenden Einstellungen ändern:

@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Watson IoT Platform 브릿지
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}}에서는 {{site.data.keyword.messagehub_full}}에 대한 단방향 링크를 작성할 수 있는 관리 브릿지를 제공합니다.
 {: shortdesc}
 

@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# ponte do MQ
+# Ponte do MQ no plano Clássico 
 {: #mq_bridge}
 
-** A ponte do MQ está disponível somente como parte do plano Standard.**
+** A ponte do MQ está disponível somente como parte do plano Clássico.**
 <br/>
 
 A ponte do MQ permite transferir dados da mensagem de uma fila do {{site.data.keyword.IBM_notm}} MQ

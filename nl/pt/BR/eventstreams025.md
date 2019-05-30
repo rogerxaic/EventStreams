@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,75 +15,73 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Usando a API REST Kafka
-{: #rest_using}
+# Usando a API de REST producer
+{: #rest_producer_using}
 
-** A API de REST Kafka está disponível como parte somente do plano Standard.**
+
+** A API de REST producer está disponível como parte do novo plano Padrão do {{site.data.keyword.messagehub}} apenas.**
 <br/>
 
-A API REST Kafka fornece uma interface RESTful para um cluster Kafka. É possível produzir e consumir mensagens usando a API. Para obter mais informações, incluindo a documentação de referência da API, consulte [Docs do proxy REST Kafka ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}. Somente o formato binário integrado é suportado para solicitações e respostas no {{site.data.keyword.messagehub}}. Os formatos integrados do Avro e JSON não são suportados.
-{: shortdesc}
+O {{site.data.keyword.messagehub}} fornece uma API de REST para ajudar a conectar seus sistemas existentes ao seu cluster Kafka do {{site.data.keyword.messagehub}}. Usando a API, é possível integrar o {{site.data.keyword.messagehub}} a qualquer sistema que suporte APIs de RESTful.
 
-Se você estiver usando o CURL, será possível usar um exemplo como o seguinte para produzir:
-<pre class="pre"><code>
-curl -X POST -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Content-Type: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var> -d 
+A API de REST producer é uma interface REST escalável para produzir mensagens para o {{site.data.keyword.messagehub}} por meio de um terminal HTTP seguro. Envie dados do evento para o {{site.data.keyword.messagehub}}, use a tecnologia Kafka para manipular feeds de dados e aproveite os recursos do {{site.data.keyword.messagehub}} para gerenciar seus dados.
 
-'
-{
-  "records": [
-    {
-      "value": "<var class="keyword varname">A base 64 encoded value string</var>"
-    }
-  ]
-}
-'
-</code></pre>
+Use a API para conectar sistemas existentes ao {{site.data.keyword.messagehub}}. Crie solicitações de produção de seus sistemas para o {{site.data.keyword.messagehub}}, incluindo a especificação da chave da mensagem, dos cabeçalhos e dos tópicos para os quais você deseja gravar mensagens.
+
+
+## Produzindo mensagens usando REST
+{: #rest_produce_messages}
+
+Use a API producer para gravar mensagens em tópicos. Para poder produzir para um tópico, deve-se ter as informações a seguir disponíveis:
+
+* A URL do terminal de API do {{site.data.keyword.messagehub}}, incluindo o número da porta.
+* O tópico para o qual você deseja produzir.
+* A chave de API que fornece permissão para conectar e produzir para o tópico selecionado.
+
+Deve-se recuperar os detalhes da URL e da credencial necessários para se conectar à API de um objeto de credenciais de serviço ou de uma chave de serviço da instância de serviço. Para obter informações sobre como criar esses objetos, consulte [Conectando ao {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
+
+A URL para o terminal de API é fornecida na propriedade <code>kafka_http_url</code>.
+
+Use um dos métodos a seguir para autenticar:
+
+* **Para autenticar usando a autenticação básica:**<br/> use as propriedades <code>user</code> e <code>api_key</code> dos objetos acima como o nome de usuário e a senha. Coloque esses valores no cabeçalho <code>Authorization</code> da solicitação de HTTP no formato <code>Basic <codificação base64 de nome do usuário:senha unidos por um único dois-pontos (:)></code>.
+
+* **Para se autenticar usando um token de acesso:**<br/> Para obter seu token usando a CLI do IBM Cloud, primeiro efetue login no IBM Cloud e depois execute o comando a seguir: 
+
+    ```
+    ibmcloud iam oauth-tokens
+    ```
+    {: codeblock}
+
+    Coloque esse token no cabeçalho Authorization da solicitação de HTTP no formato <code>Bearer <token></code>. A chave de API ou os tokens JWT são suportados. 
+
+* ** Para se autenticar diretamente usando a api_key:**<br/> Coloque a chave diretamente como o valor do cabeçalho de HTTP <code>X-Auth-Token</code>.
+
+<br/>
+O código a seguir mostra um exemplo de envio de uma mensagem usando curl:
+
+```
+curl -v -X POST -H "Authorization: Basic <base64 username:password>" -H "Content-Type: text/plain" -H "Accept: application/json" -d 'test message' "<kafka_http_url>/topics/<topic_name>/records"
+```
 {: codeblock}
-<br/>
-<br/>
-Se você estiver usando o CURL, será possível usar um exemplo como o seguinte para consumir:
-<pre class="pre"><code>
-curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var>/partitions/<var class="keyword varname">partition ID</var>/messages?offset=<var class="keyword varname">offset to start from</var>
-</code></pre>
-{: codeblock}
-
-<br/>
-<br/>
-Para o CURL, também é possível adaptar os exemplos de código detalhados nos [Confluent docs ![Ícone de linkexterno](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.confluent.io/2.0.0/){:new_window} incluindo a linha a seguir na linha de comandos:
-
-<pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
-{: codeblock}
-
-<br/>
-## Como conectar e autenticar
-{: #rest_connect}
-
-<!-- info was in eventstreams066.md -->
-
-<!-- Comment from Andrew
-basic introduction, definitely including health warning
--->
-Para conectar-se ao {{site.data.keyword.messagehub}}, a API de REST do Kafka usa as
-credenciais <code>api_key</code> e <code>kafka_rest_url</code> da
-[variável de ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf).
-
-Para autenticar com a API REST do {{site.data.keyword.messagehub}} Kafka, você
-                deve especificar o <code>api_key</code> no cabeçalho X-Auth-Token de suas
-                solicitações.
 
 
-## Como usar a API
-{: #rest_how}
+## Referência de API
+{: #rest_api_reference}
 
-<!-- info was in eventstreams097.md -->
+Para obter detalhes completos da API, consulte a
+[Referência da API de REST producer do {{site.data.keyword.messagehub}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ibm.github.io/event-streams/api/){:new_window}.
 
-A amostra da API REST Kafka do {{site.data.keyword.messagehub}} é um aplicativo Node.js
-que faz conexão com o {{site.data.keyword.messagehub}} por meio da API REST Kafka para produzir e
-consumir mensagens.
 
-O código de amostra está no [projeto do GitHub event-streams-samples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window}.
 
-Siga as instruções no arquivo [README.md ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} para esse projeto para construir e executar a amostra.
+
+
+
+
+
+
+
 
 

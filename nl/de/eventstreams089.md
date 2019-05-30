@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .deprecated}
 
-# Object Storage-Bridge (nicht mehr verwendet)
+# Object Storage-Bridge im Plan "Classic"
 {: #object_storage_bridge }
 
 **Die {{site.data.keyword.objectstorageshort}}-Bridge wird ab 01. August 2018 nicht mehr verwendet.**
@@ -36,7 +36,7 @@ Daten aus den Kafka-Topics in {{site.data.keyword.messagehub}} in einer Instanz 
 Nachrichten von Kafka im Stapelbetrieb und lädt die Nachrichtendaten als Objekte in einen Container
 im {{site.data.keyword.objectstorageshort}}-Service.
 
-Beachten Sie, dass der bevorzugte Objektspeicher in {{site.data.keyword.Bluemix_short}} jetzt der [{{site.data.keyword.IBM_notm}} Cloud Object Storage-Service ist. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+Beachten Sie, dass der bevorzugte Objektspeicher in {{site.data.keyword.Bluemix_short}} jetzt der [{{site.data.keyword.IBM_notm}} Cloud Object Storage-Service ist. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 Durch Konfigurieren der
 {{site.data.keyword.objectstorageshort}}-Bridge können Sie steuern, wie die Daten
@@ -132,12 +132,13 @@ Führen Sie die folgenden Schritte aus, um Daten nach dem Offset der Kafka-Nachr
      	</code></pre>
     {:codeblock}
 
-    Die Namen der Objekte, die von einer Bridge mit dieser Konfiguration generiert werden, enthalten das Präfix
-    `"offset=<kafka_offset>"`. Dabei gibt `"<kafka_offset>"` die erste
-    Kafka-Nachricht an, die in der betreffenden Partition (d. h. in der Objektgruppe mit diesem Präfix) gespeichert wird. Wenn
-    eine Bridge beispielsweise Objekte mit ähnlichen Namen wie im folgenden Beispiel generiert, enthalten
-    `<object_a>` und `<object_b>` Nachrichten mit Offset-Werten
-    im Bereich von 0 bis 999, `<object_c>` enthält Nachrichten mit Offset-Werten im Bereich von 1000 bis
+    Die Objektnamen, die von einer auf diese Weise konfigurierten Bridge generiert werden, enthalten das Präfix
+    `"offset=<kafka_offset>"`, wobei `"<kafka_offset>"` der ersten Kafka-Nachricht entspricht,
+    die in dieser Partition (die Gruppe von Objekten mit diesem Präfix) gespeichert ist.
+Wenn
+    eine Bridge z. B. Objekte mit Namen wie im folgenden Beispiel generiert,
+    enthalten `<object_a>` und `<object_b>` Nachrichten mit Offsets im
+    Bereich von 0 bis 999, `<object_c>` enthält Nachrichten mit Offsets im Bereich von 1000 bis
     1999 usw.
 
     <pre class="pre"><code>
@@ -190,9 +191,9 @@ für	`"propertyName"` in der JSON-Konfiguration muss mit dem Feld für das ISO 8
 in jeder Kafka-Nachricht übereinstimmen. Im vorliegenden Beispiel muss das Feld `"timestamp"`
 einen gültigen ISO 8601-Datumswert enthalten. Wenn dies der Fall ist, werden die Nachrichten nach den zugehörigen Datumswerten partitioniert.
 	
-	Eine Bridge, die entsprechend diesem Beispiel konfiguriert ist, generiert Objekte mit der folgenden Namenskonvention:
-	`<object_a>` enthält JSON-Nachrichten, deren Felder `"timestamp"`
-das Datum 2016-12-07 enthalten, und sowohl `<object_b>` und `<object_c>` enthalten JSON-Nachrichten, deren Felder `"timestamp"` das Datum 2016-12-08 enthalten.
+	Eine Bridge, die wie in diesem Beispiel konfiguriert ist, generiert Objekte mit Namen wie folgt:
+`<object_a>` enthält JSON-Nachrichten mit `"timestamp"`-Feldern mit
+dem Datum 2016-12-07 und sowohl `<object_b>` als auch `<object_c>` enthalten JSON-Nachrichten mit `"timestamp"`-Feldern mit dem Datum 2016-12-08.
 
     <pre class="pre"><code>
         ```

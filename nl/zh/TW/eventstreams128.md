@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 <!-- 
-17/10/17 - Karen: following info duplicated at messagehub108
+17/10/17 - Karen: following info duplicated at eventstreams108
  -->
 
 如果您使用 Kafka 用戶端 0.11 或更新版本，或 Kafka Streams 0.10.2.0 或更新版本，可以使用 API 來建立及刪除主題。我們已對您建立主題時接受的設定做了一些限制。目前，您只能修改下列設定：

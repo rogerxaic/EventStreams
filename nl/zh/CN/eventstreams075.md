@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,21 +15,18 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# 使用 MQ Light API 
+# 在经典套餐上使用 MQ Light API
 {: #mql_using}
 
-**MQ Light API 仅在标准套餐中提供。**
+**MQ Light API 仅在经典套餐中提供。**
 <br/>
 
 {{site.data.keyword.mql}} API 旨在实现与旧版 {{site.data.keyword.mql}} 服务的向后兼容性。
 该 API 为 Java&trade;、Node.js、Python 和 Ruby 提供了基于 AMQP 的消息传递接口。
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## 什么是 MQ Light API，它有何独到之处？
 {: #mqlight}
@@ -42,13 +39,13 @@ The {{site.data.keyword.mql}} API is available in the following {{site.data.keyw
 选择使用 Kafka 客户机还是 {{site.data.keyword.mql}} API 取决于要构建的消息传递拓扑：
 
 * 使用 Kafka 时，您可使用数量不多的主题，并且每个主题可以有多个分区，以实现额外的可伸缩性。可以通过使用者组在使用者之间共享消息，但每个使用者必须能够跟上为其分配的分区的消息速率。
-* 使用 {{site.data.keyword.mql}} API 时，您可以使用的主题数量要多得多，并且主题名称是分层的（例如：<code>&lsquo;/sports/football&rsquo;</code> 和 <code>&lsquo;/sports/tiddlywinks&rsquo;</code>）。  
+* 使用 {{site.data.keyword.mql}} API 时，您可以使用的主题数量要多得多，并且主题名称是分层的（例如：<code>&lsquo;/sports/football&rsquo;</code> 和 <code>&lsquo;/sports/tiddlywinks&rsquo;</code>）。 
 
 {{site.data.keyword.mql}} API 中的主题与 Kafka 主题不同。即，{{site.data.keyword.mql}} API 使用名为“MQLight”的单个 Kafka 主题，并且使用 {{site.data.keyword.mql}} API 发送和接收的所有消息都经过这一个 Kafka 主题。
 
 {{site.data.keyword.mql}} 仅在以下 {{site.data.keyword.Bluemix_notm}} 位置（区域）中可用：达拉斯 (us-south)、伦敦 (eu-gb) 和悉尼 (au-syd)。MQ Light API 在法兰克福 (eu-de) 位置或 {{site.data.keyword.Bluemix_notm}} Dedicated 中不可用。
 
-有关在 API 之间进行选择的更多信息，请参阅[在三个 API 之间选择](/docs/services/EventStreams?topic=eventstreams-choose_api)。
+有关在 API 之间进行选择的更多信息，请参阅[在三个 API 之间选择](/docs/services/EventStreams?topic=eventstreams-choose_api_classic)。
 
 
 ## 将 MQ Light API 与 {{site.data.keyword.messagehub}} 配合使用时需要满足哪些需求？
@@ -69,8 +66,7 @@ MQ Light API 使用“MQLight”主题来存储其消息数据，以及与其他
 ## 如何连接和认证
 {: #mql_connect}
 
-要将应用程序连接到服务，应用程序必须使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)中的 <code>user</code>、
-<code>password</code> 和 <code>mqlight_lookup_url</code> 详细信息。使用与所选语言对应的以下指导信息：
+要将应用程序连接到服务，应用程序必须使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf)中的 <code>user</code>、<code>password</code> 和 <code>mqlight_lookup_url</code> 详细信息。使用与所选语言对应的以下指导信息：
 
 
 **对于 Java**
@@ -84,7 +80,7 @@ MQ Light API 使用“MQLight”主题来存储其消息数据，以及与其他
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
         client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}
@@ -211,7 +207,7 @@ client = mqlight.Client(service=service,
 如果还没有应用程序，请通过其中一个样本来试用 {{site.data.keyword.mql}} API。
 
 
-样本应用程序实际上由两个简单应用程序组成：一个 Web 前端和一个后端；前者用于将消息发送到后端，后者用于处理消息，将词语首字母转换为大写，然后将消息返回给前端。此样本显示了如何使用 {{site.data.keyword.mql}} API 让应用程序彼此进行对话。还可以使用 {{site.data.keyword.mql}} API 来执行工作程序分流；这是构建可扩展、松耦合的分布式应用程序所需的关键功能。
+样本应用程序实际上由两个简单应用程序组成：一个 Web 前端和一个后端；前者用于将消息发送到后端，后者用于处理消息，将词语首字母转换为大写，然后将消息返回给前端。此样本显示了如何使用 {{site.data.keyword.mql}} API 让应用程序彼此进行对话。还可以使用 {{site.data.keyword.mql}} API 来执行工作程序分流；这是构建可缩放、松耦合的分布式应用程序所需的关键功能。
 
 您可以在 [event-streams-samples GitHub 项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/mqlight){:new_window} 中找到样本代码。
 

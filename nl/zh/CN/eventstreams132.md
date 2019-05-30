@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-05-09"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,18 +15,31 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# {{site.data.keyword.messagehub}} 可用性（企业套餐）的服务级别协议 (SLA) 
+# {{site.data.keyword.messagehub}} 可用性的服务级别协议 (SLA)  
 {: #sla}
 
-在企业套餐上提供的 {{site.data.keyword.messagehub}} 服务的可用性为 99.95%。有关 {{site.data.keyword.Bluemix}} 的 SLA 的更多信息，请参阅
+## 标准套餐
+在标准套餐上提供的 {{site.data.keyword.messagehub}} 服务的可用性为 99.95%。有关 {{site.data.keyword.Bluemix}} 中高可用性服务的 SLA 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
+
+
+## 企业套餐
+在企业套餐上提供作为高可用性公共环境的 {{site.data.keyword.messagehub}} 服务的可用性为 99.95%。有关 {{site.data.keyword.Bluemix}} 中高可用性服务的 SLA 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
+
+## 经典套餐
+在经典套餐上提供的 {{site.data.keyword.messagehub}} 服务的可用性为 99.5%。有关 {{site.data.keyword.Bluemix}} 的 SLA 的更多信息，请参阅
 [{{site.data.keyword.Bluemix_notm}} 服务描述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
 
-## 99.95% 的可用性意味着什么？
-可用性是指应用程序生成和消耗 Kafka 主题中的消息的能力。
+<!--
+## What does 99.95% availability mean?
+Availability refers to the ability of applications to produce and consume messages from Kafka topics.
+-->
 
 ## 我们如何度量可用性？
-服务实例的性能、错误率及其对合成操作的响应会受到持续监视。中断会进行记录。
+服务实例的性能、错误率及其对合成操作的响应会受到持续监视。中断会进行记录。有关更多信息，请参阅 [Event Streams 的服务状态 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/status?component=messagehub&selected=status){:new_window}。
+
+可用性是指应用程序生成和消耗 Kafka 主题中的消息的能力。
 
 ## 要实现此可用性，您需要考虑什么？
 要从应用程序角度实现高级别的可用性，您应考虑[连接性](/docs/services/EventStreams?topic=eventstreams-sla#connectivity)、
@@ -37,9 +50,9 @@ subcollection: eventstreams
 
 因为云的性质是动态的，所以应用程序一定会发生连接中断情况。连接中断并不会视为服务故障。
 
-**重试**<br/>
+**重试次数**<br/>
 Kafka 客户机提供重新连接逻辑，但您必须明确支持生产者进行重新连接。有关更多信息，请参阅[ <code>retries</code> 属性 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/11/documentation.html#producerconfigs){:new_window}。60 秒内再次进行连接。
-**重复**<br/>
+**重复次数**<br/>
 支持重试可能导致消息重复。根据连接丢失的时间，生产者可能无法确定服务器是否成功处理消息，因此必须在重新连接时再次发送消息。建议您将应用程序设计为预期有重复消息。 
 
 如果无法容忍重复，您可以使用 <code>idempotent</code> 生产者功能（来自 Kafka 1.1）防止重试期间出现重复。有关更多信息，请参阅 [ <code>enable.idempotence</code> 属性 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/11/documentation.html#producerconfigs){:new_window}。
@@ -49,15 +62,18 @@ Kafka 客户机提供重新连接逻辑，但您必须明确支持生产者进�
 
 吞吐量以集群中每秒可以发送和接收的字节数表示。
 
-**建议**<br/>
-每秒 40 MB（每秒最大峰值限制为 90 MB）。<br/>
-此建议数字基于典型的工作负载，并考虑到运行操作的可能影响，例如，内部更新，或可用性专区丢失之类的故障模式。例如，具有少量有效内容（少于 10 K）的消息。如果平均吞吐量超过此数字，您在这些状况下可能会遇到性能下降的情况。
+**有关标准套餐的具体指导信息**<br/>
+有关吞吐量指导信息，请参阅[限制和配额 - 标准](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas#standard_throughput)。 
+
+**企业套餐的具体指导信息**<br/>
+
+有关吞吐量指导信息，请参阅[限制和配额 - 企业](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#enterprise_throughput)。 
 
 **度量**<br/>
 建议您检测应用程序以了解其性能情况。例如，发送和接收的消息数、消息大小和返回码。了解应用程序的使用情况可帮助您恰当地配置其资源，例如有关主题的消息的保留时间。
 
 **饱和度**<br/>
-当可生成的流向集群的流量接近限制时，生产者开始遭遇调速限制，等待时间增加，最终会出现超时错误之类的错误。消息一致性和耐久性可能也会受到影响，具体取决于配置。有关更多信息，请参阅
+当可生成的流向集群的流量接近限制时，生产者开始遭遇调速限制，等待时间将增加，最终会出现超时错误之类的错误。消息一致性和耐久性可能也会受到影响，具体取决于配置。有关更多信息，请参阅
 [消息的一致性和耐久性](/docs/services/EventStreams?topic=eventstreams-sla#message_consistency)。
 
 ### 消息的一致性和耐久性

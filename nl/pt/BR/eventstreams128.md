@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 <!-- 
-17/10/17 - Karen: following info duplicated at messagehub108
+17/10/17 - Karen: following info duplicated at eventstreams108
  -->
 
 Se estiver usando um cliente Kafka em 0.11 ou mais recente ou o Streams Kafka em 0.10.2.0 ou

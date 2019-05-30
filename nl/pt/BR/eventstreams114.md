@@ -171,7 +171,7 @@ retorno de chamada "na partição designada".
 ## Fragmentos de código
 {: #consumer_code_snippets notoc}
 
-Esses fragmentos de código estão em um nível muito alto para ilustrar os conceitos envolvidos. Para obter exemplos completos, veja as amostras do {{site.data.keyword.messagehub}} no GitHub https://github.com/ibm-messaging/event-streams-samples.
+Esses fragmentos de código estão em um nível muito alto para ilustrar os conceitos envolvidos. Para obter exemplos completos, consulte as amostras do {{site.data.keyword.messagehub}} no [GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples).
 
 Para conectar-se ao {{site.data.keyword.messagehub}}, primeiro é necessário construir o conjunto de propriedades de configuração. Como todas as conexões com o {{site.data.keyword.messagehub}} são protegidas usando TLS e autenticação
 de usuário/senha, pelo menos essas propriedades são necessárias. Substitua KAFKA_BROKERS_SASL, USER e PASSWORD por suas próprias credenciais de serviço:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -16,11 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 使用 MQ Light 用戶端
+# 在經典方案上使用 MQ Light 用戶端
 {: #mql_clients}
 
-** MQ Light API 只提供於標準方案中。**
+**MQ Light API 僅在經典方案中提供。**
+{: note}
 <br/>
+
 ## 使用 MQ Light Java 用戶端
 {: #mql_java}
 
@@ -38,6 +40,7 @@ subcollection: eventstreams
 ```
 {:codeblock}
 
+
 <!-- 12/11/18: info was in eventstreams102.md, moved because of doc app changes -->
 
 ## 使用 MQ Light Node.js 用戶端 
@@ -53,7 +56,7 @@ subcollection: eventstreams
 
 然後新增下列 require 陳述式到您的原始檔：
 
-<pre class="pre"><code>var mqlight = require(&lsquo;mqlight&rsquo;);</code></pre>
+<pre class="pre"><code>var mqlight = require('mqlight');</code></pre>
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams103.md, moved because of doc app changes -->
@@ -73,7 +76,9 @@ gem 'mqlight', '~> 1.0'
 
 然後新增下列 require 陳述式到您的原始檔：
 
-<pre class="pre"><code>require &lsquo;mqlight&rsquo;</code></pre>
+```
+require 'mqlight'
+```
 {: codeblock}
 
 <!-- 14/11/18: info was in eventstreams101.md, moved because of doc app changes -->
@@ -104,3 +109,6 @@ Instructions for getting started, with links for more info
 Simple send source and receive source in-line
 
 -->
+
+
+

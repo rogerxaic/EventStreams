@@ -16,18 +16,19 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Cloud Object Storage 브릿지 
+# 클래식 플랜의 Cloud Object Storage 브릿지
 {: #cloud_object_storage_bridge }
 
-** Cloud Object Storage 브릿지는 표준 플랜의 일부로만 사용 가능합니다.**
+
+** Cloud Object Storage 브릿지는 클래식 플랜의 일부로만 사용 가능합니다.**
 <br/>
 
 {{site.data.keyword.IBM}} Cloud Object Storage 브릿지는 {{site.data.keyword.messagehub}} Kafka 토픽에서 데이터를 읽고 해당 데이터를
-[{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}에 저장하는 수단을 제공합니다.
+[{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}에 저장하는 수단을 제공합니다.
 {: shortdesc}
 
 Cloud Object Storage 브릿지를 사용하면 {{site.data.keyword.messagehub}}에 있는 Kafka 토픽의 데이터를 [Cloud Object Storage
-서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}의 인스턴스에 아카이브할 수 있습니다. 브릿지는
+서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}의 인스턴스에 아카이브할 수 있습니다. 브릿지는
 Kafka에서 일괄처리 메시지를 이용하고 메시지 데이터를 Cloud Object
 Storage 서비스의 버킷에 오브젝트로 업로드합니다. Cloud Object Storage
 브릿지를 구성하여 Cloud Object Storage에 데이터를 오브젝트로 업로드하는
@@ -173,13 +174,7 @@ Kafka 메시지 오프셋으로 데이터를 파티셔닝하려면 다음 단계
      	</code></pre>
     {:codeblock}
 
-    이 방법으로 구성된 브릿지에서 생성한 오브젝트 이름에는
-    `"offset=<kafka_offset>"` 접두부가 포함됩니다. 여기서 `"<kafka_offset>"`은
-    해당 파티션(이 접두부를 사용하는 오브젝트 그룹)에 저장된 첫 번째 Kafka 메시지에 해당됩니다. 예를 들어,
-    브릿지가 다음 예제와 같은 이름이 있는 오브젝트를 생성하는 경우
-    `<object_a>` 및 `<object_b>`에는 0 - 999 범위의 오프셋이 있는
-    메시지가 포함되고, `<object_c>`에는 1000 - 1999 범위의 오프셋이 있는
-    메시지가 포함됩니다.
+    이 방법으로 구성된 브릿지에서 생성한 오브젝트 이름에는 `"offset=<kafka_offset>"` 접두부가 포함됩니다. 여기서 `"<kafka_offset>"`은 해당 파티션(이 접두부를 사용하는 오브젝트 그룹)에 저장된 첫 번째 Kafka 메시지에 해당됩니다. 예를 들어, 브릿지가 다음 예제와 같은 이름이 있는 오브젝트를 생성하는 경우 `<object_a>` 및 `<object_b>`에는 0 - 999 범위의 오프셋이 있는 메시지가 포함되고, `<object_c>`에는 1000 - 1999 범위의 오프셋이 있는 메시지가 포함됩니다.
 
     <pre class="pre"><code>
         ```
@@ -229,10 +224,7 @@ ISO 8601 날짜로 데이터를 파티셔닝하려면 다음 단계를 완료하
 	`"propertyName"`의 값이 각 Kafka 메시지의 ISO 8601 날짜 필드에 해당해야 합니다. 이 예제에서 `"timestamp"` 필드에는
 	올바른 ISO 8601 날짜 값이 포함되어야 합니다. 그러면 그 날짜에 따라서 메시지가 파티셔닝됩니다.
 	
-	이 예제처럼 구성된 브릿지는 다음과 같이 이름이 지정된 오브젝트를 생성합니다.
-	`<object_a>`에는 날짜가 2016-12-07인 `"timestamp"` 필드가 있는
-	JSON 메시지가 포함되어 있으며, `<object_b>` 및 `<object_c>`에는 모두 날짜가 2016-12-08인 `"timestamp"` 필드가 있는
-	JSON 메시지가 포함되어 있습니다.
+	이 예제처럼 구성된 브릿지는 다음과 같이 이름이 지정된 오브젝트를 생성합니다. `<object_a>`에는 날짜가 2016-12-07인 `"timestamp"` 필드가 있는	JSON 메시지가 포함되어 있으며, `<object_b>` 및 `<object_c>`에는 모두 날짜가 2016-12-08인 `"timestamp"` 필드가 있는	JSON 메시지가 포함되어 있습니다.
 
     <pre class="pre"><code>
         ```

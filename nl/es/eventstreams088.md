@@ -16,20 +16,20 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Cómo enlazar con otros servicios utilizando puentes
+# Cómo enlazar con otros servicios utilizando puentes en el plan Clásico 
 {: #bridges}
 
-Los puentes de ** {{site.data.keyword.messagehub}} solo están disponibles como parte del plan Estándar.**
+Los puentes de ** {{site.data.keyword.messagehub}} solo están disponibles como parte del plan Clásico.**
 <br/>
 
-El plan Estándar de {{site.data.keyword.messagehub}} también da soporte a puentes con una selección de otros sistemas. Los puentes son enlaces unidireccionales entre {{site.data.keyword.messagehub}} y otro servicio. Los puentes permiten leer datos desde {{site.data.keyword.messagehub}} y grabarlos en otro servicio, o bien leer datos desde otro servicio y grabarlos en {{site.data.keyword.messagehub}}. Un puente puede tener mensajes del otro sistema y publicarlos en un tema, o consumir mensajes de un tema y enviarlos al otro sistema. De esta forma, puede utilizar {{site.data.keyword.messagehub}} para integrar con otros sistemas sin escribir código.
+El plan Clásico de {{site.data.keyword.messagehub}} también da soporte a puentes con una selección de otros sistemas. Los puentes son enlaces unidireccionales entre {{site.data.keyword.messagehub}} y otro servicio. Los puentes permiten leer datos desde {{site.data.keyword.messagehub}} y grabarlos en otro servicio, o bien leer datos desde otro servicio y grabarlos en {{site.data.keyword.messagehub}}. Un puente puede tener mensajes del otro sistema y publicarlos en un tema, o consumir mensajes de un tema y enviarlos al otro sistema. De esta forma, puede utilizar {{site.data.keyword.messagehub}} para integrar con otros sistemas sin escribir código.
 {:shortdesc}
 
 Los principales beneficios de utilizar {{site.data.keyword.messagehub}} puentes son los siguientes:  
 
 * Puede definir puentes administrativamente, por lo que no es necesario escribir código de aplicación.
 * El ciclo de cada puente es supervisado y gestionado por el servicio {{site.data.keyword.messagehub}}. Por ejemplo, si un puente encuentra un error, se reinicia automáticamente mediante {{site.data.keyword.messagehub}}.
-* Los puentes se integran con la plataforma {{site.data.keyword.Bluemix_short}}. Por ejemplo, la información de registro y supervisión generada por los puentes se direcciona a los paneles Kibana y Grafana.
+* Los puentes se integran con la plataforma {{site.data.keyword.Bluemix_short}}. Por ejemplo, la información de registro y supervisión generada por los puentes se direcciona a los paneles de control de Kibana y Grafana.
 
 Puede encontrar puentes útiles en los dos siguientes casos de ejemplo habituales:
 
@@ -41,7 +41,7 @@ Puede encontrar puentes útiles en los dos siguientes casos de ejemplo habituale
 
 * Proporcionamos los siguientes tipos de puente: 
   - [El puente de MQ](/docs/services/EventStreams?topic=eventstreams-mq_bridge), que obtiene datos de mensajes de {{site.data.keyword.IBM}} MQ y los transfiere a un tema en {{site.data.keyword.messagehub}}. A largo plazo, tenemos la intención de dar soporte a una variedad más amplia de puentes.
-  - [El puente de Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), que transfiere datos de {{site.data.keyword.messagehub}} a una instancia del servicio [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. 
+  - [El puente de Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), que transfiere datos de {{site.data.keyword.messagehub}} a una instancia del servicio [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. 
   - El [puente de {{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge) está en desuso desde el 1 de agosto de 2018. Para obtener más información, consulte el anuncio acerca del desuso: [deprecation announcement: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
 * Actualmente, los puentes están disponibles en todos los entornos públicos de {{site.data.keyword.Bluemix_notm}}. Los puentes no están disponibles en {{site.data.keyword.Bluemix_short}} Dedicated.
 * Puede administrar puentes de las dos formas siguientes:

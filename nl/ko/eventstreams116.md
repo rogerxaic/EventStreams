@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-12"
+lastupdated: "2019-05-07"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # {{site.data.keyword.messagehub}}와 함께 Kafka 콘솔 사용
@@ -24,7 +25,7 @@ subcollection: eventstreams
 클러스터에 대한 연결이 허용되지 않는 경우에도 {{site.data.keyword.messagehub}}와 함께 해당 콘솔 도구를 사용할 수 있습니다. Kafka가 발전함에 따라, ZooKeeper에 연결하기 위해 이전에 필요했던 도구는 더 이상 필요하지 않습니다.
 {: shortdesc}
 
-이러한 콘솔 도구는 Kafka 다운로드의 <code>bin</code> 디렉토리에서 찾을 수 있습니다. 예: [Apache Kafka 1.1.0 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}.
+이러한 콘솔 도구는 Kafka 다운로드의 <code>bin</code> 디렉토리에서 찾을 수 있습니다. [Apache Kafka 다운로드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/downloads){:new_window}에서 클라이언트를 다운로드할 수 있습니다.
 
 이 도구에 SASL 인증 정보를 제공하려면 다음 예제에 따라 특성 파일을 작성해야 합니다.
 

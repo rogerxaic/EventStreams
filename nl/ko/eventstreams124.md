@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# {{site.data.keyword.messagehub}} 리소스에 대한 액세스 관리(엔터프라이즈 플랜)
+# {{site.data.keyword.messagehub}} 리소스에 대한 액세스 관리 
 {: #security }
 
 각 리소스에 대해 각 사용자에게 부여할 액세스 권한을 관리하는 위한 세부적인 방식으로 {{site.data.keyword.messagehub}} 리소스의 보안을 설정할 수 있습니다.
 {: shortdesc}
+
+IAM 정책 및 권한을 변경하는 경우 때때로 이러한 변경사항이 기본 서비스에 반영하는 데 몇 분이 걸릴 수 있습니다.
+{: important}
 
 ## 어떻게 보안을 설정할 수 있습니까?
 
@@ -73,18 +78,18 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 
 | 조치 |독자 역할 | 작성자 역할 | 관리자 역할 |
 |---------|----------------|
-| 모든 리소스에 대한 전체 액세스 허용|해당 사항 없음   |해당 사항 없음  |서비스 인스턴스: <var class="keyword varname">your_service_instance</var>|
-| 앱 또는 사용자가 토픽을 작성하거나 삭제할 수 있음 |리소스 유형: <code>cluster</code>   |해당 사항 없음  |리소스유형: topic <br/><br/>선택사항: 리소스 ID: <var class="keyword varname">name_of_topic</var> |
-| 그룹, 토픽 및 오프셋 나열 <br/> 그룹, 토픽 및 브로커 구성 설명 |리소스 유형: <code>cluster</code>      |해당 사항 없음  |해당 사항 없음      |
-| 앱이 클러스터에 연결할 수 있음  |리소스 유형: <code>cluster</code>|해당 사항 없음     |해당 사항 없음      |
-| 앱이 임의의 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code>|리소스 유형: <code>topic</code> |해당 사항 없음     |
-| 앱이 특정 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code>|리소스 유형: <code>topic</code><br/>리소스 ID: <var class="keyword varname">name_of_topic</var>      |해당 사항 없음     |
-| 앱이 임의의 토픽에서 연결하고 이용할 수 있음(이용자 그룹 없음)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code> |리소스 유형: <code>topic</code>|해당 사항 없음     |
-| 앱이 특정 토픽에서 연결하고 이용할 수 있음(이용자 그룹 없음)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code><br/>리소스 ID: <var class="keyword varname">name_of_topic</var> |해당 사항 없음     |해당 사항 없음     |
-| 앱이 토픽을 이용할 수 있음(이용자 그룹)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code><br/> 리소스 유형: <code>group</code> |해당 사항 없음      |해당 사항 없음     |
-| 앱이 트랜잭션적으로 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code> <br/> 리소스 유형: <code>group</code>|리소스 유형: <code>topic</code> <br/>리소스 ID: <var class="keyword varname">name_of_topic</var> <br/>리소스 유형: <code>txnid</code> |해당 사항 없음     |
-| 이용자 그룹 삭제 |리소스 유형: <code>cluster</code> |해당 사항 없음  |리소스 유형: <code>group</code> <br/>리소스 ID: <var class="keyword varname">group_ID</var>      |
-| Streams 사용 목적 |리소스 유형: <code>cluster</code></br>리소스 유형: <code>group</code>|해당 사항 없음  |리소스 유형: <code>topic</code>    |
+| 모든 리소스에 대한 전체 액세스 허용|해당사항 없음   |해당사항 없음  |서비스 인스턴스: <var class="keyword varname">your_service_instance</var>|
+| 앱 또는 사용자가 토픽을 작성하거나 삭제할 수 있음 |리소스 유형: <code>cluster</code>   |해당사항 없음  |리소스 유형: topic <br/><br/>선택사항: 리소스 ID: <var class="keyword varname">name_of_topic</var> |
+| 그룹, 토픽 및 오프셋 나열 <br/> 그룹, 토픽 및 브로커 구성 설명 |리소스 유형: <code>cluster</code>      |해당사항 없음  |해당사항 없음      |
+| 앱이 클러스터에 연결할 수 있음  |리소스 유형: <code>cluster</code>|해당사항 없음     |해당사항 없음      |
+| 앱이 임의의 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code>|리소스 유형: <code>topic</code> |해당사항 없음     |
+| 앱이 특정 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code>|리소스 유형: <code>topic</code><br/>리소스 ID: <var class="keyword varname">name_of_topic</var>      |해당사항 없음     |
+| 앱이 임의의 토픽에서 연결하고 이용할 수 있음(이용자 그룹 없음)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code> |해당사항 없음    |해당사항 없음     |
+| 앱이 특정 토픽에서 연결하고 이용할 수 있음(이용자 그룹 없음)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code><br/>리소스 ID: <var class="keyword varname">name_of_topic</var> |해당사항 없음     |해당사항 없음     |
+| 앱이 토픽을 이용할 수 있음(이용자 그룹)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code><br/> 리소스 유형: <code>group</code> |해당사항 없음      |해당사항 없음     |
+| 앱이 트랜잭션적으로 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code> <br/> 리소스 유형: <code>group</code>|리소스 유형: <code>topic</code> <br/>리소스 ID: <var class="keyword varname">name_of_topic</var> <br/>리소스 유형: <code>txnid</code> |해당사항 없음     |
+| 이용자 그룹 삭제 |리소스 유형: <code>cluster</code> |해당사항 없음  |리소스 유형: <code>group</code> <br/>리소스 ID: <var class="keyword varname">group_ID</var>      |
+| Streams 사용 목적 |리소스 유형: <code>cluster</code></br> 리소스 유형: <code>group</code> |해당사항 없음  |리소스 유형: <code>topic</code>    |
 
 IAM에 대한 자세한 정보는
 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)를 참조하십시오.

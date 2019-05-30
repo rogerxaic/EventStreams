@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-15"
+lastupdated: "2019-05-08"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -39,7 +39,7 @@ subcollection: eventstreams
   
   b. 按一下**型錄**。
   
-  c. 在**整合**區段中，選取 **{{site.data.keyword.messagehub}} 標準方案**。即會開啟 {{site.data.keyword.messagehub}} 服務實例頁面。
+  c. 在**整合**區段中，按一下 {{site.data.keyword.messagehub}} 磚，然後選取**標準方案**。即會開啟 {{site.data.keyword.messagehub}} 服務實例頁面。
   
   d. 輸入服務的名稱。您可以使用預設值。
   
@@ -47,7 +47,7 @@ subcollection: eventstreams
 
 2. {: #create_credentials_step notoc}完成下列步驟，以建立部分 {{site.data.keyword.messagehub}} 認證：[使用 IBM Cloud 主控台取得認證並連接](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console)。
    <br/>
-   <br/>針對此作業的[步驟 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)，您將需要 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。   
+   <br/>針對此作業的[步驟 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)，您將需要 *kafka_brokers_sasl* 及 *api_key* 值。   
 
 3. 如果您還沒有下列必要條件，請安裝它們：
 
@@ -75,15 +75,13 @@ subcollection: eventstreams
 
 7. {: #start_consumer_step notoc}執行下列指令，在主控台上啟動消費者：
 
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -consumer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -consumer</pre>
     
     此範例使用名為 `kafka-java-console-sample-topic` 的主題。如果主題尚不存在，範例會使用 {{site.data.keyword.messagehub}} 管理 API 建立它。為了傳送及接收訊息，範例會使用 Apache Kafka Java API。
 
-    使用[步驟 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) 中所建立認證的 *kafka_brokers_sasl*、*kafka_admin_url* 及 *api_key* 值。
-	
-	指定 <code>token</code> 作為您的使用者名稱、<var class="keyword varname">api_key</var> 作為您的密碼。請以冒號區隔 <code>token</code> 及 <var class="keyword varname">api_key</var>。
-    
+    使用在[步驟 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) 中建立的認證中的 *kafka_brokers_sasl* 和 *api_key* 值。<p></p>
+
 	**重要事項**：*kafka_brokers_sasl* 必須是單一字串，並且您必須以單引號括住它。例如：
 
     <pre class="pre">
@@ -94,8 +92,8 @@ subcollection: eventstreams
 
 8. 執行下列指令，在主控台上啟動生產者：
    
-    <pre class="pre">java -jar build/libs/kafka-java-console-sample-2.0-all.jar
-	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">kafka_admin_url</var> token<var class="keyword varname">:api_key</var> -producer</pre>
+    <pre class="pre">java -jar ./build/libs/kafka-java-console-sample-2.0.jar
+	<var class="keyword varname">kafka_brokers_sasl</var> <var class="keyword varname">api_key</var> -producer</pre>
   
 9. 您現在應該會看到生產者傳送的訊息出現在消費者。以下是部分範例輸出：
 

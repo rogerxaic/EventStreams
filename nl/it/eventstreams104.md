@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-04-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -73,7 +73,7 @@ Per un precedente client Kafka, devi utilizzare un file di configurazione JAAS p
 23/04/18 - Karen: following migration info on production in messagehub084 
 -->
 
-## Migrazione di un client Kafka da 0.9.X o 0.10.X a versioni de client successive
+## Migrazione di un client Kafka da 0.9.X o 0.10.X a versioni del client successive
 {: #kafka_migrate}
 
 
@@ -83,8 +83,10 @@ Si consiglia vivamente di passare dalla 0.9.X
 alla versione più recente. Puoi scaricare un client Kafka da
 [https://kafka.apache.org/downloads ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://kafka.apache.org/downloads){:new_window}.
 
-Per informazioni sulle implicazioni dell'utilizzo di un client 0.9.X, consulta
-[Retrocompatibilità](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+<!--
+For information about the implications of using a 0.9.X client, see 
+[Backward compatibility](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+-->
 
 
 
@@ -95,7 +97,6 @@ Dalla 0.10.2, puoi configurare l'autenticazione SASL direttamente nelle propriet
 Completa la seguente procedura:
 
 1. Elimina il file JAAS. Nota che la proprietà JVM java.security.auth.login.config=<PATH TO JAAS> non è più necessaria.
-2. Se stai migrando dalla 0.9.X, elimina il modulo jar di login {{site.data.keyword.messagehub}}.
 2. Aggiungi quanto segue alle proprietà del client:
     ```
 	sasl.mechanism=PLAIN
@@ -103,25 +104,6 @@ Completa la seguente procedura:
 	```
 
 	dove USERNAME e PASSWORD sono i valori indicati nella scheda **Credenziali del servizio** {{site.data.keyword.messagehub}} in {{site.data.keyword.Bluemix_notm}}.
-	
-	
 
-### Migrazione di un client Kafka da 0.9.X a 0.10.0.X o 0.10.1.X
 
-Completa la seguente procedura:
 
-1. Elimina il modulo jar di login {{site.data.keyword.messagehub}}.
-2. Modifica il tuo file <code>jaas.conf</code> nel seguente modo:
-    ```
-        KafkaClient {
-          org.apache.kafka.common.security.plain.PlainLoginModule required
-          serviceName="kafka"
-            username="USERNAME"
-            password="PASSWORD";
-        };
-    ```
-    {: codeblock}
-
-	dove USERNAME e PASSWORD sono i valori indicati nella scheda **Credenziali del servizio** {{site.data.keyword.messagehub}} in {{site.data.keyword.Bluemix_notm}}.
-	
-3. Aggiungi questa riga alle proprietà di consumatore e produttore: <code>sasl.mechanism=PLAIN</code>

@@ -19,16 +19,17 @@ subcollection: eventstreams
 # Escolhendo entre as três APIs (plano Standard)
 {: #choose_api}
 
-O {{site.data.keyword.messagehub}} suporta três APIs no plano Standard. Aqui estão algumas informações para ajudar você a escolher qual é a mais apropriada.
+O {{site.data.keyword.messagehub}} suporta três APIs no plano Padrão. A seguir há algumas informações para ajudá-lo
+a escolher o que é mais apropriado:
 {: shortdesc}
 
-## Por que usar a API Kafka?
+## Por que usar a API do Kafka?
 {: #why_kafka notoc}
 
-** A API do Kafka está disponível como parte dos planos Standard e Enterprise. **
+** A API do Kafka está disponível como parte dos planos Padrão e Corporativo. **
 <br/>
 
-Existem algumas razões pelas quais você pode escolher usar a API Kafka em vez
+Existem algumas razões pelas quais você pode escolher usar a API do Kafka em vez
 de outras interfaces fornecidas pelo {{site.data.keyword.messagehub}}. Algumas dessas razões são as seguintes:
 {:shortdesc}
 
@@ -41,7 +42,7 @@ exemplo, {{site.data.keyword.IBM}} {{site.data.keyword.streaminganalyticsshort}}
 ## Por que usar a API REST Kafka?
 {: #why_rest notoc}
 
-** A API de REST Kafka está disponível como parte somente do plano Standard.**
+** A API de REST do Kafka está disponível como parte somente do plano Padrão.**
 <br/>
 
 A API REST do Kafka é uma interface conveniente que pode ser usada nas situações a
@@ -51,12 +52,12 @@ A API REST do Kafka é uma interface conveniente que pode ser usada nas situaç�
 * Em determinados casos de uso de baixo rendimento em que a latência não é um fator crítico
 * Para depuração e descoberta de falhas
 
-A API REST do Kafka não foi planejada como uma interface de alto rendimento e baixa latência.​Para esses tipos de requisitos, recomendamos o uso da API Kafka para conectar-se ao {{site.data.keyword.messagehub}} e por meio dele. Para obter informações adicionais, consulte [Usando um cliente Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using).
+A API REST do Kafka não foi planejada como uma interface de alto rendimento e baixa latência.​Para esses tipos de requisitos, recomendamos o uso da API do Kafka para conectar-se ao {{site.data.keyword.messagehub}} e por meio dele. Para obter informações adicionais, consulte [Usando um cliente Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using).
 
 ## Por que usar a API {{site.data.keyword.mql}}?
 {: #why_mql notoc}
 
-** A API do MQ Light está disponível como parte somente do plano Standard.**
+** A API do MQ Light está disponível como parte somente do plano Padrão.**
 <br/>
 
 A API do {{site.data.keyword.mql}} fornece uma interface de sistema de mensagens baseada em AMQP para Java™,

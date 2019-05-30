@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-10-19"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # Restricciones conocidas
@@ -91,6 +92,8 @@ pueden tener hasta 100 caracteres.
 crear más particiones, utilice un espacio nuevo de
 {{site.data.keyword.Bluemix_notm}}.
 
+<!--following message retention info duplicted in FAQs eventstreams108-->
+
 ## Retención de mensajes
 {: #message_retention}
 
@@ -100,44 +103,70 @@ del límite.
 
 Puede cambiar el límite de tiempo para la retención de mensajes cuando cree un tema utilizando la interfaz de usuario o la API de administración. El límite de tiempo es un mínimo de una hora y un máximo de 30 días.
 
-Para obtener información sobre las restricciones de los valores permitidos al crear temas utilizando un cliente Kafka o Kafka Streams, consulte [Uso de la API de Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
+Para obtener información sobre las restricciones de los valores permitidos al crear temas utilizando un cliente Kafka o Kafka Streams, consulte [¿Cómo se utilizan las API de Kafka para crear y suprimir temas?](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin).
 
 ## Creación y supresión de temas en Kafka
 {: #create_delete}
 
 En Kafka, la creación y supresión de temas son operaciones asíncronas que pueden tardar algún tiempo en completarse. Se recomienda evitar el uso de patrones que dependan de la creación y supresión rápidas de temas o de la supresión y recreación rápidas de temas.
 
-## API REST de Kafka
+<!--
+## Kafka REST API
 {: #trouble_rest}
 
-*  Para solicitudes y respuestas, sólo se admite el formato compacto binario. No se da soporte a los formatos incorporado Avro y JSON.
-*  Las solicitudes actuales no se admiten para una instancia de consumidores.
-   Las solicitudes read, commit o
-                    delete correspondientes a una instancia de consumidores deben enviarse sólo después de
-                    que se haya recibido una respuesta para todas las solicitudes pendientes de dicha                     instancia.
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
 
-## Limitación de tasa de API REST de Kafka
+*  Only the binary-embedded format is supported for requests and
+   responses. The Avro and JSON embedded formats are not supported.
+*  Concurrent requests are not supported for a consumer instance.
+   Read, commit, or delete requests corresponding to a consumer
+   instance should be sent only after a response is received for
+   any outstanding requests of that instance.
+
+-->
+<!--
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+
+## Kafka REST API rate limitation
 {: #kafka_rate}
 
-Las aplicaciones que utilizan la API REST de Kafka pueden estar sujetas a la limitación de tasa para cada ApiKey. Cuando se produce esta limitación, la API responde con el siguiente error HTTP:
+Applications using the Kafka REST API can be subject to rate
+limiting for each ApiKey. When this limiting occurs, the API
+responds with the following HTTP error:
 
-<code>429 Demasiadas solicitudes</code>
+<code>429 Too Many Requests</code>
 {:screen}
 
-Si ve este error, espere y vuelva a enviar la solicitud.
+If you see this error, wait and submit the request again.
 
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+-->
 <!--12/04/18 - Karen: same info duplicated at messagehub108 -->
-## Reinicio diario de la API REST de Kafka
+<!--
+## Kafka REST API daily restart
 {: #rest_restart}
 
-La API REST de Kafka se reinicia una vez al día durante un breve período de tiempo. Durante este período, la API REST de Kafka puede estar disponible. Si esto sucede, se recomienda reintentar la solicitud. Una vez reiniciada la API REST, deberá volver a crear las instancias de consumidor de Kafka. Si este es el caso, la API REST devuelve el siguiente JSON:
+The Kafka REST API restarts once a day for a short period of
+time. During this period, the Kafka REST API might become
+unavailable. If this happens, you are recommended to retry your
+request. After the REST API has restarted, you will have to
+create your Kafka consumer instances again. If this is the case, the
+REST API returns the following JSON:
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```
 {:screen}
-
-## API de consumidor de alto nivel Kafka
+-->
+<!--
+## Kafka high-level consumer API
 {: #kafka_consumer}
 
-No puede utilizar la API simple o de
-consumidor de alto nivel de Apache Kafka 0.8.2 con {{site.data.keyword.messagehub}}. Puede utilizar en su lugar la API de consumidor de Kafka soportada anteriormente, que es la 0.9.
+You cannot use the Apache Kafka 0.8.2 simple or high-level
+consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.10.
+-->

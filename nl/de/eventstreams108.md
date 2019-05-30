@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-08-08"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,6 +21,8 @@ subcollection: eventstreams
 {: #faqs}
 
 Antworten auf häufig gestellte Fragen zum {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}}-Service.
+
+Antworten auf Fragen speziell zum Plan "Classic" finden Sie in [Häufig gestellte Fragen zum Plan "Classic"](/docs/services/EventStreams?topic=eventstreams-faqs_classic).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -79,9 +81,28 @@ Nur für Plan "Enterprise". Auf einen beliebigen Wert zwischen 5 Minuten und 30 
 ## Welchen Zeitraum legt {{site.data.keyword.messagehub}} für das Protokollspeicherungsfenster für das Consumer-Offsets-Topic fest?
 {: #offsets }
 {: faq}
+
 {{site.data.keyword.messagehub}} speichert Consumer-Offsets für einen Zeitraum von 7 Tagen. Dies entspricht der Kafka-Konfiguration 'offsets.retention.minutes'. 
 
 Die Offset-Aufbewahrungsdauer gilt systemweit und kann nicht für eine einzelne Topicebene festgelegt werden. Für alle Consumergruppen werden nur gespeicherte Offsets für einen Zeitraum von 7 Tagen bereitgestellt, selbst wenn die Protokollspeicherungsdauer für das zugehörige Topic auf den Maximalwert von 30 Tagen erhöht wurde. 
+
+Das interne Kafka-Topic <code>__consumer_offsets</code> ist für Sie schreibgeschützt sichtbar.
+Es wird dringend empfohlen, keinen Versuch zu unternehmen, dieses Topic in irgendeiner Weise zu steuern. 
+
+<!--following message retention info duplicted in eventstreams057-->
+
+## Wie lange werden Nachrichten aufbewahrt?
+{: #messages_retained}
+
+In Kafka werden Nachrichten standardmäßig bis zu 24 Stunden aufbewahrt und jede Partition wird auf
+1 GB begrenzt. Wenn die Obergrenze von 1 GB erreicht ist, werden die ältesten Nachrichten gelöscht, damit
+der Grenzwert eingehalten wird.
+
+Die Aufbewahrungsdauer für Nachrichten können Sie beim Erstellen eines Topics
+in der Benutzerschnittstelle oder mit der Verwaltungs-API ändern. Das Zeitlimit muss im Bereich von 1 Stunde (Minimalwert) bis
+30 Tage (Maximalwert) liegen.
+
+Informationen zu Einschränkungen für die Einstellungen, die bei der Erstellung von Topics mit einem Kafka-Client oder Kafka Streams zulässig sind, finden Sie unter [Wie können mit Kafka-APIs Topics erstellt und gelöscht werden?](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin).
 
 ## Wie ist das Verfügbarkeitsverhalten von {{site.data.keyword.messagehub}}?
 {: #availability}
@@ -96,11 +117,6 @@ Im regulären Betrieb von {{site.data.keyword.messagehub}} werden die Knoten der
 In manchen Fällen werden Ihre Apps darauf vorbereitet, dass der Cluster Ressourcen neu zuordnet. Gestalten Sie Ihre Apps so,
 dass sie auf solche Änderungen entsprechend reagieren und Verbindungen wiederherstellen bzw. Operationen wiederholen können.
 
-### {{site.data.keyword.messagehub}}-Bridges (nur Plan "Standard")
-{: #bridge_availability }
-
-Gestalten Sie Ihre Apps so, dass gelegentliche Neustarts der Bridges verarbeitet werden können.
-
 ## Was ist die maximale Nachrichtengröße von {{site.data.keyword.messagehub}}? 
 {: #max_message_size }
 {: faq}
@@ -113,42 +129,14 @@ Die maximale Nachrichtengröße von {{site.data.keyword.messagehub}} ist 1 MB. D
 
 {{site.data.keyword.messagehub}} ist für eine starke Verfügbarkeit und Dauerhaftigkeit konfiguriert.
 Die folgenden Konfigurationseinstellungen gelten für alle Topics und können nicht geändert werden:
-* replication.factor = 3
+* replication.factor = 3 
 * min.insync.replicas = 2
-
-## Wie funktioniert die {{site.data.keyword.messagehub}}-Abrechnung beim Plan "Standard"? 
-{: #billing }
-{: faq}
-
-{{site.data.keyword.messagehub}} tastet beim Plan "Standard" regelmäßig die Topicanzahl eines Benutzers ab und {{site.data.keyword.Bluemix_notm}} zeichnet jeden Tag den maximalen Tastwert auf. {{site.data.keyword.messagehub}} stellt die maximale Anzahl gleichzeitig angezeigter Partitionen sowie die Summe der täglich gesendeten und empfangenen Nachrichten in Rechnung.
-
-Beispiel: Wenn Sie an einem Tag 1 Topic 10 Mal erstellen und löschen, wird maximal 1 Topic in Rechnung gestellt. Wenn Sie jedoch 10 Topics erstellen und löschen, werden Ihnen möglicherweise 0 oder 10 Topics in Rechnung gestellt, je nachdem, wann die Abtastung stattfindet.
-
-{{site.data.keyword.messagehub}} stellt entweder jede Nachricht oder jede 64K in Rechnung. Eine Nachricht bis zu 64K zählt als 1 abrechnungsfähige Nachricht. Nachrichten, die größer als 64K sind, zählen als folgende Anzahl abrechnungsfähiger Nachrichten: <code><var class="keyword varname">nachrichtengröße</var> &divide; 64 k</code>.
-
-<!--12/04/18 - Karen: same info duplicated at messagehub057 -->
-## Wie oft wird die Kafka-REST-API neu gestartet? 
-{: #REST_restart }
-{: faq}
-
-Die Kafka-REST-API wird einmal pro Tag für einen kurzen Zeitraum
-erneut  gestartet. 
-
-In diesem Zeitraum ist die Kafka-REST-API möglicherweise
-nicht verfügbar. In diesem Fall wird empfohlen, dass Sie Ihre Anforderung
-wiederholen. Nach dem Neustart der REST-API müssen Sie Ihre Kafka-Consumer-Instanzen
-erneut erstellen. In diesem Fall gibt die
-REST-API den folgenden JSON-Code zurück:
-
-```'{"error_code":40403,"message":"Consumer instance not found."}'
-```
-{:screen}
 
 ## Worin bestehen die Unterschiede zwischen dem {{site.data.keyword.messagehub}}-Plan "Standard" und dem {{site.data.keyword.messagehub}}-Plan "Enterprise"?
 {: #plan_compare }
 {: faq}
 
-Weitere Informationen zu den beiden unterschiedlichen {{site.data.keyword.messagehub}}-Plänen finden Sie in [Plan auswählen](/docs/services/EventStreams?topic=eventstreams-plan_choose).
+Weitere Informationen zu den verschiedenen {{site.data.keyword.messagehub}}-Plänen finden Sie in [Plan auswählen](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## Wie wird die Disaster-Recovery gehandhabt?
 {: #disaster_recovery }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# Gestione dell'accesso alle tue risorse {{site.data.keyword.messagehub}} (piano Enterprise)
+# Gestione dell'accesso alle tue risorse {{site.data.keyword.messagehub}}  
 {: #security }
 
 Puoi proteggere le tue risorse {{site.data.keyword.messagehub}} in modo dettagliato per gestire l'accesso che vuoi concedere a ogni utente per ogni risorsa.
 {: shortdesc}
+
+Quando apporti delle modifiche alle autorizzazioni e politiche IAM, a volte sono necessari diversi minuti prima che vengano riflesse nel servizio sottostante.
+{: important}
 
 ## Cosa posso proteggere?
 
@@ -74,17 +79,17 @@ Questa tabella riepiloga alcuni scenari {{site.data.keyword.messagehub}} comuni 
 | Azione | Ruolo lettore | Ruolo scrittore | Ruolo gestore |
 |---------|----------------|
 | Consentire l' accesso completo a tutte le risorse|Non applicabile   |Non applicabile  |Istanza del servizio <var class="keyword varname">la_tua_istanza_del_servizio</var>|
-| Consentire a un'applicazione o a un utente di creare o eliminare un argomento |Tipo di risorsa: <code>cluster</code>   |Non applicabile  |Tipo di risorsa: topic <br/><br/>Facoltativo: ID risorsa: <var class="keyword varname">nome_argomento</var> |
-| Elencare gruppi, argomenti e offset <br/> Descrivere le configurazioni di broker, gruppo e argomento. | Tipo di risorsa: <code>cluster</code>      |Non applicabile  |Non applicabile      |
+| Consentire a un'applicazione o a un utente di creare o eliminare un argomento |Tipo di risorsa: <code>cluster</code>   |Non applicabile  |Tipo di risorsa: argomento <br/><br/>Facoltativo: ID risorsa: <var class="keyword varname">name_of_topic</var> |
+| Elencare gruppi, argomenti e offset <br/> Descrivere le configurazioni di broker, gruppo e argomento | Tipo di risorsa: <code>cluster</code>      |Non applicabile  |Non applicabile      |
 | Consentire a un'applicazione di stabilire una connessione al cluster  |Tipo di risorsa: <code>cluster</code>| Non applicabile     |Non applicabile      |
 | Consentire a un'applicazione di produrre per qualsiasi argomento.  |Tipo di risorsa: <code>cluster</code>|Tipo di risorsa: <code>topic</code> |Non applicabile     |
-| Consentire a un'applicazione di produrre per uno specifico argomento.  |Tipo di risorsa: <code>cluster</code>|Tipo di risorsa: <code>topic</code><br/>ID risorsa: <var class="keyword varname">nome_argomento</var>      |Non applicabile     |
-| Consentire a un'applicazione di stabilire una connessione a, e consumare da, qualsiasi argomento (nessun gruppo di consumatori)  |Tipo di risorsa: <code>cluster</code> <br/>Tipo di risorsa: <code>topic</code> |Tipo di risorsa: <code>topic</code>|Non applicabile     |
-| Consentire a un'applicazione di stabilire una connessione a, e consumare da, uno specifico argomento (nessun gruppo di consumatori)  | Tipo di risorsa: <code>cluster</code> <br/>Tipo di risorsa: <code>topic</code><br/>ID risorsa: <var class="keyword varname">nome_argomento</var> |Non applicabile     |Non applicabile     |
+| Consentire a un'applicazione di produrre per uno specifico argomento.  |Tipo di risorsa: <code>cluster</code>|Tipo di risorsa: <code>topic</code><br/>ID risorsa: <var class="keyword varname">name_of_topic</var>      |Non applicabile     |
+| Consentire a un'applicazione di stabilire una connessione a, e consumare da, qualsiasi argomento (nessun gruppo di consumatori)  |Tipo di risorsa: <code>cluster</code> <br/>Tipo di risorsa: <code>topic</code> |Non applicabile    |Non applicabile     |
+| Consentire a un'applicazione di stabilire una connessione a, e consumare da, uno specifico argomento (nessun gruppo di consumatori)  | Tipo di risorsa: <code>cluster</code> <br/>Tipo di risorsa: <code>topic</code><br/>ID risorsa: <var class="keyword varname">name_of_topic</var> |Non applicabile     |Non applicabile     |
 | Consentire a un'applicazione di consumare un argomento (gruppo di consumatori)  |Tipo di risorsa: <code>cluster</code> <br/>Tipo di risorsa: <code>topic</code><br/> Tipo di risorsa: <code>group</code> |Non applicabile      |Non applicabile     |
-| Consentire a un'applicazione di produrre per un argomento in modo transazionale  |Tipo di risorsa: <code>cluster</code> <br/> Tipo di risorsa: <code>group</code>|Tipo di risorsa: <code>topic</code> <br/>ID risorsa: <var class="keyword varname">nome_argomento</var> <br/>Tipo di risorsa: <code>txnid</code> |Non applicabile     |
-| Eliminare il gruppo di consumatori |Tipo di risorsa: <code>cluster</code> |Non applicabile  |Tipo di risorsa: <code>group</code> <br/>ID risorsa: <var class="keyword varname">ID_gruppo</var>      |
-| Per utilizzare Streams |Tipo di risorsa: <code>cluster</code></br>Tipo di risorsa: <code>group</code>| Non applicabile  |Tipo di risorsa: <code>topic</code>    |
+| Consentire a un'applicazione di produrre per un argomento in modo transazionale  |Tipo di risorsa: <code>cluster</code> <br/> Tipo di risorsa: <code>group</code>|Tipo di risorsa: <code>topic</code> <br/>ID risorsa: <var class="keyword varname">name_of_topic</var> <br/>Tipo di risorsa: <code>txnid</code> |Non applicabile     |
+| Eliminare il gruppo di consumatori |Tipo di risorsa: <code>cluster</code> |Non applicabile  |Tipo di risorsa: <code>group</code> <br/>ID risorsa: <var class="keyword varname">group_ID</var>      |
+| Per utilizzare Streams |Tipo di risorsa: <code>cluster</code></br> Tipo di risorsa: <code>group</code>| Non applicabile  |Tipo di risorsa: <code>topic</code>    |
 
 Per ulteriori informazioni su IAM, vedi
 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).

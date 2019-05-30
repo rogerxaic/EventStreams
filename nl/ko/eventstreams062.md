@@ -33,30 +33,6 @@ subcollection: eventstreams
 
 지원되는 최소 Kafka 프로토콜은 0.10입니다.
 
-<!--
-## Support summary for the official Apache Kafka client (Java)
-
-<table>
-    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
-      <tr>
-	        <th></th>
-		    <th>Standard and Enterprise Plans</th>
-		    <th></th>
-        </tr>
-	  		<tr>
-			<td>**Kafka version on cluster**</td>
-			<td>Kafka 1.1</td>
-		</tr>
-	  		<tr>
-			<td>**Supported client versions**</td>
-			<td>Kafka 1.1, or later</td>
-		</tr>
-			<td>**Authentication requirements**</td>
-			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
-		</tr>
-
-</table>
--->
 	
 ## 서드파티 클라이언트
 {: #third_party_clients}
@@ -70,7 +46,7 @@ subcollection: eventstreams
 
 <table id="clients_table">
     <caption>표 2. 클라이언트 지원 요약</caption>
-     <tr>
+      <tr>
 		    <th id="client" scope="col">클라이언트</th>
 		    <th id="language" scope="col">언어</th>
 			<th id="version" scope="col">권장 버전</th>
@@ -84,9 +60,9 @@ subcollection: eventstreams
 			<td>[Apache Kafka 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>최신</td>
-			<td>0.10.2 <p> 이전 클라이언트에 대한 정보는 [역호환성](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)을 참조하십시오.</p></td>
+			<td>0.10.2 <p> 이전 클라이언트에 대한 정보는 [역호환성](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic)을 참조하십시오.</p></td>
 			<td>[Java 콘솔 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
-			[Liberty 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			[Liberty 샘플![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
 			<tr>
@@ -125,12 +101,6 @@ subcollection: eventstreams
 ### 각주
 1. {: #footnote1}이 버전은 지속적 테스트에서 유효성 검증한 가장 빠른 버전입니다. 일반적으로 이 버전은 최근 12개월 이내에 사용 가능한 초기 버전이지만 중요한 문제가 있는 것으로 알려진 경우 새 버전일 수 있습니다.
 
-## 역호환성 - 표준 플랜
-{: #compatibility}
-
-역호환성을 위해 Apache Kafka 0.9 Java 클라이언트를 {{site.data.keyword.messagehub}} 표준 플랜과 함께 사용할 수 있습니다. 그러나 이 클라이언트의 사용 기간으로 인해 이를 사용하지 않도록 적극 권장합니다. 이 클라이언트 버전을 사용하도록 선택하는 경우 추가 [로그인 모듈 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)이 필요합니다.
-
-새 Kafka 서버 버전에 연결하는 데 필요한 추가 프로토콜 변환으로 인해 0.11 이전의 클라이언트 버전을 사용하면 성능이 저하될 수 있습니다.
 
 <!--
 ## Unsupported clients

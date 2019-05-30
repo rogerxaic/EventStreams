@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# MQ-Bridge
+# MQ-Bridge im Plan "Classic" 
 {: #mq_bridge}
 
-**Die MQ-Bridge ist nur als Bestandteil des Plans "Standard" verfügbar.**
+** Die MQ-Bridge ist nur als Bestandteil des Plans "Classic" verfügbar.**
 <br/>
 
 Die MQ-Bridge ermöglicht das Übertragen von Nachrichtendaten aus einer {{site.data.keyword.IBM_notm}}-MQ-Warteschlange

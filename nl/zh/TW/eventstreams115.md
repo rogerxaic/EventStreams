@@ -16,16 +16,17 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Cloud Object Storage 橋接器 
+# 經典方案上的 Cloud Object Storage 橋接器
 {: #cloud_object_storage_bridge }
 
-** Cloud Object Storage 橋接器只提供於標準方案中。**
+
+**Cloud Object Storage 橋接器僅在經典方案中提供。**
 <br/>
 
-{{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}。
+{{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
 {: shortdesc}
 
-Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
+Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
 
 * 用於寫入物件的儲存區名稱。
 * 物件上傳至 Cloud Object Storage 服務的頻率。
@@ -147,9 +148,9 @@ Cloud Object Storage 橋接器的其中一個特性是能夠分割 Kafka 訊息�
 
     以此方式配置的橋接器，所產生的物件名稱會包含字首
     `"offset=<kafka_offset>"` 其中 `"<kafka_offset>"` 對應於該分割區（具有此字首的物件群組）中儲存的第一個
-    Kafka 訊息。例如，如果橋接器產生名稱類似下列範例的物件，`<object_a>` 及 `<object_b>` 會包含偏移在範圍
-    0 - 999 的訊息、`<object_c>` 會包含偏移在範圍 1000 -
-    1999 的訊息，依此類推。
+    Kafka 訊息。例如，如果橋接器產生的物件名稱類似下列範例，`<object_a>` 和 `<object_b>` 會包含偏移在範圍
+    0 - 999 內的訊息，`<object_c>` 會包含偏移在範圍 1000 -
+    1999 內的訊息，依此類推。
 
     <pre class="pre"><code>
         ```
@@ -200,7 +201,7 @@ Cloud Object Storage 橋接器的其中一個特性是能夠分割 Kafka 訊息�
 	
 	像此範例這樣配置的橋接器，所產生的物件會具有如下列所指定的名稱：
 	`<object_a>` 包含具有 `"timestamp"` 欄位且日期為
-	2016-12-07 的 JSON 訊息，`<object_b>` 及 `<object_c>` 都包含具有 `"timestamp"` 欄位且日期為
+	2016-12-07 的 JSON 訊息，`<object_b>` 和 `<object_c>` 都包含具有 `"timestamp"` 欄位且日期為
 	2016-12-08 的 JSON 訊息。
 
     <pre class="pre"><code>

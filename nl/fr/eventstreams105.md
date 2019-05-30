@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Pont MQ
+# Pont MQ dans le plan Classic 
 {: #mq_bridge}
 
-** Le pont MQ est uniquement disponible dans le cadre du plan Standard.**
+** Le pont MQ est uniquement disponible dans le plan Classic.**
 <br/>
 
 Le pont MQ vous permet de transférer des données de messages d'une file d'attente {{site.data.keyword.IBM_notm}} MQ vers un sujet Kafka {{site.data.keyword.messagehub}}. Le pont MQ vous permet d'effectuer efficacement des charges de travail de type cloud (par exemple, des analyses de données) sur des données de messages {{site.data.keyword.IBM_notm}} MQ générées au sein de votre entreprise.

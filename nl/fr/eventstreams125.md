@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-17"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,9 +15,11 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - plan Enterprise
+# Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - Plans Standard et Enterprise 
 {: #report_problem_enterprise}
+
 
 Si vous rencontrez un problème lié à {{site.data.keyword.messagehub}}, consultez d'abord la page de statut [{{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/status?selected=status){:new_window}.
 {: shortdesc}
@@ -26,8 +28,7 @@ Si vous souhaitez obtenir de l'aide de la part de l'équipe {{site.data.keyword.
 {:shortdesc}
 
 1. Quel ID de nom de ressource de cloud du service {{site.data.keyword.messagehub}}
-   utilisez-vous ?  Vous pouvez fournir cet ID en collant l'intégralité
-   de l'URL de la console {{site.data.keyword.Bluemix_notm}} après avoir cliqué sur le
+   utilisez-vous ?  Vous pouvez fournir cet ID en collant l'intégralité de l'URL de la console {{site.data.keyword.Bluemix_notm}} après avoir cliqué sur le
    service ou en collant la sortie de la commande d'interface de ligne de commande suivante :<br/>
    <pre class="pre">
    ibmcloud resource service-instance NAME

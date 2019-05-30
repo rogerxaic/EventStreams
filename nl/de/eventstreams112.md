@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Nachrichten erstellen
 {: #producing_messages }
@@ -31,7 +32,7 @@ Wenn eine Nachricht an den Leader der Partition gesendet wird, ist diese Nachric
 
 Jede Nachricht wird als Datensatz dargestellt, der aus zwei Teilen besteht: Schlüssel und Wert. Der Schlüssel wird in der Regel für Daten zur Nachricht verwendet und der Wert ist der Nachrichtentext. Da viele Tools im Kafka-Ökosystem (wie Connectors zu anderen Systemen) nur den Wert verwenden und den Schlüssel ignorieren, wird empfohlen, alle Nachrichtendaten in den Wert aufzunehmen und nur den Schlüssel für die Partitionierung oder Protokollkomprimierung zu verwenden. Verlassen Sie sich nicht auf alles, was aus Kafka ausgelesen wird, um den Schlüssel zu nutzen.
 
-Viele andere Nachrichtensysteme können mit den Nachrichten auch andere Informationen übertragen. Kafka 0.11 enthält erstmalig zu diesem Zweck Datensatz-Header. 
+Viele andere Nachrichtensysteme können mit den Nachrichten auch andere Informationen übertragen. Kafka 0.11 enthält erstmalig zu diesem Zweck Datensatz-Header.
 
 Weitere nützliche Informationen finden Sie unter [Nachrichten verarbeiten](/docs/services/EventStreams?topic=eventstreams-consuming_messages) in {{site.data.keyword.messagehub}}.
 
@@ -57,8 +58,7 @@ Es noch viele weitere Konfigurationseinstellungen verfügbar. Lesen Sie dennoch 
 
 Wenn der Producer eine Nachricht zu einem Topic veröffentlicht, wählt der Producer die zu verwendende Partition aus. Wenn die Reihenfolge wichtig ist, müssen Sie berücksichtigten, dass es sich bei einer Partition um eine geordnete Reihenfolge von Datensätzen handelt. Ein Topic umfasst aber eine oder mehrere Partitionen. Wenn eine Reihe von Nachrichten in der richtigen Reihenfolge bereitgestellt werden soll, stellen Sie sicher, dass sie alle zur gleichen Partition gehören. Die einfachste Möglichkeit, um dies zu erreichen, ist es, wenn alle Nachrichten denselben Schlüssel haben. 
  
-Der Producer kann explizit eine Partitionsnummer angeben, wenn er eine Nachricht veröffentlicht. Somit haben Sie eine direkte Kontrolle. Aber der Producercode wird dadurch auch komplexer, da er für die Partitionsauswahl verwaltet. Weitere Informationen dazu finden im Methodenaufruf "Producer.partitionsFor". Der Aufruf wird beispielsweise für
-[Kafka 1.1.0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} beschrieben.
+Der Producer kann explizit eine Partitionsnummer angeben, wenn er eine Nachricht veröffentlicht. Somit haben Sie eine direkte Kontrolle. Aber der Producercode wird dadurch auch komplexer, da er für die Partitionsauswahl verwaltet. Weitere Informationen dazu finden im Methodenaufruf "Producer.partitionsFor". Der Aufruf wird beispielsweise für [Kafka 2.2.0 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} beschrieben
  
 Wenn der Producer keine Partitionsnummer angibt, wird die Auswahl der Partition durch eine Partitionierungsfunktion getroffen. Die Standard-Partitionierungsfunktion, die im Kafka-Producer enthalten ist, funktioniert wie folgt:
 
@@ -75,7 +75,7 @@ Kafka schreibt die Nachrichten in der Regel in der Reihenfolge, in der sie vom P
  
 Der Producer kann auch erneut versuchen, Nachrichten automatisch senden. Es wird empfohlen, diese Wiederholungsfunktion zu aktivieren, da anderenfalls Ihr Anwendungscode Neuversuche selbst durchführen muss. Die Kombination aus Stapelverarbeitung in Kafka und automatischen Neuversuchen kann dazu führen, dass Nachrichten dupliziert werden und deren Reihenfolge geändert wird.
  
-Beispiel: Sie veröffentlichen eine Folge von den drei Nachrichten &lt;M1, M2, M3&gt; zu einem Topic. Die Datensätze passen möglicherweise in denselben Stapel, sodass sie gemeinsam an den Partitionsleader gesendet werden. Der Leader schreibt die Daten dann zur Partition und repliziert sie als separate Datensätze. Bei einem Ausfall kann es passieren, dass M1 und M2 der Partition hinzugefügt werden, M3 aber nicht. Der Producer empfängt keine Bestätigung, daher sendet er &lt;M1, M2, M3&gt; erneut. Der neue Leader schreibt M1, M2 und M3 einfach zur Partition, die jetzt &lt;M1, M2, M1, M2, M3&gt; enthält, wobei die duplizierte M1 der ursprünglichen M2 folgt. Wenn Sie die Anzahl der gerade ausgeführten Anforderungen pro Broker auf einen Broker beschränken, können Sie die Änderung der Reihenfolge verhindern. Möglicherweise wird ein einzelner Datensatz dupliziert (wie &lt;M1, M2, M2, M3&gt;), aber die Reihenfolge stimmt. Sie können in Kafka 0.11 (in {{site.data.keyword.messagehub}} nicht verfügbar) die idempotent-Producerfunktion verwenden, um die Duplizierung von M2 zu verhindern.
+Beispiel: Sie veröffentlichen eine Folge von den drei Nachrichten &lt;M1, M2, M3&gt; zu einem Topic. Die Datensätze passen möglicherweise in denselben Stapel, sodass sie gemeinsam an den Partitionsleader gesendet werden. Der Leader schreibt die Daten dann zur Partition und repliziert sie als separate Datensätze. Bei einem Ausfall kann es passieren, dass M1 und M2 der Partition hinzugefügt werden, M3 aber nicht. Der Producer empfängt keine Bestätigung, daher sendet er &lt;M1, M2, M3&gt; erneut. Der neue Leader schreibt M1, M2 und M3 einfach zur Partition, die jetzt &lt;M1, M2, M1, M2, M3&gt; enthält, wobei die duplizierte M1 der ursprünglichen M2 folgt. Wenn Sie die Anzahl der gerade ausgeführten Anforderungen pro Broker auf einen Broker beschränken, können Sie die Änderung der Reihenfolge verhindern. Möglicherweise wird ein einzelner Datensatz dupliziert (wie &lt;M1, M2, M2, M3&gt;), aber die Reihenfolge stimmt. Sie können in Kafka 0.11 oder höher auch die idempotent-Producerfunktion verwenden, um die Duplizierung von M2 zu verhindern.
  
 Bei Kafka ist es üblich, die Anwendungen so zu schreiben, dass sie mit gelegentlichen Nachrichtenduplikaten umgehen können, da der Leistungseinfluss bei einer einzelnen gerade ausgeführten Anforderung enorm ist.
 
@@ -105,13 +105,15 @@ Aus Gründen der Effizienz sammelt der Producer mehrere Datensätze, die dann an
 Wenn Sie versuchen, Nachrichten schneller zu veröffentlichen, als sie an einen Server gesendet werden können, puffert der Producer sie automatisch in Anforderungen für die Stapelverarbeitung. Der Producer verwaltet für jede Partition einen Puffer aus nicht gesendeten Datensätzen. Aber irgendwann kann sogar mit der Stapelverarbeitung die gewünschte Rate nicht mehr erreicht werden.
  
 Es gibt noch einen weiteren Faktor, der Auswirkungen hat. Um zu verhindern, dass einzelne Producer oder Consumer den Cluster überfluten, wendet {{site.data.keyword.messagehub}} Größenbeschränkungen für den Durchsatz an. Die Rate, mit der jeder Producer Daten sendet, wird berechnet und jeder Producer, der versucht, seine Rate zu überschreiten, wird gedrosselt. Das Drosseln wird angewendet, indem das Senden von Antworten an den Producer leicht verzögert wird. Dies funktioniert ähnlich wie eine Bremse.
+
+Informationen zum Durchsatz finden Sie in [Grenzwerte und Kontingente](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas). 
  
 Zusammenfassend kann gesagt werden, dass der Datensatz bei der Veröffentlichung einer Nachricht zunächst im Producer in einen Puffer geschrieben wird. Der Producer erstellt im Hintergrund einen Stapel und sendet die Datensätze an den Server. Der Server antwortet dann dem Producer und wendet möglicherweise eine Drosselungsverzögerung an, wenn der Producer eine zu schnelle Veröffentlichung durchführt. Wenn der Puffer im Producer voll ist, wird der Sendeaufruf des Producers verzögert und kann schließlich mit einer Ausnahmebedingung fehlschlagen.
 
 ## Code-Snippets
 {: #code_snippets}
 
-Diese Code-Snippets befindet sich auf einer höheren Ebene, um die beteiligten Konzepte darzustellen. Komplette Beispiele finden Sie in den {{site.data.keyword.messagehub}}-Beispielen in GitHub unter https://github.com/ibm-messaging/event-streams-samples.
+Diese Code-Snippets befindet sich auf einer höheren Ebene, um die beteiligten Konzepte darzustellen. Vollständige Beispiele finden Sie in den {{site.data.keyword.messagehub}}-Beispielen in [GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples).
 
 Um eine Verbindung zu {{site.data.keyword.messagehub}} herzustellen, müssen Sie zuerst die Konfigurationseigenschaften erstellen. Alle Verbindungen zu {{site.data.keyword.messagehub}} werden mithilfe von TLS und einer Benutzer-/Kennwortauthentifizierung gesichert, sodass Sie mindestens diese Eigenschaften benötigen. Ersetzen Sie KAFKA_BROKERS_SASL, USER und PASSWORD mit Ihren eigenen Serviceberechtigungsnachweisen:
 

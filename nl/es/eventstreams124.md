@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# Gestión del acceso a los recursos de {{site.data.keyword.messagehub}} (plan Empresa)
+# Gestión del acceso a los recursos de {{site.data.keyword.messagehub}} 
 {: #security }
 
 Puede proteger los recursos de {{site.data.keyword.messagehub}} de forma muy precisa para gestionar el acceso que desea otorgar a cada usuario sobre cada recurso.
 {: shortdesc}
+
+Cuando se hacen cambios en las políticas y permisos de IAM, a veces se pueden pasar varios minutos hasta que se reflejen en el servicio subyacente.
+{: important}
 
 ## ¿Qué puedo proteger?
 
@@ -75,11 +80,11 @@ En esta tabla se resumen algunos casos de ejemplo habituales de {{site.data.keyw
 |---------|----------------|
 | Permitir acceso completo a todos los recursos|No aplicable   |No aplicable  |Instancia de servicio: <var class="keyword varname">instancia_servicio</var>|
 | Permitir que una app o un usuario cree o suprima un tema |Tipo de recurso: <code>cluster</code>   |No aplicable  |Tipo de recurso: topic <br/><br/>Opcional: ID de recurso: <var class="keyword varname">nombre_tema</var> |
-| Obtener una lista de grupos, temas y desplazamientos <br/> Describir configuraciones de grupo, tema e intermediario | Tipo de recurso: <code>cluster</code>      |No aplicable  |No aplicable      |
+| Listar grupos, temas y desplazamientos <br/> Describir configuraciones de grupos, temas e intermediarios | Tipo de recurso: <code>cluster</code>      |No aplicable  |No aplicable      |
 | Permitir que una app se conecte al clúster  |Tipo de recurso: <code>cluster</code>| No aplicable     |No aplicable      |
 | Permitir que una app produzca en cualquier tema  |Tipo de recurso: <code>cluster</code>|Tipo de recurso: <code>topic</code> |No aplicable     |
 | Permitir que una app produzca en un tema específico  |Tipo de recurso: <code>cluster</code>|Tipo de recurso: <code>topic</code><br/>ID de recurso: <var class="keyword varname">nombre_tema</var>      |No aplicable     |
-| Permitir que una app se conecte y consuma desde cualquier tema (no grupo de consumidores)  |Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code> |Tipo de recurso: <code>topic</code>|No aplicable     |
+| Permitir que una app se conecte y consuma desde cualquier tema (no grupo de consumidores)  |Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code> |No aplicable    |No aplicable     |
 | Permitir que una app se conecte y consuma desde un tema específico (no grupo de consumidores)  | Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code><br/>ID de recurso: <var class="keyword varname">nombre_tema</var> |No aplicable     |No aplicable     |
 | Permitir a una app consuma un tema (grupo de consumidores)  |Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code><br/> Tipo de recurso: <code>group</code> |No aplicable      |No aplicable     |
 | Permitir que una app produzca un tema de forma transaccional  |Tipo de recurso: <code>cluster</code> <br/> Tipo de recurso: <code>group</code>|Tipo de recurso: <code>topic</code> <br/>ID de recurso: <var class="keyword varname">nombre_tema</var> <br/>Tipo de recurso: <code>txnid</code> |No aplicable     |
@@ -94,8 +99,7 @@ Para ver un ejemplo de cómo definir políticas, consulte: [Claves de API e ID d
 ## Conexión a {{site.data.keyword.messagehub}}
 {: #connect_message_enterprise }
 
-Para obtener información sobre cómo enlazar una aplicación de Cloud Foundry o cómo obtener una credencial de clave de seguridad para una aplicación externa, consulte
-[Conexión a {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
+Para obtener información sobre cómo enlazar una aplicación de Cloud Foundry o cómo obtener una credencial de clave de seguridad para una aplicación externa, consulte [Conexión a {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 <!-- 28/06/18 - Karen: draft info only
 

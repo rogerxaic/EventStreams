@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-11-20"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,11 +15,12 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# Usando a API do MQ Light 
+# Usando a API do MQ Light no plano Clássico
 {: #mql_using}
 
-** A API do MQ Light está disponível como parte somente do plano Standard.**
+** A API do MQ Light está disponível somente como parte do plano Clássico.**
 <br/>
 
 A API do {{site.data.keyword.mql}} é fornecida para compatibilidade com versões anteriores com o serviço
@@ -27,10 +28,6 @@ A API do {{site.data.keyword.mql}} é fornecida para compatibilidade com versõe
 o Node.js, o Python e o Ruby. 
 {:shortdesc}
 
-<!-- 02/07/18 - removing words to help deprecate MQ Light
-In most cases, {{site.data.keyword.messagehub}} is best used with a Kafka client. The {{site.data.keyword.mql}} API is simple to learn but has very limited scalability and does not offer interoperability with other {{site.data.keyword.messagehub}} APIs.
-The {{site.data.keyword.mql}} API is available in the following {{site.data.keyword.Bluemix_short}} regions only: US South, United Kingdom, and Sydney. The {{site.data.keyword.mql}} API not available in the Germany region or in {{site.data.keyword.Bluemix_notm}} Dedicated.
--->
 
 ## O que é API do MQ Light e como ela é diferente?
 {: #mqlight}
@@ -48,7 +45,7 @@ para escalabilidade adicional. É possível compartilhar mensagens entre os cons
 consumidores, mas cada consumidor deve poder acompanhar a taxa de mensagens para as partições designadas a
 ele.
 * Com a API do {{site.data.keyword.mql}}, é possível usar um número muito maior de tópicos
-e os nomes de tópico são hierárquicos (por exemplo: <code>&lsquo;/sports/football&rsquo;</code> e <code>&lsquo;/sports/tiddlywinks&rsquo;</code>).  
+e os nomes de tópico são hierárquicos (por exemplo: <code>&lsquo;/sports/football&rsquo;</code> e <code>&lsquo;/sports/tiddlywinks&rsquo;</code>). 
 
 Os tópicos na API do {{site.data.keyword.mql}} não são os mesmos que os tópicos do Kafka. Em vez
 disso, a API do {{site.data.keyword.mql}} usa um tópico do Kafka único chamado "MQLight" e todas as
@@ -57,7 +54,7 @@ do Kafka.
 
 O {{site.data.keyword.mql}} está disponível somente nas seguintes localizações (regiões) do {{site.data.keyword.Bluemix_notm}}: Dallas (us-south), Londres (eu-gb) e Sydney (au-syd). A API do MQ Light não está disponível na localização de Frankfurt (eu-de) ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Para obter mais informações sobre como escolher entre as APIs, consulte [Escolhendo entre as três APIs](/docs/services/EventStreams?topic=eventstreams-choose_api).
+Para obter mais informações sobre como escolher entre as APIs, consulte [Escolhendo entre as três APIs](/docs/services/EventStreams?topic=eventstreams-choose_api_classic).
 
 
 ## O que é necessário para usar a API do MQ Light com o {{site.data.keyword.messagehub}}?
@@ -81,7 +78,7 @@ Para desativar a API MQ Light, exclua o tópico "MQLight". Observe que todos os 
 
 Para conectar um aplicativo ao serviço, o aplicativo deve usar os detalhes de <code>user</code>,
 <code>password</code> e <code>mqlight_lookup_url</code> da
-[variável de ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf). Use a
+[variável de ambiente VCAP_SERVICES](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf). Use a
 seguinte orientação para sua linguagem escolhida:
 
 **Para Java**
@@ -93,7 +90,7 @@ Se você especificar <code>null</code> como o parâmetro endpointService da cham
 <code>NonBlockingClient.create(null, new NonBlockingClientAdapter<Void>() {
     public void onStarted(NonBlockingClient client, Void context) {
                 client.send("my/topic", "Hello World!", null);
-    }
+    }
 }, null);</code>
 </pre>
 {:codeblock}

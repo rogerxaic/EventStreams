@@ -39,7 +39,8 @@ subcollection: eventstreams
       * ECDHE-RSA-AES256-SHA384
       * DHE-RSA-AES128-SHA256
       * DHE-RSA-AES256-SHA256
-{: shortdesc}
+
+
 
 
 *  要访问 {{site.data.keyword.messagehub}} 仪表板，您必须使用支持 TLS 1.2 的浏览器。

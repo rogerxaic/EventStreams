@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,9 +28,25 @@ Kafka Connect può essere eseguito in modalità distribuita o autonoma. La modal
 ## Configurazione del nodo di lavoro autonomo
 {: #standalone_worker notoc}
 
-Devi fornire i server di avvio e le informazioni sulle credenziali SASL nel file delle proprietà del nodo di lavoro che fornisci quando avvii un nodo di lavoro autonomo Kafka Connect.
-
 Il nodo di lavoro autonomo non utilizza alcun argomento interno. Invece, utilizza un file per l'archiviazione delle informazioni di offset.
+
+Devi fornire i server di avvio e le informazioni sulle credenziali SASL nel file delle proprietà del nodo di lavoro che fornisci quando avvii un nodo di lavoro autonomo Kafka Connect. Il seguente esempio elenca le proprietà che devi fornire al tuo file delle proprietà:
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+Sostituisci KAFKA_BROKERS_SASL, USER e PASSWORD con i valori dalla tua scheda **Credenziali del servizio** {{site.data.keyword.messagehub}} nella console
+{{site.data.keyword.Bluemix_notm}}.
 
 ### Connettore di origine
 {: #source_connector notoc }

@@ -16,18 +16,19 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Ponte do Cloud Object Storage 
+# Ponte do Cloud Object Storage no plano Clássico
 {: #cloud_object_storage_bridge }
 
-** A ponte do Cloud Object Storage está disponível somente como parte do plano Standard.**
+
+** A ponte do Cloud Object Storage está disponível somente como parte do plano Clássico.**
 <br/>
 
 A ponte do {{site.data.keyword.IBM}} Cloud Object Storage fornece uma maneira de ler dados de um tópico do {{site.data.keyword.messagehub}} Kafka
-e de colocá-los no [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}.
+e de colocá-los no [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
 A ponte do Cloud Object Storage permite arquivar dados de tópicos do Kafka no
-{{site.data.keyword.messagehub}} em uma instância do serviço do [Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos
+{{site.data.keyword.messagehub}} em uma instância do serviço do [Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos
 dados da mensagem como objetos para um depósito no serviço do Cloud Object Storage. Ao configurar a ponte do
 Cloud Object Storage, é possível controlar como os dados são transferidos por upload como objetos
 para o Cloud Object Storage. Por exemplo, as propriedades que podem ser configuradas são as seguintes:
@@ -97,7 +98,7 @@ que é o nome do depósito. Clique **Salvar.**
 ## Criando uma ponte do Cloud Object Storage
 {: notoc}
 
-Para criar uma nova ponte do Cloud Object Storage usando a API de REST Kafka, use JSON como o exemplo a seguir. Assegure-se de que seus nomes de depósito sejam globalmente exclusivos, não apenas exclusivos dentro de sua instância do Cloud Object Storage.
+Para criar uma nova ponte do Cloud Object Storage usando a API de REST do Kafka, use JSON como o exemplo a seguir. Assegure-se de que seus nomes de depósito sejam globalmente exclusivos, não apenas exclusivos dentro de sua instância do Cloud Object Storage.
 
 <pre class="pre"><code>
 {
@@ -172,11 +173,7 @@ Para particionar dados por deslocamento de mensagem do Kafka, conclua as etapas 
      	</code></pre>
     {:codeblock}
 
-    Os nomes de objeto gerados por uma ponte configurada dessa maneira contêm o prefixo `"offset=<kafka_offset>"`, em que `"<kafka_offset>"` corresponde à primeira mensagem
-do Kafka armazenada em tal partição (o grupo de objetos com este prefixo). Por exemplo, se uma ponte gera
-objetos com nomes como o exemplo a seguir, `<object_a>` e `<object_b>`
-contêm mensagens com deslocamentos no intervalo de 0 a 999, `<object_c>` contém mensagens com
-deslocamentos no intervalo de 1000 a 1999, e assim por diante.
+    Os nomes de objetos gerados por uma ponte configurada dessa maneira contêm o prefixo `"offset=<kafka_offset>"`, em que `"<kafka_offset>"` corresponde à primeira mensagem do Kafka armazenada nessa partição (o grupo de objetos com esse prefixo). Por exemplo, se uma ponte gerar objetos com nomes como o exemplo a seguir, `<object_a>` e `<object_b>` conterão mensagens com deslocamentos no intervalo de 0 a 999, `<object_c>` conterá mensagens com deslocamentos no intervalo de 1000 a 1999 e assim por diante.
 
     <pre class="pre"><code>
         ```
@@ -232,9 +229,7 @@ ao campo de data do ISO 8601 em cada mensagem do Kafka. Neste exemplo, o campo `
 deve conter um valor de data de ISO 8601 válido. Em seguida, as mensagens são particionadas de acordo com
 suas datas.
 	
-	Uma ponte configurada como este exemplo gera objetos com nomes especificados como segue:
- `<object_a>` contém mensagens JSON com campos `"timestamp"` com uma data de 07/12/2016 e `<object_b>` e `<object_c>` contêm mensagens JSON com campos `"timestamp"` com uma data de
- 08/12/2016.
+	Uma ponte configurada como este exemplo gera objetos com nomes especificados conforme a seguir: `<object_a>` contém mensagens JSON com campos `"timestamp"` com uma data de 07/12/2016 e ambos, `<object_b>` e `<object_c>`, contêm mensagens JSON com campos `"timestamp"` com uma data de 08/12/2016.
 
     <pre class="pre"><code>
         ```

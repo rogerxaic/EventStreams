@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# MQ 브릿지
+# 클래식 플랜의 MQ 브릿지 
 {: #mq_bridge}
 
-** MQ 브릿지는 표준 플랜의 일부로만 사용 가능합니다.**
+** MQ 브릿지는 클래식 플랜의 일부로만 사용 가능합니다.**
 <br/>
 
 MQ 브릿지를 통해 {{site.data.keyword.IBM_notm}} MQ 큐에서 {{site.data.keyword.messagehub}} Kafka 토픽으로

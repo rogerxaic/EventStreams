@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Produzione di messaggi
 {: #producing_messages }
@@ -57,7 +58,7 @@ Sono disponibili molte altre impostazioni di configurazione, ma assicurati di le
 
 Quando pubblica un messaggio su un argomento, il produttore può scegliere quale partizione utilizzare. Se l'ordinamento è importante, devi ricordarti che una partizione è una sequenza ordinata di record ma che un argomento include una o più partizioni. Se vuoi che un insieme di messaggi venga recapitato in ordine, assicurati che vadano tutti nella stessa partizione. La soluzione migliore per ottenere questo risultato consiste nel dare a tutti questi messaggi la stessa chiave. 
  
-Il produttore può specificare esplicitamente un numero di partizione quando pubblica un messaggio. Ciò offre un controllo diretto ma rende più complesso il codice del produttore poiché si assume la responsabilità della gestione della selezione della partizione. Per ulteriori informazioni, vedi la chiamata al metodo Producer.partitionsFor. Ad esempio, la chiamata è descritta per [Kafka 1.1.0 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+Il produttore può specificare esplicitamente un numero di partizione quando pubblica un messaggio. Ciò offre un controllo diretto ma rende più complesso il codice del produttore poiché si assume la responsabilità della gestione della selezione della partizione. Per ulteriori informazioni, vedi la chiamata al metodo Producer.partitionsFor. Ad esempio, la chiamata è descritta per [Kafka 2.2.0 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Se il produttore non specifica un numero partizione, la selezione della partizione viene eseguita da un partitioner. Il partitioner predefinito integrato nel produttore Kafka funziona nel seguente modo:
 
@@ -74,7 +75,7 @@ Kafka di norma scrive i messaggi nell'ordine in cui vengono inviati dal produtto
  
 Il produttore può anche tentare nuovamente l'invio di messaggi automaticamente. È spesso una buona idea abilitare questa funzione di nuovi tentativi perché l'alternativa è che il tuo codice applicativo debba esso stesso eseguire eventuali nuovi tentativi. La combinazione di organizzazione in batch in Kafka e dei nuovi tentativi automatici può avere l'effetto di duplicare i messaggi e riordinarli.
  
-Ad esempio, se pubblici una sequenza di tre messaggi &lt;M1, M2, M3&gt; su un argomento, i record potrebbero tutti rientrare nello stesso batch e, pertanto, vengono effettivamente inviati tutti insieme al leader nella partizione. Il leader li scrive quindi nella partizione e li replica come record separati. Nel caso di un malfunzionamento, è possibile che M1 ed M2 vengano aggiunti alla partizioni ma che ciò non accada per M3. Il produttore non riceve un riconoscimento, quindi prova nuovamente a inviare &lt;M1, M2, M3&gt;. Il nuovo leader scrive semplicemente M1, M2 e M3 nella partizione, che contiene ora &lt;M1, M2, M1, M2, M3&gt;, dove l'M1 duplicato in effetti viene dopo l'M2 originale. Se limiti il numero di richieste in-flight a ciascun broker a uno solo, puoi evitare questo riordino. Potresti comunque rilevare che un singolo record è duplicato, come ad esempio &lt;M1, M2, M2, M3&gt;, ma non otterrai mai delle sequenze non ordinate. In Kafka 0.11 (non ancora disponibile in {{site.data.keyword.messagehub}}), puoi anche utilizzare la funzione produttore idempotent per impedire la duplicazione di M2.
+Ad esempio, se pubblici una sequenza di tre messaggi &lt;M1, M2, M3&gt; su un argomento, i record potrebbero tutti rientrare nello stesso batch e, pertanto, vengono effettivamente inviati tutti insieme al leader nella partizione. Il leader li scrive quindi nella partizione e li replica come record separati. Nel caso di un malfunzionamento, è possibile che M1 ed M2 vengano aggiunti alla partizioni ma che ciò non accada per M3. Il produttore non riceve un riconoscimento, quindi prova nuovamente a inviare &lt;M1, M2, M3&gt;. Il nuovo leader scrive semplicemente M1, M2 e M3 nella partizione, che contiene ora &lt;M1, M2, M1, M2, M3&gt;, dove l'M1 duplicato in effetti viene dopo l'M2 originale. Se limiti il numero di richieste in-flight a ciascun broker a uno solo, puoi evitare questo riordino. Potresti comunque rilevare che un singolo record è duplicato, come ad esempio &lt;M1, M2, M2, M3&gt;, ma non otterrai mai delle sequenze non ordinate. In Kafka 0.11 o successive, puoi anche utilizzare la funzione produttore idempotent per impedire la duplicazione di M2.
  
 È prassi normale con Kafka scrive le applicazioni per gestire occasionali duplicati di messaggi perché l'impatto sulle prestazioni derivante dall'avere solo una singola richiesta in-flight è considerevole.
 
@@ -104,13 +105,15 @@ Ai fini dell'efficienza, il produttore raccoglie effettivamente dei batch di rec
 Se probi a pubblicare i messaggi più rapidamente di quanto possano essere inviati al server, il produttore li memorizza automaticamente in buffer in richieste organizzate in batch. Il produttore conserva un buffer di record non inviati per ciascuna partizione. Ovviamente si arriva a un punto in cui anche l'organizzazione in batch non consente di raggiungere il tasso desiderato.
  
 C'è un altro fattore che ha un impatto. per evitare che i singoli produttori o consumatori sommergano il cluster, {{site.data.keyword.messagehub}} applica delle quote di velocità effettiva. Il tasso a cui ciascun produttore sta inviando i dati viene calcolato e ogni produttore che prova a superare la sua quota viene limitato. La limitazione viene applicata ritardando leggermente l'invio di risposte al produttore. Di norma, questo agisce solo come un freno naturale.
+
+Per informazioni di orientamento sulla velocità effettiva, vedi [Limiti e quote](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas). 
  
 Riepilogando, quando un messaggio viene pubblicato, il suo record viene prima scritto in un buffer nel produttore. In background, il produttore organizza in batch e invia i record al server. Il server risponde quindi al produttore, possibilmente applicando un ritardo di limitazione se il produttore sta pubblicando troppo rapidamente. Se il buffer nel produttore si riempie, la chiamata di invio del produttore viene ritardata ma, alla fine, potrebbe non riuscire con un'eccezione.
 
 ## Frammenti di codice
 {: #code_snippets}
 
-Questi frammenti di codice sono a un livello molto alto per illustrare i concetti coinvolti. Per degli esempi completi, vedi gli esempi {{site.data.keyword.messagehub}} in GitHub https://github.com/ibm-messaging/event-streams-samples.
+Questi frammenti di codice sono a un livello molto alto per illustrare i concetti coinvolti. Per degli esempi completi, vedi gli esempi {{site.data.keyword.messagehub}} in [GitHub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples).
 
 Per stabilire una connessione a {{site.data.keyword.messagehub}}, devi prima creare l'insieme di proprietà di configurazione. Tutte le connessioni a {{site.data.keyword.messagehub}} sono protette utilizzando TLS e l'autenticazione utente/password, quindi ti servono come minimo queste proprietà. Sostituisci KAFKA_BROKERS_SASL, USER e PASSWORD con le tue credenziali di servizio:
 

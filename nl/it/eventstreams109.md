@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-07"
+lastupdated: "2018-09-11"
+
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
 subcollection: eventstreams
@@ -17,10 +18,10 @@ subcollection: eventstreams
 
 
 
-# Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - piano Standard
+# Segnalazione di un problema al team di {{site.data.keyword.messagehub}} - piano Classic 
 {: #report_problem}
 
-Se riscontri un problema con {{site.data.keyword.messagehub}}, per prima cosa controlla la [pagina sugli stati di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/status?selected=status){:new_window}.  
+Se riscontri un problema con il piano {{site.data.keyword.messagehub}} Classic, per prima cosa controlla la [pagina sugli stati di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/status?selected=status){:new_window}. 
 
 Se vuoi aiuto da parte del team di {{site.data.keyword.messagehub}}, raccogli tutte le seguenti informazioni. Più informazioni puoi fornire in anticipo, e più efficientemente il team può aiutarti con il problema:
 {:shortdesc}

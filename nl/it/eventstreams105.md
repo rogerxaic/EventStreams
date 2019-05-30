@@ -16,10 +16,10 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Bridge MQ
+# Bridge MQ sul piano Classic 
 {: #mq_bridge}
 
-** Il bridge MQ è disponibile solo come parte del piano Standard.**
+** Il bridge MQ è disponibile solo come parte del piano Classic.**
 <br/>
 
 Il bridge MQ ti consente di trasferire i dati del messaggio da una coda {{site.data.keyword.IBM_notm}}

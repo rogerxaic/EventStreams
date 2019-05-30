@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Kafka 아키텍처 다이어그램](kafka_overview.png "Kafka 아키텍처를 표시하는 다이어그램입니다. 제작자가 세 개의 파티션을 통해 Kafka 토픽에 피드를 제공하면 이용자가 메시지를 구독하게 됩니다.")
-{: shortdesc}
+
 
 다음 목록은 일부 Apache Kafka 개념을 정의합니다.
 
@@ -45,9 +45,9 @@ subcollection: eventstreams
 <dd>각 토픽은 하나 이상의 파티션으로 구성됩니다. 각 파티션은 메시지의 정렬된 목록입니다. 파티션의 메시지에는 각각 일정하게 증가하는 숫자(오프셋)가 지정됩니다. 
 <p>각 파티션에는 파티션의 리더 역할을 하는 클러스터의 서버 하나와 팔로워의 역할을 하는 다른 서버들이 있습니다.<p>
 <p>토픽에 둘 이상의 파티션이 있으면 클러스터에 파티션을 분배하여 처리량을 높이기 위해 병렬로 데이터가 피드될 수 있도록 허용합니다. 또한 파티션의 수는 이용자 간 워크로드 밸런싱에 영향을 줍니다.</p>
-<p>자세한 정보는 [파티션 리더십](/docs/services/EventStreams?topic=eventstreams-partition_leadership)을 참조하십시오.</dd>
+<p>자세한 정보는 [파티션 리더십](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership)을 참조하십시오.</dd>
 <dt>제작자</dt>
-<dd>Kafka 토픽에 메시지 스트림을 공개하는 프로세스입니다. 제작자는 하나 이상의 토픽에 대해 공개하고, 선택사항으로 데이터를 저장하는 파티션을 선택할 수 있습니다.<br/></dd>
+<dd>Kafka 토픽에 메시지 스트림을 공개하는 프로세스입니다. 제작자는 하나 이상의 토픽에 대해 공개할 수 있으며 선택적으로 데이터를 저장하는 파티션을 선택할 수 있습니다.</dd>
 <br/>
 <dt>이용자 </dt>
 <dd>Kafka 토픽의 메시지를 이용하고 메시지의 피드를 처리하는 프로세스입니다. 이용자는 하나 이상의 토픽 또는 파티션에서 이용할 수 있습니다.</dd>
@@ -62,9 +62,9 @@ subcollection: eventstreams
 </dl>
 
 자세히 보려면 다음 정보를 참조하십시오.
-- [메시지 생성](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [메시지 이용](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [파티션 리더십](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [메시지 생성](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [메시지 이용](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [파티션 리더십](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Apache Kafka 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

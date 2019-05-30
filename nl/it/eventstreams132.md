@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-05-09"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,19 +15,36 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# SLA (service level agreement) per la disponibilità {{site.data.keyword.messagehub}} (piano Enterprise)
+# SLA (service level agreement) per la disponibilità {{site.data.keyword.messagehub}}  
 {: #sla}
 
-Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.95% sul piano Enterprise.
+## Piano Standard
+Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.95% sul piano Standard.
+Per ulteriori informazioni su SLA per l'elevata disponibilità dei servizi in {{site.data.keyword.Bluemix}}, vedi
+[{{site.data.keyword.Bluemix_notm}} service description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
+
+
+## Piano Enterprise
+Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.95% sul piano Enterprise come un ambiente pubblico ad alta disponibilità.
+Per ulteriori informazioni su SLA per l'elevata disponibilità dei servizi in {{site.data.keyword.Bluemix}}, vedi
+[{{site.data.keyword.Bluemix_notm}} service description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
+
+## Piano Classic
+Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.5% sul piano Classic.
 Per ulteriori informazioni su SLA per {{site.data.keyword.Bluemix}}, vedi
 [{{site.data.keyword.Bluemix_notm}} service description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
 
-## Cosa significa una disponibilità del 99.95% ?
-La disponibilità si riferisce alla capacità delle applicazioni di produrre ed utilizzare i messaggi dagli argomenti Kafka.
+<!--
+## What does 99.95% availability mean?
+Availability refers to the ability of applications to produce and consume messages from Kafka topics.
+-->
 
 ## Come la misuriamo?
-Le istanze del servizio sono monitorate continuamente per prestazioni, frequenze di errore e loro risposte alle operazioni di sintesi. Vengono registrate le interruzioni del servizio.
+Le istanze del servizio sono monitorate continuamente per prestazioni, frequenze di errore e loro risposte alle operazioni di sintesi. Vengono registrate le interruzioni del servizio. Per ulteriori informazioni, vedi [Stato del servizio per Event Streams ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/status?component=messagehub&selected=status){:new_window}.
+
+La disponibilità si riferisce alla capacità delle applicazioni di produrre ed utilizzare i messaggi dagli argomenti Kafka.
 
 ## Cosa devi prendere in considerazione per ottenere questa disponibilità?
 Per ottenere alti livelli di disponibilità dalla prospettiva dell'applicazione, dovresti considerare [connettività](/docs/services/EventStreams?topic=eventstreams-sla#connectivity), [velocità effettiva](/docs/services/EventStreams?topic=eventstreams-sla#throughput) e [congruenza e durabilità dei messaggi](/docs/services/EventStreams?topic=eventstreams-sla#message_consistency). Gli utenti sono responsabili della progettazione delle loro applicazioni per ottimizzare questi tre elementi per il proprio business.
@@ -43,16 +60,19 @@ I client Kafka forniscono la logica di riconnessione, ma devi abilitare esplicit
 **Duplicati**<br/>
 Abilitando i nuovi tentativi potrebbero crearsi dei messaggi duplicati. A seconda di quando una connessione è stata persa, il produttore potrebbe non essere in grado di determinare se un messaggio è stato elaborato correttamente dal server e pertanto deve inviare nuovamente il messaggio quando si riconnette. Ti consigliamo di progettare le applicazioni per aspettarsi dei messaggi duplicati. 
 
-Se non possono essere tollerati dei duplicati, puoi utilizzare la funzione del produttore <code>idempotent</code> (da Kafka 1.1) per impedire i duplicati durante i nuovi tentativi. Per ulteriori informazioni, vedi la [ proprietà <code>enable.idempotence</code> ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://kafka.apache.org/11/documentation.html#producerconfigs){:new_window}. 
+Se non possono essere tollerati dei duplicati, puoi utilizzare la funzione del produttore <code>idempotent</code> (da Kafka 1.1) per impedire i duplicati durante i nuovi tentativi. Per ulteriori informazioni, vedi la [ proprietà <code>enable.idempotence</code> ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://kafka.apache.org/11/documentation.html#producerconfigs){:new_window}.
 
 ### Velocità effettiva
 {: #throughput}
 
 La velocità effettiva viene espressa come il numero di byte al secondo che può essere inviato e ricevuto in un cluster.
 
-**Consiglio**<br/>
-40 MB al secondo con un limite di picco massimo di 90 MB al secondo. <br/>
-La figura consigliata si basa su un carico di lavoro tipico e tiene conto del possibile impatto di azioni operative come gli aggiornamenti interni o le modalità di errore come la perdita di una zona di disponibilità.  Ad esempio, i messaggi con un piccolo payload (meno di 10 K). Se la velocità effettiva media supera questa figura, potresti riscontrare una diminuzione delle prestazioni durante tali condizioni.
+**Guida specifica per il piano Standard**<br/>
+Per informazioni di orientamento sulla velocità effettiva, vedi [Limiti e quote- Standard](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas#standard_throughput). 
+
+**Guida specifica per il piano Enterprise**<br/>
+
+Per informazioni di orientamento sulla velocità effettiva, vedi [Limiti e quote - Enterprise](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#enterprise_throughput). 
 
 **Misurazione**<br/>
 Ti consigliamo di strumentare le applicazioni per tenere conto di come vengono elaborate. Ad esempio, il numero di messaggi inviati e ricevuti, le dimensioni del messaggio e i codici di ritorno. Comprendere l'utilizzo di un'applicazione ti aiuta a configurare le sue risorse appropriatamente, come il tempo di conservazione per i messaggi sugli argomenti.

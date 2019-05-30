@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-05-25"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,68 +15,75 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# 使用 Kafka REST API
-{: #rest_using}
+# 使用 REST producer API
+{: #rest_producer_using}
 
-**Kafka REST API 仅在标准套餐中提供。**
+
+**REST producer API 仅在新的 {{site.data.keyword.messagehub}} 标准套餐中提供。**
 <br/>
 
-Kafka REST API 提供了一个用于访问 Kafka 集群的 RESTful 界面。您可以使用该 API 生成和使用消息。有关更多信息（包括 API 参考文档），请参阅 [Kafka REST Proxy 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}。在 {{site.data.keyword.messagehub}} 中，仅支持二进制嵌入格式的请求和响应。不支持 Avro 和 JSON 嵌入格式。
-{: shortdesc}
+{{site.data.keyword.messagehub}} 提供 REST API 以帮助您将现有系统连接到 {{site.data.keyword.messagehub}} Kafka 集群。使用 API，您可以将 {{site.data.keyword.messagehub}} 与支持 RESTful API 的任何系统集成。
 
-如果您使用 CURL，那么您可以使用类似以下的示例来产生：
-<pre class="pre"><code>
-curl -X POST -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Content-Type: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var> -d 
- 
+REST producer API 是可缩放的 REST 接口，用于通过安全 HTTP 端点向 {{site.data.keyword.messagehub}} 生成消息。将事件数据发送到 {{site.data.keyword.messagehub}}，利用 Kafka 技术处理数据订阅源，并利用 {{site.data.keyword.messagehub}} 功能来管理数据。
 
-'
-{
-  "records": [
-    {
-      "value": "<var class="keyword varname">A base 64 encoded value string</var>"
-    }
-  ]
-}
-'
-</code></pre>
+使用 API 将现有系统连接到 {{site.data.keyword.messagehub}}。从系统创建针对 {{site.data.keyword.messagehub}} 的生成请求，包括指定消息密钥、头、以及您想要将消息写入的主题。
+
+
+## 使用 REST 生成消息 
+{: #rest_produce_messages}
+
+使用 producer API 将消息写入主题。要能够生成到主题中，您必须具有以下信息：
+
+* {{site.data.keyword.messagehub}} API 端点的 URL，包括端口号。
+* 想要向其生成内容的主题。
+* 用于提供连接到所选主题并向其生成内容的许可权的 API 密钥。
+
+您必须检索从服务实例的服务凭证对象或服务密钥连接到 API 所需的 URL 和凭证详细信息。有关创建这些对象的信息，请参阅[连接到 {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting)。
+
+<code>kafka_http_url</code> 属性中提供了 API 的端点的 URL。
+
+使用以下某个方法进行认证：
+
+* **使用基本认证进行认证：**<br/>
+    将上述对象的 <code>user</code> 和 <code>api_key</code> 属性用作用户名和密码。以 <code>Basic <base64 encoding of username:password joined by a single colon (:)></code> 形式将这些值放入 HTTP 请求的 <code>Authorization</code> 头中。
+
+* **使用不记名令牌进行认证：**<br/>
+    要使用 IBM Cloud CLI 获取令牌，请先登录到 IBM Cloud，然后运行以下命令： 
+
+    ```
+    ibmcloud iam oauth-tokens
+    ```
+    {: codeblock}
+
+    以 <code>Bearer <token></code> 形式将此令牌放在 HTTP 请求的 Authorization 头中。支持 API 密钥或 JWT 令牌。 
+
+* **使用 api_key 直接进行认证：**<br/>
+    将密钥直接用作 <code>X-Auth-Token</code> HTTP 头的值。
+
+<br/>
+以下代码显示使用 curl 发送消息的示例：
+
+```
+curl -v -X POST -H "Authorization: Basic <base64 username:password>" -H "Content-Type: text/plain" -H "Accept: application/json" -d 'test message' "<kafka_http_url>/topics/<topic_name>/records"
+```
 {: codeblock}
-<br/>
-<br/>
-如果您使用 CURL，那么您可以使用类似以下的示例来消耗：<pre class="pre"><code>
-curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var>/partitions/<var class="keyword varname">partition ID</var>/messages?offset=<var class="keyword varname">offset to start from</var>
-</code></pre>
-{: codeblock}
-
-<br/>
-<br/>
-对于 CURL，您还可以通过将以下行添加到命令行，调整 [Confluent 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.confluent.io/2.0.0/){:new_window} 中详细描述的代码示例：
-<pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
-{: codeblock}
-
-<br/>
-## 如何连接和认证
-{: #rest_connect}
-
-<!-- info was in eventstreams066.md -->
-
-<!-- Comment from Andrew
-basic introduction, definitely including health warning
--->
-为了连接到 {{site.data.keyword.messagehub}}，Kafka REST API 使用 [VCAP_SERVICES 环境变量](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf)中的 <code>api_key</code> 和 <code>kafka_rest_url</code> 凭证。
-
-要向 {{site.data.keyword.messagehub}} Kafka REST API 进行认证，您必须在请求的 X-Auth-Token 头中指定 <code>api_key</code>。
 
 
-## 如何使用 API
-{: #rest_how}
+## API 参考
+{: #rest_api_reference}
 
-<!-- info was in eventstreams097.md -->
+有关 API 的完整详细信息，请参阅 [{{site.data.keyword.messagehub}}REST Producer API 参考 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://ibm.github.io/event-streams/api/){:new_window}。
 
-{{site.data.keyword.messagehub}} Kafka REST API 样本是一个 Node.js 应用程序，它通过 Kafka REST API 连接到 {{site.data.keyword.messagehub}} 来生成和使用消息。
 
-样本代码位于 [event-streams-samples GitHub 项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 中。
 
-请遵循该项目 [README.md ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 文件中的指示信息来构建和运行样本。
+
+
+
+
+
+
+
 
 

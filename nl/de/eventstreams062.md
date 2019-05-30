@@ -33,30 +33,6 @@ Für eine Verbindung mit {{site.data.keyword.messagehub}} müssen Clients die Au
 
 Die Mindestversion des Kafka-Protokolls, die unterstützt wird, ist 0.10.
 
-<!--
-## Support summary for the official Apache Kafka client (Java)
-
-<table>
-    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
-      <tr>
-	        <th></th>
-		    <th>Standard and Enterprise Plans</th>
-		    <th></th>
-        </tr>
-	  		<tr>
-			<td>**Kafka version on cluster**</td>
-			<td>Kafka 1.1</td>
-		</tr>
-	  		<tr>
-			<td>**Supported client versions**</td>
-			<td>Kafka 1.1, or later</td>
-		</tr>
-			<td>**Authentication requirements**</td>
-			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
-		</tr>
-
-</table>
--->
 	
 ## Clients anderer Anbieter
 {: #third_party_clients}
@@ -70,7 +46,7 @@ Möglicherweise können weitere Clients anderer Anbieter, die die Mindestanforde
 
 <table id="clients_table">
     <caption>Tabelle 2. Zusammenfassung der Clientunterstützung</caption>
-     <tr>
+      <tr>
 		    <th id="client" scope="col">Client</th>
 		    <th id="language" scope="col">Sprache</th>
 			<th id="version" scope="col">Empfohlene Version</th>
@@ -84,9 +60,11 @@ Möglicherweise können weitere Clients anderer Anbieter, die die Mindestanforde
 			<td>[Apache Kafka-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>Neueste Version</td>
-			<td>0.10.2 <p> Informationen zu älteren Clients finden Sie in [Kompatibilität mit früheren Versionen](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
-			<td>[Beispiel für Java-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
-			[Beispiel für Liberty ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			<td>0.10.2 <p> Informationen zu älteren Clients finden Sie in [Kompatibilität mit früheren Versionen](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic).</p></td>
+			<td>[Beispiel für Java-Konsole
+![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
+			[Beispiel für Liberty
+![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
 			<tr>
@@ -125,12 +103,6 @@ Möglicherweise können weitere Clients anderer Anbieter, die die Mindestanforde
 ### Fußnote
 1. {: #footnote1}Hierbei handelt es sich um die früheste Version, die in kontinuierlichen Tests validiert wurde. Normalerweise ist dies ursprüngliche, innerhalb der letzten 12 Monate verfügbare Version, es kann jedoch auch eine neuere Version sein, falls signifikante Probleme bekannt sind.
 
-## Kompatibilität mit früheren Versionen - Standard-Plan
-{: #compatibility}
-
-Zur Kompatibilität mit früheren Versionen können Sie den Java-Client von Apache Kafka 0.9 mit dem Standard-Plan von {{site.data.keyword.messagehub}} verwenden. Da dieser Client eine vergleichsweise alte Version aufweist, wird jedoch von der Verwendung abgeraten. Wenn Sie diese Clientversion verwenden möchten, benötigen Sie ein zusätzliches [Anmeldemodul ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library).
-
-Bei Clientversionen vor Version 0.11 kann es zu Leistungseinbußen kommen, da für die Verbindung zu neueren Kafka-Serverversionen zusätzliche Protokollkonvertierungen erforderlich sind.
 
 <!--
 ## Unsupported clients

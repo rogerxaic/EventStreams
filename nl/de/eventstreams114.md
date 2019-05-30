@@ -134,7 +134,7 @@ Sie können einen ConsumerRebalanceListener verwenden, um Offsets per Commit man
 ## Code-Snippets
 {: #consumer_code_snippets notoc}
 
-Diese Code-Snippets befindet sich auf einer höheren Ebene, um die beteiligten Konzepte darzustellen. Komplette Beispiele finden Sie in den {{site.data.keyword.messagehub}}-Beispielen in GitHub unter https://github.com/ibm-messaging/event-streams-samples.
+Diese Code-Snippets befindet sich auf einer höheren Ebene, um die beteiligten Konzepte darzustellen. Vollständige Beispiele finden Sie in den {{site.data.keyword.messagehub}}-Beispielen in [GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples).
 
 Um eine Verbindung zu {{site.data.keyword.messagehub}} herzustellen, müssen Sie zuerst die Konfigurationseigenschaften erstellen. Alle Verbindungen zu {{site.data.keyword.messagehub}} werden mithilfe von TLS und einer Benutzer-/Kennwortauthentifizierung gesichert, sodass Sie mindestens diese Eigenschaften benötigen. Ersetzen Sie KAFKA_BROKERS_SASL, USER und PASSWORD mit Ihren eigenen Serviceberechtigungsnachweisen:
 

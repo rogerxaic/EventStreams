@@ -134,7 +134,7 @@ Puede utilizar un ConsumerRebalanceListener para confirmar desplazamientos manua
 ## Fragmentos de código
 {: #consumer_code_snippets notoc}
 
-Estos fragmentos de código tienen un nivel muy alto para ilustrar los conceptos implicados. Para ver ejemplos completos, consulte los ejemplos de {{site.data.keyword.messagehub}} en GitHub https://github.com/ibm-messaging/event-streams-samples.
+Estos fragmentos de código tienen un nivel muy alto para ilustrar los conceptos implicados. Para ver ejemplos completos, consulte los ejemplos de {{site.data.keyword.messagehub}} en [GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples).
 
 Para conectarse a {{site.data.keyword.messagehub}}, primero debe crear el conjunto de propiedades de configuración. Todas las conexiones a {{site.data.keyword.messagehub}} están protegidas mediante TLS y autenticación de usuario/contraseña, de modo que necesita como mínimo estas propiedades. Sustituya KAFKA_BROKERS_SASL, USER y PASSWORD por sus credenciales de servicio:
 

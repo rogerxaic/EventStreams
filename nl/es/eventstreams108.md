@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-08-08"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,6 +21,8 @@ subcollection: eventstreams
 {: #faqs}
 
 Respuestas a preguntas comunes acerca del servicio {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}}.
+
+Para obtener respuestas a preguntas específicas del plan Clásico, consulte [Preguntas más frecuentes sobre el plan Clásico](/docs/services/EventStreams?topic=eventstreams-faqs_classic).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -73,9 +75,26 @@ en el plan de Empresa, puede definir el valor que desee.</p>
 ## ¿Durante cuánto tiempo establece {{site.data.keyword.messagehub}} la ventana de retención de registros para el tema de desplazamientos de consumidor?
 {: #offsets }
 {: faq}
+
 {{site.data.keyword.messagehub}} retiene los desplazamientos de consumidor durante 7 días. Esto corresponde al valor de configuración de Kafka offsets.retention.minutes. 
 
 La retención de desplazamiento abarca todo el sistema y no se puede establecer en temas individuales. Todos los grupos de consumidores obtienen solo 7 días de desplazamientos almacenados, aunque utilicen un tema con una retención de registro que se ha aumentado al máximo de 30 días. 
+
+Solo puede ver el tema <code>__consumer_offsets</code> interno de Kafka en modalidad de solo lectura. 
+Se recomienda encarecidamente que no intente gestionar el tema de ninguna forma. 
+
+<!--following message retention info duplicted in eventstreams057-->
+
+## ¿Cuánto tiempo se conservan los mensajes?
+{: #messages_retained}
+
+De forma predeterminada, los mensajes se retienen un máximo de 24 horas
+en Kafka y cada partición está limitada a 1 GB. Si se alcanza 1 GB, se descartarán los mensajes más antiguos para mantenerse dentro
+del límite.
+
+Puede cambiar el límite de tiempo para la retención de mensajes cuando cree un tema utilizando la interfaz de usuario o la API de administración. El límite de tiempo es un mínimo de una hora y un máximo de 30 días.
+
+Para obtener información sobre las restricciones de los valores permitidos al crear temas utilizando un cliente Kafka o Kafka Streams, consulte [¿Cómo se utilizan las API de Kafka para crear y suprimir temas?](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin).
 
 ## ¿Cuál es el comportamiento de la disponibilidad de {{site.data.keyword.messagehub}}?
 {: #availability}
@@ -89,11 +108,6 @@ Si escribe apps de {{site.data.keyword.messagehub}}, utilice esta información p
 Como parte del funcionamiento normal de {{site.data.keyword.messagehub}}, los nodos de los clústeres de Kafka se reinician ocasionalmente.
 En algunos casos, las apps detectarán que el clúster reasigna recursos. Escriba las apps de modo que resistan estos cambios y puedan reconectarse y reintentar operaciones.
 
-### Puentes de {{site.data.keyword.messagehub}} (solo plan Estándar)
-{: #bridge_availability }
-
-Escriba sus apps para que tengan en cuenta la posibilidad de reinicio ocasional de los puentes.
-
 ## ¿Cuál es el tamaño de mensaje máximo de {{site.data.keyword.messagehub}}? 
 {: #max_message_size }
 {: faq}
@@ -106,37 +120,14 @@ El tamaño de mensaje máximo de {{site.data.keyword.messagehub}} es 1 MB, que e
 
 {{site.data.keyword.messagehub}} está configurado para proporcionar una fuerte disponibilidad y duración.
 Los siguientes valores de configuración se aplican a todos los temas y no se pueden cambiar:
-* replication.factor = 3
+* replication.factor = 3 
 * min.insync.replicas = 2
-
-## ¿Cómo funciona la facturación de {{site.data.keyword.messagehub}} en el plan Estándar? 
-{: #billing }
-{: faq}
-
-{{site.data.keyword.messagehub}} en el plan Estándar toma regularmente muestras de un recuento de temas de un usuario y {{site.data.keyword.Bluemix_notm}} registra el valor de muestra máximo cada día. {{site.data.keyword.messagehub}} factura por el número máximo de particiones simultáneas visto y por la suma de mensajes enviados y recibidos diariamente.
-
-Por ejemplo, si crea y suprime 1 tema 10 veces en un día, se le facturará por un máximo de 1 tema. Sin embargo, si crea 10 temas y los suprime, se le facturará por 0 o por 10 temas en función del momento en que se tome la muestra.
-
-{{site.data.keyword.messagehub}} factura por cada mensaje o bien por cada 64 k. Un mensaje de hasta 64 k cuenta como un mensaje facturable. Los mensajes mayores de 64 k se cuentan como el siguiente número de mensajes facturables: <code><var class="keyword varname">tamaño_mensaje</var> &divide; 64 k</code>.
-
-<!--12/04/18 - Karen: same info duplicated at messagehub057 -->
-## ¿Con cuánta frecuencia se reinicia la API REST de Kafka? 
-{: #REST_restart }
-{: faq}
-
-La API REST de Kafka se reinicia una vez al día durante un breve período de tiempo. 
-
-Durante este período, la API REST de Kafka puede estar disponible. Si esto sucede, se recomienda reintentar la solicitud. Una vez reiniciada la API REST, deberá volver a crear las instancias de consumidor de Kafka. Si este es el caso, la API REST devuelve el siguiente JSON:
-
-```'{"error_code":40403,"message":"Consumer instance not found."}'
-```
-{:screen}
 
 ## ¿Cuáles son las diferencias entre los planes Estándar de {{site.data.keyword.messagehub}} y Empresa de {{site.data.keyword.messagehub}}?
 {: #plan_compare }
 {: faq}
 
-Para encontrar más información sobre los dos planes distintos de {{site.data.keyword.messagehub}}, consulte [Elección del plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).
+Para encontrar más información sobre los distintos planes de {{site.data.keyword.messagehub}}, consulte [Elección del plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).
 
 ## ¿Cómo manejo la recuperación tras desastre?
 {: #disaster_recovery }

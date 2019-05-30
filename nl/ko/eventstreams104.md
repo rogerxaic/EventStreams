@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-04-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -65,7 +65,7 @@ Kafka 클라이언트를 0.10.2.1 이상에서 사용 중인 경우 JAAS 파일 
 여기서 USERNAME 및 PASSWORD는 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.messagehub}} **서비스 인증 정보** 탭에 있는 값입니다.
 
 <code>sasl.jaas.config</code>를 사용하는 경우 동일한 JVM에서 실행 중인 클라이언트가 다른 인증 정보를 사용할 수 있습니다. 자세한 정보는
-[Kafka 클라이언트 구성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}을 참조하십시오 
+[Kafka 클라이언트 구성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation/#security_sasl_plain_clientconfig){:new_window}을 참조하십시오
 
 초기 Kafka 클라이언트에서 인증 정보를 지정하려면 JAAS 구성 파일을 사용해야 합니다. 이 메커니즘의 편의성이 부족하므로, 대신 <code>sasl.jaas.config</code> 특성을 사용하는 것이 좋습니다.
 
@@ -83,7 +83,10 @@ Java 클라이언트를 사용 중인 경우에는
 0.9.X 버전은 최신 버전으로 업그레이드하는 것이
 좋습니다. [https://kafka.apache.org/downloads ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://kafka.apache.org/downloads){:new_window}에서 Kafka 클라이언트를 다운로드할 수있습니다.
 
-0.9.X 클라이언트 사용의 영향에 대한 정보는 [역호환성](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)을 참조하십시오.
+<!--
+For information about the implications of using a 0.9.X client, see 
+[Backward compatibility](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+-->
 
 
 
@@ -94,7 +97,6 @@ Java 클라이언트를 사용 중인 경우에는
 다음 단계를 완료하십시오.
 
 1. JAAS 파일을 삭제하십시오. JVM 특성 java.security.auth.login.config=<PATH TO JAAS>는 더 이상 필요하지 않다는 점을 유의하십시오.
-2. 0.9.X로부터 마이그레이션하는 경우에는 {{site.data.keyword.messagehub}} 로그인 jar 모듈을 삭제하십시오.
 2. 다음 항목을 클라이언트의 특성에 추가하십시오.
     ```
 	sasl.mechanism=PLAIN
@@ -102,25 +104,6 @@ Java 클라이언트를 사용 중인 경우에는
 	```
 
 	여기서 USERNAME 및 PASSWORD는 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.messagehub}} **서비스 인증 정보** 탭에 있는 값입니다.
-	
-	
 
-### Kafka 클라이언트를 0.9.X에서 0.10.0.X 또는 0.10.1.X로 마이그레이션
 
-다음 단계를 완료하십시오.
 
-1. {{site.data.keyword.messagehub}} 로그인 jar 모듈을 삭제하십시오.
-2. <code>jaas.conf</code> 파일을 다음으로 변경하십시오.
-    ```
-        KafkaClient {
-          org.apache.kafka.common.security.plain.PlainLoginModule required
-          serviceName="kafka"
-            username="USERNAME"
-            password="PASSWORD";
-        };
-    ```
-    {: codeblock}
-
-	여기서 USERNAME 및 PASSWORD는 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.messagehub}} **서비스 인증 정보** 탭에 있는 값입니다.
-	
-3. 다음 행을 이용자 및 제작자 특성에 추가하십시오. <code>sasl.mechanism=PLAIN</code>

@@ -20,7 +20,6 @@ subcollection: eventstreams
 # Watson IoT Platform 网桥
 {: #consuming_messages_watson}
 
-
 {{site.data.keyword.iot_full}} 提供了一个受管网桥，支持您创建与 {{site.data.keyword.messagehub_full}} 的单向链接。
 {: shortdesc}
 

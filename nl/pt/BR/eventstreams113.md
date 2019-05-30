@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,10 +28,25 @@ O Kafka Connect pode ser executado em modo independente ou distribuído. O modo 
 ## Configuração do trabalhador independente
 {: #standalone_worker notoc}
 
-Deve-se fornecer os servidores de autoinicialização e as informações de credenciais SASL no arquivo de propriedades do trabalhador que você fornece ao iniciar um trabalhador independente do Kafka Connect.
-
 O trabalhador independente não usa nenhum tópico interno. Em vez disso, ele usa um arquivo
 para armazenar informações de compensação.
+
+Deve-se fornecer os servidores de autoinicialização e as informações de credenciais SASL no arquivo de propriedades do trabalhador que você fornece ao iniciar um trabalhador independente do Kafka Connect. O exemplo a seguir lista as propriedades que devem ser fornecidas em seu arquivo de propriedades:
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule username necessário="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+Substitua KAFKA_BROKERS_SASL, USER e PASSWORD pelos valores de sua guia {{site.data.keyword.messagehub}} **Credenciais de serviço** no console do {{site.data.keyword.Bluemix_notm}}.
 
 ### Conector de origem
 {: #source_connector notoc }

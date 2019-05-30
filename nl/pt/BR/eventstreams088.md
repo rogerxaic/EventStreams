@@ -16,14 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Vinculando-se a outros serviços usando pontes
+# Vinculando-se a outros serviços usando as pontes no plano Clássico 
 {: #bridges}
 
-**As pontes do {{site.data.keyword.messagehub}} estão disponíveis como parte somente do plano Standard.**
+As ** pontes do{{site.data.keyword.messagehub}} estão disponíveis somente como parte do plano Clássico.**
 <br/>
 
-O plano Standard do {{site.data.keyword.messagehub}} também suporta pontes para uma seleção de outros
-sistemas. Pontes são links unidirecionais entre o {{site.data.keyword.messagehub}} e outro serviço. As pontes permitem que os dados sejam lidos do {{site.data.keyword.messagehub}} e gravados em outro serviço ou que sejam lidos de outro serviço e gravados no {{site.data.keyword.messagehub}}. Uma ponte pode tomar mensagens do outro sistema e
+O plano Clássico do {{site.data.keyword.messagehub}} também suporta pontes para uma seleção de outros sistemas. Pontes são links unidirecionais entre o {{site.data.keyword.messagehub}} e outro serviço. As pontes permitem que os dados sejam lidos do {{site.data.keyword.messagehub}} e gravados em outro serviço ou que sejam lidos de outro serviço e gravados no {{site.data.keyword.messagehub}}. Uma ponte pode tomar mensagens do outro sistema e
 publicá-las em um tópico ou consumir mensagens de um tópico e enviá-las para o outro sistema. Dessa maneira, é
 possível usar o {{site.data.keyword.messagehub}} para integração com outros sistemas sem gravar
 código.
@@ -45,7 +44,7 @@ Talvez você ache as pontes úteis nos dois cenários comuns a seguir:
 
 * Fornecemos os seguintes tipos de ponte: 
   - [Ponte do MQ](/docs/services/EventStreams?topic=eventstreams-mq_bridge), que seleciona dados da mensagem do {{site.data.keyword.IBM}} MQ e os transfere para um tópico no {{site.data.keyword.messagehub}}. Pretendemos oferecer suporte para uma ampla variedade de pontes futuramente.
-  - [Ponte do Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), que transfere dados do {{site.data.keyword.messagehub}} para uma instância do [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} de serviço. 
+  - [Ponte do Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), que transfere dados do {{site.data.keyword.messagehub}} para uma instância do [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} de serviço. 
   - A [ponte do {{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge) foi descontinuada em 1º de agosto de 2018. Para obter mais informações, consulte o [comunicado de descontinuação: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
 * Atualmente, as pontes estão disponíveis em todos os ambientes públicos do {{site.data.keyword.Bluemix_notm}}. As pontes não estão disponíveis no {{site.data.keyword.Bluemix_short}} Dedicated.
 * É possível administrar as pontes nos dois modos a seguir:

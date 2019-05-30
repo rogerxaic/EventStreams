@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-08-14"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,13 +21,13 @@ subcollection: eventstreams
 
 <!-- Name your file `at-events.md` and include it in the Reference nav group in your toc file. -->
 
-# Eventi {{site.data.keyword.cloudaccesstrailshort}} (piano Enterprise)
+# Eventi {{site.data.keyword.cloudaccesstrailshort}}  
 {: #at_events}
 
-Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.messagehub}} nel piano Enterprise in {{site.data.keyword.Bluemix}}. 
+Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.messagehub}} nei piani Standard e Enterprise in {{site.data.keyword.Bluemix}}.
 {: shortdesc}
 
-Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attività avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla){:new_window}.
+Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attività avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}.
 
 <!-- You can create different sections to group events by area. -->
 
@@ -36,12 +36,12 @@ Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit�
 
 <!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
 
-{{site.data.keyword.messagehub}} nel piano Enterprise genera automaticamente gli eventi in modo che puoi tenere traccia dell'attività sul tuo servizio.
+{{site.data.keyword.messagehub}} nei piani Standard e Enterprise genera automaticamente gli eventi in modo che puoi tenere traccia dell'attività sul tuo servizio.
 
 | Azione | Descrizione |
 |:-------|:------------|
-| messagehub.topic.create | Un evento viene creato quando crei un argomento|
-| messagehub.topic.delete | Un evento viene creato quando elimini un argomento|
+| event-streams.topic.create | Un evento viene creato quando crei un argomento|
+| event-streams.topic.delete | Un evento viene creato quando elimini un argomento|
 {: caption="Tabella 1. Eventi {{site.data.keyword.messagehub}}" caption-side="top"}
 
 ## Dove visualizzare gli eventi

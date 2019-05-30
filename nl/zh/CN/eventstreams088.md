@@ -16,13 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 使用网桥链接到其他服务
+# 在经典套餐上使用网桥链接到其他服务 
 {: #bridges}
 
-** {{site.data.keyword.messagehub}} 网桥仅在标准套餐中提供。**
+** {{site.data.keyword.messagehub}} 网桥仅在经典套餐上提供。**
 <br/>
 
-{{site.data.keyword.messagehub}} 标准套餐还支持用于连接其他一些系统的网桥。网桥是 {{site.data.keyword.messagehub}} 与其他服务之间的单向链接。网桥支持从 {{site.data.keyword.messagehub}} 读取数据并写入其他服务，或从其他服务读取数据并写入 {{site.data.keyword.messagehub}}。
+{{site.data.keyword.messagehub}} 经典套餐还支持用于连接其他一些系统的网桥。网桥是 {{site.data.keyword.messagehub}} 与其他服务之间的单向链接。网桥支持从 {{site.data.keyword.messagehub}} 读取数据并写入其他服务，或从其他服务读取数据并写入 {{site.data.keyword.messagehub}}。
 
 网桥可以获取来自其他系统的消息，并将其发布到主题，或者使用主题中的消息，并将其发送到其他系统。通过这种方式，可以使用 {{site.data.keyword.messagehub}} 来与其他系统集成，而无需编写代码。
 {:shortdesc}
@@ -43,7 +43,7 @@ subcollection: eventstreams
 
 * 我们提供了以下类型的网桥： 
   - [MQ 网桥](/docs/services/EventStreams?topic=eventstreams-mq_bridge)，用于获取来自 {{site.data.keyword.IBM}} MQ 的消息数据，并将其传输到 {{site.data.keyword.messagehub}} 中的主题。未来，我们打算支持更广泛的网桥。
-  - [Cloud Object Storage 网桥](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)，用于将 {{site.data.keyword.messagehub}} 数据传输到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} 服务的实例。 
+  - [Cloud Object Storage 网桥](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)，用于将 {{site.data.keyword.messagehub}} 数据传输到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 服务的实例。 
   - [{{site.data.keyword.objectstorageshort}} 网桥](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge)从 2018 年 8 月 1 日起已弃用。有关更多信息，请参阅[弃用声明：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。
 * 目前，网桥在所有 {{site.data.keyword.Bluemix_notm}} Public 环境中可用。但网桥在 {{site.data.keyword.Bluemix_short}} Dedicated 中不可用。
 * 可以通过以下两种方式来管理网桥：

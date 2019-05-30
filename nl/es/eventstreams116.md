@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-12"
+lastupdated: "2019-05-07"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # Utilización de las herramientas de la consola de Kafka con {{site.data.keyword.messagehub}}
@@ -23,7 +24,7 @@ subcollection: eventstreams
 Apache Kafka se suministra con varias herramientas de consola para operaciones sencillas de administración y mensajería. Puede utilizar muchas de ellas con {{site.data.keyword.messagehub}}, aunque {{site.data.keyword.messagehub}} no permite la conexión con su clúster de ZooKeeper. A medida que Kafka se ha ido desarrollando, muchas de las herramientas que antes requerían conexión con ZooKeeper ya no la necesitan.
 {: shortdesc}
 
-Puede encontrar estas herramientas de consola en el directorio <code>bin</code> de la descarga de Kafka. Por ejemplo, [Cliente Apache Kafka 1.1.0 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://archive.apache.org/dist/kafka/1.1.0/kafka-1.1.0-src.tgz){:new_window}.
+Puede encontrar estas herramientas de consola en el directorio <code>bin</code> de la descarga de Kafka. Puede descargar un cliente desde [Descargas de Apache Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/downloads){:new_window}.
 
 Para proporcionar las credenciales de SASL a estas herramientas, cree un archivo de propiedades basado en el siguiente ejemplo:
 

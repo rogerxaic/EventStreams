@@ -20,7 +20,7 @@ subcollection: eventstreams
 {: #apache_kafka}
 
 ![Diagrama de la arquitectura de Kafka](kafka_overview.png "Diagrama que muestra una arquitectura de Kafka. Un productor introduce datos en un tema de Kafka sobre 3 particiones y luego los consumidores se suscriben a los mensajes.")
-{: shortdesc}
+
 
 La siguiente lista define algunos conceptos de Apache Kafka:
 
@@ -45,7 +45,7 @@ La siguiente lista define algunos conceptos de Apache Kafka:
 <dd>Cada tema contiene una o más particiones. Cada partición es una lista ordenada de mensajes. Se da a cada uno de los mensajes de una partición un número creciente monotónicamente denominado desplazamiento. 
 <p>Cada partición tiene un servidor en el clúster que actúa como líder de la partición y otros servidores que actúan como seguidores.<p>
 <p>Si un tema tiene más de una partición, permite a los datos alimentarse en paralelo para aumentar el rendimiento distribuyendo las particiones en el clúster. El número de particiones también influye en el equilibrio de carga de trabajo entre los consumidores.</p>
-<p>Para obtener más información, consulte [Liderazgo de particiones](/docs/services/EventStreams?topic=eventstreams-partition_leadership).</dd>
+<p>Para obtener más información, consulte [Liderazgo de particiones](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership).</dd>
 <dt>Productor</dt>
 <dd>Un proceso que publica secuencias de mensajes en temas Kafka. Un productor puede publicar en uno o más temas y puede elegir opcionalmente la partición que almacena los datos.<br/></dd>
 <br/>
@@ -62,9 +62,9 @@ La siguiente lista define algunos conceptos de Apache Kafka:
 </dl>
 
 Para saber más, consulte la siguiente información:
-- [Generación de mensajes](/docs/services/EventStreams?topic=eventstreams-producing_messages)
-- [Consumo de mensajes](/docs/services/EventStreams?topic=eventstreams-consuming_messages) 
-- [Liderazgo de particiones](/docs/services/EventStreams?topic=eventstreams-partition_leadership) 
+- [Generación de mensajes](/docs/services/EventStreams?topic=eventstreams-producing_messages#producing_messages)
+- [Consumo de mensajes](/docs/services/EventStreams?topic=eventstreams-consuming_messages#consuming_messages) 
+- [Liderazgo de particiones](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership) 
 - [Documentación de Apache Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/documentation.html){:new_window} 
 
 

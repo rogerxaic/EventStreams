@@ -16,14 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Liaison à d'autres services à l'aide de ponts
+# Liaison à d'autres services à l'aide des ponts dans le plan Classic 
 {: #bridges}
 
-**Des ponts {{site.data.keyword.messagehub}} sont disponibles dans le cadre du plan Standard uniquement.**
+** Les ponts {{site.data.keyword.messagehub}} sont uniquement disponibles dans le plan Classic.**
 <br/>
 
-Le plan Standard {{site.data.keyword.messagehub}} prend également
-en charge des ponts vers une sélection d'autres systèmes. Les ponts sont des liens unidirectionnels entre {{site.data.keyword.messagehub}} et un autre service. Ils
+Le plan Classic de {{site.data.keyword.messagehub}} prend également en charge les ponts vers une sélection d'autres systèmes. Les ponts sont des liens unidirectionnels entre {{site.data.keyword.messagehub}} et un autre service. Ils
 permettent la lecture de données à partir de {{site.data.keyword.messagehub}} et leur écriture dans un autre service, ou la lecture de données à partir d'un autre service
 et leur écriture dans {{site.data.keyword.messagehub}}. Il
 peut prendre des messages provenant d'un autre système et les publier sur un sujet,
@@ -47,7 +46,7 @@ Les ponts sont utiles dans les deux cas courants suivants :
 
 * Les types de pont suivants sont fournis : 
   - Le [pont MQ](/docs/services/EventStreams?topic=eventstreams-mq_bridge), qui prend les messages depuis {{site.data.keyword.IBM}} MQ et les transfère vers un sujet dans {{site.data.keyword.messagehub}}. La prise en charge d'une gamme plus vaste de ponts est prévue à l'avenir.
-  - Le [pont Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), qui transfère des données {{site.data.keyword.messagehub}} vers une instance du service [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. 
+  - Le [pont Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), qui transfère des données {{site.data.keyword.messagehub}} vers une instance du service [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. 
   - Le pont [{{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge) a été déprécié le 1er août 2018. Pour en savoir plus, veuillez consulter [l'annonce d'obsolescence : {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
 * Actuellement, les ponts sont disponibles dans tous les environnements {{site.data.keyword.Bluemix_notm}} Public. Les ponts ne sont pas disponibles dans {{site.data.keyword.Bluemix_short}} Dedicated.
 * Vous pouvez administrez les ponts des deux manières suivantes :

@@ -33,30 +33,6 @@ Para conectarse a {{site.data.keyword.messagehub}}, los clientes deben ofrecer s
 
 El protocolo Kafka mínimo al que damos soporte es 0.10.
 
-<!--
-## Support summary for the official Apache Kafka client (Java)
-
-<table>
-    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
-      <tr>
-	        <th></th>
-		    <th>Standard and Enterprise Plans</th>
-		    <th></th>
-        </tr>
-	  		<tr>
-			<td>**Kafka version on cluster**</td>
-			<td>Kafka 1.1</td>
-		</tr>
-	  		<tr>
-			<td>**Supported client versions**</td>
-			<td>Kafka 1.1, or later</td>
-		</tr>
-			<td>**Authentication requirements**</td>
-			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
-		</tr>
-
-</table>
--->
 	
 ## Clientes de terceros
 {: #third_party_clients}
@@ -70,7 +46,7 @@ Otros clientes de terceros que ofrecen soporte al conjunto mínimo de requisitos
 
 <table id="clients_table">
     <caption>Tabla 2. Resumen del soporte de cliente</caption>
-     <tr>
+      <tr>
 		    <th id="client" scope="col">Cliente</th>
 		    <th id="language" scope="col">Idioma</th>
 			<th id="version" scope="col">Versión recomendada</th>
@@ -84,8 +60,8 @@ Otros clientes de terceros que ofrecen soporte al conjunto mínimo de requisitos
 			<td>[Cliente Apache Kafka ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>Última</td>
-			<td>0.10.2 <p> Para obtener información sobre clientes más antiguos, consulte la [compatibilidad con versiones anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
-			<td>[Ejemplo de consola Java ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
+			<td>0.10.2 <p> Para obtener información sobre clientes más antiguos, consulte la [compatibilidad con versiones anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic).</p></td>
+			<td>[Ejemplo de consola de Java ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Ejemplo de Liberty ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
@@ -125,12 +101,6 @@ Otros clientes de terceros que ofrecen soporte al conjunto mínimo de requisitos
 ### Nota a pie de página
 1. {: #footnote1}Esta versión es la más antigua que se ha validado en las pruebas continuas. Normalmente, se trata de la versión inicial disponible dentro de los últimos 12 meses, pero puede ser más nueva si existen problemas conocidos.
 
-## Compatibilidad con versiones anteriores - Plan Estándar
-{: #compatibility}
-
-Para la compatibilidad con versiones anteriores, puede utilizar el cliente Java Apache Kafka 0.9 con el plan Estándar de {{site.data.keyword.messagehub}}. Sin embargo, debido a la antigüedad de este cliente, no se recomienda su uso. Si decide utilizar esta versión del cliente, necesita un [módulo de inicio de sesión ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library) adicional.
-
-Las versiones del cliente anteriores a la 0.11 pueden experimentar un rendimiento degradado debido a las conversiones de protocolo adicionales que se requieren para conectarse a las versiones más nuevas del servidor de Kafka.
 
 <!--
 ## Unsupported clients

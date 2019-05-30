@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 <!-- 
-17/10/17 - Karen: following info duplicated at messagehub108
+17/10/17 - Karen: following info duplicated at eventstreams108
  -->
 
 如果使用的是 0.11 或更高版本的 Kafka 客户机，或者 0.10.2.0 或更高版本的 Kafka Streams，那么可以使用 API 来创建和删除主题。我们已经对创建主题时允许使用的设置施加了一些限制。当前，只能修改以下设置：

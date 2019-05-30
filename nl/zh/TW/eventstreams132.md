@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-05-09"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,17 +15,30 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# {{site.data.keyword.messagehub}} 可用性（企業方案）的服務水準合約 (SLA)
+# {{site.data.keyword.messagehub}} 可用性的服務水準合約 (SLA)  
 {: #sla}
 
-{{site.data.keyword.messagehub}} 服務在企業方案提供 99.95% 的可用性。如需 {{site.data.keyword.Bluemix}} 的 SLA 相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} service description ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
+## 標準方案
+在標準方案上提供的 {{site.data.keyword.messagehub}} 服務的可用性為 99.95%。如需 {{site.data.keyword.Bluemix}} 中高可用性服務的 SLA 相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} service description ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
 
-## 99.95% 可用性代表什麼意義？
-可用性是指應用程式產生及耗用 Kafka 主題之訊息的能力。
+
+## 企業方案
+在企業方案上提供作為高可用性為公用環境的 {{site.data.keyword.messagehub}} 服務的可用性為 99.95%。如需 {{site.data.keyword.Bluemix}} 中高可用性服務的 SLA 相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} service description ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
+
+## 經典方案
+在經典方案上提供的 {{site.data.keyword.messagehub}} 服務的可用性為 99.5%。如需 {{site.data.keyword.Bluemix}} 的 SLA 相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} service description ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}。
+
+<!--
+## What does 99.95% availability mean?
+Availability refers to the ability of applications to produce and consume messages from Kafka topics.
+-->
 
 ## 如何測量？
-服務實例持續受到效能、錯誤率及其對合成作業之回應的監視。運作中斷會被記錄下來。
+服務實例持續受到效能、錯誤率及其對合成作業之回應的監視。運作中斷會被記錄下來。如需相關資訊，請參閱 [Event Streams 的服務狀態 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/status?component=messagehub&selected=status){:new_window}。
+
+可用性是指應用程式產生及耗用 Kafka 主題之訊息的能力。
 
 ## 達到這樣的可用性需要考量什麼？
 從應用程式的角度而言，若要達到高層次的可用性，您應該考量[連線功能](/docs/services/EventStreams?topic=eventstreams-sla#connectivity)、[傳輸量](/docs/services/EventStreams?topic=eventstreams-sla#throughput)及[訊息的一致性及延續性](/docs/services/EventStreams?topic=eventstreams-sla#message_consistency)。使用者負責設計應用程式以便使他們企業的這三個元素最佳化。
@@ -48,9 +61,12 @@ Kafka 用戶端提供重新連接邏輯，但您必須明確地為生產者啟�
 
 傳輸量會表達為在叢集中可以傳送及接收的每秒位元組數。
 
-**建議**<br/>
-每秒 40 MB，尖峰上限為每秒 90 MB。<br/>
-建議的數字是根據一般工作負載，並考量作業動作可能的影響，例如內部更新或失敗模式，像是可用性區域的遺失。例如，具有小型有效負載（少於 10 K）的訊息。如果平均傳輸量超出此數字，您可能會在這些情況下遇到效能的損失。
+**標準方案的具體指引資訊**<br/>
+如需傳輸量指引資訊，請參閱[限制和配額 - 標準](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas#standard_throughput)。 
+
+**企業方案的具體指引資訊**<br/>
+
+如需傳輸量指引資訊，請參閱[限制和配額 - 企業](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#enterprise_throughput)。 
 
 **測量**<br/>
 建議您檢測應用程式，以便知道它們的執行情況。例如，傳送及接收的訊息數目、訊息大小，以及回覆碼。瞭解應用程式的用量有助於您適當地配置其資源，例如主題上的訊息保留時間。

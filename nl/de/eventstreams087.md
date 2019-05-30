@@ -19,7 +19,7 @@ subcollection: eventstreams
 # Geeignete API auswählen (Plan "Standard")
 {: #choose_api}
 
-{{site.data.keyword.messagehub}} unterstützt drei APIs beim Plan "Standard". Die nachfolgenden Informationen sollen Ihnen helfen, die geeignete API für Ihre Zwecke auszuwählen.
+{{site.data.keyword.messagehub}} unterstützt drei APIs beim Plan "Standard". Die nachfolgenden Informationen sollen Ihnen helfen, die geeignete API für Ihre Zwecke auszuwählen:
 {: shortdesc}
 
 ## Gründe für die Verwendung der Kafka-API

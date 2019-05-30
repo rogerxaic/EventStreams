@@ -19,7 +19,7 @@ subcollection: eventstreams
 # Scelta tra le tre API (piano Standard)
 {: #choose_api}
 
-{{site.data.keyword.messagehub}} supporta tre API nel piano Standard. Ecco alcune informazioni per aiutarti a scegliere quella più appropriata.
+{{site.data.keyword.messagehub}} supporta tre API nel piano Standard. Ecco alcune informazioni per aiutarti a scegliere quella più appropriata:
 {: shortdesc}
 
 ## Perché utilizzare l'API Kafka?

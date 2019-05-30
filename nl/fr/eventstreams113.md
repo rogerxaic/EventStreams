@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2017-11-02"
+lastupdated: "2019-05-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -28,9 +28,24 @@ Kafka Connect peut s'exécuter en mode autonome ou distribué. Le mode autonome 
 ## Configuration d'un agent autonome
 {: #standalone_worker notoc}
 
-Vous devez indiquer les serveurs d'amorce et les données d'identification SASL dans le fichier de propriétés de l'agent que vous fournissez lorsque vous démarrez un agent autonome Kafka Connect.
-
 L'agent autonome n'utilise pas de sujet interne. A la place, il utilise un fichier pour stocker les informations de décalage.
+
+Vous devez indiquer les serveurs d'amorce et les données d'identification SASL dans le fichier de propriétés de l'agent que vous fournissez lorsque vous démarrez un agent autonome Kafka Connect. L'exemple suivant répertorie les propriétés que vous devez fournir dans votre fichier de propriétés :
+
+<pre>
+<code>
+  bootstrap.servers=KAFKA_BROKERS_SASL
+  sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="USER" password="PASSWORD";
+  security.protocol=SASL_SSL
+  sasl.mechanism=PLAIN
+  ssl.protocol=TLSv1.2
+  ssl.enabled.protocols=TLSv1.2
+  ssl.endpoint.identification.algorithm=HTTPS
+</code>
+</pre>
+{:codeblock}
+
+Remplacez KAFKA_BROKERS_SASL, USER et PASSWORD par les valeurs issues de l'onglet **Données d'identification pour le service** de {{site.data.keyword.messagehub}} dans la console {{site.data.keyword.Bluemix_notm}}.
 
 ### Connecteur source
 {: #source_connector notoc }

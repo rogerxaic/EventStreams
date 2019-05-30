@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-17"
+lastupdated: "2019-04-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,9 +15,11 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
-# {{site.data.keyword.messagehub}} 팀에 문제점 보고 - 엔터프라이즈 플랜
+# {{site.data.keyword.messagehub}} 팀에 문제점 보고 - 표준 및 엔터프라이즈 플랜
 {: #report_problem_enterprise}
+
 
 {{site.data.keyword.messagehub}}에 문제점이 생긴 경우, [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status?selected=status){:new_window}를 우선 확인하십시오.
 {: shortdesc}
@@ -25,9 +27,7 @@ subcollection: eventstreams
 {{site.data.keyword.messagehub}} 팀의 도움이 필요한 경우에는 다음 정보를 모두 수집하십시오. 미리 제공할 수 있는 정보가 많을수록 팀에서 문제점에 대해 더 효과적으로 도움을 줄 수 있습니다.
 {:shortdesc}
 
-1. 사용 중인 {{site.data.keyword.messagehub}} 서비스의 CRN ID는 무엇입니까?  이 ID는 서비스를
-   클릭한 후 전체 {{site.data.keyword.Bluemix_notm}} 콘솔 URL을 붙여넣거나,
-   다음 CLI 명령의 출력을 붙여넣어 제공할 수 있습니다.<br/>
+1. 사용 중인 {{site.data.keyword.messagehub}} 서비스의 CRN ID는 무엇입니까?  서비스를 클릭한 후 전체 {{site.data.keyword.Bluemix_notm}} 콘솔 URL을 붙여넣거나 다음 CLI 명령의 출력을 붙여넣어 이 ID를 제공할 수 있습니다.<br/>
    <pre class="pre">
    ibmcloud resource service-instance NAME
    </pre>

@@ -16,14 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 브릿지를 사용하여 다른 서비스에 링크
+# 클래식 플랜에서 브릿지를 사용하여 다른 서비스에 링크 
 {: #bridges}
 
-** {{site.data.keyword.messagehub}} 브릿지는 표준 플랜의 일부로만 사용 가능합니다.**
+** {{site.data.keyword.messagehub}} 브릿지는 클래식 플랜의 일부로만 사용 가능합니다.**
 <br/>
 
-{{site.data.keyword.messagehub}} 표준 플랜은 다른 시스템의 선택사항에 대한
-브릿지를 지원하기도 합니다. 브릿지는 {{site.data.keyword.messagehub}} 및 다른 서비스 사이의 단방향 링크입니다. 브릿지는
+또한 {{site.data.keyword.messagehub}} 클래식 플랜은 다른 시스템의 선택사항에 대한 브릿지를 지원합니다. 브릿지는 {{site.data.keyword.messagehub}} 및 다른 서비스 사이의 단방향 링크입니다. 브릿지는
 데이터를 {{site.data.keyword.messagehub}}에서 읽고 다른 서비스에
 쓰도록 허용하거나 데이터를 다른 서비스에서 읽고 {{site.data.keyword.messagehub}}에 쓰도록 허용합니다. 브릿지는 다른 시스템에서 메시지를 가져와서 그 메시지를 토픽에 공개하거나
 토픽에서 메시지를 이용해서 그 메시지를 다른 시스템에 보낼 수 있습니다. 이런 식으로 {{site.data.keyword.messagehub}}를 사용하여 코드를 작성하지 않고 다른 시스템과 통합할 수 있습니다.
@@ -45,7 +44,7 @@ subcollection: eventstreams
 
 * 다음 유형의 브릿지를 제공합니다. 
   - [MQ 브릿지](/docs/services/EventStreams?topic=eventstreams-mq_bridge)는 {{site.data.keyword.IBM}} MQ에서 메시지 데이터를 택해서 {{site.data.keyword.messagehub}}의 토픽에 전송합니다. 향후에는 더 광범위한 범위의 브릿지를 지원할 계획입니다.
-  - [Cloud Object Storage 브릿지](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)는 {{site.data.keyword.messagehub}} 데이터를 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window} 서비스의 인스턴스로 전송합니다. 
+  - [Cloud Object Storage 브릿지](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)는 {{site.data.keyword.messagehub}} 데이터를 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 서비스의 인스턴스로 전송합니다. 
   - [{{site.data.keyword.objectstorageshort}} 브릿지](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge)는 2018년 8월 1일부터 더 이상 사용되지 않습니다. 자세한 정보는 [사용 중단 공지사항: {{site.data.keyword.objectstorageshort}} OpenStack Swift(PaaS) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}를 참조하십시오.
 * 현재 브릿지는 모든 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에서 사용 가능합니다. 브릿지는 {{site.data.keyword.Bluemix_short}} 데디케이티드에서는 사용할 수 없습니다.
 * 다음 두 가지 방법으로 브릿지를 관리할 수 있습니다.

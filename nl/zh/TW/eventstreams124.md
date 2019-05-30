@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-07-04"
+lastupdated: "2019-05-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
+{:important: .important}
 
-# 管理對 {{site.data.keyword.messagehub}} 資源的存取（企業方案）
+# 管理對 {{site.data.keyword.messagehub}} 資源的存取權 
 {: #security }
 
 您可以用精細的方式保護 {{site.data.keyword.messagehub}} 資源，以管理您要授與每位使用者對每項資源的存取權。
 {: shortdesc}
+
+變更 IAM 原則和許可權時，有時候基礎服務需要幾分鐘後才能反映出來。
+{: important}
 
 ## 我可以保護什麼？
 
@@ -79,12 +84,12 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |容許應用程式連接至叢集|資源類型：<code>cluster</code>   |不適用|不適用|
 |容許應用程式產生訊息至任何主題|資源類型：<code>cluster</code>   |資源類型：<code>topic</code>   |不適用|
 |容許應用程式產生訊息至特定主題|資源類型：<code>cluster</code>   |資源類型：<code>topic</code>   <br/>資源 ID：<var class="keyword varname">name_of_topic</var>      |不適用|
-|容許應用程式連接至任何主題，以及從任何主題取用（無消費者群組）|資源類型：<code>cluster</code>   <br/>資源類型：<code>topic</code>   |資源類型：<code>topic</code>   |不適用|
+|容許應用程式連接至任何主題，以及從任何主題取用（無消費者群組）|資源類型：<code>cluster</code>   <br/>資源類型：<code>topic</code>   |不適用|不適用|
 |容許應用程式連接至特定主題，以及從特定主題取用（無消費者群組）|資源類型：<code>cluster</code>   <br/>資源類型：<code>topic</code>   <br/>資源 ID：<var class="keyword varname">name_of_topic</var>      |不適用|不適用|
 |容許應用程式取用主題（消費者群組）|資源類型：<code>cluster</code>   <br/>資源類型：<code>topic</code>   <br/> 資源類型：<code>group</code>   |不適用|不適用|
 |容許應用程式以交易方式產生訊息至特定主題|資源類型：<code>cluster</code>   <br/> 資源類型：<code>group</code>   |資源類型：<code>topic</code>   <br/>資源 ID：<var class="keyword varname">name_of_topic</var>      <br/>資源類型：<code>txnid</code>   |不適用|
 |刪除消費者群組|資源類型：<code>cluster</code>   |不適用|資源類型：<code>group</code>   <br/>資源 ID：<var class="keyword varname">group_ID</var>      |
-|使用 Streams |資源類型：<code>cluster</code>   </br>資源類型：<code>group</code>   |不適用|資源類型：<code>topic</code>   |
+|使用 Streams |資源類型：<code>cluster</code></br> 資源類型：<code>group</code>|不適用|資源類型：<code>topic</code>   |
 
 如需 IAM 的相關資訊，請參閱 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)。
 

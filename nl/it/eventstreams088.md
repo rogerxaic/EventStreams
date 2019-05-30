@@ -16,13 +16,13 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Collegamento ad altri servizi utilizzando i bridge
+# Collegamento ad altri servizi utilizzando i bridge sul piano Classic 
 {: #bridges}
 
-I bridge ** {{site.data.keyword.messagehub}} sono disponibili solo come parte del piano Standard.**
+I bridge ** {{site.data.keyword.messagehub}} sono disponibili solo come parte del piano Classic.**
 <br/>
 
-Il piano {{site.data.keyword.messagehub}} Standard supporta anche i bridge a una selezione di altri sistemi. I bridge sono dei link unidirezionali tra {{site.data.keyword.messagehub}} e un altro servizio. I bridge consentono
+Il piano {{site.data.keyword.messagehub}} Classic supporta anche i bridge a una selezione di altri sistemi. I bridge sono dei link unidirezionali tra {{site.data.keyword.messagehub}} e un altro servizio. I bridge consentono
 di leggere i dati da {{site.data.keyword.messagehub}} e di scriverli in
 un altro servizio o di leggere i dati da un servizio e di scriverli in {{site.data.keyword.messagehub}}. Un bridge può prendere i messaggi dall'altro sistema e pubblicarli su un argomento o consumare
 i messaggi da un argomento e inviarli all'altro sistema. In questo modo, puoi utilizzare {{site.data.keyword.messagehub}} per l'integrazione con altri sistemi senza dover scrivere il codice.
@@ -44,7 +44,7 @@ Potresti trovare i bridge particolarmente utili nei seguenti due scenari comuni:
 
 * Forniamo i seguenti tipi di bridge: 
   - [Bridge MQ](/docs/services/EventStreams?topic=eventstreams-mq_bridge), che prende i dati dei messaggi da {{site.data.keyword.IBM}} MQ e li trasferisce in un argomento in {{site.data.keyword.messagehub}}. Abbiamo intenzione di supportare una gamma di bridge più ampia in futuro.
-  - [Bridge Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), che trasferisce i dati {{site.data.keyword.messagehub}} a un'istanza del servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. 
+  - [Bridge Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge), che trasferisce i dati {{site.data.keyword.messagehub}} a un'istanza del servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. 
   - Il [Bridge {{site.data.keyword.objectstorageshort}}](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge) è diventato obsoleto dal primo agosto 2018. Per ulteriori informazioni, vedi l'[annuncio di funzionalità deprecata: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}.
 * Attualmente, i bridge sono disponibili in tutti gli ambienti {{site.data.keyword.Bluemix_notm}} pubblici. I bridge non sono disponibili in {{site.data.keyword.Bluemix_short}} dedicato.
 * Puoi amministrare i bridge nei seguenti due modi:

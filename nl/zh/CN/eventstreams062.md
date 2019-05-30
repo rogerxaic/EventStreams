@@ -33,30 +33,6 @@ subcollection: eventstreams
 
 我们支持的最低 Kafka 协议是 0.10。
 
-<!--
-## Support summary for the official Apache Kafka client (Java)
-
-<table>
-    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
-      <tr>
-	        <th></th>
-		    <th>Standard and Enterprise Plans</th>
-		    <th></th>
-        </tr>
-	  		<tr>
-			<td>**Kafka version on cluster**</td>
-			<td>Kafka 1.1</td>
-		</tr>
-	  		<tr>
-			<td>**Supported client versions**</td>
-			<td>Kafka 1.1, or later</td>
-		</tr>
-			<td>**Authentication requirements**</td>
-			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
-		</tr>
-
-</table>
--->
 	
 ## 第三方客户机
 {: #third_party_clients}
@@ -70,7 +46,7 @@ subcollection: eventstreams
 
 <table id="clients_table">
     <caption>表 2. 客户机支持摘要</caption>
-     <tr>
+      <tr>
 		    <th id="client" scope="col">客户机</th>
 		    <th id="language" scope="col">语言</th>
 			<th id="version" scope="col">建议的版本</th>
@@ -84,7 +60,7 @@ subcollection: eventstreams
 			<td>[Apache Kafka 客户机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>最新版</td>
-			<td>0.10.2<p> 有关旧版客户机的信息，请参阅[向后兼容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。</p></td>
+			<td>0.10.2<p> 有关旧版客户机的信息，请参阅[向后兼容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic)。</p></td>
 			<td>[Java 控制台样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Liberty 样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -125,12 +101,6 @@ subcollection: eventstreams
 ### 脚注
 1. {: #footnote1}此版本是我们在持续测试中验证的最早版本。通常，这是在过去 12 个月内提供的初始版本，但如果已知存在严重问题，那么可能会更新
 
-## 向后兼容性 - 标准套餐
-{: #compatibility}
-
-对于向后兼容性，可以与 {{site.data.keyword.messagehub}} 标准套餐一起使用 Apache Kafka 0.9 Java 客户机。但是，由于此客户机的年限，我们强烈建议不要使用它。如果选择使用此版本客户机，那么您需要附加的[登录模块 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)。
-
-低于 0.11 的客户机版本可能会造成性能降低，因为需要附加的协议转换才能连接到更新版本的 Kafka 服务器。
 
 <!--
 ## Unsupported clients

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-12-21"
+lastupdated: "2019-04-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -31,11 +31,10 @@ subcollection: eventstreams
 
 -->
 
-A amostra da API Java&trade; Kafka é um exemplo de produtor e consumidor que são gravados em Java, que usa a API Kafka diretamente. É possível executar esta amostra localmente ou no {{site.data.keyword.Bluemix_short}}.
+A amostra da API Java&trade; Kafka é um exemplo de produtor e consumidor que são gravados em Java, que usa a API do Kafka diretamente. É possível executar esta amostra localmente ou no {{site.data.keyword.Bluemix_short}}.
 {: shortdesc}
 
-O código de amostra está no [projeto do GitHub event-streams-samples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Embora os usuários de amostra usem a API
-Kafka para enviar e receber mensagens, a amostra usa a API de administração do
+O código de amostra está no [projeto do GitHub event-streams-samples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){:new_window}. Embora os usuários de amostra usem a API do Kafka para enviar e receber mensagens, a amostra usa a API de administração do
 {{site.data.keyword.messagehub}} para criar o tópico que ela envia mensagens para e recebe
 mensagens de.
 
@@ -46,7 +45,7 @@ Para obter uma apresentação detalhada de como executar a amostra, consulte [In
 ## Como usar, fazer download e executar a amostra do Liberty para Java
 {: #liberty_sample notoc}
 
-A amostra do Liberty for Java implementa um aplicativo simples que é implementado no tempo de execução do Liberty. O aplicativo usa a API Kafka para o {{site.data.keyword.messagehub}} produzir e consumir mensagens.
+A amostra do Liberty for Java implementa um aplicativo simples que é implementado no tempo de execução do Liberty. O aplicativo usa a API do Kafka para o {{site.data.keyword.messagehub}} produzir e consumir mensagens.
 O aplicativo também serve um frontend da web que você pode usar para administração.
 
 É possível localizar o código de amostra no [projeto do GitHub event-streams-samples ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample){:new_window}.
@@ -92,8 +91,10 @@ mais recente.
 [https://kafka.apache.org/downloads
 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://kafka.apache.org/downloads){:new_window}.
 
-Para obter informações sobre as implicações de usar um cliente 0.9.X, consulte
-[Compatibilidade com versões anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+<!--
+For information about the implications of using a 0.9.X client, see 
+[Backward compatibility](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).
+-->
 
 
 
@@ -107,7 +108,6 @@ Execute as seguintes etapas:
 
 1. Exclua o arquivo JAAS. Observe que a propriedade JVM java.security.auth.login.config=<PATH TO JAAS> também não é
 mais necessária.
-2. Se você estiver migrando da 0.9.X, exclua o módulo jar de login do {{site.data.keyword.messagehub}}.
 2. Inclua o seguinte nas propriedades do cliente:
     ```
 	sasl.mechanism=PLAIN
@@ -116,26 +116,6 @@ mais necessária.
 
 	em que USERNAME e PASSWORD são os valores do {{site.data.keyword.messagehub}} na guia
 **Credenciais de serviço** no {{site.data.keyword.Bluemix_notm}}.
-	
-	
 
-### Migrando um cliente Kafka da 0.9.X para a 0.10.0.X ou a 0.10.1.X
 
-Execute as seguintes etapas:
 
-1. Exclua o módulo jar de login do {{site.data.keyword.messagehub}}.
-2. Mude seu arquivo <code>jaas.conf</code> para o seguinte:
-    ```
-        KafkaClient {
-          org.apache.kafka.common.security.plain.PlainLoginModule required
-          serviceName="kafka"
-            username="USERNAME"
-            password="PASSWORD";
-        };
-    ```
-    {: codeblock}
-
-	em que USERNAME e PASSWORD são os valores do {{site.data.keyword.messagehub}} na guia
-**Credenciais de serviço** no {{site.data.keyword.Bluemix_notm}}.
-	
-3. Inclua esta linha em suas propriedades do consumidor e do produtor: <code>sasl.mechanism=PLAIN</code>

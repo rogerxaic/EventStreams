@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-23"
+lastupdated: "2019-05-15"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Génération de messages
 {: #producing_messages }
@@ -57,8 +58,7 @@ De nombreux autres paramètres de configuration sont disponibles, mais lisez d'a
 
 Lorsqu'un producteur publie un message sur un sujet, il peut choisir la partition à utiliser. Si l'ordre est important, vous devez vous rappeler qu'une partition est une séquence ordonnée d'enregistrements et qu'un sujet contient une ou plusieurs partitions. Si vous voulez qu'une série de messages soit distribuée dans l'ordre, assurez-vous que les messages se trouvent tous dans la même partition. Le moyen le plus simple pour obtenir ce résultat consiste à attribuer la même clé à tous ces messages. 
  
-Le producteur peut explicitement indiquer un numéro de partition lorsqu'il publie un message. Cela permet un contrôle direct, mais rend le code du producteur plus complexe car il prend la responsabilité de contrôler la sélection des partitions. Pour plus d'informations, voir l'appel de méthode Producer.partitionsFor. Par exemple, l'appel est décrit pour
-[Kafka 1.1.0 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/11/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
+Le producteur peut explicitement indiquer un numéro de partition lorsqu'il publie un message. Cela permet un contrôle direct, mais rend le code du producteur plus complexe car il prend la responsabilité de contrôler la sélection des partitions. Pour plus d'informations, voir l'appel de méthode Producer.partitionsFor. Par exemple, l'appel est décrit pour [Kafka 2.2.0 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://kafka.apache.org/22/javadoc/org/apache/kafka/clients/producer/KafkaProducer.html){:new_window}
  
 Si le producteur n'indique pas de numéro de partition, la sélection de la partition s'effectue via un programme de partitionnement. Le programme de partitionnement par défaut intégré au producteur Kafka fonctionne comme suit :
 
@@ -75,14 +75,14 @@ En général, Kafka écrit les messages dans l'ordre où le producteur les envoi
  
 Le producteur peut également relancer automatiquement l'envoi de messages. Il est souvent judicieux d'activer cette fonction de relance pour éviter que votre code d'application n'ait à effectuer lui-même toutes les relances. La combinaison de la création de lots dans Kafka et des relances automatiques peut entraîner la duplication de messages et leur réordonnement.
  
-Par exemple, si vous publiez une séquence de trois messages &lt;M1, M2, M3&gt; sur un sujet. Les enregistrements peuvent tous tenir dans le même lot, de sorte qu'ils sont effectivement tous envoyés ensemble au responsable de la partition. Le responsable les écrit alors dans la partition et les réplique sous forme d'enregistrements distincts. En cas d'incident, il est possible que M1 et M2 soient ajoutés à la partition, mais pas M3. Le producteur ne reçoit pas d'accusé de réception et relance l'envoi de &lt;M1, M2 et M3&gt;. Le nouveau responsable écrit simplement M1, M2 et M3 dans la partition, qui contient maintenant &lt;M1, M2, M1, M2 et M3&gt;, le message M1 dupliqué se trouvant après le message M2 d'origine. Si vous limitez à une le nombre de demandes en cours vers chaque courtier, vous évitez ce réordonnement. Vous pouvez toujours trouver un unique enregistrement dupliqué tel que &lt;M1, M2, M2, M3&gt;, mais vous n'aurez plus jamais de défaut d'ordre des séquences. Dans Kafka 0.11 (pas encore disponible dans {{site.data.keyword.messagehub}}), vous pouvez également utiliser la fonction de producteur idempotent pour éviter la duplication de M2.
+Par exemple, si vous publiez une séquence de trois messages &lt;M1, M2, M3&gt; sur un sujet. Les enregistrements peuvent tous tenir dans le même lot, de sorte qu'ils sont effectivement tous envoyés ensemble au responsable de la partition. Le responsable les écrit alors dans la partition et les réplique sous forme d'enregistrements distincts. En cas d'incident, il est possible que M1 et M2 soient ajoutés à la partition, mais pas M3. Le producteur ne reçoit pas d'accusé de réception et relance l'envoi de &lt;M1, M2 et M3&gt;. Le nouveau responsable écrit simplement M1, M2 et M3 dans la partition, qui contient maintenant &lt;M1, M2, M1, M2 et M3&gt;, le message M1 dupliqué se trouvant après le message M2 d'origine. Si vous limitez à une le nombre de demandes en cours vers chaque courtier, vous évitez ce réordonnement. Vous pouvez toujours trouver un unique enregistrement dupliqué tel que &lt;M1, M2, M2, M3&gt;, mais vous n'aurez plus jamais de défaut d'ordre des séquences. Dans Kafka 0.11 ou une version ultérieure, vous pouvez également utiliser la fonction du producteur idempotent pour éviter la duplication de M2.
  
 Avec Kafka, il est d'usage d'écrire les applications destinées à gérer les duplications occasionnelles de message car le fait de n'avoir qu'une seule demande en cours a un impact non négligeable sur les performances.
 
 ## Accusés de réception des messages
 {: #message_acknowledgments}
 
-Lorsque vous publiez un message, vous pouvez choisir le niveau des accusés de réception requis à l'aide du paramètre `acks` de configuration du producteur. Ce choix s'effectue dans un souci d'équilibre entre capacité de traitement et fiabilité. Les trois niveaux possibles sont les suivants :
+Lorsque vous publiez un message, vous pouvez choisir le niveau des accusés de réception requis à l'aide du paramètre `acks` de configuration du producteur. Ce choix s'effectue dans un souci d'équilibre entre débit et fiabilité. Les trois niveaux possibles sont les suivants :
 
 <dl>
 <dt>acks=0 (fiabilité réduite)</dt>
@@ -104,14 +104,16 @@ Dans un souci d'efficacité, le producteur collecte ensemble les lots d'enregist
 
 Si vous tentez de publier des messages plus rapidement qu'ils peuvent être envoyés à un serveur, le producteur les place automatiquement en mémoire tampon dans des demandes par lots. Le producteur gère une mémoire tampon des enregistrements non envoyés pour chaque partition. Bien entendu, il arrive un moment où même la création de lots ne permet pas d'obtenir le débit souhaité.
  
-Un autre facteur a un impact important. Pour empêcher des producteurs ou consommateurs individuels d'envahir le cluster, {{site.data.keyword.messagehub}} applique des quotas de capacité de traitement. Le débit auquel chaque producteur envoie des données est calculé et tout producteur qui tente de dépasser son quota est régulé. La régulation est appliquée en reportant légèrement l'envoi des réponses au producteur. Ce processus fait généralement office de frein naturel.
+Un autre facteur a un impact important. Pour empêcher des producteurs ou consommateurs individuels d'envahir le cluster, {{site.data.keyword.messagehub}} applique des quotas de débit. Le débit auquel chaque producteur envoie des données est calculé et tout producteur qui tente de dépasser son quota est régulé. La régulation est appliquée en reportant légèrement l'envoi des réponses au producteur. Ce processus fait généralement office de frein naturel.
+
+Pour obtenir des informations sur le débit, voir [Limites et quotas](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas). 
  
 En résumé, lorsqu'un message est publié, son enregistrement est d'abord écrit dans une mémoire tampon au niveau du producteur. En arrière-plan, le producteur crée des lots d'enregistrements et les envoie au serveur. Le serveur répond alors au producteur, en appliquant éventuellement un délai de régulation si le producteur publie trop vite. Si la mémoire tampon du producteur est saturée, l'appel d'envoi du producteur est retardé mais peut finalement échouer avec une exception.
 
 ## Fragments de code
 {: #code_snippets}
 
-Les fragments de code qui suivent sont d'un niveau très élevé afin d'illustrer les concepts impliqués. Pour obtenir des exemples complets, voir les exemples de {{site.data.keyword.messagehub}} dans GitHub https://github.com/ibm-messaging/event-streams-samples.
+Les fragments de code qui suivent sont d'un niveau très élevé afin d'illustrer les concepts impliqués. Pour obtenir des exemples complets, voir les exemples de {{site.data.keyword.messagehub}} dans [GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples).
 
 Pour pouvoir vous connecter à {{site.data.keyword.messagehub}}, vous devez d'abord générer le jeu de propriétés de configuration. Etant donné que toutes les connexions à {{site.data.keyword.messagehub}} sont sécurisées à l'aide de TLS et d'une authentification par nom d'utilisateur/mot de passe, vous avez au minimum besoin de ces propriétés. Remplacez KAFKA_BROKERS_SASL, USER et PASSWORD par vos propres données d'identification de service :
 

@@ -134,7 +134,7 @@ Kafka 会自动检测失败的使用者，以便可以将分区重新分配给�
 ## 代码片段
 {: #consumer_code_snippets notoc}
 
-以下代码片段在很高的级别展示了所涉及的概念。有关完整示例，请参阅 GitHub 中的 {{site.data.keyword.messagehub}} 样本：https://github.com/ibm-messaging/event-streams-samples
+以下代码片段在很高的级别展示了所涉及的概念。有关完整示例，请参阅 [GitHub ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples) 中的 {{site.data.keyword.messagehub}} 样本。
 
 要连接到 {{site.data.keyword.messagehub}}，首先需要构建一组配置属性。所有到 {{site.data.keyword.messagehub}} 的连接都会使用 TLS 和用户/密码认证来确保安全，所以您至少需要这些属性。请使用您自己的服务凭证替换 KAFKA_BROKERS_SASL、USER 和 PASSWORD：
 

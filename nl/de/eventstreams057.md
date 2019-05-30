@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-10-19"
+lastupdated: "2019-05-13"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 
 # Bekannte Einschränkungen
@@ -88,6 +89,8 @@ Ein Kafka Improvement Proposal (KIP) #302 wurde erstellt um sicherzustellen, das
 *  Für jeden {{site.data.keyword.Bluemix_notm}}-Bereich gilt ein Grenzwert von 100 Partitionen. Für die
 Erstellung weiterer Partitionen müssen Sie einen neuen {{site.data.keyword.Bluemix_notm}}-Bereich verwenden.
 
+<!--following message retention info duplicted in FAQs eventstreams108-->
+
 ## Aufbewahrungsdauer für Nachrichten
 {: #message_retention}
 
@@ -99,7 +102,7 @@ Die Aufbewahrungsdauer für Nachrichten können Sie beim Erstellen eines Topics
 in der Benutzerschnittstelle oder mit der Verwaltungs-API ändern. Das Zeitlimit muss im Bereich von 1 Stunde (Minimalwert) bis
 30 Tage (Maximalwert) liegen.
 
-Informationen zu den Einschränkungen für die zulässigen Einstellungen beim Erstellen von Topics mithilfe eines Kafka-Clients oder mithilfe von Kafka Streams finden Sie in [Kafka-API verwenden](/docs/services/EventStreams?topic=eventstreams-kafka_using).
+Informationen zu Einschränkungen für die Einstellungen, die bei der Erstellung von Topics mit einem Kafka-Client oder Kafka Streams zulässig sind, finden Sie unter [Wie können mit Kafka-APIs Topics erstellt und gelöscht werden?](/docs/services/EventStreams?topic=eventstreams-faqs#topic_admin).
 
 ## Topics in Kafka erstellen und löschen
 {: #create_delete}
@@ -109,43 +112,63 @@ Ausführung einige Zeit dauern kann. Es wird empfohlen, auf Verwendungsmuster zu
 die auf das schnelle Erstellen und Löschen von Topics angewiesen sind oder auf das schnelle Löschen
 und erneute Erstellen von Topics.
 
-## Kafka-REST-API
+<!--
+## Kafka REST API
 {: #trouble_rest}
 
-*  Nur das eingebettete Binärformat wird für Anforderungen und Antworten
-   unterstützt. Die eingebetteten Avro- und JSON-Formate werden nicht unterstützt.
-*  Gleichzeitige Anforderungen werden für eine Consumer-Instanz nicht unterstützt.
-   Lese-, Commit- oder Löschanforderungen, die sich auf eine Consumer-Instanz beziehen,
-sollten erst gesendet werden, wenn für alle ausstehenden Anforderungen dieser Instanz entsprechende Antworten empfangen wurden.
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
 
-## Ratenbegrenzung in der Kafka-REST-API
+*  Only the binary-embedded format is supported for requests and
+   responses. The Avro and JSON embedded formats are not supported.
+*  Concurrent requests are not supported for a consumer instance.
+   Read, commit, or delete requests corresponding to a consumer
+   instance should be sent only after a response is received for
+   any outstanding requests of that instance.
+
+-->
+<!--
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+
+## Kafka REST API rate limitation
 {: #kafka_rate}
 
-Für Anwendungen, die die Kafka-REST-API verwenden, können Ratenbegrenzungen
-für jeden API-Schlüssel (ApiKey) gelten. Wenn eine solche Begrenzung auftritt,
-reagiert die API mit dem folgenden HTTP-Fehler:
+Applications using the Kafka REST API can be subject to rate
+limiting for each ApiKey. When this limiting occurs, the API
+responds with the following HTTP error:
 
 <code>429 Too Many Requests</code>
 {:screen}
 
-Wenn dieser Fehler angezeigt wird, warten Sie etwas und übergeben Sie die Anforderung erneut.
+If you see this error, wait and submit the request again.
 
+<br/>
+**Is this specific to old Standard only? If so I'll move to specific Standard topic.**
+{: note}
+-->
 <!--12/04/18 - Karen: same info duplicated at messagehub108 -->
-## Täglicher Neustart der Kafka-REST-API
+<!--
+## Kafka REST API daily restart
 {: #rest_restart}
 
-Die Kafka-REST-API wird einmal pro Tag für einen kurzen Zeitraum
-erneut  gestartet. In diesem Zeitraum ist die Kafka-REST-API möglicherweise
-nicht verfügbar. In diesem Fall wird empfohlen, dass Sie Ihre Anforderung
-wiederholen. Nach dem Neustart der REST-API müssen Sie Ihre Kafka-Consumer-Instanzen
-erneut erstellen. In diesem Fall gibt die
-REST-API den folgenden JSON-Code zurück:
+The Kafka REST API restarts once a day for a short period of
+time. During this period, the Kafka REST API might become
+unavailable. If this happens, you are recommended to retry your
+request. After the REST API has restarted, you will have to
+create your Kafka consumer instances again. If this is the case, the
+REST API returns the following JSON:
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```
 {:screen}
-
-## Allgemeine Kafka-Consumer-API
+-->
+<!--
+## Kafka high-level consumer API
 {: #kafka_consumer}
 
-Die einfache oder allgemeine Apache Kafka-Consumer-API der Version 0.8.2 kann nicht mit {{site.data.keyword.messagehub}} verwendet werden. Stattdessen können Sie die früheste unterstützte Version der Kafka-Consumer-API verwenden, Version 0.9.
+You cannot use the Apache Kafka 0.8.2 simple or high-level
+consumer API with {{site.data.keyword.messagehub}}. Instead, you can use the earliest supported Kafka consumer API, which is 0.10.
+-->
