@@ -66,7 +66,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Java Kafka calls might time out
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### Problem
 {: #calls_timeout_problem notoc}
