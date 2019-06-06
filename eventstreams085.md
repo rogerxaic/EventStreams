@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-16"
+lastupdated: "2019-06-06"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -30,14 +30,17 @@ For information about the Classic plan, see
 {: shortdesc}
 
 ## Standard plan
+{: #plan_standard}
 
 The Standard plan is appropriate if you require event ingest and distribution capabilities but do not require any additional benefits of the Enterprise plan. The Standard plan offers shared access to a multi-tenant {{site.data.keyword.messagehub}} cluster.
 
 ## Enterprise plan 
+{: #plan_enterprise}
 
 The Enterprise plan is appropriate if data isolation, guaranteed performance, and increased retention are important considerations. The Enterprise plan offers exclusive access to a dedicated {{site.data.keyword.messagehub}} cluster.
 
 ## Classic plan
+{: #plan_classic}
 
 The Classic plan gives access to the previous edition of the Standard plan and is provided for existing workloads and backward compatibility only. You should provision new workloads against the Standard plan.
 
@@ -105,7 +108,7 @@ The following table summarizes what is supported by the plans:
 		<tr>
 			<td>**Maximum retention period**</td>
 			<td>1 GB per partition for up to 30 days </td>
-			<td>Unlimited up to the storage limit of your plan </td>
+			<td>2 TB of usable storage<!--Unlimited up to the storage limit of your plan --></td>
 			<td>1 GB per partition for up to 30 days </td>
 		</tr>
 		<tr>
