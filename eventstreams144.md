@@ -89,7 +89,7 @@ A Kafka Improvement Proposal (KIP) #302 has been created to ensure that Kafka cl
    more partitions, you must use a new {{site.data.keyword.Bluemix_notm}} space.
 
 ## Message retention
-{: #message_retention}
+{: #message_retention_classic}
 
 By default, messages are retained in Kafka for up to 24 hours and
 each partition is capped at 1 GB. If the 1 GB cap is reached, the
