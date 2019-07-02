@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-02"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -37,7 +37,7 @@ The Standard plan is appropriate if you require event ingest and distribution ca
 ## Enterprise plan 
 {: #plan_enterprise}
 
-The Enterprise plan is appropriate if data isolation, guaranteed performance, and increased retention are important considerations. The Enterprise plan offers exclusive access to a dedicated {{site.data.keyword.messagehub}} cluster.
+The Enterprise plan is appropriate if data isolation, guaranteed performance, and increased retention are important considerations. The Enterprise plan offers exclusive access to a dedicated {{site.data.keyword.messagehub}} cluster. You can also provision an {{site.data.keyword.messagehub}} cluster in a geographically local but [single zone location (SZR)](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
 
 ## Classic plan
 {: #plan_classic}
@@ -66,13 +66,14 @@ The following table summarizes what is supported by the plans:
         <tr>
 			<td>**Availability zones**</td>
 			<td>3</td>
-			<td>3</td>
+			<td>3<br/>(1 in single zone locations)
+			</td>
 			<td>Not supported</td>
 		</tr>
         <tr>
 			<td>**Availability**</td>
 			<td>99.95%</td>
-			<td>99.95%</td>
+			<td>99.95%<br/>(99.5% in single zone locations)  [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
 			<td>99.5%</td>
 		</tr>
 	  		<tr>
@@ -114,7 +115,7 @@ The following table summarizes what is supported by the plans:
 		<tr>
 			<td>**Maximum throughput**</td>
 			<td>1 MB per second per partition (20 MB per second maximum) </td>
-			<td>40 MB per second (peak throughput of 90 MB per second)</td>
+			<td>40 MB per second per cluster (peak throughput of 90 MB per second)</td>
 			<td>1 MB per second per partition</td>
 		</tr>
 		<tr>
@@ -125,7 +126,8 @@ The following table summarizes what is supported by the plans:
 		</tr>
 		<tr>
 			<td>**Location (region) availability**</td>
-			<td>Dallas (us-south)</br>
+			<td>**Multizone location (MZR)**<br/>
+			Dallas (us-south)</br>
 			Washington (us-east)<br/>
 			London (eu-gb)<br/>
 			Sydney (au-syd)</br>
@@ -133,12 +135,16 @@ The following table summarizes what is supported by the plans:
 			Tokyo (jp-tok)<br/>
 			<br/>
 			</td>
-			<td>Dallas (us-south)</br>
+			<td>**Multizone location (MZR)**</br>
+			Dallas (us-south)</br>
 			Washington (us-east)<br/>
 			London (eu-gb)<br/>
 			Sydney (au-syd)</br>
 			Frankfurt (eu-de)<br/>
 			Tokyo (jp-tok)<br/>
+			<br/>
+			**Single zone location (SZR)**</br>
+			Seoul (seo01)<br/>
 			<br/>
 			</td>
 			<td>Dallas (us-south)</br>
@@ -175,7 +181,10 @@ The following table summarizes what is supported by the plans:
 		</tr>
 
 </table>
+### Footnote
+{: #footnote_plans notoc}
 
+1. {: #footnote_szr notoc} For more information about availability, see [single zone location deployments](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
 
 
 
