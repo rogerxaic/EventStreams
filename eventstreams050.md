@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-22"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -87,7 +87,7 @@ For other languages, we recommend running one of the following clients, all of w
 			<th id="sample link" scope="col">Link to sample</th>
         </tr>
 			<tr>
-			<td colspan="3">**Official client**</td>
+			<td colspan="3">**Official Apache Kafka client**</td>
 			</tr>
 	  		<tr>
 			<td>[Apache Kafka client ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/downloads)</td>
@@ -140,6 +140,7 @@ If you can't run any of the clients listed, you can use other third-party client
 * Supports Kafka 0.10, or later
 * Can connect and authenticate using SASL PLAIN with TLSv1.2
 * Supports the SNI extensions for TLS where the server's hostname is includes in the TLS handshake
+* Supports elliptic curve cryptography
 However, we only test and have experience of the recommended third-party clients.
 
 In all cases, the latest version of the client is recommended.
@@ -174,10 +175,6 @@ sasl.mechanism=PLAIN
 ssl.protocol=TLSv1.2
 ssl.enabled.protocols=TLSv1.2
 ssl.endpoint.identification.algorithm=HTTPS
-
-# To send or receive messages, the following are also required
-key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
-value.deserializer=org.apache.kafka.common.serialization.StringDeserializer
 ```
 {: codeblock}
 
