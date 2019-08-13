@@ -49,7 +49,7 @@ subcollection: eventstreams
 		    <th id="client" scope="col">클라이언트</th>
 		    <th id="language" scope="col">언어</th>
 			<th id="version" scope="col">권장 버전</th>
-		    <th id="minimum version" scope="col">지원되는 최소 버전 [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">지원되는 최소 버전 [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">샘플 링크</th>
         </tr>
 			<tr>
@@ -59,7 +59,7 @@ subcollection: eventstreams
 			<td>[Apache Kafka 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>최신</td>
-			<td>0.10.2 <p> 이전 클라이언트에 대한 정보는 [역호환성](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)을 참조하십시오.</p></td>
+			<td>0.10.2 <p> 이전 클라이언트에 대한 정보는 [역호환성](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic)을 참조하십시오.</p></td>
 			<td>[Java 콘솔 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Liberty 샘플![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -98,7 +98,8 @@ subcollection: eventstreams
 
 </table>
 ### 각주
-1. {: #footnote1}이 버전은 지속적 테스트에서 유효성 검증한 가장 빠른 버전입니다. 일반적으로 이 버전은 최근 12개월 이내에 사용 가능한 초기 버전이지만 중요한 문제가 있는 것으로 알려진 경우 새 버전일 수 있습니다.
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}이 버전은 지속적 테스트에서 유효성 검증한 가장 빠른 버전입니다. 일반적으로 이 버전은 최근 12개월 이내에 사용 가능한 초기 버전이지만 중요한 문제가 있는 것으로 알려진 경우 새 버전일 수 있습니다.
 
 ## 역호환성(클래식 플랜 전용)
 {: #compatibility_classic}

@@ -46,7 +46,7 @@ Les niveaux d'accès (ou rôles) que vous pouvez affecter à un utilisateur sur 
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -82,12 +82,12 @@ Ce tableau résume quelques scénarios {{site.data.keyword.messagehub}} courants
 | Autoriser une application ou un utilisateur à créer ou supprimer un sujet |Type de ressource : <code>cluster</code>   |Non applicable  |Type de ressource : topic <br/><br/>Facultatif : ID ressource : <var class="keyword varname">nom_de_sujet</var> |
 | Répertorier les groupes, les sujets et les décalages <br/> Décrire les configurations des courtiers, groupes, et sujets | Type de ressource : <code>cluster</code>      |Non applicable  |Non applicable      |
 | Autoriser une application à se connecter au cluster  |Type de ressource : <code>cluster</code>| Non applicable     |Non applicable      |
-| Autoriser une application à produire pour un sujet  |Type de ressource : <code>cluster</code>|Type de ressource : <code>sujet</code> |Non applicable     |
+| Autoriser une application à produire pour un sujet  |Type de ressource : <code>cluster</code>|Type de ressource : <code>topic</code> |Non applicable     |
 | Autoriser une application à produire pour un sujet spécifique  |Type de ressource : <code>cluster</code>|Type de ressource : <code>topic</code><br/>ID ressource : <var class="keyword varname">nom_de_sujet</var>      |Non applicable     |
 | Autoriser une application à se connecter et à consommer dans tout sujet (aucun groupe de consommateurs)  |Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>topic</code> |Non applicable    |Non applicable     |
 | Autoriser une application à se connecter et à consommer dans un sujet spécifique (aucun groupe de consommateurs)  | Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>topic</code><br/>ID ressource : <var class="keyword varname">nom_de_sujet</var> |Non applicable     |Non applicable     |
 | Autoriser une application de consommer un sujet (groupe de consommateurs)  |Type de ressource : <code>cluster</code> <br/>Type de ressource : <code>topic</code><br/> Type de ressource : <code>group</code> |Non applicable      |Non applicable     |
-| Autoriser une application à produire ponctuellement pour un sujet  |Type de ressource : <code>cluster</code> <br/> Type de ressources : <code>group</code>|Type de ressource : <code>topic</code> <br/>ID ressource : <var class="keyword varname">nom_de_sujet</var> <br/>Type de ressource : <code>txnid</code> |Non applicable     |
+| Autoriser une application à produire ponctuellement pour un sujet  |Type de ressource : <code>cluster</code> <br/> Resource type: <code>group</code>|Type de ressource : <code>topic</code> <br/>ID ressource : <var class="keyword varname">nom_de_sujet</var> <br/>Type de ressource : <code>txnid</code> |Non applicable     |
 | Supprimer un groupe de consommateurs |Type de ressource : <code>cluster</code> |Non applicable  |Type de ressource : <code>group</code> <br/>ID ressource : <var class="keyword varname">ID_groupe</var>      |
 | Utiliser Streams |Type de ressource : <code>cluster</code></br>Type de ressource : <code>group</code>| Non applicable  |Type de ressource : <code>topic</code>    |
 
@@ -95,7 +95,7 @@ Pour plus d'informations sur IAM, voir
 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).
 
 Pour un exemple de définition de règles, voir
-[ID de service et clés d'API IAM d'IBM Cloud![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}.
+[ID de service et clés d'API IAM d'IBM Cloud![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}.
 
 
 ## Connexion à {{site.data.keyword.messagehub}}

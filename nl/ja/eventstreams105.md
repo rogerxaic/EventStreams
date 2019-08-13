@@ -19,7 +19,7 @@ subcollection: eventstreams
 # クラシック・プランの MQ ブリッジ 
 {: #mq_bridge}
 
-**MQ ブリッジは、クラシック・プランのみの一部として使用可能です。**
+**MQ ブリッジは、クラシック・プランの一部としてのみ使用可能です。**
 <br/>
 
 MQ ブリッジを使用すると、{{site.data.keyword.IBM_notm}} MQ キューから {{site.data.keyword.messagehub}} Kafka トピックへメッセージ・データを転送できます。 MQ ブリッジによって、企業内で生成された {{site.data.keyword.IBM_notm}} MQ メッセージ・データに対してクラウド・スタイルのワークロード (例えばデータ分析) を効率的に実行できるようになります。

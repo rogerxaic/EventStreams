@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-16"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -30,14 +30,17 @@ For information about the Classic plan, see
 {: shortdesc}
 
 ## 标准套餐
+{: #plan_standard}
 
 如果您需要事件摄入和分发功能，但是不需要企业套餐的其他任何好处，那么标准套餐比较合适。标准套餐提供多租户 {{site.data.keyword.messagehub}} 集群的共享访问权。
 
 ## 企业套餐 
+{: #plan_enterprise}
 
-如果数据隔离、性能保证和延长保留时间是很重要的考虑事项，企业套餐比较合适。企业套餐提供对专用 {{site.data.keyword.messagehub}} 集群的互斥访问权。
+如果数据隔离、性能保证和延长保留时间是很重要的考虑事项，企业套餐比较合适。企业套餐提供对专用 {{site.data.keyword.messagehub}} 集群的互斥访问权。您还可以在地理位置上处于本地的[单专区位置 (SZR)](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr) 中供应 {{site.data.keyword.messagehub}} 集群。
 
 ## 经典套餐
+{: #plan_classic}
 
 经典套餐提供标准套餐先前版本的访问权，仅针对现有工作负载以及出于向后兼容性的目的而提供。您应该针对标准套餐供应新的工作负载。
 
@@ -63,19 +66,20 @@ For information about the Classic plan, see
         <tr>
 			<td>**可用性区域**</td>
 			<td>3</td>
-			<td>3</td>
+			<td>3<br/>（1 个位于单专区位置）
+			</td>
 			<td>不支持</td>
 		</tr>
         <tr>
 			<td>**可用性**</td>
 			<td>99.95%</td>
-			<td>99.95%</td>
+			<td>99.95%<br/>（99.5% 位于单专区位置）[<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
 			<td>99.5%</td>
 		</tr>
 	  		<tr>
 			<td>**集群上的 Kafka 版本**</td>
 			<td>Kafka 2.2</td>
-			<td>Kafka 1.1 <br/>（即将发布 Kafka 2.2）</td>
+			<td>Kafka 1.1<br/>（即将发布 Kafka 2.2）</td>
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
@@ -105,13 +109,13 @@ For information about the Classic plan, see
 		<tr>
 			<td>**最长保留期**</td>
 			<td>每个分区保留 1 GB，最长 30 天</td>
-			<td>无限期保留，直到达到套餐存储限制</td>
+			<td>可用存储空间为 2 TB<!--Unlimited up to the storage limit of your plan --></td>
 			<td>每个分区保留 1 GB，最长 30 天</td>
 		</tr>
 		<tr>
 			<td>**最大吞吐量**</td>
 			<td>每个分区每秒 1 MB（每秒最大 20 MB）</td>
-			<td>每秒 40 MB（每秒峰值吞吐量为 90 MB）</td>
+			<td>每个集群每秒 40 MB（峰值吞吐量为每秒 75 MB）</td>
 			<td>每个分区每秒 1 MB</td>
 		</tr>
 		<tr>
@@ -121,15 +125,32 @@ For information about the Classic plan, see
 			<td>1 MB</td>
 		</tr>
 		<tr>
+			<td>**最大已连接客户机数**</td>
+			<td>100</td>
+			<td>10 000</td>
+			<td>100</td>
+		</tr>
+		<tr>
 			<td>**位置（区域）可用性**</td>
-			<td>达拉斯 (us-south)</br>
- </td>
-			<td>达拉斯 (us-south)</br>
+			<td>**多专区位置 (MZR)**<br/>
+			达拉斯 (us-south)</br>
 			华盛顿 (us-east)<br/>
 			伦敦 (eu-gb)<br/>
 			悉尼 (au-syd)</br>
 			法兰克福 (eu-de)<br/>
 			东京 (jp-tok)<br/>
+						<br/>
+			</td>
+			<td>**多专区位置 (MZR)**</br>
+			达拉斯 (us-south)</br>
+			华盛顿 (us-east)<br/>
+			伦敦 (eu-gb)<br/>
+			悉尼 (au-syd)</br>
+			法兰克福 (eu-de)<br/>
+			东京 (jp-tok)<br/>
+			<br/>
+			**单专区位置 (SZR)**</br>
+			首尔 (seo01)<br/>
 			<br/>
 			</td>
 			<td>达拉斯 (us-south)</br>
@@ -144,7 +165,9 @@ For information about the Classic plan, see
 			REST Producer API</br>
 		    </td>
 			<td>Kafka API<br/>
-			Admin REST API</td>
+			Admin REST API</br>
+			REST Producer API</br>
+		    </td>
 			<td>Kafka API</br>
 			Admin REST API<br/>
 			Kafka REST API</br>
@@ -166,7 +189,10 @@ For information about the Classic plan, see
 		</tr>
 
 </table>
+### 脚注
+{: #footnote_plans notoc}
 
+1. {: #footnote_szr notoc}有关可用性的更多信息，请参阅[单专区位置部署](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr)。
 
 
 
@@ -184,6 +210,6 @@ number of partitions that you use and the number of messages that you send and r
 charge for message data while it is retained on the topics, but the data that each partition retains
 is capped at 1 GB.
 
-For more information, see [{{site.data.keyword.Bluemix_notm}} Public ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/public){:new_window}.
+For more information, see [{{site.data.keyword.Bluemix_notm}} Public ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/free/){:new_window}.
 -->
 

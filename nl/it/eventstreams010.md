@@ -29,7 +29,7 @@ le seguenti attività:
 * Connettere i flussi di eventi alle analisi del flusso per realizzare delle potenti analisi approfondite.
 * Pubblicare dati di evento in più applicazioni per delle reazioni in tempo reale.
 
-Essendo creato con Apache Kafka, si avvale direttamente di tutta l'innovazione che ha luogo nella community e supporta le API client Kafka, Kafka Streams, Kafka Connect e anche KSQL.
+Essendo creato con Apache Kafka, si avvale direttamente di tutta l'innovazione che ha luogo nella community e supporta le API client Kafka, Kafka Streams e Kafka Connect.
 
 Gli strumenti Apache Kafka normalmente lavorano direttamente con {{site.data.keyword.messagehub}}, anche se devi fornire ulteriori informazioni perché
 le connessioni a {{site.data.keyword.messagehub}} eseguano sempre l'autenticazione utilizzando le credenziali.

@@ -79,14 +79,14 @@ Beispiel: Sie veröffentlichen eine Folge von den drei Nachrichten &lt;M1, M2, M
  
 Bei Kafka ist es üblich, die Anwendungen so zu schreiben, dass sie mit gelegentlichen Nachrichtenduplikaten umgehen können, da der Leistungseinfluss bei einer einzelnen gerade ausgeführten Anforderung enorm ist.
 
-## Auftragsbestätigung von Nachrichten
+## Bestätigung von Nachrichten
 {: #message_acknowledgments}
 
 Wenn Sie eine Nachricht veröffentlichen, können Sie die erforderliche Bestätigungsanforderung mithilfe der Producer-Konfiguration `acks` auswählen. Diese Auswahl ist ein Ausgleich zwischen Durchsatz und Zuverlässigkeit. Es gibt drei Stufen:
 
 <dl>
 <dt>acks=0 (am wenigsten zuverlässig)</dt>
-<dd>Die Nachricht gilt als gesendet, sobald sie in das Netz geschrieben wurde. Es gibt keine Auftragsbestätigung vom Partitionsleader. Daher können Nachrichten verloren gehen, wenn sich das Leadership der Partition ändert. Diese Bestätigungsstufe ist sehr schnell, birgt jedoch das Risiko eines Nachrichtenverlusts in bestimmten Situationen.</dd>
+<dd>Die Nachricht gilt als gesendet, sobald sie in das Netz geschrieben wurde. Es gibt keine Bestätigung vom Partitionsleader. Daher können Nachrichten verloren gehen, wenn sich das Leadership der Partition ändert. Diese Bestätigungsstufe ist sehr schnell, birgt jedoch das Risiko eines Nachrichtenverlusts in bestimmten Situationen.</dd>
 <dt>acks=1 (Standardoption)</dt>
 <dd>Dem Producer wird die Nachricht bestätigt, sobald der Partitionsleader seinen Datensatz erfolgreich in die Partition geschrieben hat. Da die Bestätigung auftritt, bevor bekannt ist, dass der Datensatz die synchronen Replikate erreicht hat, kann die Nachricht verloren gehen, wenn der Leader fehlschlägt, aber die Follower die Nachricht noch nicht erhalten haben. Wenn sich das Leadership der Partition ändert, informiert der alte Leader den Producer. Dieser bearbeitet den Fehler und versucht erneut, die Nachricht an den neuen Leader zu senden. Da Nachrichten bestätigt werden, bevor ihr Empfang von allen Replikaten bestätigt wird, heißt das, dass Nachrichten, die bestätigt, aber noch nicht vollständig repliziert wurden, verloren gehen können, wenn sich das Leadership der Partition ändert.</dd>
 <dt>acks=all (am zuverlässigsten)</dt>

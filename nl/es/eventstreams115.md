@@ -24,14 +24,14 @@ subcollection: eventstreams
 <br/>
 
 El puente de {{site.data.keyword.IBM}} Cloud Object Storage proporciona una forma de leer datos de un tema Kafka de {{site.data.keyword.messagehub}}
-y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+y colocar los datos en [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
-El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un grupo del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
+El puente de Cloud Object Storage permite archivar los datos de los temas Kafka de {{site.data.keyword.messagehub}} a una instancia del [servicio de Cloud Object Storage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. El puente consume lotes de mensajes de Kafka y sube los datos de mensaje como objetos a un grupo del servicio Cloud Object Storage. Configurando el puente de Cloud Object Storage, puede controlar cómo se suben los datos como objetos a Cloud Object Storage. Por ejemplo, las propiedades que puede configurar son las siguientes:
 
-* El nombre de grupo en el que se graban los objetos.
+* El nombre de grupo en el que se escriben los objetos.
 * La frecuencia con que se cargan los objetos en el servicio Cloud Object Storage.
-* La cantidad de datos que se graban en cada objeto antes la carga en el servicio de Cloud Object Storage.
+* La cantidad de datos que se escriben en cada objeto antes la carga en el servicio de Cloud Object Storage.
 
 El formato de salida del puente es un objeto de servicio de almacenamiento de objetos que contiene uno o varios registros concatenados con caracteres de nueva línea como separadores.
 
@@ -40,7 +40,7 @@ El formato de salida del puente es un objeto de servicio de almacenamiento de ob
 
 El puente de Cloud Object Storage funciona leyendo un número de registro de Kafka desde un tema y escribiendo los datos de los registros en cuestión en un objeto. Este objeto se sube a una instancia del servicio de Cloud Object Storage. Cada uno de los puentes de Cloud Object Storage lee los datos de mensajes de un único tema de Kafka, aunque es posible que haya varios puentes leyendo datos de un solo tema. Una nueva instancia del puente de Cloud Object Storage siempre empieza leyendo el primer desplazamiento del tema de Kafka. El puente de Cloud Object Storage utiliza la gestión de desplazamiento del consumidor de Kafka para transferir datos de forma fiable desde Kafka sin pérdidas, pero existe alguna posibilidad de que se produzcan duplicaciones.
 
-Puede controlar cuántos registros se leen desde Kafka antes de que los datos se graben en la instancia del servicio de Cloud Object Storage utilizando las propiedades siguientes. Especifique estas propiedades al crear o actualizar un puente:
+Puede controlar cuántos registros se leen desde Kafka antes de que los datos se escriban en la instancia del servicio de Cloud Object Storage utilizando las propiedades siguientes. Especifique estas propiedades al crear o actualizar un puente:
 <dl><dt>Umbral de duración de carga (segundos)</dt> 
 <dd>Define un período de tiempo en segundos después del cual los datos acumulados de Kafka se suben al servicio de Cloud Object Storage.</dd>
 <dt>Umbral de tamaño de carga (kB)</dt>
@@ -49,7 +49,7 @@ Puede controlar cuántos registros se leen desde Kafka antes de que los datos se
 
 El desencadenante que hace que el puente de Cloud Object Storage para cargar datos leídos desde Kafka al servicio de Cloud Object Storage es el momento en que se alcanza por primera vez uno de estos valores. El servicio de Cloud Object Storage no garantiza la transferencia de datos al servicio de Cloud Object Storage en el momento exacto en que se alcanza uno de estos umbrales. Por lo tanto, los datos transferidos pueden llegar más tarde o ser de mayor tamaño que lo que indican los valores especificados por estas propiedades.
 
-El puente de Cloud Object Storage concatena mensajes utilizando caracteres de nueva línea como separadores a medida que graba los datos en Cloud Object Storage. Por este motivo, el puente no es apto para los mensajes que contienen caracteres de línea incluida y datos para mensajes binarios.
+El puente de Cloud Object Storage concatena mensajes utilizando caracteres de nueva línea como separadores a medida que escribe los datos en Cloud Object Storage. Por este motivo, el puente no es apto para los mensajes que contienen caracteres de línea incluida y datos para mensajes binarios.
 
 
 ## Obtención de credenciales para utilizar con el puente de Cloud Object Storage
@@ -65,7 +65,7 @@ Debe proporcionar credenciales para permitir que el puente de Cloud Object Stora
    Como alternativa, puede tomar los campos <code>apikey</code> e <code>id_instancia_servicio</code> y entrarlos en el panel de control de {{site.data.keyword.messagehub}} o establecerlos en el JSON de creación de puente si está creando el puente directamente utilizando una llamada REST.
 
 La credencial que cree otorga acceso de escritor a toda la instancia de Cloud Object Storage, por lo tanto, es posible que desee restringir este acceso al grupo con el que interactuará el puente.
-1. Vaya a la [página de gestión de accesos y usuarios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/iam#/overview){:new_window}.
+1. Vaya a la [página de gestión de accesos y usuarios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/iam/overview){:new_window}. 
 2. Debería ver el ID de servicio generado automáticamente en esta página. Cuando haya identificado el ID específico, seleccione la acción **Gestionar ID de servicio**. 
 3. Seleccione la acción **Editar política** para restringirlo a un **Tipo de recurso** determinado, que es el grupo y un **ID de recurso**, que es el nombre del grupo. Pulse **Guardar**.
 

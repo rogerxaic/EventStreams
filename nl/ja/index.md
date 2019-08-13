@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # 入門チュートリアル
 {: #getting_started}
@@ -39,15 +40,15 @@ Node.js および Python のサンプルを含め、他の {{site.data.keyword.m
   
   b. **「カタログ」**をクリックします。
   
-  c. **「統合」**セクションで、{{site.data.keyword.messagehub}} タイルをクリックし、**「標準プラン」**を選択します。{{site.data.keyword.messagehub}} サービス・インスタンス・ページが開きます。
+  c. **「統合」**セクションで、{{site.data.keyword.messagehub}} タイルをクリックし、**「標準プラン」**を選択します。 {{site.data.keyword.messagehub}} サービス・インスタンス・ページが開きます。
   
   d. サービスの名前を入力します。 デフォルト値を使用することができます。
   
   e. **「作成」**をクリックします。
 
-2. {: #create_credentials_step notoc} [IBM Cloud コンソールを使用した資格情報の取得および接続](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console)のステップを実行して、{{site.data.keyword.messagehub}} の資格情報を作成します。
+2. {: #create_credentials_step notoc} [IBM Cloud コンソールを使用した資格情報の取得および接続](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external_console)のステップを実行して、{{site.data.keyword.messagehub}} の資格情報を作成します。
    <br/>
-   <br/>このタスクの[ステップ 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) で *kafka_brokers_sasl* および *api_key* の値が必要になります。   
+   <br/>このタスクの[ステップ 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) で、*kafka_brokers_sasl* および *api_key* の値が必要になります。   
 
 3. 前提条件である以下の製品がまだインストールされていない場合はインストールします。
 

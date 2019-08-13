@@ -19,7 +19,7 @@ subcollection: eventstreams
 # クラシック・プランの Kafka REST API の使用 
 {: #rest_using_classic}
 
-**このバージョンの Kafka REST API は、クラシック・プランのみの一部として使用可能です。**
+**このバージョンの Kafka REST API は、クラシック・プランの一部としてのみ使用可能です。**
 <br/>
 
 Kafka REST API は、Kafka クラスターへの RESTful インターフェースを提供します。 この API を使用して、メッセージの生成とコンシュームを行うことができます。 API 参照資料などについて詳しくは、[Kafka REST Proxy 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.confluent.io/2.0.0/kafka-rest/docs/index.html){:new_window}を参照してください。 {{site.data.keyword.messagehub}} の要求と応答では、バイナリー埋め込み形式のみがサポートされます。 Avro および JSON 埋め込み形式はサポートされません。
@@ -50,7 +50,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 
 <br/>
 <br/>
-CURL の場合、[Confluent 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.confluent.io/2.0.0/){:new_window} に詳しく説明されているように、コマンド・ラインに以下の行を追加することによってコード例を適応させることもできます。
+CURL の場合、[Confluent 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.confluent.io/2.0.0/){:new_window} に詳しく説明されているように、コマンド・ラインに以下の行を追加することによってコード例を適応させることもできます。
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 
@@ -61,7 +61,6 @@ CURL の場合、[Confluent 資料 ![外部リンク・アイコン](../../icons
 <!-- info was in eventstreams066.md -->
 
 {{site.data.keyword.messagehub}} に接続するために、Kafka REST API は [VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf)からの <code>api_key</code> 資格情報および <code>kafka_rest_url</code> 資格情報を使用します。
-
 
 {{site.data.keyword.messagehub}} Kafka REST API で認証するには、
 要求の X-Auth-Token ヘッダーに <code>api_key</code> を指定する必要があります。

@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Lernprogramm zur Einführung
 {: #getting_started}
@@ -49,7 +50,7 @@ Führen Sie die folgenden Schritte aus:
   
   e. Klicken Sie auf **Erstellen**.
 
-2. {: #create_credentials_step notoc} Erstellen Sie {{site.data.keyword.messagehub}}-Berechtigungsnachweise, indem Sie diese Schritte ausführen: [Berechtigungsnachweise abrufen und Verbindung über die IBM Cloud-Konsole herstellen](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Erstellen Sie {{site.data.keyword.messagehub}}-Berechtigungsnachweise, indem Sie diese Schritte ausführen: [Berechtigungsnachweise abrufen und Verbindung über die IBM Cloud-Konsole herstellen](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external_console).
    <br/>
    <br/>Sie benötigen die Werte für *kafka_brokers_sasl* und *api_key* für [Schritt 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) dieser Task.   
 
@@ -87,7 +88,8 @@ Führen Sie die folgenden Schritte aus:
     von Nachrichten wird in dem Beispiel die Apache Kafka-Java-API verwendet.
 
     Verwenden Sie die Werte für *kafka_brokers_sasl*
-    und *api_key* aus den Berechtigungsnachweisen, die Sie in [Schritt 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) erstellt haben. <p></p>
+    und *api_key* aus den Berechtigungsnachweisen, die Sie in [Schritt 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step) erstellt haben.
+	<p></p>
 
 	**Wichtig:** *kafka_brokers_sasl* muss eine einzige Zeichenfolge sein, die in Anführungszeichen angegeben ist. Beispiel:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -56,7 +56,7 @@ Um máximo de 1 GB para cada partição.
 ### Rendimento da rede
 {: #enterprise_throughput }
 
-Um máximo recomendado de 40 MB por segundo com um limite de pico de 90 MB por segundo. O rendimento é expresso como o número de bytes por segundo que podem ser enviados e recebidos em um cluster. 
+Um máximo recomendado de 40 MB por segundo com um limite de pico de 75 MB por segundo. O rendimento é expresso como o número de bytes por segundo que podem ser enviados e recebidos em um cluster. 
 
 O valor recomendado é baseado em uma carga de trabalho típica e leva em conta o possível impacto de ações operacionais como as atualizações internas, os modos de falha ou a perda de uma zona de disponibilidade. Se o rendimento médio exceder o valor recomendado, uma perda no desempenho poderá ser experimentada durante essas condições.
 
@@ -74,7 +74,8 @@ Ilimitado, até o limite de armazenamento de seu plano.
 ### Outros limites
 {: #enterprise_limits}
 
-Tamanho máximo da mensagem: 1 MB
+*  Tamanho máximo da mensagem: 1 MB
+*  Máximo de clientes Kafka ativos simultâneos: 10.000
 
 
 

@@ -24,7 +24,7 @@ Si encuentra un problema al utilizar {{site.data.keyword.messagehub}} en el plan
 {: shortdesc}
 
 ## Las llamadas de Java Kafka no se migran tras error si falla un servidor de programa de arranque.
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### Problema
 {: #calls_failover_problem notoc}
@@ -34,7 +34,7 @@ La máquina virtual Java (JVM) almacena en memoria caché las búsquedas DNS. Cu
 ### Solución temporal
 {: #calls_failover_workaround notoc}
 
-Puesto que {{site.data.keyword.messagehub}} utiliza los URL de servidor de programa de arranque de Kafka con varias direcciones IP para alta disponibilidad, no todas las direcciones IP del intermediario son conocidas para el cliente Kafka, lo que impide la migración tras error a un intermediario de trabajo. En estos casos, la migración tras error requiere una nueva consulta de las direcciones IP para que los URL de intermediario obtengan una dirección IP de trabajo. Se recomienda configurar la JVM con un valor de TTL de entre 30 y 60 segundos. Este valor garantiza que si una dirección IP del servidor de programa de arranque tiene problemas, el cliente Kafka podrá buscar y utilizar una nueva dirección IP consultando el DNS.
+Puesto que {{site.data.keyword.messagehub}} utiliza los URL de servidor de programa de arranque de Kafka con varias direcciones IP para alta disponibilidad, no todas las direcciones IP del intermediario son conocidas para el cliente Kafka, lo que impide la migración tras error a un intermediario funcional. En estos casos, la migración tras error requiere una nueva consulta de las direcciones IP para que los URL de intermediario obtengan una dirección IP funcional. Se recomienda configurar la JVM con un valor de TTL de entre 30 y 60 segundos. Este valor garantiza que si una dirección IP del servidor de programa de arranque tiene problemas, el cliente Kafka podrá buscar y utilizar una nueva dirección IP consultando el DNS.
 
 Del archivo <code>java.security</code>: 
 
@@ -82,7 +82,7 @@ Se ha creado la propuesta de mejora de Kafka (KIP) 302 para garantizar que los c
 
 
 ## Temas y particiones
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  La longitud de los nombres de los temas está restringida y
 pueden tener hasta 100 caracteres.
@@ -92,7 +92,7 @@ crear más particiones, utilice un espacio nuevo de
 {{site.data.keyword.Bluemix_notm}}.
 
 ## Retención de mensajes
-{: #message_retention}
+{: #message_retention_classic}
 
 De forma predeterminada, los mensajes se retienen un máximo de 24 horas
 en Kafka y cada partición está limitada a 1 GB. Si se alcanza 1 GB, se descartarán los mensajes más antiguos para mantenerse dentro
@@ -103,7 +103,7 @@ Puede cambiar el límite de tiempo para la retención de mensajes cuando cree un
 Para obtener información sobre las restricciones de los valores permitidos al crear temas utilizando un cliente Kafka o Kafka Streams, consulte [Uso de la API de Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Creación y supresión de temas en Kafka
-{: #create_delete}
+{: #create_delete_classic}
 
 En Kafka, la creación y supresión de temas son operaciones asíncronas que pueden tardar algún tiempo en completarse. Se recomienda evitar el uso de patrones que dependan de la creación y supresión rápidas de temas o de la supresión y recreación rápidas de temas.
 

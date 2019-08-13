@@ -34,7 +34,7 @@ Puede supervisar la siguiente información de registro:
 <dd>Enviamos el número de bytes de entrada y salida para cada uno de sus temas (cada 15 minutos hay un punto de comprobación). Puede acceder a estas métricas pulsando el botón **Grafana** en el panel de control de {{site.data.keyword.messagehub}} de la consola de {{site.data.keyword.Bluemix_notm}}.
 </dd>
 <dt>Sucesos de temas</dt>
-<dd>También enviamos sucesos cada vez que crea o suprime un tema. Puede acceder a estos eventos pulsando el botón **Kibana** en el panel de control de {{site.data.keyword.messagehub}} de la consola de {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>También enviamos sucesos cada vez que crea o suprime un tema. Puede acceder a estos sucesos pulsando el botón **Kibana** en el panel de control de {{site.data.keyword.messagehub}} de la consola de {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
 

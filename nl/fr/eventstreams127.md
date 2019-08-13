@@ -21,7 +21,7 @@ subcollection: eventstreams
 # Connexion à {{site.data.keyword.messagehub}}
 {: #connecting}
 
-La manière dont vous vous connectez à {{site.data.keyword.messagehub}} varie selon que votre application fonctionne en mode natif ou en mode Cloud Foundry. Toutefois, dans les deux cas, deux éléments d'information sont requis :
+La manière dont vous vous connectez à {{site.data.keyword.messagehub}} varie selon que votre application fonctionne en mode natif ou en mode Cloud Foundry. Toutefois, dans les deux cas, deux éléments d'information sont requis : 
 {: shortdesc}
 
 * Les URL de noeud final pour les API
@@ -42,6 +42,7 @@ Procédez comme suit pour lier votre application et obtenir les clés de service
 Pour connecter une application, la méthode utilisée dépend de l'endroit où l'application est déployée, c'est à dire dans Cloud Foundry ou en dehors de Cloud Foundry, par exemple dans le service Kubernetes.
 
 ## Mise à disposition d'une instance {{site.data.keyword.messagehub}}
+{: #provision_instance}
 
 Vous devez préalablement mettre à disposition une instance de service {{site.data.keyword.messagehub}} pour le plan Standard ou le plan Enterprise. Ensuite, vous devez vous procurer les détails de connexion de l'API {{site.data.keyword.messagehub}} comme suit.
 
@@ -119,7 +120,8 @@ Comme l'application n'est pas encore liée à {{site.data.keyword.messagehub}}, 
 <code>ibmcloud resource service-alias-create <var class="keyword varname">nom_alias</var> --instance-name <var class="keyword varname">nom_de_votre_service</var></code></li>
 <li>Liez votre application à l'alias de service créé précédemment :<br/>
 <code>ibmcloud service bind <var class="keyword varname">nom_de_votre_application</var> <var class="keyword varname">nom_alias</var></code>.<br/>
-<br/>Vous pouvez également mettre à jour votre fichier manifest et envoyer de nouveau l'application par commande push.</li>
+<br/>
+Vous pouvez également mettre à jour votre fichier manifest et envoyer de nouveau l'application par commande push.</li>
 <li>Vérifiez que la variable d'environnement VCAP_SERVICES est disponible dans le contexte d'exécution de votre application :<br/>
 <code>ibmcloud app env <var class="keyword varname">nom_de_votre_application</var></code></li>
 <li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
@@ -135,7 +137,7 @@ Maintenant que vous disposez d'une connexion et des données d'identification, v
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

@@ -28,7 +28,7 @@ subcollection: eventstreams
 * 이벤트 스트림을 스트리밍 분석에 연결하여 강력한 인사이트를 실현합니다.
 * 실시간으로 반응하도록 이벤트 데이터를 여러 애플리케이션에 공개합니다.
 
-Apache Kafka로 빌드하여 커뮤니티에서 발생하는 모든 호출로부터 직접적으로 혜택을 받고 Kafka 클라이언트 API, Kafka Streams, Kafka Connect 및 KSQL도 지원합니다.
+Apache Kafka로 빌드하여 커뮤니티에서 발생하는 모든 호출로부터 직접적으로 혜택을 받고 Kafka 클라이언트 API, Kafka Streams 및 Kafka Connect를 지원합니다.
 
  {{site.data.keyword.messagehub}}에 대한 연결이 항상 인증 정보 사용을 인증하므로 추가 구성을 제공해야 하는 경우에도
 Apache Kafka 도구는 일반적으로 {{site.data.keyword.messagehub}}와 함께 직접적으로 작동합니다.

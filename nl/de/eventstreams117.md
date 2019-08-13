@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -56,7 +56,7 @@ Maximal 1 GB für jede Partition.
 ### Netzdurchsatz
 {: #enterprise_throughput }
 
-Empfohlenes Maximum von 40 MB pro Sekunde mit einem Grenzwert für Lastspitzen von 90 MB pro Sekunde. Der Durchsatz wird als Anzahl der Byte pro Sekunde ausgedrückt, die in einem Cluster sowohl gesendet als auch empfangen werden können.
+Empfohlenes Maximum von 40 MB pro Sekunde mit einem Grenzwert für Lastspitzen von 75 MB pro Sekunde. Der Durchsatz wird als Anzahl der Byte pro Sekunde ausgedrückt, die in einem Cluster sowohl gesendet als auch empfangen werden können.
 
 Der empfohlene Wert basiert auf einer typischen Workload und berücksichtigt die mögliche Auswirkung von operativen Aktionen, wie z. B. internen Aktualisierungen, oder von Schadensmodi, wie z. B. dem Verlust einer Verfügbarkeitszone. Wenn der durchschnittliche Durchsatz den empfohlenen Wert überschreitet, kann es während dieser Situationen zu Leistungseinbußen kommen.
 
@@ -74,7 +74,8 @@ Unbegrenzt bis zum Speichergrenzwert Ihres Plans.
 ### Andere Grenzwerte
 {: #enterprise_limits}
 
-Maximale Nachrichtengröße: 1 MB
+*  Maximale Nachrichtengröße: 1 MB
+*  Maximal gleichzeitig aktive Kafka-Clients: 10000
 
 
 

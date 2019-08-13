@@ -29,7 +29,7 @@ subcollection: eventstreams
 Para utilizar la API, añada una referencia a la última API de cliente {{site.data.keyword.mql}} disponible para Java de la siguiente manera:
 {: shortdesc}
 
-Añada la siguiente referencia al archivo <code>Maven</code>:
+Añada la siguiente referencia al archivo <code>Maven pom</code>:
 
 ```
 <dependency>

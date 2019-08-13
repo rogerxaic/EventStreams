@@ -46,7 +46,7 @@ IAM ポリシーと許可に変更を加えた場合、基礎となるサービ�
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -80,7 +80,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |---------|----------------|
 | すべてのリソースへの全アクセス権限を許可する|適用外   |適用外  |サービス・インスタンス: <var class="keyword varname">your_service_instance</var>|
 | アプリまたはユーザーがトピックの作成または削除を行うのを許可する |リソース・タイプ: <code>cluster</code>   |適用外  |リソース・タイプ: topic <br/><br/>オプション: リソース ID: <var class="keyword varname">name_of_topic</var> |
-| グループ、トピック、およびオフセットをリストする <br/> グループ、トピック、およびブローカーの構成を記述する| リソース・タイプ: <code>cluster</code>      |適用外  |適用外      |
+| グループ、トピック、およびオフセットをリストする <br/> グループ、トピック、およびブローカーの構成を記述する | リソース・タイプ: <code>cluster</code>      |適用外  |適用外      |
 | アプリがクラスターに接続するのを許可する  |リソース・タイプ: <code>cluster</code>| 適用外     |適用外      |
 | アプリが任意のトピックにプロデュースするのを許可する  |リソース・タイプ: <code>cluster</code>|リソース・タイプ: <code>topic</code> |適用外     |
 | アプリが特定のトピックにプロデュースするのを許可する  |リソース・タイプ: <code>cluster</code>|リソース・タイプ: <code>topic</code><br/>リソース ID: <var class="keyword varname">name_of_topic</var>      |適用外     |
@@ -88,12 +88,12 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 | アプリが特定のトピックに接続してそこからコンシュームするのを許可する (コンシューマー・グループなし)  | リソース・タイプ: <code>cluster</code> <br/>リソース・タイプ: <code>topic</code><br/>リソース ID: <var class="keyword varname">name_of_topic</var> |適用外     |適用外     |
 | アプリがトピックをコンシュームするのを許可する (コンシューマー・グループ)  |リソース・タイプ: <code>cluster</code> <br/>リソース・タイプ: <code>topic</code><br/> リソース・タイプ: <code>group</code> |適用外      |適用外     |
 | アプリが一時的にトピックにプロデュースするのを許可する  |リソース・タイプ: <code>cluster</code> <br/> リソース・タイプ: <code>group</code>|リソース・タイプ: <code>topic</code> <br/>リソース ID: <var class="keyword varname">name_of_topic</var> <br/>リソース・タイプ: <code>txnid</code> |適用外     |
-| コンシューマー・グループを削除する |リソース・タイプ: <code>cluster</code> |適用外  |リソース・タイプ: <code>group</code> <br/>リソース ID: <var class="keyword varname">group_ID</var>|
+| コンシューマー・グループを削除する |リソース・タイプ: <code>cluster</code> |適用外  |リソース・タイプ: <code>group</code> <br/>リソース ID: <var class="keyword varname">group_ID</var>      |
 | Streams を使用する |リソース・タイプ: <code>cluster</code></br>リソース・タイプ: <code>group</code>| 適用外  |リソース・タイプ: <code>topic</code>    |
 
 IAM について詳しくは、[IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview) を参照してください。
 
-ポリシーの設定方法に関する例については、[IBM Cloud IAM Service IDs and API Keys ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window} を参照してください。
+ポリシーの設定方法に関する例については、[IBM Cloud IAM Service IDs and API Keys ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window} を参照してください。
 
 
 ## {{site.data.keyword.messagehub}} への接続

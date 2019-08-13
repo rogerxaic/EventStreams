@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 クラシック・プランの {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} サービスに関する一般的な質問と回答。
 
-すべての {{site.data.keyword.messagehub}} プランに関連する質問に対する回答は、[FAQ](docs/services/EventStreams?topic=eventstreams-faqs#faqs) を参照してください。
+すべての {{site.data.keyword.messagehub}} プランに関連する質問に対する回答は、[FAQ](/docs/services/EventStreams?topic=eventstreams-faqs#faqs) を参照してください。
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -56,7 +56,7 @@ subcollection: eventstreams
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## メッセージの保存期間は？
-{: #messages_retained}
+{: #messages_retained_classic}
 
 デフォルトでは、Kafka ではメッセージは最大 24 時間保存され、各パーティションは 1 GB が上限です。 この 1 GB という上限に達したら、この限界を超えないよう、最も古いメッセージが破棄されます。
 
@@ -115,7 +115,7 @@ Kafka クライアントまたは Kafka Streams を使用してトピックを�
 
 Kafka REST API は、1 日 1 回、短時間の再始動期間があります。 
 
-この期間中には、Kafka REST API が利用不可になることがあります。 これが起こった場合、要求を再試行することをお勧めします。 REST API が再始動された後、Kafka コンシューマー・インスタンスの再作成が必要になります。 この場合、REST API は次の JSON を返します。
+この期間中には、Kafka REST API が利用不可になることがあります。 これが起こった場合、要求を再試行することをお勧めします。 REST API が再始動した後、Kafka コンシューマー・インスタンスを再度作成する必要があります。 この場合、REST API は次の JSON を返します。
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

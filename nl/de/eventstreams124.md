@@ -46,7 +46,7 @@ Nachfolgend sind die Zugriffsebenen (auch bekannt als Rollen) beschrieben, die S
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -87,7 +87,7 @@ In der nachfolgenden Tabelle finden Sie eine Zusammenfassung einiger allgemeiner
 | Einer App ermöglichen, eine Verbindung von einem beliebigen Topic herzustellen und Nachrichten von diesem zu verarbeiten (keine Consumergruppe)  |Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code> |Nicht zutreffend    |Nicht zutreffend     |
 | Einer App ermöglichen, eine Verbindung von einem bestimmten Topic herzustellen und Nachrichten von diesem zu verarbeiten (keine Consumergruppe)  | Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code><br/>Ressourcen-ID: <var class="keyword varname">Topicname</var> |Nicht zutreffend     |Nicht zutreffend     |
 | Einer App ermöglichen, ein Topic zu verarbeiten (Consumergruppe)  |Ressourcentyp: <code>cluster</code> <br/>Ressourcentyp: <code>topic</code><br/> Ressourcentyp: <code>group</code> |Nicht zutreffend      |Nicht zutreffend     |
-| Einer App ermöglichen, Nachrichten transaktionsorientiert an ein Topic zu senden  |Ressourcentyp: <code>cluster</code> <br/> Ressourcentyp: <code>group</code>|Ressourcentyp:  <code>topic</code> <br/>Ressourcen-ID: <var class="keyword varname">Topicname</var> <br/>Ressourcentyp: <code>txnid</code> |Nicht zutreffend     |
+| Einer App ermöglichen, Nachrichten transaktionsorientiert an ein Topic zu senden  |Ressourcentyp: <code>cluster</code> <br/> Ressourcentyp: <code>group</code>|Ressourcentyp: <code>topic</code> <br/>Ressourcen-ID: <var class="keyword varname">Topicname</var> <br/>Ressourcentyp: <code>txnid</code> |Nicht zutreffend     |
 | Consumergruppe löschen |Ressourcentyp: <code>cluster</code> |Nicht zutreffend  |Ressourcentyp: <code>group</code> <br/>Ressourcen-ID: <var class="keyword varname">Gruppen-ID</var>      |
 | Verwendung von Streams |Ressourcentyp: <code>cluster</code></br>Ressourcentyp: <code>group</code>| Nicht zutreffend  |Ressourcentyp: <code>topic</code>    |
 
@@ -95,7 +95,7 @@ Weitere Informationen zu IAM finden Sie unter
 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).
 
 Ein Beispiel zum Festlegen von Richtlinien finden Sie unter:
-[IBM Cloud IAM Service IDs and API Keys ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}.
+[IBM Cloud IAM Service IDs and API Keys ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}.
 
 
 ## Verbindung zu {{site.data.keyword.messagehub}} herstellen

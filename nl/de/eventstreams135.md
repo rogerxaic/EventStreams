@@ -29,6 +29,7 @@ Die Art und Weise, wie Sie eine Verbindung zu {{site.data.keyword.messagehub}} h
 Den nachfolgenden Informationen können Sie entnehmen, wie Sie diese Details abrufen können. Die beschriebenen Schritte können sich geringfügig unterscheiden. Stellen Sie daher sicher, dass Sie die für Ihre Instanz geeigneten Schritte ausführen.
 
 ## {{site.data.keyword.messagehub}}-Instanz bereitstellen
+{: #provision_classic}
 
 Als Voraussetzung müssen Sie zuerst eine {{site.data.keyword.messagehub}}-Serviceinstanz für den Plan "Classic" bereitstellen. Rufen Sie anschließend die Verbindungsdetails für die {{site.data.keyword.messagehub}}-API ab, indem Sie die folgenden Tasks ausführen.
 
@@ -104,7 +105,7 @@ Wenn Sie über eine Manifestdatei verfügen, können Sie eine neue App erstellen
 <code>ibmcloud service bind <var class="keyword varname">Ihr_App-Name</var> <var class="keyword varname">Ihr_Servicename</var></code>
 </li>
 <li>Stellen Sie sicher, dass die Umgebungsvariable VCAP_SERVICES in Ihrer Anwendungslaufzeit verfügbar ist, indem Sie den folgenden Befehl ausführen:</br>
- <code>ibmcloud app env <var class="keyword varname">Ihr_App-Name</var></code>.
+ <code>ibmcloud app env <var class="keyword varname">Ihr_App-Name</var></code>. 
 </li>
 <li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Sie müssen möglicherweise ein erneutes Staging Ihrer Anwendung durchführen, damit die Änderungen wirksam werden.</p></li>
@@ -141,7 +142,8 @@ Für Anwendungen, die außerhalb von Cloud Foundry ausgeführt werden, werden di
 <code>ibmcloud service key-create <var class="keyword varname">Ihr_Servicename</var> <var class="keyword varname">neuer_Serviceschlüsselname</var></code><br>
 <br/>
 oder einen vorhandenen Serviceschlüssel verwenden: <br/>
-<code>ibmcloud service keys <var class="keyword varname">Ihr_Servicename</var></code> </li>
+<code>ibmcloud service keys <var class="keyword varname">Ihr_Servicename</var></code> 
+</li>
 <li>Rufen Sie die Details für den Schlüssel ab:</br>
 <code>ibmcloud service key-show <var class="keyword varname">Ihr_Servicename</var> <var class="keyword varname">Serviceschlüsselname</var></code></br>
 Dadurch werden die Serviceschlüsseldetails im JSON-Format zurückgegeben.</li>

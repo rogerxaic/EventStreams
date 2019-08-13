@@ -26,14 +26,14 @@ subcollection: eventstreams
 {{site.data.keyword.objectstorageshort}} ブリッジが接続する基になるサービスが非推奨であるため、{{site.data.keyword.objectstorageshort}} ブリッジも 2018 年 8 月 1 日より非推奨になりました。 
 {: shortdesc}
 
-{{site.data.keyword.objectstorageshort}} サービスの有効期限が切れて使用廃止になると、{{site.data.keyword.objectstorageshort}} ブリッジのすべてのインスタンスもまた使用廃止になります。 詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。 
+{{site.data.keyword.objectstorageshort}} サービスの有効期限が切れて使用廃止になると、{{site.data.keyword.objectstorageshort}} ブリッジのすべてのインスタンスもまた使用廃止になります。 詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。 
 
 別の方法として、[Cloud Object Storage ブリッジ](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)を使用することもできます。 
 {:deprecated}
 
 {{site.data.keyword.objectstorageshort}} ブリッジを使用すると、{{site.data.keyword.messagehub}} の Kafka トピックのデータを、{{site.data.keyword.Bluemix_short}} サービスのインスタンスにアーカイブすることができます。 このブリッジは、メッセージのバッチを Kafka からコンシュームし、そのメッセージ・データをオブジェクトとして {{site.data.keyword.objectstorageshort}} サービス内のコンテナーにアップロードします。
 
-{{site.data.keyword.Bluemix_short}} での優先オブジェクト・ストレージ・サービスは現在は [{{site.data.keyword.IBM_notm}} Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} であることに注意してください。
+{{site.data.keyword.Bluemix_short}} での優先オブジェクト・ストレージ・サービスは現在は [{{site.data.keyword.IBM_notm}} Cloud Object Storage サービス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} であることに注意してください。
 
 {{site.data.keyword.objectstorageshort}} ブリッジを構成することによって、データをオブジェクトとして {{site.data.keyword.objectstorageshort}} にアップロードする方法を制御できます。 例えば、以下のプロパティーを構成できます。
 

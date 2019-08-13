@@ -29,6 +29,7 @@ subcollection: eventstreams
 請閱讀下列資訊以了解如何取得這些詳細資料。步驟可能會微妙地改變，因此請確定您完成適合您實例的步驟。
 
 ## 佈建 {{site.data.keyword.messagehub}} 實例
+{: #provision_classic}
 
 作為先決條件，對於經典方案，都必須先佈建 {{site.data.keyword.messagehub}} 服務實例。接下來，請完成下列作業以取得 {{site.data.keyword.messagehub}} API 連線詳細資料。
 

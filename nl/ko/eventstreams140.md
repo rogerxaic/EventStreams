@@ -22,8 +22,7 @@ subcollection: eventstreams
 
 클래식 플랜의 {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} 서비스와 관련된 일반적인 질문에 대한 답변입니다.
 
-
-모든 {{site.data.keyword.messagehub}} 플랜과 관련된 질문에 대한 답변은 [FAQ](docs/services/EventStreams?topic=eventstreams-faqs#faqs)를 참조하십시오.
+모든 {{site.data.keyword.messagehub}} 플랜과 관련된 질문에 대한 답변은 [FAQ](/docs/services/EventStreams?topic=eventstreams-faqs#faqs)를 참조하십시오.
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -57,7 +56,7 @@ subcollection: eventstreams
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## 메시지가 얼마 동안 보존됩니까?
-{: #messages_retained}
+{: #messages_retained_classic}
 
 기본적으로 메시지는 Kafka에서 각 파티션당 최대 1GB까지 최대 24시간 동안 보존됩니다. 1GB 한계에 도달하면 한계를 넘지 않도록 가장 오래된 메시지가 삭제됩니다.
 
@@ -119,7 +118,7 @@ Kafka REST API는 단기간 동안 하루에 한 번 다시 시작합니다.
 
 이 기간 동안에 Kafka REST API를
 사용하지 못하게 될 수 있습니다. 이런 상황이 발생하는 경우, 요청을 재시도하십시오. REST API가 다시 시작된 후에
-Kafka 이용자 인스턴스를 재작성해야 합니다. 이런 경우, REST API는 다음과 같은 JSON을 리턴합니다.
+Kafka 이용자 인스턴스를 다시 작성해야 합니다. 이런 경우, REST API는 다음과 같은 JSON을 리턴합니다.
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

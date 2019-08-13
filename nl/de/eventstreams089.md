@@ -26,7 +26,7 @@ subcollection: eventstreams
 Da der zugrunde liegende Service, zu dem die {{site.data.keyword.objectstorageshort}}-Bridge eine Verbindung herstellt, nicht mehr verwendet wird, wird auch die {{site.data.keyword.objectstorageshort}}-Bridge ab 01. August 2018 nicht mehr verwendet. 
 {: shortdesc}
 
-Wenn der {{site.data.keyword.objectstorageshort}}-Service eingestellt wird, werden auch alle Instanzen der {{site.data.keyword.objectstorageshort}}-Bridge außer Betrieb gesetzt. Weitere Informationen finden Sie in der [Ankündigung zur Einstellung der Unterstützung: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+Wenn der {{site.data.keyword.objectstorageshort}}-Service eingestellt wird, werden auch alle Instanzen der {{site.data.keyword.objectstorageshort}}-Bridge außer Betrieb gesetzt. Weitere Informationen finden Sie in der [Ankündigung zur Einstellung der Unterstützung: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
 Als Alternative kann die [Cloud Object Storage-Bridge](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge) verwendet werden. 
 {:deprecated}
@@ -36,7 +36,7 @@ Daten aus den Kafka-Topics in {{site.data.keyword.messagehub}} in einer Instanz 
 Nachrichten von Kafka im Stapelbetrieb und lädt die Nachrichtendaten als Objekte in einen Container
 im {{site.data.keyword.objectstorageshort}}-Service.
 
-Beachten Sie, dass der bevorzugte Objektspeicher in {{site.data.keyword.Bluemix_short}} jetzt der [{{site.data.keyword.IBM_notm}} Cloud Object Storage-Service ist. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+Beachten Sie, dass der bevorzugte Objektspeicher in {{site.data.keyword.Bluemix_short}} jetzt der [{{site.data.keyword.IBM_notm}} Cloud Object Storage-Service ist. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 Durch Konfigurieren der
 {{site.data.keyword.objectstorageshort}}-Bridge können Sie steuern, wie die Daten
@@ -134,8 +134,7 @@ Führen Sie die folgenden Schritte aus, um Daten nach dem Offset der Kafka-Nachr
 
     Die Objektnamen, die von einer auf diese Weise konfigurierten Bridge generiert werden, enthalten das Präfix
     `"offset=<kafka_offset>"`, wobei `"<kafka_offset>"` der ersten Kafka-Nachricht entspricht,
-    die in dieser Partition (die Gruppe von Objekten mit diesem Präfix) gespeichert ist.
-Wenn
+    die in dieser Partition (die Gruppe von Objekten mit diesem Präfix) gespeichert ist. Wenn
     eine Bridge z. B. Objekte mit Namen wie im folgenden Beispiel generiert,
     enthalten `<object_a>` und `<object_b>` Nachrichten mit Offsets im
     Bereich von 0 bis 999, `<object_c>` enthält Nachrichten mit Offsets im Bereich von 1000 bis

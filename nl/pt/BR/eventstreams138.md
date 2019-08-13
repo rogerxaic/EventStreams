@@ -28,10 +28,10 @@ Para descobrir o terminal de API Administration RESTful, seu aplicativo
 pode usar a propriedade `kafka_admin_url` na variável de ambiente VCAP_SERVICES
             do aplicativo.
 
-É possível fazer download da especificação completa para a API do [admin-rest-api.yaml ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window}.
+É possível fazer download da especificação completa para a API do [admin-rest-api.yaml ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api-classic-plan-only/admin-rest-api.yaml){:new_window}.
 Para visualizar o arquivo swagger, use as ferramentas Swagger, por exemplo, o [Editor
 Swagger ![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://editor.swagger.io/#/){:new_window}.
 
-O diretório [{{site.data.keyword.messagehub}} admin-rest-api ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api){:new_window} também contém um conjunto útil de exemplos de como é possível chamar a API RESTful de administração.
+O diretório [{{site.data.keyword.messagehub}} admin-rest-api ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api-classic-plan-only){:new_window} também contém um conjunto útil de exemplos de como é possível chamar a API RESTful de administração.
 
 

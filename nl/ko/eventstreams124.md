@@ -46,7 +46,7 @@ IAM 정책 및 권한을 변경하는 경우 때때로 이러한 변경사항이
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -89,13 +89,13 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 | 앱이 토픽을 이용할 수 있음(이용자 그룹)  |리소스 유형: <code>cluster</code> <br/>리소스 유형: <code>topic</code><br/> 리소스 유형: <code>group</code> |해당사항 없음      |해당사항 없음     |
 | 앱이 트랜잭션적으로 토픽을 생성할 수 있음  |리소스 유형: <code>cluster</code> <br/> 리소스 유형: <code>group</code>|리소스 유형: <code>topic</code> <br/>리소스 ID: <var class="keyword varname">name_of_topic</var> <br/>리소스 유형: <code>txnid</code> |해당사항 없음     |
 | 이용자 그룹 삭제 |리소스 유형: <code>cluster</code> |해당사항 없음  |리소스 유형: <code>group</code> <br/>리소스 ID: <var class="keyword varname">group_ID</var>      |
-| Streams 사용 목적 |리소스 유형: <code>cluster</code></br> 리소스 유형: <code>group</code> |해당사항 없음  |리소스 유형: <code>topic</code>    |
+| Streams 사용 목적 |리소스 유형: <code>cluster</code></br> 리소스 유형: <code>group</code>|해당사항 없음  |리소스 유형: <code>topic</code>    |
 
 IAM에 대한 자세한 정보는
 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)를 참조하십시오.
 
 정책을 설정하는 방법에 대한 예는
-[IBM Cloud IAM 서비스 ID 및 API 키 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}를 참조하십시오.
+[IBM Cloud IAM 서비스 ID 및 API 키 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}를 참조하십시오.
 
 
 ## {{site.data.keyword.messagehub}}에 연결

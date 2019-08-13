@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #rest_producer_using}
 
 
-** REST 제작자 API는 새 {{site.data.keyword.messagehub}} 표준 플랜의 일부로만 사용 가능합니다.**
+** REST 제작자 API는 {{site.data.keyword.messagehub}} 표준 및 엔터프라이즈 플랜의 일부로만 사용 가능합니다.**
 <br/>
 
 {{site.data.keyword.messagehub}}는 기존 시스템을 {{site.data.keyword.messagehub}} Kafka 클러스터에 연결하는 데 도움이 되는 REST API를 제공합니다. API를 사용하여 RESTful API를 지원하는 시스템과 {{site.data.keyword.messagehub}}를 통합할 수 있습니다.
@@ -47,7 +47,7 @@ API 엔드포인트에 대한 URL은 <code>kafka_http_url</code> 특성에서 �
 인증하려면 다음 방법 중 하나를 사용하십시오.
 
 * **기본 인증을 사용하여 인증:**<br/>
-    위의 오브젝트의 <code>user</code> 및 <code>api_key</code> 특성을 사용자 이름 및 비밀번호로 사용하십시오. 이러한 값을 <code>Basic <단일 콜론(:)으로 결합된 username:password의 base64 인코딩></code> 양식으로 HTTP 요청의 <code>Authorization</code> 헤더에 배치하십시오.
+    위의 오브젝트의 <code>user</code> 및 <code>api_key</code> 특성을 사용자 이름 및 비밀번호로 사용하십시오. 이러한 값을 <code>Basic &lt;단일 콜론(:)으로 결합된 사용자 이름과 비밀번호의 base64 인코딩&gt;</code> 양식으로 HTTP 요청의 <code>Authorization</code> 헤더에 배치하십시오.
 
 * **전달자 토큰을 사용하여 인증:**<br/>
     IBM Cloud CLI를 사용하여 토큰을 얻으려면 먼저 IBM Cloud에 로그인한 후 다음 명령을 실행하십시오. 

@@ -22,7 +22,7 @@ subcollection: eventstreams
 ** {{site.data.keyword.messagehub}} 橋接器僅在經典方案上提供。**
 <br/>
 
-{{site.data.keyword.messagehub}} 經典方案還支持用於連接其他一些系統的橋接器。橋接器是 {{site.data.keyword.messagehub}} 與另一個服務之間的單向鏈結。橋接器容許從 {{site.data.keyword.messagehub}} 讀取資料然後寫入另一個服務，或是從另一個服務讀取資料然後寫入 {{site.data.keyword.messagehub}}。橋接器可以從另一個系統取得訊息然後發佈到主題，或是從主題取用訊息然後傳送到另一個系統。如此，您可以使用 {{site.data.keyword.messagehub}} 和其他系統整合，而不需撰寫程式碼。
+{{site.data.keyword.messagehub}} 經典方案也支援對於其他精選系統的橋接器。橋接器是 {{site.data.keyword.messagehub}} 與另一個服務之間的單向鏈結。橋接器容許從 {{site.data.keyword.messagehub}} 讀取資料然後寫入另一個服務，或是從另一個服務讀取資料然後寫入 {{site.data.keyword.messagehub}}。橋接器可以從另一個系統取得訊息然後發佈到主題，或是從主題取用訊息然後傳送到另一個系統。如此，您可以使用 {{site.data.keyword.messagehub}} 和其他系統整合，而不需撰寫程式碼。
 {:shortdesc}
 
 使用 {{site.data.keyword.messagehub}} 橋接器的主要好處如下：  
@@ -41,8 +41,8 @@ subcollection: eventstreams
 
 * 我們提供下列類型的橋接器： 
   - [MQ 橋接器](/docs/services/EventStreams?topic=eventstreams-mq_bridge)，它會從 {{site.data.keyword.IBM}} MQ 取得訊息資料，然後傳送到 {{site.data.keyword.messagehub}} 的主題。我們打算在未來支援更廣泛的橋接器範圍。
-  - [Cloud Object Storage 橋接器](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)，它會將 {{site.data.keyword.messagehub}} 資料傳送到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 服務的實例。 
-  - [{{site.data.keyword.objectstorageshort}} 橋接器](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge)已從 2018 年 8 月 1 日淘汰。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。
+  - [Cloud Object Storage 橋接器](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)，它會將 {{site.data.keyword.messagehub}} 資料傳送到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 服務的實例。 
+  - [{{site.data.keyword.objectstorageshort}} 橋接器](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge)已從 2018 年 8 月 1 日淘汰。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。
 * 目前，橋接器可以用於所有 {{site.data.keyword.Bluemix_notm}} 公用環境。橋接器無法用於「{{site.data.keyword.Bluemix_short}} 專用」。
 * 您可以用下列兩種方式管理橋接器：
   - 使用 [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-docs){:new_window}，這是現有 {{site.data.keyword.messagehub}} 管理 API 的延伸。您也可以在 [message-hub-docs ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-docs){:new_window} 找到如何使用 curl 管理橋接器生命週期的範例。我們可能會在繼續開發橋接器時變更此 REST API。我們打算讓這個 API 穩定化。

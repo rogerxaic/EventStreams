@@ -83,7 +83,7 @@ subcollection: eventstreams
 
 オフセット保存はシステム全体が対象であるため、個々のトピック・レベルで設定することはできません。 すべてのコンシューマー・グループは、ログ保存を最大 30 日に増やしたトピックを使用する場合でも、保管されるオフセットは 7 日間のみです。 
 
-内部 Kafka <code>__consumer_offsets</code> トピックが読み取り専用として可視になります。
+内部 Kafka <code>__consumer_offsets</code> トピックが読み取り専用として可視になります。 
 このトピックは、いかなる場合も絶対に管理しないでください。 
 
 <!--following message retention info duplicted in eventstreams057-->

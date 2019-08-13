@@ -34,9 +34,9 @@ Wenn Sie den Plan "Classic" verwenden, finden Sie im Abschnitt [Problem an das {
 ## Nützliche Links
 {: #troubleshooting_links notoc}
 
-*  [{{site.data.keyword.Bluemix_short}} - Kostenlose Testversion ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [Kafka-Java-Beispiel für {{site.data.keyword.messagehub}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [Webanwendungen mit {{site.data.keyword.Bluemix_notm}} erstellen und Ihre App mit Cloud Foundry bereitstellen![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+*  [Webanwendungen mit {{site.data.keyword.Bluemix_notm}} erstellen und App mit Cloud Foundry bereitstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+   (/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Apache Kafka-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/documentation.html){: new_window}
 *  [Apache Kafka 2.2.0-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
 *  [{{site.data.keyword.Bluemix_notm}} - Informationen zur Preisstruktur ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}

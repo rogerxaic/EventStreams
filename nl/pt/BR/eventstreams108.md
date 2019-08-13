@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:faq: data-hd-content-type='faq'}
 
-# FAQs
+# Perguntas mais frequentes
 {: #faqs}
 
 Respostas para perguntas comuns sobre o serviço do {{site.data.keyword.IBM}}
@@ -87,7 +87,7 @@ A retenção de compensação é feita no sistema inteiro, portanto, não é pos
 em um nível de tópico individual. Todos os grupos de consumidores obtêm somente 7 dias de compensações armazenadas, mesmo se usando um tópico com uma retenção de log que foi aumentada para
 o máximo de 30 dias. 
 
-O tópico interno <code>__consumer_offsets</code> do Kafka é visível como somente leitura.
+O tópico interno <code>__consumer_offsets</code> do Kafka é visível como somente leitura. 
 É altamente recomendado não tentar gerenciar o tópico de nenhuma maneira. 
 
 <!--following message retention info duplicted in eventstreams057-->

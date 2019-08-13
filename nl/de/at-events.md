@@ -24,7 +24,7 @@ subcollection: eventstreams
 # {{site.data.keyword.cloudaccesstrailshort}}-Ereignisse 
 {: #at_events}
 
-Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie im Rahmen der Pläne "Standard" und "Enterprise" verfolgen, wie Benutzer und Anwendungen mit dem {{site.data.keyword.messagehub}}-Service in {{site.data.keyword.Bluemix}} interagieren.
+Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie im Rahmen der Pläne "Standard" und "Enterprise" verfolgen, wie Benutzer und Anwendungen mit dem {{site.data.keyword.messagehub}}-Service in {{site.data.keyword.Bluemix}} interagieren. 
 {: shortdesc}
 
 Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die eine Statusänderung eines Service in {{site.data.keyword.Bluemix_notm}} bewirken. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}.
@@ -34,7 +34,7 @@ Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutze
 ## Ereignisliste
 {: #events}
 
-<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
+<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://cloud.ibm.com/docs/services/cloud-activity-tracker/services?topic=cloud-activity-tracker-cf#catalog. -->
 
 {{site.data.keyword.messagehub}} generiert im Rahmen der Pläne "Standard" und "Enterprise" automatisch Ereignisse, mit denen Sie Aktivitäten verfolgen können, die für Ihren Service ausgeführt werden.
 

@@ -20,11 +20,11 @@ subcollection: eventstreams
 # 經典方案的已知限制 
 {: #restrictions_classic}
 
-如果您在經典方案上使用 {{site.data.keyword.messagehub}} 時發現問題，請檢查這些已知限制和暫行解決方法。
+如果您在經典方案上使用 {{site.data.keyword.messagehub}} 時發現問題，請檢閱這些已知限制和暫行解決方法。
 {: shortdesc}
 
 ## 如果 Kafka 引導伺服器失敗，Java Kafka 呼叫不會進行失效接手
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### 問題
 {: #calls_failover_problem notoc}
@@ -81,14 +81,14 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 
 
 ## 主題及分割區
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  主題名稱限制最多為 100 個字元。
 *  一個主題的預設分割區數目是一 (1)。
 *  每個 {{site.data.keyword.Bluemix_notm}} 空間有 100 個分割區的限制。若要建立更多分割區，您必須使用新的 {{site.data.keyword.Bluemix_notm}} 空間。
 
 ## 訊息保留
-{: #message_retention}
+{: #message_retention_classic}
 
 依預設，訊息在 Kafka 中的保留時間為最長 24 小時，每個分割區的上限為 1 GB。如果到達 1 GB 的限制，將會捨棄最舊的訊息，以維持在限制之內。
 
@@ -97,7 +97,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 如需使用 Kafka 用戶端或 Kafka Streams 建立主題時所接受設定之限制的相關資訊，請參閱[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
 
 ## 在 Kafka 中建立及刪除主題
-{: #create_delete}
+{: #create_delete_classic}
 
 在 Kafka 中，主題建立及刪除是非同步作業，可能需要一些時間才能完成。建議您避免使用依賴快速建立及刪除主題的模式，或是使用依賴快速刪除並重建主題的模式。
 
@@ -130,4 +130,4 @@ Kafka REST API 每天會重新啟動一次，需要一小段時間。在此期�
 ## Kafka 高階消費者 API
 {: #kafka_consumer}
 
-您無法使用 Apache Kafka 0.8.2 簡單或高階消費者 API 與 {{site.data.keyword.messagehub}} 搭配。可以改為使用 Kafka Consumer API 的最早支援版本，即 0.10。
+您無法使用 Apache Kafka 0.8.2 簡單或高階消費者 API 與 {{site.data.keyword.messagehub}} 搭配。您可以改用最早版本的受支援 Kafka 消費者 API，也就是 0.10。

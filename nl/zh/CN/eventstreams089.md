@@ -26,14 +26,14 @@ subcollection: eventstreams
 因为 {{site.data.keyword.objectstorageshort}} 网桥连接的底层服务已弃用，所以 {{site.data.keyword.objectstorageshort}} 网桥从 2018 年 8 月 1 日起也已弃用。
 {: shortdesc}
 
-在 {{site.data.keyword.objectstorageshort}} 服务达到使用期限被废弃后，{{site.data.keyword.objectstorageshort}} 网桥的所有实例也将被废弃。有关更多信息，请参阅[弃用声明：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
+在 {{site.data.keyword.objectstorageshort}} 服务达到使用期限被废弃后，{{site.data.keyword.objectstorageshort}} 网桥的所有实例也将被废弃。有关更多信息，请参阅[弃用声明：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
 
 作为替代方法，您可以使用 [Cloud Object Storage 网桥](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)。
 {:deprecated}
 
 {{site.data.keyword.objectstorageshort}} 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 {{site.data.keyword.Bluemix_short}} 服务的实例中。网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 {{site.data.keyword.objectstorageshort}} 服务中的容器。
 
-请注意，{{site.data.keyword.Bluemix_short}} 中的首选 Object Storage 服务现在为 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服务。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
+请注意，{{site.data.keyword.Bluemix_short}} 中的首选 Object Storage 服务现在为 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服务。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
 
 通过配置 {{site.data.keyword.objectstorageshort}} 网桥，可以控制数据如何作为对象上传到 {{site.data.keyword.objectstorageshort}}。例如，可以配置的属性如下所示：
 

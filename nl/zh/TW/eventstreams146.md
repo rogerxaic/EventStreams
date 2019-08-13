@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 ## 將 Kafka Java 用戶端從 0.9.X 或 0.10.X 移轉到更新的用戶端版本
-{: #kafka_migrate}
+{: #kafka_migrate_classic}
 
 
 如果您使用 Java 用戶端，可以使用公開提供的 Kafka 用戶端 0.10 或更新版本。 

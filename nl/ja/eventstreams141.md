@@ -49,7 +49,7 @@ subcollection: eventstreams
 		    <th id="client" scope="col">クライアント</th>
 		    <th id="language" scope="col">言語</th>
 			<th id="version" scope="col">推奨されるバージョン</th>
-		    <th id="minimum version" scope="col">サポートされる最小バージョン [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">サポートされる最小バージョン [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">サンプルのリンク先</th>
         </tr>
 			<tr>
@@ -59,9 +59,9 @@ subcollection: eventstreams
 			<td>[Apache Kafka クライアント![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>最新</td>
-			<td>0.10.2 <p> これよりも古いクライアントについて詳しくは、[後方互換性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)を参照してください。</p></td>
-			<td>[Java コンソール・サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
-			[Liberty サンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			<td>0.10.2 <p> これよりも古いクライアントについて詳しくは、[後方互換性](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic)を参照してください。</p></td>
+			<td>[ Java コンソール・サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
+			[Liberty サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
 			<tr>
@@ -98,12 +98,13 @@ subcollection: eventstreams
 
 </table>
 ### 脚注
-1. {: #footnote1}このバージョンは、継続的なテストで検証した最も古いバージョンです。 通常、これは過去 12 カ月以内に使用可能な初期バージョンですが、重大な問題が存在することがわかっている場合は、それよりも新しい可能性があります。
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}このバージョンは、継続的なテストで検証した最も古いバージョンです。 通常、これは過去 12 カ月以内に使用可能な初期バージョンですが、重大な問題が存在することがわかっている場合は、それよりも新しい可能性があります。
 
 ## 後方互換性 (クラシック・プランのみ)
 {: #compatibility_classic}
 
-後方互換性を保つために、{{site.data.keyword.messagehub}} クラシック・プランで Apache Kafka 0.9 Java クライアントを使用できます。しかし、このクライアントの存続期間のため、使用しないことを強くお勧めします。 このクライアント・バージョンを使用することにした場合は、追加の[ログイン・モジュール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)が必要です。
+後方互換性を保つために、{{site.data.keyword.messagehub}} クラシック・プランで Apache Kafka 0.9 Java クライアントを使用できます。 しかし、このクライアントの存続期間のため、使用しないことを強くお勧めします。 このクライアント・バージョンを使用することにした場合は、追加の[ログイン・モジュール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-0.9/message-hub-login-library)が必要です。
 
 0.11 より前のクライアント・バージョンでは、より新しい Kafka サーバー・バージョンに接続するために必要な追加のプロトコル変換があるため、パフォーマンスが低下する可能性があります。
 

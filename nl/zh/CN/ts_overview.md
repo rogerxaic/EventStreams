@@ -33,9 +33,9 @@ subcollection: eventstreams
 ## 有用的链接
 {: #troubleshooting_links notoc}
 
-*  [{{site.data.keyword.Bluemix_short}} 免费试用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [{{site.data.keyword.messagehub}} Java Kafka 样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
 *  [使用 {{site.data.keyword.Bluemix_notm}} 创建 Web 应用程序和使用 Cloud Foundry 部署应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+   使用 Cloud Foundry 的应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Apache Kafka 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://kafka.apache.org/documentation.html){: new_window}
 *  [Apache Kafka 2.2.0 客户机 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
 *  [{{site.data.keyword.Bluemix_notm}} 定价信息 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}

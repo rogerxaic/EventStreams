@@ -59,6 +59,7 @@ JVM(Java Virtual Machine)은 DNS 검색을 캐시합니다. JVM이 호스트 이
 ```
 
 ### JVM의 TTL 수정 방법
+{: #jvm_ttl notoc}
 * 모든 애플리케이션을 위한 JVM의 TTL을 수정하려면 <code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code> 파일에서 <code>networkaddress.cache.ttl</code> 값을 설정하십시오.
 * 지정된 애플리케이션을 위한 JVM의 TTL을 수정하려면 애플리케이션 코드에서 다음과 같이 <code>networkaddress.cache.ttl</code>을 설정하십시오.
 ```
@@ -66,7 +67,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Java Kafka 호출이 제한시간을 초과할 수 있음
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### 문제점
 {: #calls_timeout_problem notoc}

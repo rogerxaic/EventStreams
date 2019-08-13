@@ -89,7 +89,7 @@ subcollection: eventstreams
 			<td>댈러스(us-south)</br>
 			런던(eu-gb)</br>
 			시드니(au-syd)</br>
-			프랑크푸르트(eu-de) - {{site.data.keyword.mql}} API가 없음</td>
+			프랑크푸르트(eu-de) - {{site.data.keyword.mql}} API가 없음 </td>
 
 		</tr>
 		<tr>

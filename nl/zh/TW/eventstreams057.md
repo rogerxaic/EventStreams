@@ -59,6 +59,7 @@ Java 虛擬機器 (JVM) 會快取 DNS 查閱。當 JVM 解析主機名稱的 IP 
 ```
 
 ### 如何修改 JVM 的 TTL
+{: #jvm_ttl notoc}
 * 若要針對所有應用程式修改 JVM 的 TTL，請在 <code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code> 檔中設定 <code>networkaddress.cache.ttl</code> 值。
 * 若要針對給定的應用程式修改 JVM TTL，請在您的應用程式碼設定 <code>networkaddress.cache.ttl</code>，如下所示：
 ```
@@ -66,7 +67,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Java Kafka 呼叫可能逾時
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### 問題
 {: #calls_timeout_problem notoc}

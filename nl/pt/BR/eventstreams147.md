@@ -26,7 +26,7 @@ Os clientes Kafka existem em múltiplos idiomas e fornecemos instruções para a
     <caption>Tabela 1. Suporte ao cliente Kafka nos planos Padrão e Corporativo</caption>
       <tr>
 	        <th></th>
-		    <th>Plano Classic</th>
+		    <th>Plano Clássico</th>
 		    
         </tr>
 	  		<tr>

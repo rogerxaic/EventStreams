@@ -30,7 +30,7 @@ Puede utilizar {{site.data.keyword.messagehub}} para completar las tareas siguie
 reaccionar
 en tiempo real.
 
-Al estar creado con Apache Kafka, se beneficia directamente de toda la innovación que se incorpora en la comunidad y da soporte a las API de cliente Kafka, Kafka Streams, Kafka Connect y también KSQL.
+Al estar creado con Apache Kafka, se beneficia directamente de toda la innovación que se incorpora en la comunidad y da soporte a las API de cliente Kafka, a Kafka Streams y a Kafka Connect.
 
 Las herramientas de Apache Kafka suelen funcionar directamente con {{site.data.keyword.messagehub}}, aunque no necesita proporcionar una configuración adicional ya que las conexiones con {{site.data.keyword.messagehub}} siempre se autentican mediante credenciales.
 

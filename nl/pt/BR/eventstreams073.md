@@ -54,7 +54,8 @@ como os seguidores.<p>
 <p>Se um tópico tiver mais de uma partição, ele permitirá que os dados sejam alimentados em paralelo para aumentar o rendimento distribuindo as partições no cluster. O número de partições também influencia o balanceamento da carga de trabalho entre os consumidores.</p>
 <p>Para obter mais informações, consulte [Liderança de partição](/docs/services/EventStreams?topic=eventstreams-partition_leadership#partition_leadership).</dd>
 <dt>Produtor</dt>
-<dd>Um processo que publica fluxos de mensagens para tópicos do Kafka. Um produtor pode publicar em um ou mais tópicos e, opcionalmente, escolher a partição que armazena os dados.<br/></dd>
+<dd>Um processo que publica fluxos de mensagens para tópicos do Kafka. Um produtor pode publicar
+            um ou mais tópicos e escolher, opcionalmente, a partição que armazena os dados.<br/></dd>
 <br/>
 <dt>Consumidor </dt>
 <dd>Um processo que consome mensagens dos tópicos do Kafka e processa o feed de mensagens. Um consumidor pode

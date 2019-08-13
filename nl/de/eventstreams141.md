@@ -49,7 +49,7 @@ Möglicherweise können weitere Clients anderer Anbieter, die die Mindestanforde
 		    <th id="client" scope="col">Client</th>
 		    <th id="language" scope="col">Sprache</th>
 			<th id="version" scope="col">Empfohlene Version</th>
-		    <th id="minimum version" scope="col">Unterstützte Mindestversion [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">Unterstützte Mindestversion [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">Link zum Beispiel</th>
         </tr>
 			<tr>
@@ -59,7 +59,7 @@ Möglicherweise können weitere Clients anderer Anbieter, die die Mindestanforde
 			<td>[Apache Kafka-Client ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>Neueste Version</td>
-			<td>0.10.2 <p> Informationen zu älteren Clients finden Sie in [Kompatibilität mit früheren Versionen](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
+			<td>0.10.2 <p> Informationen zu älteren Clients finden Sie in [Kompatibilität mit früheren Versionen](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic).</p></td>
 			<td>[Beispiel für Java-Konsole
 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Beispiel für Liberty
@@ -100,7 +100,8 @@ Möglicherweise können weitere Clients anderer Anbieter, die die Mindestanforde
 
 </table>
 ### Fußnote
-1. {: #footnote1}Hierbei handelt es sich um die früheste Version, die in kontinuierlichen Tests validiert wurde. Normalerweise ist dies ursprüngliche, innerhalb der letzten 12 Monate verfügbare Version, es kann jedoch auch eine neuere Version sein, falls signifikante Probleme bekannt sind.
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}Hierbei handelt es sich um die früheste Version, die in kontinuierlichen Tests validiert wurde. Normalerweise ist dies ursprüngliche, innerhalb der letzten 12 Monate verfügbare Version, es kann jedoch auch eine neuere Version sein, falls signifikante Probleme bekannt sind.
 
 ## Abwärtskompatibilität (nur Plan "Classic")
 {: #compatibility_classic}

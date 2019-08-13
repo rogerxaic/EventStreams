@@ -29,6 +29,7 @@ La forma de conectar con {{site.data.keyword.messagehub}} varía en función de 
 Revise la siguiente información sobre cómo obtener esta información. Los pasos pueden variar ligeramente, por lo que debe asegurarse de que ha completado los pasos adecuados para la instancia.
 
 ## Suministro de una instancia de {{site.data.keyword.messagehub}}
+{: #provision_classic}
 
 Como requisito previo, en primer lugar debe suministrar una instancia de servicio de {{site.data.keyword.messagehub}} para el plan Clásico. A continuación, obtenga los detalles de la conexión de API de {{site.data.keyword.messagehub}}; para ello debe llevar a cabo las siguientes tareas.
 
@@ -92,9 +93,9 @@ Solo se listarán los primeros cinco intermediarios en VCAP_SERVICES. Si tiene m
 <li>Asegúrese de que está en la organización y el espacio de Cloud Foundry que desea. Puede navegar de forma interactiva ejecutando el mandato siguiente:<br/>
 <code>ibmcloud target --cf</code>
 </li>
-<li>Busque la app:<br/> <code>ibmcloud app list</code> <br/>
+<li>Busque su app:<br/> <code>ibmcloud app list</code> <br/>
 </br>
-Si tiene un archivo de manifiesto, puede crear una app nueva con este mandato:</br>
+Si tiene un archivo de manifiesto, puede crear una app nueva ejecutando:</br>
 <code>ibmcloud app push</code>
 </li>
 <li>Busque el servicio:</br>

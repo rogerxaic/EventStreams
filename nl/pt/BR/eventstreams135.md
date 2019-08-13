@@ -31,6 +31,7 @@ Leia as informações a seguir para saber como obter esses detalhes. As etapas p
 conclua as etapas apropriadas para a sua instância.
 
 ## Provisão de uma instância do  {{site.data.keyword.messagehub}}
+{: #provision_classic}
 
 Como um pré-requisito, deve-se primeiro fornecer uma instância de serviço do {{site.data.keyword.messagehub}} para o plano Clássico. Em seguida, obtenha os detalhes da conexão da API do {{site.data.keyword.messagehub}} concluindo as tarefas a
 seguir.
@@ -104,10 +105,10 @@ acessá-las como variáveis de ambiente.
 <li>Verifique se você está na organização e no espaço desejados do Cloud Foundry. É possível navegar interativamente executando o comando a seguir:<br/>
 <code>ibmcloud target --cf</code>
 </li>
-<li>Localize seu aplicativo:<br/><code>ibmcloud app list</code><br/>
+<li>Localize o seu aplicativo:<br/> <code>ibmcloud app list</code> <br/>
 </br>
-Se você tiver um arquivo de manifesto, será possível criar um novo app executando:</br>
-<code>push do aplicativo ibmcloud</code>
+Se você tiver um arquivo manifest, poderá criar um novo aplicativo executando:</br>
+<code>ibmcloud app push</code>
 </li>
 <li>Localize seu serviço:</br>
 <code>ibmcloud service list</code>
@@ -116,7 +117,7 @@ Se você tiver um arquivo de manifesto, será possível criar um novo app execut
 <code>ibmcloud service bind <var class="keyword varname">your_app_name</var> <var class="keyword varname">your_service_name</var></code>
 </li>
 <li>Verifique se a variável de ambiente VCAP_SERVICES está disponível em seu tempo de execução do aplicativo executando:</br>
- <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>.
+ <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>. 
 </li>
 <li>Passe essas credenciais para o seu aplicativo. Especifique <code>token</code> como o nome de usuário e <var class="keyword varname">api_key</var> como a sua senha. Separe
 <code>token</code> e <var class="keyword varname">api_key</var> com dois-pontos. Para obter mais informações, consulte [Configurando seu cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
@@ -156,7 +157,8 @@ aparece na lista de credenciais.
 <li>É possível criar uma chave de serviço:<br>
 <code>ibmcloud service key-create <var class="keyword varname">your_service_name</var> <var class="keyword varname">new_service_key_name</var></code><br>
 <br/>
-ou use uma chave de serviço existente: <br/><code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code>
+ou usar uma chave de serviço existente: <br/>
+<code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code> 
 </li>
 <li>Obtenha os detalhes para a chave:</br><code>ibmcloud service key-show <var class="keyword varname">your_service_name</var><var class="keyword varname">service _key_name</var></code></br> Isso retorna os detalhes da chave de serviço no formato JSON.</li>
 <li>Passe essas credenciais para o seu aplicativo. Especifique <code>token</code> como o nome de usuário e <var class="keyword varname">api_key</var> como a sua senha. Separe

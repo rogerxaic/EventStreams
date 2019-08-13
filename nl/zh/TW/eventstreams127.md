@@ -42,6 +42,7 @@ subcollection: eventstreams
 若要連接應用程式，使用的方法取決於應用程式部署所在的位置，究竟是在 Cloud Foundry 內還是部署在 Cloud Foundry 之外，例如在 Kubernetes 服務中。
 
 ## 佈建 {{site.data.keyword.messagehub}} 實例
+{: #provision_instance}
 
 作為必要條件，您必須先針對標準方案或企業方案佈建 {{site.data.keyword.messagehub}} 服務實例。接下來，請完成下列作業以取得 {{site.data.keyword.messagehub}} API 連線詳細資料。
 
@@ -137,7 +138,7 @@ subcollection: eventstreams
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

@@ -29,6 +29,7 @@ subcollection: eventstreams
 세부사항을 확인하려면 다음 정보를 읽어 보십시오. 단계는 약간 다를 수 있으므로 인스턴스에 맞는 적절한 단계를 완료했는지 확인하십시오.
 
 ## {{site.data.keyword.messagehub}} 인스턴스 프로비저닝
+{: #provision_classic}
 
 전제조건으로 먼저 클래식 플랜에 대한 {{site.data.keyword.messagehub}} 서비스 인스턴스를 프로비저닝해야 합니다. 그런 다음, 다음 태스크를 완료하여 {{site.data.keyword.messagehub}} API 연결 세부사항을 얻으십시오.
 
@@ -103,7 +104,7 @@ Manifest 파일이 있으면 다음을 실행하여 새 앱을 작성할 수 있
 <code>ibmcloud service bind <var class="keyword varname">your_app_name</var> <var class="keyword varname">your_service_name</var></code>
 </li>
 <li>다음을 실행하여 VCAP_SERVICES 환경 변수가 애플리케이션 런타임에서 사용 가능한지 확인하십시오.</br>
- <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>
+ <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code> 
 </li>
 <li>인증 정보를 애플리케이션에 전달하십시오. 사용자 이름으로 <code>token</code>을 지정하고 비밀번호로 <var class="keyword varname">api_key</var>를 지정하십시오. 콜론으로 <code>token</code>과 <var class="keyword varname">api_key</var>를 구분하십시오. 자세한 정보는 [클라이언트에 연결](/docs/services/EventStreams?topic=eventstreams-kafka_connect)을 참조하십시오.
 <p>변경사항을 적용하기 위해 애플리케이션을 다시 스테이징해야 할 수 있습니다.</p></li>
@@ -140,7 +141,7 @@ Cloud Foundry 외부에서 실행 중인 애플리케이션의 경우 인증 정
 <code>ibmcloud service key-create <var class="keyword varname">your_service_name</var> <var class="keyword varname">new_service_key_name</var></code><br>
 <br/>
 또는 다음 명령을 실행하여 기존 서비스 키를 사용할 수 있습니다. <br/>
-<code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code>
+<code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code> 
 </li>
 <li>키에 대한 세부사항을 가져오십기:</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>

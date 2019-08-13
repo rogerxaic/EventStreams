@@ -26,7 +26,7 @@ subcollection: eventstreams
 Poiché il servizio sottostante a cui si collega il bridge {{site.data.keyword.objectstorageshort}} è obsoleto, anche il bridge {{site.data.keyword.objectstorageshort}} è diventato obsoleto dal primo agosto 2018. 
 {: shortdesc}
 
-Quando il servizio {{site.data.keyword.objectstorageshort}} raggiunge il termine del suo ciclo di vita e viene disattivato, saranno disattivate anche tutte le istanze del bridge {{site.data.keyword.objectstorageshort}}. Per ulteriori informazioni, vedi l'[annuncio di funzionalità deprecata: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+Quando il servizio {{site.data.keyword.objectstorageshort}} raggiunge il termine del suo ciclo di vita e viene disattivato, saranno disattivate anche tutte le istanze del bridge {{site.data.keyword.objectstorageshort}}. Per ulteriori informazioni, vedi l'[annuncio di funzionalità deprecata: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
 Come alternativa, puoi utilizzare il [Bridge Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge). 
 {:deprecated}
@@ -36,7 +36,7 @@ di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} i
 batch di messaggi provenienti da Kafka e carica i dati del messaggio come oggetti in un contenitore nel
 servizio {{site.data.keyword.objectstorageshort}}.
 
-Nota: il servizio di storage di oggetti preferito in {{site.data.keyword.Bluemix_short}} è ora il servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icona collegamento esterno](../../icons/launch-glyph.svg "Icona collegamento esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+Nota: il servizio di storage di oggetti preferito in {{site.data.keyword.Bluemix_short}} è ora il servizio [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Icona collegamento esterno](../../icons/launch-glyph.svg "Icona collegamento esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 Configurando il bridge {{site.data.keyword.objectstorageshort}}, puoi controllare il modo in cui i dati vengono caricati come oggetti in {{site.data.keyword.objectstorageshort}}. Ad esempio, le proprietà che
 puoi configurare sono le seguenti:

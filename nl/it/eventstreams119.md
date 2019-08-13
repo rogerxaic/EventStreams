@@ -27,7 +27,7 @@ Connettere {{site.data.keyword.messagehub}} a {{site.data.keyword.iot_short_notm
 
 Un modello comune consiste nell'utilizzare il bridge {{site.data.keyword.iot_short_notm}}, {{site.data.keyword.messagehub}} e il bridge Cloud Object Storage per creare una pipeline end-to-end, il che rende più facili le interazioni in tempo reale e quelle batch.
 
-Per informazioni su come creare questo bridge, vedi: [Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}.
+Per informazioni su come creare questo bridge, vedi: [Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}.
 
 
 

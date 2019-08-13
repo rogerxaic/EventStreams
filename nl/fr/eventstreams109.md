@@ -18,7 +18,7 @@ subcollection: eventstreams
 
 
 
-# Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - Plan Classic  
+# Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - Plan Classic 
 {: #report_problem}
 
 Si vous rencontrez un problème en relation avec le plan Classic de {{site.data.keyword.messagehub}}, consultez d'abord la [page de statut d'{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/status?selected=status){:new_window}. 

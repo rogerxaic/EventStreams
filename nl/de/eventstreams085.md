@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-16"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -30,14 +30,17 @@ For information about the Classic plan, see
 {: shortdesc}
 
 ## Plan "Standard"
+{: #plan_standard}
 
 Der Plan "Standard" eignet sich, wenn Sie Funktionen für Ereignisaufnahme und -verteilung, aber keine zusätzlichen Vorteile des Plans "Enterprise" benötigen. Der Plan "Standard" bietet gemeinsamen Zugriff auf einen {{site.data.keyword.messagehub}}-Multi-Tenant-Cluster.
 
 ## Plan "Enterprise" 
+{: #plan_enterprise}
 
-Der Plan "Enterprise" ist geeignet, wenn Datenisolation, garantierte Leistung und längere Aufbewahrungsdauer wichtige Aspekte sind. Der Plan "Enterprise" bietet exklusiven Zugriff auf einen dedizierten {{site.data.keyword.messagehub}}-Cluster.
+Der Plan "Enterprise" ist geeignet, wenn Datenisolation, garantierte Leistung und längere Aufbewahrungsdauer wichtige Aspekte sind. Der Plan "Enterprise" bietet exklusiven Zugriff auf einen dedizierten {{site.data.keyword.messagehub}}-Cluster. Ein {{site.data.keyword.messagehub}}-Cluster kann auch an einem geografisch lokalen Standort bereitgestellt werden, bei dem es sich jedoch um einen [Standort mit einer einzelnen Zone (SZR)](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr) handelt.
 
 ## Plan "Classic"
+{: #plan_classic}
 
 Der Plan "Classic" ermöglicht den Zugriff auf die vorherige Edition des Plans "Standard" und wird nur für bestehende Workloads und die Abwärtskompatibilität bereitgestellt. Für neue Workloads sollte der Plan "Standard" verwendet werden.
 
@@ -63,14 +66,15 @@ In der folgenden Tabelle ist zusammengefasst, was von den Plänen jeweils unters
         <tr>
 			<td>**Verfügbarkeitszonen**</td>
 			<td>3</td>
-			<td>3</td>
+			<td>3<br/>(1 an Standorten mit einer einzelnen Zone)
+			</td>
 			<td>Nicht unterstützt</td>
 		</tr>
         <tr>
 			<td>**Verfügbarkeit**</td>
-			<td>99,95%</td>
-			<td>99,95%</td>
-			<td>99,5%</td>
+			<td>99,95 %</td>
+			<td>99,95 %<br/>(99,5 % an Standorten mit einer einzelnen Zone) [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
+			<td>99,5 %</td>
 		</tr>
 	  		<tr>
 			<td>**Kafka-Version in Cluster**</td>
@@ -105,13 +109,13 @@ In der folgenden Tabelle ist zusammengefasst, was von den Plänen jeweils unters
 		<tr>
 			<td>**Maximale Aufbewahrungsdauer**</td>
 			<td>1 GB pro Partition bis zu 30 Tage </td>
-			<td>Unbegrenzt bis zur Speichergrenze Ihres Plans </td>
+			<td>2 TB verwendbarer Speicher <!--Unlimited up to the storage limit of your plan --></td>
 			<td>1 GB pro Partition bis zu 30 Tage </td>
 		</tr>
 		<tr>
 			<td>**Maximaler Durchsatz**</td>
 			<td>1 MB pro Sekunde pro Partition (maximal 20 MB pro Sekunde) </td>
-			<td>40 MB pro Sekunde (Spitzendurchsatz von 90 MB pro Sekunde)</td>
+			<td>40 MB pro Sekunde pro Cluster (Spitzendurchsatz von 75 MB pro Sekunde)</td>
 			<td>1 MB pro Sekunde pro Partition</td>
 		</tr>
 		<tr>
@@ -121,15 +125,32 @@ In der folgenden Tabelle ist zusammengefasst, was von den Plänen jeweils unters
 			<td>1 MB</td>
 		</tr>
 		<tr>
+			<td>**Maximale Anzahl verbundener Clients**</td>
+			<td>100</td>
+			<td>10 000</td>
+			<td>100</td>
+		</tr>
+		<tr>
 			<td>**Verfügbarkeit an den Standorten (Regionen)**</td>
-			<td>Dallas (us-south)</br>
- </td>
-			<td>Dallas (us-south)</br>
+			<td>**Standort mit mehreren Zonen (MZR)**<br/>
+			Dallas (us-south)</br>
 			Washington (us-east)<br/>
 			London (eu-gb)<br/>
 			Sydney (au-syd)</br>
 			Frankfurt (eu-de)<br/>
-			Tokyo (jp-tok)<br/>
+			Tokio (jp-tok)<br/>
+			<br/>
+			</td>
+			<td>**Standort mit mehreren Zonen (MZR)**</br>
+			Dallas (us-south)</br>
+			Washington (us-east)<br/>
+			London (eu-gb)<br/>
+			Sydney (au-syd)</br>
+			Frankfurt (eu-de)<br/>
+			Tokio (jp-tok)<br/>
+			<br/>
+			**Standort mit einer einzelnen Zone (SZR)**</br>
+			Seoul (seo01)<br/>
 			<br/>
 			</td>
 			<td>Dallas (us-south)</br>
@@ -140,13 +161,15 @@ In der folgenden Tabelle ist zusammengefasst, was von den Plänen jeweils unters
 		<tr>
      	    <td>**Unterstützte APIs**</td>
 			<td>Kafka-API</br>
-			REST-konforme Verwaltungs-API<br/>
+			REST-Admin-API<br/>
 			REST-Producer-API</br>
 		    </td>
 			<td>Kafka-API<br/>
-			REST-konforme Verwaltungs-API</td>
+			Admin-REST-API</br>
+			REST-Producer-API</br>
+			</td>
 			<td>Kafka-API</br>
-			REST-konforme Verwaltungs-API<br/>
+			Admin-REST-API<br/>
 			Kafka-REST-API</br>
 			MQ Light-API</br>
 		    </td>
@@ -166,7 +189,10 @@ In der folgenden Tabelle ist zusammengefasst, was von den Plänen jeweils unters
 		</tr>
 
 </table>
+### Fußnote
+{: #footnote_plans notoc}
 
+1. {: #footnote_szr notoc}Weitere Informationen zur Verfügbarkeit finden Sie in [Bereitstellungen an Standorten mit einer einzelnen Zone](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
 
 
 
@@ -184,6 +210,6 @@ number of partitions that you use and the number of messages that you send and r
 charge for message data while it is retained on the topics, but the data that each partition retains
 is capped at 1 GB.
 
-For more information, see [{{site.data.keyword.Bluemix_notm}} Public ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/public){:new_window}.
+For more information, see [{{site.data.keyword.Bluemix_notm}} Public ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/free/){:new_window}.
 -->
 

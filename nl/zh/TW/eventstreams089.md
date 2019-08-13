@@ -26,14 +26,14 @@ subcollection: eventstreams
 由於 {{site.data.keyword.objectstorageshort}} 橋接器連接的基礎服務已淘汰，{{site.data.keyword.objectstorageshort}} 橋接器也從 2018 年 8 月 1 日淘汰。
 {: shortdesc}
 
-當 {{site.data.keyword.objectstorageshort}} 服務達到使用期限結束，並且解除任務時，{{site.data.keyword.objectstorageshort}} 橋接器的所有實例也將會解除任務。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
+當 {{site.data.keyword.objectstorageshort}} 服務達到使用期限結束，並且解除任務時，{{site.data.keyword.objectstorageshort}} 橋接器的所有實例也將會解除任務。如需相關資訊，請參閱[淘汰公告：{{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}。 
 
 或者，您可以使用 [Cloud Object Storage 橋接器](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)。
 {:deprecated}
 
 {{site.data.keyword.objectstorageshort}} 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 {{site.data.keyword.Bluemix_short}} 服務的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 {{site.data.keyword.objectstorageshort}} 服務中的容器。
 
-請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
+請注意，現在 {{site.data.keyword.Bluemix_short}} 的偏好物件儲存空間服務是 [{{site.data.keyword.IBM_notm}} Cloud Object Storage 服務。![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
 
 藉由配置 {{site.data.keyword.objectstorageshort}} 橋接器，您可以控制資料如何當作物件上傳到 {{site.data.keyword.objectstorageshort}}。例如，您可以配置的內容如下：
 

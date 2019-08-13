@@ -27,7 +27,7 @@ Wenn Sie {{site.data.keyword.messagehub}} mit {{site.data.keyword.iot_short_notm
 
 Es ist üblich, die {{site.data.keyword.iot_short_notm}}-Bridge, {{site.data.keyword.messagehub}} und die Cloud Object Storage-Bridge zu verwenden, um eine End-to-End-Pipeline zu erstellen, die Interaktionen in Echtzeit und im Stapel vereinfacht.
 
-Informationen zum Erstellen dieser Bridge finden Sie in [Historian-Connector verbinden und für die Verwendung von {{site.data.keyword.messagehub}} konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}.
+Informationen zum Erstellen dieser Bridge finden Sie in [Connector für Archivierungsfunktion verbinden und für die Verwendung von {{site.data.keyword.messagehub}} konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}.
 
 
 

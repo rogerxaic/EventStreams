@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 Antworten auf häufig gestellte Fragen zum {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}}-Service für den Plan "Classic".
 
-Antworten auf Fragen, die sich auf alle {{site.data.keyword.messagehub}}-Pläne beziehen, finden Sie in [Häufig gestellte Fragen](docs/services/EventStreams?topic=eventstreams-faqs#faqs).
+Antworten auf Fragen, die sich auf alle {{site.data.keyword.messagehub}}-Pläne beziehen, finden Sie in [Häufig gestellte Fragen](/docs/services/EventStreams?topic=eventstreams-faqs#faqs).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -57,7 +57,7 @@ Die Offset-Aufbewahrungsdauer gilt systemweit und kann nicht für eine einzelne 
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## Wie lange werden Nachrichten aufbewahrt?
-{: #messages_retained}
+{: #messages_retained_classic}
 
 In Kafka werden Nachrichten standardmäßig bis zu 24 Stunden aufbewahrt und jede Partition wird auf
 1 GB begrenzt. Wenn die Obergrenze von 1 GB erreicht ist, werden die ältesten Nachrichten gelöscht, damit

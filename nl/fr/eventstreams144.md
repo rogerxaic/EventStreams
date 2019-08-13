@@ -20,11 +20,11 @@ subcollection: eventstreams
 # Limitations connues du plan Classic 
 {: #restrictions_classic}
 
-En cas de problème lors de l'utilisation de {{site.data.keyword.messagehub}} avec le plan Classic, consultez les limitations connues et les solutions de contournement.
+En cas de problème lors de l'utilisation de {{site.data.keyword.messagehub}} avec le plan Classic, consultez les limitations connues et les solutions de contournement. 
 {: shortdesc}
 
 ## Les appels Java Kafka ne basculent pas en cas de défaillance du serveur d'amorce Kafka
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### Problème
 {: #calls_failover_problem notoc}
@@ -81,7 +81,7 @@ Une proposition d'amélioration (KIP, Kafka Improvement Proposal) N° 302 a ét�
 
 
 ## Sujets et partitions
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  Les noms de sujet ne peuvent pas comporter plus de 100 caractères.
 *  Le nombre par défaut de partitions pour un sujet est un.
@@ -89,7 +89,7 @@ Une proposition d'amélioration (KIP, Kafka Improvement Proposal) N° 302 a ét�
 partitions supplémentaires, vous devez utiliser un nouvel espace {{site.data.keyword.Bluemix_notm}}.
 
 ## Conservation des messages
-{: #message_retention}
+{: #message_retention_classic}
 
 Par défaut, les messages sont conservés dans Kafka pendant 24 heures maximum et chaque partition ne peut pas dépasser 1 Go. Si le plafond de 1 Go est atteint, les messages les plus anciens sont supprimés pour que la limite soit respectée.
 
@@ -98,7 +98,7 @@ Vous pouvez modifier la durée de conservation des messages lorsque vous créez 
 Pour plus d'informations sur les restrictions concernant les paramètres autorisés lorsque vous créez des sujets à l'aide d'un client Kafka ou de Kafka Streams, voir [Utilisation de l'API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Création et suppression de sujets dans Kafka
-{: #create_delete}
+{: #create_delete_classic}
 
 Dans Kafka, la création et la suppression de sujets sont des opérations asynchrones susceptibles de prendre un certain temps. Il est conseillé d'éviter l'utilisation de modèles qui reposent sur la création rapide et la suppression de sujets, ou sur la suppression rapide et la re-création de sujets.
 

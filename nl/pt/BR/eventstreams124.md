@@ -46,7 +46,7 @@ Os níveis de acesso (também conhecidos como uma função) que podem ser atribu
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -80,30 +80,30 @@ Essa tabela resume alguns cenários comuns do {{site.data.keyword.messagehub}} e
 |---------|----------------|
 | Permitir acesso total a todos os recursos|Não aplicável   |Não aplicável  |Instância de serviço:
 <var class="keyword varname">your_service_instance</var>|
-| Permitir que um aplicativo ou usuário crie ou exclua o tópico |Tipo de recurso: <code>cluster</code>   |Não aplicável  |Tipo de recurso: tópico <br/><br/>Opcional: ID do recurso: <var class="keyword varname">name_of_topic</var> |
-| Listar grupos, tópicos e deslocamentos <br/> Descrever o grupo, o tópico e as configurações do broker | Tipo de recurso: <code>cluster</code>      |Não aplicável  |Não aplicável      |
+| Permitir que um aplicativo ou usuário crie ou exclua o tópico |Tipo de recurso: <code>cluster</code>   |Não aplicável  |Tipo de recurso: topic <br/><br/>Opcional: ID do recurso: <var class="keyword varname">name_of_topic</var> |
+| Listar grupos, tópicos e deslocamentos <br/> Descrever o grupo, o tópico e as configurações de broker | Tipo de recurso: <code>cluster</code>      |Não aplicável  |Não aplicável      |
 | Permitir que um aplicativo se conecte ao cluster  |Tipo de recurso: <code>cluster</code>| Não aplicável     |Não aplicável      |
 | Permitir que um aplicativo produza para qualquer tópico  |Tipo de recurso: <code>cluster</code>|Tipo de recurso: <code>topic</code> |Não aplicável     |
 | Permitir que um aplicativo produza para um tópico específico  |Tipo de recurso: <code>cluster</code>|Tipo de recurso: <code>topic</code><br/>ID do recurso: <var class="keyword varname">name_of_topic</var>      |Não aplicável     |
-| Permitir que um aplicativo se conecte e consuma de qualquer tópico (nenhum grupo de consumidores)  |Tipo de recurso: <code>cluster</code><br/>Tipo de recurso: <code>topic</code> |Não aplicável    |Não aplicável     |
-| Permitir que um aplicativo se conecte e consuma de um tópico específico (nenhum grupo de consumidores)  | Tipo de recurso: <code>cluster</code><br/>Tipo de recurso: <code>topic</code><br/>ID do recurso: <var class="keyword varname">name_of_topic</var> |Não aplicável     |Não aplicável     |
-| Permitir que um aplicativo consuma um tópico (grupo de consumidores)  |Tipo de recurso: <code>cluster</code><br/>Tipo de recurso: <code>topic</code><br/> Tipo de recurso: <code>group</code> |Não aplicável      |Não aplicável     |
-| Permitir que um aplicativo produza para um tópico transacionalmente  |Tipo de recurso: <code>cluster</code><br/> Tipo de recurso: <code>group</code>|Tipo de recurso: <code>topic</code><br/>ID do recurso: <var class="keyword varname">name_of_topic</var><br/>Tipo de recurso: <code>txnid</code> |Não aplicável     |
-| Excluir grupo de consumidores |Tipo de recurso: <code>cluster</code> |Não aplicável  |Tipo de recurso: <code>group</code><br/>ID do recurso: <var class="keyword varname">group_ID</var>      |
+| Permitir que um aplicativo se conecte e consuma de qualquer tópico (nenhum grupo de consumidores)  |Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code> |Não aplicável    |Não aplicável     |
+| Permitir que um aplicativo se conecte e consuma de um tópico específico (nenhum grupo de consumidores)  | Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code><br/>ID do recurso: <var class="keyword varname">name_of_topic</var> |Não aplicável     |Não aplicável     |
+| Permitir que um aplicativo consuma um tópico (grupo de consumidores)  |Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code><br/> Tipo de recurso: <code>group</code> |Não aplicável      |Não aplicável     |
+| Permitir que um aplicativo produza para um tópico transacionalmente  |Tipo de recurso: <code>cluster</code> <br/> Tipo de recurso: <code>group</code>|Tipo de recurso: <code>topic</code> <br/>ID do recurso: <var class="keyword varname">name_of_topic</var> <br/>Tipo de recurso: <code>txnid</code> |Não aplicável     |
+| Excluir grupo de consumidores |Tipo de recurso: <code>cluster</code> |Não aplicável  |Tipo de recurso: <code>group</code> <br/>ID do recurso: <var class="keyword varname">group_ID</var>      |
 | Para usar o Streams |Tipo de recurso: <code>cluster</code></br>Tipo de recurso: <code>group</code>| Não aplicável  |Tipo de recurso: <code>topic</code>    |
 
 Para obter mais informações sobre o IAM, consulte [IBM Cloud Identity and
 gerenciamento de acesso](/docs/iam?topic=iam-iamoverview#iamoverview).
 
 Para obter um exemplo sobre como configurar políticas, veja:
-[Chaves API e IDs de serviço do IBM Cloud IAM![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}.
+[Chaves API e IDs de serviço do IBM Cloud IAM![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}.
 
 
 ## Conectando ao  {{site.data.keyword.messagehub}}
 {: #connect_message_enterprise }
 
 Para obter informações sobre como ligar um aplicativo Cloud Foundry ou obter uma credencial de chave de segurança para um aplicativo externo, consulte
-[Conectando ao {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
+[Conectando-se ao {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
 
 <!-- 28/06/18 - Karen: draft info only
 

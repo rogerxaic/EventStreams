@@ -28,7 +28,7 @@ subcollection: eventstreams
 * イベント・ストリームを Streaming Analytics に接続して強力な洞察を実現する。
 * イベント・データを複数のアプリケーションにパブリッシュしてリアルタイムに対応する。
 
-Apache Kafka で構築されることによって、コミュニティーで起こっているすべてのイノベーションを直接活用でき、Kafka クライアント API、Kafka Stream、Kafka Connect、および KSQL をサポートします。
+Apache Kafka で構築されることによって、コミュニティーで起こっているすべてのイノベーションの利点を直接活用でき、Kafka クライアント API、Kafka Stream、Kafka Connect をサポートします。
 
 {{site.data.keyword.messagehub}} への接続は常に資格情報を使用して認証されるので追加の構成を提供する必要はありますが、Apache Kafka ツールは、通常 {{site.data.keyword.messagehub}} で直接使用できます。
 

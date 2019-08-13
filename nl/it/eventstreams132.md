@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-03"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -17,23 +17,27 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .note}
 
-# SLA (service level agreement) per la disponibilità {{site.data.keyword.messagehub}}  
+# SLA (service level agreement) per la disponibilità {{site.data.keyword.messagehub}} 
 {: #sla}
 
 ## Piano Standard
+{: #sla_standard}
 Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.95% sul piano Standard.
 Per ulteriori informazioni su SLA per l'elevata disponibilità dei servizi in {{site.data.keyword.Bluemix}}, vedi
 [{{site.data.keyword.Bluemix_notm}} service description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
 
 
 ## Piano Enterprise
-Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.95% sul piano Enterprise come un ambiente pubblico ad alta disponibilità.
-Per ulteriori informazioni su SLA per l'elevata disponibilità dei servizi in {{site.data.keyword.Bluemix}}, vedi
+{: #sla_enterprise}
+
+Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.95% sul piano Enterprise come un ambiente pubblico ad alta disponibilità. Quando il servizio {{site.data.keyword.messagehub}} viene eseguito in ambienti non HA, ad esempio [ubicazioni a singola zona](#sla_szr), la disponibilità è del 99.5%. 
+Per ulteriori informazioni su SLA per l'elevata disponibilità dei servizi in {{site.data.keyword.Bluemix_notm}}, vedi
 [{{site.data.keyword.Bluemix_notm}} service description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
 
 ## Piano Classic
+{: #sla_classic}
 Il servizio {{site.data.keyword.messagehub}} viene fornito con una disponibilità del 99.5% sul piano Classic.
-Per ulteriori informazioni su SLA per {{site.data.keyword.Bluemix}}, vedi
+Per ulteriori informazioni su SLA per {{site.data.keyword.Bluemix_notm}}, vedi
 [{{site.data.keyword.Bluemix_notm}} service description ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c4ceb9f019f9eb4c862582f9001b3994/$FILE/i126-6605-16_04-2019_en_US.pdf){:new_window}.
 
 <!--
@@ -68,7 +72,7 @@ Se non possono essere tollerati dei duplicati, puoi utilizzare la funzione del p
 La velocità effettiva viene espressa come il numero di byte al secondo che può essere inviato e ricevuto in un cluster.
 
 **Guida specifica per il piano Standard**<br/>
-Per informazioni di orientamento sulla velocità effettiva, vedi [Limiti e quote- Standard](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas#standard_throughput). 
+Per informazioni di orientamento sulla velocità effettiva, vedi [Limiti e quote- Standard](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#standard_throughput). 
 
 **Guida specifica per il piano Enterprise**<br/>
 
@@ -88,4 +92,14 @@ Kafka ottiene la propria disponibilità e durabilità replicando i messaggi che 
 **Modalità <code>acks</code> del produttore**<br/>
 Sebbene tutti i messaggi vengano replicati, le applicazioni possono controllare quanto solidamente i messaggi che producono vengono trasferiti al servizio utilizzando la proprietà della modalità <code>acks</code> del produttore. Questa proprietà fornisce una scelta tra velocità e rischio di perdita dei messaggi. L'impostazione predefinita è <code>acks=1</code>, il che significa che il produttore restituisce un esito positivo non appena il nodo connesso riconosce di aver ricevuto il messaggio, ma prima che sia stata completata la replica. L'impostazione consigliata e più sicura è <code>acks=all</code> in cui il produttore restituisce un esito positivo solo dopo che il messaggio è stato copiato in tutte le repliche. Questo garantisce che le repliche vengano mantenute aggiornate, evitando la perdita del messaggio se un errore causa un passaggio a una replica.
 
+## Distribuzioni a ubicazioni a singola zona
+{: #sla_szr}
 
+Per la disponibilità più elevata ti consigliamo i nostri ambienti pubblici ad elevata disponibilità, creati nelle nostre ubicazioni multizona. In un'ubicazione multizona, i nostri cluster Kafka sono distribuiti in 3 zone di disponibilità, il che significa che il cluster è resiliente nel caso di un malfunzionamento di una singola zona o di tutti i componenti all'interno di una zona.
+Alcuni clienti hanno bisogno di una località geografica e pertanto vogliono eseguire il provisioning di un cluster {{site.data.keyword.messagehub}} in un'ubicazione geograficamente locale ma a zona singola. {{site.data.keyword.messagehub}} supporta questo modello di distribuzione, tuttavia fai attenzione ai seguenti compromessi sulla disponibilità:
+* In un'ubicazione a singola zona, esistono delle categorie di singoli errori che potrebbero portare il cluster offline per un periodo di tempo. Ad esempio, il malfunzionamento di un intero data center o l'aggiornamento o il malfunzionamento di un componente condiviso ad esempio l'hypervisor sottostante, la SAN o la rete. Questi errori si riflettono nella SLA ridotta delle ubicazioni a singola zona.
+* Un vantaggio del suddividere Kafka in molte zone è quello di minimizzare la possibilità di un malfunzionamento che potrebbe disattivare l'intero cluster. Al contrario, c'è una piccola possibilità che un singolo errore possa disattivare l'intero cluster all'interno di una zona. In casi estremi c'è anche la possibilità di perdere dei dati. Ad esempio, anche se <code>acks=all</code> viene utilizzato dai produttori, se tutti i nodi Kafka vengono disattivati contemporaneamente, potrebbero esserci alcuni messaggi di cui i broker hanno riconosciuto la ricezione, ma il file system sottostante non ha completato lo svuotamento del disco. Potenzialmente, questi messaggi non eliminati potrebbero andare persi. 
+
+    Per ulteriori informazioni, vedi [Riconoscimenti dei messaggi](/docs/services/EventStreams?topic=eventstreams-producing_messages#message_acknowledgments). In molti casi di utilizzo questo non è necessariamente un problema. Tuttavia, se la perdita di messaggi non è accettabile in nessun caso, considera altre strategie come l'utilizzo di un cluster di disponibilità multizona, la replica tra le regioni o il checkpoint del messaggio dal lato del produttore.
+
+Per ulteriori informazioni, vedi [cluster a zona singola](/docs/containers?topic=containers-regions-and-zones#regions_single_zone) e [cluster multizona](/docs/containers?topic=containers-regions-and-zones#regions_multizone).

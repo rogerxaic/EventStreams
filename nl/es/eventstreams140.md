@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 Respuestas a preguntas comunes acerca del servicio de {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} para el plan Clásico.
 
-Para obtener respuestas a las preguntas relacionadas con todos los planes de {{site.data.keyword.messagehub}}, consulte [Preguntas más frecuentes](docs/services/EventStreams?topic=eventstreams-faqs#faqs).
+Para obtener respuestas a las preguntas relacionadas con todos los planes de {{site.data.keyword.messagehub}}, consulte [Preguntas más frecuentes](/docs/services/EventStreams?topic=eventstreams-faqs#faqs).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -56,7 +56,7 @@ La retención de desplazamiento abarca todo el sistema y no se puede establecer 
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## ¿Cuánto tiempo se conservan los mensajes?
-{: #messages_retained}
+{: #messages_retained_classic}
 
 De forma predeterminada, los mensajes se retienen un máximo de 24 horas
 en Kafka y cada partición está limitada a 1 GB. Si se alcanza 1 GB, se descartarán los mensajes más antiguos para mantenerse dentro

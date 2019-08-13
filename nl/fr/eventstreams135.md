@@ -29,6 +29,7 @@ La manière de se connecter à {{site.data.keyword.messagehub}} varie si vous vo
 Lisez les informations suivantes pour savoir comment obtenir ces éléments. Les étapes peuvent varier légèrement, par conséquent veillez à exécuter les étapes appropriées pour votre instance.
 
 ## Mise à disposition d'une instance {{site.data.keyword.messagehub}}
+{: #provision_classic}
 
 Vous devez préalablement mettre à disposition une instance de service {{site.data.keyword.messagehub}} pour le plan Classic. Ensuite, vous devez vous procurer les détails de connexion de l'API {{site.data.keyword.messagehub}} comme suit.
 
@@ -103,7 +104,7 @@ Si vous avez un fichier manifest, vous pouvez créer une nouvelle application en
 <code>ibmcloud service bind <var class="keyword varname">nom_de_votre_application</var> <var class="keyword varname">nom_de_votre_service</var></code>
 </li>
 <li>Vérifiez que la variable d'environnement VCAP_SERVICES est disponible dans le contexte d'exécution de votre application en exécutant :</br>
- <code>ibmcloud app env <var class="keyword varname">nom_de_votre_application</var></code>.
+ <code>ibmcloud app env <var class="keyword varname">nom_de_votre_application</var></code>. 
 </li>
 <li>Transmettez ces données d'identification à votre application. Indiquez <code>token</code> comme nom d'utilisateur et <var class="keyword varname">api_key</var> comme mot de passe. Séparez <code>token</code> et <var class="keyword varname">api_key</var> par une virgule. Pour plus d'informations, voir [Configuration de votre client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Vous devrez peut-être reconstituer votre application pour que les modifications prennent effet.</p></li>
@@ -140,7 +141,7 @@ Pour les applications qui s'exécutent en dehors de Cloud Foundry, les données 
 <code>ibmcloud service key-create <var class="keyword varname">nom_votre_service</var> <var class="keyword varname">nom_nouvelle_clé_service</var></code><br>
 <br/>
 ou utilisez une clé de service existante : <br/>
-<code>ibmcloud service keys <var class="keyword varname">nom_de_votre_service</var></code>
+<code>ibmcloud service keys <var class="keyword varname">nom_de_votre_service</var></code> 
 </li>
 <li>Obtenez les détails de la clé :</br>
 <code>ibmcloud service key-show <var class="keyword varname">nom_de_votre_service</var> <var class="keyword varname">nom_clé_service</var></code></br>

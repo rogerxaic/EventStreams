@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 ## Migration d'un client Kafka Java de la version 0.9.X ou 0.10.X à une version client ultérieure
-{: #kafka_migrate}
+{: #kafka_migrate_classic}
 
 
 Si vous utilisez les clients Java, vous pouvez utiliser

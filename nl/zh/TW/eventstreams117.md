@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -56,7 +56,7 @@ subcollection: eventstreams
 ### 網路傳輸量
 {: #enterprise_throughput }
 
-建議的最大傳輸量為每秒 40 MB（每秒尖峰限制為 90 MB）。傳輸量表示成在叢集中可以傳送及接收的每秒位元組數。
+建議的最大傳輸量為每秒 40 MB（每秒尖峰限制為 75 MB）。傳輸量表示成在叢集中可以傳送及接收的每秒位元組數。
 
 建議的數字是根據一般工作負載，並考量作業動作可能的影響，例如內部更新或失敗模式（像是失去可用性區域）。如果平均傳輸量超過建議數字，在這些狀況下可能會遇到效能下降的情況。
 
@@ -74,7 +74,8 @@ subcollection: eventstreams
 ### 其他限制
 {: #enterprise_limits}
 
-訊息大小上限：1 MB
+*  訊息大小上限：1 MB
+*  最大並行作用中 Kafka 用戶端數：10000
 
 
 

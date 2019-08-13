@@ -86,7 +86,7 @@ Nur für Plan "Enterprise". Auf einen beliebigen Wert zwischen 5 Minuten und 30 
 
 Die Offset-Aufbewahrungsdauer gilt systemweit und kann nicht für eine einzelne Topicebene festgelegt werden. Für alle Consumergruppen werden nur gespeicherte Offsets für einen Zeitraum von 7 Tagen bereitgestellt, selbst wenn die Protokollspeicherungsdauer für das zugehörige Topic auf den Maximalwert von 30 Tagen erhöht wurde. 
 
-Das interne Kafka-Topic <code>__consumer_offsets</code> ist für Sie schreibgeschützt sichtbar.
+Das interne Kafka-Topic <code>__consumer_offsets</code> ist für Sie schreibgeschützt sichtbar. 
 Es wird dringend empfohlen, keinen Versuch zu unternehmen, dieses Topic in irgendeiner Weise zu steuern. 
 
 <!--following message retention info duplicted in eventstreams057-->

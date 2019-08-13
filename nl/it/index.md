@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Esercitazione introduttiva
 {: #getting_started}
@@ -48,7 +49,7 @@ Completa la seguente procedura:
   
   e. Fai clic su **Crea**.
 
-2. {: #create_credentials_step notoc} Crea alcune credenziali {{site.data.keyword.messagehub}} completando queste istruzioni: [Ottieni le credenziali e stabilisci la connessione utilizzando la console IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Crea alcune credenziali {{site.data.keyword.messagehub}} completando queste istruzioni: [Ottieni le credenziali e stabilisci la connessione utilizzando la console IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external_console).
    <br/>
    <br/>Avrai bisogno dei valori di *kafka_brokers_sasl* e *api_key* per il [passo 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) di questa attività.   
 

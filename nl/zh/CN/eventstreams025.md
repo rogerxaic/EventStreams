@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #rest_producer_using}
 
 
-**REST producer API 仅在新的 {{site.data.keyword.messagehub}} 标准套餐中提供。**
+**REST producer API 仅在 {{site.data.keyword.messagehub}} 标准和企业套餐中提供。**
 <br/>
 
 {{site.data.keyword.messagehub}} 提供 REST API 以帮助您将现有系统连接到 {{site.data.keyword.messagehub}} Kafka 集群。使用 API，您可以将 {{site.data.keyword.messagehub}} 与支持 RESTful API 的任何系统集成。
@@ -47,7 +47,7 @@ REST producer API 是可缩放的 REST 接口，用于通过安全 HTTP 端点�
 使用以下某个方法进行认证：
 
 * **使用基本认证进行认证：**<br/>
-    将上述对象的 <code>user</code> 和 <code>api_key</code> 属性用作用户名和密码。以 <code>Basic <base64 encoding of username:password joined by a single colon (:)></code> 形式将这些值放入 HTTP 请求的 <code>Authorization</code> 头中。
+    将上述对象的 <code>user</code> 和 <code>api_key</code> 属性用作用户名和密码。以 <code>Basic &lt;base64 encoding of username and password joined by a single colon (:)&gt;</code> 形式将这些值放入 HTTP 请求的 <code>Authorization</code> 头中。
 
 * **使用不记名令牌进行认证：**<br/>
     要使用 IBM Cloud CLI 获取令牌，请先登录到 IBM Cloud，然后运行以下命令： 

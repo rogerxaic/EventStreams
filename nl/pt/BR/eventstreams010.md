@@ -29,8 +29,7 @@ os seus serviços e os seus aplicativos. O {{site.data.keyword.messagehub}}  era
 * Conectar os fluxos do evento à análise de dados do fluxo para realizar insights poderosos.
 * Publicar dados do evento em múltiplos aplicativos para reagir em tempo real.
 
-Por ser desenvolvido com o Apache Kafka, ele se beneficia diretamente de toda a inovação que ocorre na comunidade e suporta as
-APIs do cliente Kafka, o Kafka Streams, o Kafka Connect e também o KSQL.
+Ao ser construído com o Apache Kafka, ele se beneficia diretamente de toda a inovação que ocorre na comunidade e suporta as APIs do cliente Kafka, o Kafka Streams e o Kafka Connect.
 
 As ferramentas do Apache Kafka geralmente trabalham diretamente com o {{site.data.keyword.messagehub}}, embora você precise fornecer configuração adicional porque as conexões com o {{site.data.keyword.messagehub}} sempre são autenticadas usando credenciais.
 

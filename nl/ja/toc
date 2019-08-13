@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="eventstreams" audience="service" arm="285" href="/docs/services/EventStreams/index.html" path="services/EventStreams"}
+{: .toc subcollection="eventstreams" category="integration" audience="service" arm="285" href="/docs/services/EventStreams/index.html" path="services/EventStreams"}
 IBM Event Streams
 
 	{: .navgroup id="learn"}
@@ -22,7 +22,7 @@ IBM Event Streams
 	at-events.md
 	
 	{: .topicgroup}
-	クラシック・プラン
+	クラシック・プラン 
 		eventstreams134.md
 		eventstreams135.md
 		eventstreams136.md
@@ -52,7 +52,7 @@ IBM Event Streams
 		eventstreams116.md
 		eventstreams124.md
 
-	
+		eventstreams145.md
 	
 	{: .topicgroup}
 	Event Streams を使用したアプリの開発

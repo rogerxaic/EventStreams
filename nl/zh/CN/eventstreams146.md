@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 ## 将 Kafka Java 客户机从 0.9.X 或 0.10.X 迁移到更高客户机版本
-{: #kafka_migrate}
+{: #kafka_migrate_classic}
 
 
 如果使用的是 Java 客户机，那么可以使用公共可用的 0.10 或更高版本的 Kafka 客户机。 

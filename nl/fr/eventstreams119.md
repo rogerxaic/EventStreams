@@ -27,7 +27,7 @@ En connectant {{site.data.keyword.messagehub}} to {{site.data.keyword.iot_short_
 
 Un schéma classique consiste à utiliser le pont {{site.data.keyword.iot_short_notm}}, {{site.data.keyword.messagehub}} et le pont Cloud Object Storage pour créer un pipeline de bout en bout, qui facilite les interactions en temps réel et sur des lots.
 
-Pour plus d'informations sur la création de ce pont, voir [Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}.
+Pour plus d'informations sur la création de ce pont, voir [Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}.
 
 
 

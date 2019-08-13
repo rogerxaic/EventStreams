@@ -19,7 +19,7 @@ subcollection: eventstreams
 # Was ist {{site.data.keyword.messagehub}}?
 {: #about}
 
-{{site.data.keyword.messagehub_full}} ist ein Nachrichtenbus mit hohem Durchsatz, der mit Apache Kafka erstellt wurde. Er ist optimiert für die Aufnahme von Ereignissen in {{site.data.keyword.Bluemix_notm}} und die Verteilung von Event Streams zwischen Ihren Services und Anwendungen.{{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
+{{site.data.keyword.messagehub_full}} ist ein Nachrichtenbus mit hohem Durchsatz, der mit Apache Kafka erstellt wurde. Er ist optimiert für die Aufnahme von Ereignissen in {{site.data.keyword.Bluemix_notm}} und die Verteilung von Event Streams zwischen Ihren Services und Anwendungen. {{site.data.keyword.messagehub}} wurde früher als Message Hub bezeichnet.
 {: shortdesc}
 
 Mit {{site.data.keyword.messagehub}} können Sie die folgenden Tasks ausführen:
@@ -28,7 +28,7 @@ Mit {{site.data.keyword.messagehub}} können Sie die folgenden Tasks ausführen:
 * Event Streams mit Streaminganalysen verbinden, um aussagekräftige Erkenntnisse zu gewinnen.
 * Ereignisdaten in mehreren Anwendungen veröffentlichen, um in Echtzeit reagieren zu können.
 
-Durch die Erstellung mit Apache Kafka werden in Message Hub alle Innovationen in der Community genutzt und es werden Kafka-Client-APIs, Kafka Streams, Kafka Connect und auch KSQL unterstützt.
+Durch die Erstellung mit Apache Kafka werden in Message Hub alle Innovationen in der Community genutzt und es werden Kafka-Client-APIs, Kafka Streams und Kafka Connect unterstützt.
 
 Apache Kafka-Tools arbeiten normalerweise direkt mit {{site.data.keyword.messagehub}}, es ist jedoch zusätzliche Konfiguration erforderlich, da bei Verbindungen zu {{site.data.keyword.messagehub}} stets Berechtigungsnachweise zur Authentifizierung verwendet werden.
 

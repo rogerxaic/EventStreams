@@ -21,7 +21,7 @@ subcollection: eventstreams
 # {{site.data.keyword.messagehub}}에 연결
 {: #connecting}
 
-{{site.data.keyword.messagehub}}에 연결하는 방법은 애플리케이션이 기본적으로 실행 중인지 아니면 Cloud Foundry 애플리케이션으로 실행 중인지에 따라 달라집니다. 그러나 두 경우 모두에 두 가지 정보가 필요합니다.
+{{site.data.keyword.messagehub}}에 연결하는 방법은 애플리케이션이 기본적으로 실행 중인지 아니면 Cloud Foundry 애플리케이션으로 실행 중인지에 따라 달라집니다. 그러나 두 경우 모두에 두 가지 정보가 필요합니다. 
 {: shortdesc}
 
 * API용 엔드포인트 URL
@@ -42,6 +42,7 @@ subcollection: eventstreams
 애플리케이션에 연결하는 경우 사용하는 방법은 애플리케이션이 배치된 위치, 즉 Cloud Foundry 내부인지 또는 Cloud Foundry 외부(예: Kubernetes 서비스)에 배치되었는지에 따라 달라집니다.
 
 ## {{site.data.keyword.messagehub}} 인스턴스 프로비저닝
+{: #provision_instance}
 
 전제조건으로 먼저 표준 또는 엔터프라이즈 플랜 중 하나에 대한 {{site.data.keyword.messagehub}} 서비스 인스턴스를 프로비저닝해야 합니다. 그런 다음, 다음 태스크를 완료하여 {{site.data.keyword.messagehub}} API 연결 세부사항을 얻으십시오.
 
@@ -136,7 +137,7 @@ Manifest 파일이 있으면 다음을 실행하여 새 앱을 작성할 수 있
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

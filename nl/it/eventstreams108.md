@@ -85,7 +85,7 @@ solo piano Enterprise. Imposta su qualsiasi valore compreso tra 5 minuti e 30 gi
 
 a conservazione di offset avviene a livello di sistema, pertanto non puoi impostarla a livello di un singolo argomento. Tutti i gruppi di consumatori ottengono solo 7 giorni di offset memorizzati anche se utilizzano un argomento con una conservazione del log che è stata aumentata fino al massimo di 30 giorni. 
 
-L'argomento <code>__consumer_offsets</code> Kafka interno è visibile per te in sola lettura.
+L'argomento <code>__consumer_offsets</code> Kafka interno è visibile per te in sola lettura. 
 Ti consigliamo vivamente di non provare a gestire l'argomento in alcun modo. 
 
 <!--following message retention info duplicted in eventstreams057-->

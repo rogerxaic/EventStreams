@@ -52,7 +52,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">API-Schlüssel</var>" 
 <br/>
 <br/>
 Für CURL können Sie auch die Codebeispiele anpassen, die in den
-[Confluent-Dokumenten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.confluent.io/2.0.0/){:new_window} beschrieben sind, indem Sie die folgende Zeile zur Befehlszeile hinzufügen:
+[Confluent-Dokumenten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.confluent.io/2.0.0/){:new_window} beschrieben sind, indem Sie die folgende Zeile zur Befehlszeile hinzufügen:
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">API-Schlüssel</var>"</pre>
 {: codeblock}
 
@@ -79,7 +79,7 @@ Der Beispielcode befindet sich im [GitHub-Projekt 'event-streams-samples' ![Symb
 
 Befolgen Sie die Anweisungen in der Datei [README.md ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} für dieses Projekt, um das Beispiel zu erstellen und auszuführen.
 
-	Der folgende Blog enthält eine hilfreiche Einführung in die Stärken und Schwächen der Kafka-REST-API. [Ein umfassender Open-Source-REST-Proxy für Kafka.![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window}.
+	Der folgende Blog enthält eine hilfreiche Einführung in die Stärken und Schwächen der Kafka-REST-API. [Ein umfassender Open-Source-REST-Proxy für Kafka. ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window}.
 
 
 

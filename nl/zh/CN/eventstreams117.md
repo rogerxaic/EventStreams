@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -56,7 +56,7 @@ subcollection: eventstreams
 ### 网络吞吐量
 {: #enterprise_throughput }
 
-建议的最大吞吐量为每秒 40 MB（每秒峰值限制为 90 MB）。吞吐量以集群中每秒可以发送和接收的字节数表示。
+建议的最大吞吐量为每秒 40 MB（峰值限制为每秒 75 MB）。吞吐量以集群中每秒可以发送和接收的字节数表示。
 
 此建议数字基于典型的工作负载，并考虑到运行操作的可能影响，例如，内部更新或故障模式，如可用性专区丢失。如果平均吞吐量超过建议数字，在这些状况下可能会遇到性能下降的情况。
 
@@ -74,7 +74,8 @@ subcollection: eventstreams
 ### 其他限制
 {: #enterprise_limits}
 
-最大消息大小：1 MB
+*  最大消息大小：1 MB
+*  最大并发活动 Kafka 客户机数：10000
 
 
 

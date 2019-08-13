@@ -35,9 +35,9 @@ subcollection: eventstreams
 ## 유용한 링크
 {: #troubleshooting_links notoc}
 
-*  [{{site.data.keyword.Bluemix_short}} 무료 평가판 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [{{site.data.keyword.messagehub}} Java Kafka 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [{{site.data.keyword.Bluemix_notm}}를 사용하여 웹 애플리케이션 작성 및 Cloud Foundry를 사용하여 앱 배치 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+*  [{{site.data.keyword.Bluemix_notm}}로 웹 애플리케이션 작성 및 Cloud Foundry로 앱 배치 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+   Cloud Foundry로 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Apache Kafka 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://kafka.apache.org/documentation.html){: new_window}
 *  [Apache Kafka 2.2.0 클라이언트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
 *  [{{site.data.keyword.Bluemix_notm}} 가격 정보![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}

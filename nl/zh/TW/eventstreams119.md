@@ -27,7 +27,7 @@ subcollection: eventstreams
 
 常見的模式是使用 {{site.data.keyword.iot_short_notm}} 橋接器、{{site.data.keyword.messagehub}} 及 Cloud Object Storage 橋接器來建立端對端管線，這讓即時及批次互動更為容易。
 
-如需如何建立此橋接器的相關資訊，請參閱：[Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}。
+如需如何建立此橋接器的相關資訊，請參閱：[Connecting and configuring a historian connector to use {{site.data.keyword.messagehub}}  ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}。
 
 
 

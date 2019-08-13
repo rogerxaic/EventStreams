@@ -26,7 +26,7 @@ subcollection: eventstreams
 Como o serviço subjacente ao qual a ponte do {{site.data.keyword.objectstorageshort}} se conecta foi descontinuado, a ponte do {{site.data.keyword.objectstorageshort}} também foi descontinuada em 1º de agosto de 2018. 
 {: shortdesc}
 
-Quando o serviço {{site.data.keyword.objectstorageshort}} atingir seu término de vida e for desatribuído, todas as instâncias da ponte do {{site.data.keyword.objectstorageshort}} também serão desatribuídas. Para obter mais informações, consulte o [comunicado de descontinuação: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+Quando o serviço {{site.data.keyword.objectstorageshort}} atingir seu término de vida e for desatribuído, todas as instâncias da ponte do {{site.data.keyword.objectstorageshort}} também serão desatribuídas. Para obter mais informações, consulte o [comunicado de descontinuação: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
 Como alternativa, é possível usar a [ponte do Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge). 
 {:deprecated}
@@ -34,7 +34,7 @@ Como alternativa, é possível usar a [ponte do Cloud Object Storage](/docs/serv
 A ponte do {{site.data.keyword.objectstorageshort}} permite arquivar dados de tópicos
 do Kafka no {{site.data.keyword.messagehub}} em uma instância do serviço do {{site.data.keyword.Bluemix_short}}. A ponte consome lotes de mensagens do Kafka e faz upload dos dados da mensagem como objetos para um contêiner no serviço do {{site.data.keyword.objectstorageshort}}.
 
-Observe que o serviço de armazenamento de objeto preferencial no {{site.data.keyword.Bluemix_short}} agora é o serviço do [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+Observe que o serviço de armazenamento de objeto preferencial no {{site.data.keyword.Bluemix_short}} agora é o serviço do [{{site.data.keyword.IBM_notm}} Cloud Object Storage. ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 Ao configurar a ponte do {{site.data.keyword.objectstorageshort}}, é possível controlar como os dados são transferidos por upload como objetos para o {{site.data.keyword.objectstorageshort}}. Por exemplo, as propriedades que podem ser configuradas são as seguintes:
 

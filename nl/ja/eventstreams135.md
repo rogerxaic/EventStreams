@@ -29,6 +29,7 @@ subcollection: eventstreams
 これらの詳細を取得する方法については、以下の説明をお読みください。 ここで示す手順は微妙に変わる可能性があるため、ご使用のインスタンスに合った適切な手順を実行するように注意してください。
 
 ## {{site.data.keyword.messagehub}} インスタンスのプロビジョン
+{: #provision_classic}
 
 前提条件として、最初に、クラシック・プランで {{site.data.keyword.messagehub}} サービス・インスタンスをプロビジョンする必要があります。 次に、以下のタスクを実行することによって、{{site.data.keyword.messagehub}} API 接続詳細を取得します。
 
@@ -91,7 +92,7 @@ VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされ
 <li>対象の Cloud Foundry 組織およびスペースにいることを確認します。 次のコマンドを実行することによって、対話式にナビゲートすることができます。<br/>
 <code>ibmcloud target --cf</code>
 </li>
-<li>アプリを見つけます。<br/> <code>ibmcloud app list</code> <br/>
+<li>アプリを検出します。<br/> <code>ibmcloud app list</code> <br/>
 </br>
 マニフェスト・ファイルがある場合、以下を実行して新しいアプリを作成できます。</br>
 <code>ibmcloud app push</code>
@@ -103,7 +104,7 @@ VCAP_SERVICES には、最初の 5 つのブローカーのみがリストされ
 <code>ibmcloud service bind <var class="keyword varname">your_app_name</var> <var class="keyword varname">your_service_name</var></code>
 </li>
 <li>以下を実行して、アプリケーション・ランタイムで VCAP_SERVICES 環境変数が使用可能であることを検証します。</br>
- <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>。
+ <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>。 
 </li>
 <li>これらの資格情報をアプリケーションに渡します。 ユーザー名として <code>token</code> を、パスワードとして <var class="keyword varname">api_key</var> を指定します。 <code>token</code> と <var class="keyword varname">api_key</var> はコロンで区切ってください。 詳しくは、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。
 <p>変更を有効にするために、アプリケーションの再ステージが必要な場合があります。</p></li>
@@ -140,7 +141,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 <code>ibmcloud service key-create <var class="keyword varname">your_service_name</var> <var class="keyword varname">new_service_key_name</var></code><br>
 <br/>
 または、既存のサービス・キーを使用します。<br/>
-<code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code>
+<code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code> 
 </li>
 <li>キーの詳細を取得します。</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>

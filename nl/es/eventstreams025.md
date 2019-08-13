@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #rest_producer_using}
 
 
-** La API REST de productor sólo está disponible como parte del nuevo plan Estándar de {{site.data.keyword.messagehub}}.**
+**La API REST de productor sólo está disponible como parte de los planes Estándar y Empresa de {{site.data.keyword.messagehub}}.**
 <br/>
 
 {{site.data.keyword.messagehub}} proporciona una API REST para ayudar a conectar los sistemas existentes al clúster Kafka de {{site.data.keyword.messagehub}}. Utilizando la API, puede integrar {{site.data.keyword.messagehub}} con cualquier sistema que dé soporte a las API RESTful.
@@ -48,7 +48,7 @@ El URL para el punto final de la API se proporciona en la propiedad <code>kafka_
 Utilice uno de los métodos siguientes para autenticarse:
 
 * **Para autenticarse utilizando la autenticación básica:**<br/>
-    Utilice las propiedades <code>user</code> y <code>api_key</code> de los objetos anteriores como nombre de usuario y contraseña. Coloque estos valores en la cabecera <code>Authorization</code> de la solicitud HTTP con el formato <code>Basic <codificación en base64 de username:password unidos por un signo de dos puntos (:)></code>.
+    Utilice las propiedades <code>user</code> y <code>api_key</code> de los objetos anteriores como nombre de usuario y contraseña. Coloque estos valores en la cabecera <code>Authorization</code> de la solicitud HTTP con el formato <code>Basic &lt;codificación en base64 de nombre de usuario y contraseña unidos por un signo de dos puntos (:)&gt;</code>.
 
 * **Para autenticarse utilizando una señal portadora:**<br/>
     Para obtener la señal utilizando la CLI de IBM Cloud, primero inicie sesión en IBM Cloud y después ejecute el mandato siguiente: 

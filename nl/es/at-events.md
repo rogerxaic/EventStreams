@@ -34,7 +34,7 @@ El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades
 ## Lista de sucesos
 {: #events}
 
-<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
+<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://cloud.ibm.com/docs/services/cloud-activity-tracker/services?topic=cloud-activity-tracker-cf#catalog. -->
 
 {{site.data.keyword.messagehub}}, en los planes Estándar y Empresa, genera sucesos automáticamente, para que se pueda realizar el seguimiento de la actividad del servicio.
 

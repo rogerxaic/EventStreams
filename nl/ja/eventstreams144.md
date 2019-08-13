@@ -20,11 +20,11 @@ subcollection: eventstreams
 # クラシック・プランの既知の制約事項 
 {: #restrictions_classic}
 
-クラシック・プランの {{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。
+クラシック・プランの {{site.data.keyword.messagehub}} を使用中に問題があった場合、既知の制約事項と回避策を検討してください。 
 {: shortdesc}
 
 ## Kafka ブートストラップ・サーバーで障害が起こっても Java Kafka 呼び出しがフェイルオーバーしない
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### 問題
 {: #calls_failover_problem notoc}
@@ -81,14 +81,14 @@ Kafka Java クライアント呼び出しで Kafka を検出できないこと�
 
 
 ## トピックおよびパーティション
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  トピック名は最大 100 文字に制限されています。
 *  トピックのデフォルトのパーティション数は 1 つです。
 *  各 {{site.data.keyword.Bluemix_notm}} スペースのパーティションは 100 までに制限されています。 それより多くのパーティションを作成するには、新しい {{site.data.keyword.Bluemix_notm}} スペースを使用する必要があります。
 
 ## メッセージの保存
-{: #message_retention}
+{: #message_retention_classic}
 
 デフォルトでは、Kafka ではメッセージは最大 24 時間保存され、各パーティションは 1 GB が上限です。 この 1 GB という上限に達したら、この限界を超えないよう、最も古いメッセージが破棄されます。
 
@@ -97,7 +97,7 @@ Kafka Java クライアント呼び出しで Kafka を検出できないこと�
 Kafka クライアントまたは Kafka Streams を使用してトピックを作成するときに許可される設定の制限については、[Kafka API の使用](/docs/services/EventStreams?topic=eventstreams-kafka_using)を参照してください。
 
 ## Kafka でのトピックの作成および削除
-{: #create_delete}
+{: #create_delete_classic}
 
 Kafka では、トピックの作成および削除は非同期操作であり、完了するのに時間がかかることがあります。 トピックの迅速な作成および削除に依存する使用パターンや、トピックの迅速な削除および再作成に依存する使用パターンを避けることをお勧めします。
 

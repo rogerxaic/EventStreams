@@ -49,7 +49,7 @@ Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cl
 		    <th id="client" scope="col">Cliente</th>
 		    <th id="language" scope="col">Programação</th>
 			<th id="version" scope="col">Versão Recomendada</th>
-		    <th id="minimum version" scope="col">Versão mínima suportada [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">Versão mínima suportada [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">Link para a amostra</th>
         </tr>
 			<tr>
@@ -60,9 +60,9 @@ Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cl
 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>Latest</td>
-			<td>0.10.2 <p> Para obter informações sobre clientes mais antigos, consulte [compatibilidade com versões anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
+			<td>0.10.2 <p> Para obter informações sobre clientes mais antigos, consulte [compatibilidade com versões anteriores](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic).</p></td>
 			<td>[Amostra do console Java ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
-			[amostra do Liberty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			[Amostra do Liberty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
 			<tr>
@@ -99,7 +99,8 @@ Outros clientes de terceiros que suportam o conjunto mínimo de requisitos do cl
 
 </table>
 ### Nota de Rodapé
-1. {: #footnote1}Essa versão é a mais antiga que validamos em testes contínuos. Geralmente, essa é a versão inicial disponível dentro dos últimos 12 meses, mas ela pode ser mais recente se problemas significativos forem conhecidos.
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}Essa versão é a mais antiga que validamos em testes contínuos. Geralmente, essa é a versão inicial disponível dentro dos últimos 12 meses, mas ela pode ser mais recente se problemas significativos forem conhecidos.
 
 ## Compatibilidade com versões anteriores (apenas plano clássico)
 {: #compatibility_classic}

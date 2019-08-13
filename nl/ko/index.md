@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # 시작하기 튜토리얼
 {: #getting_started}
@@ -47,7 +48,7 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
   
   e. **작성**을 클릭하십시오.
 
-2. {: #create_credentials_step notoc} [IBM Cloud 콘솔을 사용하여 인증 정보 가져오기 및 연결](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console) 단계를 완료하여 몇 가지 {{site.data.keyword.messagehub}} 인증 정보를 작성하십시오.
+2. {: #create_credentials_step notoc} 몇 가지 {{site.data.keyword.messagehub}} 인증 정보를 작성하기 위해 [IBM Cloud 콘솔을 사용하여 인증 정보 가져오기 및 연결](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external_console) 단계를 완료하십시오.
    <br/>
    <br/>이 태스크의 [7단계](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)를 수행하려면 *kafka_brokers_sasl* 및 *api_key*의 값이 필요합니다.   
 
@@ -84,7 +85,8 @@ Node.js 및 Python의 샘플을 포함해 기타 {{site.data.keyword.messagehub}
     샘플은 {{site.data.keyword.messagehub}} 관리 API를 사용하여 토픽을 작성합니다. 메시지를 전송 및 수신하기 위해
     샘플은 Apache Kafka Java API를 사용합니다.
 
-    [2단계](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step)에서 작성한 인증 정보의 *kafka_brokers_sasl* 및 *api_key* 값을 사용하십시오.<p></p>
+    [2단계](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step)에서 작성한 인증 정보의 *kafka_brokers_sasl* 및 *api_key* 값을 사용하십시오.
+	<p></p>
 
 	**중요:** *kafka_brokers_sasl*은 단일 문자열이어야 하며 따옴표로 묶어야 합니다. 예를 들어, 다음과 같은 경우입니다.
 

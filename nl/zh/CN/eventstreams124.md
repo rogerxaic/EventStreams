@@ -46,7 +46,7 @@ subcollection: eventstreams
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -84,16 +84,16 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 |允许应用程序连接到集群|资源类型：<code>cluster</code>|不适用|不适用|
 |允许应用程序向任何主题生成内容|资源类型：<code>cluster</code>|资源类型：<code>topic</code>   |不适用|
 |允许应用程序向特定主题生成内容|资源类型：<code>cluster</code>|资源类型：<code>topic</code><br/>资源标识：<var class="keyword varname">name_of_topic</var>      |不适用|
-| 允许应用程序连接到任何主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code> <br/>资源类型：<code>topic</code> |不适用|不适用|
-| 允许应用程序连接到特定主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code> <br/>资源类型：<code>topic</code><br/>资源标识：<var class="keyword varname">name_of_topic</var> |不适用|不适用|
-| 允许应用程序使用主题（使用者组）|资源类型：<code>cluster</code> <br/>资源类型：<code>topic</code><br/> 资源类型：<code>group</code> |不适用|不适用|
-|允许应用程序按事务向主题生成内容|资源类型：<code>cluster</code> <br/> 资源类型：<code>group</code>|资源类型：<code>topic</code> <br/>资源标识：<var class="keyword varname">name_of_topic</var> <br/>资源类型：<code>txnid</code> |不适用|
+| 允许应用程序连接到任何主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code>   <br/>资源类型：<code>topic</code>   |不适用|不适用|
+| 允许应用程序连接到特定主题并使用其中的内容（无使用者组）|资源类型：<code>cluster</code>   <br/>资源类型：<code>topic</code><br/>资源标识：<var class="keyword varname">name_of_topic</var>      |不适用|不适用|
+| 允许应用程序使用主题（使用者组）|资源类型：<code>cluster</code>   <br/>资源类型：<code>topic</code><br/>   资源类型：<code>group</code>|不适用|不适用|
+|允许应用程序按事务向主题生成内容|资源类型：<code>cluster</code>   <br/> 资源类型：<code>group</code>|资源类型：<code>topic</code>   <br/>资源标识：<var class="keyword varname">name_of_topic</var>      <br/>资源类型：<code>txnid</code>|不适用|
 |删除使用者组|资源类型：<code>cluster</code>   |不适用|资源类型：<code>group</code> <br/>资源标识：<var class="keyword varname">group_ID</var>      |
 | 要使用 Streams |资源类型：<code>cluster</code></br> 资源类型：<code>group</code>|不适用|资源类型：<code>topic</code>   |
 
 有关 IAM 的更多信息，请参阅 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)。
 
-有关如何设置策略的示例，请参阅：[IBM Cloud IAM Service IDs and API Keys ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}。
+有关如何设置策略的示例，请参阅：[IBM Cloud IAM Service IDs and API Keys ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}。
 
 
 ## 连接到 {{site.data.keyword.messagehub}}

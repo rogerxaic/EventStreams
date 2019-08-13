@@ -26,9 +26,9 @@ subcollection: eventstreams
 {{site.data.keyword.Bluemix_short}} アプリケーションは、
 アプリケーションの VCAP_SERVICES 環境変数の `kafka_admin_url` プロパティーを使用することができます。
 
-この API の完全な仕様は [admin-rest-api.yaml ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window} からダウンロードできます。
+この API の完全な仕様は [admin-rest-api.yaml ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api-classic-plan-only/admin-rest-api.yaml){:new_window} からダウンロードできます。
 この Swagger ファイルを表示するには、Swagger ツール (例えば、[Swagger エディター ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://editor.swagger.io/#/){:new_window} を使用してください。
 
-[{{site.data.keyword.messagehub}} admin-rest-api ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api){:new_window} ディレクトリーにも、管理 RESTful API を呼び出す方法を示す例がいくつか含まれています。
+[{{site.data.keyword.messagehub}} admin-rest-api ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api-classic-plan-only){:new_window} ディレクトリーにも、管理 RESTful API を呼び出す方法を示す例がいくつか含まれています。
 
 

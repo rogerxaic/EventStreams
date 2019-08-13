@@ -49,7 +49,7 @@ subcollection: eventstreams
 		    <th id="client" scope="col">用戶端</th>
 		    <th id="language" scope="col">語言</th>
 			<th id="version" scope="col">建議版本</th>
-		    <th id="minimum version" scope="col">支援的最低版本 [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">支援的最低版本 [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">範例鏈結</th>
         </tr>
 			<tr>
@@ -59,7 +59,7 @@ subcollection: eventstreams
 			<td>[Apache Kafka 用戶端 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>最新</td>
-			<td>0.10.2<p> 如需較舊用戶端的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility)。</p></td>
+			<td>0.10.2<p> 如需較舊用戶端的相關資訊，請參閱[舊版相容性](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic)。</p></td>
 			<td>[Java 主控台範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Liberty 範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -98,7 +98,8 @@ subcollection: eventstreams
 
 </table>
 ### 註腳
-1. {: #footnote1}此版本是我們已在持續測試中驗證過的最早版本。通常這是在過去 12 個月內可用的起始版本，但如果已知有重要的問題存在，可能會更新。
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}此版本是我們已在持續測試中驗證過的最早版本。通常這是在過去 12 個月內可用的起始版本，但如果已知有重要的問題存在，可能會更新。
 
 ## 舊版相容性（僅限經典方案）
 {: #compatibility_classic}

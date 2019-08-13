@@ -20,11 +20,11 @@ subcollection: eventstreams
 # Limitazioni note per il piano Classic 
 {: #restrictions_classic}
 
-Se rilevi un problema mentre stai usando il piano Classic di {{site.data.keyword.messagehub}}, riesamina queste limitazioni note e le soluzioni temporanee.
+Se rilevi un problema mentre stai usando il piano Classic di {{site.data.keyword.messagehub}}, riesamina queste limitazioni note e le soluzioni temporanee. 
 {: shortdesc}
 
 ## Non viene eseguito il failover delle chiamate Java Kafka se si verifica un malfuzionamento di un server di avvio Kafka
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### Problema
 {: #calls_failover_problem notoc}
@@ -81,7 +81,7 @@ Ritenta le tue chiamate dopo aver atteso per un lasso di tempo sufficiente perch
 
 
 ## Argomenti e partizioni
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  I nomi argomento sono limitati a un massimo di 100 caratteri.
 *  Il numero predefinito di partizioni per un argomento è uno.
@@ -89,7 +89,7 @@ Ritenta le tue chiamate dopo aver atteso per un lasso di tempo sufficiente perch
                     più partizioni, devi utilizzare un nuovo spazio {{site.data.keyword.Bluemix_notm}}.
 
 ## Conservazione dei messaggi
-{: #message_retention}
+{: #message_retention_classic}
 
 Per impostazione predefinita, i messaggi vengono conservati in Kafka per un massimo di 24 ore e
 ciascuna partizione ha un limite massimo di 1 GB. Se viene raggiunto il limite massimo di 1 GB, i messaggi vengono eliminati per restare entro il limite.
@@ -102,7 +102,7 @@ a un massimo di 30 giorni.
 Per informazioni sulle limitazioni sulle impostazioni consentite quando crei degli argomenti utilizzando un client Kafka o Kafka Streams, vedi [Utilizzo dell'API Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Creazione ed eliminazione di argomenti in Kafka
-{: #create_delete}
+{: #create_delete_classic}
 
 In Kafka, la creazione e l'eliminazione di argomenti sono delle operazioni asincrone
 il cui completamento potrebbe richiedere un certo tempo. Si consiglia di evitare

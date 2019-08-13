@@ -46,7 +46,7 @@ Los niveles de acceso (también conocidos como rol) que puede asignar a un usuar
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -88,12 +88,12 @@ En esta tabla se resumen algunos casos de ejemplo habituales de {{site.data.keyw
 | Permitir que una app se conecte y consuma desde un tema específico (no grupo de consumidores)  | Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code><br/>ID de recurso: <var class="keyword varname">nombre_tema</var> |No aplicable     |No aplicable     |
 | Permitir a una app consuma un tema (grupo de consumidores)  |Tipo de recurso: <code>cluster</code> <br/>Tipo de recurso: <code>topic</code><br/> Tipo de recurso: <code>group</code> |No aplicable      |No aplicable     |
 | Permitir que una app produzca un tema de forma transaccional  |Tipo de recurso: <code>cluster</code> <br/> Tipo de recurso: <code>group</code>|Tipo de recurso: <code>topic</code> <br/>ID de recurso: <var class="keyword varname">nombre_tema</var> <br/>Tipo de recurso: <code>txnid</code> |No aplicable     |
-| Suprimir grupo de consumidores |Tipo de recurso: <code>cluster</code> |No aplicable  |Tipo de recurso: <code>group</code> <br/>ID de recurso: <var class="keyword varname">ID_grupo</var>      |
+| Suprimir grupo de consumidores |Tipo de recurso: <code>cluster</code> |No aplicable  |Tipo de recurso: <code>group</code> <br/>ID de recurso: <var class="keyword varname">group_ID</var>      |
 | Utilizar Streams |Tipo de recurso: <code>cluster</code></br>Tipo de recurso: <code>group</code>| No aplicable  |Tipo de recurso: <code>topic</code>    |
 
 Para obtener más información sobre IAM, utilice [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).
 
-Para ver un ejemplo de cómo definir políticas, consulte: [Claves de API e ID de servicio IBM Cloud IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}.
+Para ver un ejemplo de cómo definir políticas, consulte: [Claves de API e ID de servicio IBM Cloud IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}.
 
 
 ## Conexión a {{site.data.keyword.messagehub}}

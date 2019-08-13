@@ -26,7 +26,7 @@ subcollection: eventstreams
 Le pont {{site.data.keyword.objectstorageshort}} a été déprécié le 1er août 2018 suite à la dépréciation du service sous-jacent auquel il se connectait. 
 {: shortdesc}
 
-Une fois que le service {{site.data.keyword.objectstorageshort}} arrivant en fin de vie est déclassé, toutes les instances du pont {{site.data.keyword.objectstorageshort}} sont également déclassées. Pour en savoir plus, veuillez consulter [l'annonce d'obsolescence : {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
+Une fois que le service {{site.data.keyword.objectstorageshort}} arrivant en fin de vie est déclassé, toutes les instances du pont {{site.data.keyword.objectstorageshort}} sont également déclassées. Pour en savoir plus, veuillez consulter [l'annonce d'obsolescence : {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}. 
 
 Comme alternative, vous pouvez utiliser le [pont Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge). 
 {:deprecated}
@@ -36,7 +36,7 @@ Kafka de {{site.data.keyword.messagehub}} dans une instance du service {{site.da
 pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un conteneur du service {{site.data.keyword.objectstorageshort}}.
 
 Le service de stockage d'objets préféré dans {{site.data.keyword.Bluemix_short}} est désormais le service [{{site.data.keyword.IBM_notm}} Cloud
-Object Storage. ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+Object Storage. ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 
 En
 configurant le pont {{site.data.keyword.objectstorageshort}}, vous pouvez contrôler le mode de transfert des données sous forme d'objets vers {{site.data.keyword.objectstorageshort}}. Les

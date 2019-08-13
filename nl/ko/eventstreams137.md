@@ -42,8 +42,7 @@ curl -X POST -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Con
 {: codeblock}
 <br/>
 <br/>
-CURL을 사용하는 경우 다음과 같은 예제를 사용하여 이용할 수 있습니다.
-<pre class="pre"><code>
+CURL을 사용하는 경우 다음과 같은 예제를 사용하여 이용할 수 있습니다.<pre class="pre"><code>
 curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var>/partitions/<var class="keyword varname">partition ID</var>/messages?offset=<var class="keyword varname">offset to start from</var>
 </code></pre>
 {: codeblock}
@@ -51,7 +50,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 <br/>
 <br/>
 CURL의 경우 명령행에 다음 행을 추가하여
-[Confluent 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.confluent.io/2.0.0/){:new_window}에 자세히 설명되어 있는 코드 예제도 조정할 수 있습니다.
+[Confluent 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.confluent.io/2.0.0/){:new_window}에 자세히 설명되어 있는 코드 예제도 조정할 수 있습니다.
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 

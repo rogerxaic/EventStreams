@@ -29,6 +29,7 @@ Il modo in cui stabilisci una connessione a {{site.data.keyword.messagehub}} var
 Leggi le seguenti informazioni su come ottenere questi dettagli. I passi possono variare leggermente per garantire che tu completi la procedura appropriata per la tua istanza.
 
 ## Esegui il provisioning di un'istanza {{site.data.keyword.messagehub}}
+{: #provision_classic}
 
 Come prerequisito, devi prima eseguire il provisioning di un'istanza del servizio {{site.data.keyword.messagehub}} per il piano Classic. Ottieni quindi i dettagli della connessione API {{site.data.keyword.messagehub}} completando le seguenti attività:
 
@@ -90,7 +91,7 @@ Solo i primi cinque broker sono elencati in VCAP_SERVICES. Se hai più di cinque
 
 <ol>
 <li>Assicurati di trovarti nell'organizzazione e nello spazio Cloud Foundry previsti. Puoi spostarti in modo interattivo eseguendo questo comando:<br/>
- <code>ibmcloud target --cf</code>
+<code>ibmcloud target --cf</code>
 </li>
 <li>Trova la tua applicazione:<br/> <code>ibmcloud app list</code> <br/>
 </br>
@@ -104,7 +105,7 @@ Se hai un file manifest, puoi creare una nuova applicazione eseguendo:</br>
 <code>ibmcloud service bind <var class="keyword varname">your_app_name</var> <var class="keyword varname">your_service_name</var></code>
 </li>
 <li>Verifica che la variabile di ambiente VCAP_SERVICES sia disponibile nel runtime dell'applicazione eseguendo:</br>
- <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>.
+ <code>ibmcloud app env <var class="keyword varname">your_app_name</var></code>. 
 </li>
 <li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Potresti dover ripreparare la tua applicazione per rendere effettive le modifiche.</p></li>
@@ -141,7 +142,7 @@ Per le applicazioni in esecuzione esternamente a Cloud Foundry, le credenziali v
 <code>ibmcloud service key-create <var class="keyword varname">tuo_nome_servizio</var> <var class="keyword varname">nome_della_nuova_chiave_di_servizio</var></code><br>
 <br/>
 oppure utilizzare una chiave di servizio esistente: <br/>
-<code>ibmcloud service keys <var class="keyword varname">your_service_name</var></code>
+<code>ibmcloud service keys <var class="keyword varname">tuo_nome_servizio</var></code> 
 </li>
 <li>Ottieni i dettagli per la chiave:</br>
 <code>ibmcloud service key-show <var class="keyword varname">your_service_name</var> <var class="keyword varname">service _key_name</var></code></br>

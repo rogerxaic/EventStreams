@@ -27,7 +27,7 @@ subcollection: eventstreams
 
 常用模式是使用 {{site.data.keyword.iot_short_notm}} 网桥、{{site.data.keyword.messagehub}} 和 Cloud Object Storage 网桥来创建端到端管道，使得实时和批量交互更加轻松。
 
-有关如何创建此网桥的信息，请参阅：[连接并配置历史数据库连接器以使用 {{site.data.keyword.messagehub}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}。
+有关如何创建此网桥的信息，请参阅：[连接并配置历史数据库连接器以使用 {{site.data.keyword.messagehub}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}。
 
 
 

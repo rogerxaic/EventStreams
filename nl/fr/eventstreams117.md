@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -56,7 +56,7 @@ Un maximum de 1 Go pour chaque partition.
 ### Débit du réseau
 {: #enterprise_throughput }
 
-Le débit maximum recommandé est de 40 Mo par seconde avec une limite maximale de 90 Mo par seconde. Le débit est exprimé en nombre d'octets par seconde pouvant être envoyés et reçus dans un cluster.
+Le débit maximal recommandé est de 40 Mo par seconde, avec une limite haute de 75 Mo par seconde. Le débit est exprimé en nombre d'octets par seconde pouvant être envoyés et reçus dans un cluster.
 
 Le chiffre recommandé est basé sur une charge de travail typique et tient compte de l'impact possible des actions opérationnelles telles que les mises à jour internes ou les modes de pannes, par exemple la perte d'une zone de disponibilité. Si le débit moyen dépasse le chiffre recommandé, les performances peuvent se être affectées dans ces conditions.
 
@@ -74,7 +74,8 @@ Illimitée, jusqu'à la limite de stockage de votre plan.
 ### Autres limites
 {: #enterprise_limits}
 
-Taille maximale des messages : 1 Mo
+*  Taille maximale des messages : 1 Mo
+*  Maximum de clients Kafka actifs simultanément : 10000
 
 
 

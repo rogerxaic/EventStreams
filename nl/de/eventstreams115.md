@@ -24,10 +24,10 @@ subcollection: eventstreams
 <br/>
 
 Die {{site.data.keyword.IBM}} Cloud Object Storage-Bridge bietet die Möglichkeit, Daten aus einem {{site.data.keyword.messagehub}}-Kafka-Topic zu lesen
-und die Daten in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} zu platzieren.
+und die Daten in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} zu platzieren.
 {: shortdesc}
 
-Die Cloud Object Storage-Bridge ermöglicht das Archivieren von Daten aus den Kafka-Topics von {{site.data.keyword.messagehub}} in einer Instanz des [Cloud Object Storage-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Die Bridge verarbeitet Nachrichten von Kafka im Stapelbetrieb und lädt die Nachrichtendaten als Objekte in ein Bucket im Cloud Object Storage-Service. Durch Konfigurieren der Cloud Object Storage-Bridge können Sie steuern, wie die Daten als Objekte in Cloud Object Storage hochgeladen werden. Sie können zum Beispiel
+Die Cloud Object Storage-Bridge ermöglicht das Archivieren von Daten aus den Kafka-Topics von {{site.data.keyword.messagehub}} in einer Instanz des [Cloud Object Storage-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Die Bridge verarbeitet Nachrichten von Kafka im Stapelbetrieb und lädt die Nachrichtendaten als Objekte in ein Bucket im Cloud Object Storage-Service. Durch Konfigurieren der Cloud Object Storage-Bridge können Sie steuern, wie die Daten als Objekte in Cloud Object Storage hochgeladen werden. Sie können zum Beispiel
 die folgenden Eigenschaften konfigurieren:
 
 * Name des Buckets, in den die Objekte geschrieben werden
@@ -70,7 +70,7 @@ Sie müssen Berechtigungsnachweise angeben, damit die Cloud Object Storage-Bridg
    Alternativ können Sie die Felder <code>apikey</code> und <code>resource_instance_id</code> in das {{site.data.keyword.messagehub}}-Dashboard eingeben oder in JSON für die Erstellung der Bridge festlegen, wenn Sie die Bridge mit einem REST-Aufruf direkt erstellen.
 
 Der von Ihnen erstellte Berechtigungsnachweis gewährt Schreibzugriff auf die gesamte Cloud Object Storage-Instanz. Daher sollten Sie diesen Zugriff möglicherweise auf den bestimmten Bucket beschränken, mit dem die Bridge interagiert.
-1. Rufen Sie die Seite [Zugriffs- und Benutzerverwaltung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/iam#/overview){:new_window} auf.
+1. Rufen Sie die Seite [Zugriffs- und Benutzerverwaltung ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/iam/overview){:new_window} auf. 
 2. Die automatisch generierte Service-ID sollte auf dieser Seite angezeigt werden. Wenn Sie die spezifische ID identifiziert haben, wählen Sie die Aktion **Service-ID verwalten** aus. 
 3. Wählen Sie die Aktion **Richtlinie bearbeiten** auf, um sie auf mit einem **Ressourcentyp** näher einzugrenzen. Dieser ist ein Bucket und eine **Ressourcen-ID**, die der Name des Buckets ist. Klicken Sie auf **Speichern**.
 

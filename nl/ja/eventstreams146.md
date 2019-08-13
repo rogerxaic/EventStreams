@@ -21,7 +21,7 @@ subcollection: eventstreams
 
 
 ## Kafka Java クライアント 0.9.X または 0.10.X からそれより後のクライアント・バージョンへのマイグレーション
-{: #kafka_migrate}
+{: #kafka_migrate_classic}
 
 
 Java クライアントを使用している場合、公開されている

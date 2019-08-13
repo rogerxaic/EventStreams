@@ -84,7 +84,7 @@ subcollection: eventstreams
 
 오프셋 보존은 시스템 전체에 해당하므로 개별 토픽 레벨에서 설정할 수 없습니다. 모든 이용자 그룹은 토픽의 로그 보존이 최대 30일로 늘어났더라도 저장된 오프셋의 기간은 7일 동안만 가능합니다. 
 
-내부 Kafka <code>__consumer_offsets</code> 토픽은 읽기 전용으로 사용자에게 표시됩니다.
+내부 Kafka <code>__consumer_offsets</code> 토픽은 읽기 전용으로 사용자에게 표시됩니다. 
 어떠한 방식으로도 토픽 관리를 시도하지 않는 것이 좋습니다. 
 
 <!--following message retention info duplicted in eventstreams057-->

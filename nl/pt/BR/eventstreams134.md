@@ -35,7 +35,7 @@ A tabela a seguir resume o que é suportado pelo plano:
     <caption>Tabela 1. Suporte no plano Clássico</caption>
       <tr>
 	        <th></th>
-		    <th>Plano Classic</th>
+		    <th>Plano Clássico</th>
         </tr>
 		<tr>
 			<td>**Coarrendamento**</td>
@@ -97,7 +97,8 @@ A tabela a seguir resume o que é suportado pelo plano:
 			API do MQ Light</br>
 		    </td>
 		</tr>
-			<td>**Ponte do Cloud Object Storage e<br/> ponte do MQ suportadas**</td>
+			<td>**Ponte do Cloud Object Storage e<br/>
+			ponte do MQ suportadas**</td>
 			<td>Sim</td>
 		</tr>
 		<tr>

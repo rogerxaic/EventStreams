@@ -21,7 +21,7 @@ subcollection: eventstreams
 # Connessione a {{site.data.keyword.messagehub}}
 {: #connecting}
 
-Il modo in cui stabilisci una connessione a {{site.data.keyword.messagehub}} varia a seconda del fatto che la tua applicazione sia in esecuzione in modo nativo o come un'applicazione Cloud Foundry. Tuttavia, in entrambi i casi sono necessarie alcune informazioni:
+Il modo in cui stabilisci una connessione a {{site.data.keyword.messagehub}} varia a seconda del fatto che la tua applicazione sia in esecuzione in modo nativo o come un'applicazione Cloud Foundry. Tuttavia, in entrambi i casi sono necessarie alcune informazioni: 
 {: shortdesc}
 
 * Gli URL endpoint per le API
@@ -43,6 +43,7 @@ Completa la seguente procedura per eseguire il bind della tua applicazione e ott
 Per collegare un'applicazione, il metodo utilizzato dipende da dove viene distribuita l'applicazione, ossia in Cloud Foundry o all'esterno di Cloud Foundry, ad esempio nel servizio Kubernetes.
 
 ## Esegui il provisioning di un'istanza {{site.data.keyword.messagehub}}
+{: #provision_instance}
 
 Come prerequisito, devi prima eseguire il provisioning di un'istanza del servizio {{site.data.keyword.messagehub}} per il piano Standard o quello Enterprise. Ottieni quindi i dettagli della connessione API {{site.data.keyword.messagehub}} completando le seguenti attività:
 
@@ -69,10 +70,10 @@ Per le applicazioni in esecuzione esternamente a Cloud Foundry, le credenziali v
 <ol>
 <li>Individua il tuo servizio:<br/>
 <code>ibmcloud resource service-instances</code></li>
-<li>Crea una chiave del servizio:<br/>
-<code>ibmcloud resource service-key-create <var class="keyword varname">key_name</var> <var class="keyword varname">key_role</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
-<li>Stampa la chiave del servizio:<br/>
-<code>ibmcloud resource service-key <var class="keyword varname">key_name</var></code></li>
+<li>Crea una chiave di servizio:<br/>
+<code>ibmcloud resource service-key-create <var class="keyword varname">nome_chiave</var> <var class="keyword varname">ruolo_chiave</var> --instance-name <var class="keyword varname">tuo_nome_servizio</var></code></li>
+<li>Stampa la chiave di servizio:<br/>
+<code>ibmcloud resource service-key <var class="keyword varname">nome_chiave</var></code></li>
 <li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Assicurati che la tua applicazione analizzi i dettagli.</p></li>
 </ol>
@@ -107,7 +108,7 @@ Una volta eseguito il bind, i dettagli della connessione vengono resi disponibil
 <ol>
 <li>Assicurati di trovarti nell'organizzazione e nello spazio Cloud Foundry previsti. Puoi spostarti in modo interattivo eseguendo questo comando:<br/>
  <code>ibmcloud target --cf</code></li>
-<li>Individua la tua applicazione::</br>
+<li>Individua la tua applicazione:</br>
 <code>ibmcloud app list</code><br/>
 <br/>
 Se hai un file manifest, puoi creare una nuova applicazione eseguendo:<br/>
@@ -117,13 +118,13 @@ Poiché della tua applicazione non è stato ancora eseguito il bind a {{site.dat
 <li>Individua il tuo servizio:</br>
 <code>ibmcloud resource service-instances</code></li>
 <li>Crea un alias del servizio Cloud Foundry:<br/>
-<code>ibmcloud resource service-alias-create <var class="keyword varname">alias_name</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
+<code>ibmcloud resource service-alias-create <var class="keyword varname">nome_alias</var> --instance-name <var class="keyword varname">tuo_nome_servizio</var></code></li>
 <li>Esegui il bind della tua applicazione all'alias del servizio creato precedentemente:<br/>
-<code>ibmcloud service bind <var class="keyword varname">your_ app_name</var> <var class="keyword varname">alias_name</var></code>.<br/>
+<code>ibmcloud service bind <var class="keyword varname">tuo_nome_applicazione</var> <var class="keyword varname">nome_alias</var></code>.<br/>
 <br/>
 In alternativa, puoi aggiornare il tuo file manifest ed eseguire nuovamente il push dell'applicazione.</li>
-<li>Verifica che la variabile di ambiente VCAP_SERVICES sia disponibile nel tuo runtime dell'applicazione:<br/>
-<code>ibmcloud app env <var class="keyword varname">your_app_name</var></code></li>
+<li>Verifica che variabile di ambiente VCAP_SERVICES sia disponibile nel tuo runtime dell'applicazione:<br/>
+<code>ibmcloud app env <var class="keyword varname">tuo_nome_applicazione</var></code></li>
 <li>Passa queste credenziali alla tua applicazione. Specifica <code>token</code> come tuo nome utente e la <var class="keyword varname">api_key</var> come tua password. Separa <code>token</code> e la <var class="keyword varname">api_key</var> con un carattere due punti. Per ulteriori informazioni, vedi [Configurazione del tuo client](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
 <p>Potresti dover ripreparare la tua applicazione per rendere effettive le modifiche.</p></li>
 </ol>
@@ -137,7 +138,7 @@ Ora che disponi delle informazioni di connessione e credenziale, puoi scegliere 
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

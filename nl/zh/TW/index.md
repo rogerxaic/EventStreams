@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # 入門指導教學
 {: #getting_started}
@@ -45,7 +46,7 @@ subcollection: eventstreams
   
   e. 按一下**建立**。
 
-2. {: #create_credentials_step notoc}完成下列步驟，以建立部分 {{site.data.keyword.messagehub}} 認證：[使用 IBM Cloud 主控台取得認證並連接](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console)。
+2. {: #create_credentials_step notoc}完成下列步驟，以建立部分 {{site.data.keyword.messagehub}} 認證：[使用 IBM Cloud 主控台取得認證並連接](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external_console)。
    <br/>
    <br/>針對此作業的[步驟 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step)，您將需要 *kafka_brokers_sasl* 及 *api_key* 值。   
 

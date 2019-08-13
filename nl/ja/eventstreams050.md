@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -20,9 +20,18 @@ subcollection: eventstreams
 # Kafka API の使用
 {: #kafka_using}
 
-複数の言語の Kafka クライアントが存在しますが、それらの言語のうちのいくつかについてのみ説明が提供されています。 他のものも使用できますが、資格情報を指定するために SASL PLAIN サポートが必要になります。 さらに、エンタープライズ・プランを使用する場合は、TLSv1.2 プロトコルの Server Name Indication (SNI) 拡張機能を使用することも必要になります。
+Kafka は、広範囲の言語に渡る豊富な API とクライアントのセットを提供しています。以下に例を示します。
 
-クラシック・プランでの Kafka API の使用方法については、[Kafka API - クラシック](/docs/services/EventStreams?topic=eventstreams-kafka_using_classic)を参照してください。
+* **Kafka のコア API (コンシューマー、プロデューサー、および Admin API)**<br/>
+    1 つ以上の Kafka トピックとの間で直接メッセージを送受信するために使用します。
+* **Streams API**<br/>
+    トピック間でイベントを容易にコンシューム、変換、およびプロデュースするための上位ストリーム処理 API。
+* **Connect API**<br/>
+    外部システム (データベースなど) にイベントをストリーミングしたり、外部システムからイベントを取り出したりするための再使用可能または標準の統合を可能にするフレームワーク。
+* **KSQL**<br/>
+    SQL に似た構文を使用してトピックからのイベントを処理したり結合したりするためのインターフェース。
+
+以下の表に、{{site.data.keyword.messagehub}} で使用可能なものを要約します。
 
 <table>
     <caption>表 1. 標準プランおよびエンタープライズ・プランでの Kafka クライアントのサポート</caption>
@@ -46,39 +55,24 @@ subcollection: eventstreams
 			<td>はい</td>
 			<td>はい</td>
 		</tr>
-
+		<tr>
 			<td>**認証要件**</td>
 			<td>クライアントは SASL Plain メカニズムを使用した認証をサポートする必要があり、TLSv1.2 プロトコルの Server Name Indication (SNI) 拡張機能を使用する必要があります。</td>
 			<td>クライアントは SASL Plain メカニズムを使用した認証をサポートする必要があり、TLSv1.2 プロトコルの Server Name Indication (SNI) 拡張機能を使用する必要があります。</td>
 		</tr>
 
 </table>
-
-V2.2 プロデューサー API およびコンシューマー API について詳しくは、[Kafka プロデューサー API 2.2 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/22/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} および
-[Kafka コンシューマー API 2.2 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/22/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window}を参照してください。 
+<br/>
+クラシック・プランでの Kafka API の使用方法については、[Kafka API - クラシック](/docs/services/EventStreams?topic=eventstreams-kafka_using_classic)を参照してください。
 
 
 ## {{site.data.keyword.messagehub}} で使用する Kafka クライアントの選択
 {: #kafka_clients}
 
-{{site.data.keyword.messagehub}} で Kafka API を使用するには、以下のいずれかのタイプのクライアントを選択します。
+Kafka API の公式クライアントは Java で書かれており、最新の機能やバグ修正が含まれています。この API について詳しくは、[Kafka Producer API 2.2 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/22/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html){:new_window} および
+[Kafka Consumer API 2.2 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/22/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html){:new_window} を参照してください。 
 
-* 公式 Java クライアント。 これは、Apache Kafka で利用できる最新のフィーチャーが含まれているため、最適な選択です。
-* [推奨されるサード・パーティーのクライアント](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table)の 1 つ。
-
-どちらのタイプのクライアントについても、常に最新のクライアントのバージョンを選択することをお勧めします。 
-
-### Event Streams に接続するためのクライアントの要件
-
-{{site.data.keyword.messagehub}} に接続するには、クライアントは SASL Plain メカニズムを使用した認証をサポートする必要があり、TLSv1.2 プロトコルの Server Name Indication (SNI) 拡張機能を使用する必要があります。
-
-サポートされる最小の Kafka プロトコルは 0.10 です。
-
-	
-### サード・パーティーのクライアント
-{: #third_party_clients}
-
-公式 Java クライアントを実行できない場合は、[推奨されているサード・パーティーのクライアント](/docs/services/EventStreams?topic=eventstreams-kafka_clients#clients_table)の 1 つを実行することをお勧めします。これらはすべて、{{site.data.keyword.messagehub}} で実証済みのものです。クライアント要件の最小セットをサポートする他のサード・パーティーのクライアントが {{site.data.keyword.messagehub}} で動作する場合もあります。 しかし、IBM でテストし、使用した経験があるのは、推奨されるサード・パーティーのクライアントのみです。
+その他の言語については、以下のいずれかのクライアントを実行することをお勧めします。これらのクライアントは、すべて {{site.data.keyword.messagehub}} で十分なテストが済んでいます。
 
 ### すべての推奨されるクライアントのサポートの概要
 {: #client_summary}
@@ -93,7 +87,7 @@ V2.2 プロデューサー API およびコンシューマー API について�
 			<th id="sample link" scope="col">サンプルのリンク先</th>
         </tr>
 			<tr>
-			<td colspan="3">**公式のクライアント**</td>
+			<td colspan="3">**公式 Apache Kafka クライアント**</td>
 			</tr>
 	  		<tr>
 			<td>[Apache Kafka クライアント![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/downloads)</td>
@@ -101,7 +95,7 @@ V2.2 プロデューサー API およびコンシューマー API について�
 			<td>最新</td>
 			<td>0.10.2 </td>
 			<td>[Java コンソール・サンプル](/docs/services/EventStreams?topic=eventstreams-kafka_java_using)<br/>
-			[Liberty サンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			[Liberty サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
 			<tr>
@@ -138,44 +132,40 @@ V2.2 プロデューサー API およびコンシューマー API について�
 
 </table>
 ### 脚注
-1. {: #footnote1}このバージョンは、継続的なテストで検証した最も古いバージョンです。 通常、これは過去 12 カ月以内に使用可能な初期バージョンですが、重大な問題が存在することがわかっている場合は、それよりも新しい可能性があります。
+{: #footnote_clients notoc}
+1. {: #footnote1 notoc}このバージョンは、継続的なテストで検証した最も古いバージョンです。 通常、これは過去 12 カ月以内に使用可能な初期バージョンですが、重大な問題が存在することがわかっている場合は、それよりも新しい可能性があります。
 
+<br/>
+リストにあるいずれのクライアントも実行できない場合は、以下の最小要件を満たすその他のサード・パーティーのクライアントを使用できます (例えば、[librdkafka ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/edenhill/librdkafka/){:new_window})。
+* Kafka 0.10 以降をサポートする。
+* SASL PLAIN と TLSv1.2 を使用して接続および認証できる。
+* サーバーのホスト名が TLS ハンドシェークに組み込まれている、TLS の SNI 拡張をサポートする。
+* 楕円曲線暗号方式をサポートする。
+ただし、IBM でテストを行い、使用経験があるのは、推奨されるサード・パーティーのクライアントのみです。
 
-<!--
-## Unsupported clients
-
-The following clients are not supported by {{site.data.keyword.messagehub}}:
-
-### kafka-node
-The kafka-node client does not fully support SASL authentication with the PLAIN mechanism so cannot currently be used with {{site.data.keyword.messagehub}}.
-
-
-### no-kafka 
-The no-kafka client does not fully support SASL authentication with the PLAIN mechanism so cannot currently be used with {{site.data.keyword.messagehub}}.
-
--->
+すべてのケースで、最新バージョンのクライアントが推奨されます。
 
 <br/>
 ### クライアントの {{site.data.keyword.messagehub}} への接続
 {: #connect_client}
 
-{{site.data.keyword.messagehub}} に接続するように Java クライアントを構成する方法については、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_connect)を参照してください。
+{{site.data.keyword.messagehub}} に接続するように Java クライアントを構成する方法については、[クライアントの構成](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_api_client)を参照してください。
 
 ## Kafka API クライアントの構成
 {: #kafka_api_client}
 
-接続を確立するには、最小でも TLSv1.2 を介した SASL_SSL PLAIN を使用し、ユーザー名、およびブートストラップ・サーバーのリストを必要とするようにクライアントを構成する必要があります。 
+接続を確立するには、最小でも TLSv1.2 を介した SASL_SSL PLAIN を使用し、ユーザー名、およびブートストラップ・サーバーのリストを必要とするように、クライアントを構成する必要があります。 
 
-ユーザー名、パスワード、およびブートストラップ・サーバーのリストを取得するには、サービス・インスタンスのサービス資格情報オブジェクトまたはサービス・キーが必要です。これらのオブジェクトの作成について詳しくは、<link to Connecting to event Streams>
+ユーザー名、パスワード、およびブートストラップ・サーバーのリストを取得するには、サービス・インスタンスのサービス資格情報オブジェクトまたはサービス・キーが必要です。 これらのオブジェクトの作成について詳しくは、<link to Connecting to event Streams>
 [{{site.data.keyword.messagehub}} への接続](/docs/services/EventStreams?topic=eventstreams-connecting)を参照してください。
 
 これらのオブジェクトから以下を行います。
-* ブートストラップ・サーバーのリストとして <code>kafka_brokers_sasl property</code> を使用します。このリストは、host:port 項目のコンマ区切りリストとしてフォーマット設定します。例えば、<code>host1:port1,host2:port2</code> のようにします。<code>kafka_brokers_sasl</code> プロパティーに示されているすべてのホストの詳細を組み込むことを推奨します。
+* ブートストラップ・サーバーのリストとして <code>kafka_brokers_sasl property</code> を使用します。 このリストは、host:port 項目のコンマ区切りリストとしてフォーマット設定します。 例えば、<code>host1:port1,host2:port2</code> のようにします。 <code>kafka_brokers_sasl</code> プロパティーに示されているすべてのホストの詳細を組み込むことを推奨します。
 * ユーザー名とパスワードとして <code>user</code> プロパティーと <code>api_key</code> プロパティーを使用します。
 
 クラシック・プランのサービス・インスタンスの場合、この情報は、ユーザーのアプリケーションの VCAP_SERVICES 環境変数から代わりに取得できます。詳しくは、[{{site.data.keyword.messagehub}} への接続 - クラシック](/docs/services/EventStreams?topic=eventstreams-connecting_classic)を参照してください。
 
-Java クライアントの場合、以下の例に示すのがプロパティーの最小セットです。ここで USERNAME、PASSWORD、および KAFKA_BROKERS_SASL は先に取得した値に置き換えます。
+Java クライアントの場合、以下に示す例は、プロパティーの最小セットです。ここで、USERNAME、PASSWORD、および KAFKA_BROKERS_SASL は先に取得した値に置き換えてください。
 
 ```
 bootstrap.servers=KAFKA_BROKERS_SASL
@@ -185,26 +175,15 @@ sasl.mechanism=PLAIN
 ssl.protocol=TLSv1.2
 ssl.enabled.protocols=TLSv1.2
 ssl.endpoint.identification.algorithm=HTTPS
-
-# To send or receive messages, the following are also required
-key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
-value.deserializer=org.apache.kafka.common.serialization.StringDeserializer
 ```
 {: codeblock}
 
 <br/>
 0.10.2.1 より前の Kafka クライアントを使用している場合、<code>sasl.jaas.config</code> プロパティーはサポートされておらず、代わりに JAAS 構成ファイルでクライアント構成を指定する必要があることにご注意ください。 
 
-### Java 以外のアプリケーションでの接続と認証
-{: #kafka_notjava }
 
-SASL PLAIN と TLSv1.2 を使用した Kafka 0.10 をサポートするクライアントであれば、{{site.data.keyword.messagehub}} で機能します。 
 
-サーバーのホスト名が TLS ハンドシェークに組み込まれる場合には、TLS に対する SNI 拡張機能をクライアントがサポートする必要があることにご注意ください。 
 
-以下にクライアントの例を示します。
-* [librdkafka ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/edenhill/librdkafka/){:new_window} 
-* [confluent-kafka-python ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/confluentinc/confluent-kafka-python){:new_window} 
 
 
 

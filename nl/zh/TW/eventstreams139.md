@@ -23,7 +23,7 @@ subcollection: eventstreams
 經典方案上的 {{site.data.keyword.messagehub}} 會自動收集度量值和事件，以便您可以監視 {{site.data.keyword.messagehub}} 的使用情況。
 {:shortdesc}
 
-**註：**只有位於達拉斯 (us-south)、倫敦 (eu-gb) 和雪梨 (au-syd) 的 {{site.data.keyword.messagehub}} 經典方案才會提供度量值和事件。 
+**附註：**度量值及事件只適用於達拉斯 (us-south)、倫敦 (eu-gb) 及雪梨 (au-syd) 的 {{site.data.keyword.messagehub}} 經典方案。 
 
 
 您可以監視下列日誌資訊：

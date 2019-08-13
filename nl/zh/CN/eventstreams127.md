@@ -42,6 +42,7 @@ subcollection: eventstreams
 要连接应用程序，使用的方法取决于该应用程序的部署位置，即在 Cloud Foundry 内部还是外部，例如在 Kubernetes 服务中。
 
 ## 供应 {{site.data.keyword.messagehub}} 实例
+{: #provision_instance}
 
 作为使用服务的先决条件，无论是标准套餐还是企业套餐，都必须先供应 {{site.data.keyword.messagehub}} 服务实例。接下来，通过完成以下任务获取
 {{site.data.keyword.messagehub}} API 连接详细信息。
@@ -81,8 +82,7 @@ subcollection: eventstreams
 
 您的应用程序必须绑定到 {{site.data.keyword.messagehub}} 服务实例。要将 Cloud Foundry 应用程序绑定到非 Cloud Foundry 服务，请先创建 Cloud Foundry 服务别名，然后在绑定时从 Cloud Foundry 应用程序引用此别名。 
 
-绑定后，连接详细信息将通过 VCAP_SERVICES 环境变量以 JSON 格式提供给应用程序。您可以使用 [IBM Cloud 控制台
-](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_cf_console)或 [IBM Cloud CLI](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_cf_cli) 绑定应用程序和服务。
+绑定后，连接详细信息将通过 VCAP_SERVICES 环境变量以 JSON 格式提供给应用程序。您可以使用 [IBM Cloud 控制台](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_cf_console)或 [IBM Cloud CLI](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_cf_cli) 绑定应用程序和服务。
 
 ### 使用 IBM Cloud 控制台绑定应用程序
 {: #connect_enterprise_cf_console}
@@ -136,7 +136,7 @@ subcollection: eventstreams
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

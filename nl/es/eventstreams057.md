@@ -35,7 +35,7 @@ La máquina virtual Java (JVM) almacena en memoria caché las búsquedas DNS. Cu
 ### Solución temporal
 {: #calls_failover_workaround notoc}
 
-Puesto que {{site.data.keyword.messagehub}} utiliza los URL de servidor de programa de arranque de Kafka con varias direcciones IP para alta disponibilidad, no todas las direcciones IP del intermediario son conocidas para el cliente Kafka, lo que impide la migración tras error a un intermediario de trabajo. En estos casos, la migración tras error requiere una nueva consulta de las direcciones IP para que los URL de intermediario obtengan una dirección IP de trabajo. Se recomienda configurar la JVM con un valor de TTL de entre 30 y 60 segundos. Este valor garantiza que si una dirección IP del servidor de programa de arranque tiene problemas, el cliente Kafka podrá buscar y utilizar una nueva dirección IP consultando el DNS.
+Puesto que {{site.data.keyword.messagehub}} utiliza los URL de servidor de programa de arranque de Kafka con varias direcciones IP para alta disponibilidad, no todas las direcciones IP del intermediario son conocidas para el cliente Kafka, lo que impide la migración tras error a un intermediario funcional. En estos casos, la migración tras error requiere una nueva consulta de las direcciones IP para que los URL de intermediario obtengan una dirección IP funcional. Se recomienda configurar la JVM con un valor de TTL de entre 30 y 60 segundos. Este valor garantiza que si una dirección IP del servidor de programa de arranque tiene problemas, el cliente Kafka podrá buscar y utilizar una nueva dirección IP consultando el DNS.
 
 Del archivo <code>java.security</code>: 
 
@@ -59,6 +59,7 @@ Del archivo <code>java.security</code>:
 ```
 
 ### Cómo modificar el TTL de la JVM
+{: #jvm_ttl notoc}
 * Para modificar el TTL de la JVM para todas las aplicaciones, establezca el valor de <code>networkaddress.cache.ttl</code> en el archivo
 <code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code>.
 * Para modificar el TTL de la JVM para una aplicación determinada, establezca <code>networkaddress.cache.ttl</code> en el código de la aplicación del modo siguiente:
@@ -67,7 +68,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Las llamadas de Java Kafka pueden agotar el tiempo de espera
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### Problema
 {: #calls_timeout_problem notoc}

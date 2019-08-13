@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -56,7 +56,7 @@ subcollection: eventstreams
 ### 네트워크 처리량
 {: #enterprise_throughput }
 
-권장되는 최대값은 초당 40MB이며 최대 한계는 초당 90MB입니다. 처리량은 클러스터에서 보내고 받을 수 있는 초당 바이트 수로 표시됩니다. 
+권장되는 최대값은 초당 40MB이며 최대 한계는 초당 75MB입니다. 처리량은 클러스터에서 보내고 받을 수 있는 초당 바이트 수로 표시됩니다. 
 
 권장 수치는 일반적인 워크로드를 기반으로 하며 내부 업데이트 또는 가용성 영역 손실 등의 장애 모드와 같은 운영 조치의 가능한 영향을 고려한 것입니다. 평균 처리량이 권장 수치를 초과할 경우 이러한 조건에서 성능 저하가 발생할 수 있습니다.
 
@@ -74,7 +74,8 @@ subcollection: eventstreams
 ### 기타 한계
 {: #enterprise_limits}
 
-최대 메시지 크기: 1MB
+*  최대 메시지 크기: 1MB
+*  최대 동시 활성 Kafka 클라이언트 수: 10000
 
 
 

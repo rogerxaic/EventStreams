@@ -21,7 +21,7 @@ subcollection: eventstreams
 # Verbindung zu {{site.data.keyword.messagehub}} herstellen
 {: #connecting}
 
-Die Art und Weise, wie Sie eine Verbindung zu {{site.data.keyword.messagehub}} herstellen, hängt davon ab, ob Ihre Anwendung nativ oder als Cloud Foundry-Anwendung ausgeführt wird. In beiden Fällen sind jedoch zwei Informationen erforderlich:
+Die Art und Weise, wie Sie eine Verbindung zu {{site.data.keyword.messagehub}} herstellen, hängt davon ab, ob Ihre Anwendung nativ oder als Cloud Foundry-Anwendung ausgeführt wird. In beiden Fällen sind jedoch zwei Informationen erforderlich: 
 {: shortdesc}
 
 * Endpunkt-URLs für die APIs
@@ -42,6 +42,7 @@ Führen Sie die folgenden Schritte aus, um Ihre Anwendung zu binden und Services
 Die zum Verbinden einer Anwendung verwendete Methode ist davon abhängig, ob die Anwendung innerhalb von Cloud Foundry bereitgestellt wird oder außerhalb von Cloud Foundry, z. B. im Kubernetes-Service.
 
 ## {{site.data.keyword.messagehub}}-Instanz bereitstellen
+{: #provision_instance}
 
 Als Voraussetzung müssen Sie zuerst eine {{site.data.keyword.messagehub}}-Serviceinstanz für den Plan "Standard" oder den Plan "Enterprise" bereitstellen. Rufen Sie anschließend die Verbindungsdetails für die {{site.data.keyword.messagehub}}-API ab, indem Sie die folgenden Tasks ausführen.
 
@@ -120,7 +121,7 @@ Da die App noch nicht an {{site.data.keyword.messagehub}} gebunden ist, kann sie
 <li>Binden Sie Ihre App an den zuvor erstellten Servicealias:<br/>
 <code>ibmcloud service bind <var class="keyword varname">Ihr_Anwendungsname</var> <var class="keyword varname">Aliasname</var></code>.<br/>
 <br/>
-Alternativ können Sie Ihre Manifestdatei aktualisieren und die Anwendung erneut mit Push-Operation übertragen.</li>
+Alternativ können Sie Ihre Manifestdatei aktualisieren und die Anwendung erneut mit Push-Operation übertragen. </li>
 <li>Stellen Sie sicher, dass die Umgebungsvariable VCAP_SERVICES in Ihrer Anwendungslaufzeit verfügbar ist:<br/>
 <code>ibmcloud app env <var class="keyword varname">Ihr_Anwendungsname</var></code></li>
 <li>Übergeben Sie diese Berechtigungsnachweise an Ihre Anwendung. Geben Sie <code>token</code> als Ihren Benutzernamen an und den <var class="keyword varname">api_key</var> als Kennwort. Trennen Sie <code>token</code> und den <var class="keyword varname">api_key</var> durch einen Doppelpunkt voneinander. Weitere Informationen finden Sie in [Client konfigurieren](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
@@ -136,7 +137,7 @@ Nachdem Sie über eine Verbindung und Berechtigungsinformationen verfügen, kön
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

@@ -16,7 +16,7 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Choix entre les trois API dans le plan Classic  
+# Choix entre les trois API dans le plan Classic 
 {: #choose_api_classic}
 
 Dans le plan Classic, {{site.data.keyword.messagehub}} prend en charge trois API différentes. Les informations suivantes vous aideront à choisir celle qui vous convient le mieux :
@@ -45,7 +45,7 @@ L'API REST Kafka est une interface pratique qui peut être utilisée dans les si
 * Dans certains cas d'utilisation à faible débit pour lesquels le temps d'attente n'est pas un facteur critique
 * Pour le débogage et la détection des incidents
 
-L'API REST Kafka n'est pas conçue pour être une interface offrant un débit élevé et de faibles temps d'attente. Pour ce type de besoins, il est recommandé d'utiliser l'API Kafka pour établir une connexion vers et depuis {{site.data.keyword.messagehub}}. Pour plus d'informations, voir [Utilisation d'un client Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using).
+L'API REST Kafka n'est pas conçue pour être une interface offrant un débit élevé et de faibles temps d'attente.Pour ce type de besoins, il est recommandé d'utiliser l'API Kafka pour établir une connexion vers et depuis {{site.data.keyword.messagehub}}. Pour plus d'informations, voir [Utilisation d'un client Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_using).
 
 ## Pourquoi utiliser l'API {{site.data.keyword.mql}} ?
 {: #why_mql_classic notoc}

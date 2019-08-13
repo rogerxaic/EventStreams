@@ -23,10 +23,10 @@ subcollection: eventstreams
 **Cloud Object Storage 网桥仅在经典套餐中提供。**
 <br/>
 
-使用 {{site.data.keyword.IBM}} Cloud Object Storage 网桥，可以从 {{site.data.keyword.messagehub}} Kafka 主题中读取数据，然后将数据放入到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 中。
+使用 {{site.data.keyword.IBM}} Cloud Object Storage 网桥，可以从 {{site.data.keyword.messagehub}} Kafka 主题中读取数据，然后将数据放入到 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 中。
 {: shortdesc}
 
-Cloud Object Storage 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 [Cloud Object Storage 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 的实例。该网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 Cloud Object Storage 服务中的存储区。通过配置 Cloud Object Storage 网桥，可以控制数据如何作为对象上传到 Cloud Object Storage。例如，可以配置的属性如下所示：
+Cloud Object Storage 网桥支持将 {{site.data.keyword.messagehub}} 中 Kafka 主题的数据归档到 [Cloud Object Storage 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 的实例。该网桥使用来自 Kafka 的批量消息，并将消息数据作为对象上传到 Cloud Object Storage 服务中的存储区。通过配置 Cloud Object Storage 网桥，可以控制数据如何作为对象上传到 Cloud Object Storage。例如，可以配置的属性如下所示：
 
 * 对象写入其中的存储区的名称。
 * 对象上传到 Cloud Object Storage 服务的频率。
@@ -64,7 +64,7 @@ Cloud Object Storage 网桥在将数据写入 Cloud Object Storage 时，使用�
    或者，可以采用 <code>apikey</code> 和 <code>resource_instance_id</code> 字段，并将其输入到 {{site.data.keyword.messagehub}} 仪表板中，或者如果要使用 REST 调用来直接创建网桥，请在创建网桥 JSON 中对其进行设置。
 
 创建的凭证会授予写入者对整个 Cloud Object Storage 实例的访问权，因此您可能希望将此访问权限制为与网桥进行交互的特定存储区。
-1. 转至[管理访问权和用户页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/iam#/overview){:new_window}。
+1. 转至[管理访问权和用户页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/iam/overview){:new_window}。 
 2. 您应该会在此页面上看到自动生成的服务标识。识别出特定标识后，选择**管理服务标识**操作。 
 3. 选择**编辑策略**操作，以将其进一步限制为特定**资源类型**（存储区）和**资源标识**（存储区的名称）。单击**保存**。
 

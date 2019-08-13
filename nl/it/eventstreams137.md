@@ -51,7 +51,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 <br/>
 <br/>
 Per CURL, puoi anche adattare gli esempi di codice
-descritti nella [Documentazione di Confluent ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.confluent.io/2.0.0/){:new_window} aggiungendo la seguente riga alla riga di comando:
+descritti nella [Documentazione di Confluent ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.confluent.io/2.0.0/){:new_window} aggiungendo la seguente riga alla riga di comando:
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 

@@ -145,8 +145,8 @@ client = mqlight.Client(service=service,
 
 <br>
 
-{{site.data.keyword.mql}} API에 대한 자세한 정보는
-[{{site.data.keyword.mql}} developerWorks&reg; 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/messaging/mq-light/){:new_window}을 참조하십시오.
+API에 관한 자세한 정보는
+GitHub의 [{{site.data.keyword.mql}} API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/mqlight){:new_window}를 참조하십시오.
 
 
 <!-- 14/11/18: info was in eventstreams080.md, moved because of doc app changes -->

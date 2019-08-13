@@ -27,7 +27,7 @@ subcollection: eventstreams
 
 일반적인 패턴은 {{site.data.keyword.iot_short_notm}} 브릿지, {{site.data.keyword.messagehub}} 및 Cloud Object Storage 브릿지를 사용하여 엔드-투-엔드 파이프라인을 작성하는 것이며, 이로 인해 실시간 및 일괄처리 상호작용이 더 쉬워집니다.
 
-이 브릿지 작성 방법에 관한 정보는 [{{site.data.keyword.messagehub}}를 사용하여 히스토리언 커넥터 연결 및 구성  ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}을 참조하십시오.
+이 브릿지 작성 방법에 관한 정보는 [{{site.data.keyword.messagehub}}를 사용하여 히스토리언 커넥터 연결 및 구성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}을 참조하십시오.
 
 
 

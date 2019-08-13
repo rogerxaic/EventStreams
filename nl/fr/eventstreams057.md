@@ -59,6 +59,7 @@ Issu du fichier <code>java.security</code> :
 ```
 
 ### Comment modifier la durée de vie de la machine virtuelle Java
+{: #jvm_ttl notoc}
 * Pour modifier la durée de vie de la machine virtuelle Java pour toutes les applications, définissez la valeur <code>networkaddress.cache.ttl</code> dans le fichier <code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code>.
 * Pour modifier la durée de vie de la machine virtuelle Java pour une application donnée, définissez la valeur <code>networkaddress.cache.ttl</code> dans votre code d'application comme suit :
 ```
@@ -66,7 +67,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Les appels Java Kafka risquent de dépasser le délai d'attente
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### Problème
 {: #calls_timeout_problem notoc}

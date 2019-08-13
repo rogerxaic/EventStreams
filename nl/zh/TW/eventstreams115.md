@@ -23,10 +23,10 @@ subcollection: eventstreams
 **Cloud Object Storage 橋接器僅在經典方案中提供。**
 <br/>
 
-{{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
+{{site.data.keyword.IBM}} Cloud Object Storage 橋接器提供一種從 {{site.data.keyword.messagehub}} Kafka 主題讀取資料的方式，並會將資料置於 [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}。
 {: shortdesc}
 
-Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
+Cloud Object Storage 橋接器容許您在 {{site.data.keyword.messagehub}} 中將 Kafka 主題的資料保存到 [Cloud Object Storage 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} 的實例。橋接器會從 Kafka 取用訊息批次，然後將訊息資料當作物件上傳到 Cloud Object Storage 服務中的儲存區。藉由配置 Cloud Object Storage 橋接器，您可以控制如何將資料作為物件上傳到 Cloud Object Storage。例如，您可以配置的內容如下：
 
 * 用於寫入物件的儲存區名稱。
 * 物件上傳至 Cloud Object Storage 服務的頻率。
@@ -72,7 +72,7 @@ Cloud Object Storage 使用者介面建立認證，如下所示：
    或者，您也可以取用 <code>apikey</code> 及 <code>resource_instance_id</code> 欄位，然後將它們輸入至 {{site.data.keyword.messagehub}} 儀表板，或者，如果您使用 REST 呼叫直接建立橋接器，則在建立橋接器 JSON 中進行設定。
 
 您建立的認證授權撰寫者存取整個 Cloud Object Storage 實例，因此，您可能想要將此存取限制為橋接器將與之互動的特定儲存區。
-1. 移至[管理存取權與使用者頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/iam#/overview){:new_window}。
+1. 移至[管理存取權與使用者頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/iam/overview){:new_window}。 
 2. 您應該會在此頁面上看到自動產生的服務 ID。當您識別特定 ID 後，請選取**管理服務 ID** 動作。 
 3. 選取**編輯原則**動作，進一步將它限制為特定的**資源類型**（即儲存區）和**資源 ID**（即儲存區的名稱）。按一下**儲存**。
 

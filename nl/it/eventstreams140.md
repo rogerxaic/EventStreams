@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 Risposte alle domande più frequenti sul servizio {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} per il piano Classic.
 
-Per risposte a domande relative a tutti i piani {{site.data.keyword.messagehub}}, vedi [FAQ](docs/services/EventStreams?topic=eventstreams-faqs#faqs).
+Per risposte a domande relative a tutti i piani {{site.data.keyword.messagehub}}, vedi [FAQ](/docs/services/EventStreams?topic=eventstreams-faqs#faqs).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -57,7 +57,7 @@ a conservazione di offset avviene a livello di sistema, pertanto non puoi impost
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## Per quanto vengono conservati i messaggi?
-{: #messages_retained}
+{: #messages_retained_classic}
 
 Per impostazione predefinita, i messaggi vengono conservati in Kafka per un massimo di 24 ore e
 ciascuna partizione ha un limite massimo di 1 GB. Se viene raggiunto il limite massimo di 1 GB, i messaggi vengono eliminati per restare entro il limite.

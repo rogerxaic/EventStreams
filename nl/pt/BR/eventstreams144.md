@@ -20,11 +20,11 @@ subcollection: eventstreams
 # Restrições conhecidas para o plano Clássico 
 {: #restrictions_classic}
 
-Se você localizar um problema ao usar o {{site.data.keyword.messagehub}} no plano Clássico, revise estas restrições e soluções alternativas conhecidas.
+Se você localizar um problema ao usar o {{site.data.keyword.messagehub}} no plano Clássico, revise estas restrições e soluções alternativas conhecidas. 
 {: shortdesc}
 
 ## As chamadas do Java Kafka não executarão failover se um servidor de autoinicialização Kafka falhar
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### Problema
 {: #calls_failover_problem notoc}
@@ -93,7 +93,7 @@ IP dos brokers disponíveis e não um subconjunto, portanto, uma falha em um ún
 
 
 ## Tópicos e partições
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  Os nomes dos tópicos são restritos a um máximo de 100 caracteres.
 *  O número padrão de partições para um tópico é um.
@@ -101,7 +101,7 @@ IP dos brokers disponíveis e não um subconjunto, portanto, uma falha em um ún
                     mais partições, deve-se usar um novo espaço do {{site.data.keyword.Bluemix_notm}}.
 
 ## Retenção de mensagem
-{: #message_retention}
+{: #message_retention_classic}
 
 Por padrão, as mensagens são retidas no Kafka por até 24 horas e cada partição é limitada a 1 GB. Se um valor máximo de 1 GB for atingido, as mensagens mais antigas serão descartadas para permanecerem
 no limite.
@@ -112,7 +112,7 @@ com o usuário ou a API de administração. O limite de tempo é um mínimo de u
 Para obter informações sobre restrições nas configurações permitidas ao criar tópicos usando um cliente Kafka ou Kafka Streams, consulte [Usando a API do Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Criando e excluindo tópicos no Kafka
-{: #create_delete}
+{: #create_delete_classic}
 
 No Kafka, a criação e a exclusão de tópico são operações assíncronas que podem levar algum tempo
 para serem concluídas. É recomendável evitar o uso de padrões que dependam da rápida criação e exclusão

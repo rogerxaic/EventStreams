@@ -28,8 +28,7 @@ subcollection: eventstreams
 * 將事件串流連接至串流分析，以實現強大的見解。
 * 將事件資料提發佈多個應用程式，以便即時回應。
 
-藉由使用 Apache Kafka 建置，它能直接獲益於在社群中發生的所有創新，並支援 Kafka 用戶端 API、Kafka Streams、Kafka Connect 以及 KSQL。
-
+藉由使用 Apache Kafka 建置，它能直接獲益於在社群中發生的所有創新，並支援 Kafka 用戶端 API、Kafka Streams 及 Kafka Connect。
 
 Apache Kafka 工具通常會直接與 {{site.data.keyword.messagehub}} 一起運作，不過您需要提供其他配置，因為與 {{site.data.keyword.messagehub}} 的連線一律都需要使用認證來進行鑑別。
 

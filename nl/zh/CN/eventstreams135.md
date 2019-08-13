@@ -30,6 +30,7 @@ subcollection: eventstreams
 阅读以下信息以了解获取这些详细信息的方式。步骤可能有细微差别，因此请确保完成您的实例的相应步骤。
 
 ## 供应 {{site.data.keyword.messagehub}} 实例
+{: #provision_classic}
 
 作为先决条件，对于经典套餐，都必须先供应 {{site.data.keyword.messagehub}} 服务实例。接下来，通过完成以下任务获取
 {{site.data.keyword.messagehub}} API 连接详细信息。

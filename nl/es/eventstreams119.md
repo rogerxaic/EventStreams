@@ -27,7 +27,7 @@ Conectar {{site.data.keyword.messagehub}} con {{site.data.keyword.iot_short_notm
 
 Un patrón común es utilizar el puente de {{site.data.keyword.iot_short_notm}}, {{site.data.keyword.messagehub}} y el puente de Cloud Object Storage para crear un conducto global que facilite las interacciones en tiempo real y por lotes.
 
-Para obtener información sobre cómo crear este puente, consulte: [Conexión y configuración de un conector de historiador para utilizar {{site.data.keyword.messagehub}}  ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}.
+Para obtener información sobre cómo crear este puente, consulte: [Conexión y configuración de un conector de historiador para utilizar {{site.data.keyword.messagehub}}  ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}.
 
 
 

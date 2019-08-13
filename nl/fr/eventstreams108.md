@@ -84,7 +84,7 @@ Plan Enterprise uniquement. Toute valeur comprise entre 5 minutes et 30 jours.</
 
 La conservation des décalages s'effectue au niveau du système. Vous ne pouvez donc pas la définir au niveau d'un sujet spécifique. Les groupes de consommateurs n'obtiennent que 7 jours de décalages stockés, même en utilisant un sujet dont la durée de conservation a été augmentée jusqu'au maximum de 30 jours. 
 
-Le sujet interne Kafka <code>__consumer_offsets</code> est visible en lecture seule.
+Le sujet interne Kafka <code>__consumer_offsets</code> est visible en lecture seule. 
 Nous vous conseillons vivement de ne tenter en aucune manière de gérer ce sujet. 
 
 <!--following message retention info duplicted in eventstreams057-->

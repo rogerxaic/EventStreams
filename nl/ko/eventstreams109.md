@@ -21,7 +21,7 @@ subcollection: eventstreams
 # {{site.data.keyword.messagehub}} 팀에 문제점 보고 - 클래식 플랜 
 {: #report_problem}
 
-{{site.data.keyword.messagehub}} 클래식 플랜에 문제점이 발생한 경우 [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status?selected=status){:new_window}를 우선 확인하십시오.  
+{{site.data.keyword.messagehub}} 클래식 플랜에 문제점이 발생한 경우 [{{site.data.keyword.Bluemix_notm}} 상태 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status?selected=status){:new_window}를 우선 확인하십시오. 
 
 {{site.data.keyword.messagehub}} 팀의 도움이 필요한 경우에는 다음 정보를 모두 수집하십시오. 미리 제공할 수 있는 정보가 많을수록 팀에서 문제점에 대해 더 효과적으로 도움을 줄 수 있습니다.
 {:shortdesc}

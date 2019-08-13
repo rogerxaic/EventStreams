@@ -27,7 +27,7 @@ subcollection: eventstreams
 
 一般的なパターンは、{{site.data.keyword.iot_short_notm}} ブリッジ、{{site.data.keyword.messagehub}}、および Cloud Object Storage ブリッジを使用して、リアルタイムおよびバッチでの相互作用を簡単にするエンドツーエンドのパイプラインを作成することです。
 
-このブリッジの作成方法について詳しくは、[{{site.data.keyword.messagehub}} を使用するための履歴コネクターの接続と構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window} を参照してください。
+このブリッジの作成方法について詳しくは、[{{site.data.keyword.messagehub}} を使用するための履歴コネクターの接続と構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window} を参照してください。
 
 
 

@@ -42,7 +42,7 @@ curl -X POST -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Con
 {: codeblock}
 <br/>
 <br/>
-Si vous utilisez CURL, vous pouvez utiliser l'exemple suivant pour la consommation :
+Avec CURL, vous pouvez utiliser un exemple tel que le suivant pour la consommation :
 <pre class="pre"><code>
 curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var>/partitions/<var class="keyword varname">partition ID</var>/messages?offset=<var class="keyword varname">offset to start from</var>
 </code></pre>
@@ -51,7 +51,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 <br/>
 <br/>
 Pour CURL, vous pouvez également adapter les exemples de code détaillés
-dans la [documentation Confluent ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.confluent.io/2.0.0/){:new_window} en ajoutant la ligne suivante sur la ligne de commande :
+dans la [documentation Confluent ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.confluent.io/2.0.0/){:new_window} en ajoutant la ligne suivante sur la ligne de commande :
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 

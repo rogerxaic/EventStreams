@@ -21,7 +21,7 @@ subcollection: eventstreams
 # {{site.data.keyword.messagehub}} への接続
 {: #connecting}
 
-{{site.data.keyword.messagehub}} に接続する方法は、アプリケーションがネイティブに実行されているか、または Cloud Foundry アプリケーションとして実行されているかによって異なります。ただし、どちらの場合も 2 つの情報が必要です。
+{{site.data.keyword.messagehub}} に接続する方法は、アプリケーションがネイティブに実行されているか、または Cloud Foundry アプリケーションとして実行されているかによって異なります。 ただし、どちらの場合も 2 つの情報が必要です。 
 {: shortdesc}
 
 * API のエンドポイント URL
@@ -42,6 +42,7 @@ subcollection: eventstreams
 アプリケーションを接続するために使用する方法は、アプリケーションがどこにデプロイされているのか、つまり、Cloud Foundry の内側か外側か (例えば、Kubernetes サービスの中か) によって異なります。
 
 ## {{site.data.keyword.messagehub}} インスタンスのプロビジョン
+{: #provision_instance}
 
 前提条件として、最初に、標準プランまたはエンタープライズ・プランのいずれかで {{site.data.keyword.messagehub}} サービス・インスタンスをプロビジョンする必要があります。 次に、以下のタスクを実行することによって、{{site.data.keyword.messagehub}} API 接続詳細を取得します。
 
@@ -112,13 +113,13 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 マニフェスト・ファイルがある場合、以下を実行して新しいアプリを作成できます。<br/>
 <code>ibmcloud app push</code><br/>
 <br/>
-アプリはまだ {{site.data.keyword.messagehub}} にバインドされていないため、接続を確立できません。したがって、不必要な接続障害を回避するために <code>--no-start</code> パラメーターを指定してアプリケーションをプッシュすることをお勧めします。</li>
+アプリは、まだ {{site.data.keyword.messagehub}} にバインドされていないため、接続を確立できません。 したがって、不必要な接続障害を回避するために <code>--no-start</code> パラメーターを指定してアプリケーションをプッシュすることをお勧めします。</li>
 <li>サービスを見つけます。</br>
 <code>ibmcloud resource service-instances</code></li>
 <li>Cloud Foundry サービス別名を作成します。<br/>
 <code>ibmcloud resource service-alias-create <var class="keyword varname">alias_name</var> --instance-name <var class="keyword varname">your_service_name</var></code></li>
 <li>前に作成したサービス別名にアプリをバインドします。<br/>
-<code>ibmcloud service bind <var class="keyword varname">your_ app_name</var> <var class="keyword varname">alias_name</var></code>。<br/>
+<code>ibmcloud service bind <var class="keyword varname">your_ app_name</var> <var class="keyword varname">alias_name</var></code>.<br/>
 <br/>
 あるいは、マニフェスト・ファイルを更新し、アプリケーションをもう一度プッシュすることもできます。</li>
 <li>アプリケーション・ランタイムで VCAP_SERVICES 環境変数が使用可能であることを検証します。<br/>
@@ -136,7 +137,7 @@ Cloud Foundry の外側で実行されているアプリケーションの場合
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

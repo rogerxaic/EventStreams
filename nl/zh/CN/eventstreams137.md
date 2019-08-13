@@ -43,7 +43,7 @@ curl -X POST -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Con
 {: codeblock}
 <br/>
 <br/>
-如果您使用 CURL，那么您可以使用类似以下的示例来消耗：
+如果您使用 CURL，那么您可以使用类似以下内容的示例来消耗：
 <pre class="pre"><code>
 curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Accept: application/vnd.kafka.binary.v1+json" <var class="keyword varname">kafka-rest endpoint</var>/topics/<var class="keyword varname">topic name</var>/partitions/<var class="keyword varname">partition ID</var>/messages?offset=<var class="keyword varname">offset to start from</var>
 </code></pre>
@@ -51,7 +51,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 
 <br/>
 <br/>
-对于 CURL，您还可以通过将以下行添加到命令行，调整 [Confluent 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.confluent.io/2.0.0/){:new_window} 中详细描述的代码示例：
+对于 CURL，您还可以通过将以下行添加到命令行，调整 [Confluent 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.confluent.io/2.0.0/){:new_window} 中详细描述的代码示例：
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 
@@ -77,7 +77,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 
 请遵循该项目 [README.md ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 文件中的指示信息来构建和运行样本。
 
-	以下博客很好地介绍了 Kafka REST API 的优点和缺点。[A Comprehensive, Open Source REST Proxy for Kafka. ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window}。
+	以下博客很好地介绍了 Kafka REST API 的优点和缺点。[全面的开放式源代码 Kafka REST 代理。![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window}。
 
 
 

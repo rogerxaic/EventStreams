@@ -35,9 +35,8 @@ Se stai utilizzando il piano Classic, vedi [Segnalazione di un problema al team 
 ## Link utili
 {: #troubleshooting_links notoc}
 
-*  [Versione di prova gratuita {{site.data.keyword.Bluemix_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [Esempio di {{site.data.keyword.messagehub}} Java Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [Creazione di applicazioni web con {{site.data.keyword.Bluemix_notm}} e distribuzione della tua
+*  [Creazione di applicazioni web con {{site.data.keyword.Bluemix_notm}} e distribuzione della tua applicazione con Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
    applicazione con Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
 *  [Documentazione di Apache Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://kafka.apache.org/documentation.html){: new_window}
 *  [Client Apache Kafka 2.2.0![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}

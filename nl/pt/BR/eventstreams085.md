@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-16"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -30,16 +30,19 @@ For information about the Classic plan, see
 {: shortdesc}
 
 ## Plano padrão
+{: #plan_standard}
 
 O plano Standard será apropriado se você precisar de recursos de alimentação e distribuição de eventos, mas não requer nenhum
 benefício adicional do plano Enterprise. O plano Standard oferece acesso compartilhado a um cluster de múltiplos locatários do {{site.data.keyword.messagehub}}.
 
 ## Plano Enterprise 
+{: #plan_enterprise}
 
 O plano Enterprise será apropriado se o isolamento de dados, o desempenho garantido e a retenção aumentada forem
-considerações importantes. O plano Enterprise oferece acesso exclusivo a um cluster dedicado do {{site.data.keyword.messagehub}}.
+considerações importantes. O plano Enterprise oferece acesso exclusivo a um cluster dedicado do {{site.data.keyword.messagehub}}. Também é possível provisionar um cluster do {{site.data.keyword.messagehub}} em uma localização geograficamente local, mas de [zona única (SZR)](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
 
 ## Plano Classic
+{: #plan_classic}
 
 O plano Clássico dá acesso à edição anterior do plano Padrão e é fornecido apenas para cargas de trabalho e compatibilidade com versões anteriores existentes. É necessário fornecer novas cargas de trabalho com relação ao plano Padrão.
 
@@ -52,9 +55,9 @@ A tabela a seguir resume o que é suportado pelos planos:
     <caption>Tabela 1. Suporte nos planos Padrão, Corporativo e Clássico</caption>
       <tr>
 	        <th></th>
-		    <th>Plano Standard</th>
+		    <th>Plano Padrão</th>
 		    <th>Plano Corporativo</th>
-		    <th>Plano Classic</th>
+		    <th>Plano Clássico</th>
         </tr>
 		<tr>
 			<td>**Coarrendamento**</td>
@@ -65,13 +68,14 @@ A tabela a seguir resume o que é suportado pelos planos:
         <tr>
 			<td>**Zonas de disponibilidade**</td>
 			<td>3</td>
-			<td>3</td>
+			<td>3<br/>(1 em localizações de zona única)
+			</td>
 			<td>Não suportado</td>
 		</tr>
         <tr>
 			<td>**Disponibilidade**</td>
 			<td>99,95%</td>
-			<td>99,95%</td>
+			<td>99,95%<br/>(99,5% em localizações de zona única) [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
 			<td>99,5%</td>
 		</tr>
 	  		<tr>
@@ -107,13 +111,13 @@ A tabela a seguir resume o que é suportado pelos planos:
 		<tr>
 			<td>**Período de retenção máximo**</td>
 			<td>1 GB por partição para até 30 dias </td>
-			<td>Ilimitado até o limite de armazenamento de seu plano </td>
+			<td>2 TB de armazenamento utilizável<!--Unlimited up to the storage limit of your plan --></td>
 			<td>1 GB por partição para até 30 dias </td>
 		</tr>
 		<tr>
 			<td>**Rendimento máximo**</td>
 			<td>1 MB por segundo por partição (máximo de 20 MB por segundo) </td>
-			<td>40 MB por segundo (rendimento de pico de 90 MB por segundo)</td>
+			<td>40 MB por segundo por cluster (rendimento de pico de 75 MB por segundo)</td>
 			<td>1 MB por segundo por partição</td>
 		</tr>
 		<tr>
@@ -123,15 +127,32 @@ A tabela a seguir resume o que é suportado pelos planos:
 			<td>1 MB</td>
 		</tr>
 		<tr>
+			<td>**Número máximo de clientes conectados**</td>
+			<td>100</td>
+			<td>10 000</td>
+			<td>100</td>
+		</tr>
+		<tr>
 			<td>**Disponibilidade da localização (região)**</td>
-			<td>Dallas (us-south)</br>
- </td>
-			<td>Dallas (us-south)</br>
+			<td>**Localização multizona (MZR)**<br/>
+			Dallas (us-south)</br>
 			Washington (us-east)<br/>
 			Londres (eu-gb)<br/>
 			Sydney (au-syd)</br>
 			Frankfurt (eu-de)<br/>
 			Tóquio (jp-tok)<br/>
+			<br/>
+			</td>
+			<td>**Localização multizona (MZR)**</br>
+			Dallas (us-south)</br>
+			Washington (us-east)<br/>
+			Londres (eu-gb)<br/>
+			Sydney (au-syd)</br>
+			Frankfurt (eu-de)<br/>
+			Tóquio (jp-tok)<br/>
+			<br/>
+			**Localização de zona única (SZR)**</br>
+			Seoul (seo01)<br/>
 			<br/>
 			</td>
 			<td>Dallas (us-south)</br> 			Londres (eu-gb)</br> 			Sydney (au-syd)</br> 			Frankfurt (eu-de) - nenhuma API do {{site.data.keyword.mql}} </td>
@@ -140,10 +161,12 @@ A tabela a seguir resume o que é suportado pelos planos:
      	    <td>**APIs suportadas**</td>
 			<td>API do Kafka</br>
 			API de REST administrativa<br/>
-			API de REST producer</br>
+			API de REST Producer</br>
 		    </td>
-			<td>API do Kafka<br/>
-			API de REST administrativa</td>
+			<td>API Kafka<br/>
+			API de REST Admin</br>
+			API de REST Producer</br>
+			</td>
 			<td>API do Kafka</br>
 			API de REST administrativa<br/>
 			API de REST do Kafka</br>
@@ -151,7 +174,8 @@ A tabela a seguir resume o que é suportado pelos planos:
 		    </td>
 		</tr>
 		</tr>
-			<td>**Ponte do Cloud Object Storage e<br/> ponte do MQ suportadas**</td>
+			<td>**Ponte do Cloud Object Storage e<br/>
+			ponte do MQ suportadas**</td>
 			<td>Não</td>
 			<td>Não</td>
 			<td>Sim</td>
@@ -164,7 +188,10 @@ A tabela a seguir resume o que é suportado pelos planos:
 		</tr>
 
 </table>
+### Nota de Rodapé
+{: #footnote_plans notoc}
 
+1. {: #footnote_szr notoc} Para obter mais informações sobre a disponibilidade, consulte [Implementações de localização de zona única](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
 
 
 
@@ -182,6 +209,6 @@ number of partitions that you use and the number of messages that you send and r
 charge for message data while it is retained on the topics, but the data that each partition retains
 is capped at 1 GB.
 
-For more information, see [{{site.data.keyword.Bluemix_notm}} Public ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/public){:new_window}.
+For more information, see [{{site.data.keyword.Bluemix_notm}} Public ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/free/){:new_window}.
 -->
 

@@ -46,7 +46,7 @@ subcollection: eventstreams
 
 <!-- comment from Charlie and my reply 
 CM: need to confirm if hierarchical e.g. write includes read - and doc. 
-KR: I think they do inherit the lower level access https://console.bluemix.net/docs/iam/users_roles.html#iamusermanrol 
+KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/iam?topic=iam-userroles#iamusermanrol 
 -->
 
 
@@ -93,7 +93,7 @@ For example steps for {{site.data.keyword.messagehub}}, see [Examples](#security
 
 如需 IAM 的相關資訊，請參閱 [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview)。
 
-如需如何設定原則的範例，請參閱：[IBM Cloud IAM Service IDs and API Keys ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2017/10/introducing-ibm-cloud-iam-service-ids-api-keys/){:new_window}。
+如需如何設定原則的範例，請參閱：[IBM Cloud IAM Service IDs and API Keys ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}。
 
 
 ## 連接至 {{site.data.keyword.messagehub}}

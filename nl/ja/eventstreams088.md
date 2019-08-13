@@ -19,7 +19,7 @@ subcollection: eventstreams
 # クラシック・プランでのブリッジの使用による他のサービスへのリンク 
 {: #bridges}
 
-**{{site.data.keyword.messagehub}} ブリッジは、クラシック・プランのみの一部として使用可能です。**
+**{{site.data.keyword.messagehub}} ブリッジは、クラシック・プランの一部としてのみ使用可能です。**
 <br/>
 
 {{site.data.keyword.messagehub}} クラシック・プランは、選択された他のシステムへのブリッジもサポートします。 ブリッジは、{{site.data.keyword.messagehub}} と別のサービスとの間の単一方向のリンクです。 ブリッジによって、{{site.data.keyword.messagehub}} からデータを読み取って別のサービスに書き込むか、または、別のサービスからデータを読み取って {{site.data.keyword.messagehub}} に書き込むことが可能になります。 ブリッジは、他のシステムからメッセージを取得してトピックにパブリッシュするか、または、トピックからメッセージをコンシュームして他のシステムに送信することができます。 この方法で、コードを開発することなく、{{site.data.keyword.messagehub}} を使用して他のシステムと統合することができます。
@@ -41,8 +41,8 @@ subcollection: eventstreams
 
 * 以下のタイプのブリッジが提供されています。 
   - [MQ ブリッジ](/docs/services/EventStreams?topic=eventstreams-mq_bridge)。これは、{{site.data.keyword.IBM}} MQ からメッセージ・データを取り出し、{{site.data.keyword.messagehub}} のトピックへ転送します。 将来は、より広範囲のブリッジのサポートが予定されています。
-  - [Cloud Object Storage ブリッジ](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)。これは、{{site.data.keyword.messagehub}} データを [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} サービスのインスタンスへ転送します。 
-  - [{{site.data.keyword.objectstorageshort}} ブリッジ](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge) は、2018 年 8 月 1 日より非推奨になりました。 詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。
+  - [Cloud Object Storage ブリッジ](/docs/services/EventStreams?topic=eventstreams-cloud_object_storage_bridge)。これは、{{site.data.keyword.messagehub}} データを [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window} サービスのインスタンスへ転送します。 
+  - [{{site.data.keyword.objectstorageshort}} ブリッジ](/docs/services/EventStreams?topic=eventstreams-object_storage_bridge) は、2018 年 8 月 1 日より非推奨になりました。 詳しくは、[非推奨の発表: {{site.data.keyword.objectstorageshort}} OpenStack Swift (PaaS) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/cloud-archive/2018/05/end-marketing-object-storage-openstack-swift-paas/){:new_window}を参照してください。
 * 現在のところ、ブリッジはすべての {{site.data.keyword.Bluemix_notm}} パブリック環境で使用可能です。 {{site.data.keyword.Bluemix_short}} Dedicated ではブリッジは使用可能ではありません。
 * 次の 2 つの方法でブリッジを管理できます。
   - 既存 {{site.data.keyword.messagehub}} 管理 API の拡張である [REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs){:new_window} を使用する。 curl を使用してブリッジのライフサイクルを管理する方法の例も [message-hub-docs ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-docs){:new_window} にあります。 ブリッジの開発は継続中であるため、この REST API は変更される可能性があります。 この API は安定化される予定です。

@@ -49,7 +49,7 @@ D'autres clients tiers prenant en charge les conditions minimales requises pour 
 		    <th id="client" scope="col">Client</th>
 		    <th id="language" scope="col">Langage</th>
 			<th id="version" scope="col">Version recommandée</th>
-		    <th id="minimum version" scope="col">Version min. prise en charge [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">Version min. prise en charge [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">Lien vers un exemple</th>
         </tr>
 			<tr>
@@ -59,7 +59,7 @@ D'autres clients tiers prenant en charge les conditions minimales requises pour 
 			<td>[Client Apache Kafka ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>Dernière</td>
-			<td>0.10.2 <p> Pour plus d'informations sur les clients plus anciens, voir [Compatibilité avec les versions antérieures](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
+			<td>0.10.2 <p> Pour plus d'informations sur les clients plus anciens, voir [Compatibilité avec les versions antérieures](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic).</p></td>
 			<td>[Exemple de console Java ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
 			[Exemple Liberty ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
@@ -98,7 +98,8 @@ D'autres clients tiers prenant en charge les conditions minimales requises pour 
 
 </table>
 ### Note de bas de page
-1. {: #footnote1}Cette version est la toute première qui a été validée en test continu. Typiquement, il s'agit de la version initiale disponible dans les 12 derniers mois mais cela peut changer si des problèmes significatifs sont identifiés.
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}Cette version est la toute première qui a été validée en test continu. Typiquement, il s'agit de la version initiale disponible dans les 12 derniers mois mais cela peut changer si des problèmes significatifs sont identifiés.
 
 ## Compatibilité avec les versions antérieures (plan Classic uniquement)
 {: #compatibility_classic}

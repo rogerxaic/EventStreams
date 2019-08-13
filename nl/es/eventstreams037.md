@@ -30,7 +30,7 @@ El URL para el punto final de la API se proporciona en la propiedad <code>kafka_
 Las credenciales dependen del método de autenticación y se admiten tres tipos de credenciales:
 
 * **Para autenticarse utilizando la autenticación básica**:<br/>
-    Utilice las propiedades <code>user</code> y <code>api_key</code> de los objetos anteriores como nombre de usuario y contraseña. Coloque estos valores en la cabecera <code>Authorization</code> de la solicitud HTTP con el formato <code>Basic <codificación en base64 de username:password unidos por un signo de dos puntos (:)></code>.
+    Utilice las propiedades <code>user</code> y <code>api_key</code> de los objetos anteriores como nombre de usuario y contraseña. Coloque estos valores en la cabecera <code>Authorization</code> de la solicitud HTTP con el formato <code>Basic &lt;codificación en base64 de nombre de usuario y contraseña unidos por un signo de dos puntos (:)&gt;</code>.
 
 * **Para autenticarse utilizando una señal portadora:**<br/>
     Para obtener la señal utilizando la CLI de IBM Cloud, primero inicie sesión en IBM Cloud y después ejecute el mandato siguiente: 
@@ -50,7 +50,7 @@ Para las instancias de servicio creadas en el plan Clásico, esta información e
 Para obtener una descripción de la API con ejemplos, consulte
 [admin-rest de {{site.data.keyword.messagehub}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api){:new_window}.
 
-Puede descargar la especificación completa de la API del [Archivo yaml de API REST de administración de {{site.data.keyword.messagehub}}![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window}.
+Puede descargar la especificación completa de la API del [Archivo YAML de la API REST de administración de {{site.data.keyword.messagehub}}![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window}.
 Para ver el archivo swagger, utilice las herramientas de Swagger, por ejemplo el [Editor de Swagger ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://editor.swagger.io/#/){:new_window}.
 
 

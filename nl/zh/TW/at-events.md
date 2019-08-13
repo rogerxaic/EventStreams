@@ -34,7 +34,7 @@ subcollection: eventstreams
 ## 事件清單
 {: #events}
 
-<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
+<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://cloud.ibm.com/docs/services/cloud-activity-tracker/services?topic=cloud-activity-tracker-cf#catalog. -->
 
 標準和企業方案中的 {{site.data.keyword.messagehub}} 會自動產生事件，以便您可以追蹤服務相關活動。
 

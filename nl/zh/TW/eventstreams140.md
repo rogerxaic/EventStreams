@@ -17,13 +17,13 @@ subcollection: eventstreams
 {:pre: .pre}
 {:faq: data-hd-content-type='faq'}
 
-# 經典方案常見問題解答 
+# 經典方案常見問題 
 {: #faqs_classic}
 
-對經典方案中有關 {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} 服務的常見問題的解答。
+對經典方案中有關 {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} 服務常見問題的回答。
 
 
-有關所有 {{site.data.keyword.messagehub}} 方案的相關問題的解答，請參閱[常見問題解答](docs/services/EventStreams?topic=eventstreams-faqs#faqs)。
+如需所有 {{site.data.keyword.messagehub}} 方案的相關問題回答，請參閱[常見問題](/docs/services/EventStreams?topic=eventstreams-faqs#faqs)。
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -57,7 +57,7 @@ subcollection: eventstreams
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## 訊息保留多久？
-{: #messages_retained}
+{: #messages_retained_classic}
 
 依預設，訊息在 Kafka 中的保留時間為最長 24 小時，每個分割區的上限為 1 GB。如果到達 1 GB 的限制，將會捨棄最舊的訊息，以維持在限制之內。
 
@@ -125,7 +125,7 @@ Kafka REST API 每天會重新啟動一次，需要一小段時間。
 {: #plan_compare_classic }
 {: faq}
 
-如需其他 {{site.data.keyword.messagehub}} 方案的相關資訊，請參閱[選擇方案](/docs/services/EventStreams?topic=eventstreams-plan_choose)。有關經典方案的資訊，請參閱[經典方案概觀](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#plan_choose_classic)。
+如需其他 {{site.data.keyword.messagehub}} 方案的相關資訊，請參閱[選擇方案](/docs/services/EventStreams?topic=eventstreams-plan_choose)。如需經典方案的資訊，請參閱[經典方案概觀](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#plan_choose_classic)。
 
 
 ## 如何處理災難回復？

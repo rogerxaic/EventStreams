@@ -49,7 +49,7 @@ Potrebbero funzionare anche altri client di terze parti che supportano un insiem
 		    <th id="client" scope="col">Client</th>
 		    <th id="language" scope="col">Linguaggio</th>
 			<th id="version" scope="col">Versione consigliata</th>
-		    <th id="minimum version" scope="col">Versione minima supportata [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients#footnote1)</th>
+		    <th id="minimum version" scope="col">Versione minima supportata [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#footnote_clients_classic)</th>
 			<th id="sample link" scope="col">Link all'esempio</th>
         </tr>
 			<tr>
@@ -59,9 +59,9 @@ Potrebbero funzionare anche altri client di terze parti che supportano un insiem
 			<td>[Client Apache Kafka ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://kafka.apache.org/downloads)</td>
 			<td>Java</td>
 			<td>La più recente</td>
-			<td>0.10.2 <p> Per informazioni sui precedenti client, consulta [retrocompatibilità](/docs/services/EventStreams?topic=eventstreams-kafka_clients#compatibility).</p></td>
-			<td>[Java console sample ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
-			[Liberty sample ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
+			<td>0.10.2 <p> Per informazioni sui precedenti client, consulta [retrocompatibilità](/docs/services/EventStreams?topic=eventstreams-kafka_clients_classic#compatibility_classic).</p></td>
+			<td>[Esempio di console Java ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample)<br/>
+			[Esempio Liberty ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-liberty-sample)
 			</td>
 			</tr>
 			<tr>
@@ -98,7 +98,8 @@ Potrebbero funzionare anche altri client di terze parti che supportano un insiem
 
 </table>
 ### Nota a piè di pagina
-1. {: #footnote1}Questa versione è la meno recente che abbiamo convalidato nella verifica continua. Normalmente, questa è la versione iniziale disponibile negli ultimi 12 mesi, ma può essere aggiornata se si conosce che sono presenti dei problemi significativi.
+{: #footnote_clients_classic notoc}
+1. {: #footnote_classic}Questa versione è la meno recente che abbiamo convalidato nella verifica continua. Normalmente, questa è la versione iniziale disponibile negli ultimi 12 mesi, ma può essere aggiornata se si conosce che sono presenti dei problemi significativi.
 
 ## Retrocompatibilità (solo piano Classic)
 {: #compatibility_classic}

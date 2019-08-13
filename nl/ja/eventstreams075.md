@@ -20,7 +20,7 @@ subcollection: eventstreams
 # クラシック・プランの MQ Light API の使用
 {: #mql_using}
 
-**MQ Light API は、クラシック・プランのみの一部として使用可能です。**
+**MQ Light API は、クラシック・プランの一部としてのみ使用可能です。**
 <br/>
 
 {{site.data.keyword.mql}} API は、以前の {{site.data.keyword.mql}} サービスとの後方互換性のために提供されています。 API は、Java&trade;、Node.js、Python、Ruby 用に AMQP ベースのメッセージング・インターフェースを提供します。 
@@ -66,7 +66,7 @@ MQ Light API を無効にするには、「MQLight」トピックを削除しま
 {: #mql_connect}
 
 アプリを当サービスに接続するには、アプリは、[VCAP_SERVICES 環境変数](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf)にある <code>user</code>、
-<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を使用する必要があります。選択した言語に応じて、以下のガイドを使用してください。
+<code>password</code>、および <code>mqlight_lookup_url</code> 詳細を使用する必要があります。 選択した言語に応じて、以下のガイドを使用してください。
 
 **Java の場合**
 
@@ -140,8 +140,8 @@ client = mqlight.Client(service=service,
 
 <br>
 
-{{site.data.keyword.mql}} API について詳しくは、
-[{{site.data.keyword.mql}} developerWorks&reg; サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/messaging/mq-light/){:new_window} を参照してください。
+API について詳しくは、
+[GitHub の {{site.data.keyword.mql}} API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/mqlight){:new_window} を参照してください。
 
 
 <!-- 14/11/18: info was in eventstreams080.md, moved because of doc app changes -->

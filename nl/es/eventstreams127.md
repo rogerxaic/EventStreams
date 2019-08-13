@@ -35,14 +35,14 @@ Para obtener información sobre cómo conectarse a {{site.data.keyword.messagehu
 ## Visión general
 {: #connect_enterprise}
 
-Los servicios suministrados utilizando los planes Estándar o Empresa se agrupan en el panel de control bajo la cabecera **Servicios**. Estos planes están [habilitados para IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}. No es necesario que entienda IAM para empezar a trabajar, pero se recomienda tener algunos conocimientos si desea proteger el servicio {{site.data.keyword.messagehub}}. Para obtener más información, consulte
-[Gestión del acceso a los recursos de {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-security).
+Los servicios suministrados utilizando los planes Estándar o Empresa se agrupan en el panel de control bajo la cabecera **Servicios**. Estos planes están [habilitados para IAM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/iam?topic=iam-getstarted#getstarted){:new_window}. No es necesario que entienda IAM para empezar a trabajar, pero se recomienda tener algunos conocimientos si desea proteger el servicio {{site.data.keyword.messagehub}}. Para obtener más información, consulte [Gestión del acceso a los recursos de {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-security).
 
 Siga los pasos siguientes para enlazar la aplicación y obtener claves de servicio para el servicio. Para tener autorización para crear temas, la aplicación o la clave de servicio deben tener un rol con acceso de gestor.
 
 Para conectar una aplicación, el método utilizado depende de dónde se haya desplegado, es decir, en Cloud Foundry o fuera del mismo; por ejemplo, en el servicio Kubernetes.
 
 ## Suministro de una instancia de {{site.data.keyword.messagehub}}
+{: #provision_instance}
 
 Como requisito previo, en primer lugar debe suministrar una instancia de servicio de {{site.data.keyword.messagehub}} para el plan Estándar o Empresa. A continuación, obtenga los detalles de la conexión de API de {{site.data.keyword.messagehub}}; para ello debe llevar a cabo las siguientes tareas.
 
@@ -60,8 +60,7 @@ Para las aplicaciones que se ejecutan fuera de Cloud Foundry, las credenciales s
 4. Pulse **Nueva credencial**. 
 5. Especifique los detalles de la nueva credencial como un nombre y un rol y pulse **Añadir**. Aparece una nueva credencial en la lista de credenciales.
 6. Pulse esta credencial en **Ver credenciales** para ver los detalles en formato JSON.
-7. Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente de API de Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_api_client).
+7. Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code> y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente de API de Kafka](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_api_client).
    <br/><br/>Asegúrese de que la aplicación analiza los detalles.
 
 ### Obtención de credenciales mediante la CLI de IBM Cloud
@@ -74,8 +73,7 @@ y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para ob
 <code>ibmcloud resource service-key-create <var class="keyword varname">nombre_clave</var> <var class="keyword varname">rol_clave</var> --instance-name <var class="keyword varname">nombre_servicio</var></code></li>
 <li>Imprima la clave de servicio:<br/>
 <code>ibmcloud resource service-key <var class="keyword varname">nombre_clave</var></code></li>
-<li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
+<li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code> y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect).
 <p>Asegúrese de que la aplicación analiza los detalles.</p></li>
 </ol>
 
@@ -109,13 +107,13 @@ Cuando esté enlazada, los detalles de la conexión pasan a estar disponibles pa
 <ol>
 <li>Asegúrese de que está en la organización y el espacio de Cloud Foundry que desea. Puede navegar de forma interactiva ejecutando el mandato siguiente:<br/>
  <code>ibmcloud target --cf</code></li>
-<li>Localice la app:</br>
+<li>Localice su app:</br>
 <code>ibmcloud app list</code><br/>
 <br/>
 Si tiene un archivo de manifiesto, puede crear una app nueva con este mandato:<br/>
 <code>ibmcloud app push</code><br/>
 <br/>
-Puesto que la app aún no está enlazada a {{site.data.keyword.messagehub}}, la app no puede establecer una conexión. Por lo tanto, se recomienda enviar por push la aplicación con el parámetro <code>--no-start</code> para evitar errores de conexión innecesarios.</li>
+Puesto que la app no está enlazada todavía a {{site.data.keyword.messagehub}}, la app no puede establecer ninguna conexión. Por lo tanto, se recomienda enviar por push la aplicación con el parámetro <code>--no-start</code> para evitar errores de conexión innecesarios.</li>
 <li>Localice el servicio:</br>
 <code>ibmcloud resource service-instances</code></li>
 <li>Cree un alias de servicio de Cloud Foundry:<br/>
@@ -126,8 +124,7 @@ Puesto que la app aún no está enlazada a {{site.data.keyword.messagehub}}, la 
 Como alternativa, puede actualizar el archivo de manifiesto y volver a enviar por push la aplicación.</li>
 <li>Verifique que la variable de entorno VCAP_SERVICES está disponible en el tiempo de ejecución de la aplicación:<br/>
 <code>ibmcloud app env <var class="keyword varname">nombre_app</var></code></li>
-<li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code>
-y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
+<li>Pase estas credenciales a la aplicación. Especifique <code>token</code> como nombre de usuario y <var class="keyword varname">api_key</var> como contraseña. Separe <code>token</code> y <var class="keyword varname">api_key</var> con un signo de dos puntos. Para obtener más información, consulte [Configuración del cliente](/docs/services/EventStreams?topic=eventstreams-kafka_connect). 
 <p>Es posible que tenga que volver a transferir la aplicación para que los cambios entren en vigor.</p></li>
 </ol>
 
@@ -140,7 +137,7 @@ Ahora que tiene la información de conexión y de credenciales, puede elegir un 
 <!--
 Charlie said:
 
-"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://console.stage1.bluemix.net/docs/services/EventStreams/eventstreams122.html#alpha_about "
+"Add some info describing how to take the information made available from above e.g. like the info in the Connecting a client to the Kafka API section of the alpha docs on stage 1? https://test.cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-alpha_about#alpha_about"
 -->
 
 

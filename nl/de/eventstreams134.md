@@ -95,7 +95,7 @@ In der folgenden Tabelle ist zusammengefasst, was vom Plan unterstützt wird:
 		<tr>
      	    <td>**Unterstützte APIs**</td>
 			<td>Kafka-API</br>
-			REST-konforme Verwaltungs-API<br/>
+			Admin-REST-API<br/>
 			Kafka-REST-API</br>
 			MQ Light-API</br>
 		    </td>

@@ -24,7 +24,7 @@ subcollection: eventstreams
 {: shortdesc}
 
 ## Java Kafka 调用不会在 Kafka 引导程序服务器发生故障时进行故障转移
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### 问题
 {: #calls_failover_problem notoc}
@@ -81,14 +81,14 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 
 
 ## 主题和分区
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  主题名称限制为最多 100 个字符。
 *  一个主题的缺省分区数为一个。
 *  每个 {{site.data.keyword.Bluemix_notm}} 空间的分区数限制为 100 个。要创建更多的分区，必须使用新的 {{site.data.keyword.Bluemix_notm}} 空间。
 
 ## 消息保留时间
-{: #message_retention}
+{: #message_retention_classic}
 
 缺省情况下，消息在 Kafka 中最多保留 24 小时，并且每个分区的上限是 1 GB。如果达到 1 GB 上限，那么将废弃最旧的消息以防超出限制。
 
@@ -97,7 +97,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 有关使用 Kafka 客户机或 Kafka Streams 创建主题时所允许设置的限制的信息，请参阅[使用 Kafka API](/docs/services/EventStreams?topic=eventstreams-kafka_using)。
 
 ## 在 Kafka 中创建和删除主题
-{: #create_delete}
+{: #create_delete_classic}
 
 在 Kafka 中，主题的创建和删除是异步操作，可能需要一些时间才能完成。建议避免采用依赖于快速创建和删除主题的使用模式，或依赖于快速删除并重新创建主题的使用模式。
 

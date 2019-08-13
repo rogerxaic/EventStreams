@@ -28,7 +28,7 @@ Vous pouvez utiliser {{site.data.keyword.messagehub}} pour effectuer les tâches
 * Connecter des flux d'événements à des fonctions d'analyse de la diffusion en flux pour en tirer des informations importantes.
 * Publier des données d'événement sur plusieurs applications pour qu'elles réagissent en temps réel.
 
-Etant généré avec Apache Kafka, il bénéficie directement de toutes les innovations qui voient le jour dans la communauté et prend en charge des API de client Kafka, Kafka Streams, Kafka Connect et également KSQL.
+Etant généré avec Apache Kafka, il bénéficie directement de toutes les innovations qui voient le jour dans la communauté et prend en charge des API de client Kafka, Kafka Streams et Kafka Connect.
 
 En général, les outils Apache Kafka fonctionnent directement avec {{site.data.keyword.messagehub}}, mais vous devez cependant fournir une configuration supplémentaire car les connexions à {{site.data.keyword.messagehub}} sont toujours authentifiées à l'aide de données d'identification.
 

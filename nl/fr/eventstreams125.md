@@ -17,7 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:note: .note}
 
-# Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - Plans Standard et Enterprise 
+# Signalement d'un problème à l'équipe {{site.data.keyword.messagehub}} - Plans Standard et Enterprise
 {: #report_problem_enterprise}
 
 

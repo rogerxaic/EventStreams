@@ -28,8 +28,7 @@ subcollection: eventstreams
 * 将事件流连接到 Streaming Analytics 以获得深刻的洞察。
 * 将事件数据发布到多个应用程序以实时作出反应。
 
-使用 Apache Kafka 构建之后，它可以直接受益于社区内发生的所有创新，并支持 Kafka 客户机 API、Kafka Streams、Kafka Connect 以及 KSQL。
-
+使用 Apache Kafka 构建之后，它可以直接受益于社区内发生的所有创新，并支持 Kafka 客户机 API、Kafka Streams 和 Kafka Connect。
 
 虽然由于与 {{site.data.keyword.messagehub}} 的连接始终使用凭证进行认证，您需要提供其他配置，但是 Apache Kafka 工具通常直接使用 {{site.data.keyword.messagehub}}。
 

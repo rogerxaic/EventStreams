@@ -19,7 +19,7 @@ subcollection: eventstreams
 # クラシック・プランの 3 つの API からの選択 
 {: #choose_api_classic}
 
-クラシック・プランでは、{{site.data.keyword.messagehub}} は 3 つの API をサポートします。ここでは、最適な API を選択する際に役立つ情報を示します。
+クラシック・プランでは、{{site.data.keyword.messagehub}} は 3 つの API をサポートします。 ここでは、最適な API を選択する際に役立つ情報を示します。
 {: shortdesc}
 
 ## Kafka API を使用する理由
@@ -36,7 +36,7 @@ subcollection: eventstreams
 ## Kafka REST API を使用する理由
 {: #why_rest_classic notoc}
 
-**Kafka REST API は、クラシック・プランのみの一部として使用可能です。**
+**Kafka REST API は、クラシック・プランの一部としてのみ使用可能です。**
 <br/>
 
 Kafka REST API は、以下のシチュエーションで使用できる便利なインターフェースです。
@@ -50,7 +50,7 @@ Kafka REST API は、スループットが高く待ち時間が短いインタ�
 ## {{site.data.keyword.mql}} API を使用する理由
 {: #why_mql_classic notoc}
 
-**MQ Light API は、クラシック・プランのみの一部として使用可能です。**
+**MQ Light API は、クラシック・プランの一部としてのみ使用可能です。**
 <br/>
 
 {{site.data.keyword.mql}} API は、Java™、Node.js、Python、Ruby 用に AMQP ベースのメッセージング・インターフェースを提供します。 この API は、以前の {{site.data.keyword.mql}} サービスとの後方互換性のために提供されています。

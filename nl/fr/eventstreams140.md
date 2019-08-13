@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 Vous trouverez ici les réponses aux questions courantes concernant le plan Classic du service {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}}.
 
-Pour consulter les réponses aux questions portant sur tous les plans de {{site.data.keyword.messagehub}}, voir [FAQ](docs/services/EventStreams?topic=eventstreams-faqs#faqs).
+Pour consulter les réponses aux questions portant sur tous les plans de {{site.data.keyword.messagehub}}, voir [FAQ](/docs/services/EventStreams?topic=eventstreams-faqs#faqs).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -56,7 +56,7 @@ La conservation des décalages s'effectue au niveau du système. Vous ne pouvez 
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## Pendant combien de temps les messages sont-ils conservés ?
-{: #messages_retained}
+{: #messages_retained_classic}
 
 Par défaut, les messages sont conservés dans Kafka pendant 24 heures maximum et chaque partition ne peut pas dépasser 1 Go. Si le plafond de 1 Go est atteint, les messages les plus anciens sont supprimés pour que la limite soit respectée.
 
@@ -115,8 +115,8 @@ Par exemple, si vous créez et supprimez 1 sujet 10 fois au cours d'une journée
 L'API REST Kafka redémarre une fois par jour pendant un court laps de
 temps. 
 
-Au cours de cette période, elle est susceptible de ne plus être disponible. Si cela se produit, il est conseillé de relancer votre demande. Après le redémarrage
-de l'API REST, vous devez créer à nouveau vos instances consommateur Kafka. Dans ce cas,
+Au cours de cette période, elle est susceptible de ne plus être disponible. Si cela se produit, il est conseillé de relancer votre demande. Après le redémarrage de l'API REST, vous devez
+à nouveau créer vos instances consommateur Kafka. Dans ce cas,
 l'API REST renvoie le code JSON suivant :
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
@@ -127,7 +127,7 @@ l'API REST renvoie le code JSON suivant :
 {: #plan_compare_classic }
 {: faq}
 
-Pour en savoir plus sur les autres plans de {{site.data.keyword.messagehub}}, voir [Choix d'un plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).Pour plus d'informations sur le plan Classic, voir [Présentation du plan Classic](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#plan_choose_classic). 
+Pour en savoir plus sur les autres plans de {{site.data.keyword.messagehub}}, voir [Choix d'un plan](/docs/services/EventStreams?topic=eventstreams-plan_choose).Pour plus d'informations sur le plan Classic, voir [Présentation du plan Classic](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#plan_choose_classic).
 
 
 ## Comment doit-on traiter les reprises après incident ?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-19"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -37,7 +37,7 @@ La velocità effettiva viene misurata separatamente per i produttori e i consuma
 
 100 partizioni per ogni istanza del servizio.
 
-### Conservazione 
+### Conservazione
 {: #standard_retention}
 
 Un massimo di 1 GB per ogni partizione.
@@ -56,9 +56,9 @@ Un massimo di 1 GB per ogni partizione.
 ### Velocità effettiva della rete
 {: #enterprise_throughput }
 
-Si consiglia un massimo di 40 MB al secondo con un limite di picco di 90 MB al secondo. La velocità effettiva viene espressa come il numero di byte al secondo che può essere inviato e ricevuto in un cluster.
+Si consiglia un massimo di 40 MB al secondo con un limite di picco di 75 MB al secondo. La velocità effettiva viene espressa come il numero di byte al secondo che può essere inviato e ricevuto in un cluster.
 
-La figura consigliata si basa su un carico di lavoro tipico e tiene conto del possibile impatto di azioni operative come gli aggiornamenti interni o le modalità di errore come la perdita di una zona di disponibilità.  Se la velocità effettiva media supera la figura consigliata, potresti riscontrare una diminuzione delle prestazioni durante tali condizioni.
+La figura consigliata si basa su un carico di lavoro tipico e tiene conto del possibile impatto di azioni operative come gli aggiornamenti interni o le modalità di errore come la perdita di una zona di disponibilità. Se la velocità effettiva media supera la figura consigliata, potresti riscontrare una diminuzione delle prestazioni durante tali condizioni.
 
 
 ### Partizioni
@@ -66,15 +66,16 @@ La figura consigliata si basa su un carico di lavoro tipico e tiene conto del po
 
 1000 partizioni per ogni istanza del servizio.
 
-### Conservazione 
+### Conservazione
 {: #enterprise_retention}
 
-Illimitato, fino al limite di archiviazione del tuo piano. 
+Illimitato, fino al limite di archiviazione del tuo piano.
 
 ### Altri limiti
 {: #enterprise_limits}
 
-Dimensione massima del messaggio: 1 MB
+*  Dimensione massima del messaggio: 1 MB
+*  Numero massimo di client Kafka attivi simultaneamente: 10000
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #rest_producer_using}
 
 
-** L'API del produttore REST è disponibile solo come parte del nuovo piano Standard di {{site.data.keyword.messagehub}}.**
+** L'API del produttore REST è disponibile solo come parte dei piani Standard e Enterprise di {{site.data.keyword.messagehub}}.**
 <br/>
 
 {{site.data.keyword.messagehub}} fornisce un'API REST per aiutarti a connettere i tuoi sistemi esistenti al tuo cluster Kafka {{site.data.keyword.messagehub}}. Utilizzando l'API, puoi integrare {{site.data.keyword.messagehub}} con tutti i sistemi che supportano le API RESTful.
@@ -48,7 +48,7 @@ L'URL per l'endpoint dell'API viene fornito nella proprietà <code>kafka_http_ur
 Utilizza uno dei seguenti metodi per l'autenticazione:
 
 * **Per l'autenticazione utilizzando l'autenticazione di base:**<br/>
-    Utilizza le proprietà <code>user</code> e <code>api_key</code> dei precedenti oggetti come nome utente e password. Inserisci questi valori nell'intestazione <code>Authorization</code> della richiesta HTTP nel formato <code>Basic <base64 encoding of username:password joined by a single colon (:)></code>.
+    Utilizza le proprietà <code>user</code> e <code>api_key</code> dei precedenti oggetti come nome utente e password. Inserisci questi valori nell'intestazione <code>Authorization</code> della richiesta HTTP nel formato <code>Basic &lt;base64 encoding of username and password joined by a single colon (:)&gt;</code>.
 
 * **Per l'autenticazione utilizzando un token di connessione:**<br/>
     Per ottenere il tuo token utilizzando la CLI IBM Cloud, per prima cosa accedi a IBM Cloud e poi immetti il seguente comando: 

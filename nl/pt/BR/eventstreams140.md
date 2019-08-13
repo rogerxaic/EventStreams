@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 Respostas para perguntas comuns sobre o serviço {{site.data.keyword.IBM}}{{site.data.keyword.messagehub}} para o plano Clássico.
 
-Para obter respostas para perguntas relacionadas a todos os planos do {{site.data.keyword.messagehub}}, consulte [Perguntas mais frequentes](docs/services/EventStreams?topic=eventstreams-faqs#faqs).
+Para obter respostas para perguntas relacionadas a todos os planos do {{site.data.keyword.messagehub}}, consulte [Perguntas mais frequentes](/docs/services/EventStreams?topic=eventstreams-faqs#faqs).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -63,7 +63,7 @@ o máximo de 30 dias.
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## Quanto tempo as mensagens ficam retidas?
-{: #messages_retained}
+{: #messages_retained_classic}
 
 Por padrão, as mensagens são retidas no Kafka por até 24 horas e cada partição é limitada a 1 GB. Se um valor máximo de 1 GB for atingido, as mensagens mais antigas serão descartadas para permanecerem
 no limite.
@@ -136,8 +136,8 @@ A API de REST do Kafka reinicia uma vez por dia por um curto período de tempo.
 
 Durante esse período, a
 API de REST do Kafka pode se tornar indisponível. Se isso acontecer, é recomendado tentar novamente
-sua solicitação. Após a API de REST ser reiniciada, será necessário recriar suas instâncias do consumidor
-do Kafka. Se este for o caso, a API de REST retornará o JSON a seguir:
+sua solicitação. Após a API de REST ser reiniciada, será necessário recriar
+suas instâncias do consumidor do Kafka. Se este for o caso, a API de REST retornará o JSON a seguir:
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

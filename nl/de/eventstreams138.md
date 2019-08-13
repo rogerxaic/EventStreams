@@ -16,7 +16,7 @@ subcollection: eventstreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# REST-konforme Verwaltungs-API im Plan "Classic" verwenden
+# Admin-REST-API im Plan "Classic" verwenden
 {: #admin_api_standard}
 
 {{site.data.keyword.messagehub}} stellt eine REST-konforme Verwaltungs-API bereit, mit der Sie Topics erstellen, löschen und auflisten können.
@@ -24,9 +24,9 @@ subcollection: eventstreams
 
 Zum Ermitteln des Endpunkts der REST-konformen Verwaltungs-API kann die {{site.data.keyword.Bluemix_short}}-Anwendung die Eigenschaft `kafka_admin_url` in der Umgebungsvariablen VCAP_SERVICES Ihrer Anwendung verwenden.
 
-Sie können die vollständige Spezifikation für die API über [admin-rest-api.yaml ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api/admin-rest-api.yaml){:new_window} herunterladen.
+Sie können die vollständige Spezifikation für die API über [admin-rest-api.yaml ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-docs/blob/master/admin-rest-api-classic-plan-only/admin-rest-api.yaml){:new_window} herunterladen.
 Verwenden Sie zum Anzeigen der Swagger-Datei Swagger-Tools, zum Beispiel den [Swagger-Editor ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://editor.swagger.io/#/){:new_window}.
 
-Das [{{site.data.keyword.messagehub}}-Verzeichnis 'admin-rest-api' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api){:new_window} enthält außerdem einige hilfreiche Beispiele dafür, wie Sie die REST-konforme Verwaltungs-API aufrufen können.
+Das [{{site.data.keyword.messagehub}}-Verzeichnis 'admin-rest-api' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-messaging/event-streams-docs/tree/master/admin-rest-api-classic-plan-only){:new_window} enthält außerdem einige hilfreiche Beispiele dafür, wie Sie die REST-konforme Verwaltungs-API aufrufen können.
 
 

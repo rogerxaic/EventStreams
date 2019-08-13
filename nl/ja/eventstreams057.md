@@ -59,6 +59,7 @@ Java 仮想マシン (JVM) は DNS 参照をキャッシュに入れます。 JV
 ```
 
 ### JVM の TTL を変更する方法
+{: #jvm_ttl notoc}
 * すべてのアプリケーションに対して JVM の TTL を変更するには、<code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code> ファイル内に <code>networkaddress.cache.ttl</code> 値を設定します。
 * ある特定のアプリケーションに対して JVM TTL を変更するには、アプリケーション・コードで次のように <code>networkaddress.cache.ttl</code> を設定します。
 ```
@@ -66,7 +67,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Java Kafka 呼び出しがタイムアウトになることがある
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### 問題
 {: #calls_timeout_problem notoc}

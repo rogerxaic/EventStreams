@@ -33,9 +33,9 @@ subcollection: eventstreams
 ## 便利なリンク
 {: #troubleshooting_links notoc}
 
-*  [{{site.data.keyword.Bluemix_short}} 無料トライアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://apps.admin.ibmcloud.com/manage/trial/bluemix.html){: new_window}
 *  [{{site.data.keyword.messagehub}} Java Kafka サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-java-console-sample){: new_window}
-*  [{{site.data.keyword.Bluemix_notm}} を使用した Web アプリケーションの作成および Cloud Foundry を使用したアプリのデプロイ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+*  [{{site.data.keyword.Bluemix_notm}} を使用した Web アプリケーションの作成および Cloud Foundry を使用したアプリのデプロイ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/starters?topic=starters-download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface#download-modify-and-redeploy-your-cloud-foundry-app-with-the-command-line-interface){: new_window}
+   {: new_window}
 *  [Apache Kafka 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://kafka.apache.org/documentation.html){: new_window}
 *  [Apache Kafka 2.2.0 クライアント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.2.0/kafka-2.2.0-src.tgz){:new_window}
 *  [{{site.data.keyword.Bluemix_notm}} 価格情報 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/billing-usage?topic=billing-usage-cost#cost){: new_window}

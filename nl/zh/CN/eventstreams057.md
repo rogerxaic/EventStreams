@@ -59,6 +59,7 @@ Java 虚拟机 (JVM) 会将 DNS 查找进行高速缓存。JVM 解析主机名�
 ```
 
 ### 如何修改 JVM 的 TTL
+{: #jvm_ttl notoc}
 * 要针对所有应用程序修改 JVM 的 TTL，请设置 <code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code> 文件中的 <code>networkaddress.cache.ttl</code> 值。
 * 要修改给定应用程序的 JVM TTL，请设置应用程序代码中的 <code>networkaddress.cache.ttl</code>，如下所示：
 ```
@@ -66,7 +67,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Java Kafka 调用可能超时
-{: #calls_timeout}
+{: #calls_timeout_kafka}
 
 ### 问题
 {: #calls_timeout_problem notoc}

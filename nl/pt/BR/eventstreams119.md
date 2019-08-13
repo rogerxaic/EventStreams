@@ -34,7 +34,7 @@ Um padrão comum é usar a ponte do {{site.data.keyword.iot_short_notm}}, o
 {{site.data.keyword.messagehub}} e a ponte do Cloud Object Storage para criar um
 pipeline de ponta a ponta, facilitando as interações em tempo real e de lote.
 
-Para obter informações sobre como criar essa ponte, consulte: [Conectando e configurando um conector histórico para usar o {{site.data.keyword.messagehub}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/message_hub.html){:new_window}.
+Para obter informações sobre como criar essa ponte, consulte: [Conectando e configurando um conector histórico para usar o {{site.data.keyword.messagehub}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/reference/dsc/eventstreams.html){:new_window}.
 
 
 

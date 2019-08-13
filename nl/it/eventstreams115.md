@@ -24,10 +24,10 @@ subcollection: eventstreams
 <br/>
 
 Il bridge {{site.data.keyword.IBM}} Cloud Object Storage fornisce un modo per leggere i dati da un argomento Kafka {{site.data.keyword.messagehub}}
-e inserire i dati in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+e inserire i dati in [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
-Il bridge Cloud Object Storage ti consente di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} un'istanza del servizio [Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Il bridge consuma
+Il bridge Cloud Object Storage ti consente di archiviare i dati dagli argomenti Kafka in {{site.data.keyword.messagehub}} un'istanza del servizio [Cloud Object Storage ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Il bridge consuma
 batch di messaggi provenienti da Kafka e carica i dati del messaggio come oggetti in un bucket nel
 servizio Cloud Object Storage. Configurando il bridge Cloud Object Storage, puoi controllare il modo in cui i dati vengono caricati come oggetti in Cloud Object Storage. Ad esempio, le proprietà che
 puoi configurare sono le seguenti:
@@ -80,7 +80,7 @@ Devi fornire le credenziali per consentire al bridge Cloud Object Storage si sta
 
 Le credenziale che crei concede l'accesso di scrittore all'intera istanza Cloud Object Storage e, pertanto,
 sarebbe meglio questo accesso a uno specifico bucket con cui interagirà il bridge.
-1. Vai alla pagina [Manage access and users ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/iam#/overview){:new_window}.
+1. Vai alla pagina [Manage access and users ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/iam/overview){:new_window}. 
 2. Su questa pagina, dovresti vedere l'ID servizio generato automaticamente. Dopo che hai identificato l'ID specifico, seleziona l'azione **Gestisci ID servizio**. 
 3. Seleziona l'azione **Modifica politica** per limitarla ulteriormente a uno specifico **Tipo di risorsa**, che è bucket, e un **ID risorsa**, che è il nome del bucket. Fai clic su **Salva**.
 

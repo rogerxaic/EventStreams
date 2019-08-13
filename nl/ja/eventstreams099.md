@@ -19,7 +19,7 @@ subcollection: eventstreams
 # クラシック・プランの MQ Light クライアントの使用
 {: #mql_clients}
 
-** MQ Light API は、クラシック・プランのみの一部として使用可能です。**
+** MQ Light API は、クラシック・プランの一部としてのみ使用可能です。**
 {: note}
 <br/>
 

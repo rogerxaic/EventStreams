@@ -24,7 +24,7 @@ subcollection: eventstreams
 # {{site.data.keyword.cloudaccesstrailshort}} イベント 
 {: #at_events}
 
-標準プランとエンタープライズ・プランで、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.messagehub}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。
+標準プランとエンタープライズ・プランで、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.messagehub}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。 
 {: shortdesc}
 
 {{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}を参照してください。
@@ -34,7 +34,7 @@ subcollection: eventstreams
 ## イベントのリスト
 {: #events}
 
-<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://console.bluemix.net/docs/services/cloud-activity-tracker/services/at_events_cf.html#catalog. -->
+<!-- Make sure you introduce the table with a detailed description that immediately precedes it. For example, see https://cloud.ibm.com/docs/services/cloud-activity-tracker/services?topic=cloud-activity-tracker-cf#catalog. -->
 
 標準プランとエンタープライズ・プランの {{site.data.keyword.messagehub}} は、お客様がサービスのアクティビティーをトラッキングできるように、イベントを自動的に生成します。
 

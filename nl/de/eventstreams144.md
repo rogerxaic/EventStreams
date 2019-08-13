@@ -20,11 +20,11 @@ subcollection: eventstreams
 # Bekannte Einschränkungen für den Plan "Classic" 
 {: #restrictions_classic}
 
-Wenn bei der Verwendung von {{site.data.keyword.messagehub}} mit dem Plan "Classic" Probleme auftreten, prüfen Sie die hier beschriebenen bekannten Einschränkungen und Problemumgehungen.
+Wenn bei der Verwendung von {{site.data.keyword.messagehub}} mit dem Plan "Classic" Probleme auftreten, prüfen Sie die hier beschriebenen bekannten Einschränkungen und Problemumgehungen. 
 {: shortdesc}
 
 ## Keine Funktionsübernahme durch Java-Kafka-Aufrufe, wenn ein Kafka-Bootstrap-Server fehlschlägt
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### Problem
 {: #calls_failover_problem notoc}
@@ -81,7 +81,7 @@ Ein Kafka Improvement Proposal (KIP) #302 wurde erstellt um sicherzustellen, das
 
 
 ## Topics und Partitionen
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  Topicnamen sind auf ein Maximum von 100 Zeichen begrenzt.
 *  Die Standardanzahl von Partitionen für ein Topic ist '1'.
@@ -89,7 +89,7 @@ Ein Kafka Improvement Proposal (KIP) #302 wurde erstellt um sicherzustellen, das
 Erstellung weiterer Partitionen müssen Sie einen neuen {{site.data.keyword.Bluemix_notm}}-Bereich verwenden.
 
 ## Aufbewahrungsdauer für Nachrichten
-{: #message_retention}
+{: #message_retention_classic}
 
 In Kafka werden Nachrichten standardmäßig bis zu 24 Stunden aufbewahrt und jede Partition wird auf
 1 GB begrenzt. Wenn die Obergrenze von 1 GB erreicht ist, werden die ältesten Nachrichten gelöscht, damit
@@ -102,7 +102,7 @@ in der Benutzerschnittstelle oder mit der Verwaltungs-API ändern. Das Zeitlimit
 Informationen zu den Einschränkungen für die zulässigen Einstellungen beim Erstellen von Topics mithilfe eines Kafka-Clients oder mithilfe von Kafka Streams finden Sie in [Kafka-API verwenden](/docs/services/EventStreams?topic=eventstreams-kafka_using).
 
 ## Topics in Kafka erstellen und löschen
-{: #create_delete}
+{: #create_delete_classic}
 
 Das Erstellen und das Löschen von Topics in Kafka erfolgt durch asynchrone Operationen, deren
 Ausführung einige Zeit dauern kann. Es wird empfohlen, auf Verwendungsmuster zu verzichten,

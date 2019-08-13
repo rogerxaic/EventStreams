@@ -145,7 +145,7 @@ client = mqlight.Client(service=service,
 
 <br>
 
-有关 {{site.data.keyword.mql}} API 的更多信息，请参阅 [{{site.data.keyword.mql}} developerWorks&reg; 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/messaging/mq-light/){:new_window}。
+有关 API 的更多信息，请参阅：[{{site.data.keyword.mql}} APIs on GitHub ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/mqlight){:new_window}。
 
 
 <!-- 14/11/18: info was in eventstreams080.md, moved because of doc app changes -->

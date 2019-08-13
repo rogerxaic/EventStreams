@@ -23,11 +23,11 @@ subcollection: eventstreams
 ** Le pont Cloud Object Storage est uniquement disponible dans le plan Classic.**
 <br/>
 
-Le pont {{site.data.keyword.IBM}} Cloud Object Storage offre un moyen de lire des données à partir d'un sujet {{site.data.keyword.messagehub}} Kafka et de placer ces données dans [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+Le pont {{site.data.keyword.IBM}} Cloud Object Storage offre un moyen de lire des données à partir d'un sujet {{site.data.keyword.messagehub}} Kafka et de placer ces données dans [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
 Le pont Cloud Object Storage permet d'archiver des données provenant des sujets Kafka de {{site.data.keyword.messagehub}} dans une instance
-du [service Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Le pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un compartiment du service
+du [service Cloud Object Storage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. Le pont consomme des lots de messages issus de Kafka et transfère les données des messages sous forme d'objets vers un compartiment du service
 Cloud Object Storage. En configurant
 le pont Cloud Object Storage, vous pouvez
 contrôler le mode de transfert des données sous forme d'objets vers Cloud Object Storage. Les
@@ -89,7 +89,7 @@ propriétaire ou à l'administrateur de votre instance Cloud Object Storage de c
 
 Les donnée d'identification que vous créez accordent un accès en tant qu'auteur à l'intégralité de l'instance Cloud Object Storage,
 de sorte que vous voudrez sans doute limiter cet accès aux seuls compartiments avec lesquels le pont interagira.
-1. Accédez à la [page Gérer l'accès et les utilisateurs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam#/overview){:new_window}.
+1. Accédez à la [page Gérer l'accès et les utilisateurs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam/overview){:new_window}. 
 2. Cette page doit afficher l'ID de service généré automatiquement. Une fois que vous avez identifié l'ID requis, sélectionnez
 l'action **Gérer un ID de service**. 
 3. Sélectionnez l'action **Editer la règle** afin d'étendre la restriction à un **Type de ressource** spécifique, qui est un compartiment, et à un **ID de ressource**, qui correspond

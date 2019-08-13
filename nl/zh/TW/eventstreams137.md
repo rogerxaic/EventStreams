@@ -50,7 +50,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 
 <br/>
 <br/>
-針對 CURL，您也可以新增下面這一行到指令行，以調整 [Confluent 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.confluent.io/2.0.0/){:new_window} 中詳述的程式碼範例：
+針對 CURL，您也可以新增下面這一行到指令行，以調整 [Confluent 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.confluent.io/2.0.0/){:new_window} 中詳述的程式碼範例：
 <pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
 {: codeblock}
 
@@ -78,7 +78,6 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 請遵循該專案 [README.md ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample){:new_window} 檔案中的指示，來建置及執行範例。
 
 	下列部落格詳盡地介紹了 Kafka REST API 的優點和缺點。[A Comprehensive, Open Source REST Proxy for Kafka. ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.confluent.io/blog/a-comprehensive-open-source-rest-proxy-for-kafka/){: new_window}。
-	
 
 
 

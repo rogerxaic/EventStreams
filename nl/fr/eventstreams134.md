@@ -20,8 +20,7 @@ subcollection: eventstreams
 # Plan Classic 
 {: #plan_choose_classic}
 
-{{site.data.keyword.messagehub}} est disponible dans le cadre de différents plans, selon vos besoins.
-Pour obtenir des informations sur les plans Standard et Enterprise, voir [Choix d'un plan](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_choose).
+{{site.data.keyword.messagehub}} est disponible dans le cadre de différents plans, selon vos besoins. Pour obtenir des informations sur les plans Standard et Enterprise, voir [Choix d'un plan](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_choose).
 {: shortdesc}
  
 ## Présentation du plan Classic

@@ -23,7 +23,7 @@ subcollection: eventstreams
 对经典套餐中有关 {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} 服务的常见问题的解答。
 
 
-有关所有 {{site.data.keyword.messagehub}} 套餐的相关问题的解答，请参阅[常见问题解答](docs/services/EventStreams?topic=eventstreams-faqs#faqs)。
+有关所有 {{site.data.keyword.messagehub}} 套餐的相关问题的解答，请参阅[常见问题解答](/docs/services/EventStreams?topic=eventstreams-faqs#faqs)。
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -57,7 +57,7 @@ subcollection: eventstreams
 <!--following message retention info duplicted in eventstreams057 and evenstreams108-->
 
 ## 消息保留多久？
-{: #messages_retained}
+{: #messages_retained_classic}
 
 缺省情况下，消息在 Kafka 中最多保留 24 小时，并且每个分区的上限是 1 GB。如果达到 1 GB 上限，那么将废弃最旧的消息以防超出限制。
 
@@ -115,7 +115,7 @@ subcollection: eventstreams
 
 Kafka REST API 每天重新启动一次，重新启动需要很短的一段时间。 
 
-在此时间段内，Kafka REST API 可能会变得不可用。如果发生此情况，建议重试请求。重新启动 REST API 后，必须重新创建 Kafka 使用者实例。否则，REST API 会返回以下 JSON：
+在此时间段内，Kafka REST API 可能会变得不可用。如果发生此情况，建议重试请求。重新启动 REST API 后，必须再次创建 Kafka 使用者实例。否则，REST API 会返回以下 JSON：
 
 ```'{"error_code":40403,"message":"Consumer instance not found."}'
 ```

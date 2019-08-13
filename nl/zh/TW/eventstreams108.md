@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} 服務常見問題的回答。
 
-有關特定於經典方案的問題的解答，請參閱[經典方案常見問題解答](/docs/services/EventStreams?topic=eventstreams-faqs_classic)。
+如需特定於經典方案的問題回答，請參閱[經典方案常見問題](/docs/services/EventStreams?topic=eventstreams-faqs_classic)。
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->

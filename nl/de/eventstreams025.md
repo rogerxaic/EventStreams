@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #rest_producer_using}
 
 
-** Die REST-Producer-API ist nur als Bestandteil des neuen {{site.data.keyword.messagehub}}-Plans "Standard" verfügbar.**
+**Die REST-Producer-API ist nur im Rahmen des Standardplans und des Enterprise-Plans von {{site.data.keyword.messagehub}} verfügbar. **
 <br/>
 
 {{site.data.keyword.messagehub}} stellt eine REST-API bereit, die Sie beim Verbinden Ihrer vorhandenen Systeme mit Ihrem {{site.data.keyword.messagehub}}-Kafka-Cluster unterstützt. Mit der API können Sie {{site.data.keyword.messagehub}} in jedes System integrieren, das REST-konforme APIs unterstützt.
@@ -47,7 +47,7 @@ Die URL für den Endpunkt der API ist in der Eigenschaft <code>kafka_http_url</c
 Verwenden Sie eine der folgenden Methoden zur Authentifizierung:
 
 * **Authentifizierung mit Basisauthentifizierung:**<br/>
-    Verwenden Sie die Eigenschaften <code>user</code> und <code>api_key</code> der oben genannten Objekte als Benutzername und Kennwort. Geben Sie diese Werte im Header <code>Authorization</code> der HTTP-Anforderung in der Form <code>Basic <Base64-Codierung von Benutzername:Kennwort, verbunden durch einen Doppelpunkt (:)></code> an.
+    Verwenden Sie die Eigenschaften <code>user</code> und <code>api_key</code> der oben genannten Objekte als Benutzername und Kennwort. Geben Sie diese Werte im Header <code>Authorization</code> der HTTP-Anforderung in der Form <code>Basic &lt;Base64-Codierung des Benutzernamens und des Kennworts, verbunden durch einen Doppelpunkt (:)&gt;</code> an.
 
 * **Authentifizierung mit Trägertoken:**<br/>
     Um Ihr Token über die IBM Cloud-Befehlszeilenschnittstelle abzurufen, melden Sie sich zuerst bei IBM Cloud an und führen Sie dann den folgenden Befehl aus: 

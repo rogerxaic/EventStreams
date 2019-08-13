@@ -20,7 +20,7 @@ subcollection: eventstreams
 # クラシック・プラン 
 {: #plan_choose_classic}
 
-{{site.data.keyword.messagehub}} は、要件に応じて異なるプランで使用可能です。標準プランとエンタープライズ・プランについて詳しくは、[プランの選択](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_choose)を参照してください。
+{{site.data.keyword.messagehub}} は、要件に応じて、異なるプランとして使用可能です。 標準プランとエンタープライズ・プランについて詳しくは、[プランの選択](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_choose)を参照してください。
 {: shortdesc}
  
 ## クラシック・プランの概要
@@ -89,7 +89,7 @@ subcollection: eventstreams
 			<td>ダラス (us-south)</br>
 			ロンドン (eu-gb)</br>
 			シドニー (au-syd)</br>
-			フランクフルト (eu-de) - {{site.data.keyword.mql}} API なし</td>
+			フランクフルト (eu-de) - {{site.data.keyword.mql}} API なし </td>
 
 		</tr>
 		<tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-23"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,7 +21,7 @@ subcollection: eventstreams
 {: #rest_producer_using}
 
 
-**L'API REST Producer est uniquement disponible dans le cadre du nouveau plan Standard de {{site.data.keyword.messagehub}}.**
+** L'API REST Producer est uniquement disponible dans le cadre des plans {{site.data.keyword.messagehub}} Standard et Enterprise.**
 <br/>
 
 {{site.data.keyword.messagehub}} fournit une API REST qui vous permet de connecter vos systèmes existants à votre cluster {{site.data.keyword.messagehub}} Kafka. A l'aide de l'API, vous pouvez intégrer {{site.data.keyword.messagehub}} à n'importe quel système prenant en charge les API RESTful.
@@ -47,7 +47,7 @@ L'URL du noeud final de l'API est fournie dans la propriété <code>kafka_http_u
 Utilisez l'une des méthodes suivantes pour vous authentifier :
 
 * **Pour vous authentifier à l'aide de l'autorisation de base :**<br/>
-    Utilisez les propriétés <code>user</code> et <code>api_key</code> des objets ci-dessus en tant que nom d'utilisateur et mot de passe. Placez ces valeurs dans l'en-tête <code>Authorization</code> de la demande HTTP comme ceci : <code>Basic <base64 username:password></code>.
+    Utilisez les propriétés <code>user</code> et <code>api_key</code> des objets ci-dessus en tant que nom d'utilisateur et mot de passe. Placez ces valeurs dans l'en-tête <code>Authorization</code> de la demande HTTP comme ceci : <code>Basic &lt;codage en base64 du nom d'utilisateur et du mot de passe reliés par un signe deux-points (:) unique&gt;</code>.
 
 * **Pour vous authentifier à l'aide d'un jeton bearer :**<br/>
     Pour obtenir votre jeton à l'aide de l'interface CLI d'IBM Cloud, connectez-vous à IBM Cloud, puis exécutez la commande suivante : 

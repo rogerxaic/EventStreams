@@ -15,6 +15,7 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 
 # Guía de inicio Cómo empezar
 {: #getting_started}
@@ -45,7 +46,7 @@ Siga estos pasos:
   
   e. Pulse **Crear**.
 
-2. {: #create_credentials_step notoc} Cree algunas credenciales de {{site.data.keyword.messagehub}} completando estos pasos: [obtención de credenciales y conexión mediante la consola de IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_standard_cf_console).
+2. {: #create_credentials_step notoc} Cree algunas credenciales de {{site.data.keyword.messagehub}} completando estos pasos: [obtención de credenciales y conexión mediante la consola de IBM Cloud](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external_console).
    <br/>
    <br/>Necesitará los valores de *kafka_brokers_sasl* y *api_key* para el [paso 7](/docs/services/EventStreams?topic=eventstreams-getting_started#start_consumer_step) de esta tarea.   
 
@@ -80,8 +81,7 @@ Siga estos pasos:
     
     El ejemplo utiliza un tema denominado `kafka-java-console-sample-topic`. Si el tema ya no existe, el ejemplo lo crea utilizando la API de administración de {{site.data.keyword.messagehub}}. Para enviar y recibir mensajes, el ejemplo utiliza la API Apache Kafka Java.
 
-    Utilice los valores de *kafka_brokers_sasl*
-    y *api_key* de las credenciales que ha creado en el [paso 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
+    Utilice los valores de *kafka_brokers_sasl* y *api_key* de las credenciales que ha creado en el [paso 2](/docs/services/EventStreams?topic=eventstreams-getting_started#create_credentials_step).
 	<p></p>
 
 	**Importante:** *kafka_brokers_sasl* debe ser una serie única y debe escribirse entre comillas. Por ejemplo:

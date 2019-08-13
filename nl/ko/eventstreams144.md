@@ -20,11 +20,11 @@ subcollection: eventstreams
 # 클래식 플랜에 대한 알려진 제한사항 
 {: #restrictions_classic}
 
-클래식 플랜에서 {{site.data.keyword.messagehub}}를 사용하는 동안 문제점을 발견하면 다음과 같은 알려진 제한사항 및 임시 해결책을 검토하십시오.
+클래식 플랜에서 {{site.data.keyword.messagehub}}를 사용하는 동안 문제점을 발견하면 다음과 같은 알려진 제한사항 및 임시 해결책을 검토하십시오. 
 {: shortdesc}
 
 ## Kafka 부트스트랩 서버가 실패하는 경우 Java Kafka 호출은 장애 복구를 수행하지 않음
-{: #calls_failover}
+{: #calls_failover_classic}
 
 ### 문제점
 {: #calls_failover_problem notoc}
@@ -82,7 +82,7 @@ KIP(Kafka Improvement Proposal) #302는 Kafka 클라이언트가 사용 가능�
 
 
 ## 토픽 및 파티션
-{: #topics_partitions}
+{: #topics_partitions_classic}
 
 *  토픽 이름은 최대 100자로 제한됩니다.
 *  토픽의 기본 파티션 수는 하나입니다.
@@ -90,7 +90,7 @@ KIP(Kafka Improvement Proposal) #302는 Kafka 클라이언트가 사용 가능�
 새 {{site.data.keyword.Bluemix_notm}} 영역을 사용해야 합니다.
 
 ## 메시지 보유
-{: #message_retention}
+{: #message_retention_classic}
 
 기본적으로 메시지는 Kafka에서 각 파티션당 최대 1GB까지 최대 24시간 동안 보존됩니다. 1GB 한계에 도달하면 한계를 넘지 않도록 가장 오래된 메시지가 삭제됩니다.
 
@@ -100,7 +100,7 @@ KIP(Kafka Improvement Proposal) #302는 Kafka 클라이언트가 사용 가능�
 Kafka 클라이언트 또는 Kafka Streams를 사용하여 토픽을 작성할 때 허용되는 설정의 제한사항에 대한 정보는 [Kafka API 사용](/docs/services/EventStreams?topic=eventstreams-kafka_using)을 참조하십시오.
 
 ## Kafka에서 토픽 작성 및 삭제
-{: #create_delete}
+{: #create_delete_classic}
 
 Kafka에서 토픽 작성 및 삭제는 비동기 작업으로 완료하는 데 약간의 시간이 소요될 수
 있습니다. 토픽의 빠른 작성 및 삭제 또는 토픽의 빠른 삭제 및 재작성에 의존하는

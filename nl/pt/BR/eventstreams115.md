@@ -24,11 +24,11 @@ subcollection: eventstreams
 <br/>
 
 A ponte do {{site.data.keyword.IBM}} Cloud Object Storage fornece uma maneira de ler dados de um tópico do {{site.data.keyword.messagehub}} Kafka
-e de colocá-los no [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
+e de colocá-los no [{{site.data.keyword.IBM_notm}} Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}.
 {: shortdesc}
 
 A ponte do Cloud Object Storage permite arquivar dados de tópicos do Kafka no
-{{site.data.keyword.messagehub}} em uma instância do serviço do [Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos
+{{site.data.keyword.messagehub}} em uma instância do serviço do [Cloud Object Storage ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. A ponte consome lotes de mensagens do Kafka e faz upload dos
 dados da mensagem como objetos para um depósito no serviço do Cloud Object Storage. Ao configurar a ponte do
 Cloud Object Storage, é possível controlar como os dados são transferidos por upload como objetos
 para o Cloud Object Storage. Por exemplo, as propriedades que podem ser configuradas são as seguintes:
@@ -88,7 +88,7 @@ instância do Cloud Object Storage crie as credenciais usando a UI do Cloud Obje
 
 A credencial que é criada concede acesso de gravador à instância inteira do Cloud Object Storage,
 portanto, talvez você queira restringir esse acesso ao depósito específico com o qual a ponte irá interagir.
-1. Acesse a [Página Gerenciar acesso e usuários ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/iam#/overview){:new_window}.
+1. Acesse a [Página Gerenciar acesso e usuários ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/iam/overview){:new_window}. 
 2. Veja o ID de serviço gerado automaticamente nesta página. Quando tiver identificado o ID
 específico, selecione a ação **Gerenciar ID do serviço**. 
 3. Selecione a ação **Editar política** para restringi-la ainda mais a um **Tipo de recurso** específico, que é um depósito e um **ID do recurso**,
