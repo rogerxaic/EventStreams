@@ -95,6 +95,7 @@ You are strongly recommended not to attempt to manage the topic in any way.
 {: faq}
 
 After consumers have left, a group continues to exist only if it has offsets. Consumer offsets are deleted after 7 days of inactivity. Consequently, a consumer group is deleted when the last committed offset for that group expires.
+
 If you want to explicitly delete a group at a time you choose, you can use the 
 [deleteConsumerGroups() API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/23/javadoc/org/apache/kafka/clients/admin/AdminClient.html#deleteConsumerGroups-java.util.Collection-){:new_window}.
 
