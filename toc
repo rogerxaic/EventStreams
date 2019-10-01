@@ -42,6 +42,7 @@ IBM Event Streams
 		eventstreams139.md
 		eventstreams140.md
 		eventstreams144.md
+	
 	{: .topicgroup}
 	Migrating from the Classic plan 
 		eventstreams143.md
