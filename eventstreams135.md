@@ -20,8 +20,8 @@ subcollection: eventstreams
 
 # Connecting to {{site.data.keyword.messagehub}} using the Classic plan 
 {: #connecting_classic}
-The Classic plan is deprecated. From November 1, 2019, you will no longer be able to provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
-From June 30, 2020, the Classic Plan will be retired and no longer supported. Any instance of the Classic Plan still provisioned at this date will be deleted. 
+TheÂ ClassicÂ planÂ isÂ deprecated.Â FromÂ NovemberÂ 1,Â 2019, youÂ willÂ noÂ longerÂ beÂ ableÂ toÂ provisionÂ newÂ instancesÂ ofÂ theÂ ClassicÂ Plan. <br/>However, existingÂ instancesÂ willÂ continueÂ toÂ beÂ supported.
+FromÂ JuneÂ 30,Â 2020, theÂ ClassicÂ PlanÂ willÂ beÂ retiredÂ andÂ noÂ longerÂ supported.Â AnyÂ instanceÂ ofÂ theÂ ClassicÂ PlanÂ stillÂ provisionedÂ atÂ thisÂ dateÂ willÂ beÂ deleted.Â 
 {:deprecated}
 
 The way you connect to {{site.data.keyword.messagehub}} varies depending on whether you're connecting from a Cloud Foundry application or from any other external client. You need to collect two pieces of information to connect to any of {{site.data.keyword.messagehub}}'s APIs:
