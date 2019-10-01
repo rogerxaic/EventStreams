@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-10-01"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,10 +15,13 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
+{:deprecated: .deprecated}
 
 # Known restrictions for the Classic plan 
 {: #restrictions_classic}
+The Classic plan is deprecated. From November 1, 2019, you will no longer be able to provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
+From June 30, 2020, the Classic Plan will be retired and no longer supported. Any instance of the Classic Plan still provisioned at this date will be deleted. 
+{:deprecated}
 
 If you find a problem while using {{site.data.keyword.messagehub}} on the Classic plan, review these known restrictions and workarounds. 
 {: shortdesc}
@@ -58,6 +61,7 @@ From the <code>java.security</code> file:
 ```
 
 ### How to modify the JVM's TTL
+{: #jvm_ttl_classic notoc}
 * To modify the JVM's TTL for all applications, set the <code>networkaddress.cache.ttl</code> value in the <code><var class="keyword varname">$JAVA_HOME</var>/jre/lib/security/java.security</code> file.
 * To modify the JVM TTL for a given application, set the <code>networkaddress.cache.ttl</code> in your application code as follows:
 ```
@@ -65,7 +69,7 @@ java.security.Security.setProperty("networkaddress.cache.ttl" , "30");
 ```
 
 ## Java Kafka calls might time out
-{: #calls_timeout}
+{: #calls_timeout_classic}
 
 ### Problem
 {: #calls_timeout_problem notoc}

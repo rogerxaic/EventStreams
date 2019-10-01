@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-06-01"
+lastupdated: "2019-10-01"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,12 +15,17 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:deprecated: .deprecated}
 
 # Cloud Object Storage bridge on the Classic plan
 {: #cloud_object_storage_bridge }
 
 
-** The Cloud Object Storage bridge is available as part of the Classic plan only.**
+The Cloud Object Storage bridge is available as part of the Classic plan only. The Classic plan is deprecated. From November 1, 2019, you will no longer be able to provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
+From June 30, 2020, the Classic Plan will be retired and no longer supported. Any instance of the Classic Plan still provisioned at this date will be deleted. 
+{:deprecated}
+
+** For information about the replacement for the bridge, see [Connecting Event Streams to Cloud Object Storage](/docs/services/EventStreams?topic=eventstreams-cos_connector).**
 <br/>
 
 The {{site.data.keyword.IBM}} Cloud Object Storage bridge provides a way of reading data from an {{site.data.keyword.messagehub}} Kafka topic
@@ -28,7 +33,7 @@ and placing the data into [{{site.data.keyword.IBM_notm}} Cloud Object Storage !
 {: shortdesc}
 
 The Cloud Object Storage bridge allows you
-to archive data from the Kafka topics in {{site.data.keyword.messagehub}} to an instance of the [Cloud Object Storage service ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about#about){:new_window}. The bridge consumes
+to archive data from the Kafka topics in {{site.data.keyword.messagehub}} to an instance of the [Cloud Object Storage service ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/cloud-object-storage?topic=cloud-object-storage-about-ibm-cloud-object-storage){:new_window}. The bridge consumes
 batches of messages from Kafka and uploads the message data as objects to a bucket in the
 Cloud Object Storage service. By configuring
 the Cloud Object Storage bridge, you can

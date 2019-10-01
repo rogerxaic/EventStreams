@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-30"
+lastupdated: "2019-10-01"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -17,6 +17,7 @@ subcollection: eventstreams
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 {:note: .note}
+{:deprecated: .deprecated}
 
 # Choosing your plan 
 {: #plan_choose}
@@ -46,7 +47,14 @@ The Enterprise plan is appropriate if data isolation, guaranteed performance, an
 ## Classic plan
 {: #plan_classic}
 
+The Classic plan is deprecated. From November 1, 2019, you will no longer be able to provision new instances of the Classic Plan. However, existing instances will continue to be supported. <br/>From June 30, 2020, the Classic Plan will be retired and no longer supported. Any instance of the Classic Plan still provisioned at this date will be deleted.<br/>
+For more information, see 
+[IBM {{site.data.keyword.messagehub}} Classic Plan is being retired ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/ibm-event-streams-classic-plan-is-being-retired){:new_window}.
+{:deprecated}
+
 The Classic plan gives access to the previous edition of the Standard plan and is provided for existing workloads and backward compatibility only. You should provision new workloads against the Standard plan.
+
+For information about moving from the Classic plan, see [Migrating](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#migrating_from_classic).
 
 
 ## What's supported by the Lite, Standard, Enterprise, and Classic plans
@@ -59,8 +67,8 @@ The following table summarizes what is supported by the plans:
 	        <th></th>
 		    <th>Lite Plan</th>
 		    <th>Standard Plan</th>
-		    <th>Enterprise Plan</th>
-		    <th>Classic Plan</th>
+	      	    <th>Enterprise Plan</th>
+		    <th>Classic Plan[<sup>3</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_classic)</th>
         </tr>
 		<tr>
 			<td>**Tenancy**</td>
@@ -213,6 +221,16 @@ The following table summarizes what is supported by the plans:
 			<td>Expect provisioning to take up to 3 hours. Because Enterprise has its own dedicated resources for each cluster, it requires more time for provisioning</td>
 			<td>Instantaneous provisioning</td>
 		</tr>
+		<tr>
+			<td>**Compliance**</td>
+			<td>None</td>
+			<td>None</td>
+			<td>ISO<br/>
+SOC Type 1<br/>
+HIPPA ready<br/>
+</td>
+			<td>None</td>
+		</tr>
 
 </table>
 ### Footnotes
@@ -220,6 +238,7 @@ The following table summarizes what is supported by the plans:
 
 1. {: #footnote_lite notoc} Note that after 30 days of inactivity, your instance is deleted.
 2. {: #footnote_szr notoc} For more information about availability, see [single zone location deployments](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
+3. {: #footnote_classic notoc} The Classic plan is deprecated. For more information, see [Classic plan deprecation](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_classic).
 
 
 

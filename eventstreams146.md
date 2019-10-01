@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-10-01"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -15,10 +15,14 @@ subcollection: eventstreams
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:deprecated: .deprecated}
 
 # Migrating a Kafka Java client on the Classic plan 
 {: #kafka_java_migrating_classic}
 
+The Classic plan is deprecated. From November 1, 2019, you will no longer be able to provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
+From June 30, 2020, the Classic Plan will be retired and no longer supported. Any instance of the Classic Plan still provisioned at this date will be deleted. 
+{:deprecated}
 
 ## Migrating a Kafka Java client from 0.9.X or 0.10.X to later client versions
 {: #kafka_migrate_classic}
