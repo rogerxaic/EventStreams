@@ -19,6 +19,7 @@ IBM Event Streams
 	{: .navgroup id="reference"}
 	eventstreams132.md
 	eventstreams117.md
+	eventstreams155.md
 	eventstreams068.md
 	at-events.md
 	eventstreams-cli.md
