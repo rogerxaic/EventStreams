@@ -89,7 +89,7 @@ The following table summarizes what is supported by the plans:
 			<td>**Availability**</td>
 			<td>99.95% [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_lite)</td>
 			<td>99.95%</td>
-			<td>99.95%<br/>(99.5% in single zone locations)  [<sup>2</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
+			<td>99.95%<br/>(99.5% in single zone locations) [<sup>2</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
 			<td>99.5%</td>
 		</tr>
 	  		<tr>
@@ -238,7 +238,7 @@ HIPPA ready<br/>
 
 1. {: #footnote_lite notoc} Note that after 30 days of inactivity, your instance is deleted.
 2. {: #footnote_szr notoc} For more information about availability, see [single zone location deployments](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
-3. {: #footnote_classic notoc} The Classic plan is deprecated. For more information, see [Classic plan deprecation](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_classic).
+3. {: #footnote_classic notoc} The Classic plan is deprecated. For more information, see [Classic plan deprecation](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_classic) and [moving to the Standard plan](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#migrating_from_classic).
 
 
 
