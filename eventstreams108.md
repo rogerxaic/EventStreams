@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-04"
+lastupdated: "2019-10-03"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -22,7 +22,7 @@ subcollection: eventstreams
 
 Answers to common questions about the {{site.data.keyword.IBM}} {{site.data.keyword.messagehub}} service.
 
-For answers to questions specific to the Classic plan, see [FAQs for the Classic plan](/docs/services/EventStreams?topic=eventstreams-faqs_classic).
+For answers to questions specific to the now deprecated Classic plan, see [FAQs for the Classic plan](/docs/services/EventStreams?topic=eventstreams-faqs_classic).
 {: shortdesc}
 
 <!--17/10/17 - Karen: same info duplicated at messagehub104 -->
@@ -152,6 +152,14 @@ The following configuration settings apply to all topics and cannot be changed:
 *  Each {{site.data.keyword.Bluemix_notm}} space has a limit of 100 partitions. To create
    more partitions, you must use a new {{site.data.keyword.Bluemix_notm}} space.
 
+## How do I check which {{site.data.keyword.messagehub}} plan I've provisioned?
+{: #plan_check}
+{: faq}
+
+To confirm which type of {{site.data.keyword.messagehub}} plan you've provisioned (Lite, Standard, Enterprise, or Classic), complete the following steps:
+1. Navigate to the instance of {{site.data.keyword.messagehub}} that you want to check in the {{site.data.keyword.Bluemix_notm}} console.
+2. Click the **Plan** tab in the navigation pane on the left.
+The **Current plan** section displays your plan type. 
 ## What are the differences between the {{site.data.keyword.messagehub}} Standard and {{site.data.keyword.messagehub}} Enterprise plans?
 {: #plan_compare }
 {: faq}
