@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-15"
+lastupdated: "2019-10-09"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -21,6 +21,48 @@ subcollection: eventstreams
 
 If you want information about how to install the CLI for {{site.data.keyword.messagehub}}, see 
 [Getting started with the {{site.data.keyword.messagehub}} CLI ](/docs/services/EventStreams?topic=eventstreams-cli#cli).
+## Changelog
+{: #es_cli_changelog}
+
+<table summary="Overview of version changes for the {{site.data.keyword.messagehub}} CLI plug-in">
+<caption>Changelog for the {{site.data.keyword.messagehub}} CLI plug-in</caption>
+<thead>
+<tr>
+<th>Version</th>
+<th>Release date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1.0</td>
+<td>May 12 2019</td>
+<td>
+Initial release of the {{site.data.keyword.messagehub}} CLI</td>
+</tr>
+<tr>
+<td>v1.0.1</td>
+<td>May 27 2019</td>
+<td>
+<ul>
+<li>Improved error message when running command without init</li>
+<li>Sorted instances list during init</li>
+<li>Translation update</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>v2.0</td>
+<td>August 21 2019</td>
+<td>
+<ul>
+<li>init: removed the service-key requirement</li>
+<li>Added group-delete command</li>
+<li>Updated translations of help text</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 
 ## ibmcloud es init
@@ -457,6 +499,30 @@ ibmcloud es groups [--filter FILTER] [--json]
 </dd>
 </dl>
 
+## ibmcloud es group-delete
+{: #ibmcloud_es_group_delete}
+
+Delete a consumer group.
+
+
+```
+ibmcloud es group-delete [--group] GROUP_ID [--force]
+
+```
+{:codeblock}
+
+<strong>Prerequisites</strong>: None
+
+<strong>Command options</strong>:
+{: #ibmcloud_es_group_delete_params}
+
+<dl>
+    <dt>--group value, -g value </dt>
+        <dd>Consumer group ID</dd>
+    <dt>--force, -f (optional)</dt>
+        <dd>Delete group without confirmation.</dd> 
+</dd>
+</dl>
 <!--
 <strong>Examples</strong>:
 -->
