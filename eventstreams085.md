@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-10-16"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -54,7 +54,7 @@ For more information, see
 
 The Classic plan gives access to the previous edition of the Standard plan and is provided for existing workloads and backward compatibility only. You should provision new workloads against the Standard plan.
 
-For information about moving from the Classic plan, see [Migrating](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#migrating_from_classic).
+For information about moving from the Classic plan to either the Enterprise or Standard plans, see [Migrating](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#migrating_from_classic).
 
 
 ## What's supported by the Lite, Standard, Enterprise, and Classic plans
@@ -68,7 +68,7 @@ The following table summarizes what is supported by the plans:
 		    <th>Lite Plan</th>
 		    <th>Standard Plan</th>
 	      	    <th>Enterprise Plan</th>
-		    <th>Classic Plan[<sup>3</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_classic)</th>
+		    <th>Classic Plan[<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_classic)</th>
         </tr>
 		<tr>
 			<td>**Tenancy**</td>
@@ -87,9 +87,9 @@ The following table summarizes what is supported by the plans:
 		</tr>
         <tr>
 			<td>**Availability**</td>
-			<td>99.95% [<sup>1</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_lite)</td>
+			<td>99.95% [<sup>2</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_lite)</td>
 			<td>99.95%</td>
-			<td>99.95%<br/>(99.5% in single zone locations) [<sup>2</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
+			<td>99.95%<br/>(99.5% in single zone locations) [<sup>3</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
 			<td>99.5%</td>
 		</tr>
 	  		<tr>
@@ -138,7 +138,7 @@ The following table summarizes what is supported by the plans:
 			<td>**Maximum throughput**</td>
 			<td>100 KB per second per partition</td>
 			<td>1 MB per second per partition (20 MB per service instance) </td>
-			<td>40 MB per second per cluster (peak throughput of 75 MB per second)</td>
+			<td>80 MB per second per cluster (peak throughput of 150 MB per second) [<sup>4</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_throughput)</td>
 			<td>1 MB per second per partition</td>
 		</tr>
 		<tr>
@@ -236,9 +236,11 @@ HIPPA ready<br/>
 ### Footnotes
 {: #footnote_plans notoc}
 
-1. {: #footnote_lite notoc} Note that after 30 days of inactivity, your instance is deleted.
-2. {: #footnote_szr notoc} For more information about availability, see [single zone location deployments](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
-3. {: #footnote_classic notoc} The Classic plan is deprecated. For more information, see [Classic plan deprecation](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_classic) and [moving to the Standard plan](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#migrating_from_classic).
+1. {: #footnote_classic notoc} The Classic plan is deprecated. For more information, see [Classic plan deprecation](/docs/services/EventStreams?topic=eventstreams-plan_choose#plan_classic) and [moving to the Standard plan](/docs/services/EventStreams?topic=eventstreams-plan_choose_classic#migrating_from_classic).
+2. {: #footnote_lite notoc} After 30 days of inactivity, your instance is deleted. (Inactivity is defined as a zero bytes_out metric even though you might have created a partition or produced messages.)
+3. {: #footnote_szr notoc} For more information about availability, see [single zone location deployments](/docs/services/EventStreams?topic=eventstreams-sla#sla_szr).
+4. {: #footnote_throughput notoc}A recommended maximum is 80 MB per second, that is 40 MB per second for producing and 40 MB per second for consuming. <br/>
+A recommended peak limit is 150 MB per second, that is 75 MB per second for producing and 75 MB per second for consuming.
 
 
 
