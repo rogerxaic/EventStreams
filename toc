@@ -12,7 +12,7 @@ IBM Event Streams
 	About Event Streams
 		eventstreams010.md
 		eventstreams073.md
-	 	eventstreams085.md
+	eventstreams085.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
