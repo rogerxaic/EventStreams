@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-11-01"
+lastupdated: "2019-11-14"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -88,9 +88,9 @@ The following table summarizes what is supported by the plans:
         <tr>
 			<td>**Availability**</td>
 			<td>99.95% [<sup>2</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_lite)</td>
-			<td>99.95%</td>
-			<td>99.95%<br/>(99.5% in single zone locations) [<sup>3</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
-			<td>99.5%</td>
+			<td>99.99%</td>
+			<td>99.99%<br/>(99.9% in single zone locations) [<sup>3</sup>](/docs/services/EventStreams?topic=eventstreams-plan_choose#footnote_plans)</td>
+			<td>99.99%</td>
 		</tr>
 	  		<tr>
 			<td>**Kafka version on cluster**</td>
@@ -224,13 +224,21 @@ The following table summarizes what is supported by the plans:
 		</tr>
 		<tr>
 			<td>**Compliance**</td>
-			<td>None</td>
-			<td>None</td>
-			<td>ISO<br/>
-SOC Type 1<br/>
+			<td>GDPR<br/>
+Privacy Shield<br/></td>
+			<td>GDPR<br/>
+Privacy Shield<br/>
+ISO 27001, 27017, 27018<br/></td>
+			<td>GDPR<br/>
+Privacy Shield<br/>
+ISO 27001, 27017, 27018<br/>
+SOC 1 Type 1<br/>
+SOC 2 Type 1<br/>
 HIPPA ready<br/>
 </td>
-			<td>None</td>
+			<td>GDPR<br/>
+Privacy Shield<br/>
+ISO 27001, 27017, 27018<br/></td>
 		</tr>
 
 </table>
