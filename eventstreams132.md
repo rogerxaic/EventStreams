@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-11-01"
+lastupdated: "2019-11-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -23,26 +23,26 @@ subcollection: eventstreams
 
 ## Standard plan
 {: #sla_standard}
-The {{site.data.keyword.messagehub}} service is provided with an availability of 99.95% on the Standard plan.
+The {{site.data.keyword.messagehub}} service is provided with an availability of 99.99% on the Standard plan.
 For more information about the SLA for high availability services in {{site.data.keyword.Bluemix}}, see
-[{{site.data.keyword.Bluemix_notm}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-18/$file/i126-6605-18_08-2019_en_US.pdf){:new_window}.
+[{{site.data.keyword.Bluemix_notm}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-19/$file/i126-6605-19_10-2019_en_US.pdf){:new_window}.
 
 
 ## Enterprise plan
 {: #sla_enterprise}
 
-The {{site.data.keyword.messagehub}} service is provided with an availability of 99.95% on the Enterprise plan as a high availability Public environment. When the {{site.data.keyword.messagehub}} service is run in non-HA environments, such as [single zone locations](#sla_szr), the availability is 99.5%. 
+The {{site.data.keyword.messagehub}} service is provided with an availability of 99.99% on the Enterprise plan as a high availability Public environment. When the {{site.data.keyword.messagehub}} service is run in non-HA environments, such as [single zone locations](#sla_szr), the availability is 99.9%. 
 For more information about the SLA for high availability services in {{site.data.keyword.Bluemix_notm}}, see
-[{{site.data.keyword.Bluemix_notm}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-18/$file/i126-6605-18_08-2019_en_US.pdf){:new_window}.
+[{{site.data.keyword.Bluemix_notm}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-19/$file/i126-6605-19_10-2019_en_US.pdf){:new_window}.
 
 ## Classic plan
 {: #sla_classic}
 The Classic plan is deprecated. From November 1, 2019, you can no longer provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
 From June 30, 2020, the Classic Plan will be retired and no longer supported. Any instance of the Classic Plan still provisioned at this date will be deleted. 
 {:deprecated}
-The {{site.data.keyword.messagehub}} service is provided with an availability of 99.5% on the Classic plan. 
+The {{site.data.keyword.messagehub}} service is provided with an availability of 99.99% on the Classic plan. 
 For more information about the SLA for {{site.data.keyword.Bluemix_notm}}, see
-[{{site.data.keyword.Bluemix_notm}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-18/$file/i126-6605-18_08-2019_en_US.pdf){:new_window}.
+[{{site.data.keyword.Bluemix_notm}} service description ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-03.ibm.com/software/sla/sladb.nsf/pdf/6605-19/$file/i126-6605-19_10-2019_en_US.pdf){:new_window}.
 
 <!--
 ## What does 99.95% availability mean?
