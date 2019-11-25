@@ -12,6 +12,7 @@ IBM Event Streams
 	About Event Streams
 		eventstreams010.md
 		eventstreams073.md
+		eventstreams156.md
 	eventstreams085.md
 	{: .navgroup-end}
 
