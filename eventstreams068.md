@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-08-02"
+lastupdated: "2019-12-10"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -26,30 +26,29 @@ privacy of your data:
 {:shortdesc}
 
 ## Cryptographic protocols
-{: #cryptographic notoc}
+{: #cryptographic}
 
 
-*  Connections to the Kafka native and REST interfaces must be
-   made using TLS 1.2.
-*  Connections are restricted to the following strong cipher
-   suites:
+* Connections are restricted to the following strong cipher suites:
 
       * ECDHE-RSA-AES128-GCM-SHA256
       * ECDHE-RSA-AES256-GCM-SHA384
-      * DHE-RSA-AES128-GCM-SHA256
-      * kEDH+AESGCM
       * ECDHE-RSA-AES128-SHA256
       * ECDHE-RSA-AES256-SHA384
-      * DHE-RSA-AES128-SHA256
-      * DHE-RSA-AES256-SHA256
+      * ECDHE-RSA-AES256-SHA384
 
+* To be a fully supported configuration, all clients must support the following:
+    * TLS v1.2
+    * elliptic curve cryptography
+    * TLS server name indication (SNI)
 
+* Additionally, you must use TLS v1.2 in the following cases:
+    * for making connections to the Kafka native and REST interfaces 
+    * the browser that you use to access the {{site.data.keyword.messagehub}} dashboard must support TLS v1.2
 
-*  To access the {{site.data.keyword.messagehub}} dashboard, you must use a browser
-   that supports TLS 1.2.
    
 ## Encryption of message payloads, topic names, and consumer groups
-{: #encryption_payloads notoc}
+{: #encryption_payloads}
 
 Message data is encrypted for transmission between {{site.data.keyword.messagehub}}
 and clients as a result of TLS. {{site.data.keyword.messagehub}} stores message data
@@ -59,5 +58,7 @@ Topic names and consumer groups are encrypted for transmission between
 {{site.data.keyword.messagehub}} and clients as a result of TLS. However, 
 {{site.data.keyword.messagehub}} does not encrypt these values at rest. Therefore, you are not recommended to use confidential information in your topic names.
 
+For information about compliance on each of the {{site.data.keyword.messagehub}} plans, see 
+[What's supported by the Lite, Standard, Enterprise, and Classic plans](/docs/services/EventStreams?topic=eventstreams-plan_choose#what-s-supported-by-the-lite-standard-enterprise-and-classic-plans).
 
 
