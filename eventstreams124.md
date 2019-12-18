@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-12-18"
 
-keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, wildcarding, IAM, wildcard, policies
 
 subcollection: eventstreams
 
@@ -55,7 +55,8 @@ KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/ia
 Cloud Identity and Access Management (IAM) policies are attached to the resources to be controlled. Each policy defines the level of access that a particular user should have and to which resource or set of resources. A policy consists of the following information: 
 * The type of service the policy applies to. For example, {{site.data.keyword.messagehub}}. You can scope a policy to include all service types. 
 * The instance of the service to be secured. You can scope a policy to include all instances of a service type. 
-* The type of resource to be secured. The valid values are <code>cluster</code>, <code>topic</code>, <code>group</code>, or <code>txnid</code>. Specifying a type is optional. If you do not specify a type, the policy then applies to all resources in the service instance. 
+* The type of resource to be secured. The valid values are <code>cluster</code>, <code>topic</code>, <code>group</code>, or <code>txnid</code>. Specifying a type is optional. If you do not specify a type, the policy then applies to all resources in the service instance.
+If you want to specify more than one type of resource, you must create one policy per resource. 
 * The resource to be secured. Specify for resources of type <code>topic</code>, <code>group</code> and <code>txnid</code>. If you do not specify the resource, the policy then applies to all resources of the type specified in the service instance. 
 * The role assigned to the user. For example, Reader, Writer, or Manager. 
 
@@ -98,6 +99,10 @@ For more information about IAM, see
 For an example of how to set policies, see: 
 [IBM Cloud IAM Service IDs and API Keys ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}.
 
+## Wildcarding
+You can take advantage of the IAM wildcarding facility to set policies for groups or resources on {{site.data.keyword.messagehub}}. 
+For example, if you name all your topics with prefixes like `Dept1_Topic1` and `Dept1_Topic2`, you can set policies for topics called `Dept1_*` and these policies will be applied to all topics with that prefix. For more information, see 
+[Assigning access by using wildcard policies ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/iam?topic=iam-wildcard){:new_window}.
 
 ## Connecting to {{site.data.keyword.messagehub}}
 {: #connect_message_enterprise }
