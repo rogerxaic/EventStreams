@@ -49,7 +49,6 @@ IBM Event Streams
 		eventstreams152.md
 		eventstreams150.md
 		eventstreams151.md
-	{: .navgroup-end}
 
 	{: .topicgroup}
 	Migrating from Dedicated to Enterprise
