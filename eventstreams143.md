@@ -27,6 +27,8 @@ This new release of the Standard multi-tenant plan offers significant improvemen
 As part of the upgrade to the Standard plan, you must create a new Standard plan instance. You cannot upgrade or change an existing instance of the Classic plan.
 {:important}
 
+As part of the upgrade to the Standard plan, you must create a new Standard plan instance. You cannot upgrade or change an existing instance of the Classic plan.
+{:important}
 To migrate applications from the previous Standard plan (now called the Classic plan and deprecated) to the new plan, consider the following information.
 
 The Classic plan is deprecated. From November 1, 2019, you can no longer provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
@@ -106,7 +108,7 @@ There are differences between the capabilities of the Classic plan and the new S
 * If you currently use the Cloud Object Storage bridge or the MQ bridge, see [Migrating bridges to Kafka Connect](/docs/services/EventStreams?topic=eventstreams-migrate_bridges).
 
 <br/>
-Small code deltas are shipped daily to production. As a result, you can expect to see many further improvements to our user experience (and other areas) throughout the rest of 2019 and beyond. Coming soon:
+Small code deltas are shipped daily to production. As a result, you can expect to see many further improvements to our user experience (and other areas). Coming soon:
 
 * **Customer metrics**
     The ability to monitor activity in a service instance.
