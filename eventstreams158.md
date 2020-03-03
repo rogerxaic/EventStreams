@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-03-03"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, Sysdig, metrics, cost, billing, opting in
 
@@ -36,11 +36,46 @@ Before you can start using {{site.data.keyword.messagehub}} Sysdig metrics, you 
 
 2. To navigate from the {{site.data.keyword.messagehub}} instance page to the {{site.data.keyword.mon_full_notm}} dashboard, click the 3 vertical dots in the upper right corner of the instance page (**Service instance options**) and select **Monitoring**. 
 
+   On your first usage, you might see a welcome wizard. To advance to the dashboard selection menu, select **Next** and then **Skip** at the bottom of the **Choosing an installation method** page.  Accept the prompts that follow. You can then select the **IBM Event Streams** or **IBM Event Streams (Enterprise)** dashboard, depending on the plan you're using. 
+   
+   Dashboards are available only after metrics have started to be recorded; this might take a few minutes to initialize.
+   {:note} 
+
+
+## {{site.data.keyword.messagehub}} metrics cost information 
+{: #metric_costs}
+
+Before you opt in to using {{site.data.keyword.mon_full}} metrics, be aware of the cost of doing so. The estimated cost depends on the following considerations:
+
+* the {{site.data.keyword.messagehub}} plan that you use
+* how many unique time series are sent for each plan
+* the number of topics that you have created
+
+
+<br/>
+
+| Plan            | Topics         | Number of time series  | Monthly cost |
+|------------------|--------------|------------------|
+| `Lite`          | 1        |1 x 2 + 5 = 7 | $0.08 x 7 = $0.56       |
+| `Standard` | 1      | 1 x 2 + 5 = 7 | $0.08 x 7 = $0.56   |
+| | 10      | 10 x 2 + 5 = 25 | $0.08 x 25 = $2   |
+|  | 100      | 100 x 2 + 5 = 205 | $0.08 x 205 = $16.40   |
+| `Enterprise` | 1        | 1 x 2 + 16 = 18 | $0.08 x 18 = $1.44  |
+|           | 10        | 10 x 2 + 16 = 36 | $0.08 x 36 = $2.88  |
+|         | 100        |  100 x 2 + 16 = 216   | $0.08 x 216 = $17.28  |
+|        | 1000        |  1000 x 2 + 16 = 2016  | $0.08 x 2016 = $161.28   |
+|      | 3000        |   3000 x 2 + 16 = 6016    | $0.08 x 6016 = $481.28  |
+
+{: caption="Table 1. Cost for each plan" caption-side="top"} 
+
+For more information, see [{{site.data.keyword.mon_full_notm}} pricing ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans). 
+
 
 ## {{site.data.keyword.messagehub}} metrics details
 {: #metric_details}
 
 The following tables describe the specific metrics provided by {{site.data.keyword.messagehub}} for each plan. 
+
 
 
 
@@ -51,13 +86,13 @@ The following tables describe the specific metrics provided by {{site.data.keywo
 |-----------|--------|--------|--------|
 | [Authentication failures](#ibm_eventstreams_kafka_authentication_failure_total) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Consume message conversion time](#ibm_eventstreams_instance_consume_conversions_time_quantile) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| [The estimated number of client applications connected to the Kafka API](#ibm_eventstreams_kafka_connected_clients_estimated) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| [Estimated connected clients percentage](#ibm_eventstreams_kafka_recommended_max_connected_clients_percent) |  ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Inactive consumer groups](#ibm_eventstreams_instance_inactive_consumergroups) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Instance bytes in per second](#ibm_eventstreams_instance_bytes_in_per_second) |  ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Instance bytes out per second](#ibm_eventstreams_instance_bytes_out_per_second) |  ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Missing SNI connections](#ibm_eventstreams_kafka_missing_sni_host_total) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| [Number of partitions](#ibm_eventstreams_instance_partitions) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-| [Number of topics](#ibm_eventstreams_instance_topics) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| [Number of partitions](#ibm_eventstreams_instance_partitions) |  ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| [Number of topics](#ibm_eventstreams_instance_topics) |  ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Produce message conversion time](#ibm_eventstreams_instance_produce_conversions_time_quantile) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Rebalancing consumer groups](#ibm_eventstreams_instance_rebalancing_consumergroups) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 | [Reserved disk space percentage](#ibm_eventstreams_instance_reserved_disk_space_percent) |    |   | ![Checkmark icon](../../icons/checkmark-icon.svg) |
@@ -93,18 +128,18 @@ Indicates the accumulated time spent performing message conversion from clients 
 | `Segment By` | `Service instance, Quantile, Service instance name` |
 {: caption="Table 3: Consume message conversion time metric metadata" caption-side="top"}
 
-### Estimated connections
-{: #ibm_eventstreams_kafka_connected_clients_estimated}
+### Estimated connected clients percentage
+{: #ibm_eventstreams_kafka_recommended_max_connected_clients_percent}
 
-The estimated number of connections using the Kafka API
+The percentage of maximum number of connected clients
 
 | Metadata | Description |
 |----------|-------------|
-| `Metric Name` | `ibm_eventstreams_kafka_connected_clients_estimated`|
+| `Metric Name` | `ibm_eventstreams_kafka_recommended_max_connected_clients_percent`|
 | `Metric Type` | `gauge` |
-| `Value Type`  | `none` |
+| `Value Type`  | `percent` |
 | `Segment By` | `Service instance, Service instance name` |
-{: caption="Table 4: Estimated connections metric metadata" caption-side="top"}
+{: caption="Table 4: Estimated connected clients percentage metric metadata" caption-side="top"}
 
 ### Inactive consumer groups
 {: #ibm_eventstreams_instance_inactive_consumergroups}
@@ -275,35 +310,6 @@ The percentage of currently utilized disk space
 | `Segment By` | `Service instance, Service instance name` |
 {: caption="Table 17: Utilized disk space percentage metric metadata" caption-side="top"}
 
-## {{site.data.keyword.messagehub}} metrics cost information 
-{: #metric_costs}
-
-Before you opt in to using {{site.data.keyword.mon_full}} metrics, be aware of the cost of doing so. The estimated cost depends on the following considerations:
-
-* the {{site.data.keyword.messagehub}} plan that you use
-* how many unique time series are sent for each plan
-* the number of topics that you have created
-
-
-<br/>
-
-| Plan            | Topics         | Number of time series  | Monthly cost |
-|------------------|--------------|------------------|
-| `Lite`          | 1        |1 x 2 + 2 = 4 | $0.08 x 4 = $0.32       |
-| `Standard` | 1      | 1 x 2 + 2 = 4 | $0.08 x 4 = $0.32   |
-| | 10      | 10 x 2 + 2 = 22 | $0.08 x 22 = $1.76   |
-|  | 100      | 100 x 2 + 2 = 202 | $0.08 x 202 = $16.16   |
-| `Enterprise` | 1        | 1 x 2 + 16 = 18 | $0.08 x 18 = $1.44  |
-|           | 10        | 10 x 2 + 16 = 36 | $0.08 x 36 = $2.88  |
-|         | 100        |  100 x 2 + 16 = 216   | $0.08 x 216 = $17.28  |
-|        | 1000        |  1000 x 2 + 16 = 2016  | $0.08 x 2016 = $161.28   |
-|      | 3000        |   3000 x 2 + 16 = 6016    | $0.08 x 6016 = $481.28  |
-
-{: caption="Table 1. Cost for each plan" caption-side="top"} 
-
-For more information, see [{{site.data.keyword.mon_full_notm}} pricing ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-pricing_plans). 
-
-
 ## Attributes for Segmentation
 {: attributes}
 
@@ -318,7 +324,7 @@ The following attributes are available for segmenting all of the metrics listed 
 | `Location` | `ibm_location` | The location of the monitored resource - this may be a region, data center or global |
 | `Scope` | `ibm_scope` | The scope is the account, organization or space GUID associated with this metric |
 | `Service name` | `ibm_service_name` | Name of the service generating this metric |
-| `Service instance` | `ibm_service_instance` | The service instance GUID identifies the instance the metric is associated with 
+| `Service instance` | `ibm_service_instance` | The service instance GUID segment identifies the instance the metric is associated with |
 | `Service instance name` | `ibm_service_instance_name` | The service instance name provides the user-provided name of the service instance which isn't necessarily a unique value depending on the name provided by the user. |
 | `Resource group` | `ibm_resource_group_name` | The resource group name where the service instance was created |
 
@@ -331,6 +337,7 @@ The following attributes are available for segmenting one or more attributes as 
 |-----------|----------------|-----------------------|
 | `IBM Event Streams Kafka topic` | `ibm_eventstreams_topic` | IBM Event Streams Kafka topic |
 | `Quantile` | `ibm_quantile` | The quantile represented when a metric supports segmenting by quantile |
+
 
 <br/>
 
