@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27abc"
+lastupdated: "2020-03-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -24,6 +24,7 @@ Kafka provides a rich set of APIs and clients across a broad range of languages.
 
 * **Kafka's core API (Consumer, Producer, and Admin API)**<br/>
     Use to send and receive messages directly from one or more Kafka topics.
+	The Kafka Admin client provides a simple HTTPS interface for creating, deleting, and managing topics. You can also use the Admin client to manage brokers and configurations.
 * **Streams API**<br/>
     A higher level stream processing API to easily consume, transform, and produce events between topics.
 * **Connect API**<br/>
@@ -32,11 +33,11 @@ Kafka provides a rich set of APIs and clients across a broad range of languages.
 The following table summarizes what you can use with {{site.data.keyword.messagehub}}:
 
 <table>
-    <caption>Table 1. Kafka client support in Standard and Enterprise plans</caption>
+    <caption>Table 1. Kafka client support in Standard, Enterprise, and Lite plans</caption>
       <tr>
 	        <th></th>
-		    <th>Standard Plan</th>
-		    <th>Enterprise Plan</th>
+		    <th>Standard and Enterprise Plans</th>
+		    <th>Lite Plan</th>
         </tr>
 	  		<tr>
 			<td>**Kafka version on cluster**</td>
@@ -51,7 +52,7 @@ The following table summarizes what you can use with {{site.data.keyword.message
 		<tr>
 			<td>**Kafka Connect, Kafka Streams, and KSQL supported? **</td>
 			<td>Yes</td>
-			<td>Yes</td>
+			<td>No</td>
 		</tr>
 		<tr>
 			<td>**Authentication requirements**</td>
@@ -61,7 +62,7 @@ The following table summarizes what you can use with {{site.data.keyword.message
 
 </table>
 <br/>
-For information about using the Kafka API on the Classic plan, see [Kafka API - Classic](/docs/services/EventStreams?topic=eventstreams-kafka_using_classic).
+For information about using the Kafka API on the now deprecated Classic plan, see [Kafka API - Classic](/docs/services/EventStreams?topic=eventstreams-kafka_using_classic).
 
 
 ## Choosing a Kafka client to use with {{site.data.keyword.messagehub}}
@@ -152,7 +153,7 @@ For information about how to configure your Java client to connect to {{site.dat
 ## Configuring your Kafka API client
 {: #kafka_api_client}
 
-To establish a connection, clients must be configured to use SASL PLAIN over TLSv1.2 at a minimum and to require a username, and a list of the bootstrap servers. This is required to ensure connections are encrypted and authenticated.
+To establish a connection, clients must be configured to use SASL PLAIN over TLSv1.2 at a minimum and to require a username, and a list of the bootstrap servers. This is required to ensure connections are encrypted and authenticated. 
 
 To retrieve the username, password, and list of bootstrap servers, a Service credentials object or service key is required for the service instance. For more information about creating these objects, see <link to Connecting to event Streams>
 [Connecting to {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
