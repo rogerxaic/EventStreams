@@ -23,7 +23,8 @@ subcollection: eventstreams
 Kafka provides a rich set of APIs and clients across a broad range of languages. For example:
 
 * **Kafka's core API (Consumer, Producer, and Admin API)**<br/>
-    Use to send and receive messages directly from one or more Kafka topics.
+    Use to send and receive messages directly from one or more Kafka topics. 
+	
 	The Kafka Admin client provides a simple HTTPS interface for creating, deleting, and managing topics. You can also use the Admin client to manage brokers and configurations.
 * **Streams API**<br/>
     A higher level stream processing API to easily consume, transform, and produce events between topics.
@@ -132,6 +133,7 @@ For other languages, we recommend running one of the following clients, all of w
 </table>
 ### Footnote
 {: #footnote_clients notoc}
+
 1. {: #footnote1 notoc}This version is the earliest that we have validated in continual testing. Typically, this is the initial version available within the last 12 months, but it might be newer if significant issues are known to exist
 
 <br/>
@@ -140,10 +142,10 @@ If you can't run any of the clients listed, you can use other third-party client
 * Can connect and authenticate using SASL PLAIN with TLSv1.2
 * Supports the SNI extensions for TLS where the server's hostname is includes in the TLS handshake
 * Supports elliptic curve cryptography
+
 However, we only test and have experience of the recommended third-party clients.
 
 In all cases, the latest version of the client is recommended.
-
 <br/>
 ### Connecting your client to {{site.data.keyword.messagehub}}
 {: #connect_client}
