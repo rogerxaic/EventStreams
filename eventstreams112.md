@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-05-15"
+  years: 2015, 2020
+lastupdated: "2020-03-31"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -110,6 +110,29 @@ There is another factor that has an impact. To prevent individual producers or c
 For throughput guidance information, see [Limits and quotas](/docs/services/EventStreams?topic=eventstreams-kafka_quotas#kafka_quotas). 
  
 In summary, when a message is published, its record is first written into a buffer in the producer. In the background, the producer batches up and sends the records to the server. The server then responds to the producer, possibly applying a throttling delay if the producer is publishing too fast. If the buffer in the producer fills up, the producer's send call is delayed but ultimately could fail with an exception.
+
+
+## Delivery semantics
+{: #delivery_semantics}
+
+Kafka offers the following multiple different message delivery semantics:
+<ul>
+  <li>At most once: messages might get lost and won't get redelivered</li>
+  <li>At least once: messages are never lost but there might be duplicates</li>
+  <li>Exactly once: messages are never lost and there are no duplicates</li>
+</ul>
+
+The delivery semantics are determined by the following settings:
+<ul>
+  <li>`acks`</li>
+  <li>`retries`</li>
+  <li>`enable.idempotence`</li>
+</ul>
+
+By default, Kafka uses at least once semantics.
+
+To enable exactly once semantics, you must use the idempotent or transactional producers. The idempotent producer is enabled by setting `enable.idempotence` to `true` and guarantees that exactly one copy of each message is written to Kafka, even if it retries. The transactional producer enables the sending of data to multiple partitions such that either all messages are successfully delivered, or none of them are. That is, a transaction is either fully committed or fully discarded. You can also include offsets in transactions to enable you to build applications that read, process, and write messages to Kafka.
+
 
 ## Code snippets
 {: #code_snippets}
