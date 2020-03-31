@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2020-01-15"
+  years: 2015, 2020
+lastupdated: "2020-03-31"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -22,13 +22,11 @@ subcollection: eventstreams
 # Upgrading to the new {{site.data.keyword.messagehub}} Standard plan 
 {: #migrate_classic_plan}
 
-This new release of the Standard multi-tenant plan offers significant improvements in resiliency, functionality, and usability. For more information, see [New Standard plan blog announcement ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/ibm-event-streams-releases-a-new-and-enhanced-standard-plan). 
-{: shortdesc}
+This new release of the Standard multi-tenant plan offers significant improvements in resiliency, functionality, and usability. For more information, see [New Standard plan blog announcement ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/ibm-event-streams-releases-a-new-and-enhanced-standard-plan).<br/>
 As part of the upgrade to the Standard plan, you must create a new Standard plan instance. You cannot upgrade or change an existing instance of the Classic plan.
 {:important}
 
-As part of the upgrade to the Standard plan, you must create a new Standard plan instance. You cannot upgrade or change an existing instance of the Classic plan.
-{:important}
+
 To migrate applications from the previous Standard plan (now called the Classic plan and deprecated) to the new plan, consider the following information.
 
 The Classic plan is deprecated. From November 1, 2019, you can no longer provision new instances of the Classic Plan. <br/>However, existing instances will continue to be supported.
@@ -55,24 +53,17 @@ Authentication and authorization are now managed using the Cloud Identity and Ac
 
 The information that an application needs to connect has not changed, that is, a list of <code>bootstrap.servers</code>, <code>username</code>, and <code>password</code> is required. However, the way these properties are retrieved has changed.
 
-<ul>
-<li>
-      <strong>For native applications</strong>
-        <br/>
-        You must create a Credentials object using the IBM Cloud console or a Service Key object using the CLI. You can then retrieve the required properties. For more information, see 
-        [Connecting applications](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external).
-</li>
-<br/>
-<li><strong>For Cloud Foundry applications</strong>
-        <br/>
-        You must first bind the service to the application's organization and space by creating a service alias. You can then retrieve the required properties from the VCAP_SERVICES environment variable as normal. For more information, see 
-        [Connecting to {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
-</li>
-</ul>
+
+* **For native applications**<br/>
+You must create a Credentials object using the IBM Cloud console or a Service Key object using the CLI. You can then retrieve the required properties. For more information, see 
+[Connecting applications](/docs/services/EventStreams?topic=eventstreams-connecting#connect_enterprise_external).
+
+* **For Cloud Foundry applications**<br/>
+You must first bind the service to the application's organization and space by creating a service alias. You can then retrieve the required properties from the VCAP_SERVICES environment variable as normal. For more information, see 
+[Connecting to {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-connecting).
+
 <br/>
 Note that clients must support the SNI extension to TLS where the server's hostname is included in the TLS handshake. This feature is commonly available and is supported in all the client versions recommended in [Choosing a Kafka client to use with {{site.data.keyword.messagehub}}](/docs/services/EventStreams?topic=eventstreams-kafka_using#kafka_clients).
-</li>
-</ul>
 
 <br>
 You should also be aware of some other changes as follows:
@@ -108,10 +99,7 @@ There are differences between the capabilities of the Classic plan and the new S
 * If you currently use the Cloud Object Storage bridge or the MQ bridge, see [Migrating bridges to Kafka Connect](/docs/services/EventStreams?topic=eventstreams-migrate_bridges).
 
 <br/>
-Small code deltas are shipped daily to production. As a result, you can expect to see many further improvements to our user experience (and other areas). Coming soon:
-
-* **Customer metrics**
-    The ability to monitor activity in a service instance.
+Small code deltas are shipped daily to production. As a result, you can expect to see many further improvements to our user experience (and other areas).
 
 <br/>
 
