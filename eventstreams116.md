@@ -117,10 +117,10 @@ Replace GROUP in the example with the group name that you want to retrieve detai
 Here is some sample output from running the **kafka-consumer-groups** tool:
 <pre>
 <code>
-GROUP              TOPIC    PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG         CONSUMER-ID      HOST          CLIENT-ID
-consumer-group-1   foo        0          264             267            3          client-1-abc    example.com    client-1
-consumer-group-1   foo        1          124             124            0          client-1-abc    example.com    client-1
-consumer-group-1   foo        2          212             212            0          client-2-def    example.com    client-2
+GROUPÂ Â Â Â Â Â Â Â Â Â     TOPICÂ Â   PARTITIONÂ  CURRENT-OFFSETÂ  LOG-END-OFFSETÂ  LAGÂ Â        CONSUMER-IDÂ Â Â    HOSTÂ Â Â Â Â Â Â Â Â  CLIENT-ID
+consumer-group-1   fooÂ Â Â Â Â Â Â  0Â Â Â Â Â Â Â Â Â  264Â Â Â Â Â Â Â Â Â Â    267Â Â Â Â Â Â Â Â     3Â Â Â Â Â Â     client-1-abc    example.com    client-1
+consumer-group-1   fooÂ Â Â Â Â Â Â  1Â Â Â Â Â Â Â Â Â  124Â Â Â Â Â Â Â Â Â Â    124Â Â Â Â Â Â Â Â     0Â Â Â Â Â Â     client-1-abc    example.com Â Â Â client-1
+consumer-group-1   fooÂ Â Â Â Â Â Â  2Â Â Â Â Â Â Â Â Â  212Â Â Â Â Â Â Â Â Â Â    212Â Â Â Â Â Â Â Â     0Â Â Â Â Â Â     client-2-def    example.comÂ Â Â Â client-2
 </code>
 </pre>
 {:codeblock}
@@ -140,11 +140,11 @@ Here is some sample output from running the **kafka-topics** tool:
 ~/kafka_2.12-2.3.0 $ bin/kafka-topics.sh --bootstrap-server kafka03-prod01.messagehub.services.us-south.bluemix.net:9093 --command-config vcurr_dal06.properties --describe
 
 Topic:sample-topic	PartitionCount:3	ReplicationFactor:3	 Configs:min.insync.replicas=2,unclean.leader.election.enable=true,retention.bytes=1073741824,segment.bytes=536870912,retention.ms=86400000
-    Topic: sample-topic    Partition: 0    Leader: 0    Replicas: 0,2,1    Isr: 0,2,1
-    Topic: sample-topic    Partition: 1    Leader: 1    Replicas: 1,2,0	   Isr: 0,2,1
-    Topic: sample-topic    Partition: 2    Leader: 2    Replicas: 2,1,0	   Isr: 0,2,1
+    Topic: sample-topicÂ Â Â  Partition: 0Â Â Â  Leader: 0Â Â Â  Replicas: 0,2,1    Isr: 0,2,1
+    Topic: sample-topicÂ Â Â  Partition: 1Â Â Â  Leader: 1Â Â Â  Replicas: 1,2,0	   Isr: 0,2,1
+    Topic: sample-topicÂ Â Â  Partition: 2Â Â Â  Leader: 2Â Â Â  Replicas: 2,1,0	   Isr: 0,2,1
 Topic:testtopic	 PartitionCount:1	 ReplicationFactor:3	Configs:min.insync.replicas=2,unclean.leader.election.enable=true,retention.bytes=1073741824,segment.bytes=536870912,retention.ms=86400000
-    Topic: testtopic    Partition: 0    Leader: 0    Replicas: 0,2,1   Isr: 0,2
+    Topic: testtopicÂ Â Â  Partition: 0Â Â Â  Leader: 0Â Â Â  Replicas: 0,2,1   Isr: 0,2
 ```
 {: codeblock}
 
