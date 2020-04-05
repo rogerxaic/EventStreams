@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-18"
+  years: 2015, 2020
+lastupdated: "2020-04-03"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -114,7 +114,18 @@ Using this tool, you can also display details like the current positions of the 
 
 Replace GROUP in the example with the group name that you want to retrieve details for. 
 
+Here is some sample output from running the **kafka-consumer-groups** tool:
+<pre>
+<code>
+GROUP              TOPIC    PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG         CONSUMER-ID      HOST          CLIENT-ID
+consumer-group-1   foo        0          264             267            3          client-1-abc    example.com    client-1
+consumer-group-1   foo        1          124             124            0          client-1-abc    example.com    client-1
+consumer-group-1   foo        2          212             212            0          client-2-def    example.com    client-2
+</code>
+</pre>
+{:codeblock}
 
+From the example above, you can see consumer group `consumer-group-1` has 2 consumer members consuming messages from topic `foo` with 3 partitions. It also shows that the consumer `client-1-abc` that is consuming from partition `0` is 3 messages behind, because the current offset of the consumer is `264` but the offset of the last message on partition `0` is `267`. 
 ## Topics
 {: #topics_tool }
 
@@ -123,17 +134,21 @@ You can use the **kafka-topics** tool with {{site.data.keyword.messagehub}}. Ens
 A scenario where you might want to use **kafka-topics** is to find out information about your topics and their configuration in an existing cluster, so that you can recreate them in a new cluster. You can use the information that is output from **kafka-topics** to create the same named topics in the new cluster. For more information about how to create topics, see [Using the administration Kafka Java client API](/docs/services/EventStreams?topic=eventstreams-kafka_java_api) or the 
 [ibmcloud es topic-create command](/docs/services/EventStreams?topic=eventstreams-cli_reference#ibmcloud_es). Alternatively, you can also use the IBM {{site.data.keyword.messagehub}} console.
 
-Some sample output from running the **kafka-topics** tool:
+Here is some sample output from running the **kafka-topics** tool:
 
 ```
 ~/kafka_2.12-2.3.0 $ bin/kafka-topics.sh --bootstrap-server kafka03-prod01.messagehub.services.us-south.bluemix.net:9093 --command-config vcurr_dal06.properties --describe
 
-Topic:sample-topic	PartitionCount:1	ReplicationFactor:3	Configs:min.insync.replicas=2,unclean.leader.election.enable=true,retention.bytes=1073741824,segment.bytes=536870912,retention.ms=86400000
-...
-Topic:testtopic	PartitionCount:2	ReplicationFactor:3	Configs:min.insync.replicas=2,unclean.leader.election.enable=true,retention.bytes=1073741824,segment.bytes=536870912,retention.ms=86400000
-...
+Topic:sample-topic	PartitionCount:3	ReplicationFactor:3	 Configs:min.insync.replicas=2,unclean.leader.election.enable=true,retention.bytes=1073741824,segment.bytes=536870912,retention.ms=86400000
+    Topic: sample-topic    Partition: 0    Leader: 0    Replicas: 0,2,1    Isr: 0,2,1
+    Topic: sample-topic    Partition: 1    Leader: 1    Replicas: 1,2,0	   Isr: 0,2,1
+    Topic: sample-topic    Partition: 2    Leader: 2    Replicas: 2,1,0	   Isr: 0,2,1
+Topic:testtopic	 PartitionCount:1	 ReplicationFactor:3	Configs:min.insync.replicas=2,unclean.leader.election.enable=true,retention.bytes=1073741824,segment.bytes=536870912,retention.ms=86400000
+    Topic: testtopic    Partition: 0    Leader: 0    Replicas: 0,2,1   Isr: 0,2
 ```
 {: codeblock}
+
+From the sample above, you can see that topic `sample-topic` has 3 partitions and a replication factor of 3. The example also shows which broker the leader of each partitions is on and which replicas are in sync (`Isr`). For example, the leader of partition `0`  is on broker `0`, the followers are on brokers `2` and `1` and all 3 replicas are in sync. If you look at the second topic `testtopic`, it has only 1 partition, replicated on brokers `0`, `2` and `1` but the in-sync replica list only shows `0` and `2`. This means the follower on broker `1` is falling behind and is therefore not in the `Isr` list. 
 
 
 ## Kafka Streams reset
