@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-12"
+lastupdated: "2020-02-12fri"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -41,15 +41,15 @@ To access other {{site.data.keyword.messagehub}} samples, including samples for 
 
 1. **If you don't already have one, create an {{site.data.keyword.messagehub}} service instance.**
 
-   1. Log in to the {{site.data.keyword.Bluemix_notm}} console.
+   a. Log in to the {{site.data.keyword.Bluemix_notm}} console.
   
-   2. Click the [**{{site.data.keyword.messagehub}} service** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/event-streams){:new_window} in the **Catalog**.
+   b. Click the [**{{site.data.keyword.messagehub}} service** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/event-streams){:new_window} in the **Catalog**.
   
-   3. Select the **Lite plan** on the service instance page.
+   c. Select the **Lite plan** on the service instance page.
   
-   4. Enter a name for your service. You can use the default value.
+   d. Enter a name for your service. You can use the default value.
   
-   5. Click **Create**. The {{site.data.keyword.messagehub}} **Getting started** page opens. 
+   e. Click **Create**. The {{site.data.keyword.messagehub}} **Getting started** page opens. 
 
 2. **If you don't already have them, install the following prerequisites:**
 	
@@ -66,34 +66,34 @@ To access other {{site.data.keyword.messagehub}} samples, including samples for 
 
    We'll be using the {{site.data.keyword.Bluemix_notm}} console (UI) to create the topic, and will reference it when starting the application.
 
-      1. Go to the **Topics** tab.
+      a. Go to the **Topics** tab.
   
-      2. Click **New topic**.
+      b. Click **New topic**.
   
-      3. Name your topic.
+      c. Name your topic.
   
      The sample application is configured to connect to topic `kafka-java-console-sample-topic`. If the topic does not exist, it is created when the application is started. 
      {: important}
 
-      4. Keep the defaults set in the rest of the topic creation, click **Next** and then **Create topic**.
+      d. Keep the defaults set in the rest of the topic creation, click **Next** and then **Create topic**.
 
-      5. The topic appears in the table. You have created a topic!
+      e. The topic appears in the table. You have created a topic!
   
 2. {: #create_credentials_step notoc} **Create credentials**
 
     To allow the sample application to access your topic, we need to create some credentials for it. 
 
-     1. Go to **Service credentials** in the navigation pane.
+     a. Go to **Service credentials** in the navigation pane.
   
-     2. Click **New credential**.
+     b. Click **New credential**.
   
-     3. Give the credential a name so you can identify its purpose later. You can accept the default value.
+     c. Give the credential a name so you can identify its purpose later. You can accept the default value.
   
-     4. Give the credential the **Manager** role so that it can access the topics, and create them if necessary. 
+     d. Give the credential the **Manager** role so that it can access the topics, and create them if necessary. 
   
-     5. Click **Add**. The new credential is listed in the table in **Service credentials**.
+     e. Click **Add**. The new credential is listed in the table in **Service credentials**.
   
-     6. Click **View credentials** to see the `api_key` and `kafka_brokers_sasl` values.
+     f. Click **View credentials** to see the `api_key` and `kafka_brokers_sasl` values.
 
 3. {: #clone_repository_step notoc} **Clone the Github repository for the sample application**
 
@@ -179,9 +179,10 @@ To access other {{site.data.keyword.messagehub}} samples, including samples for 
 
 Now that you've run the Java sample application, you can try other [{{site.data.keyword.messagehub}} samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/event-streams-samples){:new_window}, explore [other ways to connect ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/EventStreams?topic=eventstreams-kafka_connect){:new_window} to the {{site.data.keyword.messagehub}} service, take a look at the [IBM Event Streams on IBM Cloud Private and Red Hat OpenShift ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/dte/tutorial/ibm-event-streams-tutorial-part-1) tutorial or find out more about 
 [{{site.data.keyword.messagehub}} on IBM Cloud Private ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.github.io/event-streams/){:new_window}.
-<!-- 18/02/20 - Karen: removing until a permanent link
+
 To watch a video that walks
 you through getting this Java sample to run, see [Getting started with IBM {{site.data.keyword.messagehub}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=XyNy7TcfJOc){:new_window}.
+ 
  
 <!-- 07/06/18 - Karen: removing until a newer version available
 To watch a video that walks
