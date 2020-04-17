@@ -40,6 +40,7 @@ To access other {{site.data.keyword.messagehub}} samples, including samples for 
 {: #getting_started_prereqs}
 
 1. **If you don't already have one, create an {{site.data.keyword.messagehub}} service instance.**
+
    1. Log in to the {{site.data.keyword.Bluemix_notm}} console.
   
    2. Click the [**{{site.data.keyword.messagehub}} service** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/event-streams){:new_window} in the **Catalog**.
