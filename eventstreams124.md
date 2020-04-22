@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-12-18"
+lastupdated: "2019-12-18_2020"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, wildcarding, IAM, wildcard, policies
 
@@ -28,6 +28,7 @@ When you make changes to IAM policies and permissions, these can sometimes take 
 {: important}
 
 ## What can I secure?
+{: #what_secure }
 
 Within {{site.data.keyword.messagehub}}, you can secure access to the following resources:
 * Cluster (cluster): you can control which applications and users can connect to the service
@@ -51,6 +52,7 @@ KR: I think they do inherit the lower level access https://cloud.ibm.com/docs/ia
 
 
 ## How do I assign access?
+{: #assign_access }
 
 Cloud Identity and Access Management (IAM) policies are attached to the resources to be controlled. Each policy defines the level of access that a particular user should have and to which resource or set of resources. A policy consists of the following information: 
 * The type of service the policy applies to. For example, {{site.data.keyword.messagehub}}. You can scope a policy to include all service types. 
@@ -61,6 +63,7 @@ If you want to specify more than one type of resource, you must create one polic
 * The role assigned to the user. For example, Reader, Writer, or Manager. 
 
 ## What are the default security settings?
+{: #default_settings }
 
 By default, when {{site.data.keyword.messagehub}} is provisioned, the user who provisioned it is granted the manager role to all the instance's resources. Additionally, any user who has a manager role for either 'All' services or 'All' {{site.data.keyword.messagehub}} service instances' in the same account also has full access. 
 
@@ -100,6 +103,8 @@ For an example of how to set policies, see:
 [IBM Cloud IAM Service IDs and API Keys ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/introducing-ibm-cloud-iam-service-ids-api-keys){:new_window}.
 
 ## Wildcarding
+{: #wildcarding }
+
 You can take advantage of the IAM wildcarding facility to set policies for groups of resources on {{site.data.keyword.messagehub}}. 
 For example, if you give all your topics names like `Dept1_Topic1` and `Dept1_Topic2`, you can set policies for topics called `Dept1_*` and these policies will be applied to all topics with that prefix. For more information, see 
 [Assigning access by using wildcard policies ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/iam?topic=iam-wildcard){:new_window}.
