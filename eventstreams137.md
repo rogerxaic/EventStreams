@@ -56,7 +56,7 @@ curl -X GET -H "X-Auth-Token:<var class="keyword varname">APIKEY</var>" -H "Acce
 <br/>
 For CURL, you can also adapt the code
 examples detailed in the [Confluent docs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.confluent.io/2.0.0/){:new_window} by adding the following line to the command line:
-<pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre>
+<pre class="pre">-H "X-Auth-Token: <var class="keyword varname">APIKEY</var>"</pre> 
 {: codeblock}
 
 <br/>
@@ -66,7 +66,7 @@ examples detailed in the [Confluent docs ![External link icon](../../icons/launc
 <!-- info was in eventstreams066.md -->
 
 To connect to {{site.data.keyword.messagehub}}, the Kafka REST API uses the <code>api_key</code> and <code>kafka_rest_url</code>
-credentials from the [VCAP_SERVICES environment variable](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf).
+credentials from the [VCAP_SERVICES environment variable](/docs/services/EventStreams?topic=eventstreams-connecting#connect_classic_cf_plan).
 
 To authenticate with the {{site.data.keyword.messagehub}} Kafka REST API, you must specify the <code>api_key</code> in the X-Auth-Token header of your requests.
 
