@@ -341,7 +341,10 @@ The following attributes are available for segmenting one or more attributes as 
 
 <br/>
 
+<!--
+27/04/20 Karen: commenting out for production: info doesn't exist there for now
 For more information about enabling platform metrics from the {{site.data.keyword.messagehub}} dashboard and viewing metrics, see [Monitoring Event Streams metrics ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/observability-monitoring?topic=observability-monitoring-monitor-sysdig){:new_window}.
+-->
 
 
 
