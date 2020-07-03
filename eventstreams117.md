@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-11"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -99,30 +99,28 @@ The recommended figure is based on a typical workload and takes into account the
 ### Partitions
 {: #enterprise_partitions}
 
-3000 partitions for each service instance.
+3000 partitions for each service instance. 
+
+3000 partitions is a hard limit for the Enterprise plan. If you reach this limit, you can no longer create topics. To increase the number of partitions beyond 3000, [contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}.
 
 ### Retention
 {: #enterprise_retention}
 
 Unlimited, up to the storage limit of your plan.
 
+### Schema Registry
+{: #enterprise_schema_registry}
+
+#### Schemas
+* Maximum number of schemas that can be stored: 1000
+* Maximum number of schema versions for each schema that can be stored: 100
+* Maximum schema size 64kB
+#### Limits
+* Maximum request rate [HTTP Schema Admin] 10 per second
+* Maximum request rate [HTTP Serdes] 100 per second
+
 ### Other limits
 {: #enterprise_limits}
 
 *  Maximum message size: 1 MB
 *  Maximum concurrently active Kafka clients: 10000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
