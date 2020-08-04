@@ -23,6 +23,8 @@ IBM Event Streams
 	eventstreams068.md
 	at-events.md
 	eventstreams158.md
+	eventstreams159.md
+	eventstreams160.md
 	eventstreams-cli.md
 
 	{: .topicgroup}
@@ -69,6 +71,7 @@ IBM Event Streams
 		eventstreams124.md
 		eventstreams145.md
 		eventstreams155.md
+		eventstreams161.md
 	
 	{: .topicgroup}
 	Developing apps with Event Streams
