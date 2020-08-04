@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-29"
+lastupdated: "2020-08-04"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, plan. Enterprise, Standard, Lite
 
@@ -29,6 +29,7 @@ For information about the Classic plan, see
 [Classic plan](/docs/EventStreams?topic=EventStreams-plan_choose_classic#plan_choose_classic).
 -->
 {: shortdesc}
+
 ## Lite plan
 {: #plan_lite}
 
@@ -74,7 +75,7 @@ The following table summarizes what is supported by the plans:
 			<td>**Tenancy**</td>
 			<td>Multi-tenant </td>
 			<td>Multi-tenant </td>
-			<td>Single tenant</td>
+			<td>Single tenant</td>			
 			<td>Multi-tenant</td>
 		</tr>
         <tr>
@@ -87,7 +88,7 @@ The following table summarizes what is supported by the plans:
 		</tr>
         <tr>
 			<td>**Availability**</td>
-			<td>99.95% [<sup>2</sup>](/docs/EventStreams?topic=EventStreams-plan_choose#footnote_lite)</td>
+			<td>99.99% [<sup>2</sup>](/docs/EventStreams?topic=EventStreams-plan_choose#footnote_lite)</td>
 			<td>99.99%</td>
 			<td>99.99%<br/>(99.9% in single zone locations) [<sup>3</sup>](/docs/EventStreams?topic=EventStreams-plan_choose#footnote_plans)</td>
 			<td>99.5%</td>
@@ -100,13 +101,27 @@ The following table summarizes what is supported by the plans:
 			<td>Kafka 1.1</td>
 		</tr>
 		<tr>
+			<td>**Kafka Connect and Kafka Streams supported **</td>
+			<td>No</td>
+			<td>Yes</td>
+			<td>Yes</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>**Managed schema registry supported **</td>
+			<td>No</td>
+			<td>No</td>
+			<td>Yes</td>
+			<td>No</td>
+		</tr>
+		<tr>
 			<td>**Fine-grained access control**</td>
 			<td>Yes</td>
 			<td>Yes</td>
 			<td>Yes</td>
 			<td>No</td>
 		</tr>
-				<tr>
+		<tr>
 			<td>**Cloud Service Endpoint support**</td>
 			<td>No</td>
 			<td>No</td>
@@ -114,11 +129,11 @@ The following table summarizes what is supported by the plans:
 			<td>No</td>
 		</tr>
 		<tr>
-			<td>**Kafka Connect and Kafka Streams supported **</td>
+			<td>**Mirroring support**</td>
+			<td>No</td>
 			<td>No</td>
 			<td>Yes</td>
-			<td>Yes</td>
-			<td>Yes</td>
+			<td>No</td>
 		</tr>
 		<tr>
 			<td>**Maximum number of partitions**</td>
@@ -151,7 +166,7 @@ The following table summarizes what is supported by the plans:
 		<tr>
 			<td>**Maximum number of connected clients**</td>
 			<td>5</td>
-			<td>100</td>
+			<td>500</td>
 			<td>10 000</td>
 			<td>100</td>
 		</tr>
@@ -200,6 +215,7 @@ The following table summarizes what is supported by the plans:
 			<td>Kafka API</br>
 			Admin REST API<br/>
 			REST Producer API</br>
+			Schema Registry API</br>
 		    </td>
 			<td>Kafka API</br>
 			Admin REST API<br/>
@@ -243,6 +259,7 @@ ISO 27001, 27017, 27018<br/></td>
 		</tr>
 
 </table>
+
 ### Footnotes
 {: #footnote_plans notoc}
 
@@ -253,6 +270,7 @@ ISO 27001, 27017, 27018<br/></td>
 5. {: #footnote_partitions notoc} 3000 is a hard limit for partitions on the Enterprise plan. If you reach this limit, you can no longer create topics. To increase the number of partitions beyond 3000, [contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}.
 6. {: #footnote_throughput notoc} A recommended maximum is 80 MB per second, that is 40 MB per second for producing and 40 MB per second for consuming. <br/>
 A recommended peak limit is 150 MB per second, that is 75 MB per second for producing and 75 MB per second for consuming.
+
 
 
 
