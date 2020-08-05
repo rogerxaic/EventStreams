@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-04"
+lastupdated: "2020-08-05"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -22,8 +22,8 @@ subcollection: EventStreams
 Kafka Connect is part of the Apache Kafka project and allows connecting external systems to Kafka. It consists of a runtime  that can run connectors to copy data to and from a cluster. Its main characteristics are:
 - Scalability: it can easily scale from a single worker to many 
 - Reliability: it automatically manages offsets and the lifecycle of connectors
-- Extensibility: the community has built connectors for most popular systems. IBM has connectors for [MQ]( /docs/EventStreams?topic=EventStreams-mq_connector) and [Cloud Object Storage](/docs/EventStreams?topic=EventStreams-cos_connector).
-
+- Extensibility: the community has built connectors for most popular systems. IBM has connectors for [MQ](/docs/EventStreams?topic=EventStreams-mq_connector) and [Cloud Object Storage](/docs/EventStreams?topic=EventStreams-cos_connector).
+ 
 You can use Kafka Connect with {{site.data.keyword.messagehub}} and can run the workers inside or outside {{site.data.keyword.Bluemix_short}}.
 {: shortdesc}
 
@@ -166,5 +166,6 @@ For example, you can use the following key-value pairs in your properties file:
 Consider reducing the number of partitions if you are making only light use of Kafka Connect.
 
 For more detailed information about Kafka Connect, see [Kafka Connect overview ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/documentation/#connect_overview){:new_window}.
+
 
 
