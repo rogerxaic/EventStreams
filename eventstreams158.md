@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-08-06"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, Sysdig, metrics, cost, billing, opting in
 
@@ -393,7 +393,7 @@ This is for information to help you monitor trends in your usage. Refer to [{{si
 
 
 ### Mirroring_throughput
-{: #ibm_eventstreams_instance_mirroring_throughput
+{: #ibm_eventstreams_instance_mirroring_throughput}
 
 The bytes per second of mirroring throughput from the source Event Streams instance.
 
