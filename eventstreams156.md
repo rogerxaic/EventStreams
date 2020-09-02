@@ -40,10 +40,10 @@ Review the following sections for the specific responsibilities for you and for 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Monitor environment|  {{site.data.keyword.messagehub}} performs continuous review, service improvements, code updates, and operational monitoring. This includes automatic, no downtime upgrades of the environment. |  |
-|High availability|  {{site.data.keyword.messagehub}} provides high availability via multi-zone region deployment  to protect against single points of failure, up to and including a data center loss to achieve the IBM SLA detailed in the {{site.data.keyword.Bluemix}} terms and conditions.  |  |
-|Deploy {{site.data.keyword.messagehub}} environment|  {{site.data.keyword.messagehub}} is deployed with IBM recommended best practice configuration options.  For example, replication factor, minimum in sync replicas, throttling, and rack awareness.  | |
+|High availability|  {{site.data.keyword.messagehub}} provides high availability via multi-zone region deployment  to protect against single points of failure, up to and including a data center loss to achieve the IBM SLA detailed in the {{site.data.keyword.Bluemix}} terms and conditions.  |  |
+|Deploy {{site.data.keyword.messagehub}} environment|  {{site.data.keyword.messagehub}} is deployed with IBM recommended best practice configuration options.  For example, replication factor, minimum in sync replicas, throttling, and rack awareness.  | |
 |Supported client|   | Customer is responsible for maintaining a supported version of the Kafka client. For more information, see [Support summary for all recommended clients](/docs/EventStreams?topic=EventStreams-kafka_using#client_summary).|
-|Client configuration, deployment, and lifecycle|   | Customer is responsible for managing client configuration, deployment, and lifecycle following [IBM best practice documentation](/docs/overview?topic=overview-shared-responsibilities#software-packages).|
+|Client configuration, deployment, and lifecycle|   | Customer is responsible for managing client configuration, deployment, and lifecycle following [IBM best practice documentation](/docs/overview?topic=overview-shared-responsibilities#software-packages).|
 |Cluster management|   | Customer is responsible for managing the provided resource capacity of their clusters across their organizational user base. |
 {: caption="Table 1. Responsibilities for incident, operations and cluster management" caption-side="top"}
 
@@ -57,8 +57,8 @@ Review the following sections for the specific responsibilities for you and for 
 |----------|-----------------------|--------|
 |Maintain controls| {{site.data.keyword.messagehub}} maintains controls commensurate with various industry compliance standards for which we are certified.  |  |
 |IBM Cloud Identity and Access Management (IAM)| {{site.data.keyword.messagehub}} provides security and access control service with IBM Cloud Identity and Access Management (IAM).  |  |
-|Security and vulnerability patch updates to cluster| {{site.data.keyword.messagehub}} applies the provided security and vulnerability patch updates to the client cluster, according to IBM X-Force timeframes.  | |
-|Manage users and access|   | Customer is responsible for managing your organizational account users and related access to the {{site.data.keyword.messagehub}} instance.|
+|Security and vulnerability patch updates to cluster| {{site.data.keyword.messagehub}} applies the provided security and vulnerability patch updates to the client cluster, according to IBM X-Force timeframes.  | |
+|Manage users and access|   | Customer is responsible for managing your organizational account users and related access to the {{site.data.keyword.messagehub}} instance.|
 |Compliance controls|  | Customer is responsible for maintaining your organizational compliance controls.|
 {: caption="Table 2. Responsibilities for security and regulation compliance" caption-side="top"}
 
@@ -72,7 +72,7 @@ Review the following sections for the specific responsibilities for you and for 
 |----------|-----------------------|--------|
 |Deploy| {{site.data.keyword.messagehub}} deploys an instance consisting of all required {{site.data.keyword.messagehub}} components and storage.  | Customer is responsible for deciding which region to deploy, selecting capacity of cluster and setting any cluster configuration parameters available at deploy, for example private/public endpoints, IP allowlisting. |
 |Monitor and repair| {{site.data.keyword.messagehub}} monitors and repairs infrastructure non-disruptively.  | |
-|Manage and configure|   | Customer is responsible for using the provided APIs, CLI, or console to manage topics and configuration. |
+|Manage and configure|   | Customer is responsible for using the provided APIs, CLI, or console to manage topics and configuration. |
 {: caption="Table 3. Responsibilities for {{site.data.keyword.IBM_notm}} infrastructure and managing the environment" caption-side="top"}
 
 ## Disaster recovery
