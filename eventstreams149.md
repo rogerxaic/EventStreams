@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-04"
+lastupdated: "2020-08-06"
 
-keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, MQ bridge
+keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
 subcollection: EventStreams
 
@@ -16,28 +16,24 @@ subcollection: EventStreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connecting IBM MQ to {{site.data.keyword.messagehub}} using the Kubernetes Service
-{: #mq_connector}
+# Connecting {{site.data.keyword.messagehub}} to Cloud Object Storage using the Kubernetes Service
+{: #cos_connector}
 
 The following task walks you through:
 * getting the Kafka Connect runtime running in an IKS cluster 
-* starting the MQ Source Connector to copy messages from an IBM MQ source queue to a destination Kafka topic in {{site.data.keyword.messagehub}}
+* starting the COS Sink Connector to archive data from Kafka topics in {{site.data.keyword.messagehub}} to an instance of the {{site.data.keyword.cos_full}} service. 
 
-The MQ Source Connector connects to an IBM MQ queue manager and consumes MQ message data from an MQ queue. The Connector converts each MQ message into a Kafka record and sends the message to an {{site.data.keyword.messagehub}} Kafka topic.
+The Connector consumes batches of messages from Kafka and uploads the message data as objects to a bucket in the Cloud Object Storage service. 
 
 Complete the following steps to get set up:
 {: shortdesc}
 
 ## Step 1. Install the prerequisites
-{: #step1_install_prereqs_mq}
+{: #step1_install_prereqs}
 Ensure you have the following software and services installed:
 
-* An {{site.data.keyword.messagehub}} instance - Standard or Enterprise plan. 
-* An instance of [IBM MQ on Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/mqcloud?topic=mqcloud-mqoc_getting_started){:new_window} or [IBM MQ Version 8 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/messaging/mq-downloads){:new_window}, or later. 
-   
-   You can configure the MQ Connector to authenticate with IBM MQ using a user identifier and password. We recommend that you grant the following permissions only to the identity associated with an instance of the MQ bridge:
-   * CONNECT authority. The MQ Connector must be able to connect to the MQ queue manager.
-   * GET authority for the queue that the MQ Connector is configured to consume from.
+* An {{site.data.keyword.messagehub}} instance - Standard or Enterprise plan. You will need to create credentials.
+* An instance of the Cloud Object Storage service with at least one bucket.
 * An {{site.data.keyword.containerfull}} cluster. You can provision a free one for testing purposes. 
 
     You will also need CLI access to your cluster. For more information, see
@@ -46,16 +42,16 @@ Ensure you have the following software and services installed:
 * [git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){:new_window}
 
 ## Step 2. Clone the kafka-connect repositories
-{: #step2_clone project_mq}
+{: #step2_clone project}
 
 Clone the following two repositories that contain the required files:
 
-* https://github.com/ibm-messaging/kafka-connect-mq-source
+* https://github.com/ibm-messaging/kafka-connect-ibmcos-sink
 * https://github.com/ibm-messaging/event-streams-samples
 
 
 ## Step 3. Create your Kafka Connect configuration
-{: #step3_create_config_mq}
+{: #step3_create_config}
 
 1. You only have to set up this configuration once. {{site.data.keyword.messagehub}} stores it for future use.
 
@@ -83,7 +79,7 @@ Clone the following two repositories that contain the required files:
 
 
 ## Step 4. Deploy Kafka Connect
-{: #step4_deploy_kafka_mq}
+{: #step4_deploy_kafka}
 
 Apply the configuration in the <code>kafka-connect.yaml</code> file by running the following command:
 
@@ -94,7 +90,7 @@ kubectl apply -f ./kafka-connect.yaml
 
 
 ## Step 5. Validate Kafka Connect is running
-{: #step5_validate_connector_mq}
+{: #step5_validate_connector}
 
 To validate that Kafka Connect is running, port forward to the kafkaconnect-service Service on port 8083. For example:
 
@@ -108,7 +104,7 @@ Keep the terminal that you've used for port forwarding open, and use another ter
 The Connect REST API is then available at http://localhost:8083. If you want more information about the API, see
 [Kafka Connect REST Interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://kafka.apache.org/documentation/#connect_rest){:new_window}.
 
-So, you now have the Kafka Connect runtime deployed and running in IKS. Next, let's configure and start the MQ Connector.
+So, you now have the Kafka Connect runtime deployed and running in IKS. Next, let's configure and start the COS connector.
 
 
 <!--
@@ -118,13 +114,13 @@ So, you now have the Kafka Connect runtime deployed and running in IKS. Next, le
 1. Clone the repository with the following command:
 
     ```
-    git clone https://github.com/ibm-messaging/kafka-connect-mq-source
+    git clone https://github.com/ibm-messaging/kafka-connect-ibmcos-sink
     ```
 
-2. Change into the <code>kafka-connect-mq-source</code> directory:
+2. Change into the <code>kafka-connect-ibmcos-sink</code> directory:
 
     ```
-    cd kafka-connect-mq-source
+    cd kafka-connect-ibmcos-sink
     ```
 
 3. Build the connector using Gradle:
@@ -134,55 +130,65 @@ So, you now have the Kafka Connect runtime deployed and running in IKS. Next, le
     ```
 -->
 
-## Step 6. Configure the mq-source json file
-{: #step6_config_json_mq}
+## Step 6. Configure the cos-sink json file
+{: #step6_config_json}
 
-Edit the <code>mq-source.json</code> file located in <code>kafka-connect-mq-source/config</code> so that, at a minimum, the required properties are completed with your information.
+Edit the <code>cos-sink.json</code> file located in <code>kafka-connect-ibmcos-sink/config/</code> so that at a minimum your required properties are completed with your information. Although the configuration properties cos.object.deadline.seconds, cos.interval.seconds, and cos.object.records are listed as optional, you must set at least one of these properties to a non-default value.
 
-### mq-source.json file properties
+### cos-sink.json file properties
 
-Replace the placeholders in the <code>mq-source.json</code> file with your own values.
+Replace the placeholders in the <code>cos-sink.json</code> file with your own values.
 
 <dl>
-<dt><strong>TOPIC</strong></dt>
-<dd>Required. Name of the destination Kafka topic</dd>
-<dt><strong>QUEUE_MANAGER</strong></dt>
-<dd>Required. Name of the source MQ queue manager</dd>
-<dt><strong>QUEUE</strong></dt>
-<dd>Required. Name of the source MQ queue </dd>
-<dt><strong>CHANNEL_NAME</strong></dt>
-<dd>Required (unless you're using bindings or a CCDT file). Name of the server-connection channel.</dd>
-<dt><strong>CONNECTION_NAME_LIST</strong></dt>
-<dd>Required (unless you're using bindings or a CCDT file). A list of one or more host(port) pairs for connecting to the queue manager. Separate entries with a comma. 
+<dt><strong>cos.api.key</strong></dt>
+<dd>Required. API key used to connect to the Cloud Object Storage service instance.</dd>
+<dt><strong>cos.bucket.location</strong></dt>
+<dd>Required. Location of the Cloud Object Storage service bucket, for example: eu-gb.</dd>
+<dt><strong>cos.bucket.name</strong></dt>
+<dd>Required. Name of the Cloud Object Storage service bucket to write data into.</dd>
+<dt><strong>cos.bucket.resiliency</strong></dt>
+<dd>Required. Resiliency of the Cloud Object Storage bucket. Must be one of: cross-region, regional, or single-site.</dd>
+<dt><strong>cos.service.crn</strong></dt>
+<dd>Required. CRN for the Cloud Object Storage service instance.
+<p>Ensure you enter the correct CRN:it is the resource instance ID ending with double colons. For example:<br/> 
+<code>crn:v1:staging:public:cloud-object-storage:global:a/8c226dc8c8bfb9bc3431515a16957954:b25fe12c-9cf5-4ee8-8285-2c7e6ae707f6::</code></p></dd>
+<dt><strong>cos.endpoint.visibility</strong></dt>
+<dd>Optional. Specify public to connect to the Cloud Object Storage service over the public internet, or private to connect from a connector running inside the IBM Cloud network, for example from an IBM Cloud Kubernetes Service cluster. The default is public.</dd>
+<dt><strong>cos.object.deadline.seconds </strong></dt>
+<dd>Optional. The number of seconds (as measured wall clock time for the Connect Task instance) between reading the first record from Kafka, and writing all of the records read so far into a Cloud Object Storage object. This can be useful in situations where there are long pauses between Kafka records being produced to a topic, because it ensures that any records received by this connector will always be written into object storage within the specified period of time.</dd>
+<dt><strong>cos.object.interval.seconds</strong></dt>
+<dd>Optional. The number of seconds (as measured by the timestamps in Kafka records) between reading the first record from Kafka, and writing all of the records read so far into a Cloud Object Storage object.</dd>
+<dt><strong>cos.object.records</strong></dt>
+<dd>Optional. The maximum number of Kafka records to combine into a object.
+</dd>
 </dl>
+ 
+### Get COS credentials using the IBM Cloud console
+{: #connect_enterprise_external_console}
 
-<!--
-### Get IBM MQ on Cloud credentials using the IBM Cloud console
-{: #connect_enterprise_external_console_mq}
-
-1. Locate your MQ service on the dashboard.
+1. Locate your Cloud Object Storage service on the dashboard.
 2. Click your service tile.
 3. Click **Service Credentials**.
 4. Click **New Credential**. 
 5. Complete the details for your new credential like a name and role and click **Add**. A new credential appears in the credentials list.
 6. Click this credential using **View Credentials** to reveal the details in JSON format.
--->
+
 
 ## Step 7. Start the connector with its configuration
-{: #step7_start_connector_mq}
+{: #step7_start_connector}
 
-Run the following command to start the MQ connector with the configuration that you provided in the previous step.
+Run the following command to start the COS connector with the configuration that you provided in the previous step.
 
 ```
-curl -X POST -H "Content-Type: application/json" http://localhost:8083/connectors --data "@./mq-source.json"
+curl -X POST -H "Content-Type: application/json" http://localhost:8083/connectors --data "@./cos-sink.json"
 ```
 {: codeblock}
 
 ## Step 8. Monitor your connector 
-{: #step8_monitor_connector_mq}
+{: #step8_monitor_connector}
 
 You can check your connector by going to <br/>
-http://localhost:8083/connectors/mq-source/status
+http://localhost:8083/connectors/cos-sink/status
 
 If the state of the connector is not running, restart the connector.
 
