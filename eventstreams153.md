@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2019
+  years: 2015, 2020
 lastupdated: "2019-11-05"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, MQ bridge
@@ -16,7 +16,7 @@ subcollection: EventStreams
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connecting IBM MQ to {{site.data.keyword.messagehub}} using IKS
+# Connecting IBM MQ to {{site.data.keyword.messagehub}} using the Kubernetes Service
 {: #mq_connector}
 
 The following task walks you through:
