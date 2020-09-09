@@ -24,6 +24,7 @@ Event Streams
 	at-events.md
 	eventstreams158.md
 	eventstreams160.md
+	UnderstandingReservedDiskUsage.md
 	eventstreams-cli.md
 
 	{: .topicgroup}
