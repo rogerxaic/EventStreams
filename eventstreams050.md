@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-07"
+lastupdated: "2020-09-21"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -37,11 +37,13 @@ The following table summarizes what you can use with {{site.data.keyword.message
     <caption>Table 1. Kafka client support in Standard, Enterprise, and Lite plans</caption>
       <tr>
 	        <th></th>
-		    <th>Standard and Enterprise Plans</th>
+		    <th>Enterprise Plan</th>
+		    <th>Standard Plan</th>
 		    <th>Lite Plan</th>
         </tr>
 	  		<tr>
 			<td>**Kafka version on cluster**</td>
+			<td>Kafka 2.3</td>
 			<td>Kafka 2.3</td>
 			<td>Kafka 2.3</td>
 		</tr>
@@ -49,22 +51,35 @@ The following table summarizes what you can use with {{site.data.keyword.message
 			<td>**Supported client versions**</td>
 			<td>Kafka 0.10.x, or later</td>
 			<td>Kafka 0.10.x, or later</td>
+			<td>Kafka 0.10.x, or later</td>
 		</tr>
 		<tr>
-			<td>**Kafka Connect, Kafka Streams, and KSQL supported? **</td>
+			<td>**Kafka Connect supported**</td>
 			<td>Yes</td>
+			<td>Yes</td>
+			<td>No</td>
+		</tr>
+		<tr>
+			<td>**Kafka Streams supported**</td>
+			<td>Yes</td>
+			<td>Yes</td>
+			<td>No</td>
+		</tr>
+		<tr>
+			<td>**ksqlDB supported**</td>
+			<td>Yes</td>
+			<td>No</td>
 			<td>No</td>
 		</tr>
 		<tr>
 			<td>**Authentication requirements**</td>
 			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
 			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
+			<td>Client must support authentication using the SASL Plain mechanism and use the Server Name Indication (SNI) extension to the TLSv1.2 protocol</td>
 		</tr>
 
 </table>
 <br/>
-For information about using the Kafka API on the now deprecated Classic plan, see [Kafka API - Classic](/docs/EventStreams?topic=EventStreams-kafka_using_classic).
-
 
 ## Choosing a Kafka client to use with {{site.data.keyword.messagehub}}
 {: #kafka_clients}
@@ -181,16 +196,3 @@ ssl.endpoint.identification.algorithm=HTTPS
 
 <br/>
 Note, if you're using a Kafka client earlier than 0.10.2.1, the <code>sasl.jaas.config</code> property isn't supported and you must instead provide the client configuration in a JAAS configuration file. 
-
-
-
-
-
-
-
-
- 
-
-
-
-
