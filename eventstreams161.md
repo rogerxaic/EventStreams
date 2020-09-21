@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-06"
+lastupdated: "2020-09-21"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, replication, failover, scenario, disaster recovery, mirroring, setup
 
@@ -19,7 +19,7 @@ subcollection: EventStreams
 {:deprecated: .deprecated}
 {:important: .important}
 
-# Guide to setting up mirroring
+# Enabling mirroring
 {: #mirroring_setup}
 
 This information describes how to set up a pair of {{site.data.keyword.messagehub}} Enterprise clusters as a mirrored pair. Use cases include disaster recovery, backups, and geo-replication.
