@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-09-24"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -27,7 +27,6 @@ privacy of your data:
 
 ## Cryptographic protocols
 {: #cryptographic}
-
 
 * Connections are restricted to the following strong cipher suites:
 
@@ -84,3 +83,9 @@ The Standard plan creates a tenant instance on a Shared Kubernetes cluster on sh
 The Standard plan provides Public endpoints only.
 
 The Standard plan uses Shared Block storage and achieves tenant isolation through separation of files and access controls.
+
+## Data retention and reclamation
+
+When a service instance is deleted, the data is not deleted immediately. Instead, it is scheduled for reclamation, {{site.data.keyword.messagehub}} sets this retention period to three days, after which the data (both, topics and messages written to the topics) is irreversibly destroyed. It is also possible to restore a deleted instance that has not yet been reclaimed.
+
+It is possible to check the status of a reclamation, as well as force or cancel a scheduled reclamation using [the IBM Cloud® Platform CLI](https://cloud.ibm.com/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_reclamations).
