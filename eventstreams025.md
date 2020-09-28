@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-09-28"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -43,7 +43,7 @@ Use the producer API to write messages to topics. To be able to produce to a top
 You must retrieve the URL and credential details that are needed to connect to the API from a Service credentials object or service key for the service instance. For information about creating these objects, see 
 [Connecting to {{site.data.keyword.messagehub}}](/docs/EventStreams?topic=EventStreams-connecting).
 
-The URL for the API's endpoint is provided in the <code>kafka_http_url</code> property.
+The URL for the API's endpoint is provided in the ```kafka_http_url``` property.
 
 Use one of the following methods to authenticate:
 
@@ -71,17 +71,14 @@ curl -v -X POST -H "Authorization: Basic <base64 username:password>" -H "Content
 ```
 {: codeblock}
 
+## Limitations
+
+When using the REST producer API, there is a limitation on the record key and value size. These limitations are as follows:
+* Maximum key size is 4 K 
+* Maximum value size is 64 K
 
 ## API reference
 {: #rest_api_reference}
 
 For full details of the API, see the 
 [{{site.data.keyword.messagehub}} REST Producer API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/event-streams){:new_window}.
-
-
-
-
-
-
-
-
