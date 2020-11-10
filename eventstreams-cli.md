@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2020-08-04"
+lastupdated: "2019-10-09"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -83,10 +83,27 @@ Initial release of the {{site.data.keyword.messagehub}} CLI</td>
 </tr>
 <tr>
 <td>v2.2.0</td>
-<td>August 7 2020</td>
+<td>August 3 2020</td>
 <td>
 <ul>
 <li>Added support for the Mirroring feature</li>
+</ul></td>
+</tr>
+<tr>
+<td>v2.2.1</td>
+<td>August 7 2020</td>
+<td>
+<ul>
+<li>Refined the display of IP allowlist in init command</li>
+</ul></td>
+</tr>
+<tr>
+<td>v2.3</td>
+<td>November 9 2020</td>
+<td>
+<ul>
+<li>Added support for configuring message audit on topic</li>
+<li>init: display encryption key if parameter kms_key_crn is specified in provisioning</li>
 </ul></td>
 </tr>
 </tbody>
