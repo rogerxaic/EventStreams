@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-12-08"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka, activity
 
@@ -29,6 +29,8 @@ Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users an
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started){:new_window}.
 
+Events are formatted according to the Cloud Auditing Data Federation (CADF) standard, further details of the information 
+they include can be found [here](https://cloud.ibm.com/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-event).
 
 ## Topic events
 {: #topic-events}
@@ -48,16 +50,20 @@ The following table lists the topic events:
 {: #message-events}
 
 You can enable message audit events on a per topic basis for {{site.data.keyword.messagehub}} instances that are on the `Enterprise plan`. 
-Also see [How to enable message audit events](/docs/EventStreams?topic=at_events#enable-message-events).
+Also see [How to enable message audit events](/docs/EventStreams?topic=EventStreams-at_events#enable-message-events).
 
 The following table lists the message audit events:
 
 | Action | Description |
 |:-------|:------------|
-| event-streams.message.read | An event is created when message audit is enabled on a topic and a consumer is reading data from this topic|
-| event-streams.message.write | An event is created when message audit is enabled on a topic and a producer is writing data to this topic|
-| event-streams.message.delete | An event is created when message audit is enabled on a topic and records are deleted from this topic|
+| event-streams.message.read | An event is created when message audit is enabled on a topic and a consumer is reading data from this topic.|
+| event-streams.message.write | An event is created when message audit is enabled on a topic and a producer is writing data to this topic.|
+| event-streams.message.delete | An event is created when message audit is enabled on a topic and records are deleted from this topic. 
+Records deletion because of retention policy will not generate.|
 {: caption="Table 2. {{site.data.keyword.messagehub}} message events" caption-side="top"}
+
+Event Streams can sustain very high requests rate so not every single request triggers an event. Instead, events are aggregated by 
+initiator(user ID or service ID), host(IP address), operation(read, write, delete), outcome(success or failure) and topic over a one hour period.
 
 ## Other events
 {: #other-events}
@@ -115,16 +121,6 @@ Message audit events can be enabled on a per topic basis. To do so, complete the
 
 After the topic's message audit config is updated, it takes about 5 minutes for message audit events to show up in {{site.data.keyword.cloudaccesstrailshort}}.
 {: important}
-
-Once a topic is configured to enable message audit events, 3 additional types of events are emitted besides the topic events:
-
-`event-streams.message.read`: when a consumer is reading data from a topic
-
-`event-streams.message.write`: when a producer is writing data to a topic
-
-`event-streams.message.delete`: when user initiates the deletion records from a topic (Records deletion because of retention policy will not generate events)
-
-Event Streams can sustain very high requests rate so not every single request triggers an event. Instead, events are aggregated by initiator(user ID or service ID), host(IP address), operation(read, write, delete), outcome(success or failure) and topic over a 1 hour period.
 
 Additionally, be aware of the implications of enabling message audit events:
 
