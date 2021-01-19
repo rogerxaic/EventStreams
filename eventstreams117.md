@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-28"
+  years: 2015, 2021
+lastupdated: "2020-01-18"
 
 keywords: IBM Event Streams, Kafka as a service, managed Apache Kafka
 
@@ -43,6 +43,12 @@ The recommended figure is based on a typical workload and takes into account the
 
 A maximum of 100 MB for the partition. 
 
+
+### Consumer groups
+{: #lite_consumer_groups}
+
+A maximum of 10 consumer groups. When the limit is exceeded, the `GROUP_MAX_SIZE_REACHED` error is returned to the client.
+
 ### Other limits
 {: #lite_limits}
 
@@ -72,6 +78,11 @@ The throughput is measured separately for producers and consumers. When exceeded
 {: #standard_retention}
 
 A maximum of 1 GB for each partition.
+
+### Consumer groups
+{: #standard_consumer_groups}
+
+A maximum of 1000 consumer groups. When the limit is exceeded, the `GROUP_MAX_SIZE_REACHED` error is returned to the client.
 
 ### Other limits
 {: #standard_limits}
@@ -110,9 +121,9 @@ For additional information see [Scaling Event streams](/docs/EventStreams?topic=
 ### Partitions
 {: #enterprise_partitions}
 
-3000 partitions for each service instance. 
+The maximum number of partitions increases in line with the number of capacity units, so 3000 for 150MB/s, 6000 for 300MB/s and 9000 for 450MB/s in Enterprise. 
 
-3000 partitions is a hard limit for the Enterprise plan. If you reach this limit, you can no longer create topics. To increase the number of partitions beyond 3000, [contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}.
+This is a hard limit for the Enterprise plan. If you reach this limit, you can no longer create topics. To increase the number of partitions beyond this, [contact IBM ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/get-support?topic=get-support-getting-customer-support#using-avatar){:new_window}.
 
 ### Retention
 {: #enterprise_retention}
@@ -144,3 +155,22 @@ For additional information see [Scaling Event streams](/docs/EventStreams?topic=
 * Maximum concurrently active Kafka clients: 10000
 * Maximum record key size when using REST Producer API is 4 K 
 * Maximum record value size when using REST Producer API is 64 K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
